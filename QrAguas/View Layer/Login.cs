@@ -59,10 +59,7 @@ namespace QrAguas.View_Layer
             btnFechar.BackColor = Color.FromArgb(29, 52, 97);
         }
 
-        private void button1_Click(object sender, EventArgs e)
-        {
-            
-        }
+     
 
 
     }

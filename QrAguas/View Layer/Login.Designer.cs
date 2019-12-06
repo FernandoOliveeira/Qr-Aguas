@@ -38,7 +38,7 @@
             this.topPanel = new System.Windows.Forms.Panel();
             this.imagemIcone = new System.Windows.Forms.PictureBox();
             this.lblTituloPanel = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
+            this.btnInfo = new System.Windows.Forms.Button();
             this.btnFechar = new System.Windows.Forms.Button();
             this.btnEntrar = new System.Windows.Forms.Button();
             this.lblTituloLogo = new System.Windows.Forms.Label();
@@ -105,12 +105,12 @@
             // 
             this.txtSenha.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(52)))), ((int)(((byte)(97)))));
             this.txtSenha.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtSenha.Font = new System.Drawing.Font("Roboto Condensed", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtSenha.Font = new System.Drawing.Font("Roboto Condensed", 10.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtSenha.ForeColor = System.Drawing.Color.White;
             this.txtSenha.Location = new System.Drawing.Point(12, 375);
             this.txtSenha.Name = "txtSenha";
             this.txtSenha.PasswordChar = '●';
-            this.txtSenha.Size = new System.Drawing.Size(276, 23);
+            this.txtSenha.Size = new System.Drawing.Size(276, 17);
             this.txtSenha.TabIndex = 5;
             // 
             // topPanel
@@ -118,7 +118,7 @@
             this.topPanel.BackColor = System.Drawing.Color.Transparent;
             this.topPanel.Controls.Add(this.imagemIcone);
             this.topPanel.Controls.Add(this.lblTituloPanel);
-            this.topPanel.Controls.Add(this.button1);
+            this.topPanel.Controls.Add(this.btnInfo);
             this.topPanel.Controls.Add(this.btnFechar);
             this.topPanel.Dock = System.Windows.Forms.DockStyle.Top;
             this.topPanel.Location = new System.Drawing.Point(0, 0);
@@ -130,7 +130,7 @@
             // imagemIcone
             // 
             this.imagemIcone.Image = global::QrAguas.Properties.Resources.qrAguasIconeGota;
-            this.imagemIcone.Location = new System.Drawing.Point(3, 5);
+            this.imagemIcone.Location = new System.Drawing.Point(0, 5);
             this.imagemIcone.Name = "imagemIcone";
             this.imagemIcone.Size = new System.Drawing.Size(40, 20);
             this.imagemIcone.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -144,27 +144,26 @@
             this.lblTituloPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(52)))), ((int)(((byte)(97)))));
             this.lblTituloPanel.Font = new System.Drawing.Font("Roboto Condensed", 12.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblTituloPanel.ForeColor = System.Drawing.Color.White;
-            this.lblTituloPanel.Location = new System.Drawing.Point(38, 5);
+            this.lblTituloPanel.Location = new System.Drawing.Point(36, 5);
             this.lblTituloPanel.Name = "lblTituloPanel";
             this.lblTituloPanel.Size = new System.Drawing.Size(70, 20);
             this.lblTituloPanel.TabIndex = 12;
             this.lblTituloPanel.Text = "Qr Águas";
             this.lblTituloPanel.MouseDown += new System.Windows.Forms.MouseEventHandler(this.ArrastarTela_MouseDown);
             // 
-            // button1
+            // btnInfo
             // 
-            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(52)))), ((int)(((byte)(97)))));
-            this.button1.FlatAppearance.BorderSize = 0;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Font = new System.Drawing.Font("Roboto Condensed", 15.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.ForeColor = System.Drawing.Color.Transparent;
-            this.button1.Location = new System.Drawing.Point(234, 0);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(30, 30);
-            this.button1.TabIndex = 1;
-            this.button1.Text = "?";
-            this.button1.UseVisualStyleBackColor = false;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.btnInfo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(29)))), ((int)(((byte)(52)))), ((int)(((byte)(97)))));
+            this.btnInfo.FlatAppearance.BorderSize = 0;
+            this.btnInfo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnInfo.Font = new System.Drawing.Font("Roboto Condensed", 15.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnInfo.ForeColor = System.Drawing.Color.Transparent;
+            this.btnInfo.Location = new System.Drawing.Point(234, 0);
+            this.btnInfo.Name = "btnInfo";
+            this.btnInfo.Size = new System.Drawing.Size(30, 30);
+            this.btnInfo.TabIndex = 1;
+            this.btnInfo.Text = "?";
+            this.btnInfo.UseVisualStyleBackColor = false;
             // 
             // btnFechar
             // 
@@ -289,7 +288,7 @@
         private System.Windows.Forms.TextBox txtSenha;
         private System.Windows.Forms.Panel topPanel;
         private System.Windows.Forms.Button btnFechar;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btnInfo;
         private System.Windows.Forms.Button btnEntrar;
         private System.Windows.Forms.Label lblTituloLogo;
         private System.Windows.Forms.Label lblTituloPanel;
