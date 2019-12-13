@@ -1,4 +1,5 @@
-﻿using System;
+﻿using QrAguas.Controls;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -27,6 +28,8 @@ namespace QrAguas.View_Layer
         public static extern bool ReleaseCapture();
         #endregion
 
+        VerifyLogin objLogin = new VerifyLogin();
+
         private void Login_Load(object sender, EventArgs e)
         {
             
@@ -44,6 +47,23 @@ namespace QrAguas.View_Layer
             #endregion
         }
 
+        private void btnEntrar_Click(object sender, EventArgs e)
+        {
+            
+            if (objLogin.VerificarLogin(txtUsuario.Text, txtSenha.Text))
+            {
+                MessageBox.Show("Login Efetuado com Sucesso !!!", "Login efetuado com sucesso", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            else
+            {
+                MessageBox.Show("Usuario ou senha inválidos", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+
+
+        }
+
+
+        #region BotaoFechar
         private void btnFechar_Click(object sender, EventArgs e)
         {
             this.Close();
@@ -58,9 +78,7 @@ namespace QrAguas.View_Layer
         {
             btnFechar.BackColor = Color.FromArgb(29, 52, 97);
         }
-
-     
-
-
+        #endregion
+        
     }
 }
