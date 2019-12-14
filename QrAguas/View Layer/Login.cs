@@ -8,11 +8,14 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Threading;
 
 namespace QrAguas.View_Layer
 {
     public partial class Login : Form
     {
+        Thread thread;
+
         public Login()
         {
             InitializeComponent();
@@ -52,7 +55,11 @@ namespace QrAguas.View_Layer
             
             if (objLogin.VerificarLogin(txtUsuario.Text, txtSenha.Text))
             {
-                MessageBox.Show("Login Efetuado com Sucesso !!!", "Login efetuado com sucesso", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                // Método para abrir outro form e fechar o atual
+                this.Close();
+                thread = new Thread(AbrirMainForm);
+                thread.SetApartmentState(ApartmentState.STA);
+                thread.Start();
             }
             else
             {
@@ -60,6 +67,11 @@ namespace QrAguas.View_Layer
             }
 
 
+        }
+
+        private void AbrirMainForm() 
+        {
+            Application.Run(new MainForm());
         }
 
 
