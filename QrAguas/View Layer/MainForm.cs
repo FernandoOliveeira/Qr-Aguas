@@ -33,17 +33,7 @@ namespace QrAguas.View_Layer
             {
                 MessageBox.Show("Teste");
             }
-
-            switch (e.Node.Text)
-            {
-                case "Teste":
-                    MessageBox.Show("Teste");
-                    break;
-
-                default:
-
-                    break;
-            }
+           
         }
     }
 }
