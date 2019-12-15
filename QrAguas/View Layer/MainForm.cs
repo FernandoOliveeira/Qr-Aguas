@@ -25,5 +25,25 @@ namespace QrAguas.View_Layer
                 e.Cancel = true;
             }
         }
+
+        private void treeView_NodeMouseDoubleClick(object sender, TreeNodeMouseClickEventArgs e)
+        {
+            // Caso o nó com o nome Teste seja clicado duas vezes
+            if (e.Node.Text == "Teste")
+            {
+                MessageBox.Show("Teste");
+            }
+
+            switch (e.Node.Text)
+            {
+                case "Teste":
+                    MessageBox.Show("Teste");
+                    break;
+
+                default:
+
+                    break;
+            }
+        }
     }
 }

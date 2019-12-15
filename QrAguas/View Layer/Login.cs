@@ -55,7 +55,7 @@ namespace QrAguas.View_Layer
             
             if (objLogin.VerificarLogin(txtUsuario.Text, txtSenha.Text))
             {
-                // Método para abrir outro form e fechar o atual
+                // Método para abrir o form MainForm e fechar o atual
                 this.Close();
                 thread = new Thread(AbrirMainForm);
                 thread.SetApartmentState(ApartmentState.STA);
