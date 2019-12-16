@@ -28,28 +28,25 @@ namespace QrAguas.View_Layer
 
         private void treeView_NodeMouseDoubleClick(object sender, TreeNodeMouseClickEventArgs e)
         {
-            // Caso o nó com o nome Teste seja clicado duas vezes
-            if (e.Node.Text == "Teste")
-            {
-                MessageBox.Show("Teste");
-            }
+            
            
         }
 
         private void MainForm_Load(object sender, EventArgs e)
         {
-            TSLUsuario.Text = "Usuário: " + Login.NomeUsuario.ToString();
+
+            TSLUsuario.Text = "Usuário: " + Login.NomeUsuario;
+
             TSLData.Text = DateTime.Now.ToLongDateString();
             TSLHora.Text = DateTime.Now.ToLongTimeString();
 
         }
-
+   
         private void timer1_Tick(object sender, EventArgs e)
         {
             TSLData.Text = DateTime.Now.ToLongDateString();
             TSLHora.Text = DateTime.Now.ToLongTimeString();
         }
-
         
     }
 }

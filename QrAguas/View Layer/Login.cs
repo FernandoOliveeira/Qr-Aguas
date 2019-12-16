@@ -20,8 +20,9 @@ namespace QrAguas.View_Layer
         {
             InitializeComponent();
         }
+        
+        public static string NomeUsuario { get; private set; }
 
-        public static string NomeUsuario = "";
 
         #region código para tornar o form "arrastavel" 
         public const int WM_NCLBUTTONDOWN = 0xA1;
@@ -58,8 +59,7 @@ namespace QrAguas.View_Layer
                 thread = new Thread(AbrirMainForm);
                 thread.SetApartmentState(ApartmentState.STA);
                 thread.Start();
-                
-            }
+              }
             else
             {
                 MessageBox.Show("Usuario ou senha inválidos", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);

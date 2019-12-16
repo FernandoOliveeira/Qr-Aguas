@@ -29,10 +29,19 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.TreeNode treeNode1 = new System.Windows.Forms.TreeNode("Teste");
-            System.Windows.Forms.TreeNode treeNode2 = new System.Windows.Forms.TreeNode("Node0", 0, 1, new System.Windows.Forms.TreeNode[] {
-            treeNode1});
-            System.Windows.Forms.TreeNode treeNode3 = new System.Windows.Forms.TreeNode("Node1", 0, 0);
+            System.Windows.Forms.TreeNode treeNode1 = new System.Windows.Forms.TreeNode("Cadastro de Fornecedores");
+            System.Windows.Forms.TreeNode treeNode2 = new System.Windows.Forms.TreeNode("Cadastro de Galões");
+            System.Windows.Forms.TreeNode treeNode3 = new System.Windows.Forms.TreeNode("Cadastros", new System.Windows.Forms.TreeNode[] {
+            treeNode1,
+            treeNode2});
+            System.Windows.Forms.TreeNode treeNode4 = new System.Windows.Forms.TreeNode("Entrada de Novos Galões");
+            System.Windows.Forms.TreeNode treeNode5 = new System.Windows.Forms.TreeNode("Venda de Galões");
+            System.Windows.Forms.TreeNode treeNode6 = new System.Windows.Forms.TreeNode("Vendas", new System.Windows.Forms.TreeNode[] {
+            treeNode5});
+            System.Windows.Forms.TreeNode treeNode7 = new System.Windows.Forms.TreeNode("Qr Águas - Menu Geral", 0, 0, new System.Windows.Forms.TreeNode[] {
+            treeNode3,
+            treeNode4,
+            treeNode6});
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainForm));
             this.treeView = new System.Windows.Forms.TreeView();
             this.TreeViewImageList = new System.Windows.Forms.ImageList(this.components);
@@ -60,22 +69,27 @@
             this.treeView.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.treeView.Location = new System.Drawing.Point(0, 27);
             this.treeView.Name = "treeView";
-            treeNode1.Name = "Node0";
-            treeNode1.SelectedImageIndex = -2;
-            treeNode1.Text = "Teste";
-            treeNode2.ImageIndex = 0;
-            treeNode2.Name = "Node0";
-            treeNode2.SelectedImageIndex = 1;
-            treeNode2.Text = "Node0";
-            treeNode3.ImageIndex = 0;
-            treeNode3.Name = "Node1";
-            treeNode3.SelectedImageIndex = 0;
-            treeNode3.Text = "Node1";
+            treeNode1.Name = "Node1";
+            treeNode1.Text = "Cadastro de Fornecedores";
+            treeNode2.Name = "Node3";
+            treeNode2.Text = "Cadastro de Galões";
+            treeNode3.Name = "Node0";
+            treeNode3.SelectedImageIndex = -2;
+            treeNode3.Text = "Cadastros";
+            treeNode4.Name = "Node0";
+            treeNode4.Text = "Entrada de Novos Galões";
+            treeNode5.Name = "Node6";
+            treeNode5.Text = "Venda de Galões";
+            treeNode6.Name = "Node5";
+            treeNode6.Text = "Vendas";
+            treeNode7.ImageIndex = 0;
+            treeNode7.Name = "Node0";
+            treeNode7.SelectedImageIndex = 0;
+            treeNode7.Text = "Qr Águas - Menu Geral";
             this.treeView.Nodes.AddRange(new System.Windows.Forms.TreeNode[] {
-            treeNode2,
-            treeNode3});
+            treeNode7});
             this.treeView.SelectedImageIndex = 0;
-            this.treeView.Size = new System.Drawing.Size(200, 535);
+            this.treeView.Size = new System.Drawing.Size(251, 535);
             this.treeView.TabIndex = 0;
             this.treeView.NodeMouseDoubleClick += new System.Windows.Forms.TreeNodeMouseClickEventHandler(this.treeView_NodeMouseDoubleClick);
             // 
@@ -115,9 +129,9 @@
             // 
             this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pictureBox1.Image = global::QrAguas.Properties.Resources.qrAguasIconeGota;
-            this.pictureBox1.Location = new System.Drawing.Point(200, 27);
+            this.pictureBox1.Location = new System.Drawing.Point(251, 27);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(808, 535);
+            this.pictureBox1.Size = new System.Drawing.Size(757, 535);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 2;
             this.pictureBox1.TabStop = false;
@@ -129,30 +143,30 @@
             this.TSLUsuario,
             this.TSLData,
             this.TSLHora});
-            this.statusStrip1.Location = new System.Drawing.Point(200, 540);
+            this.statusStrip1.Location = new System.Drawing.Point(251, 540);
             this.statusStrip1.Name = "statusStrip1";
-            this.statusStrip1.Size = new System.Drawing.Size(808, 22);
+            this.statusStrip1.Size = new System.Drawing.Size(757, 22);
             this.statusStrip1.TabIndex = 3;
             this.statusStrip1.Text = "statusStrip1";
             // 
             // TSLUsuario
             // 
             this.TSLUsuario.Name = "TSLUsuario";
-            this.TSLUsuario.Size = new System.Drawing.Size(264, 17);
+            this.TSLUsuario.Size = new System.Drawing.Size(247, 17);
             this.TSLUsuario.Spring = true;
             this.TSLUsuario.Text = "Usuário: ";
             // 
             // TSLData
             // 
             this.TSLData.Name = "TSLData";
-            this.TSLData.Size = new System.Drawing.Size(264, 17);
+            this.TSLData.Size = new System.Drawing.Size(247, 17);
             this.TSLData.Spring = true;
             this.TSLData.Text = "Data";
             // 
             // TSLHora
             // 
             this.TSLHora.Name = "TSLHora";
-            this.TSLHora.Size = new System.Drawing.Size(264, 17);
+            this.TSLHora.Size = new System.Drawing.Size(247, 17);
             this.TSLHora.Spring = true;
             this.TSLHora.Text = "Hora";
             // 
