@@ -21,6 +21,8 @@ namespace QrAguas.View_Layer
             InitializeComponent();
         }
 
+        public static string NomeUsuario = "";
+
         #region código para tornar o form "arrastavel" 
         public const int WM_NCLBUTTONDOWN = 0xA1;
         public const int HT_CAPTION = 0x2;
@@ -32,11 +34,6 @@ namespace QrAguas.View_Layer
         #endregion
 
         VerifyLogin objLogin = new VerifyLogin();
-
-        private void Login_Load(object sender, EventArgs e)
-        {
-            
-        }
 
 
         public void ArrastarTela_MouseDown(object sender, MouseEventArgs e)
@@ -55,11 +52,13 @@ namespace QrAguas.View_Layer
             
             if (objLogin.VerificarLogin(txtUsuario.Text, txtSenha.Text))
             {
-                // Método para abrir o form MainForm e fechar o atual
+                // Abrir o form MainForm e fechar o atual
+                NomeUsuario = txtUsuario.Text;
                 this.Close();
                 thread = new Thread(AbrirMainForm);
                 thread.SetApartmentState(ApartmentState.STA);
                 thread.Start();
+                
             }
             else
             {

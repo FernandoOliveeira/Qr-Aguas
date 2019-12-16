@@ -280,7 +280,6 @@
             this.Name = "Login";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Qr Águas - Login";
-            this.Load += new System.EventHandler(this.Login_Load);
             this.topPanel.ResumeLayout(false);
             this.topPanel.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.imagemIcone)).EndInit();

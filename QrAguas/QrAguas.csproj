@@ -50,6 +50,7 @@
   <ItemGroup>
     <Compile Include="Controls\Connection.cs" />
     <Compile Include="Controls\VerifyLogin.cs" />
+    <Compile Include="Models\UsuarioLogado.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="View Layer\Login.cs">
