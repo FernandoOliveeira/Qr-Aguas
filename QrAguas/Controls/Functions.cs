@@ -59,7 +59,7 @@ namespace QrAguas.Controls
 
             consultarNomeUsuario.Load(reader);
 
-            string usuarioBanco = "";
+            string usuarioBanco = ".";
 
             foreach (DataRow row in consultarNomeUsuario.Rows)
             {
