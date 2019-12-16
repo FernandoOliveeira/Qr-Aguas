@@ -32,13 +32,14 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(NewUser));
             this.lblUsuario = new System.Windows.Forms.Label();
             this.txtUsuario = new System.Windows.Forms.TextBox();
-            this.lblUsuarioComentario = new System.Windows.Forms.Label();
+            this.lblUsuarioAviso = new System.Windows.Forms.Label();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.panelUsuario = new System.Windows.Forms.Panel();
             this.panelSenha = new System.Windows.Forms.Panel();
             this.lblSenha = new System.Windows.Forms.Label();
             this.txtSenha = new System.Windows.Forms.TextBox();
             this.panelConfirmarSenha = new System.Windows.Forms.Panel();
+            this.lblConfirmarSenhaAviso = new System.Windows.Forms.Label();
             this.lblConfirmarSenha = new System.Windows.Forms.Label();
             this.txtConfirmarSenha = new System.Windows.Forms.TextBox();
             this.panel1 = new System.Windows.Forms.Panel();
@@ -46,10 +47,10 @@
             this.tipousuarioBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.qraguasDataSet1 = new QrAguas.qraguasDataSet1();
             this.lblFuncao = new System.Windows.Forms.Label();
-            this.tipousuarioBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.tipo_usuarioTableAdapter1 = new QrAguas.qraguasDataSet1TableAdapters.tipo_usuarioTableAdapter();
             this.panelBtnCadastrar = new System.Windows.Forms.Panel();
             this.btnCadastrar = new System.Windows.Forms.Button();
+            this.tipousuarioBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.tipo_usuarioTableAdapter1 = new QrAguas.qraguasDataSet1TableAdapters.tipo_usuarioTableAdapter();
             this.tableLayoutPanel1.SuspendLayout();
             this.panelUsuario.SuspendLayout();
             this.panelSenha.SuspendLayout();
@@ -57,8 +58,8 @@
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.tipousuarioBindingSource1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.qraguasDataSet1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.tipousuarioBindingSource)).BeginInit();
             this.panelBtnCadastrar.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.tipousuarioBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // lblUsuario
@@ -90,17 +91,17 @@
             this.txtUsuario.TabIndex = 40;
             this.txtUsuario.TextChanged += new System.EventHandler(this.txtUsuario_TextChanged);
             // 
-            // lblUsuarioComentario
+            // lblUsuarioAviso
             // 
-            this.lblUsuarioComentario.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.lblUsuarioAviso.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.lblUsuarioComentario.AutoSize = true;
-            this.lblUsuarioComentario.ForeColor = System.Drawing.Color.White;
-            this.lblUsuarioComentario.Location = new System.Drawing.Point(5, 49);
-            this.lblUsuarioComentario.Name = "lblUsuarioComentario";
-            this.lblUsuarioComentario.Size = new System.Drawing.Size(99, 13);
-            this.lblUsuarioComentario.TabIndex = 43;
-            this.lblUsuarioComentario.Text = "Máx: 15 Caracteres";
+            this.lblUsuarioAviso.AutoSize = true;
+            this.lblUsuarioAviso.ForeColor = System.Drawing.Color.White;
+            this.lblUsuarioAviso.Location = new System.Drawing.Point(5, 49);
+            this.lblUsuarioAviso.Name = "lblUsuarioAviso";
+            this.lblUsuarioAviso.Size = new System.Drawing.Size(99, 13);
+            this.lblUsuarioAviso.TabIndex = 43;
+            this.lblUsuarioAviso.Text = "Máx: 15 Caracteres";
             // 
             // tableLayoutPanel1
             // 
@@ -128,7 +129,7 @@
             // 
             this.panelUsuario.Controls.Add(this.lblUsuario);
             this.panelUsuario.Controls.Add(this.txtUsuario);
-            this.panelUsuario.Controls.Add(this.lblUsuarioComentario);
+            this.panelUsuario.Controls.Add(this.lblUsuarioAviso);
             this.panelUsuario.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelUsuario.Location = new System.Drawing.Point(3, 3);
             this.panelUsuario.Name = "panelUsuario";
@@ -176,6 +177,7 @@
             // 
             // panelConfirmarSenha
             // 
+            this.panelConfirmarSenha.Controls.Add(this.lblConfirmarSenhaAviso);
             this.panelConfirmarSenha.Controls.Add(this.lblConfirmarSenha);
             this.panelConfirmarSenha.Controls.Add(this.txtConfirmarSenha);
             this.panelConfirmarSenha.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -183,6 +185,18 @@
             this.panelConfirmarSenha.Name = "panelConfirmarSenha";
             this.panelConfirmarSenha.Size = new System.Drawing.Size(311, 66);
             this.panelConfirmarSenha.TabIndex = 2;
+            // 
+            // lblConfirmarSenhaAviso
+            // 
+            this.lblConfirmarSenhaAviso.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.lblConfirmarSenhaAviso.AutoSize = true;
+            this.lblConfirmarSenhaAviso.ForeColor = System.Drawing.Color.White;
+            this.lblConfirmarSenhaAviso.Location = new System.Drawing.Point(4, 49);
+            this.lblConfirmarSenhaAviso.Name = "lblConfirmarSenhaAviso";
+            this.lblConfirmarSenhaAviso.Size = new System.Drawing.Size(34, 13);
+            this.lblConfirmarSenhaAviso.TabIndex = 44;
+            this.lblConfirmarSenhaAviso.Text = "Texto";
             // 
             // lblConfirmarSenha
             // 
@@ -212,6 +226,7 @@
             this.txtConfirmarSenha.PasswordChar = '●';
             this.txtConfirmarSenha.Size = new System.Drawing.Size(303, 23);
             this.txtConfirmarSenha.TabIndex = 40;
+            this.txtConfirmarSenha.TextChanged += new System.EventHandler(this.txtConfirmarSenha_TextChanged);
             // 
             // panel1
             // 
@@ -260,14 +275,6 @@
             this.lblFuncao.TabIndex = 42;
             this.lblFuncao.Text = "Selecione a Função do Usuário:";
             // 
-            // tipousuarioBindingSource
-            // 
-            this.tipousuarioBindingSource.DataMember = "tipo_usuario";
-            // 
-            // tipo_usuarioTableAdapter1
-            // 
-            this.tipo_usuarioTableAdapter1.ClearBeforeFill = true;
-            // 
             // panelBtnCadastrar
             // 
             this.tableLayoutPanel1.SetColumnSpan(this.panelBtnCadastrar, 2);
@@ -294,6 +301,14 @@
             this.btnCadastrar.UseVisualStyleBackColor = false;
             this.btnCadastrar.Click += new System.EventHandler(this.btnCadastrar_Click);
             // 
+            // tipousuarioBindingSource
+            // 
+            this.tipousuarioBindingSource.DataMember = "tipo_usuario";
+            // 
+            // tipo_usuarioTableAdapter1
+            // 
+            this.tipo_usuarioTableAdapter1.ClearBeforeFill = true;
+            // 
             // NewUser
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -306,7 +321,7 @@
             this.MaximizeBox = false;
             this.Name = "NewUser";
             this.Text = "Qr Águas - Cadastrar Usuario";
-            this.Load += new System.EventHandler(this.CadastrarNovoUsuario_Load);
+            this.Load += new System.EventHandler(this.NewUser_Load);
             this.tableLayoutPanel1.ResumeLayout(false);
             this.panelUsuario.ResumeLayout(false);
             this.panelUsuario.PerformLayout();
@@ -318,8 +333,8 @@
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.tipousuarioBindingSource1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.qraguasDataSet1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.tipousuarioBindingSource)).EndInit();
             this.panelBtnCadastrar.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.tipousuarioBindingSource)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -327,7 +342,7 @@
         #endregion
         private System.Windows.Forms.Label lblUsuario;
         private System.Windows.Forms.TextBox txtUsuario;
-        private System.Windows.Forms.Label lblUsuarioComentario;
+        private System.Windows.Forms.Label lblUsuarioAviso;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
         private System.Windows.Forms.Panel panelUsuario;
         private System.Windows.Forms.Panel panelSenha;
@@ -345,5 +360,6 @@
         private qraguasDataSet1TableAdapters.tipo_usuarioTableAdapter tipo_usuarioTableAdapter1;
         private System.Windows.Forms.Panel panelBtnCadastrar;
         private System.Windows.Forms.Button btnCadastrar;
+        private System.Windows.Forms.Label lblConfirmarSenhaAviso;
     }
 }
