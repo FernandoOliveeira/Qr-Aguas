@@ -50,7 +50,6 @@
   <ItemGroup>
     <Compile Include="Controls\Connection.cs" />
     <Compile Include="Controls\VerifyLogin.cs" />
-    <Compile Include="Models\UsuarioLogado.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="View Layer\Login.cs">
@@ -108,6 +107,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\Novo usuario1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Models\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

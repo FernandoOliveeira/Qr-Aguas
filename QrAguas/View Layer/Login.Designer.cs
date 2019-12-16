@@ -36,12 +36,12 @@
             this.lblSenha = new System.Windows.Forms.Label();
             this.txtSenha = new System.Windows.Forms.TextBox();
             this.topPanel = new System.Windows.Forms.Panel();
-            this.imagemIcone = new System.Windows.Forms.PictureBox();
             this.lblTituloPanel = new System.Windows.Forms.Label();
             this.btnInfo = new System.Windows.Forms.Button();
             this.btnFechar = new System.Windows.Forms.Button();
             this.btnEntrar = new System.Windows.Forms.Button();
             this.lblTituloLogo = new System.Windows.Forms.Label();
+            this.imagemIcone = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.imagemUsuario = new System.Windows.Forms.PictureBox();
             this.imagemLogo = new System.Windows.Forms.PictureBox();
@@ -62,7 +62,7 @@
             this.txtUsuario.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.txtUsuario.Name = "txtUsuario";
             this.txtUsuario.Size = new System.Drawing.Size(331, 22);
-            this.txtUsuario.TabIndex = 1;
+            this.txtUsuario.TabIndex = 0;
             // 
             // lblUsuario
             // 
@@ -73,7 +73,7 @@
             this.lblUsuario.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblUsuario.Name = "lblUsuario";
             this.lblUsuario.Size = new System.Drawing.Size(156, 24);
-            this.lblUsuario.TabIndex = 2;
+            this.lblUsuario.TabIndex = 39;
             this.lblUsuario.Text = "Nome de usuário";
             // 
             // panel1
@@ -103,7 +103,7 @@
             this.lblSenha.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblSenha.Name = "lblSenha";
             this.lblSenha.Size = new System.Drawing.Size(65, 24);
-            this.lblSenha.TabIndex = 6;
+            this.lblSenha.TabIndex = 63;
             this.lblSenha.Text = "Senha";
             // 
             // txtSenha
@@ -117,7 +117,7 @@
             this.txtSenha.Name = "txtSenha";
             this.txtSenha.PasswordChar = '●';
             this.txtSenha.Size = new System.Drawing.Size(331, 22);
-            this.txtSenha.TabIndex = 5;
+            this.txtSenha.TabIndex = 1;
             // 
             // topPanel
             // 
@@ -133,18 +133,6 @@
             this.topPanel.Size = new System.Drawing.Size(350, 31);
             this.topPanel.TabIndex = 9;
             this.topPanel.MouseDown += new System.Windows.Forms.MouseEventHandler(this.ArrastarTela_MouseDown);
-            // 
-            // imagemIcone
-            // 
-            this.imagemIcone.Image = global::QrAguas.Properties.Resources.qrAguasIconeGota;
-            this.imagemIcone.Location = new System.Drawing.Point(0, 6);
-            this.imagemIcone.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
-            this.imagemIcone.Name = "imagemIcone";
-            this.imagemIcone.Size = new System.Drawing.Size(48, 19);
-            this.imagemIcone.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.imagemIcone.TabIndex = 13;
-            this.imagemIcone.TabStop = false;
-            this.imagemIcone.MouseDown += new System.Windows.Forms.MouseEventHandler(this.ArrastarTela_MouseDown);
             // 
             // lblTituloPanel
             // 
@@ -171,7 +159,7 @@
             this.btnInfo.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.btnInfo.Name = "btnInfo";
             this.btnInfo.Size = new System.Drawing.Size(36, 31);
-            this.btnInfo.TabIndex = 1;
+            this.btnInfo.TabIndex = 33;
             this.btnInfo.Text = "?";
             this.btnInfo.UseVisualStyleBackColor = false;
             // 
@@ -186,7 +174,7 @@
             this.btnFechar.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.btnFechar.Name = "btnFechar";
             this.btnFechar.Size = new System.Drawing.Size(36, 31);
-            this.btnFechar.TabIndex = 0;
+            this.btnFechar.TabIndex = 37;
             this.btnFechar.Text = "✕";
             this.btnFechar.UseVisualStyleBackColor = false;
             this.btnFechar.Click += new System.EventHandler(this.btnFechar_Click);
@@ -204,7 +192,7 @@
             this.btnEntrar.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.btnEntrar.Name = "btnEntrar";
             this.btnEntrar.Size = new System.Drawing.Size(148, 31);
-            this.btnEntrar.TabIndex = 10;
+            this.btnEntrar.TabIndex = 2;
             this.btnEntrar.Text = "Entrar";
             this.btnEntrar.UseVisualStyleBackColor = false;
             this.btnEntrar.Click += new System.EventHandler(this.btnEntrar_Click);
@@ -221,6 +209,18 @@
             this.lblTituloLogo.Size = new System.Drawing.Size(90, 24);
             this.lblTituloLogo.TabIndex = 11;
             this.lblTituloLogo.Text = "Qr Águas";
+            // 
+            // imagemIcone
+            // 
+            this.imagemIcone.Image = global::QrAguas.Properties.Resources.qrAguasIconeGota;
+            this.imagemIcone.Location = new System.Drawing.Point(0, 6);
+            this.imagemIcone.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.imagemIcone.Name = "imagemIcone";
+            this.imagemIcone.Size = new System.Drawing.Size(48, 19);
+            this.imagemIcone.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.imagemIcone.TabIndex = 13;
+            this.imagemIcone.TabStop = false;
+            this.imagemIcone.MouseDown += new System.Windows.Forms.MouseEventHandler(this.ArrastarTela_MouseDown);
             // 
             // pictureBox1
             // 
