@@ -29,13 +29,13 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.TreeNode treeNode1 = new System.Windows.Forms.TreeNode("Cadastro de Fornecedores");
-            System.Windows.Forms.TreeNode treeNode2 = new System.Windows.Forms.TreeNode("Cadastro de Galões");
+            System.Windows.Forms.TreeNode treeNode1 = new System.Windows.Forms.TreeNode("Cadastro de Fornecedores", 1, 1);
+            System.Windows.Forms.TreeNode treeNode2 = new System.Windows.Forms.TreeNode("Cadastro de Galões", 1, 1);
             System.Windows.Forms.TreeNode treeNode3 = new System.Windows.Forms.TreeNode("Cadastros", new System.Windows.Forms.TreeNode[] {
             treeNode1,
             treeNode2});
-            System.Windows.Forms.TreeNode treeNode4 = new System.Windows.Forms.TreeNode("Entrada de Novos Galões");
-            System.Windows.Forms.TreeNode treeNode5 = new System.Windows.Forms.TreeNode("Venda de Galões");
+            System.Windows.Forms.TreeNode treeNode4 = new System.Windows.Forms.TreeNode("Recebimento de Novos Galões", -2, -2);
+            System.Windows.Forms.TreeNode treeNode5 = new System.Windows.Forms.TreeNode("Venda de Galões", 1, 1);
             System.Windows.Forms.TreeNode treeNode6 = new System.Windows.Forms.TreeNode("Vendas", new System.Windows.Forms.TreeNode[] {
             treeNode5});
             System.Windows.Forms.TreeNode treeNode7 = new System.Windows.Forms.TreeNode("Qr Águas - Menu Geral", 0, 0, new System.Windows.Forms.TreeNode[] {
@@ -46,17 +46,17 @@
             this.treeView = new System.Windows.Forms.TreeView();
             this.TreeViewImageList = new System.Windows.Forms.ImageList(this.components);
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
-            this.primeiroItemToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.segundoItemToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.statusStrip1 = new System.Windows.Forms.StatusStrip();
             this.TSLUsuario = new System.Windows.Forms.ToolStripStatusLabel();
             this.TSLData = new System.Windows.Forms.ToolStripStatusLabel();
             this.TSLHora = new System.Windows.Forms.ToolStripStatusLabel();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.cadastrarNovoUsuárioToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.statusStrip1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // treeView
@@ -67,18 +67,26 @@
             this.treeView.ImageIndex = 0;
             this.treeView.ImageList = this.TreeViewImageList;
             this.treeView.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.treeView.Location = new System.Drawing.Point(0, 27);
+            this.treeView.Location = new System.Drawing.Point(0, 24);
             this.treeView.Name = "treeView";
+            treeNode1.ImageIndex = 1;
             treeNode1.Name = "Node1";
+            treeNode1.SelectedImageIndex = 1;
             treeNode1.Text = "Cadastro de Fornecedores";
+            treeNode2.ImageIndex = 1;
             treeNode2.Name = "Node3";
+            treeNode2.SelectedImageIndex = 1;
             treeNode2.Text = "Cadastro de Galões";
             treeNode3.Name = "Node0";
             treeNode3.SelectedImageIndex = -2;
             treeNode3.Text = "Cadastros";
+            treeNode4.ImageIndex = -2;
             treeNode4.Name = "Node0";
-            treeNode4.Text = "Entrada de Novos Galões";
+            treeNode4.SelectedImageIndex = -2;
+            treeNode4.Text = "Recebimento de Novos Galões";
+            treeNode5.ImageIndex = 1;
             treeNode5.Name = "Node6";
+            treeNode5.SelectedImageIndex = 1;
             treeNode5.Text = "Venda de Galões";
             treeNode6.Name = "Node5";
             treeNode6.Text = "Vendas";
@@ -89,7 +97,7 @@
             this.treeView.Nodes.AddRange(new System.Windows.Forms.TreeNode[] {
             treeNode7});
             this.treeView.SelectedImageIndex = 0;
-            this.treeView.Size = new System.Drawing.Size(251, 535);
+            this.treeView.Size = new System.Drawing.Size(251, 538);
             this.treeView.TabIndex = 0;
             this.treeView.NodeMouseDoubleClick += new System.Windows.Forms.TreeNodeMouseClickEventHandler(this.treeView_NodeMouseDoubleClick);
             // 
@@ -97,44 +105,27 @@
             // 
             this.TreeViewImageList.ImageStream = ((System.Windows.Forms.ImageListStreamer)(resources.GetObject("TreeViewImageList.ImageStream")));
             this.TreeViewImageList.TransparentColor = System.Drawing.Color.Transparent;
-            this.TreeViewImageList.Images.SetKeyName(0, "Icone pasta fechada.png");
-            this.TreeViewImageList.Images.SetKeyName(1, "Icone pasta aberta.png");
+            this.TreeViewImageList.Images.SetKeyName(0, "favicon.ico");
+            this.TreeViewImageList.Images.SetKeyName(1, "terminal-icon.png");
             // 
             // menuStrip1
             // 
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.primeiroItemToolStripMenuItem,
             this.segundoItemToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(1008, 27);
+            this.menuStrip1.Size = new System.Drawing.Size(1008, 24);
             this.menuStrip1.TabIndex = 1;
             this.menuStrip1.Text = "menuStrip1";
             // 
-            // primeiroItemToolStripMenuItem
-            // 
-            this.primeiroItemToolStripMenuItem.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.primeiroItemToolStripMenuItem.Name = "primeiroItemToolStripMenuItem";
-            this.primeiroItemToolStripMenuItem.Size = new System.Drawing.Size(102, 23);
-            this.primeiroItemToolStripMenuItem.Text = "Primeiro Item";
-            // 
             // segundoItemToolStripMenuItem
             // 
-            this.segundoItemToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI", 10F);
+            this.segundoItemToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.cadastrarNovoUsuárioToolStripMenuItem});
+            this.segundoItemToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI", 8F);
             this.segundoItemToolStripMenuItem.Name = "segundoItemToolStripMenuItem";
-            this.segundoItemToolStripMenuItem.Size = new System.Drawing.Size(107, 23);
-            this.segundoItemToolStripMenuItem.Text = "Segundo Item";
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pictureBox1.Image = global::QrAguas.Properties.Resources.qrAguasIconeGota;
-            this.pictureBox1.Location = new System.Drawing.Point(251, 27);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(757, 535);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 2;
-            this.pictureBox1.TabStop = false;
+            this.segundoItemToolStripMenuItem.Size = new System.Drawing.Size(58, 20);
+            this.segundoItemToolStripMenuItem.Text = "Opções";
             // 
             // statusStrip1
             // 
@@ -176,6 +167,25 @@
             this.timer1.Interval = 1000;
             this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pictureBox1.Image = global::QrAguas.Properties.Resources.qrAguasIconeGota;
+            this.pictureBox1.Location = new System.Drawing.Point(251, 24);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(757, 538);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 2;
+            this.pictureBox1.TabStop = false;
+            // 
+            // cadastrarNovoUsuárioToolStripMenuItem
+            // 
+            this.cadastrarNovoUsuárioToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI", 8F);
+            this.cadastrarNovoUsuárioToolStripMenuItem.Image = global::QrAguas.Properties.Resources.Novo_usuario;
+            this.cadastrarNovoUsuárioToolStripMenuItem.Name = "cadastrarNovoUsuárioToolStripMenuItem";
+            this.cadastrarNovoUsuárioToolStripMenuItem.Size = new System.Drawing.Size(196, 22);
+            this.cadastrarNovoUsuárioToolStripMenuItem.Text = "Cadastrar Novo Usuário";
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -195,9 +205,9 @@
             this.Load += new System.EventHandler(this.MainForm_Load);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.statusStrip1.ResumeLayout(false);
             this.statusStrip1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -207,7 +217,6 @@
 
         private System.Windows.Forms.TreeView treeView;
         private System.Windows.Forms.MenuStrip menuStrip1;
-        private System.Windows.Forms.ToolStripMenuItem primeiroItemToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem segundoItemToolStripMenuItem;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.StatusStrip statusStrip1;
@@ -216,5 +225,6 @@
         private System.Windows.Forms.ToolStripStatusLabel TSLHora;
         private System.Windows.Forms.Timer timer1;
         private System.Windows.Forms.ImageList TreeViewImageList;
+        private System.Windows.Forms.ToolStripMenuItem cadastrarNovoUsuárioToolStripMenuItem;
     }
 }
