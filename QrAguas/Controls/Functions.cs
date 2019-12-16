@@ -8,8 +8,10 @@ using System.Threading.Tasks;
 
 namespace QrAguas.Controls
 {
-    class VerifyLogin : Connection
+    class Functions : Connection
     {
+        #region FormLogin
+
         public bool VerificarLogin(string usuario, string senha)
         {
             DataTable consultarLogin = new DataTable();
@@ -41,6 +43,41 @@ namespace QrAguas.Controls
             return false;
         }
 
+        #endregion
+
+
+        #region Form NewUser
+
+        public bool VerificarNomeUsuario(string nomeUsuario)
+        {
+            DataTable consultarNomeUsuario = new DataTable();
+
+            string queryNomeUsuario = "SELECT NOME_USUARIO FROM USUARIOS WHERE NOME_USUARIO = '" + nomeUsuario + "'";
+
+            MySqlCommand command = new MySqlCommand(queryNomeUsuario, AbrirBanco());
+            MySqlDataReader reader = command.ExecuteReader();
+
+            consultarNomeUsuario.Load(reader);
+
+            string usuarioBanco = "";
+
+            foreach (DataRow row in consultarNomeUsuario.Rows)
+            {
+                usuarioBanco = row["NOME_USUARIO"].ToString();
+            }
+
+            if (usuarioBanco == nomeUsuario)
+            {
+                FecharBanco(AbrirBanco());
+                return true;
+            }
+
+            FecharBanco(AbrirBanco());
+            return false;
+
+        }
+
+        #endregion
 
 
     }

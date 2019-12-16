@@ -34,7 +34,7 @@ namespace QrAguas.View_Layer
         public static extern bool ReleaseCapture();
         #endregion
 
-        VerifyLogin objLogin = new VerifyLogin();
+        Functions objLogin = new Functions();
 
 
         public void ArrastarTela_MouseDown(object sender, MouseEventArgs e)
