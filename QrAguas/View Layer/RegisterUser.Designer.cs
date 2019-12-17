@@ -44,24 +44,24 @@
             this.txtConfirmarSenha = new System.Windows.Forms.TextBox();
             this.panel1 = new System.Windows.Forms.Panel();
             this.CBFuncao = new System.Windows.Forms.ComboBox();
-            this.tipousuarioBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
+            this.tIPOUSUARIOBindingSource2 = new System.Windows.Forms.BindingSource(this.components);
+            this._0YbKKAeekeDataSet = new QrAguas._0YbKKAeekeDataSet();
             this.lblFuncao = new System.Windows.Forms.Label();
             this.panelBtnCadastrar = new System.Windows.Forms.Panel();
             this.btnCadastrar = new System.Windows.Forms.Button();
+            this.tipousuarioBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.tipousuarioBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this._0YbKKAeekeDataSet = new QrAguas._0YbKKAeekeDataSet();
-            this.tIPOUSUARIOBindingSource2 = new System.Windows.Forms.BindingSource(this.components);
             this.tIPO_USUARIOTableAdapter = new QrAguas._0YbKKAeekeDataSetTableAdapters.TIPO_USUARIOTableAdapter();
             this.tableLayoutPanel1.SuspendLayout();
             this.panelUsuario.SuspendLayout();
             this.panelSenha.SuspendLayout();
             this.panelConfirmarSenha.SuspendLayout();
             this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.tipousuarioBindingSource1)).BeginInit();
-            this.panelBtnCadastrar.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.tipousuarioBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this._0YbKKAeekeDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tIPOUSUARIOBindingSource2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this._0YbKKAeekeDataSet)).BeginInit();
+            this.panelBtnCadastrar.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.tipousuarioBindingSource1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tipousuarioBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // lblUsuario
@@ -253,9 +253,15 @@
             this.CBFuncao.TabIndex = 43;
             this.CBFuncao.ValueMember = "ID_TIPO_USUARIO";
             // 
-            // tipousuarioBindingSource1
+            // tIPOUSUARIOBindingSource2
             // 
-            this.tipousuarioBindingSource1.DataMember = "tipo_usuario";
+            this.tIPOUSUARIOBindingSource2.DataMember = "TIPO_USUARIO";
+            this.tIPOUSUARIOBindingSource2.DataSource = this._0YbKKAeekeDataSet;
+            // 
+            // _0YbKKAeekeDataSet
+            // 
+            this._0YbKKAeekeDataSet.DataSetName = "_0YbKKAeekeDataSet";
+            this._0YbKKAeekeDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // lblFuncao
             // 
@@ -297,25 +303,19 @@
             this.btnCadastrar.UseVisualStyleBackColor = false;
             this.btnCadastrar.Click += new System.EventHandler(this.btnCadastrar_Click);
             // 
+            // tipousuarioBindingSource1
+            // 
+            this.tipousuarioBindingSource1.DataMember = "tipo_usuario";
+            // 
             // tipousuarioBindingSource
             // 
             this.tipousuarioBindingSource.DataMember = "tipo_usuario";
-            // 
-            // _0YbKKAeekeDataSet
-            // 
-            this._0YbKKAeekeDataSet.DataSetName = "_0YbKKAeekeDataSet";
-            this._0YbKKAeekeDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // tIPOUSUARIOBindingSource2
-            // 
-            this.tIPOUSUARIOBindingSource2.DataMember = "TIPO_USUARIO";
-            this.tIPOUSUARIOBindingSource2.DataSource = this._0YbKKAeekeDataSet;
             // 
             // tIPO_USUARIOTableAdapter
             // 
             this.tIPO_USUARIOTableAdapter.ClearBeforeFill = true;
             // 
-            // NewUser
+            // RegisterUser
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -325,7 +325,8 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
-            this.Name = "NewUser";
+            this.Name = "RegisterUser";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Qr Águas - Cadastrar Usuario";
             this.Load += new System.EventHandler(this.NewUser_Load);
             this.tableLayoutPanel1.ResumeLayout(false);
@@ -337,11 +338,11 @@
             this.panelConfirmarSenha.PerformLayout();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.tipousuarioBindingSource1)).EndInit();
-            this.panelBtnCadastrar.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.tipousuarioBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this._0YbKKAeekeDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.tIPOUSUARIOBindingSource2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this._0YbKKAeekeDataSet)).EndInit();
+            this.panelBtnCadastrar.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.tipousuarioBindingSource1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tipousuarioBindingSource)).EndInit();
             this.ResumeLayout(false);
 
         }

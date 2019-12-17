@@ -1,4 +1,5 @@
-﻿using System;
+﻿using QrAguas.Models;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -47,7 +48,11 @@ namespace QrAguas.View_Layer
             TSLData.Text = DateTime.Now.ToLongDateString();
             TSLHora.Text = DateTime.Now.ToLongTimeString();
         }
-        
-        
+
+        private void cadastrarUsuárioToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            RegisterUser objCadastrarUsuario = new RegisterUser();
+            objCadastrarUsuario.Show();
+        }
     }
 }

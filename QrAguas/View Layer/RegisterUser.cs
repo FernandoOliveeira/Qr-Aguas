@@ -20,7 +20,15 @@ namespace QrAguas.View_Layer
         }
 
         Functions functions = new Functions();
-        User objCadastrar = new User();
+        NewUser objNovoUsuario = new NewUser();
+
+        private void LimparCampos()
+        {
+            txtUsuario.Text = "";
+            txtSenha.Text = "";
+            txtConfirmarSenha.Text = "";
+            CBFuncao.Text = "Selecione a função";
+        }
 
         private void NewUser_Load(object sender, EventArgs e)
         {
@@ -42,7 +50,7 @@ namespace QrAguas.View_Layer
                 lblUsuarioAviso.ForeColor = Color.Red;
                 btnCadastrar.Enabled = false;
             }
-            
+
             else if (txtUsuario.Text.Length == 15)
             {
                 // Caso seja digitado o máximo de 15 caracteres o texto de aviso se torna vermelho
@@ -55,7 +63,7 @@ namespace QrAguas.View_Layer
                 lblUsuarioAviso.ForeColor = Color.White;
                 btnCadastrar.Enabled = true;
             }
-            
+
         }
 
 
@@ -77,13 +85,43 @@ namespace QrAguas.View_Layer
 
         private void btnCadastrar_Click(object sender, EventArgs e)
         {
-             if (txtConfirmarSenha.Text.Trim().Equals(txtSenha.Text.Trim()) && !functions.VerificarNomeUsuario(txtUsuario.Text.Trim())) // Verifica se o nome de usuario já existe e se as senhas são iguais
+            if (functions.VerificarNomeUsuario(txtUsuario.Text.Trim())) // Verifica se o nome de usuario já existe
             {
-                MessageBox.Show("Nome de usuário disponível\nAs senhas são iguais", "Usuário já cadastrado", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show("Nome de usuário já cadastrado", "Nome de usuário já cadastrado", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
             else
             {
-                MessageBox.Show("Nome de usuário já cadastrado", "Nome de usuário já cadastrado", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                try
+                {
+                    objNovoUsuario.NomeUsuario = txtUsuario.Text.Trim();
+                    objNovoUsuario.Senha = txtConfirmarSenha.Text;
+                    objNovoUsuario.IdTipoUsuario = (int)CBFuncao.SelectedValue;
+                    objNovoUsuario.CadastradoPor = Login.NomeUsuario;
+
+                    if (functions.VerificarDadosUsuario(objNovoUsuario))
+                    {
+                        functions.AbrirBanco();
+                        functions.CadastrarNovoUsuario(objNovoUsuario);
+                        functions.FecharBanco(functions.AbrirBanco());
+
+                        MessageBox.Show("Usuário cadastrado com sucesso !", "Usuário Cadastrado", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                        LimparCampos();
+                    }
+                    else
+                    {
+                        MessageBox.Show("Um ou mais campos estão vazios", "Campos Vazios", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    }
+                }
+                catch (Exception)
+                {
+
+                    MessageBox.Show("Um ou mais campos estão vazios\nPreencha todos os campos antes de continuar.", "Campos Vazios", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                }
+                
+
+                
+
             }
         }
     }

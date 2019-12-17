@@ -46,6 +46,8 @@
             this.TreeViewImageList = new System.Windows.Forms.ImageList(this.components);
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.segundoItemToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.cadastrarUsuárioToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.alterarSenhaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.statusStrip1 = new System.Windows.Forms.StatusStrip();
             this.TSLUsuario = new System.Windows.Forms.ToolStripStatusLabel();
             this.TSLData = new System.Windows.Forms.ToolStripStatusLabel();
@@ -53,8 +55,6 @@
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.treeView = new System.Windows.Forms.TreeView();
-            this.cadastrarUsuárioToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.alterarSenhaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.statusStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -86,6 +86,19 @@
             this.segundoItemToolStripMenuItem.Name = "segundoItemToolStripMenuItem";
             this.segundoItemToolStripMenuItem.Size = new System.Drawing.Size(58, 20);
             this.segundoItemToolStripMenuItem.Text = "Opções";
+            // 
+            // cadastrarUsuárioToolStripMenuItem
+            // 
+            this.cadastrarUsuárioToolStripMenuItem.Name = "cadastrarUsuárioToolStripMenuItem";
+            this.cadastrarUsuárioToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.cadastrarUsuárioToolStripMenuItem.Text = "Cadastrar Usuário";
+            this.cadastrarUsuárioToolStripMenuItem.Click += new System.EventHandler(this.cadastrarUsuárioToolStripMenuItem_Click);
+            // 
+            // alterarSenhaToolStripMenuItem
+            // 
+            this.alterarSenhaToolStripMenuItem.Name = "alterarSenhaToolStripMenuItem";
+            this.alterarSenhaToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.alterarSenhaToolStripMenuItem.Text = "Alterar Senha";
             // 
             // statusStrip1
             // 
@@ -179,18 +192,6 @@
             this.treeView.Size = new System.Drawing.Size(251, 538);
             this.treeView.TabIndex = 0;
             this.treeView.NodeMouseDoubleClick += new System.Windows.Forms.TreeNodeMouseClickEventHandler(this.treeView_NodeMouseDoubleClick);
-            // 
-            // cadastrarUsuárioToolStripMenuItem
-            // 
-            this.cadastrarUsuárioToolStripMenuItem.Name = "cadastrarUsuárioToolStripMenuItem";
-            this.cadastrarUsuárioToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.cadastrarUsuárioToolStripMenuItem.Text = "Cadastrar Usuário";
-            // 
-            // alterarSenhaToolStripMenuItem
-            // 
-            this.alterarSenhaToolStripMenuItem.Name = "alterarSenhaToolStripMenuItem";
-            this.alterarSenhaToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.alterarSenhaToolStripMenuItem.Text = "Alterar Senha";
             // 
             // MainForm
             // 

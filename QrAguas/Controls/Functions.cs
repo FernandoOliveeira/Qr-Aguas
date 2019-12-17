@@ -1,4 +1,6 @@
 ﻿using MySql.Data.MySqlClient;
+using QrAguas.BusinessLayer;
+using QrAguas.Models;
 using System;
 using System.Collections.Generic;
 using System.Data;
@@ -8,7 +10,7 @@ using System.Threading.Tasks;
 
 namespace QrAguas.Controls
 {
-    class Functions : Connection
+    class Functions : BlNewUser
     {
         #region FormLogin
 
@@ -75,6 +77,22 @@ namespace QrAguas.Controls
             FecharBanco(AbrirBanco());
             return false;
 
+        }
+
+        public bool CadastrarNovoUsuario(NewUser objNovoUsuario)
+        {
+            string queryCadastrarUsuario = "INSERT INTO USUARIOS (NOME_USUARIO, SENHA, ID_TIPO_USUARIO, CADASTRADO_POR) VALUES ( @NOME_USUARIO, @SENHA, @ID_TIPO_USUARIO, @CADASTRADO_POR)";
+
+            MySqlCommand command = new MySqlCommand(queryCadastrarUsuario, AbrirBanco());
+
+            command.Parameters.AddWithValue("@NOME_USUARIO", objNovoUsuario.NomeUsuario);
+            command.Parameters.AddWithValue("@SENHA", objNovoUsuario.Senha);
+            command.Parameters.AddWithValue("@ID_TIPO_USUARIO", objNovoUsuario.IdTipoUsuario);
+            command.Parameters.AddWithValue("@CADASTRADO_POR", objNovoUsuario.CadastradoPor);
+
+            int rowCount = command.ExecuteNonQuery();
+
+            return rowCount != 0 ? true : false;
         }
 
         #endregion
