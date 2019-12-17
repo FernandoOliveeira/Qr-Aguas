@@ -20,7 +20,7 @@ namespace QrAguas.View_Layer
         }
 
         Functions functions = new Functions();
-        User cadastrarUsuario = new User();
+        User objCadastrar = new User();
 
         private void NewUser_Load(object sender, EventArgs e)
         {
@@ -65,18 +65,25 @@ namespace QrAguas.View_Layer
             {
                 lblConfirmarSenhaAviso.Text = "As senhas devem ser idênticas";
                 lblConfirmarSenhaAviso.ForeColor = Color.Red;
+                btnCadastrar.Enabled = false;
             }
             else
             {
-                lblConfirmarSenhaAviso.Text = "";
+                lblConfirmarSenhaAviso.Text = "As senhas devem ser idênticas";
+                lblConfirmarSenhaAviso.ForeColor = Color.White;
+                btnCadastrar.Enabled = true;
             }
         }
 
         private void btnCadastrar_Click(object sender, EventArgs e)
         {
-            if (functions.VerificarNomeUsuario(txtUsuario.Text.Trim())) // Verifica se o nome de usuario já existe
+             if (txtConfirmarSenha.Text.Trim().Equals(txtSenha.Text.Trim()) && !functions.VerificarNomeUsuario(txtUsuario.Text.Trim())) // Verifica se o nome de usuario já existe e se as senhas são iguais
             {
-                MessageBox.Show("Este nome de usuário já existe", "Usuário já cadastrado", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show("Nome de usuário disponível\nAs senhas são iguais", "Usuário já cadastrado", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+            else
+            {
+                MessageBox.Show("Nome de usuário já cadastrado", "Nome de usuário já cadastrado", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
         }
     }

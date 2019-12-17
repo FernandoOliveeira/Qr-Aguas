@@ -11,7 +11,6 @@ namespace QrAguas.Controls
 {
     class Connection
     {
-        //MySqlConnection cnn = new MySqlConnection("Server=localhost;" + "Database=QRAGUAS;" + "Uid=root;" + "Pwd=;");
         public string connectionString = ConfigurationManager.ConnectionStrings["cnn"].ConnectionString;
 
 
