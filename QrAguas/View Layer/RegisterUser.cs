@@ -12,9 +12,9 @@ using System.Windows.Forms;
 
 namespace QrAguas.View_Layer
 {
-    public partial class NewUser : Form
+    public partial class RegisterUser : Form
     {
-        public NewUser()
+        public RegisterUser()
         {
             InitializeComponent();
         }
@@ -24,26 +24,25 @@ namespace QrAguas.View_Layer
 
         private void NewUser_Load(object sender, EventArgs e)
         {
+            // Preenche o ComboBox com os tipos de usuários presentos no banco de dados
+            // TODO: This line of code loads data into the '_0YbKKAeekeDataSet.TIPO_USUARIO' table. You can move, or remove it, as needed.
+            this.tIPO_USUARIOTableAdapter.Fill(this._0YbKKAeekeDataSet.TIPO_USUARIO);
 
-            lblConfirmarSenhaAviso.Text = "";
+            lblConfirmarSenhaAviso.Text = "As senhas devem ser idênticas";
+            CBFuncao.Text = "Selecione a função";
 
         }
 
         private void txtUsuario_TextChanged(object sender, EventArgs e)
         {
 
-            if (txtUsuario.Text.Contains(" "))// Verifica se o texto digitado tem espaços em branco
+            if (txtUsuario.Text.Contains(" ") || txtUsuario.Text.Contains(" "))// Verifica se o texto digitado tem espaços em branco ou o caracter ALT+255
             {
                 lblUsuarioAviso.Text = "Não pode haver espaços";
                 lblUsuarioAviso.ForeColor = Color.Red;
                 btnCadastrar.Enabled = false;
             }
-            else if (functions.VerificarNomeUsuario(txtUsuario.Text.Trim())) // Verifica se o nome de usuario já existe
-            {
-                lblUsuarioAviso.Text = "Este nome de usuário já existe";
-                lblUsuarioAviso.ForeColor = Color.Red;
-                btnCadastrar.Enabled = false;
-            }
+            
             else if (txtUsuario.Text.Length == 15)
             {
                 // Caso seja digitado o máximo de 15 caracteres o texto de aviso se torna vermelho
@@ -59,10 +58,6 @@ namespace QrAguas.View_Layer
             
         }
 
-        private void btnCadastrar_Click(object sender, EventArgs e)
-        {
-            
-        }
 
         private void txtConfirmarSenha_TextChanged(object sender, EventArgs e)
         {
@@ -74,6 +69,14 @@ namespace QrAguas.View_Layer
             else
             {
                 lblConfirmarSenhaAviso.Text = "";
+            }
+        }
+
+        private void btnCadastrar_Click(object sender, EventArgs e)
+        {
+            if (functions.VerificarNomeUsuario(txtUsuario.Text.Trim())) // Verifica se o nome de usuario já existe
+            {
+                MessageBox.Show("Este nome de usuário já existe", "Usuário já cadastrado", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
         }
     }

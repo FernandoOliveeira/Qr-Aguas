@@ -32,5 +32,16 @@ namespace QrAguas.Properties {
                 return ((string)(this["qraguasConnectionString"]));
             }
         }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
+        [global::System.Configuration.DefaultSettingValueAttribute("server=remotemysql.com;user id=0YbKKAeeke;password=Aqhx0syv8q;database=0YbKKAeeke" +
+            "")]
+        public string _0YbKKAeekeConnectionString {
+            get {
+                return ((string)(this["_0YbKKAeekeConnectionString"]));
+            }
+        }
     }
 }
