@@ -1,4 +1,5 @@
 ﻿using QrAguas.Controls;
+using QrAguas.Models;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -19,11 +20,10 @@ namespace QrAguas.View_Layer
         }
 
         Functions functions = new Functions();
+        User cadastrarUsuario = new User();
 
         private void NewUser_Load(object sender, EventArgs e)
         {
-            // Preenche a DropDownList com os cargos cadastrados no banco de dados
-            this.tipo_usuarioTableAdapter1.Fill(this.qraguasDataSet1.tipo_usuario);
 
             lblConfirmarSenhaAviso.Text = "";
 
@@ -66,7 +66,15 @@ namespace QrAguas.View_Layer
 
         private void txtConfirmarSenha_TextChanged(object sender, EventArgs e)
         {
-
+            if (!txtConfirmarSenha.Text.Equals(txtSenha.Text))
+            {
+                lblConfirmarSenhaAviso.Text = "As senhas devem ser idênticas";
+                lblConfirmarSenhaAviso.ForeColor = Color.Red;
+            }
+            else
+            {
+                lblConfirmarSenhaAviso.Text = "";
+            }
         }
     }
 }

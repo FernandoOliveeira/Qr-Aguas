@@ -50,13 +50,9 @@
   <ItemGroup>
     <Compile Include="Controls\Connection.cs" />
     <Compile Include="Controls\Functions.cs" />
+    <Compile Include="Models\User.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="qraguasDataSet1.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>qraguasDataSet1.xsd</DependentUpon>
-    </Compile>
     <Compile Include="View Layer\NewUser.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -108,17 +104,6 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="qraguasDataSet1.xsc">
-      <DependentUpon>qraguasDataSet1.xsd</DependentUpon>
-    </None>
-    <None Include="qraguasDataSet1.xsd">
-      <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>qraguasDataSet1.Designer.cs</LastGenOutput>
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="qraguasDataSet1.xss">
-      <DependentUpon>qraguasDataSet1.xsd</DependentUpon>
-    </None>
     <None Include="Resources\qrAguasIconeGota.png" />
   </ItemGroup>
   <ItemGroup>
@@ -133,9 +118,7 @@
   <ItemGroup>
     <None Include="Resources\Novo usuario1.png" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Models\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

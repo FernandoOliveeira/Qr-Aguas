@@ -45,19 +45,16 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.CBFuncao = new System.Windows.Forms.ComboBox();
             this.tipousuarioBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
-            this.qraguasDataSet1 = new QrAguas.qraguasDataSet1();
             this.lblFuncao = new System.Windows.Forms.Label();
             this.panelBtnCadastrar = new System.Windows.Forms.Panel();
             this.btnCadastrar = new System.Windows.Forms.Button();
             this.tipousuarioBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.tipo_usuarioTableAdapter1 = new QrAguas.qraguasDataSet1TableAdapters.tipo_usuarioTableAdapter();
             this.tableLayoutPanel1.SuspendLayout();
             this.panelUsuario.SuspendLayout();
             this.panelSenha.SuspendLayout();
             this.panelConfirmarSenha.SuspendLayout();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.tipousuarioBindingSource1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.qraguasDataSet1)).BeginInit();
             this.panelBtnCadastrar.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.tipousuarioBindingSource)).BeginInit();
             this.SuspendLayout();
@@ -254,12 +251,8 @@
             // tipousuarioBindingSource1
             // 
             this.tipousuarioBindingSource1.DataMember = "tipo_usuario";
-            this.tipousuarioBindingSource1.DataSource = this.qraguasDataSet1;
             // 
             // qraguasDataSet1
-            // 
-            this.qraguasDataSet1.DataSetName = "qraguasDataSet1";
-            this.qraguasDataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // lblFuncao
             // 
@@ -307,7 +300,6 @@
             // 
             // tipo_usuarioTableAdapter1
             // 
-            this.tipo_usuarioTableAdapter1.ClearBeforeFill = true;
             // 
             // NewUser
             // 
@@ -332,7 +324,6 @@
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.tipousuarioBindingSource1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.qraguasDataSet1)).EndInit();
             this.panelBtnCadastrar.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.tipousuarioBindingSource)).EndInit();
             this.ResumeLayout(false);
@@ -355,9 +346,7 @@
         private System.Windows.Forms.ComboBox CBFuncao;
         private System.Windows.Forms.Label lblFuncao;
         private System.Windows.Forms.BindingSource tipousuarioBindingSource;
-        private qraguasDataSet1 qraguasDataSet1;
         private System.Windows.Forms.BindingSource tipousuarioBindingSource1;
-        private qraguasDataSet1TableAdapters.tipo_usuarioTableAdapter tipo_usuarioTableAdapter1;
         private System.Windows.Forms.Panel panelBtnCadastrar;
         private System.Windows.Forms.Button btnCadastrar;
         private System.Windows.Forms.Label lblConfirmarSenhaAviso;
