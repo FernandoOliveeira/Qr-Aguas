@@ -27,7 +27,6 @@ namespace QrAguas.View_Layer
             txtUsuario.Text = "";
             txtSenha.Text = "";
             txtConfirmarSenha.Text = "";
-            CBFuncao.Text = "Selecione a função";
         }
 
         private void NewUser_Load(object sender, EventArgs e)
@@ -37,7 +36,6 @@ namespace QrAguas.View_Layer
             this.tIPO_USUARIOTableAdapter.Fill(this._0YbKKAeekeDataSet.TIPO_USUARIO);
 
             lblConfirmarSenhaAviso.Text = "As senhas devem ser idênticas";
-            CBFuncao.Text = "Selecione a função";
 
         }
 
@@ -87,7 +85,7 @@ namespace QrAguas.View_Layer
         {
             if (functions.VerificarNomeUsuario(txtUsuario.Text.Trim())) // Verifica se o nome de usuario já existe
             {
-                MessageBox.Show("Nome de usuário já cadastrado", "Nome de usuário já cadastrado", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show("Nome de usuário já cadastrado", "Nome de usuário existente", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
             else
             {
