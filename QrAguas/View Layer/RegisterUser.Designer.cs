@@ -328,7 +328,7 @@
             this.Name = "RegisterUser";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Qr Águas - Cadastrar Usuario";
-            this.Load += new System.EventHandler(this.NewUser_Load);
+            this.Load += new System.EventHandler(this.RegisterUser_Load);
             this.tableLayoutPanel1.ResumeLayout(false);
             this.panelUsuario.ResumeLayout(false);
             this.panelUsuario.PerformLayout();
