@@ -5,6 +5,7 @@ using System;
 using System.Collections.Generic;
 using System.Data;
 using System.Linq;
+using System.Security.Cryptography;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -12,6 +13,30 @@ namespace QrAguas.Controls
 {
     class Functions : BlNewUser
     {
+        #region Gerar Hash MD5
+
+        public string GerarMd5(string senha)
+        {
+            MD5 md5Hash = MD5.Create();
+
+            // Criptografa a senha passada como parâmetro
+            byte[] senhaCriptografada = md5Hash.ComputeHash(Encoding.Default.GetBytes(senha));
+
+            // Cria um StringBuilder para passarmos os bytes gerados
+            StringBuilder stringBuilder = new StringBuilder();
+
+            for (int i = 0; i < senhaCriptografada.Length; i++)
+            {
+                stringBuilder.Append(senhaCriptografada[i].ToString("x2"));
+            }
+
+            // Retorna o valor criptografado como string
+            return stringBuilder.ToString();
+        }
+
+        #endregion
+
+
         #region FormLogin
 
         public bool VerificarLogin(string usuario, string senha)

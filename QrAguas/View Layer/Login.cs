@@ -35,7 +35,7 @@ namespace QrAguas.View_Layer
         public static extern bool ReleaseCapture();
         #endregion
 
-        Functions objLogin = new Functions();
+        Functions functions = new Functions();
 
 
         public void ArrastarTela_MouseDown(object sender, MouseEventArgs e)
@@ -51,8 +51,10 @@ namespace QrAguas.View_Layer
 
         private void btnEntrar_Click(object sender, EventArgs e)
         {
-            
-            if (objLogin.VerificarLogin(txtUsuario.Text, GerarMd5(txtSenha.Text)))
+            // Gera um HashMd5 e armazena na variavel senha
+            string senha = functions.GerarMd5(txtSenha.Text);
+
+            if (functions.VerificarLogin(txtUsuario.Text, senha))
             {
                 // Abrir o form MainForm e fechar o atual
                 NomeUsuario = txtUsuario.Text;
@@ -72,25 +74,6 @@ namespace QrAguas.View_Layer
         private void AbrirMainForm() 
         {
             Application.Run(new MainForm());
-        }
-        
-        public string GerarMd5(string senha)
-        {
-            MD5 md5Hash = MD5.Create();
-
-            // Criptografa a senha passada como parâmetro
-            byte[] senhaCriptografada = md5Hash.ComputeHash(Encoding.Default.GetBytes(senha));
-
-            // Cria um StringBuilder para passarmos os bytes gerados
-            StringBuilder stringBuilder = new StringBuilder();
-
-            for (int i = 0; i < senhaCriptografada.Length; i++)
-            {
-                stringBuilder.Append(senhaCriptografada[i].ToString("x2"));
-            }
-
-            // Retorna o valor criptografado como string
-            return stringBuilder.ToString();
         }
 
         #region BotaoFechar
