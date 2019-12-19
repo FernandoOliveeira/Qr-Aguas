@@ -114,7 +114,7 @@ namespace QrAguas.View_Layer
                 try
                 {
                     objNovoUsuario.NomeUsuario = txtUsuario.Text.Trim();
-                    objNovoUsuario.Senha = txtConfirmarSenha.Text;
+                    objNovoUsuario.Senha = functions.GerarMd5(txtConfirmarSenha.Text);
                     objNovoUsuario.IdTipoUsuario = (int)CBFuncao.SelectedValue;
                     objNovoUsuario.CadastradoPor = Login.NomeUsuario;
 

@@ -37,7 +37,7 @@ namespace QrAguas.Controls
         #endregion
 
 
-        #region FormLogin
+        #region Form Login
 
         public bool VerificarLogin(string usuario, string senha)
         {
@@ -107,7 +107,7 @@ namespace QrAguas.Controls
 
         public bool CadastrarNovoUsuario(NewUser objNovoUsuario)
         {
-            string queryCadastrarUsuario = "INSERT INTO USUARIOS (NOME_USUARIO, SENHA, ID_TIPO_USUARIO, CADASTRADO_POR) VALUES ( @NOME_USUARIO, @SENHA, @ID_TIPO_USUARIO, @CADASTRADO_POR)";
+            string queryCadastrarUsuario = "INSERT INTO USUARIOS (NOME_USUARIO, SENHA, ID_TIPO_USUARIO, CADASTRADO_POR, DATA_CADASTRO) VALUES ( @NOME_USUARIO, @SENHA, @ID_TIPO_USUARIO, @CADASTRADO_POR, @DATA_CADASTRO)";
 
             MySqlCommand command = new MySqlCommand(queryCadastrarUsuario, AbrirBanco());
 
@@ -115,6 +115,7 @@ namespace QrAguas.Controls
             command.Parameters.AddWithValue("@SENHA", objNovoUsuario.Senha);
             command.Parameters.AddWithValue("@ID_TIPO_USUARIO", objNovoUsuario.IdTipoUsuario);
             command.Parameters.AddWithValue("@CADASTRADO_POR", objNovoUsuario.CadastradoPor);
+            command.Parameters.AddWithValue("@DATA_CADASTRO", DateTime.Now);
 
             int rowCount = command.ExecuteNonQuery();
 
