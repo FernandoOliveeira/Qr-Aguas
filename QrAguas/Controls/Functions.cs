@@ -50,6 +50,7 @@ namespace QrAguas.Controls
 
         #region Form NewUser
 
+
         public bool VerificarNomeUsuario(string nomeUsuario)
         {
             DataTable consultarNomeUsuario = new DataTable();

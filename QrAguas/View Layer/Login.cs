@@ -9,6 +9,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Threading;
+using System.Security.Cryptography;
 
 namespace QrAguas.View_Layer
 {
@@ -51,7 +52,7 @@ namespace QrAguas.View_Layer
         private void btnEntrar_Click(object sender, EventArgs e)
         {
             
-            if (objLogin.VerificarLogin(txtUsuario.Text, txtSenha.Text))
+            if (objLogin.VerificarLogin(txtUsuario.Text, GerarMd5(txtSenha.Text)))
             {
                 // Abrir o form MainForm e fechar o atual
                 NomeUsuario = txtUsuario.Text;
@@ -72,7 +73,25 @@ namespace QrAguas.View_Layer
         {
             Application.Run(new MainForm());
         }
+        
+        public string GerarMd5(string senha)
+        {
+            MD5 md5Hash = MD5.Create();
 
+            // Criptografa a senha passada como parâmetro
+            byte[] senhaCriptografada = md5Hash.ComputeHash(Encoding.Default.GetBytes(senha));
+
+            // Cria um StringBuilder para passarmos os bytes gerados
+            StringBuilder stringBuilder = new StringBuilder();
+
+            for (int i = 0; i < senhaCriptografada.Length; i++)
+            {
+                stringBuilder.Append(senhaCriptografada[i].ToString("x2"));
+            }
+
+            // Retorna o valor criptografado como string
+            return stringBuilder.ToString();
+        }
 
         #region BotaoFechar
         private void btnFechar_Click(object sender, EventArgs e)

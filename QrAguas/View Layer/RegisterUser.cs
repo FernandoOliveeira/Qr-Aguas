@@ -72,33 +72,34 @@ namespace QrAguas.View_Layer
 
         private void txtSenha_TextChanged(object sender, EventArgs e)
         {
-            if (!txtSenha.Text.Equals(txtConfirmarSenha.Text))
-            {
-                lblConfirmarSenhaAviso.Text = "As senhas devem ser idênticas";
-                lblConfirmarSenhaAviso.ForeColor = Color.Red;
-                btnCadastrar.Enabled = false;
-            }
-            else
+            if (txtSenha.Text.Equals(txtConfirmarSenha.Text))
             {
                 lblConfirmarSenhaAviso.Text = "As senhas devem ser idênticas";
                 lblConfirmarSenhaAviso.ForeColor = Color.White;
                 btnCadastrar.Enabled = true;
+            }
+            else
+            {
+                lblConfirmarSenhaAviso.Text = "As senhas devem ser idênticas";
+                lblConfirmarSenhaAviso.ForeColor = Color.Red;
+                btnCadastrar.Enabled = false;
             }
         }
 
         private void txtConfirmarSenha_TextChanged(object sender, EventArgs e)
         {
-            if (!txtConfirmarSenha.Text.Equals(txtSenha.Text))
-            {
-                lblConfirmarSenhaAviso.Text = "As senhas devem ser idênticas";
-                lblConfirmarSenhaAviso.ForeColor = Color.Red;
-                btnCadastrar.Enabled = false;
-            }
-            else
+            if (txtConfirmarSenha.Text.Equals(txtSenha.Text))
             {
                 lblConfirmarSenhaAviso.Text = "As senhas devem ser idênticas";
                 lblConfirmarSenhaAviso.ForeColor = Color.White;
                 btnCadastrar.Enabled = true;
+            }
+            else
+            {
+                
+                lblConfirmarSenhaAviso.Text = "As senhas devem ser idênticas";
+                lblConfirmarSenhaAviso.ForeColor = Color.Red;
+                btnCadastrar.Enabled = false;
             }
         }
 
