@@ -176,6 +176,7 @@
             this.txtSenha.PasswordChar = '●';
             this.txtSenha.Size = new System.Drawing.Size(303, 23);
             this.txtSenha.TabIndex = 40;
+            this.txtSenha.TextChanged += new System.EventHandler(this.txtSenha_TextChanged);
             // 
             // panelConfirmarSenha
             // 

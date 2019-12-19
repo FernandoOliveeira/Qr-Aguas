@@ -70,6 +70,22 @@ namespace QrAguas.View_Layer
 
         }
 
+        private void txtSenha_TextChanged(object sender, EventArgs e)
+        {
+            if (!txtSenha.Text.Equals(txtConfirmarSenha.Text))
+            {
+                lblConfirmarSenhaAviso.Text = "As senhas devem ser idênticas";
+                lblConfirmarSenhaAviso.ForeColor = Color.Red;
+                btnCadastrar.Enabled = false;
+            }
+            else
+            {
+                lblConfirmarSenhaAviso.Text = "As senhas devem ser idênticas";
+                lblConfirmarSenhaAviso.ForeColor = Color.White;
+                btnCadastrar.Enabled = true;
+            }
+        }
+
         private void txtConfirmarSenha_TextChanged(object sender, EventArgs e)
         {
             if (!txtConfirmarSenha.Text.Equals(txtSenha.Text))
@@ -127,5 +143,6 @@ namespace QrAguas.View_Layer
 
             }
         }
+
     }
 }
