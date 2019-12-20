@@ -6,6 +6,7 @@ using System.Data;
 using System.Drawing;
 using System.Linq;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
@@ -13,28 +14,40 @@ namespace QrAguas.View_Layer
 {
     public partial class MainForm : Form
     {
+        Thread thread;
+
         public MainForm()
         {
             InitializeComponent();
         }
 
-        // Exibe uma mensagem caso seja clicado no botão SAIR
+        
         private void MainForm_FormClosing(object sender, FormClosingEventArgs e)
         {
-            if (MessageBox.Show("Deseja mesmo sair ?", "Sair", MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button2) != DialogResult.Yes)
+            // Ao fechar o menu principal é exibido um diálogo, perguntando se o usuário
+            // deseja sair ou encerrar a sessão para entrar com outro login e senha
+
+            Logout logout = new Logout();
+
+            if (logout.ShowDialog() == DialogResult.OK)
             {
-                e.Cancel = true;
+                thread = new Thread(AbrirFormLogin);
+                thread.SetApartmentState(ApartmentState.STA);
+                thread.Start();
             }
+
         }
 
         private void treeView_NodeMouseDoubleClick(object sender, TreeNodeMouseClickEventArgs e)
         {
-            
-           
+
+
         }
 
         private void MainForm_Load(object sender, EventArgs e)
         {
+            //toolStripMenuItem1.Text = Login.NomeUsuario;
+
             //menuStrip1.Items["Cadastrar Novo Usuário"].Visible = true;
             TSLUsuario.Text = "Usuário: " + Login.NomeUsuario;
 
@@ -42,9 +55,10 @@ namespace QrAguas.View_Layer
             TSLHora.Text = DateTime.Now.ToLongTimeString();
 
         }
-   
+
         private void timer1_Tick(object sender, EventArgs e)
         {
+            // Atualiza a data e hora a cada segundo
             TSLData.Text = DateTime.Now.ToLongDateString();
             TSLHora.Text = DateTime.Now.ToLongTimeString();
         }
@@ -53,6 +67,11 @@ namespace QrAguas.View_Layer
         {
             RegisterUser objCadastrarUsuario = new RegisterUser();
             objCadastrarUsuario.Show();
+        }
+
+        private void AbrirFormLogin()
+        {
+            Application.Run(new Login());
         }
     }
 }

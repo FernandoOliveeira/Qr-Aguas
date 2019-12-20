@@ -247,6 +247,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.CBFuncao.DataSource = this.tIPOUSUARIOBindingSource2;
             this.CBFuncao.DisplayMember = "DESCRICAO";
+            this.CBFuncao.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.CBFuncao.FormattingEnabled = true;
             this.CBFuncao.Location = new System.Drawing.Point(4, 23);
             this.CBFuncao.Name = "CBFuncao";
