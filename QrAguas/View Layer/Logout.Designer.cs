@@ -36,14 +36,11 @@
             // 
             // lblTitulo
             // 
-            this.lblTitulo.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.lblTitulo.AutoSize = true;
+            this.lblTitulo.Dock = System.Windows.Forms.DockStyle.Top;
             this.lblTitulo.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTitulo.Location = new System.Drawing.Point(32, 27);
+            this.lblTitulo.Location = new System.Drawing.Point(0, 0);
             this.lblTitulo.Name = "lblTitulo";
-            this.lblTitulo.Size = new System.Drawing.Size(206, 13);
+            this.lblTitulo.Size = new System.Drawing.Size(252, 93);
             this.lblTitulo.TabIndex = 0;
             this.lblTitulo.Text = "Deseja mesmo sair ou encerrar a sessão ?";
             this.lblTitulo.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -51,7 +48,7 @@
             // btnSair
             // 
             this.btnSair.DialogResult = System.Windows.Forms.DialogResult.Yes;
-            this.btnSair.Location = new System.Drawing.Point(44, 96);
+            this.btnSair.Location = new System.Drawing.Point(12, 96);
             this.btnSair.Name = "btnSair";
             this.btnSair.Size = new System.Drawing.Size(75, 23);
             this.btnSair.TabIndex = 1;
@@ -61,7 +58,7 @@
             // btnEncerrar
             // 
             this.btnEncerrar.DialogResult = System.Windows.Forms.DialogResult.OK;
-            this.btnEncerrar.Location = new System.Drawing.Point(183, 96);
+            this.btnEncerrar.Location = new System.Drawing.Point(146, 96);
             this.btnEncerrar.Name = "btnEncerrar";
             this.btnEncerrar.Size = new System.Drawing.Size(94, 23);
             this.btnEncerrar.TabIndex = 2;
@@ -72,7 +69,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(334, 131);
+            this.ClientSize = new System.Drawing.Size(252, 126);
             this.Controls.Add(this.btnEncerrar);
             this.Controls.Add(this.btnSair);
             this.Controls.Add(this.lblTitulo);
@@ -84,7 +81,6 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Logout";
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
