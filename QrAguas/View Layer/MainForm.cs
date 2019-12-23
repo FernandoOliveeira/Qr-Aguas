@@ -29,11 +29,21 @@ namespace QrAguas.View_Layer
 
             Logout logout = new Logout();
 
-            if (logout.ShowDialog() == DialogResult.OK)
+            DialogResult resposta = logout.ShowDialog();
+
+            if (resposta == DialogResult.OK)
             {
                 thread = new Thread(AbrirFormLogin);
                 thread.SetApartmentState(ApartmentState.STA);
                 thread.Start();
+            }
+            else if(resposta == DialogResult.Yes)
+            {
+                e.Cancel = false;
+            }
+            else
+            {
+                e.Cancel = true;
             }
 
         }
