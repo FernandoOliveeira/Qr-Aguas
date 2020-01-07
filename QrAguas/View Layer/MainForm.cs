@@ -61,16 +61,7 @@ namespace QrAguas.View_Layer
             //menuStrip1.Items["Cadastrar Novo Usuário"].Visible = true;
             TSLUsuario.Text = "Usuário: " + Login.NomeUsuario;
 
-            TSLData.Text = DateTime.Now.ToLongDateString();
-            TSLHora.Text = DateTime.Now.ToLongTimeString();
 
-        }
-
-        private void timer1_Tick(object sender, EventArgs e)
-        {
-            // Atualiza a data e hora a cada segundo
-            TSLData.Text = DateTime.Now.ToLongDateString();
-            TSLHora.Text = DateTime.Now.ToLongTimeString();
         }
 
         private void cadastrarUsuárioToolStripMenuItem_Click(object sender, EventArgs e)
