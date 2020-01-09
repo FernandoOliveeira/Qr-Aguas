@@ -171,7 +171,7 @@
             this.txtSenha.ForeColor = System.Drawing.Color.Black;
             this.txtSenha.Location = new System.Drawing.Point(4, 23);
             this.txtSenha.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
-            this.txtSenha.MaxLength = 15;
+            this.txtSenha.MaxLength = 99;
             this.txtSenha.Name = "txtSenha";
             this.txtSenha.PasswordChar = '●';
             this.txtSenha.Size = new System.Drawing.Size(303, 23);
@@ -224,7 +224,7 @@
             this.txtConfirmarSenha.ForeColor = System.Drawing.Color.Black;
             this.txtConfirmarSenha.Location = new System.Drawing.Point(4, 23);
             this.txtConfirmarSenha.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
-            this.txtConfirmarSenha.MaxLength = 15;
+            this.txtConfirmarSenha.MaxLength = 99;
             this.txtConfirmarSenha.Name = "txtConfirmarSenha";
             this.txtConfirmarSenha.PasswordChar = '●';
             this.txtConfirmarSenha.Size = new System.Drawing.Size(303, 23);
