@@ -19,22 +19,23 @@ namespace QrAguas.View_Layer
 
         private void ChangePassword_Load(object sender, EventArgs e)
         {
-            txtUsuario.Text = Login.NomeUsuario;
-        }
+            txtUsuario.Text = Login.NomeUsuario; // TextBox Usuário recebe o Nome de Usuário logado no sistema
 
+        }
+        
         private void txtNovaSenha_TextChanged(object sender, EventArgs e)
         {
             if (txtNovaSenha.Text.Equals(txtConfirmarSenha.Text))
             {
                 lblConfirmarSenhaAviso.Text = "As senhas devem ser idênticas";
                 lblConfirmarSenhaAviso.ForeColor = Color.White;
-                btnConfirmar.Enabled = true;
+
             }
             else
             {
                 lblConfirmarSenhaAviso.Text = "As senhas devem ser idênticas";
                 lblConfirmarSenhaAviso.ForeColor = Color.Red;
-                btnConfirmar.Enabled = false;
+
             }
         }
 
@@ -44,15 +45,16 @@ namespace QrAguas.View_Layer
             {
                 lblConfirmarSenhaAviso.Text = "As senhas devem ser idênticas";
                 lblConfirmarSenhaAviso.ForeColor = Color.White;
-                btnConfirmar.Enabled = true;
+
             }
             else
             {
-
                 lblConfirmarSenhaAviso.Text = "As senhas devem ser idênticas";
                 lblConfirmarSenhaAviso.ForeColor = Color.Red;
-                btnConfirmar.Enabled = false;
+
             }
         }
+
+        
     }
 }

@@ -82,7 +82,7 @@ namespace QrAguas.View_Layer
             {
                 lblConfirmarSenhaAviso.Text = "As senhas devem ser idênticas";
                 lblConfirmarSenhaAviso.ForeColor = Color.Red;
-                btnCadastrar.Enabled = false;
+
             }
         }
 
@@ -92,13 +92,13 @@ namespace QrAguas.View_Layer
             {
                 lblConfirmarSenhaAviso.Text = "As senhas devem ser idênticas";
                 lblConfirmarSenhaAviso.ForeColor = Color.White;
-                btnCadastrar.Enabled = true;
+
             }
             else
             {
                 lblConfirmarSenhaAviso.Text = "As senhas devem ser idênticas";
                 lblConfirmarSenhaAviso.ForeColor = Color.Red;
-                btnCadastrar.Enabled = false;
+
             }
         }
 
