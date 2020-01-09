@@ -96,7 +96,6 @@ namespace QrAguas.View_Layer
             }
             else
             {
-                
                 lblConfirmarSenhaAviso.Text = "As senhas devem ser idênticas";
                 lblConfirmarSenhaAviso.ForeColor = Color.Red;
                 btnCadastrar.Enabled = false;

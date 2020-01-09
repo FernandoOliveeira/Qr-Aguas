@@ -73,7 +73,7 @@ namespace QrAguas.Controls
         #endregion
 
 
-        #region Form NewUser
+        #region Form RegisterUser
 
 
         public bool VerificarNomeUsuario(string nomeUsuario)

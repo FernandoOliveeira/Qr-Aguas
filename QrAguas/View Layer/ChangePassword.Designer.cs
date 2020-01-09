@@ -216,6 +216,7 @@
             this.txtNovaSenha.PasswordChar = '●';
             this.txtNovaSenha.Size = new System.Drawing.Size(303, 23);
             this.txtNovaSenha.TabIndex = 40;
+            this.txtNovaSenha.TextChanged += new System.EventHandler(this.txtNovaSenha_TextChanged);
             // 
             // panelConfirmarSenha
             // 
@@ -268,6 +269,7 @@
             this.txtConfirmarSenha.PasswordChar = '●';
             this.txtConfirmarSenha.Size = new System.Drawing.Size(303, 23);
             this.txtConfirmarSenha.TabIndex = 40;
+            this.txtConfirmarSenha.TextChanged += new System.EventHandler(this.txtConfirmarSenha_TextChanged);
             // 
             // ChangePassword
             // 
@@ -278,7 +280,9 @@
             this.Controls.Add(this.tableLayoutPanel1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "ChangePassword";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Qr Águas - Alterar Senha";
+            this.Load += new System.EventHandler(this.ChangePassword_Load);
             this.tableLayoutPanel1.ResumeLayout(false);
             this.panelUsuario.ResumeLayout(false);
             this.panelUsuario.PerformLayout();

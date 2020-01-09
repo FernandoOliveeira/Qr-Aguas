@@ -70,9 +70,17 @@ namespace QrAguas.View_Layer
             objCadastrarUsuario.Show();
         }
 
+
+        private void alterarSenhaToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            ChangePassword changePassword = new ChangePassword();
+            changePassword.Show();
+        }
+
         private void AbrirFormLogin()
         {
             Application.Run(new Login());
         }
+
     }
 }
