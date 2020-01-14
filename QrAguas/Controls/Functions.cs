@@ -130,9 +130,9 @@ namespace QrAguas.Controls
         #region Form ChangePassword
 
 
-        private bool AlterarSenha(string senha, string nomeUsuario)
+        public bool AlterarSenha(string senha, string nomeUsuario)
         {
-            string queryAlterarSenha = "UPDATE TABLE USUARIOS SET SENHA = @Senha WHERE NOME_USUARIO = @NomeUsuario";
+            string queryAlterarSenha = "UPDATE USUARIOS SET SENHA = @Senha WHERE NOME_USUARIO = @NomeUsuario";
 
             MySqlCommand command = new MySqlCommand(queryAlterarSenha, AbrirBanco());
 
@@ -141,7 +141,20 @@ namespace QrAguas.Controls
 
             int rowCount = command.ExecuteNonQuery();
 
-            return rowCount != 0 ? true : false;
+            if (rowCount != 0)
+            {
+                string querySenhaAlterada = "UPDATE USUARIOS SET DATA_SENHA_ALTERADA  = @DataAtual WHERE NOME_USUARIO = @NomeUsuario";
+
+                MySqlCommand commandSenhaAlterada = new MySqlCommand(querySenhaAlterada, AbrirBanco());
+
+                commandSenhaAlterada.Parameters.AddWithValue("@DataAtual", DateTime.Now);
+                commandSenhaAlterada.Parameters.AddWithValue("@NomeUsuario", nomeUsuario);
+                commandSenhaAlterada.ExecuteNonQuery();
+
+                return true;
+            }
+
+            return false;
         }
 
         #endregion

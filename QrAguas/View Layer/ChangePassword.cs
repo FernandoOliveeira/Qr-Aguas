@@ -1,4 +1,5 @@
-﻿using System;
+﻿using QrAguas.Controls;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -16,6 +17,8 @@ namespace QrAguas.View_Layer
         {
             InitializeComponent();
         }
+
+        Functions functions = new Functions();
 
         private void ChangePassword_Load(object sender, EventArgs e)
         {
@@ -55,6 +58,16 @@ namespace QrAguas.View_Layer
             }
         }
 
-        
+        private void btnConfirmar_Click(object sender, EventArgs e)
+        {
+            if (functions.AlterarSenha(txtConfirmarSenha.Text, Login.NomeUsuario))
+            {
+                MessageBox.Show("Senha Alterada com sucesso!", "Senha Alterada", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            else
+            {
+                MessageBox.Show("Erro ao alterar senha!", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
     }
 }
