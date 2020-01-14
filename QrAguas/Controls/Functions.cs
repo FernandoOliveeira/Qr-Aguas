@@ -15,6 +15,7 @@ namespace QrAguas.Controls
     {
         #region Gerar Hash MD5
 
+
         public string GerarMd5(string senha)
         {
             MD5 md5Hash = MD5.Create();
@@ -38,6 +39,7 @@ namespace QrAguas.Controls
 
 
         #region Form Login
+
 
         public bool VerificarLogin(string usuario, string senha)
         {
@@ -124,6 +126,25 @@ namespace QrAguas.Controls
 
         #endregion
 
+
+        #region Form ChangePassword
+
+
+        private bool AlterarSenha(string senha, string nomeUsuario)
+        {
+            string queryAlterarSenha = "UPDATE TABLE USUARIOS SET SENHA = @Senha WHERE NOME_USUARIO = @NomeUsuario";
+
+            MySqlCommand command = new MySqlCommand(queryAlterarSenha, AbrirBanco());
+
+            command.Parameters.AddWithValue("@Senha", senha);
+            command.Parameters.AddWithValue("@NomeUsuario", nomeUsuario);
+
+            int rowCount = command.ExecuteNonQuery();
+
+            return rowCount != 0 ? true : false;
+        }
+
+        #endregion
 
     }
 }
