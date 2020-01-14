@@ -57,7 +57,7 @@ namespace QrAguas.View_Layer
             if (functions.VerificarLogin(txtUsuario.Text, senha))
             {
                 // Abrir o form MainForm e fechar o atual
-                NomeUsuario = txtUsuario.Text;
+                NomeUsuario = txtUsuario.Text.Trim();
                 this.Close();
                 thread = new Thread(AbrirMainForm);
                 thread.SetApartmentState(ApartmentState.STA);

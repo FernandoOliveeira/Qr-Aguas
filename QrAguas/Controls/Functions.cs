@@ -60,7 +60,7 @@ namespace QrAguas.Controls
                 usuarioBanco = row["NOME_USUARIO"].ToString();
                 senhaBanco = row["SENHA"].ToString();
 
-                if (usuarioBanco == usuario && senhaBanco == senha)
+                if (usuarioBanco.Equals(usuario) && senhaBanco.Equals(senha))
                 {
                     FecharBanco(AbrirBanco());
                     return true;

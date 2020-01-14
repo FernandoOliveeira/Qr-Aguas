@@ -20,15 +20,26 @@ namespace QrAguas.View_Layer
 
         Functions functions = new Functions();
 
+        private void LimparCampos()
+        {
+            lblSenhaAtualAviso.Text = "";
+
+            txtSenhaAtual.Text = "";
+            txtNovaSenha.Text = "";
+            txtConfirmarSenha.Text = "";
+        }
+
         private void ChangePassword_Load(object sender, EventArgs e)
         {
             txtUsuario.Text = Login.NomeUsuario; // TextBox Usuário recebe o Nome de Usuário logado no sistema
 
+            lblConfirmarSenhaAviso.Text = "As senhas devem ser idênticas";
+            lblSenhaAtualAviso.Text = "";
         }
         
         private void txtNovaSenha_TextChanged(object sender, EventArgs e)
         {
-            if (txtNovaSenha.Text.Equals(txtConfirmarSenha.Text))
+            if (txtNovaSenha.Text.Trim().Equals(txtConfirmarSenha.Text))
             {
                 lblConfirmarSenhaAviso.Text = "As senhas devem ser idênticas";
                 lblConfirmarSenhaAviso.ForeColor = Color.White;
@@ -44,7 +55,7 @@ namespace QrAguas.View_Layer
 
         private void txtConfirmarSenha_TextChanged(object sender, EventArgs e)
         {
-            if (txtConfirmarSenha.Text.Equals(txtNovaSenha.Text))
+            if (txtConfirmarSenha.Text.Trim().Equals(txtNovaSenha.Text))
             {
                 lblConfirmarSenhaAviso.Text = "As senhas devem ser idênticas";
                 lblConfirmarSenhaAviso.ForeColor = Color.White;
@@ -60,14 +71,51 @@ namespace QrAguas.View_Layer
 
         private void btnConfirmar_Click(object sender, EventArgs e)
         {
-            if (functions.AlterarSenha(txtConfirmarSenha.Text, Login.NomeUsuario))
+            // Se um mais campos estiverem vazios, aparecerá uma mensagem de erro
+            if (txtSenhaAtual.Text.Trim().Equals("") ||
+                txtNovaSenha.Text.Trim().Equals("") ||
+                txtConfirmarSenha.Text.Trim().Equals(""))
             {
-                MessageBox.Show("Senha Alterada com sucesso!", "Senha Alterada", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show("Um ou mais campos estão vazios.", "Campos Vazios", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
             else
             {
-                MessageBox.Show("Erro ao alterar senha!", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                // Se a Nova Senha for diferente da Confirmação de senha, aparecerá uma mensagem de erro
+                if (!txtConfirmarSenha.Text.Trim().Equals(txtNovaSenha.Text.Trim()))
+                {
+                    MessageBox.Show("As senhas devem ser idênticas.", "Senhas Incompatíveis", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                }
+                else
+                {
+                    string senhaAtualMd5 = functions.GerarMd5(txtSenhaAtual.Text.Trim());
+
+                    // Verifica se a senha digitada no campo "Senha Atual" é a mesma que esta no banco
+                    if (functions.VerificarLogin(Login.NomeUsuario, senhaAtualMd5))
+                    {
+                        string novaSenhaMd5 = functions.GerarMd5(txtConfirmarSenha.Text.Trim());
+
+                        if (functions.AlterarSenha(novaSenhaMd5, Login.NomeUsuario))
+                        {
+                            MessageBox.Show("Senha alterada com sucesso !", "Senha alterada", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                            LimparCampos();
+                        }
+                        else
+                        {
+                            MessageBox.Show("Erro ao alterar a senha.", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        }
+                    }
+                    else
+                    {
+                        lblSenhaAtualAviso.Text = "Senha incorreta";
+                        lblSenhaAtualAviso.ForeColor = Color.Red;
+
+                        MessageBox.Show("Senha incorreta.", "Senha Incorreta", MessageBoxButtons.OK, MessageBoxIcon.Stop);
+
+                    }
+                }
             }
+            
         }
     }
 }

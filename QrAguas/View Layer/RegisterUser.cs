@@ -72,7 +72,7 @@ namespace QrAguas.View_Layer
 
         private void txtSenha_TextChanged(object sender, EventArgs e)
         {
-            if (txtSenha.Text.Equals(txtConfirmarSenha.Text))
+            if (txtSenha.Text.Trim().Equals(txtConfirmarSenha.Text))
             {
                 lblConfirmarSenhaAviso.Text = "As senhas devem ser idênticas";
                 lblConfirmarSenhaAviso.ForeColor = Color.White;
@@ -88,7 +88,7 @@ namespace QrAguas.View_Layer
 
         private void txtConfirmarSenha_TextChanged(object sender, EventArgs e)
         {
-            if (txtConfirmarSenha.Text.Equals(txtSenha.Text))
+            if (txtConfirmarSenha.Text.Trim().Equals(txtSenha.Text))
             {
                 lblConfirmarSenhaAviso.Text = "As senhas devem ser idênticas";
                 lblConfirmarSenhaAviso.ForeColor = Color.White;
