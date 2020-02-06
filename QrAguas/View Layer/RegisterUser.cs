@@ -102,9 +102,9 @@ namespace QrAguas.View_Layer
             }
         }
 
-        private async void btnCadastrar_Click(object sender, EventArgs e)
+        private void btnCadastrar_Click(object sender, EventArgs e)
         {
-            if (await Task.Run(() => functions.VerificarNomeUsuario(txtUsuario.Text.Trim()))) // Verifica se o nome de usuario já existe
+            if (functions.VerificarNomeUsuario(txtUsuario.Text.Trim())) // Verifica se o nome de usuario já existe
             {
                 MessageBox.Show("Nome de usuário já cadastrado", "Nome de usuário existente", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
@@ -117,7 +117,7 @@ namespace QrAguas.View_Layer
                     objNovoUsuario.IdTipoUsuario = (int)CBFuncao.SelectedValue;
                     objNovoUsuario.CadastradoPor = Login.NomeUsuario;
 
-                    if (await Task.Run(() => functions.VerificarDadosUsuario(objNovoUsuario)))
+                    if (functions.VerificarDadosUsuario(objNovoUsuario))
                     {
                         functions.AbrirBanco();
                         functions.CadastrarNovoUsuario(objNovoUsuario);

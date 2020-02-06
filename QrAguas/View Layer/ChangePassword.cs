@@ -69,7 +69,7 @@ namespace QrAguas.View_Layer
             }
         }
 
-        private async void btnConfirmar_Click(object sender, EventArgs e)
+        private void btnConfirmar_Click(object sender, EventArgs e)
         {
             // Se um mais campos estiverem vazios, aparecerá uma mensagem de erro
             if (txtSenhaAtual.Text.Trim().Equals("") ||
@@ -90,11 +90,11 @@ namespace QrAguas.View_Layer
                     string senhaAtualMd5 = functions.GerarMd5(txtSenhaAtual.Text.Trim());
 
                     // Verifica se a senha digitada no campo "Senha Atual" é a mesma que esta no banco
-                    if (await Task.Run(() => functions.VerificarLogin(Login.NomeUsuario, senhaAtualMd5)))
+                    if (functions.VerificarLogin(Login.NomeUsuario, senhaAtualMd5))
                     {
                         string novaSenhaMd5 = functions.GerarMd5(txtConfirmarSenha.Text.Trim());
 
-                        if (await Task.Run(() => functions.AlterarSenha(novaSenhaMd5, Login.NomeUsuario)))
+                        if (functions.AlterarSenha(novaSenhaMd5, Login.NomeUsuario))
                         {
                             MessageBox.Show("Senha alterada com sucesso !", "Senha alterada", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
