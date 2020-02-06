@@ -48,6 +48,8 @@
             this.panelDescricao = new System.Windows.Forms.Panel();
             this.lblDescricao = new System.Windows.Forms.Label();
             this.txtDescricao = new System.Windows.Forms.TextBox();
+            this.btnCadastrar = new System.Windows.Forms.Button();
+            this.panelBtnCadastrar = new System.Windows.Forms.Panel();
             this.tableLayoutPanel1.SuspendLayout();
             this.panelFornecedor.SuspendLayout();
             this.panel1.SuspendLayout();
@@ -55,6 +57,7 @@
             this.panelPrecoCompra.SuspendLayout();
             this.panelPrecoEntrega.SuspendLayout();
             this.panelDescricao.SuspendLayout();
+            this.panelBtnCadastrar.SuspendLayout();
             this.SuspendLayout();
             // 
             // txtFornecedor
@@ -63,7 +66,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.txtFornecedor.Location = new System.Drawing.Point(9, 26);
             this.txtFornecedor.Name = "txtFornecedor";
-            this.txtFornecedor.Size = new System.Drawing.Size(198, 20);
+            this.txtFornecedor.Size = new System.Drawing.Size(153, 20);
             this.txtFornecedor.TabIndex = 0;
             // 
             // lblFornecedor
@@ -80,25 +83,24 @@
             // tableLayoutPanel1
             // 
             this.tableLayoutPanel1.ColumnCount = 3;
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 37.1308F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.04795F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 29.96575F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
             this.tableLayoutPanel1.Controls.Add(this.panelPrecoCompra, 2, 0);
             this.tableLayoutPanel1.Controls.Add(this.panel2, 1, 0);
             this.tableLayoutPanel1.Controls.Add(this.panel1, 0, 0);
             this.tableLayoutPanel1.Controls.Add(this.panelFornecedor, 0, 1);
             this.tableLayoutPanel1.Controls.Add(this.panelPrecoEntrega, 2, 1);
             this.tableLayoutPanel1.Controls.Add(this.panelDescricao, 1, 1);
+            this.tableLayoutPanel1.Controls.Add(this.panelBtnCadastrar, 0, 2);
             this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 0);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
-            this.tableLayoutPanel1.RowCount = 5;
+            this.tableLayoutPanel1.RowCount = 3;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 29.21348F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 27.34082F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 21.72285F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 21.72285F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 60F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(584, 411);
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 29.02208F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 41.95584F));
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(516, 296);
             this.tableLayoutPanel1.TabIndex = 2;
             // 
             // panelFornecedor
@@ -106,9 +108,9 @@
             this.panelFornecedor.Controls.Add(this.txtFornecedor);
             this.panelFornecedor.Controls.Add(this.lblFornecedor);
             this.panelFornecedor.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panelFornecedor.Location = new System.Drawing.Point(3, 105);
+            this.panelFornecedor.Location = new System.Drawing.Point(3, 89);
             this.panelFornecedor.Name = "panelFornecedor";
-            this.panelFornecedor.Size = new System.Drawing.Size(210, 89);
+            this.panelFornecedor.Size = new System.Drawing.Size(165, 79);
             this.panelFornecedor.TabIndex = 3;
             // 
             // panel1
@@ -118,7 +120,7 @@
             this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel1.Location = new System.Drawing.Point(3, 3);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(210, 96);
+            this.panel1.Size = new System.Drawing.Size(165, 80);
             this.panel1.TabIndex = 0;
             // 
             // txtCodProduto
@@ -127,7 +129,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.txtCodProduto.Location = new System.Drawing.Point(9, 26);
             this.txtCodProduto.Name = "txtCodProduto";
-            this.txtCodProduto.Size = new System.Drawing.Size(198, 20);
+            this.txtCodProduto.Size = new System.Drawing.Size(153, 20);
             this.txtCodProduto.TabIndex = 0;
             // 
             // lblCodProduto
@@ -146,9 +148,9 @@
             this.panel2.Controls.Add(this.txtNome);
             this.panel2.Controls.Add(this.lblNome);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel2.Location = new System.Drawing.Point(219, 3);
+            this.panel2.Location = new System.Drawing.Point(174, 3);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(186, 96);
+            this.panel2.Size = new System.Drawing.Size(165, 80);
             this.panel2.TabIndex = 1;
             // 
             // txtNome
@@ -157,7 +159,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.txtNome.Location = new System.Drawing.Point(9, 26);
             this.txtNome.Name = "txtNome";
-            this.txtNome.Size = new System.Drawing.Size(174, 20);
+            this.txtNome.Size = new System.Drawing.Size(153, 20);
             this.txtNome.TabIndex = 0;
             // 
             // lblNome
@@ -167,18 +169,18 @@
             this.lblNome.ForeColor = System.Drawing.Color.White;
             this.lblNome.Location = new System.Drawing.Point(6, 6);
             this.lblNome.Name = "lblNome";
-            this.lblNome.Size = new System.Drawing.Size(49, 17);
+            this.lblNome.Size = new System.Drawing.Size(123, 17);
             this.lblNome.TabIndex = 1;
-            this.lblNome.Text = "Nome:";
+            this.lblNome.Text = "Nome do Produto:";
             // 
             // panelPrecoCompra
             // 
             this.panelPrecoCompra.Controls.Add(this.txtPrecoCompra);
             this.panelPrecoCompra.Controls.Add(this.lblPrecoCompra);
             this.panelPrecoCompra.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panelPrecoCompra.Location = new System.Drawing.Point(411, 3);
+            this.panelPrecoCompra.Location = new System.Drawing.Point(345, 3);
             this.panelPrecoCompra.Name = "panelPrecoCompra";
-            this.panelPrecoCompra.Size = new System.Drawing.Size(170, 96);
+            this.panelPrecoCompra.Size = new System.Drawing.Size(168, 80);
             this.panelPrecoCompra.TabIndex = 2;
             // 
             // txtPrecoCompra
@@ -187,7 +189,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.txtPrecoCompra.Location = new System.Drawing.Point(9, 26);
             this.txtPrecoCompra.Name = "txtPrecoCompra";
-            this.txtPrecoCompra.Size = new System.Drawing.Size(158, 20);
+            this.txtPrecoCompra.Size = new System.Drawing.Size(156, 20);
             this.txtPrecoCompra.TabIndex = 0;
             // 
             // lblPrecoCompra
@@ -206,9 +208,9 @@
             this.panelPrecoEntrega.Controls.Add(this.txtPrecoVenda);
             this.panelPrecoEntrega.Controls.Add(this.lblPrecoVenda);
             this.panelPrecoEntrega.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panelPrecoEntrega.Location = new System.Drawing.Point(411, 105);
+            this.panelPrecoEntrega.Location = new System.Drawing.Point(345, 89);
             this.panelPrecoEntrega.Name = "panelPrecoEntrega";
-            this.panelPrecoEntrega.Size = new System.Drawing.Size(170, 89);
+            this.panelPrecoEntrega.Size = new System.Drawing.Size(168, 79);
             this.panelPrecoEntrega.TabIndex = 4;
             // 
             // txtPrecoVenda
@@ -217,7 +219,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.txtPrecoVenda.Location = new System.Drawing.Point(9, 26);
             this.txtPrecoVenda.Name = "txtPrecoVenda";
-            this.txtPrecoVenda.Size = new System.Drawing.Size(158, 20);
+            this.txtPrecoVenda.Size = new System.Drawing.Size(156, 20);
             this.txtPrecoVenda.TabIndex = 0;
             // 
             // lblPrecoVenda
@@ -236,9 +238,9 @@
             this.panelDescricao.Controls.Add(this.txtDescricao);
             this.panelDescricao.Controls.Add(this.lblDescricao);
             this.panelDescricao.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panelDescricao.Location = new System.Drawing.Point(219, 105);
+            this.panelDescricao.Location = new System.Drawing.Point(174, 89);
             this.panelDescricao.Name = "panelDescricao";
-            this.panelDescricao.Size = new System.Drawing.Size(186, 89);
+            this.panelDescricao.Size = new System.Drawing.Size(165, 79);
             this.panelDescricao.TabIndex = 7;
             // 
             // lblDescricao
@@ -254,17 +256,45 @@
             // 
             // txtDescricao
             // 
+            this.txtDescricao.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.txtDescricao.Location = new System.Drawing.Point(9, 26);
             this.txtDescricao.Name = "txtDescricao";
-            this.txtDescricao.Size = new System.Drawing.Size(174, 20);
+            this.txtDescricao.Size = new System.Drawing.Size(153, 20);
             this.txtDescricao.TabIndex = 2;
+            // 
+            // btnCadastrar
+            // 
+            this.btnCadastrar.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnCadastrar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(175)))), ((int)(((byte)(239)))));
+            this.btnCadastrar.FlatAppearance.BorderSize = 0;
+            this.btnCadastrar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCadastrar.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCadastrar.ForeColor = System.Drawing.Color.White;
+            this.btnCadastrar.Location = new System.Drawing.Point(180, 19);
+            this.btnCadastrar.Name = "btnCadastrar";
+            this.btnCadastrar.Size = new System.Drawing.Size(154, 37);
+            this.btnCadastrar.TabIndex = 0;
+            this.btnCadastrar.Text = "Cadastrar";
+            this.btnCadastrar.UseVisualStyleBackColor = false;
+            // 
+            // panelBtnCadastrar
+            // 
+            this.tableLayoutPanel1.SetColumnSpan(this.panelBtnCadastrar, 3);
+            this.panelBtnCadastrar.Controls.Add(this.btnCadastrar);
+            this.panelBtnCadastrar.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panelBtnCadastrar.Location = new System.Drawing.Point(3, 174);
+            this.panelBtnCadastrar.Name = "panelBtnCadastrar";
+            this.panelBtnCadastrar.Size = new System.Drawing.Size(510, 119);
+            this.panelBtnCadastrar.TabIndex = 8;
             // 
             // RegisterGallon
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(130)))), ((int)(((byte)(156)))), ((int)(((byte)(188)))));
-            this.ClientSize = new System.Drawing.Size(584, 411);
+            this.ClientSize = new System.Drawing.Size(516, 296);
             this.Controls.Add(this.tableLayoutPanel1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "RegisterGallon";
@@ -282,6 +312,7 @@
             this.panelPrecoEntrega.PerformLayout();
             this.panelDescricao.ResumeLayout(false);
             this.panelDescricao.PerformLayout();
+            this.panelBtnCadastrar.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -307,5 +338,7 @@
         private System.Windows.Forms.Panel panelDescricao;
         private System.Windows.Forms.TextBox txtDescricao;
         private System.Windows.Forms.Label lblDescricao;
+        private System.Windows.Forms.Panel panelBtnCadastrar;
+        private System.Windows.Forms.Button btnCadastrar;
     }
 }

@@ -49,12 +49,12 @@ namespace QrAguas.View_Layer
             #endregion
         }
 
-        private void btnEntrar_Click(object sender, EventArgs e)
+        private async void btnEntrar_Click(object sender, EventArgs e)
         {
             // Gera um HashMd5 e armazena na variavel senha
             string senha = functions.GerarMd5(txtSenha.Text);
 
-            if (functions.VerificarLogin(txtUsuario.Text, senha))
+            if (await Task.Run(() => functions.VerificarLogin(txtUsuario.Text, senha)))
             {
                 // Abrir o form MainForm e fechar o atual
                 NomeUsuario = txtUsuario.Text.Trim();
