@@ -34,6 +34,7 @@
             this.lblUsuario = new System.Windows.Forms.Label();
             this.txtUsuario = new System.Windows.Forms.TextBox();
             this.panelSenhaAtual = new System.Windows.Forms.Panel();
+            this.lblSenhaAtualAviso = new System.Windows.Forms.Label();
             this.lblSenhaAtual = new System.Windows.Forms.Label();
             this.txtSenhaAtual = new System.Windows.Forms.TextBox();
             this.panelBtnCconfirmar = new System.Windows.Forms.Panel();
@@ -45,7 +46,6 @@
             this.lblConfirmarSenhaAviso = new System.Windows.Forms.Label();
             this.lblConfirmarSenha = new System.Windows.Forms.Label();
             this.txtConfirmarSenha = new System.Windows.Forms.TextBox();
-            this.lblSenhaAtualAviso = new System.Windows.Forms.Label();
             this.tableLayoutPanel1.SuspendLayout();
             this.panelUsuario.SuspendLayout();
             this.panelSenhaAtual.SuspendLayout();
@@ -126,6 +126,18 @@
             this.panelSenhaAtual.Size = new System.Drawing.Size(311, 71);
             this.panelSenhaAtual.TabIndex = 1;
             // 
+            // lblSenhaAtualAviso
+            // 
+            this.lblSenhaAtualAviso.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.lblSenhaAtualAviso.AutoSize = true;
+            this.lblSenhaAtualAviso.ForeColor = System.Drawing.Color.White;
+            this.lblSenhaAtualAviso.Location = new System.Drawing.Point(4, 49);
+            this.lblSenhaAtualAviso.Name = "lblSenhaAtualAviso";
+            this.lblSenhaAtualAviso.Size = new System.Drawing.Size(34, 13);
+            this.lblSenhaAtualAviso.TabIndex = 45;
+            this.lblSenhaAtualAviso.Text = "Texto";
+            // 
             // lblSenhaAtual
             // 
             this.lblSenhaAtual.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
@@ -189,7 +201,7 @@
             this.panelNovaSenha.Location = new System.Drawing.Point(3, 154);
             this.panelNovaSenha.Name = "panelNovaSenha";
             this.panelNovaSenha.Size = new System.Drawing.Size(311, 78);
-            this.panelNovaSenha.TabIndex = 5;
+            this.panelNovaSenha.TabIndex = 2;
             // 
             // lblNovaSenha
             // 
@@ -230,7 +242,7 @@
             this.panelConfirmarSenha.Location = new System.Drawing.Point(320, 154);
             this.panelConfirmarSenha.Name = "panelConfirmarSenha";
             this.panelConfirmarSenha.Size = new System.Drawing.Size(311, 78);
-            this.panelConfirmarSenha.TabIndex = 6;
+            this.panelConfirmarSenha.TabIndex = 3;
             // 
             // lblConfirmarSenhaAviso
             // 
@@ -273,18 +285,6 @@
             this.txtConfirmarSenha.Size = new System.Drawing.Size(303, 23);
             this.txtConfirmarSenha.TabIndex = 40;
             this.txtConfirmarSenha.TextChanged += new System.EventHandler(this.txtConfirmarSenha_TextChanged);
-            // 
-            // lblSenhaAtualAviso
-            // 
-            this.lblSenhaAtualAviso.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.lblSenhaAtualAviso.AutoSize = true;
-            this.lblSenhaAtualAviso.ForeColor = System.Drawing.Color.White;
-            this.lblSenhaAtualAviso.Location = new System.Drawing.Point(4, 49);
-            this.lblSenhaAtualAviso.Name = "lblSenhaAtualAviso";
-            this.lblSenhaAtualAviso.Size = new System.Drawing.Size(34, 13);
-            this.lblSenhaAtualAviso.TabIndex = 45;
-            this.lblSenhaAtualAviso.Text = "Texto";
             // 
             // ChangePassword
             // 

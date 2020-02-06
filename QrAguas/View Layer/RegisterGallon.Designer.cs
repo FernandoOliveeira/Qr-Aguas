@@ -298,6 +298,7 @@
             this.Controls.Add(this.tableLayoutPanel1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "RegisterGallon";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Qr Águas - Cadastrar Galão";
             this.tableLayoutPanel1.ResumeLayout(false);
             this.panelFornecedor.ResumeLayout(false);

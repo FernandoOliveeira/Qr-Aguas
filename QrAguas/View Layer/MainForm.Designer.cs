@@ -92,7 +92,7 @@
             this.cadastrarUsuárioToolStripMenuItem.Name = "cadastrarUsuárioToolStripMenuItem";
             this.cadastrarUsuárioToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.cadastrarUsuárioToolStripMenuItem.Text = "Cadastrar Usuário";
-            this.cadastrarUsuárioToolStripMenuItem.Click += new System.EventHandler(this.cadastrarUsuárioToolStripMenuItem_Click);
+            this.cadastrarUsuárioToolStripMenuItem.Click += new System.EventHandler(this.cadastrarUsuarioToolStripMenuItem_Click);
             // 
             // procurarUsuarioToolStripMenuItem
             // 

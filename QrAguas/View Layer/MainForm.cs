@@ -64,7 +64,7 @@ namespace QrAguas.View_Layer
 
         }
 
-        private void cadastrarUsuárioToolStripMenuItem_Click(object sender, EventArgs e)
+        private void cadastrarUsuarioToolStripMenuItem_Click(object sender, EventArgs e)
         {
             RegisterUser objCadastrarUsuario = new RegisterUser();
             objCadastrarUsuario.Show();
