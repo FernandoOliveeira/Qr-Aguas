@@ -244,9 +244,9 @@
             this.lblPrecoVenda.ForeColor = System.Drawing.Color.White;
             this.lblPrecoVenda.Location = new System.Drawing.Point(6, 6);
             this.lblPrecoVenda.Name = "lblPrecoVenda";
-            this.lblPrecoVenda.Size = new System.Drawing.Size(123, 17);
+            this.lblPrecoVenda.Size = new System.Drawing.Size(114, 17);
             this.lblPrecoVenda.TabIndex = 1;
-            this.lblPrecoVenda.Text = "Preço de Entrega:";
+            this.lblPrecoVenda.Text = "Preço de Venda:";
             // 
             // label1
             // 
