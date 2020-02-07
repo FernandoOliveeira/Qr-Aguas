@@ -50,8 +50,15 @@ namespace QrAguas.View_Layer
 
         private void treeView_NodeMouseDoubleClick(object sender, TreeNodeMouseClickEventArgs e)
         {
-
-
+            switch (e.Node.Text)
+            {
+                case "Cadastro de Galões":
+                    RegisterGallon registerGallon = new RegisterGallon();
+                    registerGallon.Show();
+                    break;
+            }
+                
+            
         }
 
         private void MainForm_Load(object sender, EventArgs e)
