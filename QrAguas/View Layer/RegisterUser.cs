@@ -29,6 +29,19 @@ namespace QrAguas.View_Layer
             txtConfirmarSenha.Text = "";
         }
 
+        // Verificação de campos vazios
+        private bool CamposVazios()
+        {
+            if (txtUsuario.Text.Trim().Equals("") ||
+                txtSenha.Text.Trim().Equals("") ||
+                txtConfirmarSenha.Text.Trim().Equals(""))
+            {
+                return true;
+            }
+
+            return false;
+        }
+
         private void RegisterUser_Load(object sender, EventArgs e)
         {
             // Preenche o ComboBox com os tipos de usuários presentos no banco de dados
@@ -151,18 +164,7 @@ namespace QrAguas.View_Layer
             }
         }
 
-        // Verificação de campos vazios
-        private bool CamposVazios()
-        {
-            if (txtUsuario.Text.Trim().Equals("") ||
-                txtSenha.Text.Trim().Equals("") ||
-                txtConfirmarSenha.Text.Trim().Equals(""))
-            {
-                return true;
-            }
-
-            return false;
-        }
+        
 
     }
 }

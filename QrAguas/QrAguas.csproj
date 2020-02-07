@@ -51,6 +51,7 @@
     <Compile Include="BusinessLayer\BlNewUser.cs" />
     <Compile Include="Controls\Connection.cs" />
     <Compile Include="Controls\Functions.cs" />
+    <Compile Include="Models\NewGallon.cs" />
     <Compile Include="Models\NewUser.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
