@@ -36,7 +36,9 @@ namespace QrAguas.View_Layer
             this.tIPO_USUARIOTableAdapter.Fill(this._0YbKKAeekeDataSet.TIPO_USUARIO);
 
             lblConfirmarSenhaAviso.Text = "As senhas devem ser idênticas";
-
+            
+            // btnCadastrar só é habilitado caso haja dado inserido no campo txtUsuario
+            btnCadastrar.Enabled = false;
         }
 
         private void txtUsuario_TextChanged(object sender, EventArgs e)
@@ -104,44 +106,62 @@ namespace QrAguas.View_Layer
 
         private void btnCadastrar_Click(object sender, EventArgs e)
         {
-            if (functions.VerificarNomeUsuario(txtUsuario.Text.Trim())) // Verifica se o nome de usuario já existe
+            if (CamposVazios())
             {
-                MessageBox.Show("Nome de usuário já cadastrado", "Nome de usuário existente", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show("Um ou mais campos estão vazios", "Campos Vazios", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
             else
             {
-                try
+
+                if (functions.VerificarNomeUsuario(txtUsuario.Text.Trim())) // Verifica se o nome de usuario já existe
                 {
-                    objNovoUsuario.NomeUsuario = txtUsuario.Text.Trim();
-                    objNovoUsuario.Senha = functions.GerarMd5(txtConfirmarSenha.Text);
-                    objNovoUsuario.IdTipoUsuario = (int)CBFuncao.SelectedValue;
-                    objNovoUsuario.CadastradoPor = Login.NomeUsuario;
-
-                    if (functions.VerificarDadosUsuario(objNovoUsuario))
-                    {
-                        functions.AbrirBanco();
-                        functions.CadastrarNovoUsuario(objNovoUsuario);
-                        functions.FecharBanco(functions.AbrirBanco());
-
-                        MessageBox.Show("Usuário cadastrado com sucesso !", "Usuário Cadastrado", MessageBoxButtons.OK, MessageBoxIcon.Information);
-
-                        LimparCampos();
-                    }
-                    else
-                    {
-                        MessageBox.Show("Um ou mais campos estão vazios", "Campos Vazios", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                    }
+                    MessageBox.Show("Nome de usuário já cadastrado", "Nome de usuário existente", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 }
-                catch (Exception)
+                else
                 {
+                    try
+                    {
+                        objNovoUsuario.NomeUsuario = txtUsuario.Text.Trim();
+                        objNovoUsuario.Senha = functions.GerarMd5(txtConfirmarSenha.Text);
+                        objNovoUsuario.IdTipoUsuario = (int)CBFuncao.SelectedValue;
+                        objNovoUsuario.CadastradoPor = Login.NomeUsuario;
 
-                    MessageBox.Show("Um ou mais campos estão vazios\nPreencha todos os campos antes de continuar.", "Campos Vazios", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                        if (functions.VerificarDadosUsuario(objNovoUsuario))
+                        {
+                            functions.AbrirBanco();
+                            functions.CadastrarNovoUsuario(objNovoUsuario);
+                            functions.FecharBanco(functions.AbrirBanco());
+
+                            MessageBox.Show("Usuário cadastrado com sucesso !", "Usuário Cadastrado", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                            LimparCampos();
+                        }
+                        else
+                        {
+                            MessageBox.Show("Um ou mais campos estão vazios", "Campos Vazios", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                        }
+                    }
+                    catch (Exception)
+                    {
+
+                        MessageBox.Show("Um ou mais campos estão vazios\nPreencha todos os campos antes de continuar.", "Campos Vazios", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    }
+
                 }
-                
-
-                
-
             }
+        }
+
+        // Verificação de campos vazios
+        private bool CamposVazios()
+        {
+            if (txtUsuario.Text.Trim().Equals("") ||
+                txtSenha.Text.Trim().Equals("") ||
+                txtConfirmarSenha.Text.Trim().Equals(""))
+            {
+                return true;
+            }
+
+            return false;
         }
 
     }
