@@ -110,7 +110,7 @@ namespace QrAguas.View_Layer
                         lblSenhaAtualAviso.Text = "Senha incorreta";
                         lblSenhaAtualAviso.ForeColor = Color.Red;
 
-                        MessageBox.Show("Senha incorreta.", "Senha Incorreta", MessageBoxButtons.OK, MessageBoxIcon.Stop);
+                        MessageBox.Show("A Senha Atual está incorreta.", "Senha Incorreta", MessageBoxButtons.OK, MessageBoxIcon.Stop);
 
                     }
                 }
