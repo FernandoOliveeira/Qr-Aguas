@@ -68,8 +68,12 @@ namespace QrAguas.View_Layer
 
         private void MainForm_Load(object sender, EventArgs e)
         {
+            if (Login.TipoUsuario.Equals(2))
+            {
+                // Código para remover um nó caso o usuário seja do tipo Auxiliar
+                treeView.Nodes.Remove(treeView.Nodes[0].Nodes[0].Nodes[2]); 
+            }
 
-            //treeView.Nodes.Remove(treeView.Nodes[0].Nodes[0].Nodes[2]); Código para remover um nó. Será utilizado para controle de acesso de usuário
             TSLUsuario.Text = "Usuário: " + Login.NomeUsuario;
 
 

@@ -40,14 +40,39 @@ namespace QrAguas.Controls
 
         #region Form Login
 
+        public int VerificarTipoUsuario(string usuario)
+        {
+            DataTable consultarTipoUsuario = new DataTable();
+
+            string queryTipoUsuario = "SELECT ID_TIPO_USUARIO FROM USUARIOS WHERE NOME_USUARIO = @USUARIO";
+
+            MySqlCommand command = new MySqlCommand(queryTipoUsuario, AbrirBanco());
+            command.Parameters.AddWithValue("@USUARIO", usuario);
+            MySqlDataReader reader = command.ExecuteReader();
+
+            consultarTipoUsuario.Load(reader);
+
+            int tipoUsuario = 0;
+
+            foreach(DataRow row in consultarTipoUsuario.Rows)
+            {
+                tipoUsuario = int.Parse(row["ID_TIPO_USUARIO"].ToString());
+
+            }
+
+            FecharBanco(AbrirBanco());
+
+            return tipoUsuario;
+        }
 
         public bool VerificarLogin(string usuario, string senha)
         {
             DataTable consultarLogin = new DataTable();
 
-            string queryUsuarioSenha = "SELECT NOME_USUARIO, SENHA, ID_TIPO_USUARIO FROM USUARIOS";
+            string queryUsuarioSenha = "SELECT NOME_USUARIO, SENHA FROM USUARIOS WHERE NOME_USUARIO = @USUARIO";
 
             MySqlCommand command = new MySqlCommand(queryUsuarioSenha, AbrirBanco());
+            command.Parameters.AddWithValue("@USUARIO", usuario);
             MySqlDataReader reader = command.ExecuteReader();
 
             consultarLogin.Load(reader);
