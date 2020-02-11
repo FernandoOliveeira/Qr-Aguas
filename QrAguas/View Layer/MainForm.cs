@@ -68,9 +68,8 @@ namespace QrAguas.View_Layer
 
         private void MainForm_Load(object sender, EventArgs e)
         {
-            //toolStripMenuItem1.Text = Login.NomeUsuario;
 
-            //menuStrip1.Items["Cadastrar Novo Usuário"].Visible = true;
+            //treeView.Nodes.Remove(treeView.Nodes[0].Nodes[0].Nodes[2]); Código para remover um nó. Será utilizado para controle de acesso de usuário
             TSLUsuario.Text = "Usuário: " + Login.NomeUsuario;
 
 
