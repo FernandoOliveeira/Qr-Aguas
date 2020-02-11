@@ -70,7 +70,7 @@ namespace QrAguas.View_Layer
         {
             if (Login.TipoUsuario.Equals(2))
             {
-                // Código para remover um nó caso o usuário seja do tipo Auxiliar
+                // Código para remover um nó caso o usuário(a) seja do tipo Auxiliar
                 treeView.Nodes.Remove(treeView.Nodes[0].Nodes[0].Nodes[2]); 
             }
 
