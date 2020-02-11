@@ -56,6 +56,11 @@ namespace QrAguas.View_Layer
                     RegisterGallon registerGallon = new RegisterGallon();
                     registerGallon.Show();
                     break;
+
+                case "Cadastrar Novo Usuário":
+                    RegisterUser objCadastrarUsuario = new RegisterUser();
+                    objCadastrarUsuario.Show();
+                    break;
             }
                 
             
@@ -70,13 +75,6 @@ namespace QrAguas.View_Layer
 
 
         }
-
-        private void cadastrarUsuarioToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            RegisterUser objCadastrarUsuario = new RegisterUser();
-            objCadastrarUsuario.Show();
-        }
-
 
         private void alterarSenhaToolStripMenuItem_Click(object sender, EventArgs e)
         {
