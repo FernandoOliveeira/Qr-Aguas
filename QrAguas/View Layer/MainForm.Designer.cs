@@ -41,10 +41,12 @@
             System.Windows.Forms.TreeNode treeNode6 = new System.Windows.Forms.TreeNode("Venda de Galões", 1, 1);
             System.Windows.Forms.TreeNode treeNode7 = new System.Windows.Forms.TreeNode("Vendas", new System.Windows.Forms.TreeNode[] {
             treeNode6});
-            System.Windows.Forms.TreeNode treeNode8 = new System.Windows.Forms.TreeNode("Qr Águas - Menu Geral", 0, 0, new System.Windows.Forms.TreeNode[] {
+            System.Windows.Forms.TreeNode treeNode8 = new System.Windows.Forms.TreeNode("Relatórios");
+            System.Windows.Forms.TreeNode treeNode9 = new System.Windows.Forms.TreeNode("Qr Águas - Menu Geral", 0, 0, new System.Windows.Forms.TreeNode[] {
             treeNode4,
             treeNode5,
-            treeNode7});
+            treeNode7,
+            treeNode8});
             this.TreeViewImageList = new System.Windows.Forms.ImageList(this.components);
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.segundoItemToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -90,13 +92,13 @@
             // procurarUsuarioToolStripMenuItem
             // 
             this.procurarUsuarioToolStripMenuItem.Name = "procurarUsuarioToolStripMenuItem";
-            this.procurarUsuarioToolStripMenuItem.Size = new System.Drawing.Size(160, 22);
+            this.procurarUsuarioToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.procurarUsuarioToolStripMenuItem.Text = "Procurar Usuário";
             // 
             // alterarSenhaToolStripMenuItem
             // 
             this.alterarSenhaToolStripMenuItem.Name = "alterarSenhaToolStripMenuItem";
-            this.alterarSenhaToolStripMenuItem.Size = new System.Drawing.Size(160, 22);
+            this.alterarSenhaToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.alterarSenhaToolStripMenuItem.Text = "Alterar Senha";
             this.alterarSenhaToolStripMenuItem.Click += new System.EventHandler(this.alterarSenhaToolStripMenuItem_Click);
             // 
@@ -166,12 +168,14 @@
             treeNode6.Text = "Venda de Galões";
             treeNode7.Name = "Node2";
             treeNode7.Text = "Vendas";
-            treeNode8.ImageIndex = 0;
-            treeNode8.Name = "Node0";
-            treeNode8.SelectedImageIndex = 0;
-            treeNode8.Text = "Qr Águas - Menu Geral";
+            treeNode8.Name = "Node3";
+            treeNode8.Text = "Relatórios";
+            treeNode9.ImageIndex = 0;
+            treeNode9.Name = "Node0";
+            treeNode9.SelectedImageIndex = 0;
+            treeNode9.Text = "Qr Águas - Menu Geral";
             this.treeView.Nodes.AddRange(new System.Windows.Forms.TreeNode[] {
-            treeNode8});
+            treeNode9});
             this.treeView.SelectedImageIndex = 0;
             this.treeView.Size = new System.Drawing.Size(251, 538);
             this.treeView.TabIndex = 0;
