@@ -114,6 +114,7 @@
             // 
             this.panelRazaoSocial.Controls.Add(this.txtRazaoSocial);
             this.panelRazaoSocial.Controls.Add(this.lblRazaoSocial);
+            this.panelRazaoSocial.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelRazaoSocial.Location = new System.Drawing.Point(3, 3);
             this.panelRazaoSocial.Name = "panelRazaoSocial";
             this.panelRazaoSocial.Size = new System.Drawing.Size(165, 68);
@@ -177,6 +178,7 @@
             // 
             this.tableLayoutPanel1.SetColumnSpan(this.panelBtnCadastrar, 2);
             this.panelBtnCadastrar.Controls.Add(this.btnCadastrar);
+            this.panelBtnCadastrar.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelBtnCadastrar.Location = new System.Drawing.Point(174, 253);
             this.panelBtnCadastrar.Name = "panelBtnCadastrar";
             this.panelBtnCadastrar.Size = new System.Drawing.Size(336, 120);
@@ -203,9 +205,10 @@
             // 
             this.panel3.Controls.Add(this.txtTelefone);
             this.panel3.Controls.Add(this.lblTelefone);
+            this.panel3.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel3.Location = new System.Drawing.Point(345, 3);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(165, 66);
+            this.panel3.Size = new System.Drawing.Size(165, 68);
             this.panel3.TabIndex = 3;
             // 
             // txtTelefone
@@ -234,6 +237,7 @@
             // 
             this.panel4.Controls.Add(this.txtBairro);
             this.panel4.Controls.Add(this.lblBairro);
+            this.panel4.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel4.Location = new System.Drawing.Point(345, 77);
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(165, 66);
@@ -265,6 +269,7 @@
             // 
             this.panel6.Controls.Add(this.txtEmail);
             this.panel6.Controls.Add(this.lblEmail);
+            this.panel6.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel6.Location = new System.Drawing.Point(516, 3);
             this.panel6.Name = "panel6";
             this.panel6.Size = new System.Drawing.Size(165, 68);
@@ -296,6 +301,7 @@
             // 
             this.panel7.Controls.Add(this.txtComplemento);
             this.panel7.Controls.Add(this.lblComplemento);
+            this.panel7.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel7.Location = new System.Drawing.Point(174, 149);
             this.panel7.Name = "panel7";
             this.panel7.Size = new System.Drawing.Size(165, 98);
@@ -327,6 +333,7 @@
             // 
             this.panel5.Controls.Add(this.txtCep);
             this.panel5.Controls.Add(this.lblCep);
+            this.panel5.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel5.Location = new System.Drawing.Point(3, 77);
             this.panel5.Name = "panel5";
             this.panel5.Size = new System.Drawing.Size(165, 66);
@@ -358,6 +365,7 @@
             // 
             this.panel1.Controls.Add(this.txtCidade);
             this.panel1.Controls.Add(this.lblCidade);
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel1.Location = new System.Drawing.Point(516, 77);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(165, 66);
@@ -414,6 +422,7 @@
             // 
             this.panelEndereco.Controls.Add(this.txtEndereco);
             this.panelEndereco.Controls.Add(this.lblEndereco);
+            this.panelEndereco.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelEndereco.Location = new System.Drawing.Point(174, 77);
             this.panelEndereco.Name = "panelEndereco";
             this.panelEndereco.Size = new System.Drawing.Size(165, 66);
@@ -445,9 +454,10 @@
             // 
             this.panel2.Controls.Add(this.txtUf);
             this.panel2.Controls.Add(this.lblUf);
+            this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel2.Location = new System.Drawing.Point(345, 149);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(165, 66);
+            this.panel2.Size = new System.Drawing.Size(165, 98);
             this.panel2.TabIndex = 5;
             // 
             // txtUf
