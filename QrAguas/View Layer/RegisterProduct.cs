@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace QrAguas.View_Layer
 {
-    public partial class RegisterGallon : Form
+    public partial class RegisterProduct : Form
     {
-        public RegisterGallon()
+        public RegisterProduct()
         {
             InitializeComponent();
         }

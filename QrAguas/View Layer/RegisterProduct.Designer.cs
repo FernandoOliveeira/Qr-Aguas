@@ -1,6 +1,6 @@
 ﻿namespace QrAguas.View_Layer
 {
-    partial class RegisterGallon
+    partial class RegisterProduct
     {
         /// <summary>
         /// Required designer variable.
@@ -28,10 +28,16 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(RegisterGallon));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(RegisterProduct));
             this.txtFornecedor = new System.Windows.Forms.TextBox();
             this.lblFornecedor = new System.Windows.Forms.Label();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
+            this.panel5 = new System.Windows.Forms.Panel();
+            this.txtDataValidade = new System.Windows.Forms.MaskedTextBox();
+            this.lblDataValidade = new System.Windows.Forms.Label();
+            this.panel4 = new System.Windows.Forms.Panel();
+            this.txtTipoProduto = new System.Windows.Forms.TextBox();
+            this.lblTipoProduto = new System.Windows.Forms.Label();
             this.panelPrecoCompra = new System.Windows.Forms.Panel();
             this.txtPrecoCompra = new System.Windows.Forms.TextBox();
             this.lblPrecoCompra = new System.Windows.Forms.Label();
@@ -53,14 +59,10 @@
             this.panel3 = new System.Windows.Forms.Panel();
             this.txtDataFabricacao = new System.Windows.Forms.MaskedTextBox();
             this.lblDataFabricacao = new System.Windows.Forms.Label();
-            this.panel4 = new System.Windows.Forms.Panel();
-            this.lblTipoProduto = new System.Windows.Forms.Label();
-            this.txtTipoProduto = new System.Windows.Forms.TextBox();
             this.lblTitulo = new System.Windows.Forms.Label();
-            this.panel5 = new System.Windows.Forms.Panel();
-            this.txtDataValidade = new System.Windows.Forms.MaskedTextBox();
-            this.lblDataValidade = new System.Windows.Forms.Label();
             this.tableLayoutPanel1.SuspendLayout();
+            this.panel5.SuspendLayout();
+            this.panel4.SuspendLayout();
             this.panelPrecoCompra.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel1.SuspendLayout();
@@ -69,8 +71,6 @@
             this.panelDescricao.SuspendLayout();
             this.panelBtnCadastrar.SuspendLayout();
             this.panel3.SuspendLayout();
-            this.panel4.SuspendLayout();
-            this.panel5.SuspendLayout();
             this.SuspendLayout();
             // 
             // txtFornecedor
@@ -120,6 +120,67 @@
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
             this.tableLayoutPanel1.Size = new System.Drawing.Size(634, 376);
             this.tableLayoutPanel1.TabIndex = 2;
+            // 
+            // panel5
+            // 
+            this.panel5.Controls.Add(this.txtDataValidade);
+            this.panel5.Controls.Add(this.lblDataValidade);
+            this.panel5.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel5.Location = new System.Drawing.Point(425, 168);
+            this.panel5.Name = "panel5";
+            this.panel5.Size = new System.Drawing.Size(206, 99);
+            this.panel5.TabIndex = 8;
+            // 
+            // txtDataValidade
+            // 
+            this.txtDataValidade.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtDataValidade.Location = new System.Drawing.Point(9, 24);
+            this.txtDataValidade.Mask = "00/0000";
+            this.txtDataValidade.Name = "txtDataValidade";
+            this.txtDataValidade.Size = new System.Drawing.Size(194, 20);
+            this.txtDataValidade.TabIndex = 4;
+            // 
+            // lblDataValidade
+            // 
+            this.lblDataValidade.AutoSize = true;
+            this.lblDataValidade.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblDataValidade.ForeColor = System.Drawing.Color.White;
+            this.lblDataValidade.Location = new System.Drawing.Point(9, 4);
+            this.lblDataValidade.Name = "lblDataValidade";
+            this.lblDataValidade.Size = new System.Drawing.Size(121, 17);
+            this.lblDataValidade.TabIndex = 3;
+            this.lblDataValidade.Text = "Data de Validade:";
+            // 
+            // panel4
+            // 
+            this.panel4.Controls.Add(this.txtTipoProduto);
+            this.panel4.Controls.Add(this.lblTipoProduto);
+            this.panel4.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel4.Location = new System.Drawing.Point(3, 168);
+            this.panel4.Name = "panel4";
+            this.panel4.Size = new System.Drawing.Size(205, 99);
+            this.panel4.TabIndex = 7;
+            // 
+            // txtTipoProduto
+            // 
+            this.txtTipoProduto.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtTipoProduto.Location = new System.Drawing.Point(9, 24);
+            this.txtTipoProduto.Name = "txtTipoProduto";
+            this.txtTipoProduto.Size = new System.Drawing.Size(193, 20);
+            this.txtTipoProduto.TabIndex = 4;
+            // 
+            // lblTipoProduto
+            // 
+            this.lblTipoProduto.AutoSize = true;
+            this.lblTipoProduto.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTipoProduto.ForeColor = System.Drawing.Color.White;
+            this.lblTipoProduto.Location = new System.Drawing.Point(9, 4);
+            this.lblTipoProduto.Name = "lblTipoProduto";
+            this.lblTipoProduto.Size = new System.Drawing.Size(114, 17);
+            this.lblTipoProduto.TabIndex = 3;
+            this.lblTipoProduto.Text = "Tipo do Produto:";
             // 
             // panelPrecoCompra
             // 
@@ -338,36 +399,6 @@
             this.lblDataFabricacao.TabIndex = 3;
             this.lblDataFabricacao.Text = "Data de Fabricação:";
             // 
-            // panel4
-            // 
-            this.panel4.Controls.Add(this.txtTipoProduto);
-            this.panel4.Controls.Add(this.lblTipoProduto);
-            this.panel4.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel4.Location = new System.Drawing.Point(3, 168);
-            this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(205, 99);
-            this.panel4.TabIndex = 7;
-            // 
-            // lblTipoProduto
-            // 
-            this.lblTipoProduto.AutoSize = true;
-            this.lblTipoProduto.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTipoProduto.ForeColor = System.Drawing.Color.White;
-            this.lblTipoProduto.Location = new System.Drawing.Point(9, 4);
-            this.lblTipoProduto.Name = "lblTipoProduto";
-            this.lblTipoProduto.Size = new System.Drawing.Size(114, 17);
-            this.lblTipoProduto.TabIndex = 3;
-            this.lblTipoProduto.Text = "Tipo do Produto:";
-            // 
-            // txtTipoProduto
-            // 
-            this.txtTipoProduto.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtTipoProduto.Location = new System.Drawing.Point(9, 24);
-            this.txtTipoProduto.Name = "txtTipoProduto";
-            this.txtTipoProduto.Size = new System.Drawing.Size(193, 20);
-            this.txtTipoProduto.TabIndex = 4;
-            // 
             // lblTitulo
             // 
             this.lblTitulo.Dock = System.Windows.Forms.DockStyle.Top;
@@ -380,38 +411,7 @@
             this.lblTitulo.Text = "Cadastro de Produtos";
             this.lblTitulo.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // panel5
-            // 
-            this.panel5.Controls.Add(this.txtDataValidade);
-            this.panel5.Controls.Add(this.lblDataValidade);
-            this.panel5.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel5.Location = new System.Drawing.Point(425, 168);
-            this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(206, 99);
-            this.panel5.TabIndex = 8;
-            // 
-            // txtDataValidade
-            // 
-            this.txtDataValidade.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtDataValidade.Location = new System.Drawing.Point(9, 24);
-            this.txtDataValidade.Mask = "00/0000";
-            this.txtDataValidade.Name = "txtDataValidade";
-            this.txtDataValidade.Size = new System.Drawing.Size(194, 20);
-            this.txtDataValidade.TabIndex = 4;
-            // 
-            // lblDataValidade
-            // 
-            this.lblDataValidade.AutoSize = true;
-            this.lblDataValidade.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblDataValidade.ForeColor = System.Drawing.Color.White;
-            this.lblDataValidade.Location = new System.Drawing.Point(9, 4);
-            this.lblDataValidade.Name = "lblDataValidade";
-            this.lblDataValidade.Size = new System.Drawing.Size(121, 17);
-            this.lblDataValidade.TabIndex = 3;
-            this.lblDataValidade.Text = "Data de Validade:";
-            // 
-            // RegisterGallon
+            // RegisterProduct
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -421,10 +421,14 @@
             this.Controls.Add(this.tableLayoutPanel1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
-            this.Name = "RegisterGallon";
+            this.Name = "RegisterProduct";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Qr Águas - Cadastrar Galão";
+            this.Text = "Qr Águas - Cadastrar Produto";
             this.tableLayoutPanel1.ResumeLayout(false);
+            this.panel5.ResumeLayout(false);
+            this.panel5.PerformLayout();
+            this.panel4.ResumeLayout(false);
+            this.panel4.PerformLayout();
             this.panelPrecoCompra.ResumeLayout(false);
             this.panelPrecoCompra.PerformLayout();
             this.panel2.ResumeLayout(false);
@@ -440,10 +444,6 @@
             this.panelBtnCadastrar.ResumeLayout(false);
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
-            this.panel4.ResumeLayout(false);
-            this.panel4.PerformLayout();
-            this.panel5.ResumeLayout(false);
-            this.panel5.PerformLayout();
             this.ResumeLayout(false);
 
         }

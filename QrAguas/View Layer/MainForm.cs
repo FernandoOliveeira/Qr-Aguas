@@ -53,7 +53,7 @@ namespace QrAguas.View_Layer
             switch (e.Node.Text)
             {
                 case "Cadastro de Galões":
-                    RegisterGallon registerGallon = new RegisterGallon();
+                    RegisterProduct registerGallon = new RegisterProduct();
                     registerGallon.Show();
                     break;
 
