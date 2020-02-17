@@ -30,47 +30,50 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(RegisterProviders));
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
-            this.panelRazaoSocial = new System.Windows.Forms.Panel();
-            this.lblRazaoSocial = new System.Windows.Forms.Label();
-            this.txtRazaoSocial = new System.Windows.Forms.TextBox();
-            this.panelCnpj = new System.Windows.Forms.Panel();
-            this.lblCnpj = new System.Windows.Forms.Label();
-            this.txtCnpj = new System.Windows.Forms.MaskedTextBox();
-            this.panelEndereco = new System.Windows.Forms.Panel();
-            this.txtEndereco = new System.Windows.Forms.TextBox();
-            this.lblEndereco = new System.Windows.Forms.Label();
-            this.panel4 = new System.Windows.Forms.Panel();
-            this.txtBairro = new System.Windows.Forms.TextBox();
-            this.lblBairro = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.txtCidade = new System.Windows.Forms.TextBox();
             this.lblCidade = new System.Windows.Forms.Label();
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.txtUf = new System.Windows.Forms.TextBox();
-            this.lblUf = new System.Windows.Forms.Label();
-            this.panel3 = new System.Windows.Forms.Panel();
-            this.lblTelefone = new System.Windows.Forms.Label();
-            this.txtTelefone = new System.Windows.Forms.MaskedTextBox();
-            this.panel5 = new System.Windows.Forms.Panel();
-            this.lblCep = new System.Windows.Forms.Label();
-            this.txtCep = new System.Windows.Forms.MaskedTextBox();
             this.panel6 = new System.Windows.Forms.Panel();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.lblEmail = new System.Windows.Forms.Label();
-            this.lblTitulo = new System.Windows.Forms.Label();
-            this.panelBotao = new System.Windows.Forms.Panel();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.txtUf = new System.Windows.Forms.TextBox();
+            this.lblUf = new System.Windows.Forms.Label();
+            this.panelRazaoSocial = new System.Windows.Forms.Panel();
+            this.txtRazaoSocial = new System.Windows.Forms.TextBox();
+            this.lblRazaoSocial = new System.Windows.Forms.Label();
+            this.panel4 = new System.Windows.Forms.Panel();
+            this.txtBairro = new System.Windows.Forms.TextBox();
+            this.lblBairro = new System.Windows.Forms.Label();
+            this.panelEndereco = new System.Windows.Forms.Panel();
+            this.txtEndereco = new System.Windows.Forms.TextBox();
+            this.lblEndereco = new System.Windows.Forms.Label();
+            this.panelCnpj = new System.Windows.Forms.Panel();
+            this.txtCnpj = new System.Windows.Forms.MaskedTextBox();
+            this.lblCnpj = new System.Windows.Forms.Label();
+            this.panel3 = new System.Windows.Forms.Panel();
+            this.txtTelefone = new System.Windows.Forms.MaskedTextBox();
+            this.lblTelefone = new System.Windows.Forms.Label();
+            this.panel5 = new System.Windows.Forms.Panel();
+            this.txtCep = new System.Windows.Forms.MaskedTextBox();
+            this.lblCep = new System.Windows.Forms.Label();
+            this.panelBtnConsultar = new System.Windows.Forms.Panel();
+            this.btnConsultar = new System.Windows.Forms.Button();
+            this.panelBtnCadastrar = new System.Windows.Forms.Panel();
             this.btnCadastrar = new System.Windows.Forms.Button();
+            this.lblTitulo = new System.Windows.Forms.Label();
             this.tableLayoutPanel1.SuspendLayout();
-            this.panelRazaoSocial.SuspendLayout();
-            this.panelCnpj.SuspendLayout();
-            this.panelEndereco.SuspendLayout();
-            this.panel4.SuspendLayout();
             this.panel1.SuspendLayout();
+            this.panel6.SuspendLayout();
             this.panel2.SuspendLayout();
+            this.panelRazaoSocial.SuspendLayout();
+            this.panel4.SuspendLayout();
+            this.panelEndereco.SuspendLayout();
+            this.panelCnpj.SuspendLayout();
             this.panel3.SuspendLayout();
             this.panel5.SuspendLayout();
-            this.panel6.SuspendLayout();
-            this.panelBotao.SuspendLayout();
+            this.panelBtnConsultar.SuspendLayout();
+            this.panelBtnCadastrar.SuspendLayout();
             this.SuspendLayout();
             // 
             // tableLayoutPanel1
@@ -89,7 +92,8 @@
             this.tableLayoutPanel1.Controls.Add(this.panelCnpj, 1, 0);
             this.tableLayoutPanel1.Controls.Add(this.panel3, 2, 1);
             this.tableLayoutPanel1.Controls.Add(this.panel5, 3, 1);
-            this.tableLayoutPanel1.Controls.Add(this.panelBotao, 1, 3);
+            this.tableLayoutPanel1.Controls.Add(this.panelBtnConsultar, 3, 2);
+            this.tableLayoutPanel1.Controls.Add(this.panelBtnCadastrar, 1, 3);
             this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 85);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
@@ -100,129 +104,6 @@
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 33.27854F));
             this.tableLayoutPanel1.Size = new System.Drawing.Size(684, 376);
             this.tableLayoutPanel1.TabIndex = 0;
-            // 
-            // panelRazaoSocial
-            // 
-            this.panelRazaoSocial.Controls.Add(this.txtRazaoSocial);
-            this.panelRazaoSocial.Controls.Add(this.lblRazaoSocial);
-            this.panelRazaoSocial.Location = new System.Drawing.Point(3, 3);
-            this.panelRazaoSocial.Name = "panelRazaoSocial";
-            this.panelRazaoSocial.Size = new System.Drawing.Size(165, 68);
-            this.panelRazaoSocial.TabIndex = 0;
-            // 
-            // lblRazaoSocial
-            // 
-            this.lblRazaoSocial.AutoSize = true;
-            this.lblRazaoSocial.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblRazaoSocial.ForeColor = System.Drawing.Color.White;
-            this.lblRazaoSocial.Location = new System.Drawing.Point(3, 11);
-            this.lblRazaoSocial.Name = "lblRazaoSocial";
-            this.lblRazaoSocial.Size = new System.Drawing.Size(95, 17);
-            this.lblRazaoSocial.TabIndex = 0;
-            this.lblRazaoSocial.Text = "Razão Social:";
-            // 
-            // txtRazaoSocial
-            // 
-            this.txtRazaoSocial.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtRazaoSocial.Location = new System.Drawing.Point(6, 31);
-            this.txtRazaoSocial.MaxLength = 30;
-            this.txtRazaoSocial.Name = "txtRazaoSocial";
-            this.txtRazaoSocial.Size = new System.Drawing.Size(156, 20);
-            this.txtRazaoSocial.TabIndex = 1;
-            // 
-            // panelCnpj
-            // 
-            this.panelCnpj.Controls.Add(this.txtCnpj);
-            this.panelCnpj.Controls.Add(this.lblCnpj);
-            this.panelCnpj.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panelCnpj.Location = new System.Drawing.Point(174, 3);
-            this.panelCnpj.Name = "panelCnpj";
-            this.panelCnpj.Size = new System.Drawing.Size(165, 68);
-            this.panelCnpj.TabIndex = 1;
-            // 
-            // lblCnpj
-            // 
-            this.lblCnpj.AutoSize = true;
-            this.lblCnpj.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblCnpj.ForeColor = System.Drawing.Color.White;
-            this.lblCnpj.Location = new System.Drawing.Point(3, 11);
-            this.lblCnpj.Name = "lblCnpj";
-            this.lblCnpj.Size = new System.Drawing.Size(47, 17);
-            this.lblCnpj.TabIndex = 0;
-            this.lblCnpj.Text = "CNPJ:";
-            // 
-            // txtCnpj
-            // 
-            this.txtCnpj.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtCnpj.Location = new System.Drawing.Point(6, 31);
-            this.txtCnpj.Mask = "00.000.000/0000-00";
-            this.txtCnpj.Name = "txtCnpj";
-            this.txtCnpj.Size = new System.Drawing.Size(156, 20);
-            this.txtCnpj.TabIndex = 1;
-            // 
-            // panelEndereco
-            // 
-            this.panelEndereco.Controls.Add(this.txtEndereco);
-            this.panelEndereco.Controls.Add(this.lblEndereco);
-            this.panelEndereco.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panelEndereco.Location = new System.Drawing.Point(345, 3);
-            this.panelEndereco.Name = "panelEndereco";
-            this.panelEndereco.Size = new System.Drawing.Size(165, 68);
-            this.panelEndereco.TabIndex = 2;
-            // 
-            // txtEndereco
-            // 
-            this.txtEndereco.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtEndereco.Location = new System.Drawing.Point(6, 31);
-            this.txtEndereco.MaxLength = 40;
-            this.txtEndereco.Name = "txtEndereco";
-            this.txtEndereco.Size = new System.Drawing.Size(156, 20);
-            this.txtEndereco.TabIndex = 1;
-            // 
-            // lblEndereco
-            // 
-            this.lblEndereco.AutoSize = true;
-            this.lblEndereco.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblEndereco.ForeColor = System.Drawing.Color.White;
-            this.lblEndereco.Location = new System.Drawing.Point(3, 11);
-            this.lblEndereco.Name = "lblEndereco";
-            this.lblEndereco.Size = new System.Drawing.Size(73, 17);
-            this.lblEndereco.TabIndex = 0;
-            this.lblEndereco.Text = "Endereço:";
-            // 
-            // panel4
-            // 
-            this.panel4.Controls.Add(this.txtBairro);
-            this.panel4.Controls.Add(this.lblBairro);
-            this.panel4.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel4.Location = new System.Drawing.Point(516, 3);
-            this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(165, 68);
-            this.panel4.TabIndex = 3;
-            // 
-            // txtBairro
-            // 
-            this.txtBairro.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtBairro.Location = new System.Drawing.Point(6, 31);
-            this.txtBairro.MaxLength = 20;
-            this.txtBairro.Name = "txtBairro";
-            this.txtBairro.Size = new System.Drawing.Size(156, 20);
-            this.txtBairro.TabIndex = 1;
-            // 
-            // lblBairro
-            // 
-            this.lblBairro.AutoSize = true;
-            this.lblBairro.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblBairro.ForeColor = System.Drawing.Color.White;
-            this.lblBairro.Location = new System.Drawing.Point(3, 11);
-            this.lblBairro.Name = "lblBairro";
-            this.lblBairro.Size = new System.Drawing.Size(50, 17);
-            this.lblBairro.TabIndex = 0;
-            this.lblBairro.Text = "Bairro:";
             // 
             // panel1
             // 
@@ -255,99 +136,6 @@
             this.lblCidade.TabIndex = 0;
             this.lblCidade.Text = "Cidade:";
             // 
-            // panel2
-            // 
-            this.panel2.Controls.Add(this.txtUf);
-            this.panel2.Controls.Add(this.lblUf);
-            this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel2.Location = new System.Drawing.Point(174, 77);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(165, 66);
-            this.panel2.TabIndex = 5;
-            // 
-            // txtUf
-            // 
-            this.txtUf.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtUf.Location = new System.Drawing.Point(6, 31);
-            this.txtUf.MaxLength = 2;
-            this.txtUf.Name = "txtUf";
-            this.txtUf.Size = new System.Drawing.Size(156, 20);
-            this.txtUf.TabIndex = 1;
-            // 
-            // lblUf
-            // 
-            this.lblUf.AutoSize = true;
-            this.lblUf.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblUf.ForeColor = System.Drawing.Color.White;
-            this.lblUf.Location = new System.Drawing.Point(3, 11);
-            this.lblUf.Name = "lblUf";
-            this.lblUf.Size = new System.Drawing.Size(30, 17);
-            this.lblUf.TabIndex = 0;
-            this.lblUf.Text = "UF:";
-            // 
-            // panel3
-            // 
-            this.panel3.Controls.Add(this.txtTelefone);
-            this.panel3.Controls.Add(this.lblTelefone);
-            this.panel3.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel3.Location = new System.Drawing.Point(345, 77);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(165, 66);
-            this.panel3.TabIndex = 3;
-            // 
-            // lblTelefone
-            // 
-            this.lblTelefone.AutoSize = true;
-            this.lblTelefone.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTelefone.ForeColor = System.Drawing.Color.White;
-            this.lblTelefone.Location = new System.Drawing.Point(3, 11);
-            this.lblTelefone.Name = "lblTelefone";
-            this.lblTelefone.Size = new System.Drawing.Size(68, 17);
-            this.lblTelefone.TabIndex = 0;
-            this.lblTelefone.Text = "Telefone:";
-            // 
-            // txtTelefone
-            // 
-            this.txtTelefone.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtTelefone.Location = new System.Drawing.Point(6, 31);
-            this.txtTelefone.Mask = "(00) 00000-0000";
-            this.txtTelefone.Name = "txtTelefone";
-            this.txtTelefone.Size = new System.Drawing.Size(156, 20);
-            this.txtTelefone.TabIndex = 1;
-            // 
-            // panel5
-            // 
-            this.panel5.Controls.Add(this.txtCep);
-            this.panel5.Controls.Add(this.lblCep);
-            this.panel5.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel5.Location = new System.Drawing.Point(516, 77);
-            this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(165, 66);
-            this.panel5.TabIndex = 4;
-            // 
-            // lblCep
-            // 
-            this.lblCep.AutoSize = true;
-            this.lblCep.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblCep.ForeColor = System.Drawing.Color.White;
-            this.lblCep.Location = new System.Drawing.Point(3, 11);
-            this.lblCep.Name = "lblCep";
-            this.lblCep.Size = new System.Drawing.Size(39, 17);
-            this.lblCep.TabIndex = 0;
-            this.lblCep.Text = "CEP:";
-            // 
-            // txtCep
-            // 
-            this.txtCep.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtCep.Location = new System.Drawing.Point(6, 31);
-            this.txtCep.Mask = "00000-000";
-            this.txtCep.Name = "txtCep";
-            this.txtCep.Size = new System.Drawing.Size(156, 20);
-            this.txtCep.TabIndex = 1;
-            // 
             // panel6
             // 
             this.panel6.Controls.Add(this.textBox1);
@@ -379,27 +167,255 @@
             this.lblEmail.TabIndex = 0;
             this.lblEmail.Text = "E-mail:";
             // 
-            // lblTitulo
+            // panel2
             // 
-            this.lblTitulo.Dock = System.Windows.Forms.DockStyle.Top;
-            this.lblTitulo.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTitulo.ForeColor = System.Drawing.Color.White;
-            this.lblTitulo.Location = new System.Drawing.Point(0, 0);
-            this.lblTitulo.Name = "lblTitulo";
-            this.lblTitulo.Size = new System.Drawing.Size(684, 82);
-            this.lblTitulo.TabIndex = 1;
-            this.lblTitulo.Text = "Cadastro de Fornecedores";
-            this.lblTitulo.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.panel2.Controls.Add(this.txtUf);
+            this.panel2.Controls.Add(this.lblUf);
+            this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel2.Location = new System.Drawing.Point(174, 77);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(165, 66);
+            this.panel2.TabIndex = 5;
             // 
-            // panelBotao
+            // txtUf
             // 
-            this.tableLayoutPanel1.SetColumnSpan(this.panelBotao, 2);
-            this.panelBotao.Controls.Add(this.btnCadastrar);
-            this.panelBotao.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panelBotao.Location = new System.Drawing.Point(174, 253);
-            this.panelBotao.Name = "panelBotao";
-            this.panelBotao.Size = new System.Drawing.Size(336, 120);
-            this.panelBotao.TabIndex = 6;
+            this.txtUf.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtUf.Location = new System.Drawing.Point(6, 31);
+            this.txtUf.MaxLength = 2;
+            this.txtUf.Name = "txtUf";
+            this.txtUf.Size = new System.Drawing.Size(156, 20);
+            this.txtUf.TabIndex = 1;
+            // 
+            // lblUf
+            // 
+            this.lblUf.AutoSize = true;
+            this.lblUf.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblUf.ForeColor = System.Drawing.Color.White;
+            this.lblUf.Location = new System.Drawing.Point(3, 11);
+            this.lblUf.Name = "lblUf";
+            this.lblUf.Size = new System.Drawing.Size(30, 17);
+            this.lblUf.TabIndex = 0;
+            this.lblUf.Text = "UF:";
+            // 
+            // panelRazaoSocial
+            // 
+            this.panelRazaoSocial.Controls.Add(this.txtRazaoSocial);
+            this.panelRazaoSocial.Controls.Add(this.lblRazaoSocial);
+            this.panelRazaoSocial.Location = new System.Drawing.Point(3, 3);
+            this.panelRazaoSocial.Name = "panelRazaoSocial";
+            this.panelRazaoSocial.Size = new System.Drawing.Size(165, 68);
+            this.panelRazaoSocial.TabIndex = 0;
+            // 
+            // txtRazaoSocial
+            // 
+            this.txtRazaoSocial.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtRazaoSocial.Location = new System.Drawing.Point(6, 31);
+            this.txtRazaoSocial.MaxLength = 30;
+            this.txtRazaoSocial.Name = "txtRazaoSocial";
+            this.txtRazaoSocial.Size = new System.Drawing.Size(156, 20);
+            this.txtRazaoSocial.TabIndex = 1;
+            // 
+            // lblRazaoSocial
+            // 
+            this.lblRazaoSocial.AutoSize = true;
+            this.lblRazaoSocial.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblRazaoSocial.ForeColor = System.Drawing.Color.White;
+            this.lblRazaoSocial.Location = new System.Drawing.Point(3, 11);
+            this.lblRazaoSocial.Name = "lblRazaoSocial";
+            this.lblRazaoSocial.Size = new System.Drawing.Size(95, 17);
+            this.lblRazaoSocial.TabIndex = 0;
+            this.lblRazaoSocial.Text = "Razão Social:";
+            // 
+            // panel4
+            // 
+            this.panel4.Controls.Add(this.txtBairro);
+            this.panel4.Controls.Add(this.lblBairro);
+            this.panel4.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel4.Location = new System.Drawing.Point(516, 3);
+            this.panel4.Name = "panel4";
+            this.panel4.Size = new System.Drawing.Size(165, 68);
+            this.panel4.TabIndex = 3;
+            // 
+            // txtBairro
+            // 
+            this.txtBairro.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtBairro.Location = new System.Drawing.Point(6, 31);
+            this.txtBairro.MaxLength = 20;
+            this.txtBairro.Name = "txtBairro";
+            this.txtBairro.Size = new System.Drawing.Size(156, 20);
+            this.txtBairro.TabIndex = 1;
+            // 
+            // lblBairro
+            // 
+            this.lblBairro.AutoSize = true;
+            this.lblBairro.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblBairro.ForeColor = System.Drawing.Color.White;
+            this.lblBairro.Location = new System.Drawing.Point(3, 11);
+            this.lblBairro.Name = "lblBairro";
+            this.lblBairro.Size = new System.Drawing.Size(50, 17);
+            this.lblBairro.TabIndex = 0;
+            this.lblBairro.Text = "Bairro:";
+            // 
+            // panelEndereco
+            // 
+            this.panelEndereco.Controls.Add(this.txtEndereco);
+            this.panelEndereco.Controls.Add(this.lblEndereco);
+            this.panelEndereco.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panelEndereco.Location = new System.Drawing.Point(345, 3);
+            this.panelEndereco.Name = "panelEndereco";
+            this.panelEndereco.Size = new System.Drawing.Size(165, 68);
+            this.panelEndereco.TabIndex = 2;
+            // 
+            // txtEndereco
+            // 
+            this.txtEndereco.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtEndereco.Location = new System.Drawing.Point(6, 31);
+            this.txtEndereco.MaxLength = 40;
+            this.txtEndereco.Name = "txtEndereco";
+            this.txtEndereco.Size = new System.Drawing.Size(156, 20);
+            this.txtEndereco.TabIndex = 1;
+            // 
+            // lblEndereco
+            // 
+            this.lblEndereco.AutoSize = true;
+            this.lblEndereco.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblEndereco.ForeColor = System.Drawing.Color.White;
+            this.lblEndereco.Location = new System.Drawing.Point(3, 11);
+            this.lblEndereco.Name = "lblEndereco";
+            this.lblEndereco.Size = new System.Drawing.Size(73, 17);
+            this.lblEndereco.TabIndex = 0;
+            this.lblEndereco.Text = "Endereço:";
+            // 
+            // panelCnpj
+            // 
+            this.panelCnpj.Controls.Add(this.txtCnpj);
+            this.panelCnpj.Controls.Add(this.lblCnpj);
+            this.panelCnpj.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panelCnpj.Location = new System.Drawing.Point(174, 3);
+            this.panelCnpj.Name = "panelCnpj";
+            this.panelCnpj.Size = new System.Drawing.Size(165, 68);
+            this.panelCnpj.TabIndex = 1;
+            // 
+            // txtCnpj
+            // 
+            this.txtCnpj.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtCnpj.Location = new System.Drawing.Point(6, 31);
+            this.txtCnpj.Mask = "00.000.000/0000-00";
+            this.txtCnpj.Name = "txtCnpj";
+            this.txtCnpj.Size = new System.Drawing.Size(156, 20);
+            this.txtCnpj.TabIndex = 1;
+            // 
+            // lblCnpj
+            // 
+            this.lblCnpj.AutoSize = true;
+            this.lblCnpj.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCnpj.ForeColor = System.Drawing.Color.White;
+            this.lblCnpj.Location = new System.Drawing.Point(3, 11);
+            this.lblCnpj.Name = "lblCnpj";
+            this.lblCnpj.Size = new System.Drawing.Size(47, 17);
+            this.lblCnpj.TabIndex = 0;
+            this.lblCnpj.Text = "CNPJ:";
+            // 
+            // panel3
+            // 
+            this.panel3.Controls.Add(this.txtTelefone);
+            this.panel3.Controls.Add(this.lblTelefone);
+            this.panel3.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel3.Location = new System.Drawing.Point(345, 77);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(165, 66);
+            this.panel3.TabIndex = 3;
+            // 
+            // txtTelefone
+            // 
+            this.txtTelefone.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtTelefone.Location = new System.Drawing.Point(6, 31);
+            this.txtTelefone.Mask = "(00) 00000-0000";
+            this.txtTelefone.Name = "txtTelefone";
+            this.txtTelefone.Size = new System.Drawing.Size(156, 20);
+            this.txtTelefone.TabIndex = 1;
+            // 
+            // lblTelefone
+            // 
+            this.lblTelefone.AutoSize = true;
+            this.lblTelefone.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTelefone.ForeColor = System.Drawing.Color.White;
+            this.lblTelefone.Location = new System.Drawing.Point(3, 11);
+            this.lblTelefone.Name = "lblTelefone";
+            this.lblTelefone.Size = new System.Drawing.Size(68, 17);
+            this.lblTelefone.TabIndex = 0;
+            this.lblTelefone.Text = "Telefone:";
+            // 
+            // panel5
+            // 
+            this.panel5.Controls.Add(this.txtCep);
+            this.panel5.Controls.Add(this.lblCep);
+            this.panel5.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel5.Location = new System.Drawing.Point(516, 77);
+            this.panel5.Name = "panel5";
+            this.panel5.Size = new System.Drawing.Size(165, 66);
+            this.panel5.TabIndex = 4;
+            // 
+            // txtCep
+            // 
+            this.txtCep.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtCep.Location = new System.Drawing.Point(6, 31);
+            this.txtCep.Mask = "00000-000";
+            this.txtCep.Name = "txtCep";
+            this.txtCep.Size = new System.Drawing.Size(156, 20);
+            this.txtCep.TabIndex = 1;
+            // 
+            // lblCep
+            // 
+            this.lblCep.AutoSize = true;
+            this.lblCep.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCep.ForeColor = System.Drawing.Color.White;
+            this.lblCep.Location = new System.Drawing.Point(3, 11);
+            this.lblCep.Name = "lblCep";
+            this.lblCep.Size = new System.Drawing.Size(39, 17);
+            this.lblCep.TabIndex = 0;
+            this.lblCep.Text = "CEP:";
+            // 
+            // panelBtnConsultar
+            // 
+            this.panelBtnConsultar.Controls.Add(this.btnConsultar);
+            this.panelBtnConsultar.Location = new System.Drawing.Point(516, 149);
+            this.panelBtnConsultar.Name = "panelBtnConsultar";
+            this.panelBtnConsultar.Size = new System.Drawing.Size(165, 98);
+            this.panelBtnConsultar.TabIndex = 6;
+            // 
+            // btnConsultar
+            // 
+            this.btnConsultar.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnConsultar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(175)))), ((int)(((byte)(239)))));
+            this.btnConsultar.FlatAppearance.BorderSize = 0;
+            this.btnConsultar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnConsultar.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnConsultar.ForeColor = System.Drawing.Color.White;
+            this.btnConsultar.Location = new System.Drawing.Point(29, 3);
+            this.btnConsultar.Name = "btnConsultar";
+            this.btnConsultar.Size = new System.Drawing.Size(105, 37);
+            this.btnConsultar.TabIndex = 1;
+            this.btnConsultar.Text = "Consultar";
+            this.btnConsultar.UseVisualStyleBackColor = false;
+            this.btnConsultar.Click += new System.EventHandler(this.btnConsultar_Click);
+            // 
+            // panelBtnCadastrar
+            // 
+            this.tableLayoutPanel1.SetColumnSpan(this.panelBtnCadastrar, 2);
+            this.panelBtnCadastrar.Controls.Add(this.btnCadastrar);
+            this.panelBtnCadastrar.Location = new System.Drawing.Point(174, 253);
+            this.panelBtnCadastrar.Name = "panelBtnCadastrar";
+            this.panelBtnCadastrar.Size = new System.Drawing.Size(336, 120);
+            this.panelBtnCadastrar.TabIndex = 7;
             // 
             // btnCadastrar
             // 
@@ -417,6 +433,18 @@
             this.btnCadastrar.Text = "Cadastrar";
             this.btnCadastrar.UseVisualStyleBackColor = false;
             // 
+            // lblTitulo
+            // 
+            this.lblTitulo.Dock = System.Windows.Forms.DockStyle.Top;
+            this.lblTitulo.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTitulo.ForeColor = System.Drawing.Color.White;
+            this.lblTitulo.Location = new System.Drawing.Point(0, 0);
+            this.lblTitulo.Name = "lblTitulo";
+            this.lblTitulo.Size = new System.Drawing.Size(684, 82);
+            this.lblTitulo.TabIndex = 1;
+            this.lblTitulo.Text = "Cadastro de Fornecedores";
+            this.lblTitulo.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
             // RegisterProviders
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -431,25 +459,26 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "QrÁguas - Cadastro de Fornecedores";
             this.tableLayoutPanel1.ResumeLayout(false);
-            this.panelRazaoSocial.ResumeLayout(false);
-            this.panelRazaoSocial.PerformLayout();
-            this.panelCnpj.ResumeLayout(false);
-            this.panelCnpj.PerformLayout();
-            this.panelEndereco.ResumeLayout(false);
-            this.panelEndereco.PerformLayout();
-            this.panel4.ResumeLayout(false);
-            this.panel4.PerformLayout();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            this.panel6.ResumeLayout(false);
+            this.panel6.PerformLayout();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
+            this.panelRazaoSocial.ResumeLayout(false);
+            this.panelRazaoSocial.PerformLayout();
+            this.panel4.ResumeLayout(false);
+            this.panel4.PerformLayout();
+            this.panelEndereco.ResumeLayout(false);
+            this.panelEndereco.PerformLayout();
+            this.panelCnpj.ResumeLayout(false);
+            this.panelCnpj.PerformLayout();
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
             this.panel5.ResumeLayout(false);
             this.panel5.PerformLayout();
-            this.panel6.ResumeLayout(false);
-            this.panel6.PerformLayout();
-            this.panelBotao.ResumeLayout(false);
+            this.panelBtnConsultar.ResumeLayout(false);
+            this.panelBtnCadastrar.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -484,8 +513,10 @@
         private System.Windows.Forms.Panel panel5;
         private System.Windows.Forms.MaskedTextBox txtCep;
         private System.Windows.Forms.Label lblCep;
-        private System.Windows.Forms.Panel panelBotao;
+        private System.Windows.Forms.Panel panelBtnConsultar;
         private System.Windows.Forms.Label lblTitulo;
+        private System.Windows.Forms.Button btnConsultar;
+        private System.Windows.Forms.Panel panelBtnCadastrar;
         private System.Windows.Forms.Button btnCadastrar;
     }
 }
