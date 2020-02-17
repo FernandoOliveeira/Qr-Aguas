@@ -22,7 +22,7 @@ namespace QrAguas.View_Layer
 
         Functions function = new Functions();
 
-        private async void btnConsultar_Click(object sender, EventArgs e)
+        private async void BtnConsultar_Click(object sender, EventArgs e)
         {
             try
             {
@@ -46,6 +46,7 @@ namespace QrAguas.View_Layer
 
             txtBairro.Text = endereco.Bairro;
             txtCidade.Text = endereco.Cidade;
+            txtComplemento.Text = endereco.Complemento;
             txtEndereco.Text = endereco.Logradouro;
             txtUf.Text = endereco.Uf;
             

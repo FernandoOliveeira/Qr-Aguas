@@ -31,7 +31,7 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainForm));
             System.Windows.Forms.TreeNode treeNode1 = new System.Windows.Forms.TreeNode("Cadastro de Fornecedores", 1, 1);
-            System.Windows.Forms.TreeNode treeNode2 = new System.Windows.Forms.TreeNode("Cadastro de Galões", 1, 1);
+            System.Windows.Forms.TreeNode treeNode2 = new System.Windows.Forms.TreeNode("Cadastro de Novos Produtos", 1, 1);
             System.Windows.Forms.TreeNode treeNode3 = new System.Windows.Forms.TreeNode("Cadastrar Novo Usuário", 1, 1);
             System.Windows.Forms.TreeNode treeNode4 = new System.Windows.Forms.TreeNode("Cadastros", new System.Windows.Forms.TreeNode[] {
             treeNode1,
@@ -96,15 +96,15 @@
             // procurarUsuarioToolStripMenuItem
             // 
             this.procurarUsuarioToolStripMenuItem.Name = "procurarUsuarioToolStripMenuItem";
-            this.procurarUsuarioToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.procurarUsuarioToolStripMenuItem.Size = new System.Drawing.Size(160, 22);
             this.procurarUsuarioToolStripMenuItem.Text = "Procurar Usuário";
             // 
             // alterarSenhaToolStripMenuItem
             // 
             this.alterarSenhaToolStripMenuItem.Name = "alterarSenhaToolStripMenuItem";
-            this.alterarSenhaToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.alterarSenhaToolStripMenuItem.Size = new System.Drawing.Size(160, 22);
             this.alterarSenhaToolStripMenuItem.Text = "Alterar Senha";
-            this.alterarSenhaToolStripMenuItem.Click += new System.EventHandler(this.alterarSenhaToolStripMenuItem_Click);
+            this.alterarSenhaToolStripMenuItem.Click += new System.EventHandler(this.AlterarSenhaToolStripMenuItem_Click);
             // 
             // statusStrip1
             // 
@@ -154,7 +154,7 @@
             treeNode2.ImageIndex = 1;
             treeNode2.Name = "Node1";
             treeNode2.SelectedImageIndex = 1;
-            treeNode2.Text = "Cadastro de Galões";
+            treeNode2.Text = "Cadastro de Novos Produtos";
             treeNode3.ImageIndex = 1;
             treeNode3.Name = "Node2";
             treeNode3.SelectedImageIndex = 1;
@@ -191,7 +191,7 @@
             this.treeView.SelectedImageIndex = 0;
             this.treeView.Size = new System.Drawing.Size(251, 538);
             this.treeView.TabIndex = 0;
-            this.treeView.NodeMouseDoubleClick += new System.Windows.Forms.TreeNodeMouseClickEventHandler(this.treeView_NodeMouseDoubleClick);
+            this.treeView.NodeMouseDoubleClick += new System.Windows.Forms.TreeNodeMouseClickEventHandler(this.TreeView_NodeMouseDoubleClick);
             // 
             // MainForm
             // 
