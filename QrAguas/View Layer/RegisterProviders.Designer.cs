@@ -30,54 +30,54 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(RegisterProviders));
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.txtCidade = new System.Windows.Forms.TextBox();
-            this.lblCidade = new System.Windows.Forms.Label();
-            this.panel6 = new System.Windows.Forms.Panel();
-            this.txtEmail = new System.Windows.Forms.TextBox();
-            this.lblEmail = new System.Windows.Forms.Label();
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.txtUf = new System.Windows.Forms.TextBox();
-            this.lblUf = new System.Windows.Forms.Label();
             this.panelRazaoSocial = new System.Windows.Forms.Panel();
             this.txtRazaoSocial = new System.Windows.Forms.TextBox();
             this.lblRazaoSocial = new System.Windows.Forms.Label();
-            this.panel4 = new System.Windows.Forms.Panel();
-            this.txtBairro = new System.Windows.Forms.TextBox();
-            this.lblBairro = new System.Windows.Forms.Label();
-            this.panelEndereco = new System.Windows.Forms.Panel();
-            this.txtEndereco = new System.Windows.Forms.TextBox();
-            this.lblEndereco = new System.Windows.Forms.Label();
             this.panelCnpj = new System.Windows.Forms.Panel();
             this.txtCnpj = new System.Windows.Forms.MaskedTextBox();
             this.lblCnpj = new System.Windows.Forms.Label();
+            this.panelBtnCadastrar = new System.Windows.Forms.Panel();
+            this.btnCadastrar = new System.Windows.Forms.Button();
             this.panel3 = new System.Windows.Forms.Panel();
             this.txtTelefone = new System.Windows.Forms.MaskedTextBox();
             this.lblTelefone = new System.Windows.Forms.Label();
-            this.panel5 = new System.Windows.Forms.Panel();
-            this.txtCep = new System.Windows.Forms.MaskedTextBox();
-            this.lblCep = new System.Windows.Forms.Label();
-            this.panelBtnConsultar = new System.Windows.Forms.Panel();
-            this.btnConsultar = new System.Windows.Forms.Button();
-            this.panelBtnCadastrar = new System.Windows.Forms.Panel();
-            this.btnCadastrar = new System.Windows.Forms.Button();
-            this.lblTitulo = new System.Windows.Forms.Label();
+            this.panel4 = new System.Windows.Forms.Panel();
+            this.txtBairro = new System.Windows.Forms.TextBox();
+            this.lblBairro = new System.Windows.Forms.Label();
+            this.panel6 = new System.Windows.Forms.Panel();
+            this.txtEmail = new System.Windows.Forms.TextBox();
+            this.lblEmail = new System.Windows.Forms.Label();
             this.panel7 = new System.Windows.Forms.Panel();
             this.txtComplemento = new System.Windows.Forms.TextBox();
             this.lblComplemento = new System.Windows.Forms.Label();
+            this.panel5 = new System.Windows.Forms.Panel();
+            this.txtCep = new System.Windows.Forms.MaskedTextBox();
+            this.lblCep = new System.Windows.Forms.Label();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.txtCidade = new System.Windows.Forms.TextBox();
+            this.lblCidade = new System.Windows.Forms.Label();
+            this.panelBtnConsultar = new System.Windows.Forms.Panel();
+            this.btnConsultar = new System.Windows.Forms.Button();
+            this.panelEndereco = new System.Windows.Forms.Panel();
+            this.txtEndereco = new System.Windows.Forms.TextBox();
+            this.lblEndereco = new System.Windows.Forms.Label();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.txtUf = new System.Windows.Forms.TextBox();
+            this.lblUf = new System.Windows.Forms.Label();
+            this.lblTitulo = new System.Windows.Forms.Label();
             this.tableLayoutPanel1.SuspendLayout();
-            this.panel1.SuspendLayout();
-            this.panel6.SuspendLayout();
-            this.panel2.SuspendLayout();
             this.panelRazaoSocial.SuspendLayout();
-            this.panel4.SuspendLayout();
-            this.panelEndereco.SuspendLayout();
             this.panelCnpj.SuspendLayout();
-            this.panel3.SuspendLayout();
-            this.panel5.SuspendLayout();
-            this.panelBtnConsultar.SuspendLayout();
             this.panelBtnCadastrar.SuspendLayout();
+            this.panel3.SuspendLayout();
+            this.panel4.SuspendLayout();
+            this.panel6.SuspendLayout();
             this.panel7.SuspendLayout();
+            this.panel5.SuspendLayout();
+            this.panel1.SuspendLayout();
+            this.panelBtnConsultar.SuspendLayout();
+            this.panelEndereco.SuspendLayout();
+            this.panel2.SuspendLayout();
             this.SuspendLayout();
             // 
             // tableLayoutPanel1
@@ -110,99 +110,6 @@
             this.tableLayoutPanel1.Size = new System.Drawing.Size(684, 376);
             this.tableLayoutPanel1.TabIndex = 0;
             // 
-            // panel1
-            // 
-            this.panel1.Controls.Add(this.txtCidade);
-            this.panel1.Controls.Add(this.lblCidade);
-            this.panel1.Location = new System.Drawing.Point(516, 77);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(165, 66);
-            this.panel1.TabIndex = 4;
-            // 
-            // txtCidade
-            // 
-            this.txtCidade.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtCidade.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtCidade.Location = new System.Drawing.Point(6, 31);
-            this.txtCidade.MaxLength = 20;
-            this.txtCidade.Name = "txtCidade";
-            this.txtCidade.Size = new System.Drawing.Size(156, 23);
-            this.txtCidade.TabIndex = 1;
-            // 
-            // lblCidade
-            // 
-            this.lblCidade.AutoSize = true;
-            this.lblCidade.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblCidade.ForeColor = System.Drawing.Color.White;
-            this.lblCidade.Location = new System.Drawing.Point(3, 11);
-            this.lblCidade.Name = "lblCidade";
-            this.lblCidade.Size = new System.Drawing.Size(56, 17);
-            this.lblCidade.TabIndex = 0;
-            this.lblCidade.Text = "Cidade:";
-            // 
-            // panel6
-            // 
-            this.panel6.Controls.Add(this.txtEmail);
-            this.panel6.Controls.Add(this.lblEmail);
-            this.panel6.Location = new System.Drawing.Point(516, 3);
-            this.panel6.Name = "panel6";
-            this.panel6.Size = new System.Drawing.Size(165, 68);
-            this.panel6.TabIndex = 5;
-            // 
-            // txtEmail
-            // 
-            this.txtEmail.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtEmail.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtEmail.Location = new System.Drawing.Point(6, 31);
-            this.txtEmail.MaxLength = 25;
-            this.txtEmail.Name = "txtEmail";
-            this.txtEmail.Size = new System.Drawing.Size(156, 23);
-            this.txtEmail.TabIndex = 1;
-            // 
-            // lblEmail
-            // 
-            this.lblEmail.AutoSize = true;
-            this.lblEmail.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblEmail.ForeColor = System.Drawing.Color.White;
-            this.lblEmail.Location = new System.Drawing.Point(3, 11);
-            this.lblEmail.Name = "lblEmail";
-            this.lblEmail.Size = new System.Drawing.Size(51, 17);
-            this.lblEmail.TabIndex = 0;
-            this.lblEmail.Text = "E-mail:";
-            // 
-            // panel2
-            // 
-            this.panel2.Controls.Add(this.txtUf);
-            this.panel2.Controls.Add(this.lblUf);
-            this.panel2.Location = new System.Drawing.Point(345, 149);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(165, 66);
-            this.panel2.TabIndex = 5;
-            // 
-            // txtUf
-            // 
-            this.txtUf.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtUf.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtUf.Location = new System.Drawing.Point(6, 31);
-            this.txtUf.MaxLength = 2;
-            this.txtUf.Name = "txtUf";
-            this.txtUf.Size = new System.Drawing.Size(156, 23);
-            this.txtUf.TabIndex = 1;
-            // 
-            // lblUf
-            // 
-            this.lblUf.AutoSize = true;
-            this.lblUf.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblUf.ForeColor = System.Drawing.Color.White;
-            this.lblUf.Location = new System.Drawing.Point(3, 11);
-            this.lblUf.Name = "lblUf";
-            this.lblUf.Size = new System.Drawing.Size(30, 17);
-            this.lblUf.TabIndex = 0;
-            this.lblUf.Text = "UF:";
-            // 
             // panelRazaoSocial
             // 
             this.panelRazaoSocial.Controls.Add(this.txtRazaoSocial);
@@ -234,68 +141,6 @@
             this.lblRazaoSocial.TabIndex = 0;
             this.lblRazaoSocial.Text = "Razão Social:";
             // 
-            // panel4
-            // 
-            this.panel4.Controls.Add(this.txtBairro);
-            this.panel4.Controls.Add(this.lblBairro);
-            this.panel4.Location = new System.Drawing.Point(345, 77);
-            this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(165, 66);
-            this.panel4.TabIndex = 3;
-            // 
-            // txtBairro
-            // 
-            this.txtBairro.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtBairro.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtBairro.Location = new System.Drawing.Point(6, 31);
-            this.txtBairro.MaxLength = 20;
-            this.txtBairro.Name = "txtBairro";
-            this.txtBairro.Size = new System.Drawing.Size(156, 23);
-            this.txtBairro.TabIndex = 1;
-            // 
-            // lblBairro
-            // 
-            this.lblBairro.AutoSize = true;
-            this.lblBairro.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblBairro.ForeColor = System.Drawing.Color.White;
-            this.lblBairro.Location = new System.Drawing.Point(3, 11);
-            this.lblBairro.Name = "lblBairro";
-            this.lblBairro.Size = new System.Drawing.Size(50, 17);
-            this.lblBairro.TabIndex = 0;
-            this.lblBairro.Text = "Bairro:";
-            // 
-            // panelEndereco
-            // 
-            this.panelEndereco.Controls.Add(this.txtEndereco);
-            this.panelEndereco.Controls.Add(this.lblEndereco);
-            this.panelEndereco.Location = new System.Drawing.Point(174, 77);
-            this.panelEndereco.Name = "panelEndereco";
-            this.panelEndereco.Size = new System.Drawing.Size(165, 66);
-            this.panelEndereco.TabIndex = 2;
-            // 
-            // txtEndereco
-            // 
-            this.txtEndereco.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtEndereco.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtEndereco.Location = new System.Drawing.Point(6, 31);
-            this.txtEndereco.MaxLength = 40;
-            this.txtEndereco.Name = "txtEndereco";
-            this.txtEndereco.Size = new System.Drawing.Size(156, 23);
-            this.txtEndereco.TabIndex = 1;
-            // 
-            // lblEndereco
-            // 
-            this.lblEndereco.AutoSize = true;
-            this.lblEndereco.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblEndereco.ForeColor = System.Drawing.Color.White;
-            this.lblEndereco.Location = new System.Drawing.Point(3, 11);
-            this.lblEndereco.Name = "lblEndereco";
-            this.lblEndereco.Size = new System.Drawing.Size(73, 17);
-            this.lblEndereco.TabIndex = 0;
-            this.lblEndereco.Text = "Endereço:";
-            // 
             // panelCnpj
             // 
             this.panelCnpj.Controls.Add(this.txtCnpj);
@@ -312,7 +157,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.txtCnpj.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtCnpj.Location = new System.Drawing.Point(6, 31);
-            this.txtCnpj.Mask = "00.000.000/0000-00";
+            this.txtCnpj.Mask = "00,000,000/0000-00";
             this.txtCnpj.Name = "txtCnpj";
             this.txtCnpj.Size = new System.Drawing.Size(156, 23);
             this.txtCnpj.TabIndex = 1;
@@ -327,6 +172,32 @@
             this.lblCnpj.Size = new System.Drawing.Size(47, 17);
             this.lblCnpj.TabIndex = 0;
             this.lblCnpj.Text = "CNPJ:";
+            // 
+            // panelBtnCadastrar
+            // 
+            this.tableLayoutPanel1.SetColumnSpan(this.panelBtnCadastrar, 2);
+            this.panelBtnCadastrar.Controls.Add(this.btnCadastrar);
+            this.panelBtnCadastrar.Location = new System.Drawing.Point(174, 253);
+            this.panelBtnCadastrar.Name = "panelBtnCadastrar";
+            this.panelBtnCadastrar.Size = new System.Drawing.Size(336, 120);
+            this.panelBtnCadastrar.TabIndex = 7;
+            // 
+            // btnCadastrar
+            // 
+            this.btnCadastrar.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnCadastrar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(175)))), ((int)(((byte)(239)))));
+            this.btnCadastrar.FlatAppearance.BorderSize = 0;
+            this.btnCadastrar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCadastrar.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCadastrar.ForeColor = System.Drawing.Color.White;
+            this.btnCadastrar.Location = new System.Drawing.Point(30, 32);
+            this.btnCadastrar.Name = "btnCadastrar";
+            this.btnCadastrar.Size = new System.Drawing.Size(276, 37);
+            this.btnCadastrar.TabIndex = 1;
+            this.btnCadastrar.Text = "Cadastrar";
+            this.btnCadastrar.UseVisualStyleBackColor = false;
+            this.btnCadastrar.Click += new System.EventHandler(this.BtnCadastrar_Click);
             // 
             // panel3
             // 
@@ -359,98 +230,67 @@
             this.lblTelefone.TabIndex = 0;
             this.lblTelefone.Text = "Telefone:";
             // 
-            // panel5
+            // panel4
             // 
-            this.panel5.Controls.Add(this.txtCep);
-            this.panel5.Controls.Add(this.lblCep);
-            this.panel5.Location = new System.Drawing.Point(3, 77);
-            this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(165, 66);
-            this.panel5.TabIndex = 4;
+            this.panel4.Controls.Add(this.txtBairro);
+            this.panel4.Controls.Add(this.lblBairro);
+            this.panel4.Location = new System.Drawing.Point(345, 77);
+            this.panel4.Name = "panel4";
+            this.panel4.Size = new System.Drawing.Size(165, 66);
+            this.panel4.TabIndex = 3;
             // 
-            // txtCep
+            // txtBairro
             // 
-            this.txtCep.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.txtBairro.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtCep.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtCep.Location = new System.Drawing.Point(6, 31);
-            this.txtCep.Mask = "00000-000";
-            this.txtCep.Name = "txtCep";
-            this.txtCep.Size = new System.Drawing.Size(156, 23);
-            this.txtCep.TabIndex = 1;
+            this.txtBairro.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtBairro.Location = new System.Drawing.Point(6, 31);
+            this.txtBairro.MaxLength = 20;
+            this.txtBairro.Name = "txtBairro";
+            this.txtBairro.Size = new System.Drawing.Size(156, 23);
+            this.txtBairro.TabIndex = 1;
             // 
-            // lblCep
+            // lblBairro
             // 
-            this.lblCep.AutoSize = true;
-            this.lblCep.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblCep.ForeColor = System.Drawing.Color.White;
-            this.lblCep.Location = new System.Drawing.Point(3, 11);
-            this.lblCep.Name = "lblCep";
-            this.lblCep.Size = new System.Drawing.Size(39, 17);
-            this.lblCep.TabIndex = 0;
-            this.lblCep.Text = "CEP:";
+            this.lblBairro.AutoSize = true;
+            this.lblBairro.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblBairro.ForeColor = System.Drawing.Color.White;
+            this.lblBairro.Location = new System.Drawing.Point(3, 11);
+            this.lblBairro.Name = "lblBairro";
+            this.lblBairro.Size = new System.Drawing.Size(50, 17);
+            this.lblBairro.TabIndex = 0;
+            this.lblBairro.Text = "Bairro:";
             // 
-            // panelBtnConsultar
+            // panel6
             // 
-            this.panelBtnConsultar.Controls.Add(this.btnConsultar);
-            this.panelBtnConsultar.Location = new System.Drawing.Point(3, 149);
-            this.panelBtnConsultar.Name = "panelBtnConsultar";
-            this.panelBtnConsultar.Size = new System.Drawing.Size(165, 98);
-            this.panelBtnConsultar.TabIndex = 6;
+            this.panel6.Controls.Add(this.txtEmail);
+            this.panel6.Controls.Add(this.lblEmail);
+            this.panel6.Location = new System.Drawing.Point(516, 3);
+            this.panel6.Name = "panel6";
+            this.panel6.Size = new System.Drawing.Size(165, 68);
+            this.panel6.TabIndex = 5;
             // 
-            // btnConsultar
+            // txtEmail
             // 
-            this.btnConsultar.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.txtEmail.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnConsultar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(175)))), ((int)(((byte)(239)))));
-            this.btnConsultar.FlatAppearance.BorderSize = 0;
-            this.btnConsultar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnConsultar.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnConsultar.ForeColor = System.Drawing.Color.White;
-            this.btnConsultar.Location = new System.Drawing.Point(29, 3);
-            this.btnConsultar.Name = "btnConsultar";
-            this.btnConsultar.Size = new System.Drawing.Size(105, 37);
-            this.btnConsultar.TabIndex = 1;
-            this.btnConsultar.Text = "Consultar";
-            this.btnConsultar.UseVisualStyleBackColor = false;
-            this.btnConsultar.Click += new System.EventHandler(this.BtnConsultar_Click);
+            this.txtEmail.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtEmail.Location = new System.Drawing.Point(6, 31);
+            this.txtEmail.MaxLength = 25;
+            this.txtEmail.Name = "txtEmail";
+            this.txtEmail.Size = new System.Drawing.Size(156, 23);
+            this.txtEmail.TabIndex = 1;
             // 
-            // panelBtnCadastrar
+            // lblEmail
             // 
-            this.tableLayoutPanel1.SetColumnSpan(this.panelBtnCadastrar, 2);
-            this.panelBtnCadastrar.Controls.Add(this.btnCadastrar);
-            this.panelBtnCadastrar.Location = new System.Drawing.Point(174, 253);
-            this.panelBtnCadastrar.Name = "panelBtnCadastrar";
-            this.panelBtnCadastrar.Size = new System.Drawing.Size(336, 120);
-            this.panelBtnCadastrar.TabIndex = 7;
-            // 
-            // btnCadastrar
-            // 
-            this.btnCadastrar.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnCadastrar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(175)))), ((int)(((byte)(239)))));
-            this.btnCadastrar.FlatAppearance.BorderSize = 0;
-            this.btnCadastrar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnCadastrar.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCadastrar.ForeColor = System.Drawing.Color.White;
-            this.btnCadastrar.Location = new System.Drawing.Point(30, 32);
-            this.btnCadastrar.Name = "btnCadastrar";
-            this.btnCadastrar.Size = new System.Drawing.Size(276, 37);
-            this.btnCadastrar.TabIndex = 1;
-            this.btnCadastrar.Text = "Cadastrar";
-            this.btnCadastrar.UseVisualStyleBackColor = false;
-            // 
-            // lblTitulo
-            // 
-            this.lblTitulo.Dock = System.Windows.Forms.DockStyle.Top;
-            this.lblTitulo.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTitulo.ForeColor = System.Drawing.Color.White;
-            this.lblTitulo.Location = new System.Drawing.Point(0, 0);
-            this.lblTitulo.Name = "lblTitulo";
-            this.lblTitulo.Size = new System.Drawing.Size(684, 82);
-            this.lblTitulo.TabIndex = 1;
-            this.lblTitulo.Text = "Cadastro de Fornecedores";
-            this.lblTitulo.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lblEmail.AutoSize = true;
+            this.lblEmail.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblEmail.ForeColor = System.Drawing.Color.White;
+            this.lblEmail.Location = new System.Drawing.Point(3, 11);
+            this.lblEmail.Name = "lblEmail";
+            this.lblEmail.Size = new System.Drawing.Size(51, 17);
+            this.lblEmail.TabIndex = 0;
+            this.lblEmail.Text = "E-mail:";
             // 
             // panel7
             // 
@@ -483,6 +323,167 @@
             this.lblComplemento.TabIndex = 0;
             this.lblComplemento.Text = "Complemento:";
             // 
+            // panel5
+            // 
+            this.panel5.Controls.Add(this.txtCep);
+            this.panel5.Controls.Add(this.lblCep);
+            this.panel5.Location = new System.Drawing.Point(3, 77);
+            this.panel5.Name = "panel5";
+            this.panel5.Size = new System.Drawing.Size(165, 66);
+            this.panel5.TabIndex = 4;
+            // 
+            // txtCep
+            // 
+            this.txtCep.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtCep.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtCep.Location = new System.Drawing.Point(6, 31);
+            this.txtCep.Mask = "00000-000";
+            this.txtCep.Name = "txtCep";
+            this.txtCep.Size = new System.Drawing.Size(156, 23);
+            this.txtCep.TabIndex = 1;
+            // 
+            // lblCep
+            // 
+            this.lblCep.AutoSize = true;
+            this.lblCep.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCep.ForeColor = System.Drawing.Color.White;
+            this.lblCep.Location = new System.Drawing.Point(3, 11);
+            this.lblCep.Name = "lblCep";
+            this.lblCep.Size = new System.Drawing.Size(39, 17);
+            this.lblCep.TabIndex = 0;
+            this.lblCep.Text = "CEP:";
+            // 
+            // panel1
+            // 
+            this.panel1.Controls.Add(this.txtCidade);
+            this.panel1.Controls.Add(this.lblCidade);
+            this.panel1.Location = new System.Drawing.Point(516, 77);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(165, 66);
+            this.panel1.TabIndex = 4;
+            // 
+            // txtCidade
+            // 
+            this.txtCidade.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtCidade.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtCidade.Location = new System.Drawing.Point(6, 31);
+            this.txtCidade.MaxLength = 20;
+            this.txtCidade.Name = "txtCidade";
+            this.txtCidade.Size = new System.Drawing.Size(156, 23);
+            this.txtCidade.TabIndex = 1;
+            // 
+            // lblCidade
+            // 
+            this.lblCidade.AutoSize = true;
+            this.lblCidade.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCidade.ForeColor = System.Drawing.Color.White;
+            this.lblCidade.Location = new System.Drawing.Point(3, 11);
+            this.lblCidade.Name = "lblCidade";
+            this.lblCidade.Size = new System.Drawing.Size(56, 17);
+            this.lblCidade.TabIndex = 0;
+            this.lblCidade.Text = "Cidade:";
+            // 
+            // panelBtnConsultar
+            // 
+            this.panelBtnConsultar.Controls.Add(this.btnConsultar);
+            this.panelBtnConsultar.Location = new System.Drawing.Point(3, 149);
+            this.panelBtnConsultar.Name = "panelBtnConsultar";
+            this.panelBtnConsultar.Size = new System.Drawing.Size(165, 98);
+            this.panelBtnConsultar.TabIndex = 6;
+            // 
+            // btnConsultar
+            // 
+            this.btnConsultar.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnConsultar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(175)))), ((int)(((byte)(239)))));
+            this.btnConsultar.FlatAppearance.BorderSize = 0;
+            this.btnConsultar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnConsultar.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnConsultar.ForeColor = System.Drawing.Color.White;
+            this.btnConsultar.Location = new System.Drawing.Point(29, 3);
+            this.btnConsultar.Name = "btnConsultar";
+            this.btnConsultar.Size = new System.Drawing.Size(105, 37);
+            this.btnConsultar.TabIndex = 1;
+            this.btnConsultar.Text = "Consultar";
+            this.btnConsultar.UseVisualStyleBackColor = false;
+            this.btnConsultar.Click += new System.EventHandler(this.BtnConsultar_Click);
+            // 
+            // panelEndereco
+            // 
+            this.panelEndereco.Controls.Add(this.txtEndereco);
+            this.panelEndereco.Controls.Add(this.lblEndereco);
+            this.panelEndereco.Location = new System.Drawing.Point(174, 77);
+            this.panelEndereco.Name = "panelEndereco";
+            this.panelEndereco.Size = new System.Drawing.Size(165, 66);
+            this.panelEndereco.TabIndex = 2;
+            // 
+            // txtEndereco
+            // 
+            this.txtEndereco.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtEndereco.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtEndereco.Location = new System.Drawing.Point(6, 31);
+            this.txtEndereco.MaxLength = 40;
+            this.txtEndereco.Name = "txtEndereco";
+            this.txtEndereco.Size = new System.Drawing.Size(156, 23);
+            this.txtEndereco.TabIndex = 1;
+            // 
+            // lblEndereco
+            // 
+            this.lblEndereco.AutoSize = true;
+            this.lblEndereco.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblEndereco.ForeColor = System.Drawing.Color.White;
+            this.lblEndereco.Location = new System.Drawing.Point(3, 11);
+            this.lblEndereco.Name = "lblEndereco";
+            this.lblEndereco.Size = new System.Drawing.Size(73, 17);
+            this.lblEndereco.TabIndex = 0;
+            this.lblEndereco.Text = "Endereço:";
+            // 
+            // panel2
+            // 
+            this.panel2.Controls.Add(this.txtUf);
+            this.panel2.Controls.Add(this.lblUf);
+            this.panel2.Location = new System.Drawing.Point(345, 149);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(165, 66);
+            this.panel2.TabIndex = 5;
+            // 
+            // txtUf
+            // 
+            this.txtUf.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtUf.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtUf.Location = new System.Drawing.Point(6, 31);
+            this.txtUf.MaxLength = 2;
+            this.txtUf.Name = "txtUf";
+            this.txtUf.Size = new System.Drawing.Size(156, 23);
+            this.txtUf.TabIndex = 1;
+            // 
+            // lblUf
+            // 
+            this.lblUf.AutoSize = true;
+            this.lblUf.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblUf.ForeColor = System.Drawing.Color.White;
+            this.lblUf.Location = new System.Drawing.Point(3, 11);
+            this.lblUf.Name = "lblUf";
+            this.lblUf.Size = new System.Drawing.Size(30, 17);
+            this.lblUf.TabIndex = 0;
+            this.lblUf.Text = "UF:";
+            // 
+            // lblTitulo
+            // 
+            this.lblTitulo.Dock = System.Windows.Forms.DockStyle.Top;
+            this.lblTitulo.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTitulo.ForeColor = System.Drawing.Color.White;
+            this.lblTitulo.Location = new System.Drawing.Point(0, 0);
+            this.lblTitulo.Name = "lblTitulo";
+            this.lblTitulo.Size = new System.Drawing.Size(684, 82);
+            this.lblTitulo.TabIndex = 1;
+            this.lblTitulo.Text = "Cadastro de Fornecedores";
+            this.lblTitulo.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
             // RegisterProviders
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -497,28 +498,28 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "QrÁguas - Cadastro de Fornecedores";
             this.tableLayoutPanel1.ResumeLayout(false);
-            this.panel1.ResumeLayout(false);
-            this.panel1.PerformLayout();
-            this.panel6.ResumeLayout(false);
-            this.panel6.PerformLayout();
-            this.panel2.ResumeLayout(false);
-            this.panel2.PerformLayout();
             this.panelRazaoSocial.ResumeLayout(false);
             this.panelRazaoSocial.PerformLayout();
-            this.panel4.ResumeLayout(false);
-            this.panel4.PerformLayout();
-            this.panelEndereco.ResumeLayout(false);
-            this.panelEndereco.PerformLayout();
             this.panelCnpj.ResumeLayout(false);
             this.panelCnpj.PerformLayout();
+            this.panelBtnCadastrar.ResumeLayout(false);
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
-            this.panel5.ResumeLayout(false);
-            this.panel5.PerformLayout();
-            this.panelBtnConsultar.ResumeLayout(false);
-            this.panelBtnCadastrar.ResumeLayout(false);
+            this.panel4.ResumeLayout(false);
+            this.panel4.PerformLayout();
+            this.panel6.ResumeLayout(false);
+            this.panel6.PerformLayout();
             this.panel7.ResumeLayout(false);
             this.panel7.PerformLayout();
+            this.panel5.ResumeLayout(false);
+            this.panel5.PerformLayout();
+            this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
+            this.panelBtnConsultar.ResumeLayout(false);
+            this.panelEndereco.ResumeLayout(false);
+            this.panelEndereco.PerformLayout();
+            this.panel2.ResumeLayout(false);
+            this.panel2.PerformLayout();
             this.ResumeLayout(false);
 
         }
