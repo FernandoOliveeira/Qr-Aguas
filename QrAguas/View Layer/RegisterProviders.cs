@@ -45,7 +45,6 @@ namespace QrAguas.View_Layer
             CepResponse endereco = await cepClient.CepResposta(cep);
 
             txtBairro.Text = endereco.Bairro;
-            txtCep.Text = endereco.Cep;
             txtCidade.Text = endereco.Cidade;
             txtEndereco.Text = endereco.Logradouro;
             txtUf.Text = endereco.Uf;
