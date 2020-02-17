@@ -48,11 +48,11 @@
             this.panelDescricao = new System.Windows.Forms.Panel();
             this.txtDescricao = new System.Windows.Forms.TextBox();
             this.lblDescricao = new System.Windows.Forms.Label();
-            this.btnCadastrar = new System.Windows.Forms.Button();
             this.panelBtnCadastrar = new System.Windows.Forms.Panel();
+            this.btnCadastrar = new System.Windows.Forms.Button();
             this.panel3 = new System.Windows.Forms.Panel();
-            this.lblDataFabricacao = new System.Windows.Forms.Label();
             this.txtDataFabricacao = new System.Windows.Forms.MaskedTextBox();
+            this.lblDataFabricacao = new System.Windows.Forms.Label();
             this.tableLayoutPanel1.SuspendLayout();
             this.panelPrecoCompra.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -270,6 +270,16 @@
             this.lblDescricao.TabIndex = 1;
             this.lblDescricao.Text = "Descrição:";
             // 
+            // panelBtnCadastrar
+            // 
+            this.tableLayoutPanel1.SetColumnSpan(this.panelBtnCadastrar, 3);
+            this.panelBtnCadastrar.Controls.Add(this.btnCadastrar);
+            this.panelBtnCadastrar.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panelBtnCadastrar.Location = new System.Drawing.Point(3, 271);
+            this.panelBtnCadastrar.Name = "panelBtnCadastrar";
+            this.panelBtnCadastrar.Size = new System.Drawing.Size(510, 101);
+            this.panelBtnCadastrar.TabIndex = 7;
+            // 
             // btnCadastrar
             // 
             this.btnCadastrar.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
@@ -286,16 +296,6 @@
             this.btnCadastrar.Text = "Cadastrar";
             this.btnCadastrar.UseVisualStyleBackColor = false;
             // 
-            // panelBtnCadastrar
-            // 
-            this.tableLayoutPanel1.SetColumnSpan(this.panelBtnCadastrar, 3);
-            this.panelBtnCadastrar.Controls.Add(this.btnCadastrar);
-            this.panelBtnCadastrar.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panelBtnCadastrar.Location = new System.Drawing.Point(3, 271);
-            this.panelBtnCadastrar.Name = "panelBtnCadastrar";
-            this.panelBtnCadastrar.Size = new System.Drawing.Size(510, 101);
-            this.panelBtnCadastrar.TabIndex = 7;
-            // 
             // panel3
             // 
             this.panel3.Controls.Add(this.txtDataFabricacao);
@@ -305,6 +305,16 @@
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(166, 98);
             this.panel3.TabIndex = 6;
+            // 
+            // txtDataFabricacao
+            // 
+            this.txtDataFabricacao.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtDataFabricacao.Location = new System.Drawing.Point(9, 24);
+            this.txtDataFabricacao.Mask = "00/0000";
+            this.txtDataFabricacao.Name = "txtDataFabricacao";
+            this.txtDataFabricacao.Size = new System.Drawing.Size(154, 20);
+            this.txtDataFabricacao.TabIndex = 4;
             // 
             // lblDataFabricacao
             // 
@@ -317,16 +327,6 @@
             this.lblDataFabricacao.TabIndex = 3;
             this.lblDataFabricacao.Text = "Data de Fabricação:";
             // 
-            // txtDataFabricacao
-            // 
-            this.txtDataFabricacao.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtDataFabricacao.Location = new System.Drawing.Point(9, 24);
-            this.txtDataFabricacao.Mask = "00/0000";
-            this.txtDataFabricacao.Name = "txtDataFabricacao";
-            this.txtDataFabricacao.Size = new System.Drawing.Size(154, 20);
-            this.txtDataFabricacao.TabIndex = 4;
-            // 
             // RegisterGallon
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -335,6 +335,7 @@
             this.ClientSize = new System.Drawing.Size(516, 375);
             this.Controls.Add(this.tableLayoutPanel1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.MaximizeBox = false;
             this.Name = "RegisterGallon";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Qr Águas - Cadastrar Galão";

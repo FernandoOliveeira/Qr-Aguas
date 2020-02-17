@@ -73,6 +73,12 @@
     <Compile Include="View Layer\RegisterGallon.Designer.cs">
       <DependentUpon>RegisterGallon.cs</DependentUpon>
     </Compile>
+    <Compile Include="View Layer\RegisterProviders.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View Layer\RegisterProviders.Designer.cs">
+      <DependentUpon>RegisterProviders.cs</DependentUpon>
+    </Compile>
     <Compile Include="View Layer\RegisterUser.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -114,6 +120,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="View Layer\RegisterGallon.resx">
       <DependentUpon>RegisterGallon.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View Layer\RegisterProviders.resx">
+      <DependentUpon>RegisterProviders.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="View Layer\RegisterUser.resx">
       <DependentUpon>RegisterUser.cs</DependentUpon>
