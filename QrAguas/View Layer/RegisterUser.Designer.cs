@@ -52,6 +52,7 @@
             this.tipousuarioBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.tipousuarioBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.tIPO_USUARIOTableAdapter = new QrAguas._0YbKKAeekeDataSetTableAdapters.TIPO_USUARIOTableAdapter();
+            this.lblTitulo = new System.Windows.Forms.Label();
             this.tableLayoutPanel1.SuspendLayout();
             this.panelUsuario.SuspendLayout();
             this.panelSenha.SuspendLayout();
@@ -115,16 +116,15 @@
             this.tableLayoutPanel1.Controls.Add(this.panelConfirmarSenha, 1, 1);
             this.tableLayoutPanel1.Controls.Add(this.panel1, 0, 2);
             this.tableLayoutPanel1.Controls.Add(this.panelBtnCadastrar, 0, 3);
-            this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 0);
+            this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 63);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 4;
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 49.03226F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50.96774F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 87F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 131F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(634, 361);
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 24.51613F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25.48387F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25F));
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(634, 298);
             this.tableLayoutPanel1.TabIndex = 44;
             // 
             // panelUsuario
@@ -135,7 +135,7 @@
             this.panelUsuario.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelUsuario.Location = new System.Drawing.Point(3, 3);
             this.panelUsuario.Name = "panelUsuario";
-            this.panelUsuario.Size = new System.Drawing.Size(311, 64);
+            this.panelUsuario.Size = new System.Drawing.Size(311, 67);
             this.panelUsuario.TabIndex = 0;
             // 
             // panelSenha
@@ -143,9 +143,9 @@
             this.panelSenha.Controls.Add(this.lblSenha);
             this.panelSenha.Controls.Add(this.txtSenha);
             this.panelSenha.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panelSenha.Location = new System.Drawing.Point(3, 73);
+            this.panelSenha.Location = new System.Drawing.Point(3, 76);
             this.panelSenha.Name = "panelSenha";
-            this.panelSenha.Size = new System.Drawing.Size(311, 66);
+            this.panelSenha.Size = new System.Drawing.Size(311, 69);
             this.panelSenha.TabIndex = 1;
             // 
             // lblSenha
@@ -184,9 +184,9 @@
             this.panelConfirmarSenha.Controls.Add(this.lblConfirmarSenha);
             this.panelConfirmarSenha.Controls.Add(this.txtConfirmarSenha);
             this.panelConfirmarSenha.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panelConfirmarSenha.Location = new System.Drawing.Point(320, 73);
+            this.panelConfirmarSenha.Location = new System.Drawing.Point(320, 76);
             this.panelConfirmarSenha.Name = "panelConfirmarSenha";
-            this.panelConfirmarSenha.Size = new System.Drawing.Size(311, 66);
+            this.panelConfirmarSenha.Size = new System.Drawing.Size(311, 69);
             this.panelConfirmarSenha.TabIndex = 2;
             // 
             // lblConfirmarSenhaAviso
@@ -236,9 +236,9 @@
             this.panel1.Controls.Add(this.CBFuncao);
             this.panel1.Controls.Add(this.lblFuncao);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel1.Location = new System.Drawing.Point(3, 145);
+            this.panel1.Location = new System.Drawing.Point(3, 151);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(311, 81);
+            this.panel1.Size = new System.Drawing.Size(311, 68);
             this.panel1.TabIndex = 3;
             // 
             // CBFuncao
@@ -283,9 +283,9 @@
             // 
             this.tableLayoutPanel1.SetColumnSpan(this.panelBtnCadastrar, 2);
             this.panelBtnCadastrar.Controls.Add(this.btnCadastrar);
-            this.panelBtnCadastrar.Location = new System.Drawing.Point(3, 232);
+            this.panelBtnCadastrar.Location = new System.Drawing.Point(3, 225);
             this.panelBtnCadastrar.Name = "panelBtnCadastrar";
-            this.panelBtnCadastrar.Size = new System.Drawing.Size(628, 126);
+            this.panelBtnCadastrar.Size = new System.Drawing.Size(628, 70);
             this.panelBtnCadastrar.TabIndex = 4;
             // 
             // btnCadastrar
@@ -297,7 +297,7 @@
             this.btnCadastrar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCadastrar.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCadastrar.ForeColor = System.Drawing.Color.White;
-            this.btnCadastrar.Location = new System.Drawing.Point(193, 44);
+            this.btnCadastrar.Location = new System.Drawing.Point(197, 3);
             this.btnCadastrar.Name = "btnCadastrar";
             this.btnCadastrar.Size = new System.Drawing.Size(233, 37);
             this.btnCadastrar.TabIndex = 0;
@@ -317,12 +317,25 @@
             // 
             this.tIPO_USUARIOTableAdapter.ClearBeforeFill = true;
             // 
+            // lblTitulo
+            // 
+            this.lblTitulo.Dock = System.Windows.Forms.DockStyle.Top;
+            this.lblTitulo.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTitulo.ForeColor = System.Drawing.Color.White;
+            this.lblTitulo.Location = new System.Drawing.Point(0, 0);
+            this.lblTitulo.Name = "lblTitulo";
+            this.lblTitulo.Size = new System.Drawing.Size(634, 60);
+            this.lblTitulo.TabIndex = 45;
+            this.lblTitulo.Text = "Cadastro de Usuários";
+            this.lblTitulo.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
             // RegisterUser
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(130)))), ((int)(((byte)(156)))), ((int)(((byte)(188)))));
             this.ClientSize = new System.Drawing.Size(634, 361);
+            this.Controls.Add(this.lblTitulo);
             this.Controls.Add(this.tableLayoutPanel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
@@ -372,5 +385,6 @@
         private _0YbKKAeekeDataSet _0YbKKAeekeDataSet;
         private System.Windows.Forms.BindingSource tIPOUSUARIOBindingSource2;
         private _0YbKKAeekeDataSetTableAdapters.TIPO_USUARIOTableAdapter tIPO_USUARIOTableAdapter;
+        private System.Windows.Forms.Label lblTitulo;
     }
 }

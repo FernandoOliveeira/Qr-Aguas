@@ -46,6 +46,7 @@
             this.lblConfirmarSenhaAviso = new System.Windows.Forms.Label();
             this.lblConfirmarSenha = new System.Windows.Forms.Label();
             this.txtConfirmarSenha = new System.Windows.Forms.TextBox();
+            this.lblTitulo = new System.Windows.Forms.Label();
             this.tableLayoutPanel1.SuspendLayout();
             this.panelUsuario.SuspendLayout();
             this.panelSenhaAtual.SuspendLayout();
@@ -64,16 +65,15 @@
             this.tableLayoutPanel1.Controls.Add(this.panelBtnCconfirmar, 0, 3);
             this.tableLayoutPanel1.Controls.Add(this.panelNovaSenha, 0, 2);
             this.tableLayoutPanel1.Controls.Add(this.panelConfirmarSenha, 1, 2);
-            this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 0);
+            this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 63);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 4;
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 49.03226F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50.96774F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 84F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 125F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(634, 361);
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 19.46309F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 23.8255F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25.83893F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 31.54362F));
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(634, 298);
             this.tableLayoutPanel1.TabIndex = 45;
             // 
             // panelUsuario
@@ -83,7 +83,7 @@
             this.panelUsuario.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelUsuario.Location = new System.Drawing.Point(3, 3);
             this.panelUsuario.Name = "panelUsuario";
-            this.panelUsuario.Size = new System.Drawing.Size(311, 68);
+            this.panelUsuario.Size = new System.Drawing.Size(311, 51);
             this.panelUsuario.TabIndex = 0;
             // 
             // lblUsuario
@@ -121,9 +121,9 @@
             this.panelSenhaAtual.Controls.Add(this.lblSenhaAtual);
             this.panelSenhaAtual.Controls.Add(this.txtSenhaAtual);
             this.panelSenhaAtual.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panelSenhaAtual.Location = new System.Drawing.Point(3, 77);
+            this.panelSenhaAtual.Location = new System.Drawing.Point(3, 60);
             this.panelSenhaAtual.Name = "panelSenhaAtual";
-            this.panelSenhaAtual.Size = new System.Drawing.Size(311, 71);
+            this.panelSenhaAtual.Size = new System.Drawing.Size(311, 64);
             this.panelSenhaAtual.TabIndex = 1;
             // 
             // lblSenhaAtualAviso
@@ -171,9 +171,9 @@
             // 
             this.tableLayoutPanel1.SetColumnSpan(this.panelBtnCconfirmar, 2);
             this.panelBtnCconfirmar.Controls.Add(this.btnConfirmar);
-            this.panelBtnCconfirmar.Location = new System.Drawing.Point(3, 238);
+            this.panelBtnCconfirmar.Location = new System.Drawing.Point(3, 206);
             this.panelBtnCconfirmar.Name = "panelBtnCconfirmar";
-            this.panelBtnCconfirmar.Size = new System.Drawing.Size(628, 120);
+            this.panelBtnCconfirmar.Size = new System.Drawing.Size(628, 89);
             this.panelBtnCconfirmar.TabIndex = 4;
             // 
             // btnConfirmar
@@ -185,7 +185,7 @@
             this.btnConfirmar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnConfirmar.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnConfirmar.ForeColor = System.Drawing.Color.White;
-            this.btnConfirmar.Location = new System.Drawing.Point(193, 44);
+            this.btnConfirmar.Location = new System.Drawing.Point(197, 16);
             this.btnConfirmar.Name = "btnConfirmar";
             this.btnConfirmar.Size = new System.Drawing.Size(233, 37);
             this.btnConfirmar.TabIndex = 0;
@@ -198,9 +198,9 @@
             this.panelNovaSenha.Controls.Add(this.lblNovaSenha);
             this.panelNovaSenha.Controls.Add(this.txtNovaSenha);
             this.panelNovaSenha.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panelNovaSenha.Location = new System.Drawing.Point(3, 154);
+            this.panelNovaSenha.Location = new System.Drawing.Point(3, 130);
             this.panelNovaSenha.Name = "panelNovaSenha";
-            this.panelNovaSenha.Size = new System.Drawing.Size(311, 78);
+            this.panelNovaSenha.Size = new System.Drawing.Size(311, 70);
             this.panelNovaSenha.TabIndex = 2;
             // 
             // lblNovaSenha
@@ -239,9 +239,9 @@
             this.panelConfirmarSenha.Controls.Add(this.lblConfirmarSenha);
             this.panelConfirmarSenha.Controls.Add(this.txtConfirmarSenha);
             this.panelConfirmarSenha.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panelConfirmarSenha.Location = new System.Drawing.Point(320, 154);
+            this.panelConfirmarSenha.Location = new System.Drawing.Point(320, 130);
             this.panelConfirmarSenha.Name = "panelConfirmarSenha";
-            this.panelConfirmarSenha.Size = new System.Drawing.Size(311, 78);
+            this.panelConfirmarSenha.Size = new System.Drawing.Size(311, 70);
             this.panelConfirmarSenha.TabIndex = 3;
             // 
             // lblConfirmarSenhaAviso
@@ -286,12 +286,25 @@
             this.txtConfirmarSenha.TabIndex = 40;
             this.txtConfirmarSenha.TextChanged += new System.EventHandler(this.txtConfirmarSenha_TextChanged);
             // 
+            // lblTitulo
+            // 
+            this.lblTitulo.Dock = System.Windows.Forms.DockStyle.Top;
+            this.lblTitulo.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTitulo.ForeColor = System.Drawing.Color.White;
+            this.lblTitulo.Location = new System.Drawing.Point(0, 0);
+            this.lblTitulo.Name = "lblTitulo";
+            this.lblTitulo.Size = new System.Drawing.Size(634, 60);
+            this.lblTitulo.TabIndex = 46;
+            this.lblTitulo.Text = "Alterar Senha";
+            this.lblTitulo.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
             // ChangePassword
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(130)))), ((int)(((byte)(156)))), ((int)(((byte)(188)))));
             this.ClientSize = new System.Drawing.Size(634, 361);
+            this.Controls.Add(this.lblTitulo);
             this.Controls.Add(this.tableLayoutPanel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
@@ -333,5 +346,6 @@
         private System.Windows.Forms.Label lblConfirmarSenha;
         private System.Windows.Forms.TextBox txtConfirmarSenha;
         private System.Windows.Forms.Label lblSenhaAtualAviso;
+        private System.Windows.Forms.Label lblTitulo;
     }
 }

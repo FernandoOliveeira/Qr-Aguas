@@ -100,14 +100,14 @@
             this.tableLayoutPanel1.Controls.Add(this.panelEndereco, 1, 1);
             this.tableLayoutPanel1.Controls.Add(this.panel2, 2, 2);
             this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 85);
+            this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 83);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 4;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 19.77943F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 19.27976F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 27.66226F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 33.27854F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(684, 376);
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(684, 378);
             this.tableLayoutPanel1.TabIndex = 0;
             // 
             // panelRazaoSocial
@@ -181,7 +181,7 @@
             this.panelBtnCadastrar.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelBtnCadastrar.Location = new System.Drawing.Point(174, 253);
             this.panelBtnCadastrar.Name = "panelBtnCadastrar";
-            this.panelBtnCadastrar.Size = new System.Drawing.Size(336, 120);
+            this.panelBtnCadastrar.Size = new System.Drawing.Size(336, 122);
             this.panelBtnCadastrar.TabIndex = 7;
             // 
             // btnCadastrar
@@ -489,7 +489,7 @@
             this.lblTitulo.ForeColor = System.Drawing.Color.White;
             this.lblTitulo.Location = new System.Drawing.Point(0, 0);
             this.lblTitulo.Name = "lblTitulo";
-            this.lblTitulo.Size = new System.Drawing.Size(684, 82);
+            this.lblTitulo.Size = new System.Drawing.Size(684, 80);
             this.lblTitulo.TabIndex = 1;
             this.lblTitulo.Text = "Cadastro de Fornecedores";
             this.lblTitulo.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;

@@ -17,7 +17,7 @@ namespace QrAguas
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new RegisterProviders());
+            Application.Run(new ChangePassword());
         }
     }
 }
