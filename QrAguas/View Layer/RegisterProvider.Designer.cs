@@ -65,6 +65,9 @@
             this.txtUf = new System.Windows.Forms.TextBox();
             this.lblUf = new System.Windows.Forms.Label();
             this.lblTitulo = new System.Windows.Forms.Label();
+            this.panel8 = new System.Windows.Forms.Panel();
+            this.txtCelular = new System.Windows.Forms.MaskedTextBox();
+            this.lblCelular = new System.Windows.Forms.Label();
             this.tableLayoutPanel1.SuspendLayout();
             this.panelRazaoSocial.SuspendLayout();
             this.panelCnpj.SuspendLayout();
@@ -78,6 +81,7 @@
             this.panelBtnConsultar.SuspendLayout();
             this.panelEndereco.SuspendLayout();
             this.panel2.SuspendLayout();
+            this.panel8.SuspendLayout();
             this.SuspendLayout();
             // 
             // tableLayoutPanel1
@@ -92,13 +96,14 @@
             this.tableLayoutPanel1.Controls.Add(this.panelBtnCadastrar, 1, 3);
             this.tableLayoutPanel1.Controls.Add(this.panel3, 2, 0);
             this.tableLayoutPanel1.Controls.Add(this.panel4, 2, 1);
-            this.tableLayoutPanel1.Controls.Add(this.panel6, 3, 0);
             this.tableLayoutPanel1.Controls.Add(this.panel7, 1, 2);
             this.tableLayoutPanel1.Controls.Add(this.panel5, 0, 1);
-            this.tableLayoutPanel1.Controls.Add(this.panel1, 3, 1);
             this.tableLayoutPanel1.Controls.Add(this.panelBtnConsultar, 0, 2);
             this.tableLayoutPanel1.Controls.Add(this.panelEndereco, 1, 1);
             this.tableLayoutPanel1.Controls.Add(this.panel2, 2, 2);
+            this.tableLayoutPanel1.Controls.Add(this.panel8, 3, 0);
+            this.tableLayoutPanel1.Controls.Add(this.panel1, 3, 1);
+            this.tableLayoutPanel1.Controls.Add(this.panel6, 3, 2);
             this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 83);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
@@ -182,7 +187,7 @@
             this.panelBtnCadastrar.Location = new System.Drawing.Point(174, 253);
             this.panelBtnCadastrar.Name = "panelBtnCadastrar";
             this.panelBtnCadastrar.Size = new System.Drawing.Size(336, 122);
-            this.panelBtnCadastrar.TabIndex = 7;
+            this.panelBtnCadastrar.TabIndex = 12;
             // 
             // btnCadastrar
             // 
@@ -209,7 +214,7 @@
             this.panel3.Location = new System.Drawing.Point(345, 3);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(165, 68);
-            this.panel3.TabIndex = 3;
+            this.panel3.TabIndex = 2;
             // 
             // txtTelefone
             // 
@@ -217,7 +222,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.txtTelefone.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtTelefone.Location = new System.Drawing.Point(6, 31);
-            this.txtTelefone.Mask = "(00) 00000-0000";
+            this.txtTelefone.Mask = "(00) 0000-0000";
             this.txtTelefone.Name = "txtTelefone";
             this.txtTelefone.Size = new System.Drawing.Size(156, 23);
             this.txtTelefone.TabIndex = 1;
@@ -241,7 +246,7 @@
             this.panel4.Location = new System.Drawing.Point(345, 77);
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(165, 66);
-            this.panel4.TabIndex = 3;
+            this.panel4.TabIndex = 6;
             // 
             // txtBairro
             // 
@@ -270,10 +275,10 @@
             this.panel6.Controls.Add(this.txtEmail);
             this.panel6.Controls.Add(this.lblEmail);
             this.panel6.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel6.Location = new System.Drawing.Point(516, 3);
+            this.panel6.Location = new System.Drawing.Point(516, 149);
             this.panel6.Name = "panel6";
-            this.panel6.Size = new System.Drawing.Size(165, 68);
-            this.panel6.TabIndex = 5;
+            this.panel6.Size = new System.Drawing.Size(165, 98);
+            this.panel6.TabIndex = 11;
             // 
             // txtEmail
             // 
@@ -305,7 +310,7 @@
             this.panel7.Location = new System.Drawing.Point(174, 149);
             this.panel7.Name = "panel7";
             this.panel7.Size = new System.Drawing.Size(165, 98);
-            this.panel7.TabIndex = 8;
+            this.panel7.TabIndex = 9;
             // 
             // txtComplemento
             // 
@@ -369,7 +374,7 @@
             this.panel1.Location = new System.Drawing.Point(516, 77);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(165, 66);
-            this.panel1.TabIndex = 4;
+            this.panel1.TabIndex = 7;
             // 
             // txtCidade
             // 
@@ -399,7 +404,7 @@
             this.panelBtnConsultar.Location = new System.Drawing.Point(3, 149);
             this.panelBtnConsultar.Name = "panelBtnConsultar";
             this.panelBtnConsultar.Size = new System.Drawing.Size(165, 98);
-            this.panelBtnConsultar.TabIndex = 6;
+            this.panelBtnConsultar.TabIndex = 8;
             // 
             // btnConsultar
             // 
@@ -410,7 +415,7 @@
             this.btnConsultar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnConsultar.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnConsultar.ForeColor = System.Drawing.Color.White;
-            this.btnConsultar.Location = new System.Drawing.Point(29, 3);
+            this.btnConsultar.Location = new System.Drawing.Point(29, 17);
             this.btnConsultar.Name = "btnConsultar";
             this.btnConsultar.Size = new System.Drawing.Size(105, 37);
             this.btnConsultar.TabIndex = 1;
@@ -426,7 +431,7 @@
             this.panelEndereco.Location = new System.Drawing.Point(174, 77);
             this.panelEndereco.Name = "panelEndereco";
             this.panelEndereco.Size = new System.Drawing.Size(165, 66);
-            this.panelEndereco.TabIndex = 2;
+            this.panelEndereco.TabIndex = 5;
             // 
             // txtEndereco
             // 
@@ -458,7 +463,7 @@
             this.panel2.Location = new System.Drawing.Point(345, 149);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(165, 98);
-            this.panel2.TabIndex = 5;
+            this.panel2.TabIndex = 10;
             // 
             // txtUf
             // 
@@ -494,7 +499,39 @@
             this.lblTitulo.Text = "Cadastro de Fornecedores";
             this.lblTitulo.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // RegisterProviders
+            // panel8
+            // 
+            this.panel8.Controls.Add(this.txtCelular);
+            this.panel8.Controls.Add(this.lblCelular);
+            this.panel8.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel8.Location = new System.Drawing.Point(516, 3);
+            this.panel8.Name = "panel8";
+            this.panel8.Size = new System.Drawing.Size(165, 68);
+            this.panel8.TabIndex = 3;
+            // 
+            // txtCelular
+            // 
+            this.txtCelular.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtCelular.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtCelular.Location = new System.Drawing.Point(6, 31);
+            this.txtCelular.Mask = "(00) 00000-0000";
+            this.txtCelular.Name = "txtCelular";
+            this.txtCelular.Size = new System.Drawing.Size(156, 23);
+            this.txtCelular.TabIndex = 1;
+            // 
+            // lblCelular
+            // 
+            this.lblCelular.AutoSize = true;
+            this.lblCelular.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCelular.ForeColor = System.Drawing.Color.White;
+            this.lblCelular.Location = new System.Drawing.Point(3, 11);
+            this.lblCelular.Name = "lblCelular";
+            this.lblCelular.Size = new System.Drawing.Size(56, 17);
+            this.lblCelular.TabIndex = 0;
+            this.lblCelular.Text = "Celular:";
+            // 
+            // RegisterProvider
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -504,7 +541,7 @@
             this.Controls.Add(this.tableLayoutPanel1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
-            this.Name = "RegisterProviders";
+            this.Name = "RegisterProvider";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "QrÁguas - Cadastro de Fornecedores";
             this.tableLayoutPanel1.ResumeLayout(false);
@@ -530,6 +567,8 @@
             this.panelEndereco.PerformLayout();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
+            this.panel8.ResumeLayout(false);
+            this.panel8.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -572,5 +611,8 @@
         private System.Windows.Forms.Panel panel7;
         private System.Windows.Forms.TextBox txtComplemento;
         private System.Windows.Forms.Label lblComplemento;
+        private System.Windows.Forms.Panel panel8;
+        private System.Windows.Forms.MaskedTextBox txtCelular;
+        private System.Windows.Forms.Label lblCelular;
     }
 }

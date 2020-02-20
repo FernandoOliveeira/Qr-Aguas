@@ -55,14 +55,7 @@ namespace QrAguas.View_Layer
         private void BtnCadastrar_Click(object sender, EventArgs e)
         {
             
-            if (function.ValidarEmail(txtEmail.Text))
-            {
-                MessageBox.Show("Email válido ! " + txtEmail.Text);
-            }
-            else
-            {
-                MessageBox.Show("Email inválido ! " + txtEmail.Text);
-            }
+           
         }
     }
 }
