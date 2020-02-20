@@ -44,9 +44,10 @@ namespace QrAguas.View_Layer
 
         private void RegisterUser_Load(object sender, EventArgs e)
         {
+            // TODO: This line of code loads data into the '_0ybkkaeekeDataSet.tipo_usuario' table. You can move, or remove it, as needed.
+            this.tipo_usuarioTableAdapter.Fill(this._0ybkkaeekeDataSet.tipo_usuario);
             // Preenche o ComboBox com os tipos de usuários presentos no banco de dados
-            // TODO: This line of code loads data into the '_0YbKKAeekeDataSet.TIPO_USUARIO' table. You can move, or remove it, as needed.
-            this.tIPO_USUARIOTableAdapter.Fill(this._0YbKKAeekeDataSet.TIPO_USUARIO);
+
 
             lblConfirmarSenhaAviso.Text = "As senhas devem ser idênticas";
             

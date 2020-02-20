@@ -26,7 +26,18 @@ namespace QrAguas.Properties {
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
-        [global::System.Configuration.DefaultSettingValueAttribute("server=localhost;user id=root;database=qraguas")]
+        [global::System.Configuration.DefaultSettingValueAttribute("server=remotemysql.com;user id=0YbKKAeeke;password=Aqhx0syv8q;database=0YbKKAeeke" +
+            "")]
+        public string _0YbKKAeekeConnectionString {
+            get {
+                return ((string)(this["_0YbKKAeekeConnectionString"]));
+            }
+        }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
+        [global::System.Configuration.DefaultSettingValueAttribute("server=localhost;user id=root;database=0YbKKAeeke")]
         public string qraguasConnectionString {
             get {
                 return ((string)(this["qraguasConnectionString"]));
@@ -36,11 +47,10 @@ namespace QrAguas.Properties {
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
-        [global::System.Configuration.DefaultSettingValueAttribute("server=remotemysql.com;user id=0YbKKAeeke;password=Aqhx0syv8q;database=0YbKKAeeke" +
-            "")]
-        public string _0YbKKAeekeConnectionString {
+        [global::System.Configuration.DefaultSettingValueAttribute("server=Fernando-PC;user id=root;persistsecurityinfo=True;database=0ybkkaeeke")]
+        public string _0ybkkaeekeConnectionString1_QrAguasLocalDatabase {
             get {
-                return ((string)(this["_0YbKKAeekeConnectionString"]));
+                return ((string)(this["_0ybkkaeekeConnectionString1_QrAguasLocalDatabase"]));
             }
         }
     }
