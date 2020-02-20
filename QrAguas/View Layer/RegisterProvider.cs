@@ -13,9 +13,9 @@ using System.Windows.Forms;
 
 namespace QrAguas.View_Layer
 {
-    public partial class RegisterProviders : Form
+    public partial class RegisterProvider : Form
     {
-        public RegisterProviders()
+        public RegisterProvider()
         {
             InitializeComponent();
         }

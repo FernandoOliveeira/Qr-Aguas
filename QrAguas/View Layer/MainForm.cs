@@ -54,7 +54,7 @@ namespace QrAguas.View_Layer
             switch (e.Node.Text)
             {
                 case "Cadastro de Fornecedores":
-                    RegisterProviders registerProviders = new RegisterProviders();
+                    RegisterProvider registerProviders = new RegisterProvider();
                     registerProviders.Show();
                     break;
 

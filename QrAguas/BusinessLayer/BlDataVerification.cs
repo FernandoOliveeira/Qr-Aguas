@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 
 namespace QrAguas.BusinessLayer
 {
-    class BlNewUser : Connection
+    class BlDataVerification : Connection
     {
         public bool VerificarDadosUsuario(NewUser usuario)
         {

@@ -59,7 +59,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="BusinessLayer\BlNewUser.cs" />
+    <Compile Include="BusinessLayer\BlDataVerification.cs" />
     <Compile Include="Controls\Connection.cs" />
     <Compile Include="Controls\Functions.cs" />
     <Compile Include="Models\CepResponse.cs" />
@@ -87,11 +87,11 @@
     <Compile Include="View Layer\RegisterProduct.Designer.cs">
       <DependentUpon>RegisterProduct.cs</DependentUpon>
     </Compile>
-    <Compile Include="View Layer\RegisterProviders.cs">
+    <Compile Include="View Layer\RegisterProvider.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="View Layer\RegisterProviders.Designer.cs">
-      <DependentUpon>RegisterProviders.cs</DependentUpon>
+    <Compile Include="View Layer\RegisterProvider.Designer.cs">
+      <DependentUpon>RegisterProvider.cs</DependentUpon>
     </Compile>
     <Compile Include="View Layer\RegisterUser.cs">
       <SubType>Form</SubType>
@@ -135,8 +135,8 @@
     <EmbeddedResource Include="View Layer\RegisterProduct.resx">
       <DependentUpon>RegisterProduct.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="View Layer\RegisterProviders.resx">
-      <DependentUpon>RegisterProviders.cs</DependentUpon>
+    <EmbeddedResource Include="View Layer\RegisterProvider.resx">
+      <DependentUpon>RegisterProvider.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="View Layer\RegisterUser.resx">
       <DependentUpon>RegisterUser.cs</DependentUpon>

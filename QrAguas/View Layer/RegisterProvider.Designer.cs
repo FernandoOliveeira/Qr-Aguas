@@ -1,6 +1,6 @@
 ﻿namespace QrAguas.View_Layer
 {
-    partial class RegisterProviders
+    partial class RegisterProvider
     {
         /// <summary>
         /// Required designer variable.
@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(RegisterProviders));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(RegisterProvider));
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.panelRazaoSocial = new System.Windows.Forms.Panel();
             this.txtRazaoSocial = new System.Windows.Forms.TextBox();

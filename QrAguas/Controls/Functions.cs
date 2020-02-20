@@ -12,7 +12,7 @@ using System.Threading.Tasks;
 
 namespace QrAguas.Controls
 {
-    class Functions : BlNewUser
+    class Functions : BlDataVerification
     {
         #region Gerar Hash MD5
 
