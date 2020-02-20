@@ -23,5 +23,24 @@ namespace QrAguas.BusinessLayer
 
             return false;
         }
+
+        public bool VerificarDadosFornecedores(NewProvider fornecedor)
+        {
+            // Os campos Complemento e Email não estão sendo verificados pois podem ser nulos no Banco de Dados
+            if (!String.IsNullOrEmpty(fornecedor.RazaoSocial) &&
+                !String.IsNullOrEmpty(fornecedor.Cnpj) &&
+                !String.IsNullOrEmpty(fornecedor.Endereco) &&
+                !String.IsNullOrEmpty(fornecedor.Bairro) &&
+                !String.IsNullOrEmpty(fornecedor.Cidade) &&
+                !String.IsNullOrEmpty(fornecedor.Uf) &&
+                !String.IsNullOrEmpty(fornecedor.Telefone) &&
+                !String.IsNullOrEmpty(fornecedor.Cep))
+            {
+                return true;
+            }
+            return false;
+        }
+
+
     }
 }
