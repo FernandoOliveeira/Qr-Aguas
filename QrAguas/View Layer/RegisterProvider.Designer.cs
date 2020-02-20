@@ -68,9 +68,9 @@
             this.txtEndereco = new System.Windows.Forms.TextBox();
             this.lblEndereco = new System.Windows.Forms.Label();
             this.panel9 = new System.Windows.Forms.Panel();
+            this.txtNumero = new System.Windows.Forms.TextBox();
             this.lblNumero = new System.Windows.Forms.Label();
             this.lblTitulo = new System.Windows.Forms.Label();
-            this.txtNumero = new System.Windows.Forms.NumericUpDown();
             this.tableLayoutPanel1.SuspendLayout();
             this.panelRazaoSocial.SuspendLayout();
             this.panelCnpj.SuspendLayout();
@@ -86,7 +86,6 @@
             this.panel5.SuspendLayout();
             this.panelEndereco.SuspendLayout();
             this.panel9.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.txtNumero)).BeginInit();
             this.SuspendLayout();
             // 
             // tableLayoutPanel1
@@ -536,6 +535,19 @@
             this.panel9.Size = new System.Drawing.Size(165, 66);
             this.panel9.TabIndex = 5;
             // 
+            // txtNumero
+            // 
+            this.txtNumero.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtNumero.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtNumero.Location = new System.Drawing.Point(6, 31);
+            this.txtNumero.MaxLength = 20;
+            this.txtNumero.Name = "txtNumero";
+            this.txtNumero.Size = new System.Drawing.Size(156, 23);
+            this.txtNumero.TabIndex = 2;
+            this.txtNumero.TextChanged += new System.EventHandler(this.TxtNumero_TextChanged);
+            this.txtNumero.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TxtNumero_KeyPress);
+            // 
             // lblNumero
             // 
             this.lblNumero.AutoSize = true;
@@ -559,14 +571,6 @@
             this.lblTitulo.Text = "Cadastro de Fornecedores";
             this.lblTitulo.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // txtNumero
-            // 
-            this.txtNumero.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtNumero.Location = new System.Drawing.Point(6, 31);
-            this.txtNumero.Name = "txtNumero";
-            this.txtNumero.Size = new System.Drawing.Size(156, 23);
-            this.txtNumero.TabIndex = 1;
-            // 
             // RegisterProvider
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -580,6 +584,7 @@
             this.Name = "RegisterProvider";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "QrÁguas - Cadastro de Fornecedores";
+            this.Load += new System.EventHandler(this.RegisterProvider_Load);
             this.tableLayoutPanel1.ResumeLayout(false);
             this.panelRazaoSocial.ResumeLayout(false);
             this.panelRazaoSocial.PerformLayout();
@@ -607,7 +612,6 @@
             this.panelEndereco.PerformLayout();
             this.panel9.ResumeLayout(false);
             this.panel9.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.txtNumero)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -655,6 +659,6 @@
         private System.Windows.Forms.Label lblCelular;
         private System.Windows.Forms.Panel panel9;
         private System.Windows.Forms.Label lblNumero;
-        private System.Windows.Forms.NumericUpDown txtNumero;
+        private System.Windows.Forms.TextBox txtNumero;
     }
 }

@@ -22,6 +22,11 @@ namespace QrAguas.View_Layer
 
         Functions function = new Functions();
 
+        private void RegisterProvider_Load(object sender, EventArgs e)
+        {
+            txtNumero.Text = "";
+        }
+
         private async void BtnConsultar_Click(object sender, EventArgs e)
         {
             try
@@ -69,33 +74,59 @@ namespace QrAguas.View_Layer
 
         private void BtnCadastrar_Click(object sender, EventArgs e)
         {
-            NewProvider objNewProvider = new NewProvider
+            try
             {
-                RazaoSocial = txtRazaoSocial.Text,
-                Cnpj = txtCnpj.Text,
-                Endereco = txtEndereco.Text,
-                Numero = int.Parse(txtNumero.Text),
-                Bairro = txtBairro.Text,
-                Cidade = txtCidade.Text,
-                Complemento = txtComplemento.Text,
-                Uf = txtUf.Text,
-                Telefone = txtTelefone.Text,
-                Celular = txtCelular.Text,
-                Cep = txtCep.Text,
-                Email = txtEmail.Text
+                NewProvider objNewProvider = new NewProvider
+                {
+                    RazaoSocial = txtRazaoSocial.Text.Trim(),
+                    Cnpj = txtCnpj.Text,
+                    Endereco = txtEndereco.Text.Trim(),
+                    Numero = int.Parse(txtNumero.Text),
+                    Bairro = txtBairro.Text.Trim(),
+                    Cidade = txtCidade.Text.Trim(),
+                    Complemento = txtComplemento.Text.Trim(),
+                    Uf = txtUf.Text,
+                    Telefone = txtTelefone.Text,
+                    Celular = txtCelular.Text,
+                    Cep = txtCep.Text,
+                    Email = txtEmail.Text.Trim()
 
-            };
+                };
 
-            if (function.VerificarDadosFornecedores(objNewProvider))
-            {
-                MessageBox.Show("Campos completos");
+                if (function.VerificarDadosFornecedores(objNewProvider))
+                {
+                    if (function.ValidarCnpj(txtCnpj.Text))
+                    {
+                        MessageBox.Show("CNPJ válido", "CNPJ válido", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    }
+                    else
+                    {
+                        MessageBox.Show("CNPJ inválido", "CNPJ inválido", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    }
+
+                }
+                else
+                {
+                    MessageBox.Show("Um ou mais campos obrigatórios* estão vazios ou incompletos", "Campos vazios", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                }
             }
-            else
+            catch (Exception)
             {
-                MessageBox.Show("Um ou mais campos obrigatórios* estão vazios", "Campos vazios", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+
+                MessageBox.Show("Um ou mais campos obrigatórios* estão vazios ou incompletos", "Campos vazios", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
+            
 
 
+
+        }
+
+        private void TxtNumero_TextChanged(object sender, EventArgs e)
+        {
+            if (txtNumero.Text.Equals(""))
+            {
+                txtNumero.Text = "0";
+            }
         }
 
         
