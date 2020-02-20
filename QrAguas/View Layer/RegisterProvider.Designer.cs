@@ -68,9 +68,9 @@
             this.txtEndereco = new System.Windows.Forms.TextBox();
             this.lblEndereco = new System.Windows.Forms.Label();
             this.panel9 = new System.Windows.Forms.Panel();
-            this.txtNumero = new System.Windows.Forms.TextBox();
             this.lblNumero = new System.Windows.Forms.Label();
             this.lblTitulo = new System.Windows.Forms.Label();
+            this.txtNumero = new System.Windows.Forms.NumericUpDown();
             this.tableLayoutPanel1.SuspendLayout();
             this.panelRazaoSocial.SuspendLayout();
             this.panelCnpj.SuspendLayout();
@@ -86,6 +86,7 @@
             this.panel5.SuspendLayout();
             this.panelEndereco.SuspendLayout();
             this.panel9.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.txtNumero)).BeginInit();
             this.SuspendLayout();
             // 
             // tableLayoutPanel1
@@ -115,8 +116,8 @@
             this.tableLayoutPanel1.RowCount = 4;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 19.77943F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 19.27976F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 27.66226F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 33.27854F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 17.72487F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 43.65079F));
             this.tableLayoutPanel1.Size = new System.Drawing.Size(684, 378);
             this.tableLayoutPanel1.TabIndex = 0;
             // 
@@ -189,9 +190,9 @@
             this.tableLayoutPanel1.SetColumnSpan(this.panelBtnCadastrar, 2);
             this.panelBtnCadastrar.Controls.Add(this.btnCadastrar);
             this.panelBtnCadastrar.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panelBtnCadastrar.Location = new System.Drawing.Point(174, 253);
+            this.panelBtnCadastrar.Location = new System.Drawing.Point(174, 215);
             this.panelBtnCadastrar.Name = "panelBtnCadastrar";
-            this.panelBtnCadastrar.Size = new System.Drawing.Size(336, 122);
+            this.panelBtnCadastrar.Size = new System.Drawing.Size(336, 160);
             this.panelBtnCadastrar.TabIndex = 12;
             // 
             // btnCadastrar
@@ -203,7 +204,7 @@
             this.btnCadastrar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCadastrar.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCadastrar.ForeColor = System.Drawing.Color.White;
-            this.btnCadastrar.Location = new System.Drawing.Point(30, 32);
+            this.btnCadastrar.Location = new System.Drawing.Point(30, 61);
             this.btnCadastrar.Name = "btnCadastrar";
             this.btnCadastrar.Size = new System.Drawing.Size(276, 37);
             this.btnCadastrar.TabIndex = 1;
@@ -282,8 +283,8 @@
             this.panel7.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel7.Location = new System.Drawing.Point(174, 149);
             this.panel7.Name = "panel7";
-            this.panel7.Size = new System.Drawing.Size(165, 98);
-            this.panel7.TabIndex = 9;
+            this.panel7.Size = new System.Drawing.Size(165, 60);
+            this.panel7.TabIndex = 10;
             // 
             // txtComplemento
             // 
@@ -314,8 +315,8 @@
             this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel2.Location = new System.Drawing.Point(345, 149);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(165, 98);
-            this.panel2.TabIndex = 10;
+            this.panel2.Size = new System.Drawing.Size(165, 60);
+            this.panel2.TabIndex = 11;
             // 
             // txtUf
             // 
@@ -410,8 +411,8 @@
             this.panel6.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel6.Location = new System.Drawing.Point(516, 149);
             this.panel6.Name = "panel6";
-            this.panel6.Size = new System.Drawing.Size(165, 98);
-            this.panel6.TabIndex = 11;
+            this.panel6.Size = new System.Drawing.Size(165, 60);
+            this.panel6.TabIndex = 12;
             // 
             // txtEmail
             // 
@@ -439,10 +440,10 @@
             // 
             this.panelBtnConsultar.Controls.Add(this.btnConsultar);
             this.panelBtnConsultar.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panelBtnConsultar.Location = new System.Drawing.Point(3, 253);
+            this.panelBtnConsultar.Location = new System.Drawing.Point(3, 215);
             this.panelBtnConsultar.Name = "panelBtnConsultar";
-            this.panelBtnConsultar.Size = new System.Drawing.Size(165, 122);
-            this.panelBtnConsultar.TabIndex = 8;
+            this.panelBtnConsultar.Size = new System.Drawing.Size(165, 160);
+            this.panelBtnConsultar.TabIndex = 9;
             // 
             // btnConsultar
             // 
@@ -468,8 +469,8 @@
             this.panel5.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel5.Location = new System.Drawing.Point(3, 149);
             this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(165, 98);
-            this.panel5.TabIndex = 4;
+            this.panel5.Size = new System.Drawing.Size(165, 60);
+            this.panel5.TabIndex = 8;
             // 
             // txtCep
             // 
@@ -497,10 +498,11 @@
             // 
             this.panelEndereco.Controls.Add(this.txtEndereco);
             this.panelEndereco.Controls.Add(this.lblEndereco);
+            this.panelEndereco.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelEndereco.Location = new System.Drawing.Point(3, 77);
             this.panelEndereco.Name = "panelEndereco";
             this.panelEndereco.Size = new System.Drawing.Size(165, 66);
-            this.panelEndereco.TabIndex = 5;
+            this.panelEndereco.TabIndex = 4;
             // 
             // txtEndereco
             // 
@@ -528,23 +530,11 @@
             // 
             this.panel9.Controls.Add(this.txtNumero);
             this.panel9.Controls.Add(this.lblNumero);
+            this.panel9.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel9.Location = new System.Drawing.Point(174, 77);
             this.panel9.Name = "panel9";
             this.panel9.Size = new System.Drawing.Size(165, 66);
-            this.panel9.TabIndex = 13;
-            // 
-            // txtNumero
-            // 
-            this.txtNumero.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtNumero.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtNumero.Location = new System.Drawing.Point(6, 31);
-            this.txtNumero.MaxLength = 40;
-            this.txtNumero.Name = "txtNumero";
-            this.txtNumero.ShortcutsEnabled = false;
-            this.txtNumero.Size = new System.Drawing.Size(156, 23);
-            this.txtNumero.TabIndex = 1;
-            this.txtNumero.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TxtNumero_KeyPress);
+            this.panel9.TabIndex = 5;
             // 
             // lblNumero
             // 
@@ -568,6 +558,14 @@
             this.lblTitulo.TabIndex = 1;
             this.lblTitulo.Text = "Cadastro de Fornecedores";
             this.lblTitulo.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // txtNumero
+            // 
+            this.txtNumero.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtNumero.Location = new System.Drawing.Point(6, 31);
+            this.txtNumero.Name = "txtNumero";
+            this.txtNumero.Size = new System.Drawing.Size(156, 23);
+            this.txtNumero.TabIndex = 1;
             // 
             // RegisterProvider
             // 
@@ -609,6 +607,7 @@
             this.panelEndereco.PerformLayout();
             this.panel9.ResumeLayout(false);
             this.panel9.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.txtNumero)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -655,7 +654,7 @@
         private System.Windows.Forms.MaskedTextBox txtCelular;
         private System.Windows.Forms.Label lblCelular;
         private System.Windows.Forms.Panel panel9;
-        private System.Windows.Forms.TextBox txtNumero;
         private System.Windows.Forms.Label lblNumero;
+        private System.Windows.Forms.NumericUpDown txtNumero;
     }
 }

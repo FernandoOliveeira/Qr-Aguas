@@ -74,6 +74,7 @@ namespace QrAguas.View_Layer
                 RazaoSocial = txtRazaoSocial.Text,
                 Cnpj = txtCnpj.Text,
                 Endereco = txtEndereco.Text,
+                Numero = int.Parse(txtNumero.Text),
                 Bairro = txtBairro.Text,
                 Cidade = txtCidade.Text,
                 Complemento = txtComplemento.Text,

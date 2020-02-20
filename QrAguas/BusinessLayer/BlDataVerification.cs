@@ -28,13 +28,15 @@ namespace QrAguas.BusinessLayer
         {
             // Os campos Complemento e Email não estão sendo verificados pois podem ser nulos no Banco de Dados
             if (!String.IsNullOrEmpty(fornecedor.RazaoSocial) &&
-                !String.IsNullOrEmpty(fornecedor.Cnpj) &&
+                !String.IsNullOrEmpty(fornecedor.Cnpj.Replace(".", "").Replace("/", "").Replace("-", "")) &&
                 !String.IsNullOrEmpty(fornecedor.Endereco) &&
                 !String.IsNullOrEmpty(fornecedor.Bairro) &&
                 !String.IsNullOrEmpty(fornecedor.Cidade) &&
                 !String.IsNullOrEmpty(fornecedor.Uf) &&
-                !String.IsNullOrEmpty(fornecedor.Telefone) &&
-                !String.IsNullOrEmpty(fornecedor.Cep))
+                !String.IsNullOrEmpty(fornecedor.Telefone.Replace("(", "").Replace(")","").Replace("-","")) &&
+                !String.IsNullOrEmpty(fornecedor.Cep.Replace(" ", "").Replace("-", ""))
+                
+                )
             {
                 return true;
             }
