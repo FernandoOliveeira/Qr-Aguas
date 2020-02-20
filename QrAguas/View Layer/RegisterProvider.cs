@@ -52,10 +52,51 @@ namespace QrAguas.View_Layer
             
         }
 
+        private void TxtNumero_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            // Permite somente números no textBox
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar) && (e.KeyChar != '.'))
+            {
+                e.Handled = true;
+            }
+
+            // Permite somente um ponto 
+            if ((e.KeyChar == '.') && ((sender as TextBox).Text.IndexOf('.') > -1))
+            {
+                e.Handled = true;
+            }
+        }
+
         private void BtnCadastrar_Click(object sender, EventArgs e)
         {
-            
-           
+            NewProvider objNewProvider = new NewProvider
+            {
+                RazaoSocial = txtRazaoSocial.Text,
+                Cnpj = txtCnpj.Text,
+                Endereco = txtEndereco.Text,
+                Bairro = txtBairro.Text,
+                Cidade = txtCidade.Text,
+                Complemento = txtComplemento.Text,
+                Uf = txtUf.Text,
+                Telefone = txtTelefone.Text,
+                Celular = txtCelular.Text,
+                Cep = txtCep.Text,
+                Email = txtEmail.Text
+
+            };
+
+            if (function.VerificarDadosFornecedores(objNewProvider))
+            {
+                MessageBox.Show("Campos completos");
+            }
+            else
+            {
+                MessageBox.Show("Um ou mais campos obrigatórios* estão vazios", "Campos vazios", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+
+
         }
+
+        
     }
 }
