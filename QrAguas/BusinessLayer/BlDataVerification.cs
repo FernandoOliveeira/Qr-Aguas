@@ -26,7 +26,7 @@ namespace QrAguas.BusinessLayer
 
         public bool VerificarDadosFornecedores(NewProvider fornecedor)
         {
-            // Os campos Complemento e Email não estão sendo verificados pois podem ser nulos no Banco de Dados
+            // Os campos Complemento, Email e Celular não estão sendo verificados pois podem ser nulos no Banco de Dados
             if (!String.IsNullOrEmpty(fornecedor.RazaoSocial) &&
                 !String.IsNullOrEmpty(fornecedor.Cnpj) &&
                 !String.IsNullOrEmpty(fornecedor.Endereco) &&
@@ -34,7 +34,7 @@ namespace QrAguas.BusinessLayer
                 !String.IsNullOrEmpty(fornecedor.Cidade) &&
                 !String.IsNullOrEmpty(fornecedor.Uf) &&
                 !String.IsNullOrEmpty(fornecedor.Telefone) &&
-                !String.IsNullOrEmpty(fornecedor.Cep.Replace(" ", "").Replace("-", "")))
+                !String.IsNullOrEmpty(fornecedor.Cep))
             {
                 if (fornecedor.Cnpj.Length.Equals(18) && fornecedor.Telefone.Length.Equals(14) && fornecedor.Cep.Length.Equals(9))
                 {

@@ -275,6 +275,7 @@ namespace QrAguas.Controls
             command.Parameters.AddWithValue("@NUMERO", objFornecedor.Numero);
             command.Parameters.AddWithValue("@BAIRRO", objFornecedor.Bairro);
             command.Parameters.AddWithValue("@CIDADE", objFornecedor.Cidade);
+            command.Parameters.AddWithValue("@COMPLEMENTO", objFornecedor.Complemento);
             command.Parameters.AddWithValue("@UF", objFornecedor.Uf);
             command.Parameters.AddWithValue("@TELEFONE", objFornecedor.Telefone);
             command.Parameters.AddWithValue("@CELULAR", objFornecedor.Celular);

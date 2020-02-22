@@ -105,16 +105,19 @@ namespace QrAguas.View_Layer
                 if (function.VerificarDadosFornecedores(objNewProvider))
                 {
                     // Validação de CNPJ
-                    if (function.ValidarCnpj(objNewProvider.Cnpj))
+                    if (function.ValidarCnpj(txtCnpj.Text))
                     {
                         // Caso o campo email não esteja vazio
-                        if (objNewProvider.Email.Length != 0)
+                        if (txtEmail.Text.Trim().Length != 0)
                         {
                             // Validação do E-mail
-                            if (function.ValidarEmail(objNewProvider.Email))
+                            if (function.ValidarEmail(txtEmail.Text.Trim()))
                             {
                                 // Cadastrar fornecedor
-                                MessageBox.Show("E-mail válido.", "E-mail válido", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                                if (function.CadastrarNovoFornecedor(objNewProvider))
+                                {
+                                    MessageBox.Show("Fornecedor cadastrado com sucesso !", "Cadastro Realizado", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                                }
                             }
                             else
                             {
@@ -124,7 +127,10 @@ namespace QrAguas.View_Layer
                         else
                         {
                             // Cadastrar fornecedor
-                            MessageBox.Show("tudo certo");
+                            if (function.CadastrarNovoFornecedor(objNewProvider))
+                            {
+                                MessageBox.Show("Fornecedor cadastrado com sucesso !", "Cadastro Realizado", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                            }
                         }
                         
                     }
@@ -140,10 +146,10 @@ namespace QrAguas.View_Layer
                 }
 
             }
-            catch (Exception)
+            catch (Exception error)
             {
 
-                MessageBox.Show("Um ou mais campos obrigatórios* estão vazios ou incompletos", "Campos vazios", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show("Um ou mais campos obrigatórios* estão vazios ou incompletos \n erro: " + error, "Campos vazios", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
             
 
