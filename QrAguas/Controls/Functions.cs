@@ -1,6 +1,7 @@
 ﻿using MySql.Data.MySqlClient;
 using QrAguas.BusinessLayer;
 using QrAguas.Models;
+using QrAguas.View_Layer;
 using System;
 using System.Collections.Generic;
 using System.Data;
@@ -260,6 +261,30 @@ namespace QrAguas.Controls
 
                 return false;
             }
+        }
+
+        public bool CadastrarNovoFornecedor(NewProvider objFornecedor)
+        {
+            string queryCadastrarFonecedor = "INSERT INTO FORNECEDORES (RAZAO_SOCIAL, CNPJ, ENDERECO, NUMERO, BAIRRO, CIDADE, COMPLEMENTO, UF, TELEFONE, CELULAR, CEP, EMAIL, ID_USUARIOS) VALUES (@RAZAO_SOCIAL, @CNPJ, @ENDERECO, @NUMERO, @BAIRRO, @CIDADE, @COMPLEMENTO, @UF, @TELEFONE, @CELULAR, @CEP, @EMAIL, @ID_USUARIOS)";
+
+            MySqlCommand command = new MySqlCommand(queryCadastrarFonecedor, AbrirBanco());
+
+            command.Parameters.AddWithValue("@RAZAO_SOCIAL", objFornecedor.RazaoSocial);
+            command.Parameters.AddWithValue("@CNPJ", objFornecedor.Cnpj);
+            command.Parameters.AddWithValue("@ENDERECO", objFornecedor.Endereco);
+            command.Parameters.AddWithValue("@NUMERO", objFornecedor.Numero);
+            command.Parameters.AddWithValue("@BAIRRO", objFornecedor.Bairro);
+            command.Parameters.AddWithValue("@CIDADE", objFornecedor.Cidade);
+            command.Parameters.AddWithValue("@UF", objFornecedor.Uf);
+            command.Parameters.AddWithValue("@TELEFONE", objFornecedor.Telefone);
+            command.Parameters.AddWithValue("@CELULAR", objFornecedor.Celular);
+            command.Parameters.AddWithValue("@CEP", objFornecedor.Cep);
+            command.Parameters.AddWithValue("@EMAIL", objFornecedor.Email);
+            command.Parameters.AddWithValue("@ID_USUARIOS", Login.TipoUsuario);
+
+            int rowCount = command.ExecuteNonQuery();
+
+            return rowCount != 0 ? true : false;
         }
 
         #endregion
