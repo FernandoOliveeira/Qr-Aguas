@@ -24,7 +24,7 @@ namespace QrAguas.View_Layer
 
         private void RegisterProvider_Load(object sender, EventArgs e)
         {
-            txtNumero.Text = "";
+            txtNumero.Text = null;
         }
 
         private async void BtnConsultar_Click(object sender, EventArgs e)
@@ -44,16 +44,24 @@ namespace QrAguas.View_Layer
 
         public async Task ConsultarCep(string cep)
         {
+            try
+            {
+                ICepApiService cepClient = RestService.For<ICepApiService>("https://viacep.com.br/");
 
-            ICepApiService cepClient = RestService.For<ICepApiService>("https://viacep.com.br/");
+                CepResponse endereco = await cepClient.CepResposta(cep);
 
-            CepResponse endereco = await cepClient.CepResposta(cep);
+                txtBairro.Text = endereco.Bairro;
+                txtCidade.Text = endereco.Cidade;
+                txtComplemento.Text = endereco.Complemento;
+                txtEndereco.Text = endereco.Logradouro;
+                txtUf.Text = endereco.Uf;
+            }
+            catch (Exception)
+            {
 
-            txtBairro.Text = endereco.Bairro;
-            txtCidade.Text = endereco.Cidade;
-            txtComplemento.Text = endereco.Complemento;
-            txtEndereco.Text = endereco.Logradouro;
-            txtUf.Text = endereco.Uf;
+                MessageBox.Show("Erro ao realizar a consulta. \nVerifique a sua conexão com a internet.", "Erro na consulta", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            
             
         }
 
@@ -93,22 +101,44 @@ namespace QrAguas.View_Layer
 
                 };
 
+                // Verifica se os campos obrigatórios foram preenchidos corretamente
                 if (function.VerificarDadosFornecedores(objNewProvider))
                 {
-                    if (function.ValidarCnpj(txtCnpj.Text))
+                    // Validação de CNPJ
+                    if (function.ValidarCnpj(objNewProvider.Cnpj))
                     {
-                        MessageBox.Show("CNPJ válido", "CNPJ válido", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        // Caso o campo email não esteja vazio
+                        if (objNewProvider.Email.Length != 0)
+                        {
+                            // Validação do E-mail
+                            if (function.ValidarEmail(objNewProvider.Email))
+                            {
+                                // Cadastrar fornecedor
+                                MessageBox.Show("E-mail válido.", "E-mail válido", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                            }
+                            else
+                            {
+                                MessageBox.Show("E-mail inválido.", "E-mail inválido", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                            }
+                        }
+                        else
+                        {
+                            // Cadastrar fornecedor
+                            MessageBox.Show("tudo certo");
+                        }
+                        
                     }
                     else
                     {
-                        MessageBox.Show("CNPJ inválido", "CNPJ inválido", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                        MessageBox.Show("CNPJ inválido.", "CNPJ inválido", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                     }
 
                 }
                 else
                 {
-                    MessageBox.Show("Um ou mais campos obrigatórios* estão vazios ou incompletos", "Campos vazios", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    MessageBox.Show("Um ou mais campos obrigatórios* estão vazios ou incompletos.", "Campos vazios", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 }
+
             }
             catch (Exception)
             {
@@ -125,7 +155,7 @@ namespace QrAguas.View_Layer
         {
             if (txtNumero.Text.Equals(""))
             {
-                txtNumero.Text = "0";
+                txtNumero.Text = null;
             }
         }
 
