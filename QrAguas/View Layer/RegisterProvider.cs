@@ -8,6 +8,7 @@ using System.Data;
 using System.Drawing;
 using System.Linq;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
@@ -77,6 +78,23 @@ namespace QrAguas.View_Layer
             if ((e.KeyChar == '.') && ((sender as TextBox).Text.IndexOf('.') > -1))
             {
                 e.Handled = true;
+            }
+        }
+
+        private void TxtNumero_TextChanged(object sender, EventArgs e)
+        {
+            if (txtNumero.Text.Equals(""))
+            {
+                txtNumero.Text = null;
+            }
+        }
+
+        private void TxtUf_TextChanged(object sender, EventArgs e)
+        {
+            // Faz com que o campo UF receba somente letras
+            if (!Regex.IsMatch(txtUf.Text, "^[a-zA-Z]"))
+            {
+                txtUf.Text = null;
             }
         }
 
@@ -152,19 +170,7 @@ namespace QrAguas.View_Layer
                 MessageBox.Show("Um ou mais campos obrigatórios* estão vazios ou incompletos \n erro: " + error, "Campos vazios", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
             
-
-
-
         }
-
-        private void TxtNumero_TextChanged(object sender, EventArgs e)
-        {
-            if (txtNumero.Text.Equals(""))
-            {
-                txtNumero.Text = null;
-            }
-        }
-
-        
+       
     }
 }

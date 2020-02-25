@@ -327,6 +327,7 @@
             this.txtUf.Name = "txtUf";
             this.txtUf.Size = new System.Drawing.Size(156, 23);
             this.txtUf.TabIndex = 1;
+            this.txtUf.TextChanged += new System.EventHandler(this.TxtUf_TextChanged);
             // 
             // lblUf
             // 
