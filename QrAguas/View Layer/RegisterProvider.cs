@@ -111,7 +111,7 @@ namespace QrAguas.View_Layer
                     Bairro = txtBairro.Text.Trim(),
                     Cidade = txtCidade.Text.Trim(),
                     Complemento = txtComplemento.Text.Trim(),
-                    Uf = txtUf.Text,
+                    Uf = txtUf.Text.ToUpper().Trim(),
                     Telefone = txtTelefone.Text,
                     Celular = txtCelular.Text,
                     Cep = txtCep.Text,
@@ -135,6 +135,8 @@ namespace QrAguas.View_Layer
                                 if (function.CadastrarNovoFornecedor(objNewProvider))
                                 {
                                     MessageBox.Show("Fornecedor cadastrado com sucesso !", "Cadastro Realizado", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                                    LimparCampos();
                                 }
                             }
                             else
@@ -148,6 +150,8 @@ namespace QrAguas.View_Layer
                             if (function.CadastrarNovoFornecedor(objNewProvider))
                             {
                                 MessageBox.Show("Fornecedor cadastrado com sucesso !", "Cadastro Realizado", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                                LimparCampos();
                             }
                         }
                         
@@ -172,5 +176,21 @@ namespace QrAguas.View_Layer
             
         }
        
+        private void LimparCampos()
+        {
+            txtRazaoSocial.Text = "";
+            txtCnpj.Text = "";
+            txtEndereco.Text = "";
+            txtNumero.Text = null;
+            txtBairro.Text = "";
+            txtCidade.Text = "";
+            txtComplemento.Text = "";
+            txtUf.Text = "";
+            txtTelefone.Text = "";
+            txtCelular.Text = "";
+            txtCep.Text = "";
+            txtEmail.Text = "";
+
+        }
     }
 }
