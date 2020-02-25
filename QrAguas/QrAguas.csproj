@@ -116,6 +116,11 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>_0ybkkaeekeDataSet.xsd</DependentUpon>
     </Compile>
+    <Compile Include="_0ybkkaeekeDataSet1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>_0ybkkaeekeDataSet1.xsd</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -167,6 +172,17 @@
     </None>
     <None Include="_0ybkkaeekeDataSet.xss">
       <DependentUpon>_0ybkkaeekeDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="_0ybkkaeekeDataSet1.xsc">
+      <DependentUpon>_0ybkkaeekeDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="_0ybkkaeekeDataSet1.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>_0ybkkaeekeDataSet1.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="_0ybkkaeekeDataSet1.xss">
+      <DependentUpon>_0ybkkaeekeDataSet1.xsd</DependentUpon>
     </None>
   </ItemGroup>
   <ItemGroup>

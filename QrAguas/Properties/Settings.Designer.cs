@@ -53,5 +53,15 @@ namespace QrAguas.Properties {
                 return ((string)(this["_0ybkkaeekeConnectionString1_QrAguasLocalDatabase"]));
             }
         }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
+        [global::System.Configuration.DefaultSettingValueAttribute("server=localhost;user id=root;persistsecurityinfo=True;database=0ybkkaeeke")]
+        public string _0ybkkaeekeCnn {
+            get {
+                return ((string)(this["_0ybkkaeekeCnn"]));
+            }
+        }
     }
 }

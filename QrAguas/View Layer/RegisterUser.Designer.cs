@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(RegisterUser));
             this.lblUsuario = new System.Windows.Forms.Label();
             this.txtUsuario = new System.Windows.Forms.TextBox();
@@ -47,12 +48,17 @@
             this.panelBtnCadastrar = new System.Windows.Forms.Panel();
             this.btnCadastrar = new System.Windows.Forms.Button();
             this.lblTitulo = new System.Windows.Forms.Label();
+            this._0ybkkaeekeDataSet1 = new QrAguas._0ybkkaeekeDataSet1();
+            this.tipousuarioBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.tipo_usuarioTableAdapter = new QrAguas._0ybkkaeekeDataSet1TableAdapters.tipo_usuarioTableAdapter();
             this.tableLayoutPanel1.SuspendLayout();
             this.panelUsuario.SuspendLayout();
             this.panelSenha.SuspendLayout();
             this.panelConfirmarSenha.SuspendLayout();
             this.panel1.SuspendLayout();
             this.panelBtnCadastrar.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this._0ybkkaeekeDataSet1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tipousuarioBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // lblUsuario
@@ -82,7 +88,7 @@
             this.txtUsuario.Name = "txtUsuario";
             this.txtUsuario.Size = new System.Drawing.Size(303, 23);
             this.txtUsuario.TabIndex = 40;
-            this.txtUsuario.TextChanged += new System.EventHandler(this.txtUsuario_TextChanged);
+            this.txtUsuario.TextChanged += new System.EventHandler(this.TxtUsuario_TextChanged);
             // 
             // lblUsuarioAviso
             // 
@@ -166,7 +172,7 @@
             this.txtSenha.PasswordChar = '●';
             this.txtSenha.Size = new System.Drawing.Size(303, 23);
             this.txtSenha.TabIndex = 40;
-            this.txtSenha.TextChanged += new System.EventHandler(this.txtSenha_TextChanged);
+            this.txtSenha.TextChanged += new System.EventHandler(this.TxtSenha_TextChanged);
             // 
             // panelConfirmarSenha
             // 
@@ -219,7 +225,7 @@
             this.txtConfirmarSenha.PasswordChar = '●';
             this.txtConfirmarSenha.Size = new System.Drawing.Size(303, 23);
             this.txtConfirmarSenha.TabIndex = 40;
-            this.txtConfirmarSenha.TextChanged += new System.EventHandler(this.txtConfirmarSenha_TextChanged);
+            this.txtConfirmarSenha.TextChanged += new System.EventHandler(this.TxtConfirmarSenha_TextChanged);
             // 
             // panel1
             // 
@@ -235,6 +241,8 @@
             // 
             this.CBFuncao.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.CBFuncao.DataSource = this.tipousuarioBindingSource;
+            this.CBFuncao.DisplayMember = "DESCRICAO";
             this.CBFuncao.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.CBFuncao.FormattingEnabled = true;
             this.CBFuncao.Location = new System.Drawing.Point(4, 23);
@@ -281,7 +289,7 @@
             this.btnCadastrar.TabIndex = 0;
             this.btnCadastrar.Text = "Cadastrar";
             this.btnCadastrar.UseVisualStyleBackColor = false;
-            this.btnCadastrar.Click += new System.EventHandler(this.btnCadastrar_Click);
+            this.btnCadastrar.Click += new System.EventHandler(this.BtnCadastrar_Click);
             // 
             // lblTitulo
             // 
@@ -294,6 +302,20 @@
             this.lblTitulo.TabIndex = 45;
             this.lblTitulo.Text = "Cadastro de Usuários";
             this.lblTitulo.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // _0ybkkaeekeDataSet1
+            // 
+            this._0ybkkaeekeDataSet1.DataSetName = "_0ybkkaeekeDataSet1";
+            this._0ybkkaeekeDataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // tipousuarioBindingSource
+            // 
+            this.tipousuarioBindingSource.DataMember = "tipo_usuario";
+            this.tipousuarioBindingSource.DataSource = this._0ybkkaeekeDataSet1;
+            // 
+            // tipo_usuarioTableAdapter
+            // 
+            this.tipo_usuarioTableAdapter.ClearBeforeFill = true;
             // 
             // RegisterUser
             // 
@@ -320,6 +342,8 @@
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.panelBtnCadastrar.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this._0ybkkaeekeDataSet1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tipousuarioBindingSource)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -343,5 +367,8 @@
         private System.Windows.Forms.Button btnCadastrar;
         private System.Windows.Forms.Label lblConfirmarSenhaAviso;
         private System.Windows.Forms.Label lblTitulo;
+        private _0ybkkaeekeDataSet1 _0ybkkaeekeDataSet1;
+        private System.Windows.Forms.BindingSource tipousuarioBindingSource;
+        private _0ybkkaeekeDataSet1TableAdapters.tipo_usuarioTableAdapter tipo_usuarioTableAdapter;
     }
 }

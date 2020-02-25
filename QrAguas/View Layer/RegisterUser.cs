@@ -20,7 +20,7 @@ namespace QrAguas.View_Layer
         }
 
         Functions functions = new Functions();
-        NewUser objNovoUsuario = new NewUser();
+        
 
         private void LimparCampos()
         {
@@ -44,9 +44,8 @@ namespace QrAguas.View_Layer
 
         private void RegisterUser_Load(object sender, EventArgs e)
         {
-            // TODO: This line of code loads data into the '_0ybkkaeekeDataSet.tipo_usuario' table. You can move, or remove it, as needed.
-            this.tipo_usuarioTableAdapter.Fill(this._0ybkkaeekeDataSet.tipo_usuario);
             // Preenche o ComboBox com os tipos de usuários presentos no banco de dados
+            this.tipo_usuarioTableAdapter.Fill(this._0ybkkaeekeDataSet1.tipo_usuario);
 
 
             lblConfirmarSenhaAviso.Text = "As senhas devem ser idênticas";
@@ -55,7 +54,7 @@ namespace QrAguas.View_Layer
             btnCadastrar.Enabled = false;
         }
 
-        private void txtUsuario_TextChanged(object sender, EventArgs e)
+        private void TxtUsuario_TextChanged(object sender, EventArgs e)
         {
             if (txtUsuario.Text.Length < 5)
             {
@@ -86,7 +85,7 @@ namespace QrAguas.View_Layer
 
         }
 
-        private void txtSenha_TextChanged(object sender, EventArgs e)
+        private void TxtSenha_TextChanged(object sender, EventArgs e)
         {
             if (txtSenha.Text.Trim().Equals(txtConfirmarSenha.Text))
             {
@@ -102,7 +101,7 @@ namespace QrAguas.View_Layer
             }
         }
 
-        private void txtConfirmarSenha_TextChanged(object sender, EventArgs e)
+        private void TxtConfirmarSenha_TextChanged(object sender, EventArgs e)
         {
             if (txtConfirmarSenha.Text.Trim().Equals(txtSenha.Text))
             {
@@ -118,7 +117,7 @@ namespace QrAguas.View_Layer
             }
         }
 
-        private void btnCadastrar_Click(object sender, EventArgs e)
+        private void BtnCadastrar_Click(object sender, EventArgs e)
         {
             if (CamposVazios())
             {
@@ -135,10 +134,13 @@ namespace QrAguas.View_Layer
                 {
                     try
                     {
-                        objNovoUsuario.NomeUsuario = txtUsuario.Text.Trim();
-                        objNovoUsuario.Senha = functions.GerarMd5(txtConfirmarSenha.Text);
-                        objNovoUsuario.IdTipoUsuario = (int)CBFuncao.SelectedValue;
-                        objNovoUsuario.CadastradoPor = Login.NomeUsuario;
+                        NewUser objNovoUsuario = new NewUser
+                        {
+                            NomeUsuario = txtUsuario.Text.Trim(),
+                            Senha = functions.GerarMd5(txtConfirmarSenha.Text),
+                            IdTipoUsuario = (int)CBFuncao.SelectedValue,
+                            CadastradoPor = Login.NomeUsuario
+                        };
 
                         if (functions.VerificarDadosUsuario(objNovoUsuario))
                         {
