@@ -42,7 +42,8 @@
             this.lblTitulo.Name = "lblTitulo";
             this.lblTitulo.Size = new System.Drawing.Size(252, 88);
             this.lblTitulo.TabIndex = 0;
-            this.lblTitulo.Text = "Deseja mesmo sair ou encerrar a sessão ?";
+            this.lblTitulo.Text = "Deseja sair ou encerrar a sessão ?\r\nTodas as alterações não salvas serão perdidas" +
+    "";
             this.lblTitulo.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // btnSair

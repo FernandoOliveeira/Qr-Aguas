@@ -11,7 +11,7 @@ namespace QrAguas.Controls
 {
     class Connection
     {
-        public string connectionString = ConfigurationManager.ConnectionStrings["QrAguas.Properties.Settings._0ybkkaeekeConnectionString1_QrAguasLocalDatabase"].ConnectionString;
+        public string connectionString = ConfigurationManager.ConnectionStrings["cnn"].ConnectionString;
 
 
         public MySqlConnection AbrirBanco()
