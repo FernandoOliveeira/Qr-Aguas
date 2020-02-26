@@ -78,7 +78,11 @@ namespace QrAguas.View_Layer
                     RegisterUser objCadastrarUsuario = new RegisterUser();
                     objCadastrarUsuario.Show();
                     break;
-                   
+
+                case "Cadastrar Novas Categorias":
+                    RegisterCategory registerCategory = new RegisterCategory();
+                    registerCategory.Show();
+                    break;
             }
                 
             

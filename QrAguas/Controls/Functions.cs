@@ -290,6 +290,22 @@ namespace QrAguas.Controls
 
         #endregion
 
+        #region Form RegisterCategory
 
+        public bool CadastrarNovaCategoria(string categoria)
+        {
+            string queryCadastrarCategoria = "INSERT INTO CATEGORIAS (NOME_CATEGORIA, ID_USUARIOS) VALUES (@NOME_CATEGORIA, @ID_USUARIOS)";
+
+            MySqlCommand command = new MySqlCommand(queryCadastrarCategoria, AbrirBanco());
+
+            command.Parameters.AddWithValue("@NOME_CATEGORIA", categoria);
+            command.Parameters.AddWithValue("@ID_USUARIOS", Login.TipoUsuario);
+
+            int rowCount = command.ExecuteNonQuery();
+
+            return rowCount != 0 ? true : false;
+        }
+
+        #endregion
     }
 }
