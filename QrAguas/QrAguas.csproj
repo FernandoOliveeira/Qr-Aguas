@@ -81,6 +81,12 @@
     <Compile Include="View Layer\Logout.Designer.cs">
       <DependentUpon>Logout.cs</DependentUpon>
     </Compile>
+    <Compile Include="View Layer\RegisterCategory.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View Layer\RegisterCategory.Designer.cs">
+      <DependentUpon>RegisterCategory.cs</DependentUpon>
+    </Compile>
     <Compile Include="View Layer\RegisterProduct.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -136,6 +142,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="View Layer\Logout.resx">
       <DependentUpon>Logout.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View Layer\RegisterCategory.resx">
+      <DependentUpon>RegisterCategory.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="View Layer\RegisterProduct.resx">
       <DependentUpon>RegisterProduct.cs</DependentUpon>
