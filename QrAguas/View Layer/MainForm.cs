@@ -21,7 +21,18 @@ namespace QrAguas.View_Layer
             InitializeComponent();
         }
 
-        
+        private void MainForm_Load(object sender, EventArgs e)
+        {
+            TSLUsuario.Text = "Usuário: " + Login.NomeUsuario;
+
+
+            if (Login.TipoUsuario.Equals(2)) // Caso o usuário seja do tipo 2 (Auxiliar), algumas telas são restritas para acesso
+            {
+                treeView.Nodes.Remove(treeView.Nodes[0].Nodes[0].Nodes[2]); // Cadastrar Novo Usuário
+            }
+
+        }
+
         private void MainForm_FormClosing(object sender, FormClosingEventArgs e)
         {
             // Ao fechar o menu principal é exibido um diálogo, perguntando se o usuário
@@ -53,17 +64,17 @@ namespace QrAguas.View_Layer
             // Abre o form desejado com base em qual nó foi clicado no treeView
             switch (e.Node.Text)
             {
-                case "Cadastro de Fornecedores":
+                case "Cadastrar Novos Fornecedores":
                     RegisterProvider registerProviders = new RegisterProvider();
                     registerProviders.Show();
                     break;
 
-                case "Cadastro de Novos Produtos":
+                case "Cadastrar Novos Produtos":
                     RegisterProduct registerGallon = new RegisterProduct();
                     registerGallon.Show();
                     break;
 
-                case "Cadastrar Novo Usuário":
+                case "Cadastrar Novos Usuários":
                     RegisterUser objCadastrarUsuario = new RegisterUser();
                     objCadastrarUsuario.Show();
                     break;
@@ -71,18 +82,6 @@ namespace QrAguas.View_Layer
             }
                 
             
-        }
-
-        private void MainForm_Load(object sender, EventArgs e)
-        {
-            TSLUsuario.Text = "Usuário: " + Login.NomeUsuario;
-
-
-            if (Login.TipoUsuario.Equals(2)) // Caso o usuário seja do tipo 2 (Auxiliar), algumas telas são restritas para acesso
-            {
-                treeView.Nodes.Remove(treeView.Nodes[0].Nodes[0].Nodes[2]); // Cadastrar Novo Usuário
-            }
-
         }
 
         private void AlterarSenhaToolStripMenuItem_Click(object sender, EventArgs e)
