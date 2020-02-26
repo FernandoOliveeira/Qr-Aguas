@@ -1,15 +1,15 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<xs:schema id="_0ybkkaeekeDataSet" targetNamespace="http://tempuri.org/_0ybkkaeekeDataSet.xsd" xmlns:mstns="http://tempuri.org/_0ybkkaeekeDataSet.xsd" xmlns="http://tempuri.org/_0ybkkaeekeDataSet.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+<xs:schema id="_0ybkkaeekeDataSet2" targetNamespace="http://tempuri.org/_0ybkkaeekeDataSet2.xsd" xmlns:mstns="http://tempuri.org/_0ybkkaeekeDataSet2.xsd" xmlns="http://tempuri.org/_0ybkkaeekeDataSet2.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
   <xs:annotation>
     <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
       <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
         <Connections>
-          <Connection AppSettingsObjectName="Settings" AppSettingsPropertyName="_0ybkkaeekeConnectionString1_QrAguasLocalDatabase" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="_0ybkkaeekeConnectionString1_QrAguasLocalDatabase (Settings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.QrAguas.Properties.Settings.GlobalReference.Default._0ybkkaeekeConnectionString1_QrAguasLocalDatabase" Provider="MySql.Data.MySqlClient" />
+          <Connection AppSettingsObjectName="Settings" AppSettingsPropertyName="_FernandoPCn53ta" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="_FernandoPCn53ta (Settings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.QrAguas.Properties.Settings.GlobalReference.Default._FernandoPCn53ta" Provider="MySql.Data.MySqlClient" />
         </Connections>
         <Tables>
           <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="tipo_usuarioTableAdapter" GeneratorDataComponentClassName="tipo_usuarioTableAdapter" Name="tipo_usuario" UserDataComponentName="tipo_usuarioTableAdapter">
             <MainSource>
-              <DbSource ConnectionRef="_0ybkkaeekeConnectionString1_QrAguasLocalDatabase (Settings)" DbObjectName="`0ybkkaeeke`.tipo_usuario" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+              <DbSource ConnectionRef="_FernandoPCn53ta (Settings)" DbObjectName="`0ybkkaeeke`.tipo_usuario" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
                 <DeleteCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="false">
                     <CommandText>DELETE FROM `tipo_usuario` WHERE ((`ID_TIPO_USUARIO` = @p1) AND (`DESCRICAO` = @p2))</CommandText>
@@ -48,7 +48,7 @@
       </DataSource>
     </xs:appinfo>
   </xs:annotation>
-  <xs:element name="_0ybkkaeekeDataSet" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="True" msprop:Generator_DataSetName="_0ybkkaeekeDataSet" msprop:Generator_UserDSName="_0ybkkaeekeDataSet">
+  <xs:element name="_0ybkkaeekeDataSet2" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="True" msprop:Generator_DataSetName="_0ybkkaeekeDataSet2" msprop:Generator_UserDSName="_0ybkkaeekeDataSet2">
     <xs:complexType>
       <xs:choice minOccurs="0" maxOccurs="unbounded">
         <xs:element name="tipo_usuario" msprop:Generator_TableClassName="tipo_usuarioDataTable" msprop:Generator_TableVarName="tabletipo_usuario" msprop:Generator_TablePropName="tipo_usuario" msprop:Generator_RowDeletingName="tipo_usuarioRowDeleting" msprop:Generator_RowChangingName="tipo_usuarioRowChanging" msprop:Generator_RowEvHandlerName="tipo_usuarioRowChangeEventHandler" msprop:Generator_RowDeletedName="tipo_usuarioRowDeleted" msprop:Generator_UserTableName="tipo_usuario" msprop:Generator_RowChangedName="tipo_usuarioRowChanged" msprop:Generator_RowEvArgName="tipo_usuarioRowChangeEvent" msprop:Generator_RowClassName="tipo_usuarioRow">

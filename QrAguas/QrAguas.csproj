@@ -117,15 +117,20 @@
     <Compile Include="View Layer\MainForm.Designer.cs">
       <DependentUpon>MainForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="_0ybkkaeekeDataSet.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>_0ybkkaeekeDataSet.xsd</DependentUpon>
-    </Compile>
     <Compile Include="_0ybkkaeekeDataSet1.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>_0ybkkaeekeDataSet1.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="_0ybkkaeekeDataSet2.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>_0ybkkaeekeDataSet2.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="_0ybkkaeekeDataSetCategoria.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>_0ybkkaeekeDataSetCategoria.xsd</DependentUpon>
     </Compile>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -171,17 +176,6 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
-    <None Include="_0ybkkaeekeDataSet.xsc">
-      <DependentUpon>_0ybkkaeekeDataSet.xsd</DependentUpon>
-    </None>
-    <None Include="_0ybkkaeekeDataSet.xsd">
-      <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>_0ybkkaeekeDataSet.Designer.cs</LastGenOutput>
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="_0ybkkaeekeDataSet.xss">
-      <DependentUpon>_0ybkkaeekeDataSet.xsd</DependentUpon>
-    </None>
     <None Include="_0ybkkaeekeDataSet1.xsc">
       <DependentUpon>_0ybkkaeekeDataSet1.xsd</DependentUpon>
     </None>
@@ -192,6 +186,28 @@
     </None>
     <None Include="_0ybkkaeekeDataSet1.xss">
       <DependentUpon>_0ybkkaeekeDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="_0ybkkaeekeDataSet2.xsc">
+      <DependentUpon>_0ybkkaeekeDataSet2.xsd</DependentUpon>
+    </None>
+    <None Include="_0ybkkaeekeDataSet2.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>_0ybkkaeekeDataSet2.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="_0ybkkaeekeDataSet2.xss">
+      <DependentUpon>_0ybkkaeekeDataSet2.xsd</DependentUpon>
+    </None>
+    <None Include="_0ybkkaeekeDataSetCategoria.xsc">
+      <DependentUpon>_0ybkkaeekeDataSetCategoria.xsd</DependentUpon>
+    </None>
+    <None Include="_0ybkkaeekeDataSetCategoria.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>_0ybkkaeekeDataSetCategoria.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="_0ybkkaeekeDataSetCategoria.xss">
+      <DependentUpon>_0ybkkaeekeDataSetCategoria.xsd</DependentUpon>
     </None>
   </ItemGroup>
   <ItemGroup>

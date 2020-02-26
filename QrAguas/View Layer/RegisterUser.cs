@@ -44,6 +44,8 @@ namespace QrAguas.View_Layer
 
         private void RegisterUser_Load(object sender, EventArgs e)
         {
+            // TODO: This line of code loads data into the '_0ybkkaeekeDataSet2.tipo_usuario' table. You can move, or remove it, as needed.
+            this.tipo_usuarioTableAdapter1.Fill(this._0ybkkaeekeDataSet2.tipo_usuario);
             // Preenche o ComboBox com os tipos de usuários presentos no banco de dados
             this.tipo_usuarioTableAdapter.Fill(this._0ybkkaeekeDataSet1.tipo_usuario);
 

@@ -1,0 +1,50 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="_0ybkkaeekeDataSetCategoria" targetNamespace="http://tempuri.org/_0ybkkaeekeDataSetCategoria.xsd" xmlns:mstns="http://tempuri.org/_0ybkkaeekeDataSetCategoria.xsd" xmlns="http://tempuri.org/_0ybkkaeekeDataSetCategoria.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="Settings" AppSettingsPropertyName="_FernandoPCn53ta" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="_FernandoPCn53ta (Settings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.QrAguas.Properties.Settings.GlobalReference.Default._FernandoPCn53ta" Provider="MySql.Data.MySqlClient" />
+        </Connections>
+        <Tables>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="categoriasTableAdapter" GeneratorDataComponentClassName="categoriasTableAdapter" Name="categorias" UserDataComponentName="categoriasTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="_FernandoPCn53ta (Settings)" DbObjectName="`0ybkkaeeke`.categorias" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT `NOME_CATEGORIA` FROM `categorias`</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="NOME_CATEGORIA" DataSetColumn="NOME_CATEGORIA" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+        </Tables>
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="_0ybkkaeekeDataSetCategoria" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="True" msprop:Generator_DataSetName="_0ybkkaeekeDataSetCategoria" msprop:Generator_UserDSName="_0ybkkaeekeDataSetCategoria">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="categorias" msprop:Generator_TableClassName="categoriasDataTable" msprop:Generator_TableVarName="tablecategorias" msprop:Generator_TablePropName="categorias" msprop:Generator_RowDeletingName="categoriasRowDeleting" msprop:Generator_RowChangingName="categoriasRowChanging" msprop:Generator_RowEvHandlerName="categoriasRowChangeEventHandler" msprop:Generator_RowDeletedName="categoriasRowDeleted" msprop:Generator_UserTableName="categorias" msprop:Generator_RowChangedName="categoriasRowChanged" msprop:Generator_RowEvArgName="categoriasRowChangeEvent" msprop:Generator_RowClassName="categoriasRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="NOME_CATEGORIA" msprop:Generator_ColumnVarNameInTable="columnNOME_CATEGORIA" msprop:Generator_ColumnPropNameInRow="NOME_CATEGORIA" msprop:Generator_ColumnPropNameInTable="NOME_CATEGORIAColumn" msprop:Generator_UserColumnName="NOME_CATEGORIA">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="25" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>
