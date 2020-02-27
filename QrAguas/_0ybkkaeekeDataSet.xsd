@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<xs:schema id="_0ybkkaeekeDataSetCategoria" targetNamespace="http://tempuri.org/_0ybkkaeekeDataSetCategoria.xsd" xmlns:mstns="http://tempuri.org/_0ybkkaeekeDataSetCategoria.xsd" xmlns="http://tempuri.org/_0ybkkaeekeDataSetCategoria.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+<xs:schema id="_0ybkkaeekeDataSet" targetNamespace="http://tempuri.org/_0ybkkaeekeDataSet.xsd" xmlns:mstns="http://tempuri.org/_0ybkkaeekeDataSet.xsd" xmlns="http://tempuri.org/_0ybkkaeekeDataSet.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
   <xs:annotation>
     <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
       <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
@@ -28,7 +28,7 @@
       </DataSource>
     </xs:appinfo>
   </xs:annotation>
-  <xs:element name="_0ybkkaeekeDataSetCategoria" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="True" msprop:Generator_DataSetName="_0ybkkaeekeDataSetCategoria" msprop:Generator_UserDSName="_0ybkkaeekeDataSetCategoria">
+  <xs:element name="_0ybkkaeekeDataSet" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="True" msprop:Generator_DataSetName="_0ybkkaeekeDataSet" msprop:Generator_UserDSName="_0ybkkaeekeDataSet">
     <xs:complexType>
       <xs:choice minOccurs="0" maxOccurs="unbounded">
         <xs:element name="categorias" msprop:Generator_TableClassName="categoriasDataTable" msprop:Generator_TableVarName="tablecategorias" msprop:Generator_TablePropName="categorias" msprop:Generator_RowDeletingName="categoriasRowDeleting" msprop:Generator_RowChangingName="categoriasRowChanging" msprop:Generator_RowEvHandlerName="categoriasRowChangeEventHandler" msprop:Generator_RowDeletedName="categoriasRowDeleted" msprop:Generator_UserTableName="categorias" msprop:Generator_RowChangedName="categoriasRowChanged" msprop:Generator_RowEvArgName="categoriasRowChangeEvent" msprop:Generator_RowClassName="categoriasRow">

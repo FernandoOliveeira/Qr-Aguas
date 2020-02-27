@@ -292,6 +292,21 @@ namespace QrAguas.Controls
 
         #region Form RegisterCategory
 
+        public DataTable ConsultarCategorias()
+        {
+            DataTable consultarCategorias = new DataTable();
+
+            string queryConsultarCategorias = "SELECT NOME_CATEGORIA FROM CATEGORIAS ORDER BY NOME_CATEGORIA";
+
+            MySqlCommand command = new MySqlCommand(queryConsultarCategorias, AbrirBanco());
+
+            MySqlDataReader reader = command.ExecuteReader();
+
+            consultarCategorias.Load(reader);
+
+            return consultarCategorias;
+        }
+
         public bool CadastrarNovaCategoria(string categoria)
         {
             string queryCadastrarCategoria = "INSERT INTO CATEGORIAS (NOME_CATEGORIA, ID_USUARIOS) VALUES (@NOME_CATEGORIA, @ID_USUARIOS)";

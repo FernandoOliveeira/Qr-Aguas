@@ -33,23 +33,23 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(RegisterCategory));
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.txtNovaCategoria = new System.Windows.Forms.TextBox();
             this.lblNovaCategoria = new System.Windows.Forms.Label();
-            this.lblTitulo = new System.Windows.Forms.Label();
+            this.txtNovaCategoria = new System.Windows.Forms.TextBox();
             this.panelBtnCadastrar = new System.Windows.Forms.Panel();
             this.btnInserir = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this._0ybkkaeekeDataSetCategoria = new QrAguas._0ybkkaeekeDataSetCategoria();
+            this.lblTitulo = new System.Windows.Forms.Label();
+            this._0ybkkaeekeDataSet = new QrAguas._0ybkkaeekeDataSet();
             this.categoriasBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.categoriasTableAdapter = new QrAguas._0ybkkaeekeDataSetCategoriaTableAdapters.categoriasTableAdapter();
+            this.categoriasTableAdapter = new QrAguas._0ybkkaeekeDataSetTableAdapters.categoriasTableAdapter();
             this.nOMECATEGORIADataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tableLayoutPanel1.SuspendLayout();
             this.panel1.SuspendLayout();
             this.panelBtnCadastrar.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this._0ybkkaeekeDataSetCategoria)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this._0ybkkaeekeDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.categoriasBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
@@ -77,17 +77,8 @@
             this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel1.Location = new System.Drawing.Point(3, 3);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(286, 80);
+            this.panel1.Size = new System.Drawing.Size(286, 79);
             this.panel1.TabIndex = 1;
-            // 
-            // txtNovaCategoria
-            // 
-            this.txtNovaCategoria.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtNovaCategoria.Location = new System.Drawing.Point(7, 30);
-            this.txtNovaCategoria.Name = "txtNovaCategoria";
-            this.txtNovaCategoria.Size = new System.Drawing.Size(204, 23);
-            this.txtNovaCategoria.TabIndex = 0;
             // 
             // lblNovaCategoria
             // 
@@ -99,17 +90,14 @@
             this.lblNovaCategoria.TabIndex = 1;
             this.lblNovaCategoria.Text = "Digite o nome da categoria:";
             // 
-            // lblTitulo
+            // txtNovaCategoria
             // 
-            this.lblTitulo.Dock = System.Windows.Forms.DockStyle.Top;
-            this.lblTitulo.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTitulo.ForeColor = System.Drawing.Color.White;
-            this.lblTitulo.Location = new System.Drawing.Point(0, 0);
-            this.lblTitulo.Name = "lblTitulo";
-            this.lblTitulo.Size = new System.Drawing.Size(584, 82);
-            this.lblTitulo.TabIndex = 4;
-            this.lblTitulo.Text = "Cadastro de Categorias";
-            this.lblTitulo.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.txtNovaCategoria.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtNovaCategoria.Location = new System.Drawing.Point(7, 30);
+            this.txtNovaCategoria.Name = "txtNovaCategoria";
+            this.txtNovaCategoria.Size = new System.Drawing.Size(204, 23);
+            this.txtNovaCategoria.TabIndex = 0;
             // 
             // panelBtnCadastrar
             // 
@@ -117,7 +105,7 @@
             this.panelBtnCadastrar.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelBtnCadastrar.Location = new System.Drawing.Point(295, 3);
             this.panelBtnCadastrar.Name = "panelBtnCadastrar";
-            this.panelBtnCadastrar.Size = new System.Drawing.Size(286, 80);
+            this.panelBtnCadastrar.Size = new System.Drawing.Size(286, 79);
             this.panelBtnCadastrar.TabIndex = 8;
             // 
             // btnInserir
@@ -135,15 +123,16 @@
             this.btnInserir.TabIndex = 0;
             this.btnInserir.Text = "Inserir";
             this.btnInserir.UseVisualStyleBackColor = false;
+            this.btnInserir.Click += new System.EventHandler(this.BtnInserir_Click);
             // 
             // panel2
             // 
             this.tableLayoutPanel1.SetColumnSpan(this.panel2, 2);
             this.panel2.Controls.Add(this.dataGridView1);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel2.Location = new System.Drawing.Point(3, 89);
+            this.panel2.Location = new System.Drawing.Point(3, 88);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(578, 185);
+            this.panel2.Size = new System.Drawing.Size(578, 186);
             this.panel2.TabIndex = 10;
             // 
             // dataGridView1
@@ -172,18 +161,30 @@
             this.dataGridView1.Location = new System.Drawing.Point(0, 0);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
-            this.dataGridView1.Size = new System.Drawing.Size(578, 185);
+            this.dataGridView1.Size = new System.Drawing.Size(578, 186);
             this.dataGridView1.TabIndex = 0;
             // 
-            // _0ybkkaeekeDataSetCategoria
+            // lblTitulo
             // 
-            this._0ybkkaeekeDataSetCategoria.DataSetName = "_0ybkkaeekeDataSetCategoria";
-            this._0ybkkaeekeDataSetCategoria.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            this.lblTitulo.Dock = System.Windows.Forms.DockStyle.Top;
+            this.lblTitulo.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTitulo.ForeColor = System.Drawing.Color.White;
+            this.lblTitulo.Location = new System.Drawing.Point(0, 0);
+            this.lblTitulo.Name = "lblTitulo";
+            this.lblTitulo.Size = new System.Drawing.Size(584, 82);
+            this.lblTitulo.TabIndex = 4;
+            this.lblTitulo.Text = "Cadastro de Categorias";
+            this.lblTitulo.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // _0ybkkaeekeDataSet
+            // 
+            this._0ybkkaeekeDataSet.DataSetName = "_0ybkkaeekeDataSet";
+            this._0ybkkaeekeDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // categoriasBindingSource
             // 
             this.categoriasBindingSource.DataMember = "categorias";
-            this.categoriasBindingSource.DataSource = this._0ybkkaeekeDataSetCategoria;
+            this.categoriasBindingSource.DataSource = this._0ybkkaeekeDataSet;
             // 
             // categoriasTableAdapter
             // 
@@ -192,8 +193,7 @@
             // nOMECATEGORIADataGridViewTextBoxColumn
             // 
             this.nOMECATEGORIADataGridViewTextBoxColumn.DataPropertyName = "NOME_CATEGORIA";
-            this.nOMECATEGORIADataGridViewTextBoxColumn.HeaderText = "Categorias";
-            this.nOMECATEGORIADataGridViewTextBoxColumn.MinimumWidth = 50;
+            this.nOMECATEGORIADataGridViewTextBoxColumn.HeaderText = "CATEGORIAS";
             this.nOMECATEGORIADataGridViewTextBoxColumn.Name = "nOMECATEGORIADataGridViewTextBoxColumn";
             this.nOMECATEGORIADataGridViewTextBoxColumn.ReadOnly = true;
             // 
@@ -219,7 +219,7 @@
             this.panelBtnCadastrar.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this._0ybkkaeekeDataSetCategoria)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this._0ybkkaeekeDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.categoriasBindingSource)).EndInit();
             this.ResumeLayout(false);
 
@@ -236,9 +236,9 @@
         private System.Windows.Forms.Button btnInserir;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.DataGridView dataGridView1;
-        private _0ybkkaeekeDataSetCategoria _0ybkkaeekeDataSetCategoria;
+        private _0ybkkaeekeDataSet _0ybkkaeekeDataSet;
         private System.Windows.Forms.BindingSource categoriasBindingSource;
-        private _0ybkkaeekeDataSetCategoriaTableAdapters.categoriasTableAdapter categoriasTableAdapter;
+        private _0ybkkaeekeDataSetTableAdapters.categoriasTableAdapter categoriasTableAdapter;
         private System.Windows.Forms.DataGridViewTextBoxColumn nOMECATEGORIADataGridViewTextBoxColumn;
     }
 }
