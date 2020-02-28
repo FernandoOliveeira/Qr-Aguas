@@ -22,9 +22,9 @@ namespace QrAguas.View_Layer
 
         private void RegisterCategory_Load(object sender, EventArgs e)
         {
-            // TODO: This line of code loads data into the '_0ybkkaeekeDataSet.categorias' table. You can move, or remove it, as needed.
-            this.categoriasTableAdapter.Fill(this._0ybkkaeekeDataSet.categorias);
-            dataGridView1.DataSource = functions.ConsultarCategorias();
+            // TODO: This line of code loads data into the '_0ybkkaeekeDataSetRegisterCategory.categorias' table. You can move, or remove it, as needed.
+            this.categoriasTableAdapter.Fill(this._0ybkkaeekeDataSetRegisterCategory.categorias);
+
 
         }
 
@@ -42,7 +42,8 @@ namespace QrAguas.View_Layer
                     {
                         MessageBox.Show("Nova Categoria cadastrada com sucesso", "Cadastrado com sucesso", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
-                        dataGridView1.DataSource = functions.ConsultarCategorias();
+                        // Está linha de código faz com que o DataGridView atualize após a inserção de uma nova categoria
+                        this.categoriasTableAdapter.Fill(this._0ybkkaeekeDataSetRegisterCategory.categorias);
 
                     }
                     else

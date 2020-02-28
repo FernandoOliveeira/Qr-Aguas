@@ -290,22 +290,8 @@ namespace QrAguas.Controls
 
         #endregion
 
+
         #region Form RegisterCategory
-
-        public DataTable ConsultarCategorias()
-        {
-            DataTable consultarCategorias = new DataTable();
-
-            string queryConsultarCategorias = "SELECT NOME_CATEGORIA FROM CATEGORIAS ORDER BY NOME_CATEGORIA";
-
-            MySqlCommand command = new MySqlCommand(queryConsultarCategorias, AbrirBanco());
-
-            MySqlDataReader reader = command.ExecuteReader();
-
-            consultarCategorias.Load(reader);
-
-            return consultarCategorias;
-        }
 
         public bool CadastrarNovaCategoria(string categoria)
         {
