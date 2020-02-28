@@ -320,6 +320,20 @@ namespace QrAguas.Controls
             return rowCount != 0 ? true : false;
         }
 
+        public bool EditarCategoria(int idCategoria, string nomeCategoria)
+        {
+            string queryEditarCategoria = "UPDATE CATEGORIAS SET NOME_CATEGORIA = @NOME_CATEGORIA WHERE ID_CATEGORIAS = @ID_CATEGORIA";
+
+            MySqlCommand command = new MySqlCommand(queryEditarCategoria, AbrirBanco());
+
+            command.Parameters.AddWithValue("@NOME_CATEGORIA", nomeCategoria);
+            command.Parameters.AddWithValue("@ID_CATEGORIA", idCategoria);
+
+            int rowCount = command.ExecuteNonQuery();
+
+            return rowCount != 0 ? true : false;
+        }
+
         #endregion
     }
 }
