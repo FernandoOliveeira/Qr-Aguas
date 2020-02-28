@@ -127,6 +127,9 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>_0ybkkaeekeDataSet2.xsd</DependentUpon>
     </Compile>
+    <Compile Include="_0ybkkaeekeDataSetRegisterCategory.cs">
+      <DependentUpon>_0ybkkaeekeDataSetRegisterCategory.xsd</DependentUpon>
+    </Compile>
     <Compile Include="_0ybkkaeekeDataSetRegisterCategory.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>

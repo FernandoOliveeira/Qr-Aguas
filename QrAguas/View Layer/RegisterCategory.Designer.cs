@@ -37,6 +37,12 @@
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.panel2 = new System.Windows.Forms.Panel();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.iDCATEGORIASDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.nOMECATEGORIADataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Editar = new System.Windows.Forms.DataGridViewButtonColumn();
+            this.Excluir = new System.Windows.Forms.DataGridViewButtonColumn();
+            this.categoriasBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this._0ybkkaeekeDataSetRegisterCategory = new QrAguas._0ybkkaeekeDataSetRegisterCategory();
             this.panel1 = new System.Windows.Forms.Panel();
             this.lblNovaCategoria = new System.Windows.Forms.Label();
             this.txtNovaCategoria = new System.Windows.Forms.TextBox();
@@ -44,21 +50,15 @@
             this.btnInserir = new System.Windows.Forms.Button();
             this.panel3 = new System.Windows.Forms.Panel();
             this.lblTitulo = new System.Windows.Forms.Label();
-            this._0ybkkaeekeDataSetRegisterCategory = new QrAguas._0ybkkaeekeDataSetRegisterCategory();
-            this.categoriasBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.categoriasTableAdapter = new QrAguas._0ybkkaeekeDataSetRegisterCategoryTableAdapters.categoriasTableAdapter();
-            this.iDCATEGORIASDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.nOMECATEGORIADataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Editar = new System.Windows.Forms.DataGridViewButtonColumn();
-            this.Excluir = new System.Windows.Forms.DataGridViewButtonColumn();
             this.tableLayoutPanel1.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.categoriasBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this._0ybkkaeekeDataSetRegisterCategory)).BeginInit();
             this.panel1.SuspendLayout();
             this.panelBtnCadastrar.SuspendLayout();
             this.panel3.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this._0ybkkaeekeDataSetRegisterCategory)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.categoriasBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // tableLayoutPanel1
@@ -118,13 +118,74 @@
             this.dataGridView1.DataSource = this.categoriasBindingSource;
             this.dataGridView1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dataGridView1.Location = new System.Drawing.Point(0, 0);
+            this.dataGridView1.MultiSelect = false;
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
             this.dataGridView1.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.AutoSizeToAllHeaders;
             dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
             this.dataGridView1.RowsDefaultCellStyle = dataGridViewCellStyle4;
+            this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dataGridView1.Size = new System.Drawing.Size(578, 221);
             this.dataGridView1.TabIndex = 0;
+            this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DataGridView1_CellContentClick);
+            // 
+            // iDCATEGORIASDataGridViewTextBoxColumn
+            // 
+            this.iDCATEGORIASDataGridViewTextBoxColumn.DataPropertyName = "ID_CATEGORIAS";
+            this.iDCATEGORIASDataGridViewTextBoxColumn.HeaderText = "ID_CATEGORIAS";
+            this.iDCATEGORIASDataGridViewTextBoxColumn.Name = "iDCATEGORIASDataGridViewTextBoxColumn";
+            this.iDCATEGORIASDataGridViewTextBoxColumn.ReadOnly = true;
+            this.iDCATEGORIASDataGridViewTextBoxColumn.Visible = false;
+            // 
+            // nOMECATEGORIADataGridViewTextBoxColumn
+            // 
+            this.nOMECATEGORIADataGridViewTextBoxColumn.DataPropertyName = "NOME_CATEGORIA";
+            this.nOMECATEGORIADataGridViewTextBoxColumn.FillWeight = 166.8538F;
+            this.nOMECATEGORIADataGridViewTextBoxColumn.HeaderText = "Categoria";
+            this.nOMECATEGORIADataGridViewTextBoxColumn.Name = "nOMECATEGORIADataGridViewTextBoxColumn";
+            this.nOMECATEGORIADataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // Editar
+            // 
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.White;
+            this.Editar.DefaultCellStyle = dataGridViewCellStyle2;
+            this.Editar.FillWeight = 57.00406F;
+            this.Editar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Editar.HeaderText = "Editar";
+            this.Editar.Name = "Editar";
+            this.Editar.ReadOnly = true;
+            this.Editar.Text = "Editar";
+            this.Editar.UseColumnTextForButtonValue = true;
+            // 
+            // Excluir
+            // 
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.Red;
+            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.Red;
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.White;
+            this.Excluir.DefaultCellStyle = dataGridViewCellStyle3;
+            this.Excluir.FillWeight = 76.14212F;
+            this.Excluir.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Excluir.HeaderText = "Excluir";
+            this.Excluir.Name = "Excluir";
+            this.Excluir.ReadOnly = true;
+            this.Excluir.Text = "Excluir";
+            this.Excluir.UseColumnTextForButtonValue = true;
+            // 
+            // categoriasBindingSource
+            // 
+            this.categoriasBindingSource.DataMember = "categorias";
+            this.categoriasBindingSource.DataSource = this._0ybkkaeekeDataSetRegisterCategory;
+            // 
+            // _0ybkkaeekeDataSetRegisterCategory
+            // 
+            this._0ybkkaeekeDataSetRegisterCategory.DataSetName = "_0ybkkaeekeDataSetRegisterCategory";
+            this._0ybkkaeekeDataSetRegisterCategory.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // panel1
             // 
@@ -205,67 +266,9 @@
             this.lblTitulo.Text = "Cadastro de Categorias";
             this.lblTitulo.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // _0ybkkaeekeDataSetRegisterCategory
-            // 
-            this._0ybkkaeekeDataSetRegisterCategory.DataSetName = "_0ybkkaeekeDataSetRegisterCategory";
-            this._0ybkkaeekeDataSetRegisterCategory.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // categoriasBindingSource
-            // 
-            this.categoriasBindingSource.DataMember = "categorias";
-            this.categoriasBindingSource.DataSource = this._0ybkkaeekeDataSetRegisterCategory;
-            // 
             // categoriasTableAdapter
             // 
             this.categoriasTableAdapter.ClearBeforeFill = true;
-            // 
-            // iDCATEGORIASDataGridViewTextBoxColumn
-            // 
-            this.iDCATEGORIASDataGridViewTextBoxColumn.DataPropertyName = "ID_CATEGORIAS";
-            this.iDCATEGORIASDataGridViewTextBoxColumn.HeaderText = "ID_CATEGORIAS";
-            this.iDCATEGORIASDataGridViewTextBoxColumn.Name = "iDCATEGORIASDataGridViewTextBoxColumn";
-            this.iDCATEGORIASDataGridViewTextBoxColumn.ReadOnly = true;
-            this.iDCATEGORIASDataGridViewTextBoxColumn.Visible = false;
-            // 
-            // nOMECATEGORIADataGridViewTextBoxColumn
-            // 
-            this.nOMECATEGORIADataGridViewTextBoxColumn.DataPropertyName = "NOME_CATEGORIA";
-            this.nOMECATEGORIADataGridViewTextBoxColumn.FillWeight = 166.8538F;
-            this.nOMECATEGORIADataGridViewTextBoxColumn.HeaderText = "Categoria";
-            this.nOMECATEGORIADataGridViewTextBoxColumn.Name = "nOMECATEGORIADataGridViewTextBoxColumn";
-            this.nOMECATEGORIADataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // Editar
-            // 
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.White;
-            this.Editar.DefaultCellStyle = dataGridViewCellStyle2;
-            this.Editar.FillWeight = 57.00406F;
-            this.Editar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Editar.HeaderText = "Editar";
-            this.Editar.Name = "Editar";
-            this.Editar.ReadOnly = true;
-            this.Editar.Text = "Editar";
-            this.Editar.UseColumnTextForButtonValue = true;
-            // 
-            // Excluir
-            // 
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle3.BackColor = System.Drawing.Color.Red;
-            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.Red;
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.White;
-            this.Excluir.DefaultCellStyle = dataGridViewCellStyle3;
-            this.Excluir.FillWeight = 76.14212F;
-            this.Excluir.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Excluir.HeaderText = "Excluir";
-            this.Excluir.Name = "Excluir";
-            this.Excluir.ReadOnly = true;
-            this.Excluir.Text = "Excluir";
-            this.Excluir.UseColumnTextForButtonValue = true;
             // 
             // RegisterCategory
             // 
@@ -285,12 +288,12 @@
             this.tableLayoutPanel1.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.categoriasBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this._0ybkkaeekeDataSetRegisterCategory)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.panelBtnCadastrar.ResumeLayout(false);
             this.panel3.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this._0ybkkaeekeDataSetRegisterCategory)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.categoriasBindingSource)).EndInit();
             this.ResumeLayout(false);
 
         }

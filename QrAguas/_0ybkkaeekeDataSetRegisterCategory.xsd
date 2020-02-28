@@ -21,7 +21,9 @@
                 </DeleteCommand>
                 <SelectCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="false">
-                    <CommandText>SELECT `ID_CATEGORIAS`, `NOME_CATEGORIA` FROM `categorias`</CommandText>
+                    <CommandText>SELECT        ID_CATEGORIAS, NOME_CATEGORIA
+FROM            categorias
+ORDER BY NOME_CATEGORIA</CommandText>
                     <Parameters />
                   </DbCommand>
                 </SelectCommand>
@@ -41,7 +43,16 @@
               <Mapping SourceColumn="ID_CATEGORIAS" DataSetColumn="ID_CATEGORIAS" />
               <Mapping SourceColumn="NOME_CATEGORIA" DataSetColumn="NOME_CATEGORIA" />
             </Mappings>
-            <Sources />
+            <Sources>
+              <DbSource ConnectionRef="_FernandoPCn53ta (Settings)" DbObjectName="`0ybkkaeeke`.categorias" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="FillBy" GenerateMethods="Fill" GenerateShortCommands="true" GeneratorSourceName="FillBy" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy" UserSourceName="FillBy">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT ID_CATEGORIAS, NOME_CATEGORIA FROM categorias ORDER BY NOME_CATEGORIA</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </Sources>
           </TableAdapter>
         </Tables>
         <Sources />
@@ -51,7 +62,7 @@
   <xs:element name="_0ybkkaeekeDataSetRegisterCategory" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="True" msprop:Generator_DataSetName="_0ybkkaeekeDataSetRegisterCategory" msprop:Generator_UserDSName="_0ybkkaeekeDataSetRegisterCategory">
     <xs:complexType>
       <xs:choice minOccurs="0" maxOccurs="unbounded">
-        <xs:element name="categorias" msprop:Generator_TableClassName="categoriasDataTable" msprop:Generator_TableVarName="tablecategorias" msprop:Generator_TablePropName="categorias" msprop:Generator_RowDeletingName="categoriasRowDeleting" msprop:Generator_RowChangingName="categoriasRowChanging" msprop:Generator_RowEvHandlerName="categoriasRowChangeEventHandler" msprop:Generator_RowDeletedName="categoriasRowDeleted" msprop:Generator_UserTableName="categorias" msprop:Generator_RowChangedName="categoriasRowChanged" msprop:Generator_RowEvArgName="categoriasRowChangeEvent" msprop:Generator_RowClassName="categoriasRow">
+        <xs:element name="categorias" msprop:Generator_TableClassName="categoriasDataTable" msprop:Generator_TableVarName="tablecategorias" msprop:Generator_RowChangedName="categoriasRowChanged" msprop:Generator_TablePropName="categorias" msprop:Generator_RowDeletingName="categoriasRowDeleting" msprop:Generator_RowChangingName="categoriasRowChanging" msprop:Generator_RowEvHandlerName="categoriasRowChangeEventHandler" msprop:Generator_RowDeletedName="categoriasRowDeleted" msprop:Generator_RowClassName="categoriasRow" msprop:Generator_UserTableName="categorias" msprop:Generator_RowEvArgName="categoriasRowChangeEvent">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="ID_CATEGORIAS" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnID_CATEGORIAS" msprop:Generator_ColumnPropNameInRow="ID_CATEGORIAS" msprop:Generator_ColumnPropNameInTable="ID_CATEGORIASColumn" msprop:Generator_UserColumnName="ID_CATEGORIAS" type="xs:int" />

@@ -28,6 +28,15 @@ namespace QrAguas.View_Layer
 
         }
 
+        private void DataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (dataGridView1.Columns[e.ColumnIndex].Name.Equals("Excluir"))
+            {
+                int idProduto = (int) dataGridView1.SelectedRows[0].Cells[0].Value;
+                MessageBox.Show(idProduto.ToString());
+            }
+        }
+
         private void BtnInserir_Click(object sender, EventArgs e)
         {
             if (CamposVazios())
@@ -63,6 +72,19 @@ namespace QrAguas.View_Layer
         private bool CamposVazios()
         {
             return txtNovaCategoria.Text.Trim().Equals("") ? true : false;
+
+        }
+
+        private void fillByToolStripButton_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                this.categoriasTableAdapter.FillBy(this._0ybkkaeekeDataSetRegisterCategory.categorias);
+            }
+            catch (System.Exception ex)
+            {
+                System.Windows.Forms.MessageBox.Show(ex.Message);
+            }
 
         }
     }
