@@ -97,6 +97,7 @@
             this.dataGridView1.AllowUserToDeleteRows = false;
             this.dataGridView1.AutoGenerateColumns = false;
             this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dataGridView1.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.DisplayedCells;
             this.dataGridView1.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(130)))), ((int)(((byte)(156)))), ((int)(((byte)(188)))));
             this.dataGridView1.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dataGridView1.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
@@ -229,6 +230,7 @@
             // nOMECATEGORIADataGridViewTextBoxColumn
             // 
             this.nOMECATEGORIADataGridViewTextBoxColumn.DataPropertyName = "NOME_CATEGORIA";
+            this.nOMECATEGORIADataGridViewTextBoxColumn.FillWeight = 166.8538F;
             this.nOMECATEGORIADataGridViewTextBoxColumn.HeaderText = "Categoria";
             this.nOMECATEGORIADataGridViewTextBoxColumn.Name = "nOMECATEGORIADataGridViewTextBoxColumn";
             this.nOMECATEGORIADataGridViewTextBoxColumn.ReadOnly = true;
@@ -241,6 +243,7 @@
             dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
             dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.White;
             this.Editar.DefaultCellStyle = dataGridViewCellStyle2;
+            this.Editar.FillWeight = 57.00406F;
             this.Editar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Editar.HeaderText = "Editar";
             this.Editar.Name = "Editar";
@@ -256,6 +259,7 @@
             dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.Red;
             dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.White;
             this.Excluir.DefaultCellStyle = dataGridViewCellStyle3;
+            this.Excluir.FillWeight = 76.14212F;
             this.Excluir.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Excluir.HeaderText = "Excluir";
             this.Excluir.Name = "Excluir";

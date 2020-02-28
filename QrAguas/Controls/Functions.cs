@@ -307,6 +307,19 @@ namespace QrAguas.Controls
             return rowCount != 0 ? true : false;
         }
 
+        public bool DeletarCategoria(int idCategoria)
+        {
+            string queryDeletarCategoria = "DELETE FROM CATEGORIAS WHERE ID_CATEGORIAS = @ID_CATEGORIAS";
+
+            MySqlCommand command = new MySqlCommand(queryDeletarCategoria, AbrirBanco());
+
+            command.Parameters.AddWithValue("ID_CATEGORIAS", idCategoria);
+
+            int rowCount = command.ExecuteNonQuery();
+
+            return rowCount != 0 ? true : false;
+        }
+
         #endregion
     }
 }
