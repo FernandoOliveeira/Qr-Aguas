@@ -25,15 +25,44 @@ namespace QrAguas.View_Layer
             // TODO: This line of code loads data into the '_0ybkkaeekeDataSetRegisterCategory.categorias' table. You can move, or remove it, as needed.
             this.categoriasTableAdapter.Fill(this._0ybkkaeekeDataSetRegisterCategory.categorias);
 
-
         }
 
         private void DataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
+
             if (dataGridView1.Columns[e.ColumnIndex].Name.Equals("Excluir"))
             {
                 int idProduto = (int) dataGridView1.SelectedRows[0].Cells[0].Value;
-                MessageBox.Show(idProduto.ToString());
+                string nomeProduto = dataGridView1.SelectedRows[0].Cells[1].Value.ToString();
+
+                DialogResult resposta = MessageBox.Show("Deseja excluir a categoria " + nomeProduto + " ?", "Excluir Categoria", MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button2);
+
+                if (resposta.Equals(DialogResult.Yes))
+                {
+                    try
+                    {
+                        functions.DeletarCategoria(idProduto);
+
+                        MessageBox.Show("Categoria excluída com sucesso.", "Excluído com sucesso", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                        this.categoriasTableAdapter.Fill(this._0ybkkaeekeDataSetRegisterCategory.categorias);
+
+                    }
+                    catch (Exception erro)
+                    {
+
+                        MessageBox.Show("Erro ao excluir a categoria.\nErro: " + erro, "Erro", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                    }
+
+                }
+            }
+
+            if (dataGridView1.Columns[e.ColumnIndex].Name.Equals("Editar"))
+            {
+                int idProduto = (int)dataGridView1.SelectedRows[0].Cells[0].Value;
+                string nomeProduto = dataGridView1.SelectedRows[0].Cells[1].Value.ToString();
+
             }
         }
 
@@ -68,24 +97,12 @@ namespace QrAguas.View_Layer
             }
         }
 
-
         private bool CamposVazios()
         {
             return txtNovaCategoria.Text.Trim().Equals("") ? true : false;
 
         }
 
-        private void fillByToolStripButton_Click(object sender, EventArgs e)
-        {
-            try
-            {
-                this.categoriasTableAdapter.FillBy(this._0ybkkaeekeDataSetRegisterCategory.categorias);
-            }
-            catch (System.Exception ex)
-            {
-                System.Windows.Forms.MessageBox.Show(ex.Message);
-            }
-
-        }
+       
     }
 }

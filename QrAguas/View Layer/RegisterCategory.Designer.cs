@@ -215,7 +215,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.txtNovaCategoria.Location = new System.Drawing.Point(7, 30);
             this.txtNovaCategoria.Name = "txtNovaCategoria";
-            this.txtNovaCategoria.Size = new System.Drawing.Size(204, 23);
+            this.txtNovaCategoria.Size = new System.Drawing.Size(249, 23);
             this.txtNovaCategoria.TabIndex = 0;
             // 
             // panelBtnCadastrar
