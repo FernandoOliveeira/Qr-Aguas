@@ -42,6 +42,30 @@ namespace QrAguas.Controls
 
         #region Form Login
 
+        public int VerificarIdUsuario(string usuario)
+        {
+            DataTable consultarIdUsuario = new DataTable();
+
+            string queryVerificarIdUsuario = "SELECT ID_USUARIOS FROM USUARIOS WHERE NOME_USUARIO = @NOME_USUARIO";
+
+            MySqlCommand command = new MySqlCommand(queryVerificarIdUsuario, AbrirBanco());
+            command.Parameters.AddWithValue("@NOME_USUARIO", usuario);
+            MySqlDataReader reader = command.ExecuteReader();
+
+            consultarIdUsuario.Load(reader);
+
+            int idUsuario = 0;
+
+            foreach (DataRow row in consultarIdUsuario.Rows)
+            {
+                idUsuario = int.Parse(row["NOME_USUARIO"].ToString());
+            }
+
+            FecharBanco(AbrirBanco());
+
+            return idUsuario;
+        }
+
         public int VerificarTipoUsuario(string usuario)
         {
             DataTable consultarTipoUsuario = new DataTable();
