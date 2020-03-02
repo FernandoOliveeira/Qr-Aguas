@@ -58,7 +58,7 @@ namespace QrAguas.Controls
 
             foreach (DataRow row in consultarIdUsuario.Rows)
             {
-                idUsuario = int.Parse(row["NOME_USUARIO"].ToString());
+                idUsuario = int.Parse(row["ID_USUARIOS"].ToString());
             }
 
             FecharBanco(AbrirBanco());
