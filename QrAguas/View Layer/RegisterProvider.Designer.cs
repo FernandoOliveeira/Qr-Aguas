@@ -580,6 +580,7 @@
             this.ClientSize = new System.Drawing.Size(684, 461);
             this.Controls.Add(this.lblTitulo);
             this.Controls.Add(this.tableLayoutPanel1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.Name = "RegisterProvider";
