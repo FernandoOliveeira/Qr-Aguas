@@ -148,6 +148,8 @@ namespace QrAguas.Controls
 
             int rowCount = command.ExecuteNonQuery();
 
+            FecharBanco(AbrirBanco());
+
             return rowCount != 0 ? true : false;
         }
 
@@ -178,8 +180,12 @@ namespace QrAguas.Controls
                 commandSenhaAlterada.Parameters.AddWithValue("@NomeUsuario", nomeUsuario);
                 commandSenhaAlterada.ExecuteNonQuery();
 
+                FecharBanco(AbrirBanco());
+
                 return true;
             }
+
+            FecharBanco(AbrirBanco());
 
             return false;
         }
@@ -285,6 +291,8 @@ namespace QrAguas.Controls
 
             int rowCount = command.ExecuteNonQuery();
 
+            FecharBanco(AbrirBanco());
+
             return rowCount != 0 ? true : false;
         }
 
@@ -304,6 +312,8 @@ namespace QrAguas.Controls
 
             int rowCount = command.ExecuteNonQuery();
 
+            FecharBanco(AbrirBanco());
+
             return rowCount != 0 ? true : false;
         }
 
@@ -316,6 +326,8 @@ namespace QrAguas.Controls
             command.Parameters.AddWithValue("ID_CATEGORIAS", idCategoria);
 
             int rowCount = command.ExecuteNonQuery();
+
+            FecharBanco(AbrirBanco());
 
             return rowCount != 0 ? true : false;
         }
@@ -330,6 +342,8 @@ namespace QrAguas.Controls
             command.Parameters.AddWithValue("@ID_CATEGORIA", idCategoria);
 
             int rowCount = command.ExecuteNonQuery();
+
+            FecharBanco(AbrirBanco());
 
             return rowCount != 0 ? true : false;
         }

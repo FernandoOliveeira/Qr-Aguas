@@ -32,16 +32,16 @@ namespace QrAguas.View_Layer
 
             if (dataGridView1.Columns[e.ColumnIndex].Name.Equals("Excluir"))
             {
-                int idProduto = (int) dataGridView1.SelectedRows[0].Cells[0].Value;
-                string nomeProduto = dataGridView1.SelectedRows[0].Cells[1].Value.ToString();
+                int idCategoria = (int) dataGridView1.SelectedRows[0].Cells[0].Value;
+                string nomeCategoria = dataGridView1.SelectedRows[0].Cells[1].Value.ToString();
 
-                DialogResult resposta = MessageBox.Show("Deseja excluir a categoria " + nomeProduto + " ?", "Excluir Categoria", MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button2);
+                DialogResult resposta = MessageBox.Show("Deseja excluir a categoria '" + nomeCategoria + "' ?", "Excluir Categoria", MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button2);
 
                 if (resposta.Equals(DialogResult.Yes))
                 {
                     try
                     {
-                        functions.DeletarCategoria(idProduto);
+                        functions.DeletarCategoria(idCategoria);
 
                         MessageBox.Show("Categoria excluída com sucesso.", "Excluído com sucesso", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
@@ -60,9 +60,22 @@ namespace QrAguas.View_Layer
 
             if (dataGridView1.Columns[e.ColumnIndex].Name.Equals("Editar"))
             {
-                int idProduto = (int)dataGridView1.SelectedRows[0].Cells[0].Value;
-                string nomeProduto = dataGridView1.SelectedRows[0].Cells[1].Value.ToString();
+                int idCategoria = (int)dataGridView1.SelectedRows[0].Cells[0].Value;
+                string nomeCategoria = dataGridView1.SelectedRows[0].Cells[1].Value.ToString();
 
+                DialogResult resposta = MessageBox.Show("Deseja atualizar a categoria '" + nomeCategoria + "' ?", "Atualizar Categoria", MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button2);
+
+                if (resposta.Equals(DialogResult.Yes))
+                {
+                    UpdateCategory updateCategory = new UpdateCategory
+                    {
+                        IdCategoria = idCategoria,
+                        Categoria = nomeCategoria
+                    };
+
+                    updateCategory.ShowDialog();
+                }
+                
             }
         }
 
