@@ -320,7 +320,7 @@ namespace QrAguas.Controls
             return rowCount != 0 ? true : false;
         }
 
-        public bool EditarCategoria(int idCategoria, string nomeCategoria)
+        public bool AtualizarCategoria(int idCategoria, string nomeCategoria)
         {
             string queryEditarCategoria = "UPDATE CATEGORIAS SET NOME_CATEGORIA = @NOME_CATEGORIA WHERE ID_CATEGORIAS = @ID_CATEGORIA";
 
