@@ -38,6 +38,7 @@ namespace QrAguas.View_Layer
             {
                 try
                 {
+                    // Realiza a atualização da categoria
                     if (functions.AtualizarCategoria(IdCategoria, txtAtualizarCategoria.Text.Trim()))
                     {
                         MessageBox.Show("Atualizado com sucesso !", "Atualizado", MessageBoxButtons.OK, MessageBoxIcon.Information);
@@ -46,12 +47,13 @@ namespace QrAguas.View_Layer
                     }
                     else
                     {
+                        // caso não seja possível realizar a atualização, uma mensagem de erro é exibida
                         MessageBox.Show("Erro ao atualizar ", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     }
                 } 
                 catch (Exception erro)
                 {
-
+                    // caso não seja possível realizar a atualização, uma mensagem de erro é exibida
                     MessageBox.Show("Erro ao atualizar \nErro: " + erro, "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             }

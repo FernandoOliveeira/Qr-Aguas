@@ -83,6 +83,9 @@ namespace QrAguas.View_Layer
 
         private void TxtNumero_TextChanged(object sender, EventArgs e)
         {
+            // Caso o textBox que recebe o número do local, não esteja preenchido, 
+            // o mesmo recebe o valor null, para que não haja erro de 
+            // exceções na hora da verificação
             if (txtNumero.Text.Equals(""))
             {
                 txtNumero.Text = null;

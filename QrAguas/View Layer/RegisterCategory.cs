@@ -18,6 +18,8 @@ namespace QrAguas.View_Layer
             InitializeComponent();
         }
 
+        // Propriedade utilizada com uma flag
+        // Caso o form UpdateCategory realize a atualização de alguma categoria, esta propriedade recebe o valor de true
         public static bool UpdateCategoryResultado { private get; set; }
 
         Functions functions = new Functions();
@@ -26,14 +28,14 @@ namespace QrAguas.View_Layer
         {
             UpdateCategoryResultado = false;
 
-            // TODO: This line of code loads data into the '_0ybkkaeekeDataSetRegisterCategory.categorias' table. You can move, or remove it, as needed.
+            // Faz com que o DataGridView receba os valores do banco de dados
             this.categoriasTableAdapter.Fill(this._0ybkkaeekeDataSetRegisterCategory.categorias);
 
         }
 
         private void DataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-
+            // "Evento de click" no botão Excluir no DataGridView
             if (dataGridView1.Columns[e.ColumnIndex].Name.Equals("Excluir"))
             {
                 int idCategoria = (int) dataGridView1.SelectedRows[0].Cells[0].Value;
@@ -49,6 +51,7 @@ namespace QrAguas.View_Layer
 
                         MessageBox.Show("Categoria excluída com sucesso.", "Excluído com sucesso", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
+                        // Atualiza o DataGridView após as modificações
                         this.categoriasTableAdapter.Fill(this._0ybkkaeekeDataSetRegisterCategory.categorias);
 
                     }
@@ -62,7 +65,8 @@ namespace QrAguas.View_Layer
                 }
             }
 
-            if (dataGridView1.Columns[e.ColumnIndex].Name.Equals("Editar"))
+            // "Evento de click" no botão Atualizar no DataGridView
+            if (dataGridView1.Columns[e.ColumnIndex].Name.Equals("Atualizar"))
             {
                 int idCategoria = (int)dataGridView1.SelectedRows[0].Cells[0].Value;
                 string nomeCategoria = dataGridView1.SelectedRows[0].Cells[1].Value.ToString();
@@ -83,6 +87,7 @@ namespace QrAguas.View_Layer
                     {
                         UpdateCategoryResultado = false;
 
+                        // Atualiza o DataGridView após as modificações
                         this.categoriasTableAdapter.Fill(this._0ybkkaeekeDataSetRegisterCategory.categorias);
                     }
                 }
@@ -104,7 +109,7 @@ namespace QrAguas.View_Layer
                     {
                         MessageBox.Show("Nova Categoria cadastrada com sucesso", "Cadastrado com sucesso", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
-                        // Está linha de código faz com que o DataGridView atualize após a inserção de uma nova categoria
+                        // Atualiza o DataGridView após as modificações
                         this.categoriasTableAdapter.Fill(this._0ybkkaeekeDataSetRegisterCategory.categorias);
 
                     }
