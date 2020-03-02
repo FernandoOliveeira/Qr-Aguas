@@ -311,7 +311,7 @@ namespace QrAguas.Controls
             command.Parameters.AddWithValue("@CELULAR", objFornecedor.Celular);
             command.Parameters.AddWithValue("@CEP", objFornecedor.Cep);
             command.Parameters.AddWithValue("@EMAIL", objFornecedor.Email);
-            command.Parameters.AddWithValue("@ID_USUARIOS", Login.TipoUsuario);
+            command.Parameters.AddWithValue("@ID_USUARIOS", Login.IdUsuario);
 
             int rowCount = command.ExecuteNonQuery();
 
@@ -332,7 +332,7 @@ namespace QrAguas.Controls
             MySqlCommand command = new MySqlCommand(queryCadastrarCategoria, AbrirBanco());
 
             command.Parameters.AddWithValue("@NOME_CATEGORIA", categoria);
-            command.Parameters.AddWithValue("@ID_USUARIOS", Login.TipoUsuario);
+            command.Parameters.AddWithValue("@ID_USUARIOS", Login.IdUsuario);
 
             int rowCount = command.ExecuteNonQuery();
 
@@ -356,14 +356,14 @@ namespace QrAguas.Controls
             return rowCount != 0 ? true : false;
         }
 
-        public bool AtualizarCategoria(int idCategoria, string nomeCategoria, int idUsuario)
+        public bool AtualizarCategoria(int idCategoria, string nomeCategoria)
         {
             string queryEditarCategoria = "UPDATE CATEGORIAS SET NOME_CATEGORIA = @NOME_CATEGORIA, ATUALIZADO_POR = @ATUALIZADO_POR, DATA_ATUALIZACAO = @DATA_ATUALIZACAO WHERE ID_CATEGORIAS = @ID_CATEGORIAS";
 
             MySqlCommand command = new MySqlCommand(queryEditarCategoria, AbrirBanco());
 
             command.Parameters.AddWithValue("@NOME_CATEGORIA", nomeCategoria);
-            command.Parameters.AddWithValue("@ATUALIZADO_POR", idUsuario);
+            command.Parameters.AddWithValue("@ATUALIZADO_POR", Login.IdUsuario);
             command.Parameters.AddWithValue("@DATA_ATUALIZACAO", DateTime.Now);
             command.Parameters.AddWithValue("@ID_CATEGORIAS", idCategoria);
 

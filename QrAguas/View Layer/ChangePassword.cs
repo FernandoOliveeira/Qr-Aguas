@@ -37,7 +37,7 @@ namespace QrAguas.View_Layer
             lblSenhaAtualAviso.Text = "";
         }
         
-        private void txtNovaSenha_TextChanged(object sender, EventArgs e)
+        private void TxtNovaSenha_TextChanged(object sender, EventArgs e)
         {
             if (txtNovaSenha.Text.Trim().Equals(txtConfirmarSenha.Text))
             {
@@ -53,7 +53,7 @@ namespace QrAguas.View_Layer
             }
         }
 
-        private void txtConfirmarSenha_TextChanged(object sender, EventArgs e)
+        private void TxtConfirmarSenha_TextChanged(object sender, EventArgs e)
         {
             if (txtConfirmarSenha.Text.Trim().Equals(txtNovaSenha.Text))
             {
@@ -69,7 +69,7 @@ namespace QrAguas.View_Layer
             }
         }
 
-        private void btnConfirmar_Click(object sender, EventArgs e)
+        private void BtnConfirmar_Click(object sender, EventArgs e)
         {
             // Se um mais campos estiverem vazios, aparecerá uma mensagem de erro
             if (txtSenhaAtual.Text.Trim().Equals("") ||

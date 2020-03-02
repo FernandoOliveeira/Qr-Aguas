@@ -191,7 +191,7 @@
             this.btnConfirmar.TabIndex = 0;
             this.btnConfirmar.Text = "Confirmar";
             this.btnConfirmar.UseVisualStyleBackColor = false;
-            this.btnConfirmar.Click += new System.EventHandler(this.btnConfirmar_Click);
+            this.btnConfirmar.Click += new System.EventHandler(this.BtnConfirmar_Click);
             // 
             // panelNovaSenha
             // 
@@ -231,7 +231,7 @@
             this.txtNovaSenha.PasswordChar = '●';
             this.txtNovaSenha.Size = new System.Drawing.Size(303, 23);
             this.txtNovaSenha.TabIndex = 40;
-            this.txtNovaSenha.TextChanged += new System.EventHandler(this.txtNovaSenha_TextChanged);
+            this.txtNovaSenha.TextChanged += new System.EventHandler(this.TxtNovaSenha_TextChanged);
             // 
             // panelConfirmarSenha
             // 
@@ -284,7 +284,7 @@
             this.txtConfirmarSenha.PasswordChar = '●';
             this.txtConfirmarSenha.Size = new System.Drawing.Size(303, 23);
             this.txtConfirmarSenha.TabIndex = 40;
-            this.txtConfirmarSenha.TextChanged += new System.EventHandler(this.txtConfirmarSenha_TextChanged);
+            this.txtConfirmarSenha.TextChanged += new System.EventHandler(this.TxtConfirmarSenha_TextChanged);
             // 
             // lblTitulo
             // 
