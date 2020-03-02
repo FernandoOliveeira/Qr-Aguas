@@ -24,6 +24,7 @@ namespace QrAguas.View_Layer
         
         public static string NomeUsuario { get; private set; }
         public static int  TipoUsuario { get; private set; }
+        public static int IdUsuario { get; private set; }
 
         #region código para tornar o form "arrastavel" 
         public const int WM_NCLBUTTONDOWN = 0xA1;
@@ -58,7 +59,8 @@ namespace QrAguas.View_Layer
             {
                 
                 NomeUsuario = txtUsuario.Text.Trim();
-                TipoUsuario = functions.VerificarTipoUsuario(txtUsuario.Text.Trim());
+                TipoUsuario = functions.VerificarTipoUsuario(NomeUsuario);
+                IdUsuario = functions.VerificarIdUsuario(NomeUsuario);
 
                 // Abrir o form MainForm e fechar o atual
                 this.Close();
