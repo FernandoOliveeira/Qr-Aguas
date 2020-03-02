@@ -64,7 +64,7 @@
     <Compile Include="Controls\Functions.cs" />
     <Compile Include="Models\CepResponse.cs" />
     <Compile Include="Models\ICepApiService.cs" />
-    <Compile Include="Models\NewGallon.cs" />
+    <Compile Include="Models\NewProduct.cs" />
     <Compile Include="Models\NewProvider.cs" />
     <Compile Include="Models\NewUser.cs" />
     <Compile Include="Program.cs" />

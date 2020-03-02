@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace QrAguas.Models
 {
-    class NewGallon
+    class NewProduct
     {
         public string CodigoProduto { get; set; }
         public string NomeProduto { get; set; }
