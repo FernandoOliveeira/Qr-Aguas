@@ -332,14 +332,16 @@ namespace QrAguas.Controls
             return rowCount != 0 ? true : false;
         }
 
-        public bool AtualizarCategoria(int idCategoria, string nomeCategoria)
+        public bool AtualizarCategoria(int idCategoria, string nomeCategoria, int idUsuario)
         {
-            string queryEditarCategoria = "UPDATE CATEGORIAS SET NOME_CATEGORIA = @NOME_CATEGORIA WHERE ID_CATEGORIAS = @ID_CATEGORIA";
+            string queryEditarCategoria = "UPDATE CATEGORIAS SET NOME_CATEGORIA = @NOME_CATEGORIA, ATUALIZADO_POR = @ATUALIZADO_POR, DATA_ATUALIZACAO = @DATA_ATUALIZACAO WHERE ID_CATEGORIAS = @ID_CATEGORIAS";
 
             MySqlCommand command = new MySqlCommand(queryEditarCategoria, AbrirBanco());
 
             command.Parameters.AddWithValue("@NOME_CATEGORIA", nomeCategoria);
-            command.Parameters.AddWithValue("@ID_CATEGORIA", idCategoria);
+            command.Parameters.AddWithValue("@ATUALIZADO_POR", idUsuario);
+            command.Parameters.AddWithValue("@DATA_ATUALIZACAO", DateTime.Now);
+            command.Parameters.AddWithValue("@ID_CATEGORIAS", idCategoria);
 
             int rowCount = command.ExecuteNonQuery();
 
