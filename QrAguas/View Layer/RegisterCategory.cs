@@ -18,10 +18,14 @@ namespace QrAguas.View_Layer
             InitializeComponent();
         }
 
+        public static bool UpdateCategoryResultado { private get; set; }
+
         Functions functions = new Functions();
 
         private void RegisterCategory_Load(object sender, EventArgs e)
         {
+            UpdateCategoryResultado = false;
+
             // TODO: This line of code loads data into the '_0ybkkaeekeDataSetRegisterCategory.categorias' table. You can move, or remove it, as needed.
             this.categoriasTableAdapter.Fill(this._0ybkkaeekeDataSetRegisterCategory.categorias);
 
@@ -74,6 +78,13 @@ namespace QrAguas.View_Layer
                     };
 
                     updateCategory.ShowDialog();
+
+                    if (UpdateCategoryResultado.Equals(true))
+                    {
+                        UpdateCategoryResultado = false;
+
+                        this.categoriasTableAdapter.Fill(this._0ybkkaeekeDataSetRegisterCategory.categorias);
+                    }
                 }
                 
             }

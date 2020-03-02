@@ -53,7 +53,7 @@
             this.tableLayoutPanel1.Controls.Add(this.panel3, 0, 0);
             this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 0);
-            this.tableLayoutPanel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tableLayoutPanel1.Margin = new System.Windows.Forms.Padding(4);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 3;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 37.7907F));
@@ -69,7 +69,7 @@
             this.panel1.Controls.Add(this.txtAtualizarCategoria);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel1.Location = new System.Drawing.Point(4, 73);
-            this.panel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel1.Margin = new System.Windows.Forms.Padding(4);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(234, 106);
             this.panel1.TabIndex = 1;
@@ -92,7 +92,7 @@
             this.txtAtualizarCategoria.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.txtAtualizarCategoria.Location = new System.Drawing.Point(9, 39);
-            this.txtAtualizarCategoria.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtAtualizarCategoria.Margin = new System.Windows.Forms.Padding(4);
             this.txtAtualizarCategoria.Name = "txtAtualizarCategoria";
             this.txtAtualizarCategoria.Size = new System.Drawing.Size(183, 23);
             this.txtAtualizarCategoria.TabIndex = 0;
@@ -102,7 +102,7 @@
             this.panelBtnCadastrar.Controls.Add(this.btnAtualizar);
             this.panelBtnCadastrar.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelBtnCadastrar.Location = new System.Drawing.Point(246, 73);
-            this.panelBtnCadastrar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panelBtnCadastrar.Margin = new System.Windows.Forms.Padding(4);
             this.panelBtnCadastrar.Name = "panelBtnCadastrar";
             this.panelBtnCadastrar.Size = new System.Drawing.Size(234, 106);
             this.panelBtnCadastrar.TabIndex = 8;
@@ -117,7 +117,7 @@
             this.btnAtualizar.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAtualizar.ForeColor = System.Drawing.Color.White;
             this.btnAtualizar.Location = new System.Drawing.Point(4, 27);
-            this.btnAtualizar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnAtualizar.Margin = new System.Windows.Forms.Padding(4);
             this.btnAtualizar.Name = "btnAtualizar";
             this.btnAtualizar.Size = new System.Drawing.Size(184, 35);
             this.btnAtualizar.TabIndex = 0;
@@ -131,7 +131,7 @@
             this.panel3.Controls.Add(this.lblTitulo);
             this.panel3.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel3.Location = new System.Drawing.Point(4, 4);
-            this.panel3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel3.Margin = new System.Windows.Forms.Padding(4);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(476, 61);
             this.panel3.TabIndex = 1;
@@ -159,7 +159,7 @@
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.25F);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.MaximizeBox = false;
             this.Name = "UpdateCategory";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;

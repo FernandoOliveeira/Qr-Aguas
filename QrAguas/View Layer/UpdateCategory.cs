@@ -41,6 +41,7 @@ namespace QrAguas.View_Layer
                     if (functions.AtualizarCategoria(IdCategoria, txtAtualizarCategoria.Text.Trim()))
                     {
                         MessageBox.Show("Atualizado com sucesso !", "Atualizado", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        RegisterCategory.UpdateCategoryResultado = true;
                         Close();
                     }
                     else
