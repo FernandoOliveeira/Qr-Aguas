@@ -30,7 +30,6 @@
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(RegisterProduct));
-            this.txtFornecedor = new System.Windows.Forms.TextBox();
             this.lblFornecedor = new System.Windows.Forms.Label();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.panel5 = new System.Windows.Forms.Panel();
@@ -39,7 +38,7 @@
             this.panel4 = new System.Windows.Forms.Panel();
             this.txtCategoria = new System.Windows.Forms.ComboBox();
             this.categoriasBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this._0ybkkaeekeDataSetRegisterProduct = new QrAguas._0ybkkaeekeDataSetRegisterProduct();
+            this._0ybkkaeekeDataSetRegisterProductCategorias = new QrAguas._0ybkkaeekeDataSetRegisterProduct();
             this.lblCategoria = new System.Windows.Forms.Label();
             this.panelPrecoCompra = new System.Windows.Forms.Panel();
             this.txtPrecoCompra = new System.Windows.Forms.TextBox();
@@ -64,11 +63,15 @@
             this.lblDataFabricacao = new System.Windows.Forms.Label();
             this.lblTitulo = new System.Windows.Forms.Label();
             this.categoriasTableAdapter = new QrAguas._0ybkkaeekeDataSetRegisterProductTableAdapters.categoriasTableAdapter();
+            this.txtFornecedor = new System.Windows.Forms.ComboBox();
+            this._0ybkkaeekeDataSetRegisterProductFornecedores = new QrAguas._0ybkkaeekeDataSetRegisterProductFornecedores();
+            this.fornecedoresBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.fornecedoresTableAdapter = new QrAguas._0ybkkaeekeDataSetRegisterProductFornecedoresTableAdapters.fornecedoresTableAdapter();
             this.tableLayoutPanel1.SuspendLayout();
             this.panel5.SuspendLayout();
             this.panel4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.categoriasBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this._0ybkkaeekeDataSetRegisterProduct)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this._0ybkkaeekeDataSetRegisterProductCategorias)).BeginInit();
             this.panelPrecoCompra.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel1.SuspendLayout();
@@ -77,17 +80,9 @@
             this.panelDescricao.SuspendLayout();
             this.panelBtnCadastrar.SuspendLayout();
             this.panel3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this._0ybkkaeekeDataSetRegisterProductFornecedores)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.fornecedoresBindingSource)).BeginInit();
             this.SuspendLayout();
-            // 
-            // txtFornecedor
-            // 
-            this.txtFornecedor.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtFornecedor.Location = new System.Drawing.Point(12, 34);
-            this.txtFornecedor.Margin = new System.Windows.Forms.Padding(4);
-            this.txtFornecedor.Name = "txtFornecedor";
-            this.txtFornecedor.Size = new System.Drawing.Size(186, 23);
-            this.txtFornecedor.TabIndex = 0;
             // 
             // lblFornecedor
             // 
@@ -194,12 +189,12 @@
             // categoriasBindingSource
             // 
             this.categoriasBindingSource.DataMember = "categorias";
-            this.categoriasBindingSource.DataSource = this._0ybkkaeekeDataSetRegisterProduct;
+            this.categoriasBindingSource.DataSource = this._0ybkkaeekeDataSetRegisterProductCategorias;
             // 
-            // _0ybkkaeekeDataSetRegisterProduct
+            // _0ybkkaeekeDataSetRegisterProductCategorias
             // 
-            this._0ybkkaeekeDataSetRegisterProduct.DataSetName = "_0ybkkaeekeDataSetRegisterProduct";
-            this._0ybkkaeekeDataSetRegisterProduct.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            this._0ybkkaeekeDataSetRegisterProductCategorias.DataSetName = "_0ybkkaeekeDataSetRegisterProductCategorias";
+            this._0ybkkaeekeDataSetRegisterProductCategorias.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // lblCategoria
             // 
@@ -468,6 +463,35 @@
             // 
             this.categoriasTableAdapter.ClearBeforeFill = true;
             // 
+            // txtFornecedor
+            // 
+            this.txtFornecedor.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtFornecedor.DataSource = this.fornecedoresBindingSource;
+            this.txtFornecedor.DisplayMember = "RAZAO_SOCIAL";
+            this.txtFornecedor.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.txtFornecedor.FormattingEnabled = true;
+            this.txtFornecedor.Location = new System.Drawing.Point(12, 28);
+            this.txtFornecedor.Name = "txtFornecedor";
+            this.txtFornecedor.Size = new System.Drawing.Size(186, 25);
+            this.txtFornecedor.TabIndex = 2;
+            this.txtFornecedor.ValueMember = "ID_FORNECEDORES";
+            this.txtFornecedor.Click += new System.EventHandler(this.TxtFornecedor_Click);
+            // 
+            // _0ybkkaeekeDataSetRegisterProductFornecedores
+            // 
+            this._0ybkkaeekeDataSetRegisterProductFornecedores.DataSetName = "_0ybkkaeekeDataSetRegisterProductFornecedores";
+            this._0ybkkaeekeDataSetRegisterProductFornecedores.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // fornecedoresBindingSource
+            // 
+            this.fornecedoresBindingSource.DataMember = "fornecedores";
+            this.fornecedoresBindingSource.DataSource = this._0ybkkaeekeDataSetRegisterProductFornecedores;
+            // 
+            // fornecedoresTableAdapter
+            // 
+            this.fornecedoresTableAdapter.ClearBeforeFill = true;
+            // 
             // RegisterProduct
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 17F);
@@ -491,7 +515,7 @@
             this.panel4.ResumeLayout(false);
             this.panel4.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.categoriasBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this._0ybkkaeekeDataSetRegisterProduct)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this._0ybkkaeekeDataSetRegisterProductCategorias)).EndInit();
             this.panelPrecoCompra.ResumeLayout(false);
             this.panelPrecoCompra.PerformLayout();
             this.panel2.ResumeLayout(false);
@@ -507,13 +531,13 @@
             this.panelBtnCadastrar.ResumeLayout(false);
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this._0ybkkaeekeDataSetRegisterProductFornecedores)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.fornecedoresBindingSource)).EndInit();
             this.ResumeLayout(false);
 
         }
 
         #endregion
-
-        private System.Windows.Forms.TextBox txtFornecedor;
         private System.Windows.Forms.Label lblFornecedor;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
         private System.Windows.Forms.Panel panelFornecedor;
@@ -544,8 +568,12 @@
         private System.Windows.Forms.Label lblDataValidade;
         private System.Windows.Forms.Label lblTitulo;
         private System.Windows.Forms.ComboBox txtCategoria;
-        private _0ybkkaeekeDataSetRegisterProduct _0ybkkaeekeDataSetRegisterProduct;
+        private _0ybkkaeekeDataSetRegisterProduct _0ybkkaeekeDataSetRegisterProductCategorias;
         private System.Windows.Forms.BindingSource categoriasBindingSource;
         private _0ybkkaeekeDataSetRegisterProductTableAdapters.categoriasTableAdapter categoriasTableAdapter;
+        private System.Windows.Forms.ComboBox txtFornecedor;
+        private _0ybkkaeekeDataSetRegisterProductFornecedores _0ybkkaeekeDataSetRegisterProductFornecedores;
+        private System.Windows.Forms.BindingSource fornecedoresBindingSource;
+        private _0ybkkaeekeDataSetRegisterProductFornecedoresTableAdapters.fornecedoresTableAdapter fornecedoresTableAdapter;
     }
 }
