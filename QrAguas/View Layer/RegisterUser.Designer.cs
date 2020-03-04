@@ -44,26 +44,26 @@
             this.txtConfirmarSenha = new System.Windows.Forms.TextBox();
             this.panel1 = new System.Windows.Forms.Panel();
             this.CBFuncao = new System.Windows.Forms.ComboBox();
-            this.tipousuarioBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this._0ybkkaeekeDataSet1 = new QrAguas._0ybkkaeekeDataSet1();
+            this.tipousuarioBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
+            this._0ybkkaeekeDataSet2 = new QrAguas._0ybkkaeekeDataSet2();
             this.lblFuncao = new System.Windows.Forms.Label();
             this.panelBtnCadastrar = new System.Windows.Forms.Panel();
             this.btnCadastrar = new System.Windows.Forms.Button();
+            this.tipousuarioBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this._0ybkkaeekeDataSet1 = new QrAguas._0ybkkaeekeDataSet1();
             this.lblTitulo = new System.Windows.Forms.Label();
             this.tipo_usuarioTableAdapter = new QrAguas._0ybkkaeekeDataSet1TableAdapters.tipo_usuarioTableAdapter();
-            this._0ybkkaeekeDataSet2 = new QrAguas._0ybkkaeekeDataSet2();
-            this.tipousuarioBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.tipo_usuarioTableAdapter1 = new QrAguas._0ybkkaeekeDataSet2TableAdapters.tipo_usuarioTableAdapter();
             this.tableLayoutPanel1.SuspendLayout();
             this.panelUsuario.SuspendLayout();
             this.panelSenha.SuspendLayout();
             this.panelConfirmarSenha.SuspendLayout();
             this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.tipousuarioBindingSource1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this._0ybkkaeekeDataSet2)).BeginInit();
+            this.panelBtnCadastrar.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.tipousuarioBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this._0ybkkaeekeDataSet1)).BeginInit();
-            this.panelBtnCadastrar.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this._0ybkkaeekeDataSet2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.tipousuarioBindingSource1)).BeginInit();
             this.SuspendLayout();
             // 
             // lblUsuario
@@ -250,21 +250,22 @@
             this.CBFuncao.DisplayMember = "DESCRICAO";
             this.CBFuncao.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.CBFuncao.FormattingEnabled = true;
+            this.CBFuncao.IntegralHeight = false;
             this.CBFuncao.Location = new System.Drawing.Point(4, 23);
             this.CBFuncao.Name = "CBFuncao";
             this.CBFuncao.Size = new System.Drawing.Size(303, 21);
             this.CBFuncao.TabIndex = 43;
             this.CBFuncao.ValueMember = "ID_TIPO_USUARIO";
             // 
-            // tipousuarioBindingSource
+            // tipousuarioBindingSource1
             // 
-            this.tipousuarioBindingSource.DataMember = "tipo_usuario";
-            this.tipousuarioBindingSource.DataSource = this._0ybkkaeekeDataSet1;
+            this.tipousuarioBindingSource1.DataMember = "tipo_usuario";
+            this.tipousuarioBindingSource1.DataSource = this._0ybkkaeekeDataSet2;
             // 
-            // _0ybkkaeekeDataSet1
+            // _0ybkkaeekeDataSet2
             // 
-            this._0ybkkaeekeDataSet1.DataSetName = "_0ybkkaeekeDataSet1";
-            this._0ybkkaeekeDataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            this._0ybkkaeekeDataSet2.DataSetName = "_0ybkkaeekeDataSet2";
+            this._0ybkkaeekeDataSet2.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // lblFuncao
             // 
@@ -306,6 +307,16 @@
             this.btnCadastrar.UseVisualStyleBackColor = false;
             this.btnCadastrar.Click += new System.EventHandler(this.BtnCadastrar_Click);
             // 
+            // tipousuarioBindingSource
+            // 
+            this.tipousuarioBindingSource.DataMember = "tipo_usuario";
+            this.tipousuarioBindingSource.DataSource = this._0ybkkaeekeDataSet1;
+            // 
+            // _0ybkkaeekeDataSet1
+            // 
+            this._0ybkkaeekeDataSet1.DataSetName = "_0ybkkaeekeDataSet1";
+            this._0ybkkaeekeDataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
             // lblTitulo
             // 
             this.lblTitulo.Dock = System.Windows.Forms.DockStyle.Top;
@@ -321,16 +332,6 @@
             // tipo_usuarioTableAdapter
             // 
             this.tipo_usuarioTableAdapter.ClearBeforeFill = true;
-            // 
-            // _0ybkkaeekeDataSet2
-            // 
-            this._0ybkkaeekeDataSet2.DataSetName = "_0ybkkaeekeDataSet2";
-            this._0ybkkaeekeDataSet2.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // tipousuarioBindingSource1
-            // 
-            this.tipousuarioBindingSource1.DataMember = "tipo_usuario";
-            this.tipousuarioBindingSource1.DataSource = this._0ybkkaeekeDataSet2;
             // 
             // tipo_usuarioTableAdapter1
             // 
@@ -360,11 +361,11 @@
             this.panelConfirmarSenha.PerformLayout();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.tipousuarioBindingSource1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this._0ybkkaeekeDataSet2)).EndInit();
+            this.panelBtnCadastrar.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.tipousuarioBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this._0ybkkaeekeDataSet1)).EndInit();
-            this.panelBtnCadastrar.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this._0ybkkaeekeDataSet2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.tipousuarioBindingSource1)).EndInit();
             this.ResumeLayout(false);
 
         }
