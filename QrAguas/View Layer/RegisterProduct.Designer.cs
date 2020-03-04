@@ -50,6 +50,9 @@
             this.txtCodProduto = new System.Windows.Forms.TextBox();
             this.lblCodProduto = new System.Windows.Forms.Label();
             this.panelFornecedor = new System.Windows.Forms.Panel();
+            this.txtFornecedor = new System.Windows.Forms.ComboBox();
+            this.fornecedoresBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this._0ybkkaeekeDataSetRegisterProductFornecedores = new QrAguas._0ybkkaeekeDataSetRegisterProductFornecedores();
             this.panelPrecoEntrega = new System.Windows.Forms.Panel();
             this.txtPrecoVenda = new System.Windows.Forms.TextBox();
             this.lblPrecoVenda = new System.Windows.Forms.Label();
@@ -63,9 +66,6 @@
             this.lblDataFabricacao = new System.Windows.Forms.Label();
             this.lblTitulo = new System.Windows.Forms.Label();
             this.categoriasTableAdapter = new QrAguas._0ybkkaeekeDataSetRegisterProductTableAdapters.categoriasTableAdapter();
-            this.txtFornecedor = new System.Windows.Forms.ComboBox();
-            this._0ybkkaeekeDataSetRegisterProductFornecedores = new QrAguas._0ybkkaeekeDataSetRegisterProductFornecedores();
-            this.fornecedoresBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.fornecedoresTableAdapter = new QrAguas._0ybkkaeekeDataSetRegisterProductFornecedoresTableAdapters.fornecedoresTableAdapter();
             this.tableLayoutPanel1.SuspendLayout();
             this.panel5.SuspendLayout();
@@ -76,12 +76,12 @@
             this.panel2.SuspendLayout();
             this.panel1.SuspendLayout();
             this.panelFornecedor.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.fornecedoresBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this._0ybkkaeekeDataSetRegisterProductFornecedores)).BeginInit();
             this.panelPrecoEntrega.SuspendLayout();
             this.panelDescricao.SuspendLayout();
             this.panelBtnCadastrar.SuspendLayout();
             this.panel3.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this._0ybkkaeekeDataSetRegisterProductFornecedores)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.fornecedoresBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // lblFornecedor
@@ -168,7 +168,7 @@
             this.panel4.Margin = new System.Windows.Forms.Padding(4);
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(203, 102);
-            this.panel4.TabIndex = 7;
+            this.panel4.TabIndex = 6;
             // 
             // txtCategoria
             // 
@@ -178,6 +178,8 @@
             this.txtCategoria.DisplayMember = "NOME_CATEGORIA";
             this.txtCategoria.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.txtCategoria.FormattingEnabled = true;
+            this.txtCategoria.IntegralHeight = false;
+            this.txtCategoria.ItemHeight = 17;
             this.txtCategoria.Location = new System.Drawing.Point(12, 30);
             this.txtCategoria.Margin = new System.Windows.Forms.Padding(4);
             this.txtCategoria.Name = "txtCategoria";
@@ -318,6 +320,32 @@
             this.panelFornecedor.Size = new System.Drawing.Size(203, 83);
             this.panelFornecedor.TabIndex = 3;
             // 
+            // txtFornecedor
+            // 
+            this.txtFornecedor.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtFornecedor.DataSource = this.fornecedoresBindingSource;
+            this.txtFornecedor.DisplayMember = "RAZAO_SOCIAL";
+            this.txtFornecedor.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.txtFornecedor.FormattingEnabled = true;
+            this.txtFornecedor.IntegralHeight = false;
+            this.txtFornecedor.Location = new System.Drawing.Point(12, 28);
+            this.txtFornecedor.Name = "txtFornecedor";
+            this.txtFornecedor.Size = new System.Drawing.Size(186, 25);
+            this.txtFornecedor.TabIndex = 2;
+            this.txtFornecedor.ValueMember = "ID_FORNECEDORES";
+            this.txtFornecedor.Click += new System.EventHandler(this.TxtFornecedor_Click);
+            // 
+            // fornecedoresBindingSource
+            // 
+            this.fornecedoresBindingSource.DataMember = "fornecedores";
+            this.fornecedoresBindingSource.DataSource = this._0ybkkaeekeDataSetRegisterProductFornecedores;
+            // 
+            // _0ybkkaeekeDataSetRegisterProductFornecedores
+            // 
+            this._0ybkkaeekeDataSetRegisterProductFornecedores.DataSetName = "_0ybkkaeekeDataSetRegisterProductFornecedores";
+            this._0ybkkaeekeDataSetRegisterProductFornecedores.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
             // panelPrecoEntrega
             // 
             this.panelPrecoEntrega.Controls.Add(this.txtPrecoVenda);
@@ -393,7 +421,7 @@
             this.panelBtnCadastrar.Margin = new System.Windows.Forms.Padding(4);
             this.panelBtnCadastrar.Name = "panelBtnCadastrar";
             this.panelBtnCadastrar.Size = new System.Drawing.Size(626, 58);
-            this.panelBtnCadastrar.TabIndex = 7;
+            this.panelBtnCadastrar.TabIndex = 9;
             // 
             // btnCadastrar
             // 
@@ -421,7 +449,7 @@
             this.panel3.Margin = new System.Windows.Forms.Padding(4);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(203, 102);
-            this.panel3.TabIndex = 6;
+            this.panel3.TabIndex = 7;
             // 
             // txtDataFabricacao
             // 
@@ -463,31 +491,6 @@
             // 
             this.categoriasTableAdapter.ClearBeforeFill = true;
             // 
-            // txtFornecedor
-            // 
-            this.txtFornecedor.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtFornecedor.DataSource = this.fornecedoresBindingSource;
-            this.txtFornecedor.DisplayMember = "RAZAO_SOCIAL";
-            this.txtFornecedor.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.txtFornecedor.FormattingEnabled = true;
-            this.txtFornecedor.Location = new System.Drawing.Point(12, 28);
-            this.txtFornecedor.Name = "txtFornecedor";
-            this.txtFornecedor.Size = new System.Drawing.Size(186, 25);
-            this.txtFornecedor.TabIndex = 2;
-            this.txtFornecedor.ValueMember = "ID_FORNECEDORES";
-            this.txtFornecedor.Click += new System.EventHandler(this.TxtFornecedor_Click);
-            // 
-            // _0ybkkaeekeDataSetRegisterProductFornecedores
-            // 
-            this._0ybkkaeekeDataSetRegisterProductFornecedores.DataSetName = "_0ybkkaeekeDataSetRegisterProductFornecedores";
-            this._0ybkkaeekeDataSetRegisterProductFornecedores.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // fornecedoresBindingSource
-            // 
-            this.fornecedoresBindingSource.DataMember = "fornecedores";
-            this.fornecedoresBindingSource.DataSource = this._0ybkkaeekeDataSetRegisterProductFornecedores;
-            // 
             // fornecedoresTableAdapter
             // 
             this.fornecedoresTableAdapter.ClearBeforeFill = true;
@@ -524,6 +527,8 @@
             this.panel1.PerformLayout();
             this.panelFornecedor.ResumeLayout(false);
             this.panelFornecedor.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.fornecedoresBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this._0ybkkaeekeDataSetRegisterProductFornecedores)).EndInit();
             this.panelPrecoEntrega.ResumeLayout(false);
             this.panelPrecoEntrega.PerformLayout();
             this.panelDescricao.ResumeLayout(false);
@@ -531,8 +536,6 @@
             this.panelBtnCadastrar.ResumeLayout(false);
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this._0ybkkaeekeDataSetRegisterProductFornecedores)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.fornecedoresBindingSource)).EndInit();
             this.ResumeLayout(false);
 
         }
