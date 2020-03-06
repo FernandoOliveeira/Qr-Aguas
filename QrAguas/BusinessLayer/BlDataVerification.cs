@@ -47,6 +47,22 @@ namespace QrAguas.BusinessLayer
             return false;
         }
 
+        public bool VerificarDadosProdutos(NewProduct produto)
+        {
+            if (!String.IsNullOrEmpty(produto.Categoria.ToString()) &&
+                !String.IsNullOrEmpty(produto.CodigoProduto) &&
+                !String.IsNullOrEmpty(produto.DataFabricao.ToString()) &&
+                !String.IsNullOrEmpty(produto.DataValidade.ToString()) &&
+                !String.IsNullOrEmpty(produto.Descricao) &&
+                !String.IsNullOrEmpty(produto.Fornecedor.ToString()) &&
+                !String.IsNullOrEmpty(produto.NomeProduto) &&
+                !String.IsNullOrEmpty(produto.PrecoCompra.ToString()) &&
+                !String.IsNullOrEmpty(produto.PrecoVenda.ToString()))
+            {
+                return true;
+            }
 
+            return false;
+        }
     }
 }

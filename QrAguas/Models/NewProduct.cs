@@ -11,7 +11,7 @@ namespace QrAguas.Models
         public string CodigoProduto { get; set; }
         public string NomeProduto { get; set; }
         public double PrecoCompra { get; set; }
-        public string Fornecedor { get; set; }
+        public int Fornecedor { get; set; }
         public string Descricao { get; set; }
         public double PrecoVenda { get; set; }
         public int Categoria { get; set; }
