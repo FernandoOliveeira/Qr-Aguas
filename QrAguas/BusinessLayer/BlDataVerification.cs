@@ -58,11 +58,19 @@ namespace QrAguas.BusinessLayer
                 !String.IsNullOrEmpty(produto.NomeProduto) &&
                 !String.IsNullOrEmpty(produto.PrecoCompra.ToString()) &&
                 !String.IsNullOrEmpty(produto.PrecoVenda.ToString()))
+
             {
+                if (produto.PrecoCompra.Equals(0) || produto.PrecoVenda.Equals(0))
+                {
+                    return false;
+                }
+
                 return true;
             }
 
             return false;
         }
+
+
     }
 }

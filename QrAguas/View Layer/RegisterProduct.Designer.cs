@@ -33,10 +33,10 @@
             this.lblFornecedor = new System.Windows.Forms.Label();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.panel5 = new System.Windows.Forms.Panel();
-            this.txtDataValidade = new System.Windows.Forms.MaskedTextBox();
+            this.DTPValidade = new System.Windows.Forms.DateTimePicker();
             this.lblDataValidade = new System.Windows.Forms.Label();
             this.panel4 = new System.Windows.Forms.Panel();
-            this.txtCategoria = new System.Windows.Forms.ComboBox();
+            this.CBCategoria = new System.Windows.Forms.ComboBox();
             this.categoriasBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this._0ybkkaeekeDataSetRegisterProductCategorias = new QrAguas._0ybkkaeekeDataSetRegisterProduct();
             this.lblCategoria = new System.Windows.Forms.Label();
@@ -50,7 +50,7 @@
             this.txtCodProduto = new System.Windows.Forms.TextBox();
             this.lblCodProduto = new System.Windows.Forms.Label();
             this.panelFornecedor = new System.Windows.Forms.Panel();
-            this.txtFornecedor = new System.Windows.Forms.ComboBox();
+            this.CBFornecedor = new System.Windows.Forms.ComboBox();
             this.fornecedoresBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this._0ybkkaeekeDataSetRegisterProductFornecedores = new QrAguas._0ybkkaeekeDataSetRegisterProductFornecedores();
             this.panelPrecoEntrega = new System.Windows.Forms.Panel();
@@ -62,7 +62,7 @@
             this.panelBtnCadastrar = new System.Windows.Forms.Panel();
             this.btnCadastrar = new System.Windows.Forms.Button();
             this.panel3 = new System.Windows.Forms.Panel();
-            this.txtDataFabricacao = new System.Windows.Forms.MaskedTextBox();
+            this.DTPFabricacao = new System.Windows.Forms.DateTimePicker();
             this.lblDataFabricacao = new System.Windows.Forms.Label();
             this.lblTitulo = new System.Windows.Forms.Label();
             this.categoriasTableAdapter = new QrAguas._0ybkkaeekeDataSetRegisterProductTableAdapters.categoriasTableAdapter();
@@ -127,7 +127,7 @@
             // 
             // panel5
             // 
-            this.panel5.Controls.Add(this.txtDataValidade);
+            this.panel5.Controls.Add(this.DTPValidade);
             this.panel5.Controls.Add(this.lblDataValidade);
             this.panel5.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel5.Location = new System.Drawing.Point(426, 178);
@@ -136,16 +136,15 @@
             this.panel5.Size = new System.Drawing.Size(204, 102);
             this.panel5.TabIndex = 8;
             // 
-            // txtDataValidade
+            // DTPValidade
             // 
-            this.txtDataValidade.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.DTPValidade.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtDataValidade.Location = new System.Drawing.Point(12, 31);
-            this.txtDataValidade.Margin = new System.Windows.Forms.Padding(4);
-            this.txtDataValidade.Mask = "00/0000";
-            this.txtDataValidade.Name = "txtDataValidade";
-            this.txtDataValidade.Size = new System.Drawing.Size(186, 23);
-            this.txtDataValidade.TabIndex = 4;
+            this.DTPValidade.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.DTPValidade.Location = new System.Drawing.Point(12, 30);
+            this.DTPValidade.Name = "DTPValidade";
+            this.DTPValidade.Size = new System.Drawing.Size(186, 23);
+            this.DTPValidade.TabIndex = 6;
             // 
             // lblDataValidade
             // 
@@ -161,7 +160,7 @@
             // 
             // panel4
             // 
-            this.panel4.Controls.Add(this.txtCategoria);
+            this.panel4.Controls.Add(this.CBCategoria);
             this.panel4.Controls.Add(this.lblCategoria);
             this.panel4.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel4.Location = new System.Drawing.Point(4, 178);
@@ -170,23 +169,23 @@
             this.panel4.Size = new System.Drawing.Size(203, 102);
             this.panel4.TabIndex = 6;
             // 
-            // txtCategoria
+            // CBCategoria
             // 
-            this.txtCategoria.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.CBCategoria.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtCategoria.DataSource = this.categoriasBindingSource;
-            this.txtCategoria.DisplayMember = "NOME_CATEGORIA";
-            this.txtCategoria.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.txtCategoria.FormattingEnabled = true;
-            this.txtCategoria.IntegralHeight = false;
-            this.txtCategoria.ItemHeight = 17;
-            this.txtCategoria.Location = new System.Drawing.Point(12, 30);
-            this.txtCategoria.Margin = new System.Windows.Forms.Padding(4);
-            this.txtCategoria.Name = "txtCategoria";
-            this.txtCategoria.Size = new System.Drawing.Size(186, 25);
-            this.txtCategoria.TabIndex = 4;
-            this.txtCategoria.ValueMember = "ID_CATEGORIAS";
-            this.txtCategoria.Click += new System.EventHandler(this.TxtCategoria_Click);
+            this.CBCategoria.DataSource = this.categoriasBindingSource;
+            this.CBCategoria.DisplayMember = "NOME_CATEGORIA";
+            this.CBCategoria.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.CBCategoria.FormattingEnabled = true;
+            this.CBCategoria.IntegralHeight = false;
+            this.CBCategoria.ItemHeight = 17;
+            this.CBCategoria.Location = new System.Drawing.Point(12, 30);
+            this.CBCategoria.Margin = new System.Windows.Forms.Padding(4);
+            this.CBCategoria.Name = "CBCategoria";
+            this.CBCategoria.Size = new System.Drawing.Size(186, 25);
+            this.CBCategoria.TabIndex = 4;
+            this.CBCategoria.ValueMember = "ID_CATEGORIAS";
+            this.CBCategoria.Click += new System.EventHandler(this.TxtCategoria_Click);
             // 
             // categoriasBindingSource
             // 
@@ -230,6 +229,7 @@
             this.txtPrecoCompra.Name = "txtPrecoCompra";
             this.txtPrecoCompra.Size = new System.Drawing.Size(186, 23);
             this.txtPrecoCompra.TabIndex = 0;
+            this.txtPrecoCompra.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.SomenteNumeros_KeyPress);
             // 
             // lblPrecoCompra
             // 
@@ -311,7 +311,7 @@
             // 
             // panelFornecedor
             // 
-            this.panelFornecedor.Controls.Add(this.txtFornecedor);
+            this.panelFornecedor.Controls.Add(this.CBFornecedor);
             this.panelFornecedor.Controls.Add(this.lblFornecedor);
             this.panelFornecedor.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelFornecedor.Location = new System.Drawing.Point(4, 87);
@@ -320,21 +320,21 @@
             this.panelFornecedor.Size = new System.Drawing.Size(203, 83);
             this.panelFornecedor.TabIndex = 3;
             // 
-            // txtFornecedor
+            // CBFornecedor
             // 
-            this.txtFornecedor.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.CBFornecedor.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtFornecedor.DataSource = this.fornecedoresBindingSource;
-            this.txtFornecedor.DisplayMember = "RAZAO_SOCIAL";
-            this.txtFornecedor.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.txtFornecedor.FormattingEnabled = true;
-            this.txtFornecedor.IntegralHeight = false;
-            this.txtFornecedor.Location = new System.Drawing.Point(12, 28);
-            this.txtFornecedor.Name = "txtFornecedor";
-            this.txtFornecedor.Size = new System.Drawing.Size(186, 25);
-            this.txtFornecedor.TabIndex = 2;
-            this.txtFornecedor.ValueMember = "ID_FORNECEDORES";
-            this.txtFornecedor.Click += new System.EventHandler(this.TxtFornecedor_Click);
+            this.CBFornecedor.DataSource = this.fornecedoresBindingSource;
+            this.CBFornecedor.DisplayMember = "RAZAO_SOCIAL";
+            this.CBFornecedor.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.CBFornecedor.FormattingEnabled = true;
+            this.CBFornecedor.IntegralHeight = false;
+            this.CBFornecedor.Location = new System.Drawing.Point(12, 28);
+            this.CBFornecedor.Name = "CBFornecedor";
+            this.CBFornecedor.Size = new System.Drawing.Size(186, 25);
+            this.CBFornecedor.TabIndex = 2;
+            this.CBFornecedor.ValueMember = "ID_FORNECEDORES";
+            this.CBFornecedor.Click += new System.EventHandler(this.TxtFornecedor_Click);
             // 
             // fornecedoresBindingSource
             // 
@@ -366,6 +366,7 @@
             this.txtPrecoVenda.Name = "txtPrecoVenda";
             this.txtPrecoVenda.Size = new System.Drawing.Size(186, 23);
             this.txtPrecoVenda.TabIndex = 0;
+            this.txtPrecoVenda.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.SomenteNumeros_KeyPress);
             // 
             // lblPrecoVenda
             // 
@@ -439,10 +440,11 @@
             this.btnCadastrar.TabIndex = 0;
             this.btnCadastrar.Text = "Cadastrar";
             this.btnCadastrar.UseVisualStyleBackColor = false;
+            this.btnCadastrar.Click += new System.EventHandler(this.BtnCadastrar_Click);
             // 
             // panel3
             // 
-            this.panel3.Controls.Add(this.txtDataFabricacao);
+            this.panel3.Controls.Add(this.DTPFabricacao);
             this.panel3.Controls.Add(this.lblDataFabricacao);
             this.panel3.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel3.Location = new System.Drawing.Point(215, 178);
@@ -451,16 +453,15 @@
             this.panel3.Size = new System.Drawing.Size(203, 102);
             this.panel3.TabIndex = 7;
             // 
-            // txtDataFabricacao
+            // DTPFabricacao
             // 
-            this.txtDataFabricacao.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.DTPFabricacao.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtDataFabricacao.Location = new System.Drawing.Point(12, 31);
-            this.txtDataFabricacao.Margin = new System.Windows.Forms.Padding(4);
-            this.txtDataFabricacao.Mask = "00/0000";
-            this.txtDataFabricacao.Name = "txtDataFabricacao";
-            this.txtDataFabricacao.Size = new System.Drawing.Size(186, 23);
-            this.txtDataFabricacao.TabIndex = 4;
+            this.DTPFabricacao.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.DTPFabricacao.Location = new System.Drawing.Point(12, 32);
+            this.DTPFabricacao.Name = "DTPFabricacao";
+            this.DTPFabricacao.Size = new System.Drawing.Size(186, 23);
+            this.DTPFabricacao.TabIndex = 5;
             // 
             // lblDataFabricacao
             // 
@@ -562,21 +563,21 @@
         private System.Windows.Forms.Panel panelBtnCadastrar;
         private System.Windows.Forms.Button btnCadastrar;
         private System.Windows.Forms.Panel panel3;
-        private System.Windows.Forms.MaskedTextBox txtDataFabricacao;
         private System.Windows.Forms.Label lblDataFabricacao;
         private System.Windows.Forms.Panel panel4;
         private System.Windows.Forms.Label lblCategoria;
         private System.Windows.Forms.Panel panel5;
-        private System.Windows.Forms.MaskedTextBox txtDataValidade;
         private System.Windows.Forms.Label lblDataValidade;
         private System.Windows.Forms.Label lblTitulo;
-        private System.Windows.Forms.ComboBox txtCategoria;
+        private System.Windows.Forms.ComboBox CBCategoria;
         private _0ybkkaeekeDataSetRegisterProduct _0ybkkaeekeDataSetRegisterProductCategorias;
         private System.Windows.Forms.BindingSource categoriasBindingSource;
         private _0ybkkaeekeDataSetRegisterProductTableAdapters.categoriasTableAdapter categoriasTableAdapter;
-        private System.Windows.Forms.ComboBox txtFornecedor;
+        private System.Windows.Forms.ComboBox CBFornecedor;
         private _0ybkkaeekeDataSetRegisterProductFornecedores _0ybkkaeekeDataSetRegisterProductFornecedores;
         private System.Windows.Forms.BindingSource fornecedoresBindingSource;
         private _0ybkkaeekeDataSetRegisterProductFornecedoresTableAdapters.fornecedoresTableAdapter fornecedoresTableAdapter;
+        private System.Windows.Forms.DateTimePicker DTPValidade;
+        private System.Windows.Forms.DateTimePicker DTPFabricacao;
     }
 }
