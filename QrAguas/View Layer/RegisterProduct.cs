@@ -95,7 +95,15 @@ namespace QrAguas.View_Layer
 
             if (functions.VerificarDadosProdutos(objProduto))
             {
-                MessageBox.Show("Valor do Fornecedor: " + objProduto.Fornecedor + "\nValor da Categoria: " + objProduto.Categoria);
+                try
+                {
+
+                }
+                catch (Exception)
+                {
+
+                    throw;
+                }
             }
             else
             {
