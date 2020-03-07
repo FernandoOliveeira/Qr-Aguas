@@ -97,21 +97,38 @@ namespace QrAguas.View_Layer
             {
                 try
                 {
+                    if (functions.CadastrarNovoProduto(objProduto))
+                    {
+                        MessageBox.Show("Produto Cadastrado com sucesso !", "Cadastrado com sucesso", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
+                        LimparCampos();
+                    }
+                    else
+                    {
+                        MessageBox.Show("Erro ao cadastrar o produto", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
                 }
-                catch (Exception)
+                catch (Exception erro)
                 {
-
-                    throw;
+                    MessageBox.Show("Erro ao cadastrar o produto \nErro: " + erro, "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             }
             else
             {
-                MessageBox.Show("Alguns campos estão vazios");
+                MessageBox.Show("Alguns campos estão vazios", "Campos Vazios", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
 
         }
 
-
+        private void LimparCampos()
+        {
+            txtCodProduto.Text = "";
+            txtNome.Text = "";
+            txtPrecoCompra.Text = "";
+            txtDescricao.Text = "";
+            txtPrecoVenda.Text = "";
+            DTPFabricacao.Value = DateTime.Now;
+            DTPValidade.Value = DateTime.Now;
+        }
     }
 }

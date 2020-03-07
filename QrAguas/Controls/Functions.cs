@@ -381,7 +381,7 @@ namespace QrAguas.Controls
 
         public bool CadastrarNovoProduto(NewProduct objProduto)
         {
-            string queryCadastrarProduto = "INSERT INTO PRODUTOS VALUES(NULL, @COD_PRODUTO, @NOME_PRODUTO, @DESCRICAO, @PRECO_COMPRA, @PRECO_VENDA, @ID_FORNECEDORES, @ID_USUARIOS, @ID_CATEGORIAS, @DATA_FABRICACAO, @DATA_VALIDADE, @DATA_CADASTRO";
+            string queryCadastrarProduto = "INSERT INTO PRODUTOS VALUES(NULL, @COD_PRODUTO, @NOME_PRODUTO, @DESCRICAO, @PRECO_COMPRA, @PRECO_VENDA, @ID_FORNECEDORES, @ID_USUARIOS, @ID_CATEGORIAS, @DATA_FABRICACAO, @DATA_VALIDADE, @DATA_CADASTRO) ";
 
             MySqlCommand command = new MySqlCommand(queryCadastrarProduto, AbrirBanco());
 
@@ -398,6 +398,8 @@ namespace QrAguas.Controls
             command.Parameters.AddWithValue("@DATA_CADASTRO", DateTime.Now);
 
             int rowCount = command.ExecuteNonQuery();
+
+            FecharBanco(AbrirBanco());
 
             return rowCount != 0 ? true : false;
 
