@@ -92,9 +92,9 @@
             this.lblFornecedor.Location = new System.Drawing.Point(8, 8);
             this.lblFornecedor.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblFornecedor.Name = "lblFornecedor";
-            this.lblFornecedor.Size = new System.Drawing.Size(85, 17);
+            this.lblFornecedor.Size = new System.Drawing.Size(90, 17);
             this.lblFornecedor.TabIndex = 1;
-            this.lblFornecedor.Text = "Fornecedor:";
+            this.lblFornecedor.Text = "Fornecedor:*";
             // 
             // tableLayoutPanel1
             // 
@@ -154,9 +154,9 @@
             this.lblDataValidade.Location = new System.Drawing.Point(12, 5);
             this.lblDataValidade.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblDataValidade.Name = "lblDataValidade";
-            this.lblDataValidade.Size = new System.Drawing.Size(121, 17);
+            this.lblDataValidade.Size = new System.Drawing.Size(126, 17);
             this.lblDataValidade.TabIndex = 3;
-            this.lblDataValidade.Text = "Data de Validade:";
+            this.lblDataValidade.Text = "Data de Validade:*";
             // 
             // panel4
             // 
@@ -205,9 +205,9 @@
             this.lblCategoria.Location = new System.Drawing.Point(12, 5);
             this.lblCategoria.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblCategoria.Name = "lblCategoria";
-            this.lblCategoria.Size = new System.Drawing.Size(73, 17);
+            this.lblCategoria.Size = new System.Drawing.Size(78, 17);
             this.lblCategoria.TabIndex = 3;
-            this.lblCategoria.Text = "Categoria:";
+            this.lblCategoria.Text = "Categoria:*";
             // 
             // panelPrecoCompra
             // 
@@ -239,9 +239,9 @@
             this.lblPrecoCompra.Location = new System.Drawing.Point(8, 8);
             this.lblPrecoCompra.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblPrecoCompra.Name = "lblPrecoCompra";
-            this.lblPrecoCompra.Size = new System.Drawing.Size(122, 17);
+            this.lblPrecoCompra.Size = new System.Drawing.Size(127, 17);
             this.lblPrecoCompra.TabIndex = 1;
-            this.lblPrecoCompra.Text = "Preço de Compra:";
+            this.lblPrecoCompra.Text = "Preço de Compra:*";
             // 
             // panel2
             // 
@@ -272,9 +272,9 @@
             this.lblNome.Location = new System.Drawing.Point(8, 8);
             this.lblNome.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblNome.Name = "lblNome";
-            this.lblNome.Size = new System.Drawing.Size(123, 17);
+            this.lblNome.Size = new System.Drawing.Size(128, 17);
             this.lblNome.TabIndex = 1;
-            this.lblNome.Text = "Nome do Produto:";
+            this.lblNome.Text = "Nome do Produto:*";
             // 
             // panel1
             // 
@@ -305,9 +305,9 @@
             this.lblCodProduto.Location = new System.Drawing.Point(8, 8);
             this.lblCodProduto.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblCodProduto.Name = "lblCodProduto";
-            this.lblCodProduto.Size = new System.Drawing.Size(130, 17);
+            this.lblCodProduto.Size = new System.Drawing.Size(135, 17);
             this.lblCodProduto.TabIndex = 1;
-            this.lblCodProduto.Text = "Código do Produto:";
+            this.lblCodProduto.Text = "Código do Produto:*";
             // 
             // panelFornecedor
             // 
@@ -376,9 +376,9 @@
             this.lblPrecoVenda.Location = new System.Drawing.Point(8, 8);
             this.lblPrecoVenda.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblPrecoVenda.Name = "lblPrecoVenda";
-            this.lblPrecoVenda.Size = new System.Drawing.Size(114, 17);
+            this.lblPrecoVenda.Size = new System.Drawing.Size(119, 17);
             this.lblPrecoVenda.TabIndex = 1;
-            this.lblPrecoVenda.Text = "Preço de Venda:";
+            this.lblPrecoVenda.Text = "Preço de Venda:*";
             // 
             // panelDescricao
             // 
@@ -409,9 +409,9 @@
             this.lblDescricao.Location = new System.Drawing.Point(8, 8);
             this.lblDescricao.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblDescricao.Name = "lblDescricao";
-            this.lblDescricao.Size = new System.Drawing.Size(75, 17);
+            this.lblDescricao.Size = new System.Drawing.Size(80, 17);
             this.lblDescricao.TabIndex = 1;
-            this.lblDescricao.Text = "Descrição:";
+            this.lblDescricao.Text = "Descrição:*";
             // 
             // panelBtnCadastrar
             // 
@@ -471,9 +471,9 @@
             this.lblDataFabricacao.Location = new System.Drawing.Point(12, 5);
             this.lblDataFabricacao.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblDataFabricacao.Name = "lblDataFabricacao";
-            this.lblDataFabricacao.Size = new System.Drawing.Size(136, 17);
+            this.lblDataFabricacao.Size = new System.Drawing.Size(141, 17);
             this.lblDataFabricacao.TabIndex = 3;
-            this.lblDataFabricacao.Text = "Data de Fabricação:";
+            this.lblDataFabricacao.Text = "Data de Fabricação:*";
             // 
             // lblTitulo
             // 

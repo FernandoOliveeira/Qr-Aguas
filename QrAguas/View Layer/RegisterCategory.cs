@@ -99,7 +99,7 @@ namespace QrAguas.View_Layer
         {
             if (CamposVazios())
             {
-                MessageBox.Show("O campo 'Categoria' está vazio", "Campo Vazio", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("O campo 'Categoria' está vazio", "Campo Vazio", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
             else
             {

@@ -115,7 +115,7 @@ namespace QrAguas.View_Layer
             }
             else
             {
-                MessageBox.Show("Alguns campos estão vazios", "Campos Vazios", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show("Um ou mais campos obrigatórios* estão vazios", "Campos Vazios", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
 
         }
@@ -127,8 +127,6 @@ namespace QrAguas.View_Layer
             txtPrecoCompra.Text = "";
             txtDescricao.Text = "";
             txtPrecoVenda.Text = "";
-            DTPFabricacao.Value = DateTime.Now;
-            DTPValidade.Value = DateTime.Now;
         }
     }
 }

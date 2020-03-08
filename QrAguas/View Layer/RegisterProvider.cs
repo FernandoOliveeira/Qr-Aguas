@@ -25,7 +25,7 @@ namespace QrAguas.View_Layer
 
         private void RegisterProvider_Load(object sender, EventArgs e)
         {
-            txtNumero.Text = null;
+            txtNumero.Text = "0";
         }
 
         private async void BtnConsultar_Click(object sender, EventArgs e)
@@ -103,6 +103,12 @@ namespace QrAguas.View_Layer
 
         private void BtnCadastrar_Click(object sender, EventArgs e)
         {
+
+            if (txtNumero.Text.Trim().Equals(""))
+            {
+                txtNumero.Text = "0";
+            }
+
             try
             {
                 NewProvider objNewProvider = new NewProvider

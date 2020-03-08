@@ -36,7 +36,7 @@ namespace QrAguas.BusinessLayer
                 !String.IsNullOrEmpty(fornecedor.Telefone) &&
                 !String.IsNullOrEmpty(fornecedor.Cep))
             {
-                if (fornecedor.Cnpj.Length.Equals(18) && fornecedor.Telefone.Length.Equals(14) && fornecedor.Cep.Length.Equals(9))
+                if (fornecedor.Cnpj.Length.Equals(18) && fornecedor.Telefone.Length.Equals(14) && fornecedor.Cep.Length.Equals(9) && fornecedor.Numero > 0)
                 {
                     return true;
 
