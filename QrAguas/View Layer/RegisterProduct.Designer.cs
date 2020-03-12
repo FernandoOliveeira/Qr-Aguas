@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(RegisterProduct));
             this.lblFornecedor = new System.Windows.Forms.Label();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
@@ -37,8 +36,6 @@
             this.lblDataValidade = new System.Windows.Forms.Label();
             this.panel4 = new System.Windows.Forms.Panel();
             this.CBCategoria = new System.Windows.Forms.ComboBox();
-            this.categoriasBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this._0ybkkaeekeDataSetRegisterProductCategorias = new QrAguas._0ybkkaeekeDataSetRegisterProduct();
             this.lblCategoria = new System.Windows.Forms.Label();
             this.panelPrecoCompra = new System.Windows.Forms.Panel();
             this.txtPrecoCompra = new System.Windows.Forms.TextBox();
@@ -51,8 +48,6 @@
             this.lblCodProduto = new System.Windows.Forms.Label();
             this.panelFornecedor = new System.Windows.Forms.Panel();
             this.CBFornecedor = new System.Windows.Forms.ComboBox();
-            this.fornecedoresBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this._0ybkkaeekeDataSetRegisterProductFornecedores = new QrAguas._0ybkkaeekeDataSetRegisterProductFornecedores();
             this.panelPrecoEntrega = new System.Windows.Forms.Panel();
             this.txtPrecoVenda = new System.Windows.Forms.TextBox();
             this.lblPrecoVenda = new System.Windows.Forms.Label();
@@ -65,19 +60,13 @@
             this.DTPFabricacao = new System.Windows.Forms.DateTimePicker();
             this.lblDataFabricacao = new System.Windows.Forms.Label();
             this.lblTitulo = new System.Windows.Forms.Label();
-            this.categoriasTableAdapter = new QrAguas._0ybkkaeekeDataSetRegisterProductTableAdapters.categoriasTableAdapter();
-            this.fornecedoresTableAdapter = new QrAguas._0ybkkaeekeDataSetRegisterProductFornecedoresTableAdapters.fornecedoresTableAdapter();
             this.tableLayoutPanel1.SuspendLayout();
             this.panel5.SuspendLayout();
             this.panel4.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.categoriasBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this._0ybkkaeekeDataSetRegisterProductCategorias)).BeginInit();
             this.panelPrecoCompra.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel1.SuspendLayout();
             this.panelFornecedor.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.fornecedoresBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this._0ybkkaeekeDataSetRegisterProductFornecedores)).BeginInit();
             this.panelPrecoEntrega.SuspendLayout();
             this.panelDescricao.SuspendLayout();
             this.panelBtnCadastrar.SuspendLayout();
@@ -173,8 +162,6 @@
             // 
             this.CBCategoria.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.CBCategoria.DataSource = this.categoriasBindingSource;
-            this.CBCategoria.DisplayMember = "NOME_CATEGORIA";
             this.CBCategoria.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.CBCategoria.FormattingEnabled = true;
             this.CBCategoria.IntegralHeight = false;
@@ -186,16 +173,6 @@
             this.CBCategoria.TabIndex = 4;
             this.CBCategoria.ValueMember = "ID_CATEGORIAS";
             this.CBCategoria.Click += new System.EventHandler(this.TxtCategoria_Click);
-            // 
-            // categoriasBindingSource
-            // 
-            this.categoriasBindingSource.DataMember = "categorias";
-            this.categoriasBindingSource.DataSource = this._0ybkkaeekeDataSetRegisterProductCategorias;
-            // 
-            // _0ybkkaeekeDataSetRegisterProductCategorias
-            // 
-            this._0ybkkaeekeDataSetRegisterProductCategorias.DataSetName = "_0ybkkaeekeDataSetRegisterProductCategorias";
-            this._0ybkkaeekeDataSetRegisterProductCategorias.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // lblCategoria
             // 
@@ -324,8 +301,6 @@
             // 
             this.CBFornecedor.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.CBFornecedor.DataSource = this.fornecedoresBindingSource;
-            this.CBFornecedor.DisplayMember = "RAZAO_SOCIAL";
             this.CBFornecedor.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.CBFornecedor.FormattingEnabled = true;
             this.CBFornecedor.IntegralHeight = false;
@@ -335,16 +310,6 @@
             this.CBFornecedor.TabIndex = 2;
             this.CBFornecedor.ValueMember = "ID_FORNECEDORES";
             this.CBFornecedor.Click += new System.EventHandler(this.TxtFornecedor_Click);
-            // 
-            // fornecedoresBindingSource
-            // 
-            this.fornecedoresBindingSource.DataMember = "fornecedores";
-            this.fornecedoresBindingSource.DataSource = this._0ybkkaeekeDataSetRegisterProductFornecedores;
-            // 
-            // _0ybkkaeekeDataSetRegisterProductFornecedores
-            // 
-            this._0ybkkaeekeDataSetRegisterProductFornecedores.DataSetName = "_0ybkkaeekeDataSetRegisterProductFornecedores";
-            this._0ybkkaeekeDataSetRegisterProductFornecedores.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // panelPrecoEntrega
             // 
@@ -488,14 +453,6 @@
             this.lblTitulo.Text = "Cadastro de Produtos";
             this.lblTitulo.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // categoriasTableAdapter
-            // 
-            this.categoriasTableAdapter.ClearBeforeFill = true;
-            // 
-            // fornecedoresTableAdapter
-            // 
-            this.fornecedoresTableAdapter.ClearBeforeFill = true;
-            // 
             // RegisterProduct
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 17F);
@@ -518,8 +475,6 @@
             this.panel5.PerformLayout();
             this.panel4.ResumeLayout(false);
             this.panel4.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.categoriasBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this._0ybkkaeekeDataSetRegisterProductCategorias)).EndInit();
             this.panelPrecoCompra.ResumeLayout(false);
             this.panelPrecoCompra.PerformLayout();
             this.panel2.ResumeLayout(false);
@@ -528,8 +483,6 @@
             this.panel1.PerformLayout();
             this.panelFornecedor.ResumeLayout(false);
             this.panelFornecedor.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.fornecedoresBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this._0ybkkaeekeDataSetRegisterProductFornecedores)).EndInit();
             this.panelPrecoEntrega.ResumeLayout(false);
             this.panelPrecoEntrega.PerformLayout();
             this.panelDescricao.ResumeLayout(false);
@@ -570,13 +523,7 @@
         private System.Windows.Forms.Label lblDataValidade;
         private System.Windows.Forms.Label lblTitulo;
         private System.Windows.Forms.ComboBox CBCategoria;
-        private _0ybkkaeekeDataSetRegisterProduct _0ybkkaeekeDataSetRegisterProductCategorias;
-        private System.Windows.Forms.BindingSource categoriasBindingSource;
-        private _0ybkkaeekeDataSetRegisterProductTableAdapters.categoriasTableAdapter categoriasTableAdapter;
         private System.Windows.Forms.ComboBox CBFornecedor;
-        private _0ybkkaeekeDataSetRegisterProductFornecedores _0ybkkaeekeDataSetRegisterProductFornecedores;
-        private System.Windows.Forms.BindingSource fornecedoresBindingSource;
-        private _0ybkkaeekeDataSetRegisterProductFornecedoresTableAdapters.fornecedoresTableAdapter fornecedoresTableAdapter;
         private System.Windows.Forms.DateTimePicker DTPValidade;
         private System.Windows.Forms.DateTimePicker DTPFabricacao;
     }

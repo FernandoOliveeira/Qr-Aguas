@@ -94,12 +94,6 @@
     <Compile Include="View Layer\ChangePassword.Designer.cs">
       <DependentUpon>ChangePassword.cs</DependentUpon>
     </Compile>
-    <Compile Include="View Layer\Reports\ReportProduct.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="View Layer\Reports\ReportProduct.Designer.cs">
-      <DependentUpon>ReportProduct.cs</DependentUpon>
-    </Compile>
     <Compile Include="View Layer\Logout.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -148,33 +142,10 @@
     <Compile Include="View Layer\UpdateCategory.Designer.cs">
       <DependentUpon>UpdateCategory.cs</DependentUpon>
     </Compile>
-    <Compile Include="_0ybkkaeekeDataSet1.Designer.cs">
+    <Compile Include="_0ybkkaeekeDataSet.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>_0ybkkaeekeDataSet1.xsd</DependentUpon>
-    </Compile>
-    <Compile Include="_0ybkkaeekeDataSet2.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>_0ybkkaeekeDataSet2.xsd</DependentUpon>
-    </Compile>
-    <Compile Include="_0ybkkaeekeDataSetRegisterCategory.cs">
-      <DependentUpon>_0ybkkaeekeDataSetRegisterCategory.xsd</DependentUpon>
-    </Compile>
-    <Compile Include="_0ybkkaeekeDataSetRegisterCategory.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>_0ybkkaeekeDataSetRegisterCategory.xsd</DependentUpon>
-    </Compile>
-    <Compile Include="_0ybkkaeekeDataSetRegisterProduct.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>_0ybkkaeekeDataSetRegisterProduct.xsd</DependentUpon>
-    </Compile>
-    <Compile Include="_0ybkkaeekeDataSetRegisterProductFornecedores.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>_0ybkkaeekeDataSetRegisterProductFornecedores.xsd</DependentUpon>
+      <DependentUpon>_0ybkkaeekeDataSet.xsd</DependentUpon>
     </Compile>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -191,9 +162,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="View Layer\Logout.resx">
       <DependentUpon>Logout.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="View Layer\Reports\ReportProduct.resx">
-      <DependentUpon>ReportProduct.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="View Layer\RegisterCategory.resx">
       <DependentUpon>RegisterCategory.cs</DependentUpon>
@@ -213,6 +181,7 @@
     <EmbeddedResource Include="View Layer\MainForm.resx">
       <DependentUpon>MainForm.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="View Layer\Reports\ProductReport.rdlc" />
     <EmbeddedResource Include="View Layer\UpdateCategory.resx">
       <DependentUpon>UpdateCategory.cs</DependentUpon>
     </EmbeddedResource>
@@ -226,60 +195,16 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
-    <None Include="_0ybkkaeekeDataSet1.xsc">
-      <DependentUpon>_0ybkkaeekeDataSet1.xsd</DependentUpon>
+    <None Include="_0ybkkaeekeDataSet.xsc">
+      <DependentUpon>_0ybkkaeekeDataSet.xsd</DependentUpon>
     </None>
-    <None Include="_0ybkkaeekeDataSet1.xsd">
+    <None Include="_0ybkkaeekeDataSet.xsd">
       <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>_0ybkkaeekeDataSet1.Designer.cs</LastGenOutput>
+      <LastGenOutput>_0ybkkaeekeDataSet.Designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
     </None>
-    <None Include="_0ybkkaeekeDataSet1.xss">
-      <DependentUpon>_0ybkkaeekeDataSet1.xsd</DependentUpon>
-    </None>
-    <None Include="_0ybkkaeekeDataSet2.xsc">
-      <DependentUpon>_0ybkkaeekeDataSet2.xsd</DependentUpon>
-    </None>
-    <None Include="_0ybkkaeekeDataSet2.xsd">
-      <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>_0ybkkaeekeDataSet2.Designer.cs</LastGenOutput>
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="_0ybkkaeekeDataSet2.xss">
-      <DependentUpon>_0ybkkaeekeDataSet2.xsd</DependentUpon>
-    </None>
-    <None Include="_0ybkkaeekeDataSetRegisterCategory.xsc">
-      <DependentUpon>_0ybkkaeekeDataSetRegisterCategory.xsd</DependentUpon>
-    </None>
-    <None Include="_0ybkkaeekeDataSetRegisterCategory.xsd">
-      <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>_0ybkkaeekeDataSetRegisterCategory.Designer.cs</LastGenOutput>
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="_0ybkkaeekeDataSetRegisterCategory.xss">
-      <DependentUpon>_0ybkkaeekeDataSetRegisterCategory.xsd</DependentUpon>
-    </None>
-    <None Include="_0ybkkaeekeDataSetRegisterProduct.xsc">
-      <DependentUpon>_0ybkkaeekeDataSetRegisterProduct.xsd</DependentUpon>
-    </None>
-    <None Include="_0ybkkaeekeDataSetRegisterProduct.xsd">
-      <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>_0ybkkaeekeDataSetRegisterProduct.Designer.cs</LastGenOutput>
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="_0ybkkaeekeDataSetRegisterProduct.xss">
-      <DependentUpon>_0ybkkaeekeDataSetRegisterProduct.xsd</DependentUpon>
-    </None>
-    <None Include="_0ybkkaeekeDataSetRegisterProductFornecedores.xsc">
-      <DependentUpon>_0ybkkaeekeDataSetRegisterProductFornecedores.xsd</DependentUpon>
-    </None>
-    <None Include="_0ybkkaeekeDataSetRegisterProductFornecedores.xsd">
-      <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>_0ybkkaeekeDataSetRegisterProductFornecedores.Designer.cs</LastGenOutput>
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="_0ybkkaeekeDataSetRegisterProductFornecedores.xss">
-      <DependentUpon>_0ybkkaeekeDataSetRegisterProductFornecedores.xsd</DependentUpon>
+    <None Include="_0ybkkaeekeDataSet.xss">
+      <DependentUpon>_0ybkkaeekeDataSet.xsd</DependentUpon>
     </None>
   </ItemGroup>
   <ItemGroup>

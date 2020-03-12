@@ -23,11 +23,7 @@ namespace QrAguas.View_Layer
 
         private void RegisterProduct_Load(object sender, EventArgs e)
         {
-            // Atualiza o DropDownListFornecedores com a lista de Fornecedores
-            this.fornecedoresTableAdapter.Fill(this._0ybkkaeekeDataSetRegisterProductFornecedores.fornecedores);
-           
-            // Atualiza o DropDownListCategorias com a lista de Categorias
-            this.categoriasTableAdapter.Fill(this._0ybkkaeekeDataSetRegisterProductCategorias.categorias);
+            
 
 
             txtPrecoCompra.Text = "0";
@@ -55,14 +51,12 @@ namespace QrAguas.View_Layer
 
         private void TxtCategoria_Click(object sender, EventArgs e)
         {
-            // Atualiza o DropDownListCategorias com a lista de Categorias
-            this.categoriasTableAdapter.Fill(this._0ybkkaeekeDataSetRegisterProductCategorias.categorias);
+            
         }
 
         private void TxtFornecedor_Click(object sender, EventArgs e)
         {
-            // Atualiza o DropDownListFornecedores com a lista de Fornecedores
-            this.fornecedoresTableAdapter.Fill(this._0ybkkaeekeDataSetRegisterProductFornecedores.fornecedores);
+
         }
 
         private void BtnCadastrar_Click(object sender, EventArgs e)

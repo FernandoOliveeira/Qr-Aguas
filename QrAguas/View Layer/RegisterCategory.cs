@@ -28,8 +28,7 @@ namespace QrAguas.View_Layer
         {
             UpdateCategoryResultado = false;
 
-            // Faz com que o DataGridView receba os valores do banco de dados
-            this.categoriasTableAdapter.Fill(this._0ybkkaeekeDataSetRegisterCategory.categorias);
+            
 
         }
 
@@ -51,8 +50,7 @@ namespace QrAguas.View_Layer
 
                         MessageBox.Show("Categoria excluída com sucesso.", "Excluído com sucesso", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
-                        // Atualiza o DataGridView após as modificações
-                        this.categoriasTableAdapter.Fill(this._0ybkkaeekeDataSetRegisterCategory.categorias);
+                        
 
                     }
                     catch (Exception erro)
@@ -87,8 +85,6 @@ namespace QrAguas.View_Layer
                     {
                         UpdateCategoryResultado = false;
 
-                        // Atualiza o DataGridView após as modificações
-                        this.categoriasTableAdapter.Fill(this._0ybkkaeekeDataSetRegisterCategory.categorias);
                     }
                 }
                 
@@ -109,8 +105,7 @@ namespace QrAguas.View_Layer
                     {
                         MessageBox.Show("Nova Categoria cadastrada com sucesso", "Cadastrado com sucesso", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
-                        // Atualiza o DataGridView após as modificações
-                        this.categoriasTableAdapter.Fill(this._0ybkkaeekeDataSetRegisterCategory.categorias);
+                       
 
                     }
                     else
