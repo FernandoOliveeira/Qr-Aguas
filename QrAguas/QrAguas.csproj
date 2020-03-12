@@ -75,6 +75,12 @@
     <Compile Include="View Layer\ChangePassword.Designer.cs">
       <DependentUpon>ChangePassword.cs</DependentUpon>
     </Compile>
+    <Compile Include="View Layer\ReportProduct.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View Layer\ReportProduct.Designer.cs">
+      <DependentUpon>ReportProduct.cs</DependentUpon>
+    </Compile>
     <Compile Include="View Layer\Logout.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -166,6 +172,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="View Layer\Logout.resx">
       <DependentUpon>Logout.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View Layer\ReportProduct.resx">
+      <DependentUpon>ReportProduct.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="View Layer\RegisterCategory.resx">
       <DependentUpon>RegisterCategory.cs</DependentUpon>
