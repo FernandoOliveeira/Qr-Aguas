@@ -16,5 +16,11 @@ namespace QrAguas.View_Layer
         {
             InitializeComponent();
         }
+
+        private void ReportProduct_Load(object sender, EventArgs e)
+        {
+
+            this.reportViewer1.RefreshReport();
+        }
     }
 }
