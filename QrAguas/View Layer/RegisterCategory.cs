@@ -18,7 +18,7 @@ namespace QrAguas.View_Layer
             InitializeComponent();
         }
 
-        // Propriedade utilizada com uma flag
+        // Propriedade utilizada como flag
         // Caso o form UpdateCategory realize a atualização de alguma categoria, esta propriedade recebe o valor de true
         public static bool UpdateCategoryResultado { private get; set; }
 
@@ -26,6 +26,8 @@ namespace QrAguas.View_Layer
 
         private void RegisterCategory_Load(object sender, EventArgs e)
         {
+            // Atualiza e insere dados no DataGridView
+            this.categoriasTableAdapter.Fill(this._0ybkkaeekeDataSet.categorias);
             UpdateCategoryResultado = false;
 
             
@@ -50,7 +52,9 @@ namespace QrAguas.View_Layer
 
                         MessageBox.Show("Categoria excluída com sucesso.", "Excluído com sucesso", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
-                        
+                        // Atualiza e insere dados no DataGridView
+                        this.categoriasTableAdapter.Fill(this._0ybkkaeekeDataSet.categorias);
+                        UpdateCategoryResultado = false;
 
                     }
                     catch (Exception erro)
@@ -85,6 +89,9 @@ namespace QrAguas.View_Layer
                     {
                         UpdateCategoryResultado = false;
 
+                        // Atualiza e insere dados no DataGridView
+                        this.categoriasTableAdapter.Fill(this._0ybkkaeekeDataSet.categorias);
+                        UpdateCategoryResultado = false;
                     }
                 }
                 
@@ -105,7 +112,9 @@ namespace QrAguas.View_Layer
                     {
                         MessageBox.Show("Nova Categoria cadastrada com sucesso", "Cadastrado com sucesso", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
-                       
+                        // Atualiza e insere dados no DataGridView
+                        this.categoriasTableAdapter.Fill(this._0ybkkaeekeDataSet.categorias);
+                        UpdateCategoryResultado = false;
 
                     }
                     else

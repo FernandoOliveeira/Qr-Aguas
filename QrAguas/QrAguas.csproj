@@ -142,6 +142,9 @@
     <Compile Include="View Layer\UpdateCategory.Designer.cs">
       <DependentUpon>UpdateCategory.cs</DependentUpon>
     </Compile>
+    <Compile Include="_0ybkkaeekeDataSet.cs">
+      <DependentUpon>_0ybkkaeekeDataSet.xsd</DependentUpon>
+    </Compile>
     <Compile Include="_0ybkkaeekeDataSet.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>

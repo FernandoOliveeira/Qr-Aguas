@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(RegisterProduct));
             this.lblFornecedor = new System.Windows.Forms.Label();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
@@ -60,6 +61,11 @@
             this.DTPFabricacao = new System.Windows.Forms.DateTimePicker();
             this.lblDataFabricacao = new System.Windows.Forms.Label();
             this.lblTitulo = new System.Windows.Forms.Label();
+            this._0ybkkaeekeDataSet = new QrAguas._0ybkkaeekeDataSet();
+            this.fornecedoresBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.fornecedoresTableAdapter = new QrAguas._0ybkkaeekeDataSetTableAdapters.fornecedoresTableAdapter();
+            this.categoriasBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.categoriasTableAdapter = new QrAguas._0ybkkaeekeDataSetTableAdapters.categoriasTableAdapter();
             this.tableLayoutPanel1.SuspendLayout();
             this.panel5.SuspendLayout();
             this.panel4.SuspendLayout();
@@ -71,6 +77,9 @@
             this.panelDescricao.SuspendLayout();
             this.panelBtnCadastrar.SuspendLayout();
             this.panel3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this._0ybkkaeekeDataSet)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.fornecedoresBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.categoriasBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // lblFornecedor
@@ -162,6 +171,8 @@
             // 
             this.CBCategoria.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.CBCategoria.DataSource = this.categoriasBindingSource;
+            this.CBCategoria.DisplayMember = "NOME_CATEGORIA";
             this.CBCategoria.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.CBCategoria.FormattingEnabled = true;
             this.CBCategoria.IntegralHeight = false;
@@ -172,7 +183,7 @@
             this.CBCategoria.Size = new System.Drawing.Size(186, 25);
             this.CBCategoria.TabIndex = 4;
             this.CBCategoria.ValueMember = "ID_CATEGORIAS";
-            this.CBCategoria.Click += new System.EventHandler(this.TxtCategoria_Click);
+            this.CBCategoria.Click += new System.EventHandler(this.CBCategoria_Click);
             // 
             // lblCategoria
             // 
@@ -301,6 +312,8 @@
             // 
             this.CBFornecedor.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.CBFornecedor.DataSource = this.fornecedoresBindingSource;
+            this.CBFornecedor.DisplayMember = "RAZAO_SOCIAL";
             this.CBFornecedor.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.CBFornecedor.FormattingEnabled = true;
             this.CBFornecedor.IntegralHeight = false;
@@ -309,7 +322,7 @@
             this.CBFornecedor.Size = new System.Drawing.Size(186, 25);
             this.CBFornecedor.TabIndex = 2;
             this.CBFornecedor.ValueMember = "ID_FORNECEDORES";
-            this.CBFornecedor.Click += new System.EventHandler(this.TxtFornecedor_Click);
+            this.CBFornecedor.Click += new System.EventHandler(this.CBFornecedor_Click);
             // 
             // panelPrecoEntrega
             // 
@@ -453,6 +466,29 @@
             this.lblTitulo.Text = "Cadastro de Produtos";
             this.lblTitulo.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
+            // _0ybkkaeekeDataSet
+            // 
+            this._0ybkkaeekeDataSet.DataSetName = "_0ybkkaeekeDataSet";
+            this._0ybkkaeekeDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // fornecedoresBindingSource
+            // 
+            this.fornecedoresBindingSource.DataMember = "fornecedores";
+            this.fornecedoresBindingSource.DataSource = this._0ybkkaeekeDataSet;
+            // 
+            // fornecedoresTableAdapter
+            // 
+            this.fornecedoresTableAdapter.ClearBeforeFill = true;
+            // 
+            // categoriasBindingSource
+            // 
+            this.categoriasBindingSource.DataMember = "categorias";
+            this.categoriasBindingSource.DataSource = this._0ybkkaeekeDataSet;
+            // 
+            // categoriasTableAdapter
+            // 
+            this.categoriasTableAdapter.ClearBeforeFill = true;
+            // 
             // RegisterProduct
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 17F);
@@ -490,6 +526,9 @@
             this.panelBtnCadastrar.ResumeLayout(false);
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this._0ybkkaeekeDataSet)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.fornecedoresBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.categoriasBindingSource)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -526,5 +565,10 @@
         private System.Windows.Forms.ComboBox CBFornecedor;
         private System.Windows.Forms.DateTimePicker DTPValidade;
         private System.Windows.Forms.DateTimePicker DTPFabricacao;
+        private _0ybkkaeekeDataSet _0ybkkaeekeDataSet;
+        private System.Windows.Forms.BindingSource fornecedoresBindingSource;
+        private _0ybkkaeekeDataSetTableAdapters.fornecedoresTableAdapter fornecedoresTableAdapter;
+        private System.Windows.Forms.BindingSource categoriasBindingSource;
+        private _0ybkkaeekeDataSetTableAdapters.categoriasTableAdapter categoriasTableAdapter;
     }
 }

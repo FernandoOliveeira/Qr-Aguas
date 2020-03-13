@@ -23,7 +23,12 @@ namespace QrAguas.View_Layer
 
         private void RegisterProduct_Load(object sender, EventArgs e)
         {
+            // Atualiza o ComboBoxCategoria
+            this.categoriasTableAdapter.Fill(this._0ybkkaeekeDataSet.categorias);
             
+            // Atualiza o ComboBoxFornecedor
+            this.fornecedoresTableAdapter.Fill(this._0ybkkaeekeDataSet.fornecedores);
+
 
 
             txtPrecoCompra.Text = "0";
@@ -49,13 +54,17 @@ namespace QrAguas.View_Layer
             }
         }
 
-        private void TxtCategoria_Click(object sender, EventArgs e)
+        private void CBCategoria_Click(object sender, EventArgs e)
         {
-            
+            // Atualiza o ComboBoxCategoria
+            this.categoriasTableAdapter.Fill(this._0ybkkaeekeDataSet.categorias);
+           
         }
 
-        private void TxtFornecedor_Click(object sender, EventArgs e)
+        private void CBFornecedor_Click(object sender, EventArgs e)
         {
+            // Atualiza o ComboBoxFornecedor
+            this.fornecedoresTableAdapter.Fill(this._0ybkkaeekeDataSet.fornecedores);
 
         }
 
