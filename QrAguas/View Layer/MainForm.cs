@@ -64,6 +64,7 @@ namespace QrAguas.View_Layer
             // Abre o form desejado com base em qual nó foi clicado no treeView
             switch (e.Node.Text)
             {
+                #region Cadastros
                 case "Cadastrar Novos Fornecedores":
                     RegisterProvider registerProviders = new RegisterProvider();
                     registerProviders.Show();
@@ -83,9 +84,19 @@ namespace QrAguas.View_Layer
                     RegisterCategory registerCategory = new RegisterCategory();
                     registerCategory.Show();
                     break;
+
+                #endregion
+
+
+                #region Relatórios
+                case "Relatório de Produtos":
+                    ProductReport productReport = new ProductReport();
+                    productReport.Show();
+                    break;
+                #endregion
             }
-                
-            
+
+
         }
 
         private void AlterarSenhaToolStripMenuItem_Click(object sender, EventArgs e)

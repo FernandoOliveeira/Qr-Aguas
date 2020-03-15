@@ -45,14 +45,16 @@
             treeNode7});
             System.Windows.Forms.TreeNode treeNode9 = new System.Windows.Forms.TreeNode("Relatório de Vendas", 1, 1);
             System.Windows.Forms.TreeNode treeNode10 = new System.Windows.Forms.TreeNode("Relatório de Fornecedores", 1, 1);
-            System.Windows.Forms.TreeNode treeNode11 = new System.Windows.Forms.TreeNode("Relatórios", new System.Windows.Forms.TreeNode[] {
+            System.Windows.Forms.TreeNode treeNode11 = new System.Windows.Forms.TreeNode("Relatório de Produtos", 1, 1);
+            System.Windows.Forms.TreeNode treeNode12 = new System.Windows.Forms.TreeNode("Relatórios", new System.Windows.Forms.TreeNode[] {
             treeNode9,
-            treeNode10});
-            System.Windows.Forms.TreeNode treeNode12 = new System.Windows.Forms.TreeNode("Qr Águas - Menu Geral", 0, 0, new System.Windows.Forms.TreeNode[] {
+            treeNode10,
+            treeNode11});
+            System.Windows.Forms.TreeNode treeNode13 = new System.Windows.Forms.TreeNode("Qr Águas - Menu Geral", 0, 0, new System.Windows.Forms.TreeNode[] {
             treeNode5,
             treeNode6,
             treeNode8,
-            treeNode11});
+            treeNode12});
             this.TreeViewImageList = new System.Windows.Forms.ImageList(this.components);
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.segundoItemToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -98,13 +100,13 @@
             // procurarUsuarioToolStripMenuItem
             // 
             this.procurarUsuarioToolStripMenuItem.Name = "procurarUsuarioToolStripMenuItem";
-            this.procurarUsuarioToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.procurarUsuarioToolStripMenuItem.Size = new System.Drawing.Size(160, 22);
             this.procurarUsuarioToolStripMenuItem.Text = "Procurar Usuário";
             // 
             // alterarSenhaToolStripMenuItem
             // 
             this.alterarSenhaToolStripMenuItem.Name = "alterarSenhaToolStripMenuItem";
-            this.alterarSenhaToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.alterarSenhaToolStripMenuItem.Size = new System.Drawing.Size(160, 22);
             this.alterarSenhaToolStripMenuItem.Text = "Alterar Senha";
             this.alterarSenhaToolStripMenuItem.Click += new System.EventHandler(this.AlterarSenhaToolStripMenuItem_Click);
             // 
@@ -186,14 +188,18 @@
             treeNode10.Name = "Node1";
             treeNode10.SelectedImageIndex = 1;
             treeNode10.Text = "Relatório de Fornecedores";
-            treeNode11.Name = "Node3";
-            treeNode11.Text = "Relatórios";
-            treeNode12.ImageIndex = 0;
-            treeNode12.Name = "Node0";
-            treeNode12.SelectedImageIndex = 0;
-            treeNode12.Text = "Qr Águas - Menu Geral";
+            treeNode11.ImageIndex = 1;
+            treeNode11.Name = "Node2";
+            treeNode11.SelectedImageIndex = 1;
+            treeNode11.Text = "Relatório de Produtos";
+            treeNode12.Name = "Node3";
+            treeNode12.Text = "Relatórios";
+            treeNode13.ImageIndex = 0;
+            treeNode13.Name = "Node0";
+            treeNode13.SelectedImageIndex = 0;
+            treeNode13.Text = "Qr Águas - Menu Geral";
             this.treeView.Nodes.AddRange(new System.Windows.Forms.TreeNode[] {
-            treeNode12});
+            treeNode13});
             this.treeView.SelectedImageIndex = 0;
             this.treeView.Size = new System.Drawing.Size(270, 538);
             this.treeView.TabIndex = 0;
