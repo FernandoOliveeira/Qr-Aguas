@@ -20,10 +20,17 @@ namespace QrAguas.View_Layer
 
         private void ProductReport_Load(object sender, EventArgs e)
         {
-            // TODO: This line of code loads data into the '_0ybkkaeekeDataSet.produtos' table. You can move, or remove it, as needed.
+            // Insere os dados dentro do ReportViewer
             this.produtosTableAdapter.Fill(this._0ybkkaeekeDataSet.produtos);
 
+            
+            this.MinimumSize = new Size(700, 550);
 
+            // Faz com que o ReportViewer encontre o relatório 
+            RVProdutos.LocalReport.ReportEmbeddedResource = "QrAguas.ViewLayer.Reports.RepProduct.rdlc";
+
+            this.RVProdutos.RefreshReport();
         }
+
     }
 }

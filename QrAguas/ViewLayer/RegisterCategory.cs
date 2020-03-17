@@ -37,10 +37,10 @@ namespace QrAguas.View_Layer
         private void DataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
             // "Evento de click" no botão Excluir no DataGridView
-            if (dataGridView1.Columns[e.ColumnIndex].Name.Equals("Excluir"))
+            if (DGVCategorias.Columns[e.ColumnIndex].Name.Equals("Excluir"))
             {
-                int idCategoria = (int) dataGridView1.SelectedRows[0].Cells[0].Value;
-                string nomeCategoria = dataGridView1.SelectedRows[0].Cells[1].Value.ToString();
+                int idCategoria = (int) DGVCategorias.SelectedRows[0].Cells[0].Value;
+                string nomeCategoria = DGVCategorias.SelectedRows[0].Cells[1].Value.ToString();
 
                 DialogResult resposta = MessageBox.Show("Deseja excluir a categoria '" + nomeCategoria + "' ?", "Excluir Categoria", MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button2);
 
@@ -68,10 +68,10 @@ namespace QrAguas.View_Layer
             }
 
             // "Evento de click" no botão Atualizar no DataGridView
-            if (dataGridView1.Columns[e.ColumnIndex].Name.Equals("Atualizar"))
+            if (DGVCategorias.Columns[e.ColumnIndex].Name.Equals("Atualizar"))
             {
-                int idCategoria = (int)dataGridView1.SelectedRows[0].Cells[0].Value;
-                string nomeCategoria = dataGridView1.SelectedRows[0].Cells[1].Value.ToString();
+                int idCategoria = (int)DGVCategorias.SelectedRows[0].Cells[0].Value;
+                string nomeCategoria = DGVCategorias.SelectedRows[0].Cells[1].Value.ToString();
 
                 DialogResult resposta = MessageBox.Show("Deseja atualizar a categoria '" + nomeCategoria + "' ?", "Atualizar Categoria", MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button2);
 
