@@ -63,7 +63,7 @@
             this.RVProdutos.Location = new System.Drawing.Point(0, 0);
             this.RVProdutos.Name = "RVProdutos";
             this.RVProdutos.ServerReport.BearerToken = null;
-            this.RVProdutos.Size = new System.Drawing.Size(804, 512);
+            this.RVProdutos.Size = new System.Drawing.Size(1134, 512);
             this.RVProdutos.TabIndex = 0;
             // 
             // ProductReport
@@ -71,7 +71,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 17F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(130)))), ((int)(((byte)(156)))), ((int)(((byte)(188)))));
-            this.ClientSize = new System.Drawing.Size(804, 512);
+            this.ClientSize = new System.Drawing.Size(1134, 512);
             this.Controls.Add(this.RVProdutos);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.25F);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
