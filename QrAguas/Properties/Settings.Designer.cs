@@ -74,5 +74,16 @@ namespace QrAguas.Properties {
                 return ((string)(this["_FernandoPCn53ta"]));
             }
         }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
+        [global::System.Configuration.DefaultSettingValueAttribute("server=Fernando-PC;user id=fernando;persistsecurityinfo=True;password=123456;data" +
+            "base=qraguas")]
+        public string QrAguasCnn {
+            get {
+                return ((string)(this["QrAguasCnn"]));
+            }
+        }
     }
 }

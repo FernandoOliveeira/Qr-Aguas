@@ -24,10 +24,10 @@ namespace QrAguas.View_Layer
         private void RegisterProduct_Load(object sender, EventArgs e)
         {
             // Atualiza o ComboBoxCategoria
-            this.categoriasTableAdapter.Fill(this._0ybkkaeekeDataSet.categorias);
+            this.categoriasTableAdapter.Fill(this.qraguasDataSet.categorias);
             
             // Atualiza o ComboBoxFornecedor
-            this.fornecedoresTableAdapter.Fill(this._0ybkkaeekeDataSet.fornecedores);
+            this.fornecedoresTableAdapter.Fill(this.qraguasDataSet.fornecedores);
 
 
 
@@ -57,14 +57,14 @@ namespace QrAguas.View_Layer
         private void CBCategoria_Click(object sender, EventArgs e)
         {
             // Atualiza o ComboBoxCategoria
-            this.categoriasTableAdapter.Fill(this._0ybkkaeekeDataSet.categorias);
+            this.categoriasTableAdapter.Fill(this.qraguasDataSet.categorias);
            
         }
 
         private void CBFornecedor_Click(object sender, EventArgs e)
         {
             // Atualiza o ComboBoxFornecedor
-            this.fornecedoresTableAdapter.Fill(this._0ybkkaeekeDataSet.fornecedores);
+            this.fornecedoresTableAdapter.Fill(this.qraguasDataSet.fornecedores);
 
         }
 

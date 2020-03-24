@@ -26,8 +26,11 @@ namespace QrAguas.View_Layer
 
         private void RegisterCategory_Load(object sender, EventArgs e)
         {
+            
             // Atualiza e insere dados no DataGridView
-            this.categoriasTableAdapter.Fill(this._0ybkkaeekeDataSet.categorias);
+            this.categoriasTableAdapter.Fill(this.qraguasDataSet.categorias);
+            
+            // Flag recebe valor false na inicialização do form
             UpdateCategoryResultado = false;
 
             
@@ -53,14 +56,14 @@ namespace QrAguas.View_Layer
                         MessageBox.Show("Categoria excluída com sucesso.", "Excluído com sucesso", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
                         // Atualiza e insere dados no DataGridView
-                        this.categoriasTableAdapter.Fill(this._0ybkkaeekeDataSet.categorias);
+                        this.categoriasTableAdapter.Fill(this.qraguasDataSet.categorias);
                         UpdateCategoryResultado = false;
 
                     }
                     catch (Exception erro)
                     {
 
-                        MessageBox.Show("Erro ao excluir a categoria.\nErro: " + erro, "Erro", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        MessageBox.Show("Erro ao excluir a categoria.\nErro: " + erro, "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
 
                     }
 
@@ -90,7 +93,7 @@ namespace QrAguas.View_Layer
                         UpdateCategoryResultado = false;
 
                         // Atualiza e insere dados no DataGridView
-                        this.categoriasTableAdapter.Fill(this._0ybkkaeekeDataSet.categorias);
+                        this.categoriasTableAdapter.Fill(this.qraguasDataSet.categorias);
                         UpdateCategoryResultado = false;
                     }
                 }
@@ -113,7 +116,7 @@ namespace QrAguas.View_Layer
                         MessageBox.Show("Nova Categoria cadastrada com sucesso", "Cadastrado com sucesso", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
                         // Atualiza e insere dados no DataGridView
-                        this.categoriasTableAdapter.Fill(this._0ybkkaeekeDataSet.categorias);
+                        this.categoriasTableAdapter.Fill(this.qraguasDataSet.categorias);
                         UpdateCategoryResultado = false;
 
                     }

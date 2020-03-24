@@ -48,18 +48,16 @@
             this.panelBtnCadastrar = new System.Windows.Forms.Panel();
             this.btnCadastrar = new System.Windows.Forms.Button();
             this.lblTitulo = new System.Windows.Forms.Label();
-            this._0ybkkaeekeDataSet = new QrAguas._0ybkkaeekeDataSet();
-            this.ybkkaeekeDataSetBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.qraguasDataSet = new QrAguas.qraguasDataSet();
             this.tipousuarioBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.tipo_usuarioTableAdapter = new QrAguas._0ybkkaeekeDataSetTableAdapters.tipo_usuarioTableAdapter();
+            this.tipo_usuarioTableAdapter = new QrAguas.qraguasDataSetTableAdapters.tipo_usuarioTableAdapter();
             this.tableLayoutPanel1.SuspendLayout();
             this.panelUsuario.SuspendLayout();
             this.panelSenha.SuspendLayout();
             this.panelConfirmarSenha.SuspendLayout();
             this.panel1.SuspendLayout();
             this.panelBtnCadastrar.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this._0ybkkaeekeDataSet)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ybkkaeekeDataSetBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.qraguasDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tipousuarioBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
@@ -306,20 +304,15 @@
             this.lblTitulo.Text = "Cadastro de Usuários";
             this.lblTitulo.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // _0ybkkaeekeDataSet
+            // qraguasDataSet
             // 
-            this._0ybkkaeekeDataSet.DataSetName = "_0ybkkaeekeDataSet";
-            this._0ybkkaeekeDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // ybkkaeekeDataSetBindingSource
-            // 
-            this.ybkkaeekeDataSetBindingSource.DataSource = this._0ybkkaeekeDataSet;
-            this.ybkkaeekeDataSetBindingSource.Position = 0;
+            this.qraguasDataSet.DataSetName = "qraguasDataSet";
+            this.qraguasDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // tipousuarioBindingSource
             // 
             this.tipousuarioBindingSource.DataMember = "tipo_usuario";
-            this.tipousuarioBindingSource.DataSource = this.ybkkaeekeDataSetBindingSource;
+            this.tipousuarioBindingSource.DataSource = this.qraguasDataSet;
             // 
             // tipo_usuarioTableAdapter
             // 
@@ -350,8 +343,7 @@
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.panelBtnCadastrar.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this._0ybkkaeekeDataSet)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ybkkaeekeDataSetBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.qraguasDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.tipousuarioBindingSource)).EndInit();
             this.ResumeLayout(false);
 
@@ -376,9 +368,8 @@
         private System.Windows.Forms.Button btnCadastrar;
         private System.Windows.Forms.Label lblConfirmarSenhaAviso;
         private System.Windows.Forms.Label lblTitulo;
-        private System.Windows.Forms.BindingSource ybkkaeekeDataSetBindingSource;
-        private _0ybkkaeekeDataSet _0ybkkaeekeDataSet;
+        private qraguasDataSet qraguasDataSet;
         private System.Windows.Forms.BindingSource tipousuarioBindingSource;
-        private _0ybkkaeekeDataSetTableAdapters.tipo_usuarioTableAdapter tipo_usuarioTableAdapter;
+        private qraguasDataSetTableAdapters.tipo_usuarioTableAdapter tipo_usuarioTableAdapter;
     }
 }

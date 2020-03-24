@@ -31,40 +31,40 @@
             this.components = new System.ComponentModel.Container();
             Microsoft.Reporting.WinForms.ReportDataSource reportDataSource1 = new Microsoft.Reporting.WinForms.ReportDataSource();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ProductReport));
-            this.produtosBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this._0ybkkaeekeDataSet = new QrAguas._0ybkkaeekeDataSet();
-            this.produtosTableAdapter = new QrAguas._0ybkkaeekeDataSetTableAdapters.produtosTableAdapter();
             this.RVProdutos = new Microsoft.Reporting.WinForms.ReportViewer();
-            ((System.ComponentModel.ISupportInitialize)(this.produtosBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this._0ybkkaeekeDataSet)).BeginInit();
+            this.qraguasDataSet = new QrAguas.qraguasDataSet();
+            this.relatorioProdutosBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.relatorio_ProdutosTableAdapter = new QrAguas.qraguasDataSetTableAdapters.Relatorio_ProdutosTableAdapter();
+            ((System.ComponentModel.ISupportInitialize)(this.qraguasDataSet)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.relatorioProdutosBindingSource)).BeginInit();
             this.SuspendLayout();
-            // 
-            // produtosBindingSource
-            // 
-            this.produtosBindingSource.DataMember = "produtos";
-            this.produtosBindingSource.DataSource = this._0ybkkaeekeDataSet;
-            // 
-            // _0ybkkaeekeDataSet
-            // 
-            this._0ybkkaeekeDataSet.DataSetName = "_0ybkkaeekeDataSet";
-            this._0ybkkaeekeDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // produtosTableAdapter
-            // 
-            this.produtosTableAdapter.ClearBeforeFill = true;
             // 
             // RVProdutos
             // 
             this.RVProdutos.Dock = System.Windows.Forms.DockStyle.Fill;
             reportDataSource1.Name = "RepProductDataSet";
-            reportDataSource1.Value = this.produtosBindingSource;
+            reportDataSource1.Value = this.relatorioProdutosBindingSource;
             this.RVProdutos.LocalReport.DataSources.Add(reportDataSource1);
-            this.RVProdutos.LocalReport.ReportEmbeddedResource = "QrAguas.View Layer.Reports.RepProduct.rdlc";
+            this.RVProdutos.LocalReport.ReportEmbeddedResource = "QrAguas.Reports.RepProduct.rdlc";
             this.RVProdutos.Location = new System.Drawing.Point(0, 0);
             this.RVProdutos.Name = "RVProdutos";
             this.RVProdutos.ServerReport.BearerToken = null;
             this.RVProdutos.Size = new System.Drawing.Size(1134, 512);
             this.RVProdutos.TabIndex = 0;
+            // 
+            // qraguasDataSet
+            // 
+            this.qraguasDataSet.DataSetName = "qraguasDataSet";
+            this.qraguasDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // relatorioProdutosBindingSource
+            // 
+            this.relatorioProdutosBindingSource.DataMember = "Relatorio_Produtos";
+            this.relatorioProdutosBindingSource.DataSource = this.qraguasDataSet;
+            // 
+            // relatorio_ProdutosTableAdapter
+            // 
+            this.relatorio_ProdutosTableAdapter.ClearBeforeFill = true;
             // 
             // ProductReport
             // 
@@ -80,16 +80,16 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Qr Águas - Relatório de Produtos";
             this.Load += new System.EventHandler(this.ProductReport_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.produtosBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this._0ybkkaeekeDataSet)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.qraguasDataSet)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.relatorioProdutosBindingSource)).EndInit();
             this.ResumeLayout(false);
 
         }
 
         #endregion
-        private _0ybkkaeekeDataSet _0ybkkaeekeDataSet;
-        private System.Windows.Forms.BindingSource produtosBindingSource;
-        private _0ybkkaeekeDataSetTableAdapters.produtosTableAdapter produtosTableAdapter;
         private Microsoft.Reporting.WinForms.ReportViewer RVProdutos;
+        private qraguasDataSet qraguasDataSet;
+        private System.Windows.Forms.BindingSource relatorioProdutosBindingSource;
+        private qraguasDataSetTableAdapters.Relatorio_ProdutosTableAdapter relatorio_ProdutosTableAdapter;
     }
 }

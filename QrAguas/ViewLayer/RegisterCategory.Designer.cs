@@ -37,12 +37,6 @@
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.panel2 = new System.Windows.Forms.Panel();
             this.DGVCategorias = new System.Windows.Forms.DataGridView();
-            this.iDCATEGORIASDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.nOMECATEGORIADataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Atualizar = new System.Windows.Forms.DataGridViewButtonColumn();
-            this.Excluir = new System.Windows.Forms.DataGridViewButtonColumn();
-            this.categoriasBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this._0ybkkaeekeDataSet = new QrAguas._0ybkkaeekeDataSet();
             this.panel1 = new System.Windows.Forms.Panel();
             this.lblNovaCategoria = new System.Windows.Forms.Label();
             this.txtNovaCategoria = new System.Windows.Forms.TextBox();
@@ -50,15 +44,21 @@
             this.btnInserir = new System.Windows.Forms.Button();
             this.panel3 = new System.Windows.Forms.Panel();
             this.lblTitulo = new System.Windows.Forms.Label();
-            this.categoriasTableAdapter = new QrAguas._0ybkkaeekeDataSetTableAdapters.categoriasTableAdapter();
+            this.qraguasDataSet = new QrAguas.qraguasDataSet();
+            this.categoriasBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.categoriasTableAdapter = new QrAguas.qraguasDataSetTableAdapters.categoriasTableAdapter();
+            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Atualizar = new System.Windows.Forms.DataGridViewButtonColumn();
+            this.Excluir = new System.Windows.Forms.DataGridViewButtonColumn();
             this.tableLayoutPanel1.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.DGVCategorias)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.categoriasBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this._0ybkkaeekeDataSet)).BeginInit();
             this.panel1.SuspendLayout();
             this.panelBtnCadastrar.SuspendLayout();
             this.panel3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.qraguasDataSet)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.categoriasBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // tableLayoutPanel1
@@ -111,8 +111,8 @@
             this.DGVCategorias.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.DGVCategorias.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
             this.DGVCategorias.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.iDCATEGORIASDataGridViewTextBoxColumn,
-            this.nOMECATEGORIADataGridViewTextBoxColumn,
+            this.dataGridViewTextBoxColumn1,
+            this.dataGridViewTextBoxColumn2,
             this.Atualizar,
             this.Excluir});
             this.DGVCategorias.DataSource = this.categoriasBindingSource;
@@ -128,63 +128,6 @@
             this.DGVCategorias.Size = new System.Drawing.Size(578, 221);
             this.DGVCategorias.TabIndex = 0;
             this.DGVCategorias.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DataGridView1_CellContentClick);
-            // 
-            // iDCATEGORIASDataGridViewTextBoxColumn
-            // 
-            this.iDCATEGORIASDataGridViewTextBoxColumn.DataPropertyName = "ID_CATEGORIAS";
-            this.iDCATEGORIASDataGridViewTextBoxColumn.HeaderText = "ID_CATEGORIAS";
-            this.iDCATEGORIASDataGridViewTextBoxColumn.Name = "iDCATEGORIASDataGridViewTextBoxColumn";
-            this.iDCATEGORIASDataGridViewTextBoxColumn.ReadOnly = true;
-            this.iDCATEGORIASDataGridViewTextBoxColumn.Visible = false;
-            // 
-            // nOMECATEGORIADataGridViewTextBoxColumn
-            // 
-            this.nOMECATEGORIADataGridViewTextBoxColumn.DataPropertyName = "NOME_CATEGORIA";
-            this.nOMECATEGORIADataGridViewTextBoxColumn.HeaderText = "Categoria";
-            this.nOMECATEGORIADataGridViewTextBoxColumn.Name = "nOMECATEGORIADataGridViewTextBoxColumn";
-            this.nOMECATEGORIADataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // Atualizar
-            // 
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.White;
-            this.Atualizar.DefaultCellStyle = dataGridViewCellStyle2;
-            this.Atualizar.FillWeight = 57.00406F;
-            this.Atualizar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Atualizar.HeaderText = "Atualizar";
-            this.Atualizar.Name = "Atualizar";
-            this.Atualizar.ReadOnly = true;
-            this.Atualizar.Text = "Atualizar";
-            this.Atualizar.UseColumnTextForButtonValue = true;
-            // 
-            // Excluir
-            // 
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle3.BackColor = System.Drawing.Color.Red;
-            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.Red;
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.White;
-            this.Excluir.DefaultCellStyle = dataGridViewCellStyle3;
-            this.Excluir.FillWeight = 76.14212F;
-            this.Excluir.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Excluir.HeaderText = "Excluir";
-            this.Excluir.Name = "Excluir";
-            this.Excluir.ReadOnly = true;
-            this.Excluir.Text = "Excluir";
-            this.Excluir.UseColumnTextForButtonValue = true;
-            // 
-            // categoriasBindingSource
-            // 
-            this.categoriasBindingSource.DataMember = "categorias";
-            this.categoriasBindingSource.DataSource = this._0ybkkaeekeDataSet;
-            // 
-            // _0ybkkaeekeDataSet
-            // 
-            this._0ybkkaeekeDataSet.DataSetName = "_0ybkkaeekeDataSet";
-            this._0ybkkaeekeDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // panel1
             // 
@@ -265,9 +208,66 @@
             this.lblTitulo.Text = "Cadastro de Categorias";
             this.lblTitulo.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
+            // qraguasDataSet
+            // 
+            this.qraguasDataSet.DataSetName = "qraguasDataSet";
+            this.qraguasDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // categoriasBindingSource
+            // 
+            this.categoriasBindingSource.DataMember = "categorias";
+            this.categoriasBindingSource.DataSource = this.qraguasDataSet;
+            // 
             // categoriasTableAdapter
             // 
             this.categoriasTableAdapter.ClearBeforeFill = true;
+            // 
+            // dataGridViewTextBoxColumn1
+            // 
+            this.dataGridViewTextBoxColumn1.DataPropertyName = "ID_CATEGORIAS";
+            this.dataGridViewTextBoxColumn1.HeaderText = "ID_CATEGORIAS";
+            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
+            this.dataGridViewTextBoxColumn1.ReadOnly = true;
+            this.dataGridViewTextBoxColumn1.Visible = false;
+            // 
+            // dataGridViewTextBoxColumn2
+            // 
+            this.dataGridViewTextBoxColumn2.DataPropertyName = "NOME_CATEGORIA";
+            this.dataGridViewTextBoxColumn2.HeaderText = "Categorias";
+            this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
+            this.dataGridViewTextBoxColumn2.ReadOnly = true;
+            // 
+            // Atualizar
+            // 
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.White;
+            this.Atualizar.DefaultCellStyle = dataGridViewCellStyle2;
+            this.Atualizar.FillWeight = 57.00406F;
+            this.Atualizar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Atualizar.HeaderText = "Atualizar";
+            this.Atualizar.Name = "Atualizar";
+            this.Atualizar.ReadOnly = true;
+            this.Atualizar.Text = "Atualizar";
+            this.Atualizar.UseColumnTextForButtonValue = true;
+            // 
+            // Excluir
+            // 
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.Red;
+            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.Red;
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.White;
+            this.Excluir.DefaultCellStyle = dataGridViewCellStyle3;
+            this.Excluir.FillWeight = 76.14212F;
+            this.Excluir.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Excluir.HeaderText = "Excluir";
+            this.Excluir.Name = "Excluir";
+            this.Excluir.ReadOnly = true;
+            this.Excluir.Text = "Excluir";
+            this.Excluir.UseColumnTextForButtonValue = true;
             // 
             // RegisterCategory
             // 
@@ -287,12 +287,12 @@
             this.tableLayoutPanel1.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.DGVCategorias)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.categoriasBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this._0ybkkaeekeDataSet)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.panelBtnCadastrar.ResumeLayout(false);
             this.panel3.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.qraguasDataSet)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.categoriasBindingSource)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -309,11 +309,13 @@
         private System.Windows.Forms.DataGridView DGVCategorias;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Label lblTitulo;
-        private _0ybkkaeekeDataSet _0ybkkaeekeDataSet;
-        private System.Windows.Forms.BindingSource categoriasBindingSource;
-        private _0ybkkaeekeDataSetTableAdapters.categoriasTableAdapter categoriasTableAdapter;
         private System.Windows.Forms.DataGridViewTextBoxColumn iDCATEGORIASDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn nOMECATEGORIADataGridViewTextBoxColumn;
+        private qraguasDataSet qraguasDataSet;
+        private System.Windows.Forms.BindingSource categoriasBindingSource;
+        private qraguasDataSetTableAdapters.categoriasTableAdapter categoriasTableAdapter;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
         private System.Windows.Forms.DataGridViewButtonColumn Atualizar;
         private System.Windows.Forms.DataGridViewButtonColumn Excluir;
     }

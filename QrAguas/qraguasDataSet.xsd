@@ -1,15 +1,15 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<xs:schema id="_0ybkkaeekeDataSet" targetNamespace="http://tempuri.org/_0ybkkaeekeDataSet.xsd" xmlns:mstns="http://tempuri.org/_0ybkkaeekeDataSet.xsd" xmlns="http://tempuri.org/_0ybkkaeekeDataSet.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+<xs:schema id="qraguasDataSet" targetNamespace="http://tempuri.org/qraguasDataSet.xsd" xmlns:mstns="http://tempuri.org/qraguasDataSet.xsd" xmlns="http://tempuri.org/qraguasDataSet.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
   <xs:annotation>
     <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
       <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
         <Connections>
-          <Connection AppSettingsObjectName="Settings" AppSettingsPropertyName="_FernandoPCn53ta" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="_FernandoPCn53ta (Settings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.QrAguas.Properties.Settings.GlobalReference.Default._FernandoPCn53ta" Provider="MySql.Data.MySqlClient" />
+          <Connection AppSettingsObjectName="Settings" AppSettingsPropertyName="QrAguasCnn" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="QrAguasCnn (Settings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.QrAguas.Properties.Settings.GlobalReference.Default.QrAguasCnn" Provider="MySql.Data.MySqlClient" />
         </Connections>
         <Tables>
           <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="categoriasTableAdapter" GeneratorDataComponentClassName="categoriasTableAdapter" Name="categorias" UserDataComponentName="categoriasTableAdapter">
             <MainSource>
-              <DbSource ConnectionRef="_FernandoPCn53ta (Settings)" DbObjectName="`0ybkkaeeke`.categorias" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+              <DbSource ConnectionRef="QrAguasCnn (Settings)" DbObjectName="qraguas.categorias" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
                 <DeleteCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="false">
                     <CommandText>DELETE FROM `categorias` WHERE ((`ID_CATEGORIAS` = @p1) AND (`NOME_CATEGORIA` = @p2) AND (`ID_USUARIOS` = @p3) AND ((@p4 = 1 AND `ATUALIZADO_POR` IS NULL) OR (`ATUALIZADO_POR` = @p5)) AND ((@p6 = 1 AND `DATA_ATUALIZACAO` IS NULL) OR (`DATA_ATUALIZACAO` = @p7)) AND (`DATA_CADASTRO` = @p8))</CommandText>
@@ -77,7 +77,7 @@
           </TableAdapter>
           <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="fornecedoresTableAdapter" GeneratorDataComponentClassName="fornecedoresTableAdapter" Name="fornecedores" UserDataComponentName="fornecedoresTableAdapter">
             <MainSource>
-              <DbSource ConnectionRef="_FernandoPCn53ta (Settings)" DbObjectName="`0ybkkaeeke`.fornecedores" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+              <DbSource ConnectionRef="QrAguasCnn (Settings)" DbObjectName="qraguas.fornecedores" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
                 <DeleteCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="false">
                     <CommandText>DELETE FROM `fornecedores` WHERE ((`ID_FORNECEDORES` = @p1) AND (`RAZAO_SOCIAL` = @p2) AND (`CNPJ` = @p3) AND (`ENDERECO` = @p4) AND (`NUMERO` = @p5) AND (`BAIRRO` = @p6) AND (`CIDADE` = @p7) AND ((@p8 = 1 AND `COMPLEMENTO` IS NULL) OR (`COMPLEMENTO` = @p9)) AND (`UF` = @p10) AND (`TELEFONE` = @p11) AND ((@p12 = 1 AND `CELULAR` IS NULL) OR (`CELULAR` = @p13)) AND (`CEP` = @p14) AND ((@p15 = 1 AND `EMAIL` IS NULL) OR (`EMAIL` = @p16)) AND (`ID_USUARIOS` = @p17) AND (`DATA_CADASTRO` = @p18))</CommandText>
@@ -192,7 +192,7 @@
           </TableAdapter>
           <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="produtosTableAdapter" GeneratorDataComponentClassName="produtosTableAdapter" Name="produtos" UserDataComponentName="produtosTableAdapter">
             <MainSource>
-              <DbSource ConnectionRef="_FernandoPCn53ta (Settings)" DbObjectName="`0ybkkaeeke`.produtos" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+              <DbSource ConnectionRef="QrAguasCnn (Settings)" DbObjectName="qraguas.produtos" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
                 <DeleteCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="false">
                     <CommandText>DELETE FROM `produtos` WHERE ((`ID_PRODUTOS` = @p1) AND (`COD_PRODUTO` = @p2) AND (`NOME_PRODUTO` = @p3) AND (`DESCRICAO` = @p4) AND (`PRECO_COMPRA` = @p5) AND (`PRECO_VENDA` = @p6) AND (`ID_FORNECEDORES` = @p7) AND (`ID_USUARIOS` = @p8) AND (`ID_CATEGORIAS` = @p9) AND (`DATA_FABRICACAO` = @p10) AND (`DATA_VALIDADE` = @p11) AND (`DATA_CADASTRO` = @p12))</CommandText>
@@ -286,14 +286,15 @@
           </TableAdapter>
           <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="tipo_usuarioTableAdapter" GeneratorDataComponentClassName="tipo_usuarioTableAdapter" Name="tipo_usuario" UserDataComponentName="tipo_usuarioTableAdapter">
             <MainSource>
-              <DbSource ConnectionRef="_FernandoPCn53ta (Settings)" DbObjectName="`0ybkkaeeke`.tipo_usuario" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+              <DbSource ConnectionRef="QrAguasCnn (Settings)" DbObjectName="qraguas.tipo_usuario" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
                 <DeleteCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="false">
-                    <CommandText>DELETE FROM `tipo_usuario` WHERE ((`ID_TIPO_USUARIO` = @p1) AND (`NOME_TIPO` = @p2) AND (`DESCRICAO` = @p3))</CommandText>
+                    <CommandText>DELETE FROM `tipo_usuario` WHERE ((`ID_TIPO_USUARIO` = @p1) AND (`NOME_TIPO` = @p2) AND ((@p3 = 1 AND `DESCRICAO` IS NULL) OR (`DESCRICAO` = @p4)))</CommandText>
                     <Parameters>
                       <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@p1" Precision="0" ProviderType="Int32" Scale="0" Size="0" SourceColumn="ID_TIPO_USUARIO" SourceColumnNullMapping="false" SourceVersion="Original" />
                       <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@p2" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="NOME_TIPO" SourceColumnNullMapping="false" SourceVersion="Original" />
-                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@p3" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="DESCRICAO" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@p3" Precision="0" ProviderType="Int32" Scale="0" Size="0" SourceColumn="DESCRICAO" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@p4" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="DESCRICAO" SourceColumnNullMapping="false" SourceVersion="Original" />
                     </Parameters>
                   </DbCommand>
                 </DeleteCommand>
@@ -302,7 +303,7 @@
                     <CommandText>INSERT INTO `tipo_usuario` (`NOME_TIPO`, `DESCRICAO`) VALUES (@p1, @p2)</CommandText>
                     <Parameters>
                       <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@p1" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="NOME_TIPO" SourceColumnNullMapping="false" SourceVersion="Current" />
-                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@p2" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="DESCRICAO" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@p2" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="DESCRICAO" SourceColumnNullMapping="false" SourceVersion="Current" />
                     </Parameters>
                   </DbCommand>
                 </InsertCommand>
@@ -314,13 +315,14 @@
                 </SelectCommand>
                 <UpdateCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="false">
-                    <CommandText>UPDATE `tipo_usuario` SET `NOME_TIPO` = @p1, `DESCRICAO` = @p2 WHERE ((`ID_TIPO_USUARIO` = @p3) AND (`NOME_TIPO` = @p4) AND (`DESCRICAO` = @p5))</CommandText>
+                    <CommandText>UPDATE `tipo_usuario` SET `NOME_TIPO` = @p1, `DESCRICAO` = @p2 WHERE ((`ID_TIPO_USUARIO` = @p3) AND (`NOME_TIPO` = @p4) AND ((@p5 = 1 AND `DESCRICAO` IS NULL) OR (`DESCRICAO` = @p6)))</CommandText>
                     <Parameters>
                       <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@p1" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="NOME_TIPO" SourceColumnNullMapping="false" SourceVersion="Current" />
-                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@p2" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="DESCRICAO" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@p2" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="DESCRICAO" SourceColumnNullMapping="false" SourceVersion="Current" />
                       <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@p3" Precision="0" ProviderType="Int32" Scale="0" Size="0" SourceColumn="ID_TIPO_USUARIO" SourceColumnNullMapping="false" SourceVersion="Original" />
                       <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@p4" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="NOME_TIPO" SourceColumnNullMapping="false" SourceVersion="Original" />
-                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@p5" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="DESCRICAO" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@p5" Precision="0" ProviderType="Int32" Scale="0" Size="0" SourceColumn="DESCRICAO" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@p6" Precision="0" ProviderType="VarChar" Scale="0" Size="0" SourceColumn="DESCRICAO" SourceColumnNullMapping="false" SourceVersion="Original" />
                     </Parameters>
                   </DbCommand>
                 </UpdateCommand>
@@ -335,7 +337,7 @@
           </TableAdapter>
           <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="usuariosTableAdapter" GeneratorDataComponentClassName="usuariosTableAdapter" Name="usuarios" UserDataComponentName="usuariosTableAdapter">
             <MainSource>
-              <DbSource ConnectionRef="_FernandoPCn53ta (Settings)" DbObjectName="`0ybkkaeeke`.usuarios" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+              <DbSource ConnectionRef="QrAguasCnn (Settings)" DbObjectName="qraguas.usuarios" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
                 <DeleteCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="false">
                     <CommandText>DELETE FROM `usuarios` WHERE ((`ID_USUARIOS` = @p1) AND (`NOME_USUARIO` = @p2) AND (`SENHA` = @p3) AND (`ID_TIPO_USUARIO` = @p4) AND (`CADASTRADO_POR` = @p5) AND (`ID_UNICO` = @p6) AND ((@p7 = 1 AND `DATA_SENHA_ALTERADA` IS NULL) OR (`DATA_SENHA_ALTERADA` = @p8)) AND (`DATA_CADASTRO` = @p9))</CommandText>
@@ -409,15 +411,47 @@
             </Mappings>
             <Sources />
           </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="Relatorio_ProdutosTableAdapter" GeneratorDataComponentClassName="Relatorio_ProdutosTableAdapter" Name="Relatorio_Produtos" UserDataComponentName="Relatorio_ProdutosTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="QrAguasCnn (Settings)" DbObjectType="Unknown" FillMethodModifier="Public" FillMethodName="FillRepProduct" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetDataRepProduct" GeneratorSourceName="FillRepProduct" GetMethodModifier="Public" GetMethodName="GetDataRepProduct" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataRepProduct" UserSourceName="FillRepProduct">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT        P.COD_PRODUTO, P.NOME_PRODUTO, P.DESCRICAO, C.NOME_CATEGORIA, F.RAZAO_SOCIAL, P.PRECO_COMPRA, P.PRECO_VENDA, P.DATA_FABRICACAO, 
+                         P.DATA_VALIDADE, P.DATA_CADASTRO, U.NOME_USUARIO
+FROM            produtos P INNER JOIN
+                         usuarios U ON P.ID_USUARIOS = U.ID_USUARIOS INNER JOIN
+                         fornecedores F ON P.ID_FORNECEDORES = F.ID_FORNECEDORES INNER JOIN
+                         categorias C ON P.ID_CATEGORIAS = C.ID_CATEGORIAS
+ORDER BY P.NOME_PRODUTO</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="COD_PRODUTO" DataSetColumn="COD_PRODUTO" />
+              <Mapping SourceColumn="NOME_PRODUTO" DataSetColumn="NOME_PRODUTO" />
+              <Mapping SourceColumn="DESCRICAO" DataSetColumn="DESCRICAO" />
+              <Mapping SourceColumn="NOME_CATEGORIA" DataSetColumn="NOME_CATEGORIA" />
+              <Mapping SourceColumn="RAZAO_SOCIAL" DataSetColumn="RAZAO_SOCIAL" />
+              <Mapping SourceColumn="PRECO_COMPRA" DataSetColumn="PRECO_COMPRA" />
+              <Mapping SourceColumn="PRECO_VENDA" DataSetColumn="PRECO_VENDA" />
+              <Mapping SourceColumn="DATA_FABRICACAO" DataSetColumn="DATA_FABRICACAO" />
+              <Mapping SourceColumn="DATA_VALIDADE" DataSetColumn="DATA_VALIDADE" />
+              <Mapping SourceColumn="DATA_CADASTRO" DataSetColumn="DATA_CADASTRO" />
+              <Mapping SourceColumn="NOME_USUARIO" DataSetColumn="NOME_USUARIO" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
         </Tables>
         <Sources />
       </DataSource>
     </xs:appinfo>
   </xs:annotation>
-  <xs:element name="_0ybkkaeekeDataSet" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="True" msprop:Generator_DataSetName="_0ybkkaeekeDataSet" msprop:Generator_UserDSName="_0ybkkaeekeDataSet">
+  <xs:element name="qraguasDataSet" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="True" msprop:Generator_DataSetName="qraguasDataSet" msprop:Generator_UserDSName="qraguasDataSet">
     <xs:complexType>
       <xs:choice minOccurs="0" maxOccurs="unbounded">
-        <xs:element name="categorias" msprop:Generator_TableClassName="categoriasDataTable" msprop:Generator_TableVarName="tablecategorias" msprop:Generator_TablePropName="categorias" msprop:Generator_RowDeletingName="categoriasRowDeleting" msprop:Generator_RowChangingName="categoriasRowChanging" msprop:Generator_RowEvHandlerName="categoriasRowChangeEventHandler" msprop:Generator_RowDeletedName="categoriasRowDeleted" msprop:Generator_UserTableName="categorias" msprop:Generator_RowChangedName="categoriasRowChanged" msprop:Generator_RowEvArgName="categoriasRowChangeEvent" msprop:Generator_RowClassName="categoriasRow">
+        <xs:element name="categorias" msprop:Generator_TableClassName="categoriasDataTable" msprop:Generator_TableVarName="tablecategorias" msprop:Generator_RowChangedName="categoriasRowChanged" msprop:Generator_TablePropName="categorias" msprop:Generator_RowDeletingName="categoriasRowDeleting" msprop:Generator_RowChangingName="categoriasRowChanging" msprop:Generator_RowEvHandlerName="categoriasRowChangeEventHandler" msprop:Generator_RowDeletedName="categoriasRowDeleted" msprop:Generator_RowClassName="categoriasRow" msprop:Generator_UserTableName="categorias" msprop:Generator_RowEvArgName="categoriasRowChangeEvent">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="ID_CATEGORIAS" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnID_CATEGORIAS" msprop:Generator_ColumnPropNameInRow="ID_CATEGORIAS" msprop:Generator_ColumnPropNameInTable="ID_CATEGORIASColumn" msprop:Generator_UserColumnName="ID_CATEGORIAS" type="xs:int" />
@@ -435,7 +469,7 @@
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="fornecedores" msprop:Generator_TableClassName="fornecedoresDataTable" msprop:Generator_TableVarName="tablefornecedores" msprop:Generator_TablePropName="fornecedores" msprop:Generator_RowDeletingName="fornecedoresRowDeleting" msprop:Generator_RowChangingName="fornecedoresRowChanging" msprop:Generator_RowEvHandlerName="fornecedoresRowChangeEventHandler" msprop:Generator_RowDeletedName="fornecedoresRowDeleted" msprop:Generator_UserTableName="fornecedores" msprop:Generator_RowChangedName="fornecedoresRowChanged" msprop:Generator_RowEvArgName="fornecedoresRowChangeEvent" msprop:Generator_RowClassName="fornecedoresRow">
+        <xs:element name="fornecedores" msprop:Generator_TableClassName="fornecedoresDataTable" msprop:Generator_TableVarName="tablefornecedores" msprop:Generator_RowChangedName="fornecedoresRowChanged" msprop:Generator_TablePropName="fornecedores" msprop:Generator_RowDeletingName="fornecedoresRowDeleting" msprop:Generator_RowChangingName="fornecedoresRowChanging" msprop:Generator_RowEvHandlerName="fornecedoresRowChangeEventHandler" msprop:Generator_RowDeletedName="fornecedoresRowDeleted" msprop:Generator_RowClassName="fornecedoresRow" msprop:Generator_UserTableName="fornecedores" msprop:Generator_RowEvArgName="fornecedoresRowChangeEvent">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="ID_FORNECEDORES" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnID_FORNECEDORES" msprop:Generator_ColumnPropNameInRow="ID_FORNECEDORES" msprop:Generator_ColumnPropNameInTable="ID_FORNECEDORESColumn" msprop:Generator_UserColumnName="ID_FORNECEDORES" type="xs:int" />
@@ -522,7 +556,7 @@
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="produtos" msprop:Generator_TableClassName="produtosDataTable" msprop:Generator_TableVarName="tableprodutos" msprop:Generator_TablePropName="produtos" msprop:Generator_RowDeletingName="produtosRowDeleting" msprop:Generator_RowChangingName="produtosRowChanging" msprop:Generator_RowEvHandlerName="produtosRowChangeEventHandler" msprop:Generator_RowDeletedName="produtosRowDeleted" msprop:Generator_UserTableName="produtos" msprop:Generator_RowChangedName="produtosRowChanged" msprop:Generator_RowEvArgName="produtosRowChangeEvent" msprop:Generator_RowClassName="produtosRow">
+        <xs:element name="produtos" msprop:Generator_TableClassName="produtosDataTable" msprop:Generator_TableVarName="tableprodutos" msprop:Generator_RowChangedName="produtosRowChanged" msprop:Generator_TablePropName="produtos" msprop:Generator_RowDeletingName="produtosRowDeleting" msprop:Generator_RowChangingName="produtosRowChanging" msprop:Generator_RowEvHandlerName="produtosRowChangeEventHandler" msprop:Generator_RowDeletedName="produtosRowDeleted" msprop:Generator_RowClassName="produtosRow" msprop:Generator_UserTableName="produtos" msprop:Generator_RowEvArgName="produtosRowChangeEvent">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="ID_PRODUTOS" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnID_PRODUTOS" msprop:Generator_ColumnPropNameInRow="ID_PRODUTOS" msprop:Generator_ColumnPropNameInTable="ID_PRODUTOSColumn" msprop:Generator_UserColumnName="ID_PRODUTOS" type="xs:int" />
@@ -558,7 +592,7 @@
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="tipo_usuario" msprop:Generator_TableClassName="tipo_usuarioDataTable" msprop:Generator_TableVarName="tabletipo_usuario" msprop:Generator_TablePropName="tipo_usuario" msprop:Generator_RowDeletingName="tipo_usuarioRowDeleting" msprop:Generator_RowChangingName="tipo_usuarioRowChanging" msprop:Generator_RowEvHandlerName="tipo_usuarioRowChangeEventHandler" msprop:Generator_RowDeletedName="tipo_usuarioRowDeleted" msprop:Generator_UserTableName="tipo_usuario" msprop:Generator_RowChangedName="tipo_usuarioRowChanged" msprop:Generator_RowEvArgName="tipo_usuarioRowChangeEvent" msprop:Generator_RowClassName="tipo_usuarioRow">
+        <xs:element name="tipo_usuario" msprop:Generator_TableClassName="tipo_usuarioDataTable" msprop:Generator_TableVarName="tabletipo_usuario" msprop:Generator_RowChangedName="tipo_usuarioRowChanged" msprop:Generator_TablePropName="tipo_usuario" msprop:Generator_RowDeletingName="tipo_usuarioRowDeleting" msprop:Generator_RowChangingName="tipo_usuarioRowChanging" msprop:Generator_RowEvHandlerName="tipo_usuarioRowChangeEventHandler" msprop:Generator_RowDeletedName="tipo_usuarioRowDeleted" msprop:Generator_RowClassName="tipo_usuarioRow" msprop:Generator_UserTableName="tipo_usuario" msprop:Generator_RowEvArgName="tipo_usuarioRowChangeEvent">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="ID_TIPO_USUARIO" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnID_TIPO_USUARIO" msprop:Generator_ColumnPropNameInRow="ID_TIPO_USUARIO" msprop:Generator_ColumnPropNameInTable="ID_TIPO_USUARIOColumn" msprop:Generator_UserColumnName="ID_TIPO_USUARIO" type="xs:int" />
@@ -569,17 +603,17 @@
                   </xs:restriction>
                 </xs:simpleType>
               </xs:element>
-              <xs:element name="DESCRICAO" msprop:Generator_ColumnVarNameInTable="columnDESCRICAO" msprop:Generator_ColumnPropNameInRow="DESCRICAO" msprop:Generator_ColumnPropNameInTable="DESCRICAOColumn" msprop:Generator_UserColumnName="DESCRICAO">
+              <xs:element name="DESCRICAO" msprop:Generator_ColumnVarNameInTable="columnDESCRICAO" msprop:Generator_ColumnPropNameInRow="DESCRICAO" msprop:Generator_ColumnPropNameInTable="DESCRICAOColumn" msprop:Generator_UserColumnName="DESCRICAO" minOccurs="0">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
-                    <xs:maxLength value="13" />
+                    <xs:maxLength value="15" />
                   </xs:restriction>
                 </xs:simpleType>
               </xs:element>
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="usuarios" msprop:Generator_TableClassName="usuariosDataTable" msprop:Generator_TableVarName="tableusuarios" msprop:Generator_TablePropName="usuarios" msprop:Generator_RowDeletingName="usuariosRowDeleting" msprop:Generator_RowChangingName="usuariosRowChanging" msprop:Generator_RowEvHandlerName="usuariosRowChangeEventHandler" msprop:Generator_RowDeletedName="usuariosRowDeleted" msprop:Generator_UserTableName="usuarios" msprop:Generator_RowChangedName="usuariosRowChanged" msprop:Generator_RowEvArgName="usuariosRowChangeEvent" msprop:Generator_RowClassName="usuariosRow">
+        <xs:element name="usuarios" msprop:Generator_TableClassName="usuariosDataTable" msprop:Generator_TableVarName="tableusuarios" msprop:Generator_RowChangedName="usuariosRowChanged" msprop:Generator_TablePropName="usuarios" msprop:Generator_RowDeletingName="usuariosRowDeleting" msprop:Generator_RowChangingName="usuariosRowChanging" msprop:Generator_RowEvHandlerName="usuariosRowChangeEventHandler" msprop:Generator_RowDeletedName="usuariosRowDeleted" msprop:Generator_RowClassName="usuariosRow" msprop:Generator_UserTableName="usuarios" msprop:Generator_RowEvArgName="usuariosRowChangeEvent">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="ID_USUARIOS" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnID_USUARIOS" msprop:Generator_ColumnPropNameInRow="ID_USUARIOS" msprop:Generator_ColumnPropNameInTable="ID_USUARIOSColumn" msprop:Generator_UserColumnName="ID_USUARIOS" type="xs:int" />
@@ -617,6 +651,59 @@
             </xs:sequence>
           </xs:complexType>
         </xs:element>
+        <xs:element name="Relatorio_Produtos" msprop:Generator_TableClassName="Relatorio_ProdutosDataTable" msprop:Generator_TableVarName="tableRelatorio_Produtos" msprop:Generator_TablePropName="Relatorio_Produtos" msprop:Generator_RowDeletingName="Relatorio_ProdutosRowDeleting" msprop:Generator_RowChangingName="Relatorio_ProdutosRowChanging" msprop:Generator_RowEvHandlerName="Relatorio_ProdutosRowChangeEventHandler" msprop:Generator_RowDeletedName="Relatorio_ProdutosRowDeleted" msprop:Generator_UserTableName="Relatorio_Produtos" msprop:Generator_RowChangedName="Relatorio_ProdutosRowChanged" msprop:Generator_RowEvArgName="Relatorio_ProdutosRowChangeEvent" msprop:Generator_RowClassName="Relatorio_ProdutosRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="COD_PRODUTO" msprop:Generator_ColumnVarNameInTable="columnCOD_PRODUTO" msprop:Generator_ColumnPropNameInRow="COD_PRODUTO" msprop:Generator_ColumnPropNameInTable="COD_PRODUTOColumn" msprop:Generator_UserColumnName="COD_PRODUTO">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="15" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="NOME_PRODUTO" msprop:Generator_ColumnVarNameInTable="columnNOME_PRODUTO" msprop:Generator_ColumnPropNameInRow="NOME_PRODUTO" msprop:Generator_ColumnPropNameInTable="NOME_PRODUTOColumn" msprop:Generator_UserColumnName="NOME_PRODUTO">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="30" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="DESCRICAO" msprop:Generator_ColumnVarNameInTable="columnDESCRICAO" msprop:Generator_ColumnPropNameInRow="DESCRICAO" msprop:Generator_ColumnPropNameInTable="DESCRICAOColumn" msprop:Generator_UserColumnName="DESCRICAO">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="NOME_CATEGORIA" msprop:Generator_ColumnVarNameInTable="columnNOME_CATEGORIA" msprop:Generator_ColumnPropNameInRow="NOME_CATEGORIA" msprop:Generator_ColumnPropNameInTable="NOME_CATEGORIAColumn" msprop:Generator_UserColumnName="NOME_CATEGORIA">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="25" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="RAZAO_SOCIAL" msprop:Generator_ColumnVarNameInTable="columnRAZAO_SOCIAL" msprop:Generator_ColumnPropNameInRow="RAZAO_SOCIAL" msprop:Generator_ColumnPropNameInTable="RAZAO_SOCIALColumn" msprop:Generator_UserColumnName="RAZAO_SOCIAL">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="30" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="PRECO_COMPRA" msprop:Generator_ColumnVarNameInTable="columnPRECO_COMPRA" msprop:Generator_ColumnPropNameInRow="PRECO_COMPRA" msprop:Generator_ColumnPropNameInTable="PRECO_COMPRAColumn" msprop:Generator_UserColumnName="PRECO_COMPRA" type="xs:decimal" />
+              <xs:element name="PRECO_VENDA" msprop:Generator_ColumnVarNameInTable="columnPRECO_VENDA" msprop:Generator_ColumnPropNameInRow="PRECO_VENDA" msprop:Generator_ColumnPropNameInTable="PRECO_VENDAColumn" msprop:Generator_UserColumnName="PRECO_VENDA" type="xs:decimal" />
+              <xs:element name="DATA_FABRICACAO" msprop:Generator_ColumnVarNameInTable="columnDATA_FABRICACAO" msprop:Generator_ColumnPropNameInRow="DATA_FABRICACAO" msprop:Generator_ColumnPropNameInTable="DATA_FABRICACAOColumn" msprop:Generator_UserColumnName="DATA_FABRICACAO" type="xs:dateTime" />
+              <xs:element name="DATA_VALIDADE" msprop:Generator_ColumnVarNameInTable="columnDATA_VALIDADE" msprop:Generator_ColumnPropNameInRow="DATA_VALIDADE" msprop:Generator_ColumnPropNameInTable="DATA_VALIDADEColumn" msprop:Generator_UserColumnName="DATA_VALIDADE" type="xs:dateTime" />
+              <xs:element name="DATA_CADASTRO" msprop:Generator_ColumnVarNameInTable="columnDATA_CADASTRO" msprop:Generator_ColumnPropNameInRow="DATA_CADASTRO" msprop:Generator_ColumnPropNameInTable="DATA_CADASTROColumn" msprop:Generator_UserColumnName="DATA_CADASTRO" type="xs:dateTime" />
+              <xs:element name="NOME_USUARIO" msprop:Generator_ColumnVarNameInTable="columnNOME_USUARIO" msprop:Generator_ColumnPropNameInRow="NOME_USUARIO" msprop:Generator_ColumnPropNameInTable="NOME_USUARIOColumn" msprop:Generator_UserColumnName="NOME_USUARIO">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="15" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
       </xs:choice>
     </xs:complexType>
     <xs:unique name="Constraint1" msdata:PrimaryKey="true">
@@ -640,4 +727,14 @@
       <xs:field xpath="mstns:ID_USUARIOS" />
     </xs:unique>
   </xs:element>
+  <xs:annotation>
+    <xs:appinfo>
+      <msdata:Relationship name="categorias_ibfk_1" msdata:parent="usuarios" msdata:child="categorias" msdata:parentkey="ID_USUARIOS" msdata:childkey="ID_USUARIOS" msprop:Generator_UserChildTable="categorias" msprop:Generator_ChildPropName="GetcategoriasRows" msprop:Generator_UserRelationName="categorias_ibfk_1" msprop:Generator_ParentPropName="usuariosRow" msprop:Generator_RelationVarName="relationcategorias_ibfk_1" msprop:Generator_UserParentTable="usuarios" />
+      <msdata:Relationship name="fornecedores_ibfk_1" msdata:parent="usuarios" msdata:child="fornecedores" msdata:parentkey="ID_USUARIOS" msdata:childkey="ID_USUARIOS" msprop:Generator_UserChildTable="fornecedores" msprop:Generator_ChildPropName="GetfornecedoresRows" msprop:Generator_UserRelationName="fornecedores_ibfk_1" msprop:Generator_ParentPropName="usuariosRow" msprop:Generator_RelationVarName="relationfornecedores_ibfk_1" msprop:Generator_UserParentTable="usuarios" />
+      <msdata:Relationship name="produtos_ibfk_1" msdata:parent="fornecedores" msdata:child="produtos" msdata:parentkey="ID_FORNECEDORES" msdata:childkey="ID_FORNECEDORES" msprop:Generator_UserChildTable="produtos" msprop:Generator_ChildPropName="GetprodutosRows" msprop:Generator_UserRelationName="produtos_ibfk_1" msprop:Generator_RelationVarName="relationprodutos_ibfk_1" msprop:Generator_UserParentTable="fornecedores" msprop:Generator_ParentPropName="fornecedoresRow" />
+      <msdata:Relationship name="produtos_ibfk_2" msdata:parent="usuarios" msdata:child="produtos" msdata:parentkey="ID_USUARIOS" msdata:childkey="ID_USUARIOS" msprop:Generator_UserChildTable="produtos" msprop:Generator_ChildPropName="GetprodutosRows" msprop:Generator_UserRelationName="produtos_ibfk_2" msprop:Generator_ParentPropName="usuariosRow" msprop:Generator_RelationVarName="relationprodutos_ibfk_2" msprop:Generator_UserParentTable="usuarios" />
+      <msdata:Relationship name="produtos_ibfk_3" msdata:parent="categorias" msdata:child="produtos" msdata:parentkey="ID_CATEGORIAS" msdata:childkey="ID_CATEGORIAS" msprop:Generator_UserChildTable="produtos" msprop:Generator_ChildPropName="GetprodutosRows" msprop:Generator_UserRelationName="produtos_ibfk_3" msprop:Generator_RelationVarName="relationprodutos_ibfk_3" msprop:Generator_UserParentTable="categorias" msprop:Generator_ParentPropName="categoriasRow" />
+      <msdata:Relationship name="usuarios_ibfk_1" msdata:parent="tipo_usuario" msdata:child="usuarios" msdata:parentkey="ID_TIPO_USUARIO" msdata:childkey="ID_TIPO_USUARIO" msprop:Generator_UserChildTable="usuarios" msprop:Generator_ChildPropName="GetusuariosRows" msprop:Generator_UserRelationName="usuarios_ibfk_1" msprop:Generator_RelationVarName="relationusuarios_ibfk_1" msprop:Generator_UserParentTable="tipo_usuario" msprop:Generator_ParentPropName="tipo_usuarioRow" />
+    </xs:appinfo>
+  </xs:annotation>
 </xs:schema>

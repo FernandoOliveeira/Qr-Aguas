@@ -23,16 +23,16 @@ namespace QrAguas.View_Layer
         private void ProductReport_Load(object sender, EventArgs e)
         {
             // Insere os dados dentro do ReportViewer
-            this.produtosTableAdapter.Fill(this._0ybkkaeekeDataSet.produtos);
+            this.relatorio_ProdutosTableAdapter.FillRepProduct(this.qraguasDataSet.Relatorio_Produtos);
 
             // Atribui o valor mínimo para o form
             this.MinimumSize = new Size(700, 300);
 
             // Faz com que o ReportViewer encontre o relatório 
-            RVProdutos.LocalReport.ReportEmbeddedResource = "QrAguas.ViewLayer.Reports.RepProduct.rdlc";
+            RVProdutos.LocalReport.ReportEmbeddedResource = "QrAguas.Reports.RepProduct.rdlc";
 
             // Atribui o zoom para Tela Inteira ao abrir o relatório
-            RVProdutos.ZoomMode = ZoomMode.FullPage;
+            RVProdutos.ZoomMode = ZoomMode.Percent;
 
             // Desabiliata a opção de exportar para PDF
             DesabilitarFormatoExportacao(RVProdutos, "PDF");
