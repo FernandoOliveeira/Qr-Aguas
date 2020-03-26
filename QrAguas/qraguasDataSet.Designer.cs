@@ -4397,13 +4397,14 @@ namespace QrAguas.qraguasDataSetTableAdapters {
             this._commandCollection[0] = new global::MySql.Data.MySqlClient.MySqlCommand();
             this._commandCollection[0].Connection = this.Connection;
             this._commandCollection[0].CommandText = "SELECT        ID_CATEGORIAS, NOME_CATEGORIA, ATIVO, ID_USUARIOS, ATUALIZADO_POR, " +
-                "DATA_ATUALIZACAO, DATA_CADASTRO\r\nFROM            categorias";
+                "DATA_ATUALIZACAO, DATA_CADASTRO\r\nFROM            categorias\r\nORDER BY NOME_CATEG" +
+                "ORIA";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
             this._commandCollection[1] = new global::MySql.Data.MySqlClient.MySqlCommand();
             this._commandCollection[1].Connection = this.Connection;
-            this._commandCollection[1].CommandText = "SELECT        ID_CATEGORIAS, NOME_CATEGORIA, ATIVO, ID_USUARIOS, ATUALIZADO_POR, " +
-                "DATA_ATUALIZACAO, DATA_CADASTRO\r\nFROM            categorias\r\nWHERE        (ATIVO" +
-                " = TRUE)\r\nORDER BY NOME_CATEGORIA";
+            this._commandCollection[1].CommandText = "SELECT ATIVO, ATUALIZADO_POR, DATA_ATUALIZACAO, DATA_CADASTRO, ID_CATEGORIAS, ID_" +
+                "USUARIOS, NOME_CATEGORIA FROM categorias WHERE (ATIVO = TRUE) ORDER BY NOME_CATE" +
+                "GORIA";
             this._commandCollection[1].CommandType = global::System.Data.CommandType.Text;
         }
         
