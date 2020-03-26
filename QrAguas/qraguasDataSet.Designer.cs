@@ -508,6 +508,8 @@ namespace QrAguas {
             
             private global::System.Data.DataColumn columnDATA_CADASTRO;
             
+            private global::System.Data.DataColumn columnATIVO;
+            
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public categoriasDataTable() {
@@ -591,6 +593,14 @@ namespace QrAguas {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public global::System.Data.DataColumn ATIVOColumn {
+                get {
+                    return this.columnATIVO;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             [global::System.ComponentModel.Browsable(false)]
             public int Count {
                 get {
@@ -626,7 +636,7 @@ namespace QrAguas {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public categoriasRow AddcategoriasRow(string NOME_CATEGORIA, usuariosRow parentusuariosRowBycategorias_ibfk_1, int ATUALIZADO_POR, System.DateTime DATA_ATUALIZACAO, System.DateTime DATA_CADASTRO) {
+            public categoriasRow AddcategoriasRow(string NOME_CATEGORIA, usuariosRow parentusuariosRowBycategorias_ibfk_1, int ATUALIZADO_POR, System.DateTime DATA_ATUALIZACAO, System.DateTime DATA_CADASTRO, bool ATIVO) {
                 categoriasRow rowcategoriasRow = ((categoriasRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         null,
@@ -634,7 +644,8 @@ namespace QrAguas {
                         null,
                         ATUALIZADO_POR,
                         DATA_ATUALIZACAO,
-                        DATA_CADASTRO};
+                        DATA_CADASTRO,
+                        ATIVO};
                 if ((parentusuariosRowBycategorias_ibfk_1 != null)) {
                     columnValuesArray[2] = parentusuariosRowBycategorias_ibfk_1[0];
                 }
@@ -673,6 +684,7 @@ namespace QrAguas {
                 this.columnATUALIZADO_POR = base.Columns["ATUALIZADO_POR"];
                 this.columnDATA_ATUALIZACAO = base.Columns["DATA_ATUALIZACAO"];
                 this.columnDATA_CADASTRO = base.Columns["DATA_CADASTRO"];
+                this.columnATIVO = base.Columns["ATIVO"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -690,6 +702,8 @@ namespace QrAguas {
                 base.Columns.Add(this.columnDATA_ATUALIZACAO);
                 this.columnDATA_CADASTRO = new global::System.Data.DataColumn("DATA_CADASTRO", typeof(global::System.DateTime), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnDATA_CADASTRO);
+                this.columnATIVO = new global::System.Data.DataColumn("ATIVO", typeof(bool), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnATIVO);
                 this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
                                 this.columnID_CATEGORIAS}, true));
                 this.columnID_CATEGORIAS.AutoIncrement = true;
@@ -701,6 +715,7 @@ namespace QrAguas {
                 this.columnNOME_CATEGORIA.MaxLength = 25;
                 this.columnID_USUARIOS.AllowDBNull = false;
                 this.columnDATA_CADASTRO.AllowDBNull = false;
+                this.columnATIVO.AllowDBNull = false;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -2907,6 +2922,17 @@ namespace QrAguas {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public bool ATIVO {
+                get {
+                    return ((bool)(this[this.tablecategorias.ATIVOColumn]));
+                }
+                set {
+                    this[this.tablecategorias.ATIVOColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public usuariosRow usuariosRow {
                 get {
                     return ((usuariosRow)(this.GetParentRow(this.Table.ParentRelations["categorias_ibfk_1"])));
@@ -4096,10 +4122,11 @@ namespace QrAguas.qraguasDataSetTableAdapters {
             tableMapping.ColumnMappings.Add("ATUALIZADO_POR", "ATUALIZADO_POR");
             tableMapping.ColumnMappings.Add("DATA_ATUALIZACAO", "DATA_ATUALIZACAO");
             tableMapping.ColumnMappings.Add("DATA_CADASTRO", "DATA_CADASTRO");
+            tableMapping.ColumnMappings.Add("ATIVO", "ATIVO");
             this._adapter.TableMappings.Add(tableMapping);
             this._adapter.DeleteCommand = new global::MySql.Data.MySqlClient.MySqlCommand();
             this._adapter.DeleteCommand.Connection = this.Connection;
-            this._adapter.DeleteCommand.CommandText = @"DELETE FROM `categorias` WHERE ((`ID_CATEGORIAS` = @p1) AND (`NOME_CATEGORIA` = @p2) AND (`ID_USUARIOS` = @p3) AND ((@p4 = 1 AND `ATUALIZADO_POR` IS NULL) OR (`ATUALIZADO_POR` = @p5)) AND ((@p6 = 1 AND `DATA_ATUALIZACAO` IS NULL) OR (`DATA_ATUALIZACAO` = @p7)) AND (`DATA_CADASTRO` = @p8))";
+            this._adapter.DeleteCommand.CommandText = @"DELETE FROM `categorias` WHERE ((`ID_CATEGORIAS` = @p1) AND (`NOME_CATEGORIA` = @p2) AND (`ATIVO` = @p3) AND (`ID_USUARIOS` = @p4) AND ((@p5 = 1 AND `ATUALIZADO_POR` IS NULL) OR (`ATUALIZADO_POR` = @p6)) AND ((@p7 = 1 AND `DATA_ATUALIZACAO` IS NULL) OR (`DATA_ATUALIZACAO` = @p8)) AND (`DATA_CADASTRO` = @p9))";
             this._adapter.DeleteCommand.CommandType = global::System.Data.CommandType.Text;
             global::MySql.Data.MySqlClient.MySqlParameter param = new global::MySql.Data.MySqlClient.MySqlParameter();
             param.ParameterName = "@p1";
@@ -4119,10 +4146,10 @@ namespace QrAguas.qraguasDataSetTableAdapters {
             this._adapter.DeleteCommand.Parameters.Add(param);
             param = new global::MySql.Data.MySqlClient.MySqlParameter();
             param.ParameterName = "@p3";
-            param.DbType = global::System.Data.DbType.Int32;
-            param.MySqlDbType = global::MySql.Data.MySqlClient.MySqlDbType.Int32;
+            param.DbType = global::System.Data.DbType.SByte;
+            param.MySqlDbType = global::MySql.Data.MySqlClient.MySqlDbType.Byte;
             param.IsNullable = true;
-            param.SourceColumn = "ID_USUARIOS";
+            param.SourceColumn = "ATIVO";
             param.SourceVersion = global::System.Data.DataRowVersion.Original;
             this._adapter.DeleteCommand.Parameters.Add(param);
             param = new global::MySql.Data.MySqlClient.MySqlParameter();
@@ -4130,9 +4157,8 @@ namespace QrAguas.qraguasDataSetTableAdapters {
             param.DbType = global::System.Data.DbType.Int32;
             param.MySqlDbType = global::MySql.Data.MySqlClient.MySqlDbType.Int32;
             param.IsNullable = true;
-            param.SourceColumn = "ATUALIZADO_POR";
+            param.SourceColumn = "ID_USUARIOS";
             param.SourceVersion = global::System.Data.DataRowVersion.Original;
-            param.SourceColumnNullMapping = true;
             this._adapter.DeleteCommand.Parameters.Add(param);
             param = new global::MySql.Data.MySqlClient.MySqlParameter();
             param.ParameterName = "@p5";
@@ -4141,9 +4167,18 @@ namespace QrAguas.qraguasDataSetTableAdapters {
             param.IsNullable = true;
             param.SourceColumn = "ATUALIZADO_POR";
             param.SourceVersion = global::System.Data.DataRowVersion.Original;
+            param.SourceColumnNullMapping = true;
             this._adapter.DeleteCommand.Parameters.Add(param);
             param = new global::MySql.Data.MySqlClient.MySqlParameter();
             param.ParameterName = "@p6";
+            param.DbType = global::System.Data.DbType.Int32;
+            param.MySqlDbType = global::MySql.Data.MySqlClient.MySqlDbType.Int32;
+            param.IsNullable = true;
+            param.SourceColumn = "ATUALIZADO_POR";
+            param.SourceVersion = global::System.Data.DataRowVersion.Original;
+            this._adapter.DeleteCommand.Parameters.Add(param);
+            param = new global::MySql.Data.MySqlClient.MySqlParameter();
+            param.ParameterName = "@p7";
             param.DbType = global::System.Data.DbType.Int32;
             param.MySqlDbType = global::MySql.Data.MySqlClient.MySqlDbType.Int32;
             param.IsNullable = true;
@@ -4152,7 +4187,7 @@ namespace QrAguas.qraguasDataSetTableAdapters {
             param.SourceColumnNullMapping = true;
             this._adapter.DeleteCommand.Parameters.Add(param);
             param = new global::MySql.Data.MySqlClient.MySqlParameter();
-            param.ParameterName = "@p7";
+            param.ParameterName = "@p8";
             param.DbType = global::System.Data.DbType.DateTime;
             param.MySqlDbType = global::MySql.Data.MySqlClient.MySqlDbType.DateTime;
             param.IsNullable = true;
@@ -4160,7 +4195,7 @@ namespace QrAguas.qraguasDataSetTableAdapters {
             param.SourceVersion = global::System.Data.DataRowVersion.Original;
             this._adapter.DeleteCommand.Parameters.Add(param);
             param = new global::MySql.Data.MySqlClient.MySqlParameter();
-            param.ParameterName = "@p8";
+            param.ParameterName = "@p9";
             param.DbType = global::System.Data.DbType.DateTime;
             param.MySqlDbType = global::MySql.Data.MySqlClient.MySqlDbType.DateTime;
             param.IsNullable = true;
@@ -4169,8 +4204,8 @@ namespace QrAguas.qraguasDataSetTableAdapters {
             this._adapter.DeleteCommand.Parameters.Add(param);
             this._adapter.InsertCommand = new global::MySql.Data.MySqlClient.MySqlCommand();
             this._adapter.InsertCommand.Connection = this.Connection;
-            this._adapter.InsertCommand.CommandText = "INSERT INTO `categorias` (`NOME_CATEGORIA`, `ID_USUARIOS`, `ATUALIZADO_POR`, `DAT" +
-                "A_ATUALIZACAO`, `DATA_CADASTRO`) VALUES (@p1, @p2, @p3, @p4, @p5)";
+            this._adapter.InsertCommand.CommandText = "INSERT INTO `categorias` (`NOME_CATEGORIA`, `ATIVO`, `ID_USUARIOS`, `ATUALIZADO_P" +
+                "OR`, `DATA_ATUALIZACAO`, `DATA_CADASTRO`) VALUES (@p1, @p2, @p3, @p4, @p5, @p6)";
             this._adapter.InsertCommand.CommandType = global::System.Data.CommandType.Text;
             param = new global::MySql.Data.MySqlClient.MySqlParameter();
             param.ParameterName = "@p1";
@@ -4182,10 +4217,10 @@ namespace QrAguas.qraguasDataSetTableAdapters {
             this._adapter.InsertCommand.Parameters.Add(param);
             param = new global::MySql.Data.MySqlClient.MySqlParameter();
             param.ParameterName = "@p2";
-            param.DbType = global::System.Data.DbType.Int32;
-            param.MySqlDbType = global::MySql.Data.MySqlClient.MySqlDbType.Int32;
+            param.DbType = global::System.Data.DbType.SByte;
+            param.MySqlDbType = global::MySql.Data.MySqlClient.MySqlDbType.Byte;
             param.IsNullable = true;
-            param.SourceColumn = "ID_USUARIOS";
+            param.SourceColumn = "ATIVO";
             param.SourceVersion = global::System.Data.DataRowVersion.Current;
             this._adapter.InsertCommand.Parameters.Add(param);
             param = new global::MySql.Data.MySqlClient.MySqlParameter();
@@ -4193,11 +4228,19 @@ namespace QrAguas.qraguasDataSetTableAdapters {
             param.DbType = global::System.Data.DbType.Int32;
             param.MySqlDbType = global::MySql.Data.MySqlClient.MySqlDbType.Int32;
             param.IsNullable = true;
-            param.SourceColumn = "ATUALIZADO_POR";
+            param.SourceColumn = "ID_USUARIOS";
             param.SourceVersion = global::System.Data.DataRowVersion.Current;
             this._adapter.InsertCommand.Parameters.Add(param);
             param = new global::MySql.Data.MySqlClient.MySqlParameter();
             param.ParameterName = "@p4";
+            param.DbType = global::System.Data.DbType.Int32;
+            param.MySqlDbType = global::MySql.Data.MySqlClient.MySqlDbType.Int32;
+            param.IsNullable = true;
+            param.SourceColumn = "ATUALIZADO_POR";
+            param.SourceVersion = global::System.Data.DataRowVersion.Current;
+            this._adapter.InsertCommand.Parameters.Add(param);
+            param = new global::MySql.Data.MySqlClient.MySqlParameter();
+            param.ParameterName = "@p5";
             param.DbType = global::System.Data.DbType.DateTime;
             param.MySqlDbType = global::MySql.Data.MySqlClient.MySqlDbType.DateTime;
             param.IsNullable = true;
@@ -4205,7 +4248,7 @@ namespace QrAguas.qraguasDataSetTableAdapters {
             param.SourceVersion = global::System.Data.DataRowVersion.Current;
             this._adapter.InsertCommand.Parameters.Add(param);
             param = new global::MySql.Data.MySqlClient.MySqlParameter();
-            param.ParameterName = "@p5";
+            param.ParameterName = "@p6";
             param.DbType = global::System.Data.DbType.DateTime;
             param.MySqlDbType = global::MySql.Data.MySqlClient.MySqlDbType.DateTime;
             param.IsNullable = true;
@@ -4214,7 +4257,7 @@ namespace QrAguas.qraguasDataSetTableAdapters {
             this._adapter.InsertCommand.Parameters.Add(param);
             this._adapter.UpdateCommand = new global::MySql.Data.MySqlClient.MySqlCommand();
             this._adapter.UpdateCommand.Connection = this.Connection;
-            this._adapter.UpdateCommand.CommandText = @"UPDATE `categorias` SET `NOME_CATEGORIA` = @p1, `ID_USUARIOS` = @p2, `ATUALIZADO_POR` = @p3, `DATA_ATUALIZACAO` = @p4, `DATA_CADASTRO` = @p5 WHERE ((`ID_CATEGORIAS` = @p6) AND (`NOME_CATEGORIA` = @p7) AND (`ID_USUARIOS` = @p8) AND ((@p9 = 1 AND `ATUALIZADO_POR` IS NULL) OR (`ATUALIZADO_POR` = @p10)) AND ((@p11 = 1 AND `DATA_ATUALIZACAO` IS NULL) OR (`DATA_ATUALIZACAO` = @p12)) AND (`DATA_CADASTRO` = @p13))";
+            this._adapter.UpdateCommand.CommandText = @"UPDATE `categorias` SET `NOME_CATEGORIA` = @p1, `ATIVO` = @p2, `ID_USUARIOS` = @p3, `ATUALIZADO_POR` = @p4, `DATA_ATUALIZACAO` = @p5, `DATA_CADASTRO` = @p6 WHERE ((`ID_CATEGORIAS` = @p7) AND (`NOME_CATEGORIA` = @p8) AND (`ATIVO` = @p9) AND (`ID_USUARIOS` = @p10) AND ((@p11 = 1 AND `ATUALIZADO_POR` IS NULL) OR (`ATUALIZADO_POR` = @p12)) AND ((@p13 = 1 AND `DATA_ATUALIZACAO` IS NULL) OR (`DATA_ATUALIZACAO` = @p14)) AND (`DATA_CADASTRO` = @p15))";
             this._adapter.UpdateCommand.CommandType = global::System.Data.CommandType.Text;
             param = new global::MySql.Data.MySqlClient.MySqlParameter();
             param.ParameterName = "@p1";
@@ -4226,10 +4269,10 @@ namespace QrAguas.qraguasDataSetTableAdapters {
             this._adapter.UpdateCommand.Parameters.Add(param);
             param = new global::MySql.Data.MySqlClient.MySqlParameter();
             param.ParameterName = "@p2";
-            param.DbType = global::System.Data.DbType.Int32;
-            param.MySqlDbType = global::MySql.Data.MySqlClient.MySqlDbType.Int32;
+            param.DbType = global::System.Data.DbType.SByte;
+            param.MySqlDbType = global::MySql.Data.MySqlClient.MySqlDbType.Byte;
             param.IsNullable = true;
-            param.SourceColumn = "ID_USUARIOS";
+            param.SourceColumn = "ATIVO";
             param.SourceVersion = global::System.Data.DataRowVersion.Current;
             this._adapter.UpdateCommand.Parameters.Add(param);
             param = new global::MySql.Data.MySqlClient.MySqlParameter();
@@ -4237,15 +4280,15 @@ namespace QrAguas.qraguasDataSetTableAdapters {
             param.DbType = global::System.Data.DbType.Int32;
             param.MySqlDbType = global::MySql.Data.MySqlClient.MySqlDbType.Int32;
             param.IsNullable = true;
-            param.SourceColumn = "ATUALIZADO_POR";
+            param.SourceColumn = "ID_USUARIOS";
             param.SourceVersion = global::System.Data.DataRowVersion.Current;
             this._adapter.UpdateCommand.Parameters.Add(param);
             param = new global::MySql.Data.MySqlClient.MySqlParameter();
             param.ParameterName = "@p4";
-            param.DbType = global::System.Data.DbType.DateTime;
-            param.MySqlDbType = global::MySql.Data.MySqlClient.MySqlDbType.DateTime;
+            param.DbType = global::System.Data.DbType.Int32;
+            param.MySqlDbType = global::MySql.Data.MySqlClient.MySqlDbType.Int32;
             param.IsNullable = true;
-            param.SourceColumn = "DATA_ATUALIZACAO";
+            param.SourceColumn = "ATUALIZADO_POR";
             param.SourceVersion = global::System.Data.DataRowVersion.Current;
             this._adapter.UpdateCommand.Parameters.Add(param);
             param = new global::MySql.Data.MySqlClient.MySqlParameter();
@@ -4253,11 +4296,19 @@ namespace QrAguas.qraguasDataSetTableAdapters {
             param.DbType = global::System.Data.DbType.DateTime;
             param.MySqlDbType = global::MySql.Data.MySqlClient.MySqlDbType.DateTime;
             param.IsNullable = true;
-            param.SourceColumn = "DATA_CADASTRO";
+            param.SourceColumn = "DATA_ATUALIZACAO";
             param.SourceVersion = global::System.Data.DataRowVersion.Current;
             this._adapter.UpdateCommand.Parameters.Add(param);
             param = new global::MySql.Data.MySqlClient.MySqlParameter();
             param.ParameterName = "@p6";
+            param.DbType = global::System.Data.DbType.DateTime;
+            param.MySqlDbType = global::MySql.Data.MySqlClient.MySqlDbType.DateTime;
+            param.IsNullable = true;
+            param.SourceColumn = "DATA_CADASTRO";
+            param.SourceVersion = global::System.Data.DataRowVersion.Current;
+            this._adapter.UpdateCommand.Parameters.Add(param);
+            param = new global::MySql.Data.MySqlClient.MySqlParameter();
+            param.ParameterName = "@p7";
             param.DbType = global::System.Data.DbType.Int32;
             param.MySqlDbType = global::MySql.Data.MySqlClient.MySqlDbType.Int32;
             param.IsNullable = true;
@@ -4265,7 +4316,7 @@ namespace QrAguas.qraguasDataSetTableAdapters {
             param.SourceVersion = global::System.Data.DataRowVersion.Original;
             this._adapter.UpdateCommand.Parameters.Add(param);
             param = new global::MySql.Data.MySqlClient.MySqlParameter();
-            param.ParameterName = "@p7";
+            param.ParameterName = "@p8";
             param.DbType = global::System.Data.DbType.String;
             param.MySqlDbType = global::MySql.Data.MySqlClient.MySqlDbType.VarChar;
             param.IsNullable = true;
@@ -4273,7 +4324,15 @@ namespace QrAguas.qraguasDataSetTableAdapters {
             param.SourceVersion = global::System.Data.DataRowVersion.Original;
             this._adapter.UpdateCommand.Parameters.Add(param);
             param = new global::MySql.Data.MySqlClient.MySqlParameter();
-            param.ParameterName = "@p8";
+            param.ParameterName = "@p9";
+            param.DbType = global::System.Data.DbType.SByte;
+            param.MySqlDbType = global::MySql.Data.MySqlClient.MySqlDbType.Byte;
+            param.IsNullable = true;
+            param.SourceColumn = "ATIVO";
+            param.SourceVersion = global::System.Data.DataRowVersion.Original;
+            this._adapter.UpdateCommand.Parameters.Add(param);
+            param = new global::MySql.Data.MySqlClient.MySqlParameter();
+            param.ParameterName = "@p10";
             param.DbType = global::System.Data.DbType.Int32;
             param.MySqlDbType = global::MySql.Data.MySqlClient.MySqlDbType.Int32;
             param.IsNullable = true;
@@ -4281,7 +4340,7 @@ namespace QrAguas.qraguasDataSetTableAdapters {
             param.SourceVersion = global::System.Data.DataRowVersion.Original;
             this._adapter.UpdateCommand.Parameters.Add(param);
             param = new global::MySql.Data.MySqlClient.MySqlParameter();
-            param.ParameterName = "@p9";
+            param.ParameterName = "@p11";
             param.DbType = global::System.Data.DbType.Int32;
             param.MySqlDbType = global::MySql.Data.MySqlClient.MySqlDbType.Int32;
             param.IsNullable = true;
@@ -4290,7 +4349,7 @@ namespace QrAguas.qraguasDataSetTableAdapters {
             param.SourceColumnNullMapping = true;
             this._adapter.UpdateCommand.Parameters.Add(param);
             param = new global::MySql.Data.MySqlClient.MySqlParameter();
-            param.ParameterName = "@p10";
+            param.ParameterName = "@p12";
             param.DbType = global::System.Data.DbType.Int32;
             param.MySqlDbType = global::MySql.Data.MySqlClient.MySqlDbType.Int32;
             param.IsNullable = true;
@@ -4298,7 +4357,7 @@ namespace QrAguas.qraguasDataSetTableAdapters {
             param.SourceVersion = global::System.Data.DataRowVersion.Original;
             this._adapter.UpdateCommand.Parameters.Add(param);
             param = new global::MySql.Data.MySqlClient.MySqlParameter();
-            param.ParameterName = "@p11";
+            param.ParameterName = "@p13";
             param.DbType = global::System.Data.DbType.Int32;
             param.MySqlDbType = global::MySql.Data.MySqlClient.MySqlDbType.Int32;
             param.IsNullable = true;
@@ -4307,7 +4366,7 @@ namespace QrAguas.qraguasDataSetTableAdapters {
             param.SourceColumnNullMapping = true;
             this._adapter.UpdateCommand.Parameters.Add(param);
             param = new global::MySql.Data.MySqlClient.MySqlParameter();
-            param.ParameterName = "@p12";
+            param.ParameterName = "@p14";
             param.DbType = global::System.Data.DbType.DateTime;
             param.MySqlDbType = global::MySql.Data.MySqlClient.MySqlDbType.DateTime;
             param.IsNullable = true;
@@ -4315,7 +4374,7 @@ namespace QrAguas.qraguasDataSetTableAdapters {
             param.SourceVersion = global::System.Data.DataRowVersion.Original;
             this._adapter.UpdateCommand.Parameters.Add(param);
             param = new global::MySql.Data.MySqlClient.MySqlParameter();
-            param.ParameterName = "@p13";
+            param.ParameterName = "@p15";
             param.DbType = global::System.Data.DbType.DateTime;
             param.MySqlDbType = global::MySql.Data.MySqlClient.MySqlDbType.DateTime;
             param.IsNullable = true;
@@ -4337,8 +4396,8 @@ namespace QrAguas.qraguasDataSetTableAdapters {
             this._commandCollection = new global::MySql.Data.MySqlClient.MySqlCommand[1];
             this._commandCollection[0] = new global::MySql.Data.MySqlClient.MySqlCommand();
             this._commandCollection[0].Connection = this.Connection;
-            this._commandCollection[0].CommandText = "SELECT `ID_CATEGORIAS`, `NOME_CATEGORIA`, `ID_USUARIOS`, `ATUALIZADO_POR`, `DATA_" +
-                "ATUALIZACAO`, `DATA_CADASTRO` FROM `categorias`";
+            this._commandCollection[0].CommandText = "SELECT        ID_CATEGORIAS, NOME_CATEGORIA, ATIVO, ID_USUARIOS, ATUALIZADO_POR, " +
+                "DATA_ATUALIZACAO, DATA_CADASTRO\r\nFROM            categorias";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
         }
         
@@ -4399,7 +4458,7 @@ namespace QrAguas.qraguasDataSetTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Delete, true)]
-        public virtual int Delete(int p1, string p2, int p3, global::System.Nullable<int> p5, global::System.Nullable<global::System.DateTime> p7, System.DateTime p8) {
+        public virtual int Delete(int p1, string p2, byte p3, int p4, global::System.Nullable<int> p6, global::System.Nullable<global::System.DateTime> p8, System.DateTime p9) {
             this.Adapter.DeleteCommand.Parameters[0].Value = ((int)(p1));
             if ((p2 == null)) {
                 throw new global::System.ArgumentNullException("p2");
@@ -4407,24 +4466,25 @@ namespace QrAguas.qraguasDataSetTableAdapters {
             else {
                 this.Adapter.DeleteCommand.Parameters[1].Value = ((string)(p2));
             }
-            this.Adapter.DeleteCommand.Parameters[2].Value = ((int)(p3));
-            if ((p5.HasValue == true)) {
-                this.Adapter.DeleteCommand.Parameters[3].Value = ((object)(0));
-                this.Adapter.DeleteCommand.Parameters[4].Value = ((int)(p5.Value));
+            this.Adapter.DeleteCommand.Parameters[2].Value = ((byte)(p3));
+            this.Adapter.DeleteCommand.Parameters[3].Value = ((int)(p4));
+            if ((p6.HasValue == true)) {
+                this.Adapter.DeleteCommand.Parameters[4].Value = ((object)(0));
+                this.Adapter.DeleteCommand.Parameters[5].Value = ((int)(p6.Value));
             }
             else {
-                this.Adapter.DeleteCommand.Parameters[3].Value = ((object)(1));
-                this.Adapter.DeleteCommand.Parameters[4].Value = global::System.DBNull.Value;
+                this.Adapter.DeleteCommand.Parameters[4].Value = ((object)(1));
+                this.Adapter.DeleteCommand.Parameters[5].Value = global::System.DBNull.Value;
             }
-            if ((p7.HasValue == true)) {
-                this.Adapter.DeleteCommand.Parameters[5].Value = ((object)(0));
-                this.Adapter.DeleteCommand.Parameters[6].Value = ((System.DateTime)(p7.Value));
+            if ((p8.HasValue == true)) {
+                this.Adapter.DeleteCommand.Parameters[6].Value = ((object)(0));
+                this.Adapter.DeleteCommand.Parameters[7].Value = ((System.DateTime)(p8.Value));
             }
             else {
-                this.Adapter.DeleteCommand.Parameters[5].Value = ((object)(1));
-                this.Adapter.DeleteCommand.Parameters[6].Value = global::System.DBNull.Value;
+                this.Adapter.DeleteCommand.Parameters[6].Value = ((object)(1));
+                this.Adapter.DeleteCommand.Parameters[7].Value = global::System.DBNull.Value;
             }
-            this.Adapter.DeleteCommand.Parameters[7].Value = ((System.DateTime)(p8));
+            this.Adapter.DeleteCommand.Parameters[8].Value = ((System.DateTime)(p9));
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.DeleteCommand.Connection.State;
             if (((this.Adapter.DeleteCommand.Connection.State & global::System.Data.ConnectionState.Open) 
                         != global::System.Data.ConnectionState.Open)) {
@@ -4445,27 +4505,28 @@ namespace QrAguas.qraguasDataSetTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Insert, true)]
-        public virtual int Insert(string p1, int p2, global::System.Nullable<int> p3, global::System.Nullable<global::System.DateTime> p4, System.DateTime p5) {
+        public virtual int Insert(string p1, byte p2, int p3, global::System.Nullable<int> p4, global::System.Nullable<global::System.DateTime> p5, System.DateTime p6) {
             if ((p1 == null)) {
                 throw new global::System.ArgumentNullException("p1");
             }
             else {
                 this.Adapter.InsertCommand.Parameters[0].Value = ((string)(p1));
             }
-            this.Adapter.InsertCommand.Parameters[1].Value = ((int)(p2));
-            if ((p3.HasValue == true)) {
-                this.Adapter.InsertCommand.Parameters[2].Value = ((int)(p3.Value));
-            }
-            else {
-                this.Adapter.InsertCommand.Parameters[2].Value = global::System.DBNull.Value;
-            }
+            this.Adapter.InsertCommand.Parameters[1].Value = ((byte)(p2));
+            this.Adapter.InsertCommand.Parameters[2].Value = ((int)(p3));
             if ((p4.HasValue == true)) {
-                this.Adapter.InsertCommand.Parameters[3].Value = ((System.DateTime)(p4.Value));
+                this.Adapter.InsertCommand.Parameters[3].Value = ((int)(p4.Value));
             }
             else {
                 this.Adapter.InsertCommand.Parameters[3].Value = global::System.DBNull.Value;
             }
-            this.Adapter.InsertCommand.Parameters[4].Value = ((System.DateTime)(p5));
+            if ((p5.HasValue == true)) {
+                this.Adapter.InsertCommand.Parameters[4].Value = ((System.DateTime)(p5.Value));
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[4].Value = global::System.DBNull.Value;
+            }
+            this.Adapter.InsertCommand.Parameters[5].Value = ((System.DateTime)(p6));
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.InsertCommand.Connection.State;
             if (((this.Adapter.InsertCommand.Connection.State & global::System.Data.ConnectionState.Open) 
                         != global::System.Data.ConnectionState.Open)) {
@@ -4486,52 +4547,54 @@ namespace QrAguas.qraguasDataSetTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, true)]
-        public virtual int Update(string p1, int p2, global::System.Nullable<int> p3, global::System.Nullable<global::System.DateTime> p4, System.DateTime p5, int p6, string p7, int p8, global::System.Nullable<int> p10, global::System.Nullable<global::System.DateTime> p12, System.DateTime p13) {
+        public virtual int Update(string p1, byte p2, int p3, global::System.Nullable<int> p4, global::System.Nullable<global::System.DateTime> p5, System.DateTime p6, int p7, string p8, byte p9, int p10, global::System.Nullable<int> p12, global::System.Nullable<global::System.DateTime> p14, System.DateTime p15) {
             if ((p1 == null)) {
                 throw new global::System.ArgumentNullException("p1");
             }
             else {
                 this.Adapter.UpdateCommand.Parameters[0].Value = ((string)(p1));
             }
-            this.Adapter.UpdateCommand.Parameters[1].Value = ((int)(p2));
-            if ((p3.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[2].Value = ((int)(p3.Value));
-            }
-            else {
-                this.Adapter.UpdateCommand.Parameters[2].Value = global::System.DBNull.Value;
-            }
+            this.Adapter.UpdateCommand.Parameters[1].Value = ((byte)(p2));
+            this.Adapter.UpdateCommand.Parameters[2].Value = ((int)(p3));
             if ((p4.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[3].Value = ((System.DateTime)(p4.Value));
+                this.Adapter.UpdateCommand.Parameters[3].Value = ((int)(p4.Value));
             }
             else {
                 this.Adapter.UpdateCommand.Parameters[3].Value = global::System.DBNull.Value;
             }
-            this.Adapter.UpdateCommand.Parameters[4].Value = ((System.DateTime)(p5));
-            this.Adapter.UpdateCommand.Parameters[5].Value = ((int)(p6));
-            if ((p7 == null)) {
-                throw new global::System.ArgumentNullException("p7");
+            if ((p5.HasValue == true)) {
+                this.Adapter.UpdateCommand.Parameters[4].Value = ((System.DateTime)(p5.Value));
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[6].Value = ((string)(p7));
+                this.Adapter.UpdateCommand.Parameters[4].Value = global::System.DBNull.Value;
             }
-            this.Adapter.UpdateCommand.Parameters[7].Value = ((int)(p8));
-            if ((p10.HasValue == true)) {
-                this.Adapter.UpdateCommand.Parameters[8].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[9].Value = ((int)(p10.Value));
+            this.Adapter.UpdateCommand.Parameters[5].Value = ((System.DateTime)(p6));
+            this.Adapter.UpdateCommand.Parameters[6].Value = ((int)(p7));
+            if ((p8 == null)) {
+                throw new global::System.ArgumentNullException("p8");
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[8].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[9].Value = global::System.DBNull.Value;
+                this.Adapter.UpdateCommand.Parameters[7].Value = ((string)(p8));
             }
+            this.Adapter.UpdateCommand.Parameters[8].Value = ((byte)(p9));
+            this.Adapter.UpdateCommand.Parameters[9].Value = ((int)(p10));
             if ((p12.HasValue == true)) {
                 this.Adapter.UpdateCommand.Parameters[10].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[11].Value = ((System.DateTime)(p12.Value));
+                this.Adapter.UpdateCommand.Parameters[11].Value = ((int)(p12.Value));
             }
             else {
                 this.Adapter.UpdateCommand.Parameters[10].Value = ((object)(1));
                 this.Adapter.UpdateCommand.Parameters[11].Value = global::System.DBNull.Value;
             }
-            this.Adapter.UpdateCommand.Parameters[12].Value = ((System.DateTime)(p13));
+            if ((p14.HasValue == true)) {
+                this.Adapter.UpdateCommand.Parameters[12].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[13].Value = ((System.DateTime)(p14.Value));
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[12].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[13].Value = global::System.DBNull.Value;
+            }
+            this.Adapter.UpdateCommand.Parameters[14].Value = ((System.DateTime)(p15));
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.UpdateCommand.Connection.State;
             if (((this.Adapter.UpdateCommand.Connection.State & global::System.Data.ConnectionState.Open) 
                         != global::System.Data.ConnectionState.Open)) {
