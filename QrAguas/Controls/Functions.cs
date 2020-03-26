@@ -374,6 +374,22 @@ namespace QrAguas.Controls
             return rowCount != 0 ? true : false;
         }
 
+        public bool AtivarDesativarCategoria(int idCategoria, bool ativo)
+        {
+            // Caso o a categoria já esteja ativa, então será desativada e vice e versa.
+
+            string queryAtivarDesativar = "UPDATE CATEGORIAS SET ATIVO = @ATIVO WHERE ID_CATEGORIAS = @ID_CATEGORIAS";
+
+            MySqlCommand command = new MySqlCommand(queryAtivarDesativar, AbrirBanco());
+
+            command.Parameters.AddWithValue("@ATIVO", ativo);
+            command.Parameters.AddWithValue("@ID_CATEGORIAS", idCategoria);
+
+            int rowCount = command.ExecuteNonQuery();
+
+            return rowCount != 0 ? true : false;
+        }
+
         #endregion
 
 
