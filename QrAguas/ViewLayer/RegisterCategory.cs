@@ -39,37 +39,7 @@ namespace QrAguas.View_Layer
 
         private void DataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-            // "Evento de click" no botão Excluir no DataGridView
-            if (DGVCategorias.Columns[e.ColumnIndex].Name.Equals("Excluir"))
-            {
-                int idCategoria = (int) DGVCategorias.SelectedRows[0].Cells[0].Value;
-                string nomeCategoria = DGVCategorias.SelectedRows[0].Cells[1].Value.ToString();
-
-                DialogResult resposta = MessageBox.Show("Deseja excluir a categoria '" + nomeCategoria + "' ?", "Excluir Categoria", MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button2);
-
-                if (resposta.Equals(DialogResult.Yes))
-                {
-                    try
-                    {
-                        functions.DeletarCategoria(idCategoria);
-
-                        MessageBox.Show("Categoria excluída com sucesso.", "Excluído com sucesso", MessageBoxButtons.OK, MessageBoxIcon.Information);
-
-                        // Atualiza e insere dados no DataGridView
-                        this.categoriasTableAdapter.Fill(this.qraguasDataSet.categorias);
-                        UpdateCategoryResultado = false;
-
-                    }
-                    catch (Exception erro)
-                    {
-
-                        MessageBox.Show("Erro ao excluir a categoria.\nErro: " + erro, "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
-
-                    }
-
-                }
-            }
-
+            
             // "Evento de click" no botão Atualizar no DataGridView
             if (DGVCategorias.Columns[e.ColumnIndex].Name.Equals("Atualizar"))
             {
@@ -99,6 +69,49 @@ namespace QrAguas.View_Layer
                 }
                 
             }
+
+            // "Evento de click" no checkbox Ativo no DataGridView
+            if (DGVCategorias.Columns[e.ColumnIndex].Name.Equals("ATIVO"))
+            {
+                int idCategoria = (int)DGVCategorias.SelectedRows[0].Cells[0].Value;
+                string nomeCategoria = DGVCategorias.SelectedRows[0].Cells[1].Value.ToString();
+                bool ativo = DGVCategorias.SelectedRows[0].Cells[2].Value.Equals(true) ? false : true;
+
+                string ativarDesativar = ativo.Equals(false) ? "Desativar" : "Ativar";
+
+                DialogResult resposta = MessageBox.Show("Deseja " + ativarDesativar + " a categoria '" + nomeCategoria + "' ?", ativarDesativar + " Categoria", MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button2);
+
+                if (resposta.Equals(DialogResult.Yes))
+                {
+                    string ativarDesativarResposta = ativarDesativar.Equals("Desativar") ? "Desativada" : "Ativada";
+
+                    try
+                    {
+                        if (functions.AtivarDesativarCategoria(idCategoria, ativo))
+                        {
+
+                            MessageBox.Show("Categoria " + ativarDesativarResposta + " com sucesso.", ativarDesativarResposta + " com sucesso", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                            // Atualiza e insere dados no DataGridView
+                            this.categoriasTableAdapter.Fill(this.qraguasDataSet.categorias);
+
+                        }
+                        else
+                        {
+                            MessageBox.Show("Erro ao excluir a categoria.", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        }
+
+                    }
+                    catch (Exception erro)
+                    {
+
+                        MessageBox.Show("Erro ao excluir a categoria.\nErro: " + erro, "Erro", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                    }
+                }
+
+            }
+
         }
 
         private void BtnInserir_Click(object sender, EventArgs e)
