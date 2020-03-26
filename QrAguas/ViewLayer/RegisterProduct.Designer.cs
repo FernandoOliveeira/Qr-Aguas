@@ -37,6 +37,8 @@
             this.lblDataValidade = new System.Windows.Forms.Label();
             this.panel4 = new System.Windows.Forms.Panel();
             this.CBCategoria = new System.Windows.Forms.ComboBox();
+            this.categoriasBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.qraguasDataSet = new QrAguas.qraguasDataSet();
             this.lblCategoria = new System.Windows.Forms.Label();
             this.panelPrecoCompra = new System.Windows.Forms.Panel();
             this.txtPrecoCompra = new System.Windows.Forms.TextBox();
@@ -49,6 +51,7 @@
             this.lblCodProduto = new System.Windows.Forms.Label();
             this.panelFornecedor = new System.Windows.Forms.Panel();
             this.CBFornecedor = new System.Windows.Forms.ComboBox();
+            this.fornecedoresBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.panelPrecoEntrega = new System.Windows.Forms.Panel();
             this.txtPrecoVenda = new System.Windows.Forms.TextBox();
             this.lblPrecoVenda = new System.Windows.Forms.Label();
@@ -61,25 +64,22 @@
             this.DTPFabricacao = new System.Windows.Forms.DateTimePicker();
             this.lblDataFabricacao = new System.Windows.Forms.Label();
             this.lblTitulo = new System.Windows.Forms.Label();
-            this.qraguasDataSet = new QrAguas.qraguasDataSet();
-            this.categoriasBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.categoriasTableAdapter = new QrAguas.qraguasDataSetTableAdapters.categoriasTableAdapter();
-            this.fornecedoresBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.fornecedoresTableAdapter = new QrAguas.qraguasDataSetTableAdapters.fornecedoresTableAdapter();
             this.tableLayoutPanel1.SuspendLayout();
             this.panel5.SuspendLayout();
             this.panel4.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.categoriasBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.qraguasDataSet)).BeginInit();
             this.panelPrecoCompra.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel1.SuspendLayout();
             this.panelFornecedor.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.fornecedoresBindingSource)).BeginInit();
             this.panelPrecoEntrega.SuspendLayout();
             this.panelDescricao.SuspendLayout();
             this.panelBtnCadastrar.SuspendLayout();
             this.panel3.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.qraguasDataSet)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.categoriasBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.fornecedoresBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // lblFornecedor
@@ -184,6 +184,16 @@
             this.CBCategoria.TabIndex = 4;
             this.CBCategoria.ValueMember = "ID_CATEGORIAS";
             this.CBCategoria.Click += new System.EventHandler(this.CBCategoria_Click);
+            // 
+            // categoriasBindingSource
+            // 
+            this.categoriasBindingSource.DataMember = "categorias";
+            this.categoriasBindingSource.DataSource = this.qraguasDataSet;
+            // 
+            // qraguasDataSet
+            // 
+            this.qraguasDataSet.DataSetName = "qraguasDataSet";
+            this.qraguasDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // lblCategoria
             // 
@@ -323,6 +333,11 @@
             this.CBFornecedor.TabIndex = 2;
             this.CBFornecedor.ValueMember = "ID_FORNECEDORES";
             this.CBFornecedor.Click += new System.EventHandler(this.CBFornecedor_Click);
+            // 
+            // fornecedoresBindingSource
+            // 
+            this.fornecedoresBindingSource.DataMember = "fornecedores";
+            this.fornecedoresBindingSource.DataSource = this.qraguasDataSet;
             // 
             // panelPrecoEntrega
             // 
@@ -466,24 +481,9 @@
             this.lblTitulo.Text = "Cadastro de Produtos";
             this.lblTitulo.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // qraguasDataSet
-            // 
-            this.qraguasDataSet.DataSetName = "qraguasDataSet";
-            this.qraguasDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // categoriasBindingSource
-            // 
-            this.categoriasBindingSource.DataMember = "categorias";
-            this.categoriasBindingSource.DataSource = this.qraguasDataSet;
-            // 
             // categoriasTableAdapter
             // 
             this.categoriasTableAdapter.ClearBeforeFill = true;
-            // 
-            // fornecedoresBindingSource
-            // 
-            this.fornecedoresBindingSource.DataMember = "fornecedores";
-            this.fornecedoresBindingSource.DataSource = this.qraguasDataSet;
             // 
             // fornecedoresTableAdapter
             // 
@@ -504,13 +504,15 @@
             this.MaximizeBox = false;
             this.Name = "RegisterProduct";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Qr Águas - Cadastrar Produto";
+            this.Text = "Qr Águas - Cadastro de Produtos";
             this.Load += new System.EventHandler(this.RegisterProduct_Load);
             this.tableLayoutPanel1.ResumeLayout(false);
             this.panel5.ResumeLayout(false);
             this.panel5.PerformLayout();
             this.panel4.ResumeLayout(false);
             this.panel4.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.categoriasBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.qraguasDataSet)).EndInit();
             this.panelPrecoCompra.ResumeLayout(false);
             this.panelPrecoCompra.PerformLayout();
             this.panel2.ResumeLayout(false);
@@ -519,6 +521,7 @@
             this.panel1.PerformLayout();
             this.panelFornecedor.ResumeLayout(false);
             this.panelFornecedor.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.fornecedoresBindingSource)).EndInit();
             this.panelPrecoEntrega.ResumeLayout(false);
             this.panelPrecoEntrega.PerformLayout();
             this.panelDescricao.ResumeLayout(false);
@@ -526,9 +529,6 @@
             this.panelBtnCadastrar.ResumeLayout(false);
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.qraguasDataSet)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.categoriasBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.fornecedoresBindingSource)).EndInit();
             this.ResumeLayout(false);
 
         }

@@ -66,23 +66,95 @@ namespace QrAguas.View_Layer
             {
                 #region Cadastros
                 case "Cadastrar Novos Fornecedores":
-                    RegisterProvider registerProviders = new RegisterProvider();
-                    registerProviders.Show();
+
+                    bool registerProviderOpen = false;
+
+                    // Início: Este bloco de código impede que sejam abertos múltiplos forms iguais
+                    foreach (Form form in Application.OpenForms)
+                    {
+                        if (form.Text.Equals("Qr Águas - Cadastro de Fornecedores"))
+                        {
+                            registerProviderOpen = true;
+                            form.BringToFront();
+                            break;
+                        }
+                    }
+                    if (registerProviderOpen == false)
+                    {
+                        RegisterProvider registerProviders = new RegisterProvider();
+                        registerProviders.Show();
+                    }
+                    // Fim
                     break;
+
+
 
                 case "Cadastrar Novos Produtos":
-                    RegisterProduct registerGallon = new RegisterProduct();
-                    registerGallon.Show();
+
+                    bool registerProductOpen = false;
+
+                    // Início: Este bloco de código impede que sejam abertos múltiplos forms iguais
+                    foreach (Form form in Application.OpenForms)
+                    {
+                        if (form.Text.Equals("Qr Águas - Cadastro de Produtos"))
+                        {
+                            registerProductOpen = true;
+                            form.BringToFront();
+                            break;
+                        }
+                    }
+                    if (registerProductOpen == false)
+                    {
+                        RegisterProduct registerProduct = new RegisterProduct();
+                        registerProduct.Show();
+                    }
+                    // Fim
                     break;
 
+
+
                 case "Cadastrar Novos Usuários":
-                    RegisterUser objCadastrarUsuario = new RegisterUser();
-                    objCadastrarUsuario.Show();
+
+                    bool registerUserOpen = false;
+
+                    // Início: Este bloco de código impede que sejam abertos múltiplos forms iguais
+                    foreach (Form form in Application.OpenForms)
+                    {
+                        if (form.Text.Equals("Qr Águas - Cadastro de Usuários"))
+                        {
+                            registerUserOpen = true;
+                            form.BringToFront();
+                            break;
+                        }
+                    }
+                    if (registerUserOpen == false)
+                    {
+                        RegisterUser objCadastrarUsuario = new RegisterUser();
+                        objCadastrarUsuario.Show();
+                    }
+                    // Fim
                     break;
 
                 case "Cadastrar Novas Categorias":
-                    RegisterCategory registerCategory = new RegisterCategory();
-                    registerCategory.Show();
+
+                    bool registerCategoryOpen = false;
+
+                    // Início: Este bloco de código impede que sejam abertos múltiplos forms iguais
+                    foreach (Form form in Application.OpenForms)
+                    {
+                        if (form.Text.Equals("Qr Águas - Cadastro de Categorias"))
+                        {
+                            registerCategoryOpen = true;
+                            form.BringToFront();
+                            break;
+                        }
+                    }
+                    if (registerCategoryOpen == false)
+                    {
+                        RegisterCategory registerCategory = new RegisterCategory();
+                        registerCategory.Show();
+                    }
+                   // Fim
                     break;
 
                 #endregion

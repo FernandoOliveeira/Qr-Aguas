@@ -585,7 +585,7 @@
             this.MaximizeBox = false;
             this.Name = "RegisterProvider";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "QrÁguas - Cadastro de Fornecedores";
+            this.Text = "Qr Águas - Cadastro de Fornecedores";
             this.Load += new System.EventHandler(this.RegisterProvider_Load);
             this.tableLayoutPanel1.ResumeLayout(false);
             this.panelRazaoSocial.ResumeLayout(false);
