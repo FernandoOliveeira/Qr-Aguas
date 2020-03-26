@@ -79,7 +79,7 @@ namespace QrAguas.View_Layer
 
                 string ativarDesativar = ativo.Equals(false) ? "Desativar" : "Ativar";
 
-                DialogResult resposta = MessageBox.Show("Deseja " + ativarDesativar + " a categoria '" + nomeCategoria + "' ?", ativarDesativar + " Categoria", MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button2);
+                DialogResult resposta = MessageBox.Show("Deseja " + ativarDesativar + " a categoria '" + nomeCategoria + "' ? \n(Categorias desativadas não aparecem no cadastro de produtos)", ativarDesativar + " Categoria", MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button2);
 
                 if (resposta.Equals(DialogResult.Yes))
                 {
@@ -98,14 +98,14 @@ namespace QrAguas.View_Layer
                         }
                         else
                         {
-                            MessageBox.Show("Erro ao excluir a categoria.", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                            MessageBox.Show("Erro ao " + ativarDesativarResposta + " a categoria.", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Information);
                         }
 
                     }
                     catch (Exception erro)
                     {
 
-                        MessageBox.Show("Erro ao excluir a categoria.\nErro: " + erro, "Erro", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        MessageBox.Show("Erro ao " + ativarDesativarResposta + " a categoria.\nErro: " + erro, "Erro", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
                     }
                 }
