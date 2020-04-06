@@ -321,6 +321,7 @@
             // 
             this.txtUf.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtUf.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtUf.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtUf.Location = new System.Drawing.Point(6, 31);
             this.txtUf.MaxLength = 2;
