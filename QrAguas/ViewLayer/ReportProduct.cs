@@ -24,7 +24,7 @@ namespace QrAguas.ViewLayer
             // Faz com que o ReportViewer encontre o relatório 
             RVProdutos.LocalReport.ReportEmbeddedResource = "QrAguas.Reports.RepProduct.rdlc";
 
-            // Atribui o zoom para Tela Inteira ao abrir o relatório
+            // Atribui o zoom ao abrir o relatório
             RVProdutos.ZoomMode = ZoomMode.Percent;
 
             // Desabiliata a opção de exportar para PDF

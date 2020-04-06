@@ -159,6 +159,12 @@
     <Compile Include="ViewLayer\ReportProduct.Designer.cs">
       <DependentUpon>ReportProduct.cs</DependentUpon>
     </Compile>
+    <Compile Include="ViewLayer\ReportProvider.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ViewLayer\ReportProvider.Designer.cs">
+      <DependentUpon>ReportProvider.cs</DependentUpon>
+    </Compile>
     <Compile Include="ViewLayer\UpdateCategory.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -203,6 +209,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="ViewLayer\ReportProduct.resx">
       <DependentUpon>ReportProduct.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewLayer\ReportProvider.resx">
+      <DependentUpon>ReportProvider.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ViewLayer\UpdateCategory.resx">
       <DependentUpon>UpdateCategory.cs</DependentUpon>
