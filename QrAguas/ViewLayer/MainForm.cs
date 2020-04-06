@@ -162,10 +162,17 @@ namespace QrAguas.View_Layer
 
 
                 #region Relatórios
+
                 case "Relatório de Produtos":
                     ReportProduct productReport = new ReportProduct();
                     productReport.Show();
                     break;
+
+                case "Relatório de Fornecedores":
+                    ReportProvider reportProvider = new ReportProvider();
+                    reportProvider.Show();
+                    break;
+
                 #endregion
             }
 
