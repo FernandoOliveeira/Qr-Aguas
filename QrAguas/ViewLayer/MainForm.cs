@@ -1,4 +1,5 @@
 ﻿using QrAguas.Models;
+using QrAguas.ViewLayer;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -162,7 +163,7 @@ namespace QrAguas.View_Layer
 
                 #region Relatórios
                 case "Relatório de Produtos":
-                    ProductReport productReport = new ProductReport();
+                    ReportProduct productReport = new ReportProduct();
                     productReport.Show();
                     break;
                 #endregion

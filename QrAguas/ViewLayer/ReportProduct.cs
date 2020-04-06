@@ -1,26 +1,19 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
+﻿using Microsoft.Reporting.WinForms;
+using System;
 using System.Drawing;
-using System.Linq;
 using System.Reflection;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
-using Microsoft.Reporting.WinForms;
-using MySql.Data.MySqlClient;
 
-namespace QrAguas.View_Layer
+namespace QrAguas.ViewLayer
 {
-    public partial class ProductReport : Form
+    public partial class ReportProduct : Form
     {
-        public ProductReport()
+        public ReportProduct()
         {
             InitializeComponent();
         }
 
-        private void ProductReport_Load(object sender, EventArgs e)
+        private void ReportProduct_Load(object sender, EventArgs e)
         {
             // Insere os dados dentro do ReportViewer
             this.relatorio_ProdutosTableAdapter.FillRepProduct(this.qraguasDataSet.Relatorio_Produtos);

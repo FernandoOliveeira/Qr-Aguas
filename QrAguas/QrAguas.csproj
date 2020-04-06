@@ -117,12 +117,6 @@
     <Compile Include="ViewLayer\Logout.Designer.cs">
       <DependentUpon>Logout.cs</DependentUpon>
     </Compile>
-    <Compile Include="ViewLayer\ProductReport.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="ViewLayer\ProductReport.Designer.cs">
-      <DependentUpon>ProductReport.cs</DependentUpon>
-    </Compile>
     <Compile Include="ViewLayer\RegisterCategory.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -159,6 +153,12 @@
     <Compile Include="ViewLayer\MainForm.Designer.cs">
       <DependentUpon>MainForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="ViewLayer\ReportProduct.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ViewLayer\ReportProduct.Designer.cs">
+      <DependentUpon>ReportProduct.cs</DependentUpon>
+    </Compile>
     <Compile Include="ViewLayer\UpdateCategory.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -182,9 +182,6 @@
     <EmbeddedResource Include="ViewLayer\Logout.resx">
       <DependentUpon>Logout.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="ViewLayer\ProductReport.resx">
-      <DependentUpon>ProductReport.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="ViewLayer\RegisterCategory.resx">
       <DependentUpon>RegisterCategory.cs</DependentUpon>
     </EmbeddedResource>
@@ -202,6 +199,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="ViewLayer\MainForm.resx">
       <DependentUpon>MainForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewLayer\ReportProduct.resx">
+      <DependentUpon>ReportProduct.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ViewLayer\UpdateCategory.resx">
       <DependentUpon>UpdateCategory.cs</DependentUpon>
