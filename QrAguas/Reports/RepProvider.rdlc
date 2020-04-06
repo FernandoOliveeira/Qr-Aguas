@@ -6,22 +6,37 @@
         <TablixBody>
           <TablixColumns>
             <TablixColumn>
-              <Width>2.20896cm</Width>
+              <Width>5.22521cm</Width>
             </TablixColumn>
             <TablixColumn>
-              <Width>4.48438cm</Width>
+              <Width>4.06104cm</Width>
             </TablixColumn>
             <TablixColumn>
-              <Width>4.00812cm</Width>
+              <Width>3.47896cm</Width>
             </TablixColumn>
             <TablixColumn>
-              <Width>3.21438cm</Width>
+              <Width>3.26729cm</Width>
             </TablixColumn>
             <TablixColumn>
-              <Width>3.32021cm</Width>
+              <Width>2.5cm</Width>
             </TablixColumn>
             <TablixColumn>
-              <Width>3.08208cm</Width>
+              <Width>2.5cm</Width>
+            </TablixColumn>
+            <TablixColumn>
+              <Width>2.5cm</Width>
+            </TablixColumn>
+            <TablixColumn>
+              <Width>5cm</Width>
+            </TablixColumn>
+            <TablixColumn>
+              <Width>2.5cm</Width>
+            </TablixColumn>
+            <TablixColumn>
+              <Width>3.63771cm</Width>
+            </TablixColumn>
+            <TablixColumn>
+              <Width>3.39958cm</Width>
             </TablixColumn>
             <TablixColumn>
               <Width>2.5cm</Width>
@@ -30,18 +45,12 @@
               <Width>3.34667cm</Width>
             </TablixColumn>
             <TablixColumn>
-              <Width>2.8175cm</Width>
-            </TablixColumn>
-            <TablixColumn>
-              <Width>2.87042cm</Width>
-            </TablixColumn>
-            <TablixColumn>
-              <Width>3.05563cm</Width>
+              <Width>3.29375cm</Width>
             </TablixColumn>
           </TablixColumns>
           <TablixRows>
             <TablixRow>
-              <Height>1.61396cm</Height>
+              <Height>1.52604cm</Height>
               <TablixCells>
                 <TablixCell>
                   <CellContents>
@@ -52,7 +61,7 @@
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>Código</Value>
+                              <Value>Razão Social</Value>
                               <Style>
                                 <FontFamily>Microsoft Sans Serif</FontFamily>
                                 <FontSize>14pt</FontSize>
@@ -95,7 +104,7 @@
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>Item</Value>
+                              <Value>CNPJ</Value>
                               <Style>
                                 <FontFamily>Microsoft Sans Serif</FontFamily>
                                 <FontSize>14pt</FontSize>
@@ -138,7 +147,7 @@
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>Descrição</Value>
+                              <Value>Endereço</Value>
                               <Style>
                                 <FontFamily>Microsoft Sans Serif</FontFamily>
                                 <FontSize>14pt</FontSize>
@@ -181,7 +190,7 @@
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>Categoria</Value>
+                              <Value>Número</Value>
                               <Style>
                                 <FontFamily>Microsoft Sans Serif</FontFamily>
                                 <FontSize>14pt</FontSize>
@@ -224,7 +233,7 @@
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>Fornecedor</Value>
+                              <Value>Bairro</Value>
                               <Style>
                                 <FontFamily>Microsoft Sans Serif</FontFamily>
                                 <FontSize>14pt</FontSize>
@@ -267,23 +276,7 @@
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>Preço</Value>
-                              <Style>
-                                <FontFamily>Microsoft Sans Serif</FontFamily>
-                                <FontSize>14pt</FontSize>
-                                <FontWeight>Bold</FontWeight>
-                                <Color>White</Color>
-                              </Style>
-                            </TextRun>
-                          </TextRuns>
-                          <Style>
-                            <TextAlign>Center</TextAlign>
-                          </Style>
-                        </Paragraph>
-                        <Paragraph>
-                          <TextRuns>
-                            <TextRun>
-                              <Value> Compra</Value>
+                              <Value>Cidade</Value>
                               <Style>
                                 <FontFamily>Microsoft Sans Serif</FontFamily>
                                 <FontSize>14pt</FontSize>
@@ -326,23 +319,7 @@
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>Preço</Value>
-                              <Style>
-                                <FontFamily>Microsoft Sans Serif</FontFamily>
-                                <FontSize>14pt</FontSize>
-                                <FontWeight>Bold</FontWeight>
-                                <Color>White</Color>
-                              </Style>
-                            </TextRun>
-                          </TextRuns>
-                          <Style>
-                            <TextAlign>Center</TextAlign>
-                          </Style>
-                        </Paragraph>
-                        <Paragraph>
-                          <TextRuns>
-                            <TextRun>
-                              <Value>Venda</Value>
+                              <Value>CEP</Value>
                               <Style>
                                 <FontFamily>Microsoft Sans Serif</FontFamily>
                                 <FontSize>14pt</FontSize>
@@ -385,29 +362,11 @@
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>Data</Value>
+                              <Value>Complemento</Value>
                               <Style>
                                 <FontFamily>Microsoft Sans Serif</FontFamily>
                                 <FontSize>14pt</FontSize>
                                 <FontWeight>Bold</FontWeight>
-                                <Format>d</Format>
-                                <Color>White</Color>
-                              </Style>
-                            </TextRun>
-                          </TextRuns>
-                          <Style>
-                            <TextAlign>Center</TextAlign>
-                          </Style>
-                        </Paragraph>
-                        <Paragraph>
-                          <TextRuns>
-                            <TextRun>
-                              <Value>Fabricação</Value>
-                              <Style>
-                                <FontFamily>Microsoft Sans Serif</FontFamily>
-                                <FontSize>14pt</FontSize>
-                                <FontWeight>Bold</FontWeight>
-                                <Format>d</Format>
                                 <Color>White</Color>
                               </Style>
                             </TextRun>
@@ -446,29 +405,11 @@
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>Data</Value>
+                              <Value>UF</Value>
                               <Style>
                                 <FontFamily>Microsoft Sans Serif</FontFamily>
                                 <FontSize>14pt</FontSize>
                                 <FontWeight>Bold</FontWeight>
-                                <Format>d</Format>
-                                <Color>White</Color>
-                              </Style>
-                            </TextRun>
-                          </TextRuns>
-                          <Style>
-                            <TextAlign>Center</TextAlign>
-                          </Style>
-                        </Paragraph>
-                        <Paragraph>
-                          <TextRuns>
-                            <TextRun>
-                              <Value> Validade</Value>
-                              <Style>
-                                <FontFamily>Microsoft Sans Serif</FontFamily>
-                                <FontSize>14pt</FontSize>
-                                <FontWeight>Bold</FontWeight>
-                                <Format>d</Format>
                                 <Color>White</Color>
                               </Style>
                             </TextRun>
@@ -507,29 +448,11 @@
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>Data</Value>
+                              <Value>Telefone</Value>
                               <Style>
                                 <FontFamily>Microsoft Sans Serif</FontFamily>
                                 <FontSize>14pt</FontSize>
                                 <FontWeight>Bold</FontWeight>
-                                <Format>d</Format>
-                                <Color>White</Color>
-                              </Style>
-                            </TextRun>
-                          </TextRuns>
-                          <Style>
-                            <TextAlign>Center</TextAlign>
-                          </Style>
-                        </Paragraph>
-                        <Paragraph>
-                          <TextRuns>
-                            <TextRun>
-                              <Value>Cadastro</Value>
-                              <Style>
-                                <FontFamily>Microsoft Sans Serif</FontFamily>
-                                <FontSize>14pt</FontSize>
-                                <FontWeight>Bold</FontWeight>
-                                <Format>d</Format>
                                 <Color>White</Color>
                               </Style>
                             </TextRun>
@@ -568,23 +491,7 @@
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>Cadastrado</Value>
-                              <Style>
-                                <FontFamily>Microsoft Sans Serif</FontFamily>
-                                <FontSize>14pt</FontSize>
-                                <FontWeight>Bold</FontWeight>
-                                <Color>White</Color>
-                              </Style>
-                            </TextRun>
-                          </TextRuns>
-                          <Style>
-                            <TextAlign>Center</TextAlign>
-                          </Style>
-                        </Paragraph>
-                        <Paragraph>
-                          <TextRuns>
-                            <TextRun>
-                              <Value>Por</Value>
+                              <Value>Celular</Value>
                               <Style>
                                 <FontFamily>Microsoft Sans Serif</FontFamily>
                                 <FontSize>14pt</FontSize>
@@ -618,159 +525,172 @@
                     </Textbox>
                   </CellContents>
                 </TablixCell>
+                <TablixCell>
+                  <CellContents>
+                    <Textbox Name="Textbox23">
+                      <CanGrow>true</CanGrow>
+                      <KeepTogether>true</KeepTogether>
+                      <Paragraphs>
+                        <Paragraph>
+                          <TextRuns>
+                            <TextRun>
+                              <Value>E-mail</Value>
+                              <Style>
+                                <FontFamily>Microsoft Sans Serif</FontFamily>
+                                <FontSize>14pt</FontSize>
+                                <FontWeight>Bold</FontWeight>
+                                <Color>White</Color>
+                              </Style>
+                            </TextRun>
+                          </TextRuns>
+                          <Style>
+                            <TextAlign>Center</TextAlign>
+                          </Style>
+                        </Paragraph>
+                      </Paragraphs>
+                      <rd:DefaultName>Textbox23</rd:DefaultName>
+                      <Style>
+                        <Border>
+                          <Style>None</Style>
+                        </Border>
+                        <BottomBorder>
+                          <Color>LightGrey</Color>
+                          <Style>Solid</Style>
+                          <Width>1pt</Width>
+                        </BottomBorder>
+                        <BackgroundColor>Gray</BackgroundColor>
+                        <VerticalAlign>Middle</VerticalAlign>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                        <PaddingBottom>2pt</PaddingBottom>
+                      </Style>
+                    </Textbox>
+                  </CellContents>
+                </TablixCell>
+                <TablixCell>
+                  <CellContents>
+                    <Textbox Name="Textbox25">
+                      <CanGrow>true</CanGrow>
+                      <KeepTogether>true</KeepTogether>
+                      <Paragraphs>
+                        <Paragraph>
+                          <TextRuns>
+                            <TextRun>
+                              <Value>Data </Value>
+                              <Style>
+                                <FontFamily>Microsoft Sans Serif</FontFamily>
+                                <FontSize>14pt</FontSize>
+                                <FontWeight>Bold</FontWeight>
+                                <Color>White</Color>
+                              </Style>
+                            </TextRun>
+                          </TextRuns>
+                          <Style>
+                            <TextAlign>Center</TextAlign>
+                          </Style>
+                        </Paragraph>
+                        <Paragraph>
+                          <TextRuns>
+                            <TextRun>
+                              <Value>Cadastro</Value>
+                              <Style>
+                                <FontFamily>Microsoft Sans Serif</FontFamily>
+                                <FontSize>14pt</FontSize>
+                                <FontWeight>Bold</FontWeight>
+                                <Color>White</Color>
+                              </Style>
+                            </TextRun>
+                          </TextRuns>
+                          <Style>
+                            <TextAlign>Center</TextAlign>
+                          </Style>
+                        </Paragraph>
+                      </Paragraphs>
+                      <rd:DefaultName>Textbox25</rd:DefaultName>
+                      <Style>
+                        <Border>
+                          <Style>None</Style>
+                        </Border>
+                        <BottomBorder>
+                          <Color>LightGrey</Color>
+                          <Style>Solid</Style>
+                          <Width>1pt</Width>
+                        </BottomBorder>
+                        <BackgroundColor>Gray</BackgroundColor>
+                        <VerticalAlign>Middle</VerticalAlign>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                        <PaddingBottom>2pt</PaddingBottom>
+                      </Style>
+                    </Textbox>
+                  </CellContents>
+                </TablixCell>
+                <TablixCell>
+                  <CellContents>
+                    <Textbox Name="Textbox27">
+                      <CanGrow>true</CanGrow>
+                      <KeepTogether>true</KeepTogether>
+                      <Paragraphs>
+                        <Paragraph>
+                          <TextRuns>
+                            <TextRun>
+                              <Value>Cadastrado</Value>
+                              <Style>
+                                <FontFamily>Microsoft Sans Serif</FontFamily>
+                                <FontSize>14pt</FontSize>
+                                <FontWeight>Bold</FontWeight>
+                                <Color>White</Color>
+                              </Style>
+                            </TextRun>
+                          </TextRuns>
+                          <Style>
+                            <TextAlign>Center</TextAlign>
+                          </Style>
+                        </Paragraph>
+                        <Paragraph>
+                          <TextRuns>
+                            <TextRun>
+                              <Value>Por</Value>
+                              <Style>
+                                <FontFamily>Microsoft Sans Serif</FontFamily>
+                                <FontSize>14pt</FontSize>
+                                <FontWeight>Bold</FontWeight>
+                                <Color>White</Color>
+                              </Style>
+                            </TextRun>
+                          </TextRuns>
+                          <Style>
+                            <TextAlign>Center</TextAlign>
+                          </Style>
+                        </Paragraph>
+                      </Paragraphs>
+                      <rd:DefaultName>Textbox27</rd:DefaultName>
+                      <Style>
+                        <Border>
+                          <Style>None</Style>
+                        </Border>
+                        <BottomBorder>
+                          <Color>LightGrey</Color>
+                          <Style>Solid</Style>
+                          <Width>1pt</Width>
+                        </BottomBorder>
+                        <BackgroundColor>Gray</BackgroundColor>
+                        <VerticalAlign>Middle</VerticalAlign>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                        <PaddingBottom>2pt</PaddingBottom>
+                      </Style>
+                    </Textbox>
+                  </CellContents>
+                </TablixCell>
               </TablixCells>
             </TablixRow>
             <TablixRow>
-              <Height>0.6cm</Height>
+              <Height>0.75875cm</Height>
               <TablixCells>
-                <TablixCell>
-                  <CellContents>
-                    <Textbox Name="COD_PRODUTO">
-                      <CanGrow>true</CanGrow>
-                      <KeepTogether>true</KeepTogether>
-                      <Paragraphs>
-                        <Paragraph>
-                          <TextRuns>
-                            <TextRun>
-                              <Value>=Fields!COD_PRODUTO.Value</Value>
-                              <Style>
-                                <FontFamily>Microsoft Sans Serif</FontFamily>
-                                <FontSize>11pt</FontSize>
-                                <FontWeight>Normal</FontWeight>
-                                <Color>#333333</Color>
-                              </Style>
-                            </TextRun>
-                          </TextRuns>
-                          <Style>
-                            <TextAlign>Center</TextAlign>
-                          </Style>
-                        </Paragraph>
-                      </Paragraphs>
-                      <rd:DefaultName>COD_PRODUTO</rd:DefaultName>
-                      <Style>
-                        <Border>
-                          <Style>None</Style>
-                        </Border>
-                        <BackgroundColor>White</BackgroundColor>
-                        <PaddingLeft>2pt</PaddingLeft>
-                        <PaddingRight>2pt</PaddingRight>
-                        <PaddingTop>2pt</PaddingTop>
-                        <PaddingBottom>2pt</PaddingBottom>
-                      </Style>
-                    </Textbox>
-                  </CellContents>
-                </TablixCell>
-                <TablixCell>
-                  <CellContents>
-                    <Textbox Name="NOME_PRODUTO">
-                      <CanGrow>true</CanGrow>
-                      <KeepTogether>true</KeepTogether>
-                      <Paragraphs>
-                        <Paragraph>
-                          <TextRuns>
-                            <TextRun>
-                              <Value>=Fields!NOME_PRODUTO.Value</Value>
-                              <Style>
-                                <FontFamily>Microsoft Sans Serif</FontFamily>
-                                <FontSize>11pt</FontSize>
-                                <FontWeight>Normal</FontWeight>
-                                <Color>#333333</Color>
-                              </Style>
-                            </TextRun>
-                          </TextRuns>
-                          <Style>
-                            <TextAlign>Center</TextAlign>
-                          </Style>
-                        </Paragraph>
-                      </Paragraphs>
-                      <rd:DefaultName>NOME_PRODUTO</rd:DefaultName>
-                      <Style>
-                        <Border>
-                          <Style>None</Style>
-                        </Border>
-                        <BackgroundColor>White</BackgroundColor>
-                        <PaddingLeft>2pt</PaddingLeft>
-                        <PaddingRight>2pt</PaddingRight>
-                        <PaddingTop>2pt</PaddingTop>
-                        <PaddingBottom>2pt</PaddingBottom>
-                      </Style>
-                    </Textbox>
-                  </CellContents>
-                </TablixCell>
-                <TablixCell>
-                  <CellContents>
-                    <Textbox Name="DESCRICAO">
-                      <CanGrow>true</CanGrow>
-                      <KeepTogether>true</KeepTogether>
-                      <Paragraphs>
-                        <Paragraph>
-                          <TextRuns>
-                            <TextRun>
-                              <Value>=Fields!DESCRICAO.Value</Value>
-                              <Style>
-                                <FontFamily>Microsoft Sans Serif</FontFamily>
-                                <FontSize>11pt</FontSize>
-                                <FontWeight>Normal</FontWeight>
-                                <Color>#333333</Color>
-                              </Style>
-                            </TextRun>
-                          </TextRuns>
-                          <Style>
-                            <TextAlign>Center</TextAlign>
-                          </Style>
-                        </Paragraph>
-                      </Paragraphs>
-                      <rd:DefaultName>DESCRICAO</rd:DefaultName>
-                      <Style>
-                        <Border>
-                          <Style>None</Style>
-                        </Border>
-                        <BackgroundColor>White</BackgroundColor>
-                        <PaddingLeft>2pt</PaddingLeft>
-                        <PaddingRight>2pt</PaddingRight>
-                        <PaddingTop>2pt</PaddingTop>
-                        <PaddingBottom>2pt</PaddingBottom>
-                      </Style>
-                    </Textbox>
-                  </CellContents>
-                </TablixCell>
-                <TablixCell>
-                  <CellContents>
-                    <Textbox Name="NOME_CATEGORIA">
-                      <CanGrow>true</CanGrow>
-                      <KeepTogether>true</KeepTogether>
-                      <Paragraphs>
-                        <Paragraph>
-                          <TextRuns>
-                            <TextRun>
-                              <Value>=Fields!NOME_CATEGORIA.Value</Value>
-                              <Style>
-                                <FontFamily>Microsoft Sans Serif</FontFamily>
-                                <FontSize>11pt</FontSize>
-                                <FontWeight>Normal</FontWeight>
-                                <Color>#333333</Color>
-                              </Style>
-                            </TextRun>
-                          </TextRuns>
-                          <Style>
-                            <TextAlign>Center</TextAlign>
-                          </Style>
-                        </Paragraph>
-                      </Paragraphs>
-                      <rd:DefaultName>NOME_CATEGORIA</rd:DefaultName>
-                      <Style>
-                        <Border>
-                          <Style>None</Style>
-                        </Border>
-                        <BackgroundColor>White</BackgroundColor>
-                        <PaddingLeft>2pt</PaddingLeft>
-                        <PaddingRight>2pt</PaddingRight>
-                        <PaddingTop>2pt</PaddingTop>
-                        <PaddingBottom>2pt</PaddingBottom>
-                      </Style>
-                    </Textbox>
-                  </CellContents>
-                </TablixCell>
                 <TablixCell>
                   <CellContents>
                     <Textbox Name="RAZAO_SOCIAL">
@@ -789,9 +709,7 @@
                               </Style>
                             </TextRun>
                           </TextRuns>
-                          <Style>
-                            <TextAlign>Center</TextAlign>
-                          </Style>
+                          <Style />
                         </Paragraph>
                       </Paragraphs>
                       <rd:DefaultName>RAZAO_SOCIAL</rd:DefaultName>
@@ -810,14 +728,14 @@
                 </TablixCell>
                 <TablixCell>
                   <CellContents>
-                    <Textbox Name="PRECO_COMPRA">
+                    <Textbox Name="CNPJ">
                       <CanGrow>true</CanGrow>
                       <KeepTogether>true</KeepTogether>
                       <Paragraphs>
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>=Sum(Fields!PRECO_COMPRA.Value)</Value>
+                              <Value>=Fields!CNPJ.Value</Value>
                               <Style>
                                 <FontFamily>Microsoft Sans Serif</FontFamily>
                                 <FontSize>11pt</FontSize>
@@ -826,12 +744,10 @@
                               </Style>
                             </TextRun>
                           </TextRuns>
-                          <Style>
-                            <TextAlign>Center</TextAlign>
-                          </Style>
+                          <Style />
                         </Paragraph>
                       </Paragraphs>
-                      <rd:DefaultName>PRECO_COMPRA</rd:DefaultName>
+                      <rd:DefaultName>CNPJ</rd:DefaultName>
                       <Style>
                         <Border>
                           <Style>None</Style>
@@ -847,14 +763,14 @@
                 </TablixCell>
                 <TablixCell>
                   <CellContents>
-                    <Textbox Name="PRECO_VENDA">
+                    <Textbox Name="ENDERECO">
                       <CanGrow>true</CanGrow>
                       <KeepTogether>true</KeepTogether>
                       <Paragraphs>
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>=Sum(Fields!PRECO_VENDA.Value)</Value>
+                              <Value>=Fields!ENDERECO.Value</Value>
                               <Style>
                                 <FontFamily>Microsoft Sans Serif</FontFamily>
                                 <FontSize>11pt</FontSize>
@@ -863,12 +779,10 @@
                               </Style>
                             </TextRun>
                           </TextRuns>
-                          <Style>
-                            <TextAlign>Center</TextAlign>
-                          </Style>
+                          <Style />
                         </Paragraph>
                       </Paragraphs>
-                      <rd:DefaultName>PRECO_VENDA</rd:DefaultName>
+                      <rd:DefaultName>ENDERECO</rd:DefaultName>
                       <Style>
                         <Border>
                           <Style>None</Style>
@@ -884,29 +798,26 @@
                 </TablixCell>
                 <TablixCell>
                   <CellContents>
-                    <Textbox Name="DATA_FABRICACAO">
+                    <Textbox Name="NUMERO">
                       <CanGrow>true</CanGrow>
                       <KeepTogether>true</KeepTogether>
                       <Paragraphs>
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>=Fields!DATA_FABRICACAO.Value</Value>
+                              <Value>=Sum(Fields!NUMERO.Value)</Value>
                               <Style>
                                 <FontFamily>Microsoft Sans Serif</FontFamily>
                                 <FontSize>11pt</FontSize>
                                 <FontWeight>Normal</FontWeight>
-                                <Format>d</Format>
                                 <Color>#333333</Color>
                               </Style>
                             </TextRun>
                           </TextRuns>
-                          <Style>
-                            <TextAlign>Center</TextAlign>
-                          </Style>
+                          <Style />
                         </Paragraph>
                       </Paragraphs>
-                      <rd:DefaultName>DATA_FABRICACAO</rd:DefaultName>
+                      <rd:DefaultName>NUMERO</rd:DefaultName>
                       <Style>
                         <Border>
                           <Style>None</Style>
@@ -922,29 +833,271 @@
                 </TablixCell>
                 <TablixCell>
                   <CellContents>
-                    <Textbox Name="DATA_VALIDADE">
+                    <Textbox Name="BAIRRO">
                       <CanGrow>true</CanGrow>
                       <KeepTogether>true</KeepTogether>
                       <Paragraphs>
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>=Fields!DATA_VALIDADE.Value</Value>
+                              <Value>=Fields!BAIRRO.Value</Value>
                               <Style>
                                 <FontFamily>Microsoft Sans Serif</FontFamily>
                                 <FontSize>11pt</FontSize>
                                 <FontWeight>Normal</FontWeight>
-                                <Format>d</Format>
                                 <Color>#333333</Color>
                               </Style>
                             </TextRun>
                           </TextRuns>
-                          <Style>
-                            <TextAlign>Center</TextAlign>
-                          </Style>
+                          <Style />
                         </Paragraph>
                       </Paragraphs>
-                      <rd:DefaultName>DATA_VALIDADE</rd:DefaultName>
+                      <rd:DefaultName>BAIRRO</rd:DefaultName>
+                      <Style>
+                        <Border>
+                          <Style>None</Style>
+                        </Border>
+                        <BackgroundColor>White</BackgroundColor>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                        <PaddingBottom>2pt</PaddingBottom>
+                      </Style>
+                    </Textbox>
+                  </CellContents>
+                </TablixCell>
+                <TablixCell>
+                  <CellContents>
+                    <Textbox Name="CIDADE">
+                      <CanGrow>true</CanGrow>
+                      <KeepTogether>true</KeepTogether>
+                      <Paragraphs>
+                        <Paragraph>
+                          <TextRuns>
+                            <TextRun>
+                              <Value>=Fields!CIDADE.Value</Value>
+                              <Style>
+                                <FontFamily>Microsoft Sans Serif</FontFamily>
+                                <FontSize>11pt</FontSize>
+                                <FontWeight>Normal</FontWeight>
+                                <Color>#333333</Color>
+                              </Style>
+                            </TextRun>
+                          </TextRuns>
+                          <Style />
+                        </Paragraph>
+                      </Paragraphs>
+                      <rd:DefaultName>CIDADE</rd:DefaultName>
+                      <Style>
+                        <Border>
+                          <Style>None</Style>
+                        </Border>
+                        <BackgroundColor>White</BackgroundColor>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                        <PaddingBottom>2pt</PaddingBottom>
+                      </Style>
+                    </Textbox>
+                  </CellContents>
+                </TablixCell>
+                <TablixCell>
+                  <CellContents>
+                    <Textbox Name="CEP">
+                      <CanGrow>true</CanGrow>
+                      <KeepTogether>true</KeepTogether>
+                      <Paragraphs>
+                        <Paragraph>
+                          <TextRuns>
+                            <TextRun>
+                              <Value>=Fields!CEP.Value</Value>
+                              <Style>
+                                <FontFamily>Microsoft Sans Serif</FontFamily>
+                                <FontSize>11pt</FontSize>
+                                <FontWeight>Normal</FontWeight>
+                                <Color>#333333</Color>
+                              </Style>
+                            </TextRun>
+                          </TextRuns>
+                          <Style />
+                        </Paragraph>
+                      </Paragraphs>
+                      <rd:DefaultName>CEP</rd:DefaultName>
+                      <Style>
+                        <Border>
+                          <Style>None</Style>
+                        </Border>
+                        <BackgroundColor>White</BackgroundColor>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                        <PaddingBottom>2pt</PaddingBottom>
+                      </Style>
+                    </Textbox>
+                  </CellContents>
+                </TablixCell>
+                <TablixCell>
+                  <CellContents>
+                    <Textbox Name="COMPLEMENTO">
+                      <CanGrow>true</CanGrow>
+                      <KeepTogether>true</KeepTogether>
+                      <Paragraphs>
+                        <Paragraph>
+                          <TextRuns>
+                            <TextRun>
+                              <Value>=Fields!COMPLEMENTO.Value</Value>
+                              <Style>
+                                <FontFamily>Microsoft Sans Serif</FontFamily>
+                                <FontSize>11pt</FontSize>
+                                <FontWeight>Normal</FontWeight>
+                                <Color>#333333</Color>
+                              </Style>
+                            </TextRun>
+                          </TextRuns>
+                          <Style />
+                        </Paragraph>
+                      </Paragraphs>
+                      <rd:DefaultName>COMPLEMENTO</rd:DefaultName>
+                      <Style>
+                        <Border>
+                          <Style>None</Style>
+                        </Border>
+                        <BackgroundColor>White</BackgroundColor>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                        <PaddingBottom>2pt</PaddingBottom>
+                      </Style>
+                    </Textbox>
+                  </CellContents>
+                </TablixCell>
+                <TablixCell>
+                  <CellContents>
+                    <Textbox Name="UF">
+                      <CanGrow>true</CanGrow>
+                      <KeepTogether>true</KeepTogether>
+                      <Paragraphs>
+                        <Paragraph>
+                          <TextRuns>
+                            <TextRun>
+                              <Value>=Fields!UF.Value</Value>
+                              <Style>
+                                <FontFamily>Microsoft Sans Serif</FontFamily>
+                                <FontSize>11pt</FontSize>
+                                <FontWeight>Normal</FontWeight>
+                                <Color>#333333</Color>
+                              </Style>
+                            </TextRun>
+                          </TextRuns>
+                          <Style />
+                        </Paragraph>
+                      </Paragraphs>
+                      <rd:DefaultName>UF</rd:DefaultName>
+                      <Style>
+                        <Border>
+                          <Style>None</Style>
+                        </Border>
+                        <BackgroundColor>White</BackgroundColor>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                        <PaddingBottom>2pt</PaddingBottom>
+                      </Style>
+                    </Textbox>
+                  </CellContents>
+                </TablixCell>
+                <TablixCell>
+                  <CellContents>
+                    <Textbox Name="TELEFONE">
+                      <CanGrow>true</CanGrow>
+                      <KeepTogether>true</KeepTogether>
+                      <Paragraphs>
+                        <Paragraph>
+                          <TextRuns>
+                            <TextRun>
+                              <Value>=Fields!TELEFONE.Value</Value>
+                              <Style>
+                                <FontFamily>Microsoft Sans Serif</FontFamily>
+                                <FontSize>11pt</FontSize>
+                                <FontWeight>Normal</FontWeight>
+                                <Color>#333333</Color>
+                              </Style>
+                            </TextRun>
+                          </TextRuns>
+                          <Style />
+                        </Paragraph>
+                      </Paragraphs>
+                      <rd:DefaultName>TELEFONE</rd:DefaultName>
+                      <Style>
+                        <Border>
+                          <Style>None</Style>
+                        </Border>
+                        <BackgroundColor>White</BackgroundColor>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                        <PaddingBottom>2pt</PaddingBottom>
+                      </Style>
+                    </Textbox>
+                  </CellContents>
+                </TablixCell>
+                <TablixCell>
+                  <CellContents>
+                    <Textbox Name="CELULAR">
+                      <CanGrow>true</CanGrow>
+                      <KeepTogether>true</KeepTogether>
+                      <Paragraphs>
+                        <Paragraph>
+                          <TextRuns>
+                            <TextRun>
+                              <Value>=Fields!CELULAR.Value</Value>
+                              <Style>
+                                <FontFamily>Microsoft Sans Serif</FontFamily>
+                                <FontSize>11pt</FontSize>
+                                <FontWeight>Normal</FontWeight>
+                                <Color>#333333</Color>
+                              </Style>
+                            </TextRun>
+                          </TextRuns>
+                          <Style />
+                        </Paragraph>
+                      </Paragraphs>
+                      <rd:DefaultName>CELULAR</rd:DefaultName>
+                      <Style>
+                        <Border>
+                          <Style>None</Style>
+                        </Border>
+                        <BackgroundColor>White</BackgroundColor>
+                        <PaddingLeft>2pt</PaddingLeft>
+                        <PaddingRight>2pt</PaddingRight>
+                        <PaddingTop>2pt</PaddingTop>
+                        <PaddingBottom>2pt</PaddingBottom>
+                      </Style>
+                    </Textbox>
+                  </CellContents>
+                </TablixCell>
+                <TablixCell>
+                  <CellContents>
+                    <Textbox Name="EMAIL">
+                      <CanGrow>true</CanGrow>
+                      <KeepTogether>true</KeepTogether>
+                      <Paragraphs>
+                        <Paragraph>
+                          <TextRuns>
+                            <TextRun>
+                              <Value>=Fields!EMAIL.Value</Value>
+                              <Style>
+                                <FontFamily>Microsoft Sans Serif</FontFamily>
+                                <FontSize>11pt</FontSize>
+                                <FontWeight>Normal</FontWeight>
+                                <Color>#333333</Color>
+                              </Style>
+                            </TextRun>
+                          </TextRuns>
+                          <Style />
+                        </Paragraph>
+                      </Paragraphs>
+                      <rd:DefaultName>EMAIL</rd:DefaultName>
                       <Style>
                         <Border>
                           <Style>None</Style>
@@ -977,9 +1130,7 @@
                               </Style>
                             </TextRun>
                           </TextRuns>
-                          <Style>
-                            <TextAlign>Center</TextAlign>
-                          </Style>
+                          <Style />
                         </Paragraph>
                       </Paragraphs>
                       <rd:DefaultName>DATA_CADASTRO</rd:DefaultName>
@@ -1014,9 +1165,7 @@
                               </Style>
                             </TextRun>
                           </TextRuns>
-                          <Style>
-                            <TextAlign>Center</TextAlign>
-                          </Style>
+                          <Style />
                         </Paragraph>
                       </Paragraphs>
                       <rd:DefaultName>NOME_USUARIO</rd:DefaultName>
@@ -1050,6 +1199,9 @@
             <TablixMember />
             <TablixMember />
             <TablixMember />
+            <TablixMember />
+            <TablixMember />
+            <TablixMember />
           </TablixMembers>
         </TablixColumnHierarchy>
         <TablixRowHierarchy>
@@ -1062,9 +1214,9 @@
             </TablixMember>
           </TablixMembers>
         </TablixRowHierarchy>
-        <DataSetName>RepProductDataSet</DataSetName>
-        <Height>2.21396cm</Height>
-        <Width>34.90835cm</Width>
+        <DataSetName>RepProviderDataSet</DataSetName>
+        <Height>2.28479cm</Height>
+        <Width>47.21021cm</Width>
         <Style>
           <Border>
             <Style>None</Style>
@@ -1072,24 +1224,24 @@
         </Style>
       </Tablix>
     </ReportItems>
-    <Height>1.13205in</Height>
+    <Height>2in</Height>
     <Style />
   </Body>
-  <Width>13.74344in</Width>
+  <Width>18.5867in</Width>
   <Page>
     <PageHeader>
-      <Height>2.46062cm</Height>
+      <Height>2.54cm</Height>
       <PrintOnFirstPage>true</PrintOnFirstPage>
       <PrintOnLastPage>true</PrintOnLastPage>
       <ReportItems>
-        <Textbox Name="Textbox23">
+        <Textbox Name="Textbox29">
           <CanGrow>true</CanGrow>
           <KeepTogether>true</KeepTogether>
           <Paragraphs>
             <Paragraph>
               <TextRuns>
                 <TextRun>
-                  <Value>Relatório de Produtos</Value>
+                  <Value>Relatório de Fornecedores</Value>
                   <Style>
                     <FontFamily>Microsoft Sans Serif</FontFamily>
                     <FontSize>24pt</FontSize>
@@ -1103,9 +1255,9 @@
               </Style>
             </Paragraph>
           </Paragraphs>
-          <rd:DefaultName>Textbox23</rd:DefaultName>
+          <rd:DefaultName>Textbox29</rd:DefaultName>
           <Height>2.36361cm</Height>
-          <Width>34.90833cm</Width>
+          <Width>47.21021cm</Width>
           <Style>
             <Border>
               <Style>None</Style>
@@ -1147,7 +1299,7 @@
             </Paragraph>
           </Paragraphs>
           <rd:DefaultName>ExecutionTime</rd:DefaultName>
-          <Top>1.51349cm</Top>
+          <Top>0.97cm</Top>
           <Height>0.6cm</Height>
           <Width>5.96604cm</Width>
           <Style>
@@ -1183,51 +1335,63 @@
         <DataProvider>System.Data.DataSet</DataProvider>
         <ConnectString>/* Local Connection */</ConnectString>
       </ConnectionProperties>
-      <rd:DataSourceID>e8ae2ba1-b6f5-42c2-bac8-4706f973fd3b</rd:DataSourceID>
+      <rd:DataSourceID>4413bcbf-95a7-405f-88eb-824c43a338ac</rd:DataSourceID>
     </DataSource>
   </DataSources>
   <DataSets>
-    <DataSet Name="RepProductDataSet">
+    <DataSet Name="RepProviderDataSet">
       <Query>
         <DataSourceName>qraguasDataSet</DataSourceName>
         <CommandText>/* Local Query */</CommandText>
       </Query>
       <Fields>
-        <Field Name="COD_PRODUTO">
-          <DataField>COD_PRODUTO</DataField>
-          <rd:TypeName>System.String</rd:TypeName>
-        </Field>
-        <Field Name="NOME_PRODUTO">
-          <DataField>NOME_PRODUTO</DataField>
-          <rd:TypeName>System.String</rd:TypeName>
-        </Field>
-        <Field Name="DESCRICAO">
-          <DataField>DESCRICAO</DataField>
-          <rd:TypeName>System.String</rd:TypeName>
-        </Field>
-        <Field Name="NOME_CATEGORIA">
-          <DataField>NOME_CATEGORIA</DataField>
-          <rd:TypeName>System.String</rd:TypeName>
-        </Field>
         <Field Name="RAZAO_SOCIAL">
           <DataField>RAZAO_SOCIAL</DataField>
           <rd:TypeName>System.String</rd:TypeName>
         </Field>
-        <Field Name="PRECO_COMPRA">
-          <DataField>PRECO_COMPRA</DataField>
-          <rd:TypeName>System.Decimal</rd:TypeName>
+        <Field Name="CNPJ">
+          <DataField>CNPJ</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
         </Field>
-        <Field Name="PRECO_VENDA">
-          <DataField>PRECO_VENDA</DataField>
-          <rd:TypeName>System.Decimal</rd:TypeName>
+        <Field Name="ENDERECO">
+          <DataField>ENDERECO</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
         </Field>
-        <Field Name="DATA_FABRICACAO">
-          <DataField>DATA_FABRICACAO</DataField>
-          <rd:TypeName>System.DateTime</rd:TypeName>
+        <Field Name="NUMERO">
+          <DataField>NUMERO</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
         </Field>
-        <Field Name="DATA_VALIDADE">
-          <DataField>DATA_VALIDADE</DataField>
-          <rd:TypeName>System.DateTime</rd:TypeName>
+        <Field Name="BAIRRO">
+          <DataField>BAIRRO</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="CIDADE">
+          <DataField>CIDADE</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="CEP">
+          <DataField>CEP</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="COMPLEMENTO">
+          <DataField>COMPLEMENTO</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="UF">
+          <DataField>UF</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="TELEFONE">
+          <DataField>TELEFONE</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="CELULAR">
+          <DataField>CELULAR</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="EMAIL">
+          <DataField>EMAIL</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
         </Field>
         <Field Name="DATA_CADASTRO">
           <DataField>DATA_CADASTRO</DataField>
@@ -1241,13 +1405,13 @@
       <rd:DataSetInfo>
         <rd:DataSetName>qraguasDataSet</rd:DataSetName>
         <rd:SchemaPath>C:\Users\Fernando\Desktop\QrAguas\QrAguas\qraguasDataSet.xsd</rd:SchemaPath>
-        <rd:TableName>Relatorio_Produtos</rd:TableName>
-        <rd:TableAdapterFillMethod>FillRepProduct</rd:TableAdapterFillMethod>
-        <rd:TableAdapterGetDataMethod>GetDataRepProduct</rd:TableAdapterGetDataMethod>
-        <rd:TableAdapterName>Relatorio_ProdutosTableAdapter</rd:TableAdapterName>
+        <rd:TableName>Relatorio_Fornecedores</rd:TableName>
+        <rd:TableAdapterFillMethod>FillRepProvider</rd:TableAdapterFillMethod>
+        <rd:TableAdapterGetDataMethod>GetDataRepProvider</rd:TableAdapterGetDataMethod>
+        <rd:TableAdapterName>Relatorio_FornecedoresTableAdapter</rd:TableAdapterName>
       </rd:DataSetInfo>
     </DataSet>
   </DataSets>
   <rd:ReportUnitType>Cm</rd:ReportUnitType>
-  <rd:ReportID>c6c58737-364c-4605-a47b-5241b621b895</rd:ReportID>
+  <rd:ReportID>c3b0fad1-e6f2-4303-b4a2-955792e17e26</rd:ReportID>
 </Report>

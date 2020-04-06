@@ -176,6 +176,7 @@
       <DesignTime>True</DesignTime>
     </Compile>
     <EmbeddedResource Include="Reports\RepProduct.rdlc" />
+    <EmbeddedResource Include="Reports\RepProvider.rdlc" />
     <EmbeddedResource Include="ViewLayer\ChangePassword.resx">
       <DependentUpon>ChangePassword.cs</DependentUpon>
     </EmbeddedResource>
