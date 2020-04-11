@@ -160,7 +160,7 @@ namespace QrAguas.Controls
 
         public bool CadastrarNovoUsuario(NewUser objNovoUsuario)
         {
-            string queryCadastrarUsuario = "INSERT INTO USUARIOS (NOME_USUARIO, SENHA, ID_TIPO_USUARIO, CADASTRADO_POR, DATA_CADASTRO) VALUES ( @NOME_USUARIO, @SENHA, @ID_TIPO_USUARIO, @CADASTRADO_POR, @DATA_CADASTRO)";
+            string queryCadastrarUsuario = "INSERT INTO USUARIOS (NOME_USUARIO, SENHA, ID_TIPO_USUARIO, CADASTRADO_POR, ID_UNICO, DATA_CADASTRO) VALUES ( @NOME_USUARIO, @SENHA, @ID_TIPO_USUARIO, @CADASTRADO_POR, UUID(), @DATA_CADASTRO)";
 
             MySqlCommand command = new MySqlCommand(queryCadastrarUsuario, AbrirBanco());
 

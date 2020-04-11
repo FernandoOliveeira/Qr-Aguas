@@ -40,7 +40,7 @@
             treeNode3,
             treeNode4});
             System.Windows.Forms.TreeNode treeNode6 = new System.Windows.Forms.TreeNode("Entrada de Novos Galões", -2, -2);
-            System.Windows.Forms.TreeNode treeNode7 = new System.Windows.Forms.TreeNode("Venda de Galões", 1, 1);
+            System.Windows.Forms.TreeNode treeNode7 = new System.Windows.Forms.TreeNode("Venda de Produtos", 1, 1);
             System.Windows.Forms.TreeNode treeNode8 = new System.Windows.Forms.TreeNode("Vendas", new System.Windows.Forms.TreeNode[] {
             treeNode7});
             System.Windows.Forms.TreeNode treeNode9 = new System.Windows.Forms.TreeNode("Relatório de Vendas", 1, 1);
@@ -100,13 +100,13 @@
             // procurarUsuarioToolStripMenuItem
             // 
             this.procurarUsuarioToolStripMenuItem.Name = "procurarUsuarioToolStripMenuItem";
-            this.procurarUsuarioToolStripMenuItem.Size = new System.Drawing.Size(160, 22);
+            this.procurarUsuarioToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.procurarUsuarioToolStripMenuItem.Text = "Procurar Usuário";
             // 
             // alterarSenhaToolStripMenuItem
             // 
             this.alterarSenhaToolStripMenuItem.Name = "alterarSenhaToolStripMenuItem";
-            this.alterarSenhaToolStripMenuItem.Size = new System.Drawing.Size(160, 22);
+            this.alterarSenhaToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.alterarSenhaToolStripMenuItem.Text = "Alterar Senha";
             this.alterarSenhaToolStripMenuItem.Click += new System.EventHandler(this.AlterarSenhaToolStripMenuItem_Click);
             // 
@@ -177,7 +177,7 @@
             treeNode7.ImageIndex = 1;
             treeNode7.Name = "Node6";
             treeNode7.SelectedImageIndex = 1;
-            treeNode7.Text = "Venda de Galões";
+            treeNode7.Text = "Venda de Produtos";
             treeNode8.Name = "Node2";
             treeNode8.Text = "Vendas";
             treeNode9.ImageIndex = 1;
