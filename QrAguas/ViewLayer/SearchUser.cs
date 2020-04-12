@@ -16,5 +16,12 @@ namespace QrAguas.ViewLayer
         {
             InitializeComponent();
         }
+
+        private void SearchUser_Load(object sender, EventArgs e)
+        {
+            // Insere os dados no DGVUsuarios
+            this.dataGridViewUsuariosTableAdapter.FillDGVUsuarios(this.qraguasDataSet.DataGridViewUsuarios);
+            
+        }
     }
 }
