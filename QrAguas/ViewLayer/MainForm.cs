@@ -185,10 +185,17 @@ namespace QrAguas.View_Layer
             changePassword.Show();
         }
 
+        private void ProcurarUsuarioToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            SearchUser searchUser = new SearchUser();
+            searchUser.Show();
+        }
+
         private void AbrirFormLogin()
         {
             Application.Run(new Login());
         }
 
+        
     }
 }

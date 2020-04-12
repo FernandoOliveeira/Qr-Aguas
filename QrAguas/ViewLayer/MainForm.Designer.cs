@@ -102,6 +102,7 @@
             this.procurarUsuarioToolStripMenuItem.Name = "procurarUsuarioToolStripMenuItem";
             this.procurarUsuarioToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.procurarUsuarioToolStripMenuItem.Text = "Procurar Usuário";
+            this.procurarUsuarioToolStripMenuItem.Click += new System.EventHandler(this.ProcurarUsuarioToolStripMenuItem_Click);
             // 
             // alterarSenhaToolStripMenuItem
             // 
