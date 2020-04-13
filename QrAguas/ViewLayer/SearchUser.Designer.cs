@@ -42,9 +42,6 @@
             this.btnProcurar = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
             this.DGVUsuarios = new System.Windows.Forms.DataGridView();
-            this.qraguasDataSet = new QrAguas.qraguasDataSet();
-            this.dataGridViewUsuariosBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.dataGridViewUsuariosTableAdapter = new QrAguas.qraguasDataSetTableAdapters.DataGridViewUsuariosTableAdapter();
             this.iDUSUARIOSDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.nOMEUSUARIODataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dESCRICAODataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -52,13 +49,16 @@
             this.dATACADASTRODataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.aTIVODataGridViewCheckBoxColumn = new System.Windows.Forms.DataGridViewCheckBoxColumn();
             this.Atualizar = new System.Windows.Forms.DataGridViewButtonColumn();
+            this.dataGridViewUsuariosBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.qraguasDataSet = new QrAguas.qraguasDataSet();
+            this.dataGridViewUsuariosTableAdapter = new QrAguas.qraguasDataSetTableAdapters.DataGridViewUsuariosTableAdapter();
             this.tableLayoutPanel1.SuspendLayout();
             this.panel1.SuspendLayout();
             this.panelBtnCadastrar.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.DGVUsuarios)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.qraguasDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewUsuariosBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.qraguasDataSet)).BeginInit();
             this.SuspendLayout();
             // 
             // tableLayoutPanel1
@@ -124,6 +124,7 @@
             this.txtUsuario.Name = "txtUsuario";
             this.txtUsuario.Size = new System.Drawing.Size(249, 23);
             this.txtUsuario.TabIndex = 0;
+            this.txtUsuario.KeyDown += new System.Windows.Forms.KeyEventHandler(this.TxtUsuario_KeyDown);
             // 
             // panelBtnCadastrar
             // 
@@ -148,6 +149,7 @@
             this.btnProcurar.TabIndex = 0;
             this.btnProcurar.Text = "Procurar";
             this.btnProcurar.UseVisualStyleBackColor = false;
+            this.btnProcurar.Click += new System.EventHandler(this.BtnProcurar_Click);
             // 
             // panel2
             // 
@@ -198,20 +200,6 @@
             this.DGVUsuarios.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.DGVUsuarios.Size = new System.Drawing.Size(828, 257);
             this.DGVUsuarios.TabIndex = 1;
-            // 
-            // qraguasDataSet
-            // 
-            this.qraguasDataSet.DataSetName = "qraguasDataSet";
-            this.qraguasDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // dataGridViewUsuariosBindingSource
-            // 
-            this.dataGridViewUsuariosBindingSource.DataMember = "DataGridViewUsuarios";
-            this.dataGridViewUsuariosBindingSource.DataSource = this.qraguasDataSet;
-            // 
-            // dataGridViewUsuariosTableAdapter
-            // 
-            this.dataGridViewUsuariosTableAdapter.ClearBeforeFill = true;
             // 
             // iDUSUARIOSDataGridViewTextBoxColumn
             // 
@@ -272,6 +260,20 @@
             this.Atualizar.Text = "Atualizar";
             this.Atualizar.UseColumnTextForButtonValue = true;
             // 
+            // dataGridViewUsuariosBindingSource
+            // 
+            this.dataGridViewUsuariosBindingSource.DataMember = "DataGridViewUsuarios";
+            this.dataGridViewUsuariosBindingSource.DataSource = this.qraguasDataSet;
+            // 
+            // qraguasDataSet
+            // 
+            this.qraguasDataSet.DataSetName = "qraguasDataSet";
+            this.qraguasDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // dataGridViewUsuariosTableAdapter
+            // 
+            this.dataGridViewUsuariosTableAdapter.ClearBeforeFill = true;
+            // 
             // SearchUser
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 17F);
@@ -292,8 +294,8 @@
             this.panelBtnCadastrar.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.DGVUsuarios)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.qraguasDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewUsuariosBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.qraguasDataSet)).EndInit();
             this.ResumeLayout(false);
 
         }

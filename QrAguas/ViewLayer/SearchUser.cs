@@ -1,4 +1,5 @@
-﻿using System;
+﻿using QrAguas.Controls;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -17,11 +18,23 @@ namespace QrAguas.ViewLayer
             InitializeComponent();
         }
 
+        Functions functions = new Functions();
+
         private void SearchUser_Load(object sender, EventArgs e)
         {
             // Insere os dados no DGVUsuarios
             this.dataGridViewUsuariosTableAdapter.FillDGVUsuarios(this.qraguasDataSet.DataGridViewUsuarios);
             
+        }
+
+        private void BtnProcurar_Click(object sender, EventArgs e)
+        {
+            DGVUsuarios.DataSource = functions.ProcurarUsuario(txtUsuario.Text.Trim());
+        }
+
+        private void TxtUsuario_KeyDown(object sender, KeyEventArgs e)
+        {
+            ActiveForm.AcceptButton = btnProcurar;
         }
     }
 }
