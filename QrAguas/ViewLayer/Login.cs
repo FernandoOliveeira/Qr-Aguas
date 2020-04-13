@@ -70,7 +70,7 @@ namespace QrAguas.View_Layer
               }
             else
             {
-                MessageBox.Show("Usuario ou senha inválidos", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Usuario ou senha inválidos", "Usuario ou senha inválidos", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
 
 
@@ -83,31 +83,7 @@ namespace QrAguas.View_Layer
 
         private void PressionarEnter_KeyDown(object sender, KeyEventArgs e)
         {
-            if (e.KeyValue == 13)
-            {
-                // Gera um HashMd5 e armazena na variavel senha
-                string senha = functions.GerarMd5(txtSenha.Text.Trim());
-
-                if (functions.VerificarLogin(txtUsuario.Text.Trim(), senha))
-                {
-
-                    NomeUsuario = txtUsuario.Text.Trim();
-                    TipoUsuario = functions.VerificarTipoUsuario(NomeUsuario);
-                    IdUsuario = functions.VerificarIdUsuario(NomeUsuario);
-
-                    // Abrir o form MainForm e fechar o atual
-                    this.Close();
-                    thread = new Thread(AbrirMainForm);
-                    thread.SetApartmentState(ApartmentState.STA);
-                    thread.Start();
-                }
-                else
-                {
-                    MessageBox.Show("Usuario ou senha inválidos", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                }
-
-
-            }
+            ActiveForm.AcceptButton = btnEntrar;
 
         }
 
