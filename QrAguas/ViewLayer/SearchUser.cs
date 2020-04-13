@@ -34,7 +34,16 @@ namespace QrAguas.ViewLayer
 
         private void TxtUsuario_KeyDown(object sender, KeyEventArgs e)
         {
+            // Faz com que a tecla Enter funcione como trigger para o btnProcurar
             ActiveForm.AcceptButton = btnProcurar;
+        }
+
+        private void DGVUsuarios_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (DGVUsuarios.Columns[e.ColumnIndex].Name.Equals("ATIVO"))
+            {
+
+            }
         }
     }
 }

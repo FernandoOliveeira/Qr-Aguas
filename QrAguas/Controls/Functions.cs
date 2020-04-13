@@ -445,6 +445,19 @@ namespace QrAguas.Controls
 
         }
 
+        public bool AtivarDesativarUsuario(int idUsuario, bool ativo)
+        {
+            string queryAtivarDesativarUsuario = "UPDATE USUARIOS SET ATIVO = @ATIVO WHERE ID_USUARIOS = @ID_USUARIOS";
+
+            MySqlCommand command = new MySqlCommand(queryAtivarDesativarUsuario, AbrirBanco());
+
+            command.Parameters.AddWithValue("@ATIVO", ativo);
+            command.Parameters.AddWithValue("@ID_USUARIOS", idUsuario);
+
+            int rowCount = command.ExecuteNonQuery();
+
+            return rowCount != 0 ? true : false;
+        }
 
         #endregion
 

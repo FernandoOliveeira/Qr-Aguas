@@ -200,6 +200,7 @@
             this.DGVUsuarios.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.DGVUsuarios.Size = new System.Drawing.Size(828, 257);
             this.DGVUsuarios.TabIndex = 1;
+            this.DGVUsuarios.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DGVUsuarios_CellContentClick);
             // 
             // iDUSUARIOSDataGridViewTextBoxColumn
             // 
