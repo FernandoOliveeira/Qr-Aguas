@@ -42,16 +42,16 @@
             this.btnProcurar = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
             this.DGVUsuarios = new System.Windows.Forms.DataGridView();
+            this.dataGridViewUsuariosBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.qraguasDataSet = new QrAguas.qraguasDataSet();
+            this.dataGridViewUsuariosTableAdapter = new QrAguas.qraguasDataSetTableAdapters.DataGridViewUsuariosTableAdapter();
             this.iDUSUARIOSDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.nOMEUSUARIODataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dESCRICAODataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.cADASTRADOPORDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dATACADASTRODataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.aTIVODataGridViewCheckBoxColumn = new System.Windows.Forms.DataGridViewCheckBoxColumn();
+            this.ATIVO = new System.Windows.Forms.DataGridViewCheckBoxColumn();
             this.Atualizar = new System.Windows.Forms.DataGridViewButtonColumn();
-            this.dataGridViewUsuariosBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.qraguasDataSet = new QrAguas.qraguasDataSet();
-            this.dataGridViewUsuariosTableAdapter = new QrAguas.qraguasDataSetTableAdapters.DataGridViewUsuariosTableAdapter();
             this.tableLayoutPanel1.SuspendLayout();
             this.panel1.SuspendLayout();
             this.panelBtnCadastrar.SuspendLayout();
@@ -186,7 +186,7 @@
             this.dESCRICAODataGridViewTextBoxColumn,
             this.cADASTRADOPORDataGridViewTextBoxColumn,
             this.dATACADASTRODataGridViewTextBoxColumn,
-            this.aTIVODataGridViewCheckBoxColumn,
+            this.ATIVO,
             this.Atualizar});
             this.DGVUsuarios.DataSource = this.dataGridViewUsuariosBindingSource;
             this.DGVUsuarios.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -201,6 +201,20 @@
             this.DGVUsuarios.Size = new System.Drawing.Size(828, 257);
             this.DGVUsuarios.TabIndex = 1;
             this.DGVUsuarios.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DGVUsuarios_CellContentClick);
+            // 
+            // dataGridViewUsuariosBindingSource
+            // 
+            this.dataGridViewUsuariosBindingSource.DataMember = "DataGridViewUsuarios";
+            this.dataGridViewUsuariosBindingSource.DataSource = this.qraguasDataSet;
+            // 
+            // qraguasDataSet
+            // 
+            this.qraguasDataSet.DataSetName = "qraguasDataSet";
+            this.qraguasDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // dataGridViewUsuariosTableAdapter
+            // 
+            this.dataGridViewUsuariosTableAdapter.ClearBeforeFill = true;
             // 
             // iDUSUARIOSDataGridViewTextBoxColumn
             // 
@@ -238,12 +252,12 @@
             this.dATACADASTRODataGridViewTextBoxColumn.Name = "dATACADASTRODataGridViewTextBoxColumn";
             this.dATACADASTRODataGridViewTextBoxColumn.ReadOnly = true;
             // 
-            // aTIVODataGridViewCheckBoxColumn
+            // ATIVO
             // 
-            this.aTIVODataGridViewCheckBoxColumn.DataPropertyName = "ATIVO";
-            this.aTIVODataGridViewCheckBoxColumn.HeaderText = "Ativo";
-            this.aTIVODataGridViewCheckBoxColumn.Name = "aTIVODataGridViewCheckBoxColumn";
-            this.aTIVODataGridViewCheckBoxColumn.ReadOnly = true;
+            this.ATIVO.DataPropertyName = "ATIVO";
+            this.ATIVO.HeaderText = "Ativo";
+            this.ATIVO.Name = "ATIVO";
+            this.ATIVO.ReadOnly = true;
             // 
             // Atualizar
             // 
@@ -260,20 +274,6 @@
             this.Atualizar.ReadOnly = true;
             this.Atualizar.Text = "Atualizar";
             this.Atualizar.UseColumnTextForButtonValue = true;
-            // 
-            // dataGridViewUsuariosBindingSource
-            // 
-            this.dataGridViewUsuariosBindingSource.DataMember = "DataGridViewUsuarios";
-            this.dataGridViewUsuariosBindingSource.DataSource = this.qraguasDataSet;
-            // 
-            // qraguasDataSet
-            // 
-            this.qraguasDataSet.DataSetName = "qraguasDataSet";
-            this.qraguasDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // dataGridViewUsuariosTableAdapter
-            // 
-            this.dataGridViewUsuariosTableAdapter.ClearBeforeFill = true;
             // 
             // SearchUser
             // 
@@ -320,7 +320,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn dESCRICAODataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn cADASTRADOPORDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn dATACADASTRODataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewCheckBoxColumn aTIVODataGridViewCheckBoxColumn;
+        private System.Windows.Forms.DataGridViewCheckBoxColumn ATIVO;
         private System.Windows.Forms.DataGridViewButtonColumn Atualizar;
     }
 }

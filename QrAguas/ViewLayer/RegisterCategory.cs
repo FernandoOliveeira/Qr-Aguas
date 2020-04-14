@@ -43,6 +43,7 @@ namespace QrAguas.View_Layer
             // "Evento de click" no botão Atualizar no DataGridView
             if (DGVCategorias.Columns[e.ColumnIndex].Name.Equals("Atualizar"))
             {
+                // Quando clicado no botão Ativar do DataGridView os dados de toda a linha são atribuídos em variáveis
                 int idCategoria = (int)DGVCategorias.SelectedRows[0].Cells[0].Value;
                 string nomeCategoria = DGVCategorias.SelectedRows[0].Cells[1].Value.ToString();
 
@@ -73,17 +74,22 @@ namespace QrAguas.View_Layer
             // "Evento de click" no checkbox Ativo no DataGridView
             if (DGVCategorias.Columns[e.ColumnIndex].Name.Equals("ATIVO"))
             {
+                // Quando clicado no checkbox do DataGridView os dados de toda a linha são atribuídos em variáveis
                 int idCategoria = (int)DGVCategorias.SelectedRows[0].Cells[0].Value;
                 string nomeCategoria = DGVCategorias.SelectedRows[0].Cells[1].Value.ToString();
+
+                // Recebe o valor booleano da coluna ATIVO
                 bool ativo = DGVCategorias.SelectedRows[0].Cells[2].Value.Equals(true) ? false : true;
 
-                string ativarDesativar = ativo.Equals(false) ? "Desativar" : "Ativar";
+                // Caso o usuário esteja ativo a string recebe DESATIVAR e vice e versa
+                string ativarDesativar = ativo == false ? "DESATIVAR" : "ATIVAR";
 
+                
                 DialogResult resposta = MessageBox.Show("Deseja " + ativarDesativar + " a categoria '" + nomeCategoria + "' ? \n(Categorias desativadas não aparecem no cadastro de produtos)", ativarDesativar + " Categoria", MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button2);
 
-                if (resposta.Equals(DialogResult.Yes))
+                if (resposta == DialogResult.Yes)
                 {
-                    string ativarDesativarResposta = ativarDesativar.Equals("Desativar") ? "Desativada" : "Ativada";
+                    string ativarDesativarResposta = ativarDesativar.Equals("DESATIVAR") ? "Desativada" : "Ativada";
 
                     try
                     {
@@ -98,14 +104,14 @@ namespace QrAguas.View_Layer
                         }
                         else
                         {
-                            MessageBox.Show("Erro ao " + ativarDesativarResposta + " a categoria.", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                            MessageBox.Show("Erro ao " + ativarDesativarResposta + " a categoria.", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
                         }
 
                     }
                     catch (Exception erro)
                     {
 
-                        MessageBox.Show("Erro ao " + ativarDesativarResposta + " a categoria.\nErro: " + erro, "Erro", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        MessageBox.Show("Erro ao realizar esta operação.\nErro: " + erro, "Erro", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
                     }
                 }
@@ -148,7 +154,7 @@ namespace QrAguas.View_Layer
 
         private bool CamposVazios()
         {
-            return txtNovaCategoria.Text.Trim().Equals("") ? true : false;
+            return txtNovaCategoria.Text.Trim() == "" ? true : false;
 
         }
 
