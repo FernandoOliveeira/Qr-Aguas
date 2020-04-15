@@ -52,7 +52,7 @@ namespace QrAguas.ViewLayer
 
                 string ativarDesativar = ativo == false ? "DESATIVAR" : "ATIVAR";
 
-                // Armazena a reposta da pergunta
+                
                 DialogResult resposta = MessageBox.Show("Deseja " + ativarDesativar + " o usuário '" + nomeUsuario + "' ? \n(Usuários desativados não tem acesso ao sistema e não são notificados que foram desativados)", ativarDesativar + " Usuário", MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button2);
 
                 if (resposta == DialogResult.Yes)

@@ -95,7 +95,7 @@ namespace QrAguas.Controls
         {
             DataTable consultarLogin = new DataTable();
 
-            string queryUsuarioSenha = "SELECT NOME_USUARIO, SENHA FROM USUARIOS WHERE NOME_USUARIO = @USUARIO";
+            string queryUsuarioSenha = "SELECT NOME_USUARIO, SENHA FROM USUARIOS WHERE NOME_USUARIO = @USUARIO AND ATIVO = TRUE";
 
             MySqlCommand command = new MySqlCommand(queryUsuarioSenha, AbrirBanco());
             command.Parameters.AddWithValue("@USUARIO", usuario);
