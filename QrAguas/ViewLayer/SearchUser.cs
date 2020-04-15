@@ -1,4 +1,5 @@
 ﻿using QrAguas.Controls;
+using QrAguas.View_Layer;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -23,7 +24,7 @@ namespace QrAguas.ViewLayer
         private void SearchUser_Load(object sender, EventArgs e)
         {
             // Insere os dados no DGVUsuarios
-            this.dataGridViewUsuariosTableAdapter.FillDGVUsuarios(this.qraguasDataSet.DataGridViewUsuarios);
+            this.dataGridViewUsuariosTableAdapter.FillDGVUsuarios(this.qraguasDataSet.DataGridViewUsuarios, Login.TipoUsuario);
             
         }
 
@@ -66,7 +67,7 @@ namespace QrAguas.ViewLayer
                             MessageBox.Show("Usuário " + ativarDesativarResposta + " com sucesso.", ativarDesativarResposta + " com sucesso", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
                             // Atualiza o DGVUsuarios
-                            this.dataGridViewUsuariosTableAdapter.FillDGVUsuarios(this.qraguasDataSet.DataGridViewUsuarios);
+                            this.dataGridViewUsuariosTableAdapter.FillDGVUsuarios(this.qraguasDataSet.DataGridViewUsuarios, Login.TipoUsuario);
 
                         }
                         else

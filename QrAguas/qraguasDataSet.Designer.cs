@@ -9484,18 +9484,27 @@ FROM            fornecedores F INNER JOIN
             this._commandCollection = new global::MySql.Data.MySqlClient.MySqlCommand[1];
             this._commandCollection[0] = new global::MySql.Data.MySqlClient.MySqlCommand();
             this._commandCollection[0].Connection = this.Connection;
-            this._commandCollection[0].CommandText = "SELECT        U.ID_USUARIOS, U.NOME_USUARIO, T.DESCRICAO, U.CADASTRADO_POR, U.DAT" +
-                "A_CADASTRO, U.ATIVO\r\nFROM            usuarios U INNER JOIN\r\n                    " +
-                "     tipo_usuario T ON U.ID_TIPO_USUARIO = T.ID_TIPO_USUARIO";
+            this._commandCollection[0].CommandText = @"SELECT        U.ID_USUARIOS, U.NOME_USUARIO, T.DESCRICAO, U.CADASTRADO_POR, U.DATA_CADASTRO, U.ATIVO
+FROM            usuarios U INNER JOIN
+                         tipo_usuario T ON U.ID_TIPO_USUARIO = T.ID_TIPO_USUARIO AND T.ID_TIPO_USUARIO > @ID_TIPO_USUARIO";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
+            global::MySql.Data.MySqlClient.MySqlParameter param = new global::MySql.Data.MySqlClient.MySqlParameter();
+            param.ParameterName = "@ID_TIPO_USUARIO";
+            param.DbType = global::System.Data.DbType.Int32;
+            param.MySqlDbType = global::MySql.Data.MySqlClient.MySqlDbType.Int32;
+            param.IsNullable = true;
+            param.SourceColumn = "ID_TIPO_USUARIO";
+            param.SourceVersion = global::System.Data.DataRowVersion.Current;
+            this._commandCollection[0].Parameters.Add(param);
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, true)]
-        public virtual int FillDGVUsuarios(qraguasDataSet.DataGridViewUsuariosDataTable dataTable) {
+        public virtual int FillDGVUsuarios(qraguasDataSet.DataGridViewUsuariosDataTable dataTable, int ID_TIPO_USUARIO) {
             this.Adapter.SelectCommand = this.CommandCollection[0];
+            this.Adapter.SelectCommand.Parameters[0].Value = ((int)(ID_TIPO_USUARIO));
             if ((this.ClearBeforeFill == true)) {
                 dataTable.Clear();
             }
@@ -9507,8 +9516,9 @@ FROM            fornecedores F INNER JOIN
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
-        public virtual qraguasDataSet.DataGridViewUsuariosDataTable GetDataDGVUsuarios() {
+        public virtual qraguasDataSet.DataGridViewUsuariosDataTable GetDataDGVUsuarios(int ID_TIPO_USUARIO) {
             this.Adapter.SelectCommand = this.CommandCollection[0];
+            this.Adapter.SelectCommand.Parameters[0].Value = ((int)(ID_TIPO_USUARIO));
             qraguasDataSet.DataGridViewUsuariosDataTable dataTable = new qraguasDataSet.DataGridViewUsuariosDataTable();
             this.Adapter.Fill(dataTable);
             return dataTable;

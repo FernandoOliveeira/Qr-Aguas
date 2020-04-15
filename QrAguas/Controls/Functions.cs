@@ -430,12 +430,13 @@ namespace QrAguas.Controls
         {
             DataTable dataTable = new DataTable();
 
-            string queryProcurarUsuario = "SELECT U.ID_USUARIOS, U.NOME_USUARIO, T.DESCRICAO, U.DATA_CADASTRO, U.CADASTRADO_POR, U.ATIVO FROM USUARIOS U, TIPO_USUARIO T WHERE U.ID_TIPO_USUARIO = T.ID_TIPO_USUARIO AND U.NOME_USUARIO = @NOME_USUARIO";
+            string queryProcurarUsuario = "SELECT U.ID_USUARIOS, U.NOME_USUARIO, T.DESCRICAO, U.DATA_CADASTRO, U.CADASTRADO_POR, U.ATIVO FROM USUARIOS U, TIPO_USUARIO T WHERE U.ID_TIPO_USUARIO = T.ID_TIPO_USUARIO AND U.NOME_USUARIO = @NOME_USUARIO AND U.ID_TIPO_USUARIO > @ID_TIPO_USUARIO";
 
             
             MySqlCommand command = new MySqlCommand(queryProcurarUsuario, AbrirBanco());
 
             command.Parameters.AddWithValue("@NOME_USUARIO", nomeUsuario);
+            command.Parameters.AddWithValue("@ID_TIPO_USUARIO", Login.TipoUsuario);
 
             MySqlDataReader reader = command.ExecuteReader();
 
