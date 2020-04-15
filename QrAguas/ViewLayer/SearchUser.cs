@@ -42,46 +42,61 @@ namespace QrAguas.ViewLayer
 
         private void DGVUsuarios_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-            if (DGVUsuarios.Columns[e.ColumnIndex].Name.Equals("ATIVO"))
+            switch (DGVUsuarios.Columns[e.ColumnIndex].Name)
             {
-                
-                int idUsuario = (int)DGVUsuarios.SelectedRows[0].Cells[0].Value;
-                string nomeUsuario = DGVUsuarios.SelectedRows[0].Cells[1].Value.ToString();
+                // Checkbox do DataGridView
+                #region Ativo
+                case "ATIVO":
+                    int idUsuarioAtivo = (int)DGVUsuarios.SelectedRows[0].Cells[0].Value;
+                    string nomeUsuarioAtivo = DGVUsuarios.SelectedRows[0].Cells[1].Value.ToString();
 
-                // Recebe o valor booleano da coluna ATIVO, porém o valor é invertido antes de ser armazenado na variável
-                bool ativo = DGVUsuarios.SelectedRows[0].Cells[5].Value.Equals(true) ? false : true;
+                    // Recebe o valor booleano da coluna ATIVO, porém o valor é invertido antes de ser armazenado na variável
+                    bool ativo = DGVUsuarios.SelectedRows[0].Cells[5].Value.Equals(true) ? false : true;
 
-                string ativarDesativar = ativo == false ? "DESATIVAR" : "ATIVAR";
+                    string ativarDesativar = ativo == false ? "DESATIVAR" : "ATIVAR";
 
-                
-                DialogResult resposta = MessageBox.Show("Deseja " + ativarDesativar + " o usuário '" + nomeUsuario + "' ? \n(Usuários desativados não tem acesso ao sistema e não são notificados que foram desativados)", ativarDesativar + " Usuário", MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button2);
 
-                if (resposta == DialogResult.Yes)
-                {
-                    string ativarDesativarResposta = ativarDesativar.Equals("DESATIVAR") ? "Desativado" : "Ativado";
+                    DialogResult respostaAtivo = MessageBox.Show("Deseja " + ativarDesativar + " o usuário '" + nomeUsuarioAtivo + "' ? \n(Usuários desativados não tem acesso ao sistema e não são notificados que foram desativados)", ativarDesativar + " Usuário", MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button2);
 
-                    try
+                    if (respostaAtivo == DialogResult.Yes)
                     {
-                        if (functions.AtivarDesativarUsuario(idUsuario, ativo))
+                        string ativarDesativarResposta = ativarDesativar.Equals("DESATIVAR") ? "Desativado" : "Ativado";
+
+                        try
                         {
-                            MessageBox.Show("Usuário " + ativarDesativarResposta + " com sucesso.", ativarDesativarResposta + " com sucesso", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                            if (functions.AtivarDesativarUsuario(idUsuarioAtivo, ativo))
+                            {
+                                MessageBox.Show("Usuário " + ativarDesativarResposta + " com sucesso.", ativarDesativarResposta + " com sucesso", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
-                            // Atualiza o DGVUsuarios
-                            this.dataGridViewUsuariosTableAdapter.FillDGVUsuarios(this.qraguasDataSet.DataGridViewUsuarios, Login.TipoUsuario);
+                                // Atualiza o DGVUsuarios
+                                this.dataGridViewUsuariosTableAdapter.FillDGVUsuarios(this.qraguasDataSet.DataGridViewUsuarios, Login.TipoUsuario);
 
+                            }
+                            else
+                            {
+                                MessageBox.Show("Erro ao realizar esta operação", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                            }
                         }
-                        else
+                        catch (Exception erro)
                         {
-                            MessageBox.Show("Erro ao realizar esta operação", "Erro",     MessageBoxButtons.OK, MessageBoxIcon.Error);
+
+                            MessageBox.Show("Erro ao realizar esta operação.\nErro: " + erro, "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
                         }
                     }
-                    catch (Exception erro)
-                    {
+                    break;
 
-                        MessageBox.Show("Erro ao realizar esta operação.\nErro: " + erro, "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                    }
-                }
+                #endregion
 
+                // Botão Atualizar do DataGridView
+                #region Atualizar
+                case "Atualizar":
+
+                    int idUsuarioAtualizar = (int)DGVUsuarios.SelectedRows[0].Cells[0].Value;
+                    string nomeUsuarioAtualizar = DGVUsuarios.SelectedRows[0].Cells[1].Value.ToString();
+
+                    DialogResult respostaAtualizar = MessageBox.Show("Deseja atualizar o nome de usuário de " + nomeUsuarioAtualizar + " ? ", "Atualizar Usuário", MessageBoxButtons.YesNo, MessageBoxIcon.Information, MessageBoxDefaultButton.Button2);
+                    break;
+                #endregion
             }
         }
     }
