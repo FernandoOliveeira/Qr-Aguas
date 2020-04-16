@@ -30,7 +30,6 @@
         {
             this.components = new System.ComponentModel.Container();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(SearchUser));
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
@@ -51,7 +50,6 @@
             this.cADASTRADOPORDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dATACADASTRODataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ATIVO = new System.Windows.Forms.DataGridViewCheckBoxColumn();
-            this.Atualizar = new System.Windows.Forms.DataGridViewButtonColumn();
             this.tableLayoutPanel1.SuspendLayout();
             this.panel1.SuspendLayout();
             this.panelBtnCadastrar.SuspendLayout();
@@ -186,8 +184,7 @@
             this.dESCRICAODataGridViewTextBoxColumn,
             this.cADASTRADOPORDataGridViewTextBoxColumn,
             this.dATACADASTRODataGridViewTextBoxColumn,
-            this.ATIVO,
-            this.Atualizar});
+            this.ATIVO});
             this.DGVUsuarios.DataSource = this.dataGridViewUsuariosBindingSource;
             this.DGVUsuarios.Dock = System.Windows.Forms.DockStyle.Fill;
             this.DGVUsuarios.Location = new System.Drawing.Point(0, 0);
@@ -195,8 +192,8 @@
             this.DGVUsuarios.Name = "DGVUsuarios";
             this.DGVUsuarios.ReadOnly = true;
             this.DGVUsuarios.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.AutoSizeToAllHeaders;
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            this.DGVUsuarios.RowsDefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.DGVUsuarios.RowsDefaultCellStyle = dataGridViewCellStyle2;
             this.DGVUsuarios.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.DGVUsuarios.Size = new System.Drawing.Size(828, 257);
             this.DGVUsuarios.TabIndex = 1;
@@ -259,22 +256,6 @@
             this.ATIVO.Name = "ATIVO";
             this.ATIVO.ReadOnly = true;
             // 
-            // Atualizar
-            // 
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.White;
-            this.Atualizar.DefaultCellStyle = dataGridViewCellStyle2;
-            this.Atualizar.FillWeight = 57.00406F;
-            this.Atualizar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Atualizar.HeaderText = "Atualizar";
-            this.Atualizar.Name = "Atualizar";
-            this.Atualizar.ReadOnly = true;
-            this.Atualizar.Text = "Atualizar";
-            this.Atualizar.UseColumnTextForButtonValue = true;
-            // 
             // SearchUser
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 17F);
@@ -321,6 +302,5 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn cADASTRADOPORDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn dATACADASTRODataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewCheckBoxColumn ATIVO;
-        private System.Windows.Forms.DataGridViewButtonColumn Atualizar;
     }
 }
