@@ -649,7 +649,7 @@
                       <rd:DefaultName>COD_PRODUTO</rd:DefaultName>
                       <Style>
                         <Border>
-                          <Style>None</Style>
+                          <Style>Solid</Style>
                         </Border>
                         <BackgroundColor>White</BackgroundColor>
                         <PaddingLeft>2pt</PaddingLeft>
@@ -686,7 +686,7 @@
                       <rd:DefaultName>NOME_PRODUTO</rd:DefaultName>
                       <Style>
                         <Border>
-                          <Style>None</Style>
+                          <Style>Solid</Style>
                         </Border>
                         <BackgroundColor>White</BackgroundColor>
                         <PaddingLeft>2pt</PaddingLeft>
@@ -723,7 +723,7 @@
                       <rd:DefaultName>DESCRICAO</rd:DefaultName>
                       <Style>
                         <Border>
-                          <Style>None</Style>
+                          <Style>Solid</Style>
                         </Border>
                         <BackgroundColor>White</BackgroundColor>
                         <PaddingLeft>2pt</PaddingLeft>
@@ -760,7 +760,7 @@
                       <rd:DefaultName>NOME_CATEGORIA</rd:DefaultName>
                       <Style>
                         <Border>
-                          <Style>None</Style>
+                          <Style>Solid</Style>
                         </Border>
                         <BackgroundColor>White</BackgroundColor>
                         <PaddingLeft>2pt</PaddingLeft>
@@ -797,7 +797,7 @@
                       <rd:DefaultName>RAZAO_SOCIAL</rd:DefaultName>
                       <Style>
                         <Border>
-                          <Style>None</Style>
+                          <Style>Solid</Style>
                         </Border>
                         <BackgroundColor>White</BackgroundColor>
                         <PaddingLeft>2pt</PaddingLeft>
@@ -834,7 +834,7 @@
                       <rd:DefaultName>PRECO_COMPRA</rd:DefaultName>
                       <Style>
                         <Border>
-                          <Style>None</Style>
+                          <Style>Solid</Style>
                         </Border>
                         <BackgroundColor>White</BackgroundColor>
                         <PaddingLeft>2pt</PaddingLeft>
@@ -871,7 +871,7 @@
                       <rd:DefaultName>PRECO_VENDA</rd:DefaultName>
                       <Style>
                         <Border>
-                          <Style>None</Style>
+                          <Style>Solid</Style>
                         </Border>
                         <BackgroundColor>White</BackgroundColor>
                         <PaddingLeft>2pt</PaddingLeft>
@@ -909,7 +909,7 @@
                       <rd:DefaultName>DATA_FABRICACAO</rd:DefaultName>
                       <Style>
                         <Border>
-                          <Style>None</Style>
+                          <Style>Solid</Style>
                         </Border>
                         <BackgroundColor>White</BackgroundColor>
                         <PaddingLeft>2pt</PaddingLeft>
@@ -947,7 +947,7 @@
                       <rd:DefaultName>DATA_VALIDADE</rd:DefaultName>
                       <Style>
                         <Border>
-                          <Style>None</Style>
+                          <Style>Solid</Style>
                         </Border>
                         <BackgroundColor>White</BackgroundColor>
                         <PaddingLeft>2pt</PaddingLeft>
@@ -985,7 +985,7 @@
                       <rd:DefaultName>DATA_CADASTRO</rd:DefaultName>
                       <Style>
                         <Border>
-                          <Style>None</Style>
+                          <Style>Solid</Style>
                         </Border>
                         <BackgroundColor>White</BackgroundColor>
                         <PaddingLeft>2pt</PaddingLeft>
@@ -1022,7 +1022,7 @@
                       <rd:DefaultName>NOME_USUARIO</rd:DefaultName>
                       <Style>
                         <Border>
-                          <Style>None</Style>
+                          <Style>Solid</Style>
                         </Border>
                         <BackgroundColor>White</BackgroundColor>
                         <PaddingLeft>2pt</PaddingLeft>
