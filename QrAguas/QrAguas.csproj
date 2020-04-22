@@ -174,6 +174,12 @@
     <Compile Include="ViewLayer\SearchUser.Designer.cs">
       <DependentUpon>SearchUser.cs</DependentUpon>
     </Compile>
+    <Compile Include="ViewLayer\SellProduct.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ViewLayer\SellProduct.Designer.cs">
+      <DependentUpon>SellProduct.cs</DependentUpon>
+    </Compile>
     <Compile Include="ViewLayer\UpdateCategory.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -224,6 +230,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="ViewLayer\SearchUser.resx">
       <DependentUpon>SearchUser.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewLayer\SellProduct.resx">
+      <DependentUpon>SellProduct.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ViewLayer\UpdateCategory.resx">
       <DependentUpon>UpdateCategory.cs</DependentUpon>
