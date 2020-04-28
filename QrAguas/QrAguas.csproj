@@ -97,6 +97,9 @@
     <Compile Include="Models\NewProduct.cs" />
     <Compile Include="Models\NewProvider.cs" />
     <Compile Include="Models\NewUser.cs" />
+    <Compile Include="Models\SellProductEntities\Cart.cs" />
+    <Compile Include="Models\SellProductEntities\OrderProduct.cs" />
+    <Compile Include="Models\SellProductEntities\Product.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="qraguasDataSet.cs">
