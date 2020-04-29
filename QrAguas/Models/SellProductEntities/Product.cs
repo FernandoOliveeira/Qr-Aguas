@@ -2,6 +2,7 @@
 {
     class Product
     {
+        public int CodigoProduto { get; set; }
         public string NomeProduto { get; set; }
         public double Preco { get; set; }
 
@@ -10,8 +11,9 @@
         {
         }
 
-        public Product(string nomeProduto, double preco)
+        public Product(int codigoProduto, string nomeProduto, double preco)
         {
+            CodigoProduto = codigoProduto;
             NomeProduto = nomeProduto;
             Preco = preco;
         }
@@ -20,5 +22,6 @@
         {
             return NomeProduto;
         }
+
     }
 }

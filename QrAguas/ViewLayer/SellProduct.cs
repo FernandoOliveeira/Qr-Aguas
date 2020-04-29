@@ -23,23 +23,28 @@ namespace QrAguas.ViewLayer
         {
             Cart cart = new Cart(DateTime.Now);
             Product produto = new Product(
+                100,
                 "Gás 30g",
-                23.55
+                23.50
 
                 );
 
             OrderProduct order = new OrderProduct(
-                5,
+                200,
                 produto.Preco,
                 produto
                 );
 
             cart.AddProduto(order);
+            cart.AddProduto(order);
 
 
             DGVCarrinho.DataSource = cart.Produtos;
 
-            DGVCarrinho.Columns[2].HeaderText = "Preço";
+            //DGVCarrinho.Columns[2].HeaderText = "Valor Unitário";
+            DGVCarrinho.Columns[2].DefaultCellStyle.Format = "0.00##";
+
+            lblTotal.Text = "Total: " + cart.Total().ToString("F2") + "R$";
 
         }
     }
