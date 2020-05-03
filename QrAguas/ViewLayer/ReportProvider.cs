@@ -21,9 +21,9 @@ namespace QrAguas.ViewLayer
 
         private void ReportProvider_Load(object sender, EventArgs e)
         {
-            // TODO: This line of code loads data into the 'qraguasDataSet.Relatorio_Fornecedores' table. You can move, or remove it, as needed.
-            this.relatorio_FornecedoresTableAdapter.FillRepProvider(this.qraguasDataSet.Relatorio_Fornecedores);
-
+            // Insere dentro do ReportViewer
+            this.reportProviderTableAdapter.FillReportProvider(this.qrAguasRemoteDBDataSet.ReportProvider);
+            
             // Faz com que o ReportViewer encontre o relatório
             RVFornecedores.LocalReport.ReportEmbeddedResource = "QrAguas.Reports.RepProvider.rdlc";
 

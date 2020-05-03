@@ -41,22 +41,22 @@
             this.btnProcurar = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
             this.DGVUsuarios = new System.Windows.Forms.DataGridView();
-            this.dataGridViewUsuariosBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.qraguasDataSet = new QrAguas.qraguasDataSet();
-            this.dataGridViewUsuariosTableAdapter = new QrAguas.qraguasDataSetTableAdapters.DataGridViewUsuariosTableAdapter();
-            this.iDUSUARIOSDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.nOMEUSUARIODataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dESCRICAODataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.cADASTRADOPORDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dATACADASTRODataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ATIVO = new System.Windows.Forms.DataGridViewCheckBoxColumn();
+            this.qrAguasRemoteDBDataSet = new QrAguas.QrAguasRemoteDBDataSet();
+            this.searchUserDGVUsuariosBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.searchUserDGVUsuariosTableAdapter = new QrAguas.QrAguasRemoteDBDataSetTableAdapters.SearchUserDGVUsuariosTableAdapter();
+            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.aTIVODataGridViewCheckBoxColumn = new System.Windows.Forms.DataGridViewCheckBoxColumn();
             this.tableLayoutPanel1.SuspendLayout();
             this.panel1.SuspendLayout();
             this.panelBtnCadastrar.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.DGVUsuarios)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewUsuariosBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.qraguasDataSet)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.qrAguasRemoteDBDataSet)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.searchUserDGVUsuariosBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // tableLayoutPanel1
@@ -179,13 +179,13 @@
             this.DGVUsuarios.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.DGVUsuarios.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
             this.DGVUsuarios.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.iDUSUARIOSDataGridViewTextBoxColumn,
-            this.nOMEUSUARIODataGridViewTextBoxColumn,
-            this.dESCRICAODataGridViewTextBoxColumn,
-            this.cADASTRADOPORDataGridViewTextBoxColumn,
-            this.dATACADASTRODataGridViewTextBoxColumn,
-            this.ATIVO});
-            this.DGVUsuarios.DataSource = this.dataGridViewUsuariosBindingSource;
+            this.dataGridViewTextBoxColumn1,
+            this.dataGridViewTextBoxColumn2,
+            this.dataGridViewTextBoxColumn3,
+            this.dataGridViewTextBoxColumn4,
+            this.dataGridViewTextBoxColumn5,
+            this.aTIVODataGridViewCheckBoxColumn});
+            this.DGVUsuarios.DataSource = this.searchUserDGVUsuariosBindingSource;
             this.DGVUsuarios.Dock = System.Windows.Forms.DockStyle.Fill;
             this.DGVUsuarios.Location = new System.Drawing.Point(0, 0);
             this.DGVUsuarios.MultiSelect = false;
@@ -199,62 +199,62 @@
             this.DGVUsuarios.TabIndex = 1;
             this.DGVUsuarios.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DGVUsuarios_CellContentClick);
             // 
-            // dataGridViewUsuariosBindingSource
+            // qrAguasRemoteDBDataSet
             // 
-            this.dataGridViewUsuariosBindingSource.DataMember = "DataGridViewUsuarios";
-            this.dataGridViewUsuariosBindingSource.DataSource = this.qraguasDataSet;
+            this.qrAguasRemoteDBDataSet.DataSetName = "QrAguasRemoteDBDataSet";
+            this.qrAguasRemoteDBDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
-            // qraguasDataSet
+            // searchUserDGVUsuariosBindingSource
             // 
-            this.qraguasDataSet.DataSetName = "qraguasDataSet";
-            this.qraguasDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            this.searchUserDGVUsuariosBindingSource.DataMember = "SearchUserDGVUsuarios";
+            this.searchUserDGVUsuariosBindingSource.DataSource = this.qrAguasRemoteDBDataSet;
             // 
-            // dataGridViewUsuariosTableAdapter
+            // searchUserDGVUsuariosTableAdapter
             // 
-            this.dataGridViewUsuariosTableAdapter.ClearBeforeFill = true;
+            this.searchUserDGVUsuariosTableAdapter.ClearBeforeFill = true;
             // 
-            // iDUSUARIOSDataGridViewTextBoxColumn
+            // dataGridViewTextBoxColumn1
             // 
-            this.iDUSUARIOSDataGridViewTextBoxColumn.DataPropertyName = "ID_USUARIOS";
-            this.iDUSUARIOSDataGridViewTextBoxColumn.HeaderText = "ID_USUARIOS";
-            this.iDUSUARIOSDataGridViewTextBoxColumn.Name = "iDUSUARIOSDataGridViewTextBoxColumn";
-            this.iDUSUARIOSDataGridViewTextBoxColumn.ReadOnly = true;
-            this.iDUSUARIOSDataGridViewTextBoxColumn.Visible = false;
+            this.dataGridViewTextBoxColumn1.DataPropertyName = "ID_USUARIOS";
+            this.dataGridViewTextBoxColumn1.HeaderText = "ID_USUARIOS";
+            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
+            this.dataGridViewTextBoxColumn1.ReadOnly = true;
+            this.dataGridViewTextBoxColumn1.Visible = false;
             // 
-            // nOMEUSUARIODataGridViewTextBoxColumn
+            // dataGridViewTextBoxColumn2
             // 
-            this.nOMEUSUARIODataGridViewTextBoxColumn.DataPropertyName = "NOME_USUARIO";
-            this.nOMEUSUARIODataGridViewTextBoxColumn.HeaderText = "Nome de Usuário";
-            this.nOMEUSUARIODataGridViewTextBoxColumn.Name = "nOMEUSUARIODataGridViewTextBoxColumn";
-            this.nOMEUSUARIODataGridViewTextBoxColumn.ReadOnly = true;
+            this.dataGridViewTextBoxColumn2.DataPropertyName = "NOME_USUARIO";
+            this.dataGridViewTextBoxColumn2.HeaderText = "Nome de Usuário";
+            this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
+            this.dataGridViewTextBoxColumn2.ReadOnly = true;
             // 
-            // dESCRICAODataGridViewTextBoxColumn
+            // dataGridViewTextBoxColumn3
             // 
-            this.dESCRICAODataGridViewTextBoxColumn.DataPropertyName = "DESCRICAO";
-            this.dESCRICAODataGridViewTextBoxColumn.HeaderText = "Função";
-            this.dESCRICAODataGridViewTextBoxColumn.Name = "dESCRICAODataGridViewTextBoxColumn";
-            this.dESCRICAODataGridViewTextBoxColumn.ReadOnly = true;
+            this.dataGridViewTextBoxColumn3.DataPropertyName = "DESCRICAO";
+            this.dataGridViewTextBoxColumn3.HeaderText = "Descrição";
+            this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
+            this.dataGridViewTextBoxColumn3.ReadOnly = true;
             // 
-            // cADASTRADOPORDataGridViewTextBoxColumn
+            // dataGridViewTextBoxColumn4
             // 
-            this.cADASTRADOPORDataGridViewTextBoxColumn.DataPropertyName = "CADASTRADO_POR";
-            this.cADASTRADOPORDataGridViewTextBoxColumn.HeaderText = "Cadastrado Por";
-            this.cADASTRADOPORDataGridViewTextBoxColumn.Name = "cADASTRADOPORDataGridViewTextBoxColumn";
-            this.cADASTRADOPORDataGridViewTextBoxColumn.ReadOnly = true;
+            this.dataGridViewTextBoxColumn4.DataPropertyName = "CADASTRADO_POR";
+            this.dataGridViewTextBoxColumn4.HeaderText = "Cadastrado Por";
+            this.dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
+            this.dataGridViewTextBoxColumn4.ReadOnly = true;
             // 
-            // dATACADASTRODataGridViewTextBoxColumn
+            // dataGridViewTextBoxColumn5
             // 
-            this.dATACADASTRODataGridViewTextBoxColumn.DataPropertyName = "DATA_CADASTRO";
-            this.dATACADASTRODataGridViewTextBoxColumn.HeaderText = "Data de Cadastro";
-            this.dATACADASTRODataGridViewTextBoxColumn.Name = "dATACADASTRODataGridViewTextBoxColumn";
-            this.dATACADASTRODataGridViewTextBoxColumn.ReadOnly = true;
+            this.dataGridViewTextBoxColumn5.DataPropertyName = "DATA_CADASTRO";
+            this.dataGridViewTextBoxColumn5.HeaderText = "Data de Cadastro";
+            this.dataGridViewTextBoxColumn5.Name = "dataGridViewTextBoxColumn5";
+            this.dataGridViewTextBoxColumn5.ReadOnly = true;
             // 
-            // ATIVO
+            // aTIVODataGridViewCheckBoxColumn
             // 
-            this.ATIVO.DataPropertyName = "ATIVO";
-            this.ATIVO.HeaderText = "Ativo";
-            this.ATIVO.Name = "ATIVO";
-            this.ATIVO.ReadOnly = true;
+            this.aTIVODataGridViewCheckBoxColumn.DataPropertyName = "ATIVO";
+            this.aTIVODataGridViewCheckBoxColumn.HeaderText = "Ativo";
+            this.aTIVODataGridViewCheckBoxColumn.Name = "aTIVODataGridViewCheckBoxColumn";
+            this.aTIVODataGridViewCheckBoxColumn.ReadOnly = true;
             // 
             // SearchUser
             // 
@@ -276,8 +276,8 @@
             this.panelBtnCadastrar.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.DGVUsuarios)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewUsuariosBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.qraguasDataSet)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.qrAguasRemoteDBDataSet)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.searchUserDGVUsuariosBindingSource)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -293,14 +293,20 @@
         private System.Windows.Forms.Button btnProcurar;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.DataGridView DGVUsuarios;
-        private qraguasDataSet qraguasDataSet;
-        private System.Windows.Forms.BindingSource dataGridViewUsuariosBindingSource;
-        private qraguasDataSetTableAdapters.DataGridViewUsuariosTableAdapter dataGridViewUsuariosTableAdapter;
         private System.Windows.Forms.DataGridViewTextBoxColumn iDUSUARIOSDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn nOMEUSUARIODataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn dESCRICAODataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn cADASTRADOPORDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn dATACADASTRODataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewCheckBoxColumn ATIVO;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn4;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn5;
+        private System.Windows.Forms.DataGridViewCheckBoxColumn aTIVODataGridViewCheckBoxColumn;
+        private System.Windows.Forms.BindingSource searchUserDGVUsuariosBindingSource;
+        private QrAguasRemoteDBDataSet qrAguasRemoteDBDataSet;
+        private QrAguasRemoteDBDataSetTableAdapters.SearchUserDGVUsuariosTableAdapter searchUserDGVUsuariosTableAdapter;
     }
 }

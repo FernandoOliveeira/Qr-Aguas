@@ -44,12 +44,11 @@ namespace QrAguas.View_Layer
 
         private void RegisterUser_Load(object sender, EventArgs e)
         {
-            // TODO: This line of code loads data into the 'qraguasDataSet.tipo_usuario' table. You can move, or remove it, as needed.
-            this.tipo_usuarioTableAdapter.Fill(this.qraguasDataSet.tipo_usuario);
+            // Preenche o ComboBox CBFuncao 
+            this.tIPO_USUARIOTableAdapter.Fill(this.qrAguasRemoteDBDataSet.TIPO_USUARIO);
 
-            lblConfirmarSenhaAviso.Text = "As senhas devem ser idênticas";
-            
-            // btnCadastrar só é habilitado caso haja dado inserido no campo txtUsuario
+
+            // btnCadastrar só é habilitado caso o campo txtUsuario seja preenchido
             btnCadastrar.Enabled = false;
         }
 

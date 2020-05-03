@@ -36,8 +36,8 @@
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.panel2 = new System.Windows.Forms.Panel();
             this.DGVCategorias = new System.Windows.Forms.DataGridView();
-            this.categoriasBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.qraguasDataSet = new QrAguas.qraguasDataSet();
+            this.cATEGORIASBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.qrAguasRemoteDBDataSet = new QrAguas.QrAguasRemoteDBDataSet();
             this.panel1 = new System.Windows.Forms.Panel();
             this.lblNovaCategoria = new System.Windows.Forms.Label();
             this.txtNovaCategoria = new System.Windows.Forms.TextBox();
@@ -45,16 +45,16 @@
             this.btnInserir = new System.Windows.Forms.Button();
             this.panel3 = new System.Windows.Forms.Panel();
             this.lblTitulo = new System.Windows.Forms.Label();
-            this.categoriasTableAdapter = new QrAguas.qraguasDataSetTableAdapters.categoriasTableAdapter();
-            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ATIVO = new System.Windows.Forms.DataGridViewCheckBoxColumn();
+            this.cATEGORIASTableAdapter = new QrAguas.QrAguasRemoteDBDataSetTableAdapters.CATEGORIASTableAdapter();
+            this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.aTIVODataGridViewCheckBoxColumn = new System.Windows.Forms.DataGridViewCheckBoxColumn();
             this.Atualizar = new System.Windows.Forms.DataGridViewButtonColumn();
             this.tableLayoutPanel1.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.DGVCategorias)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.categoriasBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.qraguasDataSet)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cATEGORIASBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.qrAguasRemoteDBDataSet)).BeginInit();
             this.panel1.SuspendLayout();
             this.panelBtnCadastrar.SuspendLayout();
             this.panel3.SuspendLayout();
@@ -110,11 +110,11 @@
             this.DGVCategorias.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.DGVCategorias.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
             this.DGVCategorias.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.dataGridViewTextBoxColumn1,
-            this.dataGridViewTextBoxColumn2,
-            this.ATIVO,
+            this.dataGridViewTextBoxColumn3,
+            this.dataGridViewTextBoxColumn4,
+            this.aTIVODataGridViewCheckBoxColumn,
             this.Atualizar});
-            this.DGVCategorias.DataSource = this.categoriasBindingSource;
+            this.DGVCategorias.DataSource = this.cATEGORIASBindingSource;
             this.DGVCategorias.Dock = System.Windows.Forms.DockStyle.Fill;
             this.DGVCategorias.Location = new System.Drawing.Point(0, 0);
             this.DGVCategorias.MultiSelect = false;
@@ -128,15 +128,15 @@
             this.DGVCategorias.TabIndex = 0;
             this.DGVCategorias.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DataGridView1_CellContentClick);
             // 
-            // categoriasBindingSource
+            // cATEGORIASBindingSource
             // 
-            this.categoriasBindingSource.DataMember = "categorias";
-            this.categoriasBindingSource.DataSource = this.qraguasDataSet;
+            this.cATEGORIASBindingSource.DataMember = "CATEGORIAS";
+            this.cATEGORIASBindingSource.DataSource = this.qrAguasRemoteDBDataSet;
             // 
-            // qraguasDataSet
+            // qrAguasRemoteDBDataSet
             // 
-            this.qraguasDataSet.DataSetName = "qraguasDataSet";
-            this.qraguasDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            this.qrAguasRemoteDBDataSet.DataSetName = "QrAguasRemoteDBDataSet";
+            this.qrAguasRemoteDBDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // panel1
             // 
@@ -217,31 +217,31 @@
             this.lblTitulo.Text = "Cadastro de Categorias";
             this.lblTitulo.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // categoriasTableAdapter
+            // cATEGORIASTableAdapter
             // 
-            this.categoriasTableAdapter.ClearBeforeFill = true;
+            this.cATEGORIASTableAdapter.ClearBeforeFill = true;
             // 
-            // dataGridViewTextBoxColumn1
+            // dataGridViewTextBoxColumn3
             // 
-            this.dataGridViewTextBoxColumn1.DataPropertyName = "ID_CATEGORIAS";
-            this.dataGridViewTextBoxColumn1.HeaderText = "ID_CATEGORIAS";
-            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
-            this.dataGridViewTextBoxColumn1.ReadOnly = true;
-            this.dataGridViewTextBoxColumn1.Visible = false;
+            this.dataGridViewTextBoxColumn3.DataPropertyName = "ID_CATEGORIAS";
+            this.dataGridViewTextBoxColumn3.HeaderText = "ID_CATEGORIAS";
+            this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
+            this.dataGridViewTextBoxColumn3.ReadOnly = true;
+            this.dataGridViewTextBoxColumn3.Visible = false;
             // 
-            // dataGridViewTextBoxColumn2
+            // dataGridViewTextBoxColumn4
             // 
-            this.dataGridViewTextBoxColumn2.DataPropertyName = "NOME_CATEGORIA";
-            this.dataGridViewTextBoxColumn2.HeaderText = "Categorias";
-            this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
-            this.dataGridViewTextBoxColumn2.ReadOnly = true;
+            this.dataGridViewTextBoxColumn4.DataPropertyName = "NOME_CATEGORIA";
+            this.dataGridViewTextBoxColumn4.HeaderText = "Categoria";
+            this.dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
+            this.dataGridViewTextBoxColumn4.ReadOnly = true;
             // 
-            // ATIVO
+            // aTIVODataGridViewCheckBoxColumn
             // 
-            this.ATIVO.DataPropertyName = "Ativo";
-            this.ATIVO.HeaderText = "Ativo";
-            this.ATIVO.Name = "ATIVO";
-            this.ATIVO.ReadOnly = true;
+            this.aTIVODataGridViewCheckBoxColumn.DataPropertyName = "ATIVO";
+            this.aTIVODataGridViewCheckBoxColumn.HeaderText = "Ativo";
+            this.aTIVODataGridViewCheckBoxColumn.Name = "aTIVODataGridViewCheckBoxColumn";
+            this.aTIVODataGridViewCheckBoxColumn.ReadOnly = true;
             // 
             // Atualizar
             // 
@@ -277,8 +277,8 @@
             this.tableLayoutPanel1.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.DGVCategorias)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.categoriasBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.qraguasDataSet)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cATEGORIASBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.qrAguasRemoteDBDataSet)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.panelBtnCadastrar.ResumeLayout(false);
@@ -301,12 +301,14 @@
         private System.Windows.Forms.Label lblTitulo;
         private System.Windows.Forms.DataGridViewTextBoxColumn iDCATEGORIASDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn nOMECATEGORIADataGridViewTextBoxColumn;
-        private qraguasDataSet qraguasDataSet;
-        private System.Windows.Forms.BindingSource categoriasBindingSource;
-        private qraguasDataSetTableAdapters.categoriasTableAdapter categoriasTableAdapter;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
-        private System.Windows.Forms.DataGridViewCheckBoxColumn ATIVO;
+        private QrAguasRemoteDBDataSet qrAguasRemoteDBDataSet;
+        private System.Windows.Forms.BindingSource cATEGORIASBindingSource;
+        private QrAguasRemoteDBDataSetTableAdapters.CATEGORIASTableAdapter cATEGORIASTableAdapter;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn4;
+        private System.Windows.Forms.DataGridViewCheckBoxColumn aTIVODataGridViewCheckBoxColumn;
         private System.Windows.Forms.DataGridViewButtonColumn Atualizar;
     }
 }

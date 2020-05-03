@@ -15,8 +15,9 @@ namespace QrAguas.ViewLayer
 
         private void ReportProduct_Load(object sender, EventArgs e)
         {
+            
             // Insere os dados dentro do ReportViewer
-            this.relatorio_ProdutosTableAdapter.FillRepProduct(this.qraguasDataSet.Relatorio_Produtos);
+            this.reportProductTableAdapter.FillReportProduct(this.qrAguasRemoteDBDataSet.ReportProduct);
 
             // Atribui o valor mínimo para o form
             this.MinimumSize = new Size(700, 300);

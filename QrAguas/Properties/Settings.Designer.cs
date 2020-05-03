@@ -85,5 +85,16 @@ namespace QrAguas.Properties {
                 return ((string)(this["QrAguasCnn"]));
             }
         }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
+        [global::System.Configuration.DefaultSettingValueAttribute("server=qraguasdb.cpfylhgmewyg.sa-east-1.rds.amazonaws.com;port=3306;user id=root;" +
+            "password=smartpro;persistsecurityinfo=True;database=qraguasremotedb")]
+        public string qraguasremotedbConnectionString {
+            get {
+                return ((string)(this["qraguasremotedbConnectionString"]));
+            }
+        }
     }
 }
