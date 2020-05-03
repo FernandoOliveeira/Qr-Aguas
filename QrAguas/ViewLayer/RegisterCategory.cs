@@ -28,7 +28,7 @@ namespace QrAguas.View_Layer
         {
             
             // Atualiza e insere dados no DataGridView
-            this.categoriasTableAdapter.Fill(this.qraguasDataSet.categorias);
+            this.cATEGORIASTableAdapter.Fill(this.qrAguasRemoteDBDataSet.CATEGORIAS);
             
             // Flag recebe valor false na inicialização do form
             UpdateCategoryResultado = false;
@@ -39,7 +39,6 @@ namespace QrAguas.View_Layer
 
         private void DataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-            
             // "Evento de click" no botão Atualizar no DataGridView
             if (DGVCategorias.Columns[e.ColumnIndex].Name.Equals("Atualizar"))
             {
@@ -64,7 +63,7 @@ namespace QrAguas.View_Layer
                         UpdateCategoryResultado = false;
 
                         // Atualiza e insere dados no DataGridView
-                        this.categoriasTableAdapter.Fill(this.qraguasDataSet.categorias);
+                        this.cATEGORIASTableAdapter.Fill(this.qrAguasRemoteDBDataSet.CATEGORIAS);
                         UpdateCategoryResultado = false;
                     }
                 }
@@ -72,7 +71,7 @@ namespace QrAguas.View_Layer
             }
 
             // "Evento de click" no checkbox Ativo no DataGridView
-            if (DGVCategorias.Columns[e.ColumnIndex].Name.Equals("ATIVO"))
+            if (DGVCategorias.Columns[e.ColumnIndex].HeaderText.Equals("Ativo"))
             {
                 // Quando clicado no checkbox do DataGridView os dados de toda a linha são atribuídos em variáveis
                 int idCategoria = (int)DGVCategorias.SelectedRows[0].Cells[0].Value;
@@ -99,7 +98,7 @@ namespace QrAguas.View_Layer
                             MessageBox.Show("Categoria " + ativarDesativarResposta + " com sucesso.", ativarDesativarResposta + " com sucesso", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
                             // Atualiza e insere dados no DataGridView
-                            this.categoriasTableAdapter.Fill(this.qraguasDataSet.categorias);
+                            this.cATEGORIASTableAdapter.Fill(this.qrAguasRemoteDBDataSet.CATEGORIAS);
 
                         }
                         else
@@ -135,7 +134,7 @@ namespace QrAguas.View_Layer
                         MessageBox.Show("Nova Categoria cadastrada com sucesso", "Cadastrado com sucesso", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
                         // Atualiza e insere dados no DataGridView
-                        this.categoriasTableAdapter.Fill(this.qraguasDataSet.categorias);
+                        this.cATEGORIASTableAdapter.Fill(this.qrAguasRemoteDBDataSet.CATEGORIAS);
                         UpdateCategoryResultado = false;
 
                     }

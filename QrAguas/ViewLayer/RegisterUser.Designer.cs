@@ -44,21 +44,21 @@
             this.txtConfirmarSenha = new System.Windows.Forms.TextBox();
             this.panel1 = new System.Windows.Forms.Panel();
             this.CBFuncao = new System.Windows.Forms.ComboBox();
-            this.tipousuarioBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.qraguasDataSet = new QrAguas.qraguasDataSet();
             this.lblFuncao = new System.Windows.Forms.Label();
             this.panelBtnCadastrar = new System.Windows.Forms.Panel();
             this.btnCadastrar = new System.Windows.Forms.Button();
             this.lblTitulo = new System.Windows.Forms.Label();
-            this.tipo_usuarioTableAdapter = new QrAguas.qraguasDataSetTableAdapters.tipo_usuarioTableAdapter();
+            this.qrAguasRemoteDBDataSet = new QrAguas.QrAguasRemoteDBDataSet();
+            this.tIPOUSUARIOBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.tIPO_USUARIOTableAdapter = new QrAguas.QrAguasRemoteDBDataSetTableAdapters.TIPO_USUARIOTableAdapter();
             this.tableLayoutPanel1.SuspendLayout();
             this.panelUsuario.SuspendLayout();
             this.panelSenha.SuspendLayout();
             this.panelConfirmarSenha.SuspendLayout();
             this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.tipousuarioBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.qraguasDataSet)).BeginInit();
             this.panelBtnCadastrar.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.qrAguasRemoteDBDataSet)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tIPOUSUARIOBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // lblUsuario
@@ -241,7 +241,7 @@
             // 
             this.CBFuncao.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.CBFuncao.DataSource = this.tipousuarioBindingSource;
+            this.CBFuncao.DataSource = this.tIPOUSUARIOBindingSource;
             this.CBFuncao.DisplayMember = "DESCRICAO";
             this.CBFuncao.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.CBFuncao.FormattingEnabled = true;
@@ -251,16 +251,6 @@
             this.CBFuncao.Size = new System.Drawing.Size(303, 21);
             this.CBFuncao.TabIndex = 43;
             this.CBFuncao.ValueMember = "ID_TIPO_USUARIO";
-            // 
-            // tipousuarioBindingSource
-            // 
-            this.tipousuarioBindingSource.DataMember = "tipo_usuario";
-            this.tipousuarioBindingSource.DataSource = this.qraguasDataSet;
-            // 
-            // qraguasDataSet
-            // 
-            this.qraguasDataSet.DataSetName = "qraguasDataSet";
-            this.qraguasDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // lblFuncao
             // 
@@ -314,9 +304,19 @@
             this.lblTitulo.Text = "Cadastro de Usuários";
             this.lblTitulo.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // tipo_usuarioTableAdapter
+            // qrAguasRemoteDBDataSet
             // 
-            this.tipo_usuarioTableAdapter.ClearBeforeFill = true;
+            this.qrAguasRemoteDBDataSet.DataSetName = "QrAguasRemoteDBDataSet";
+            this.qrAguasRemoteDBDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // tIPOUSUARIOBindingSource
+            // 
+            this.tIPOUSUARIOBindingSource.DataMember = "TIPO_USUARIO";
+            this.tIPOUSUARIOBindingSource.DataSource = this.qrAguasRemoteDBDataSet;
+            // 
+            // tIPO_USUARIOTableAdapter
+            // 
+            this.tIPO_USUARIOTableAdapter.ClearBeforeFill = true;
             // 
             // RegisterUser
             // 
@@ -342,9 +342,9 @@
             this.panelConfirmarSenha.PerformLayout();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.tipousuarioBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.qraguasDataSet)).EndInit();
             this.panelBtnCadastrar.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.qrAguasRemoteDBDataSet)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tIPOUSUARIOBindingSource)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -368,8 +368,8 @@
         private System.Windows.Forms.Button btnCadastrar;
         private System.Windows.Forms.Label lblConfirmarSenhaAviso;
         private System.Windows.Forms.Label lblTitulo;
-        private qraguasDataSet qraguasDataSet;
-        private System.Windows.Forms.BindingSource tipousuarioBindingSource;
-        private qraguasDataSetTableAdapters.tipo_usuarioTableAdapter tipo_usuarioTableAdapter;
+        private QrAguasRemoteDBDataSet qrAguasRemoteDBDataSet;
+        private System.Windows.Forms.BindingSource tIPOUSUARIOBindingSource;
+        private QrAguasRemoteDBDataSetTableAdapters.TIPO_USUARIOTableAdapter tIPO_USUARIOTableAdapter;
     }
 }

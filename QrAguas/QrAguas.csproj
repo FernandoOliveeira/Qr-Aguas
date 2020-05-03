@@ -102,13 +102,10 @@
     <Compile Include="Models\SellProductEntities\Product.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="qraguasDataSet.cs">
-      <DependentUpon>qraguasDataSet.xsd</DependentUpon>
-    </Compile>
-    <Compile Include="qraguasDataSet.Designer.cs">
+    <Compile Include="QrAguasRemoteDBDataSet.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>qraguasDataSet.xsd</DependentUpon>
+      <DependentUpon>QrAguasRemoteDBDataSet.xsd</DependentUpon>
     </Compile>
     <Compile Include="SqlServerTypes\Loader.cs" />
     <Compile Include="ViewLayer\ChangePassword.cs">
@@ -257,16 +254,16 @@
     </None>
   </ItemGroup>
   <ItemGroup>
-    <None Include="qraguasDataSet.xsc">
-      <DependentUpon>qraguasDataSet.xsd</DependentUpon>
+    <None Include="QrAguasRemoteDBDataSet.xsc">
+      <DependentUpon>QrAguasRemoteDBDataSet.xsd</DependentUpon>
     </None>
-    <None Include="qraguasDataSet.xsd">
+    <None Include="QrAguasRemoteDBDataSet.xsd">
       <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>qraguasDataSet.Designer.cs</LastGenOutput>
+      <LastGenOutput>QrAguasRemoteDBDataSet.Designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
     </None>
-    <None Include="qraguasDataSet.xss">
-      <DependentUpon>qraguasDataSet.xsd</DependentUpon>
+    <None Include="QrAguasRemoteDBDataSet.xss">
+      <DependentUpon>QrAguasRemoteDBDataSet.xsd</DependentUpon>
     </None>
     <None Include="Resources\qrAguasIconeGota.png" />
   </ItemGroup>

@@ -20,43 +20,43 @@ namespace QrAguas {
     [global::System.ComponentModel.DesignerCategoryAttribute("code")]
     [global::System.ComponentModel.ToolboxItem(true)]
     [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedDataSetSchema")]
-    [global::System.Xml.Serialization.XmlRootAttribute("qraguasDataSet")]
+    [global::System.Xml.Serialization.XmlRootAttribute("QrAguasRemoteDBDataSet")]
     [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.DataSet")]
-    public partial class qraguasDataSet : global::System.Data.DataSet {
+    public partial class QrAguasRemoteDBDataSet : global::System.Data.DataSet {
         
-        private categoriasDataTable tablecategorias;
+        private CATEGORIASDataTable tableCATEGORIAS;
         
-        private fornecedoresDataTable tablefornecedores;
+        private FORNECEDORESDataTable tableFORNECEDORES;
         
-        private produtosDataTable tableprodutos;
+        private PRODUTOSDataTable tablePRODUTOS;
         
-        private tipo_usuarioDataTable tabletipo_usuario;
+        private TIPO_USUARIODataTable tableTIPO_USUARIO;
         
-        private usuariosDataTable tableusuarios;
+        private USUARIOSDataTable tableUSUARIOS;
         
-        private Relatorio_ProdutosDataTable tableRelatorio_Produtos;
+        private SearchUserDGVUsuariosDataTable tableSearchUserDGVUsuarios;
         
-        private Relatorio_FornecedoresDataTable tableRelatorio_Fornecedores;
+        private ReportProviderDataTable tableReportProvider;
         
-        private DataGridViewUsuariosDataTable tableDataGridViewUsuarios;
+        private ReportProductDataTable tableReportProduct;
         
-        private global::System.Data.DataRelation relationcategorias_ibfk_1;
+        private global::System.Data.DataRelation relationCATEGORIAS_ibfk_1;
         
-        private global::System.Data.DataRelation relationfornecedores_ibfk_1;
+        private global::System.Data.DataRelation relationFORNECEDORES_ibfk_1;
         
-        private global::System.Data.DataRelation relationprodutos_ibfk_1;
+        private global::System.Data.DataRelation relationPRODUTOS_ibfk_1;
         
-        private global::System.Data.DataRelation relationprodutos_ibfk_2;
+        private global::System.Data.DataRelation relationPRODUTOS_ibfk_2;
         
-        private global::System.Data.DataRelation relationprodutos_ibfk_3;
+        private global::System.Data.DataRelation relationPRODUTOS_ibfk_3;
         
-        private global::System.Data.DataRelation relationusuarios_ibfk_1;
+        private global::System.Data.DataRelation relationUSUARIOS_ibfk_1;
         
         private global::System.Data.SchemaSerializationMode _schemaSerializationMode = global::System.Data.SchemaSerializationMode.IncludeSchema;
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-        public qraguasDataSet() {
+        public QrAguasRemoteDBDataSet() {
             this.BeginInit();
             this.InitClass();
             global::System.ComponentModel.CollectionChangeEventHandler schemaChangedHandler = new global::System.ComponentModel.CollectionChangeEventHandler(this.SchemaChanged);
@@ -67,7 +67,7 @@ namespace QrAguas {
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-        protected qraguasDataSet(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
+        protected QrAguasRemoteDBDataSet(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
                 base(info, context, false) {
             if ((this.IsBinarySerialized(info, context) == true)) {
                 this.InitVars(false);
@@ -80,29 +80,29 @@ namespace QrAguas {
             if ((this.DetermineSchemaSerializationMode(info, context) == global::System.Data.SchemaSerializationMode.IncludeSchema)) {
                 global::System.Data.DataSet ds = new global::System.Data.DataSet();
                 ds.ReadXmlSchema(new global::System.Xml.XmlTextReader(new global::System.IO.StringReader(strSchema)));
-                if ((ds.Tables["categorias"] != null)) {
-                    base.Tables.Add(new categoriasDataTable(ds.Tables["categorias"]));
+                if ((ds.Tables["CATEGORIAS"] != null)) {
+                    base.Tables.Add(new CATEGORIASDataTable(ds.Tables["CATEGORIAS"]));
                 }
-                if ((ds.Tables["fornecedores"] != null)) {
-                    base.Tables.Add(new fornecedoresDataTable(ds.Tables["fornecedores"]));
+                if ((ds.Tables["FORNECEDORES"] != null)) {
+                    base.Tables.Add(new FORNECEDORESDataTable(ds.Tables["FORNECEDORES"]));
                 }
-                if ((ds.Tables["produtos"] != null)) {
-                    base.Tables.Add(new produtosDataTable(ds.Tables["produtos"]));
+                if ((ds.Tables["PRODUTOS"] != null)) {
+                    base.Tables.Add(new PRODUTOSDataTable(ds.Tables["PRODUTOS"]));
                 }
-                if ((ds.Tables["tipo_usuario"] != null)) {
-                    base.Tables.Add(new tipo_usuarioDataTable(ds.Tables["tipo_usuario"]));
+                if ((ds.Tables["TIPO_USUARIO"] != null)) {
+                    base.Tables.Add(new TIPO_USUARIODataTable(ds.Tables["TIPO_USUARIO"]));
                 }
-                if ((ds.Tables["usuarios"] != null)) {
-                    base.Tables.Add(new usuariosDataTable(ds.Tables["usuarios"]));
+                if ((ds.Tables["USUARIOS"] != null)) {
+                    base.Tables.Add(new USUARIOSDataTable(ds.Tables["USUARIOS"]));
                 }
-                if ((ds.Tables["Relatorio_Produtos"] != null)) {
-                    base.Tables.Add(new Relatorio_ProdutosDataTable(ds.Tables["Relatorio_Produtos"]));
+                if ((ds.Tables["SearchUserDGVUsuarios"] != null)) {
+                    base.Tables.Add(new SearchUserDGVUsuariosDataTable(ds.Tables["SearchUserDGVUsuarios"]));
                 }
-                if ((ds.Tables["Relatorio_Fornecedores"] != null)) {
-                    base.Tables.Add(new Relatorio_FornecedoresDataTable(ds.Tables["Relatorio_Fornecedores"]));
+                if ((ds.Tables["ReportProvider"] != null)) {
+                    base.Tables.Add(new ReportProviderDataTable(ds.Tables["ReportProvider"]));
                 }
-                if ((ds.Tables["DataGridViewUsuarios"] != null)) {
-                    base.Tables.Add(new DataGridViewUsuariosDataTable(ds.Tables["DataGridViewUsuarios"]));
+                if ((ds.Tables["ReportProduct"] != null)) {
+                    base.Tables.Add(new ReportProductDataTable(ds.Tables["ReportProduct"]));
                 }
                 this.DataSetName = ds.DataSetName;
                 this.Prefix = ds.Prefix;
@@ -126,9 +126,9 @@ namespace QrAguas {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         [global::System.ComponentModel.Browsable(false)]
         [global::System.ComponentModel.DesignerSerializationVisibility(global::System.ComponentModel.DesignerSerializationVisibility.Content)]
-        public categoriasDataTable categorias {
+        public CATEGORIASDataTable CATEGORIAS {
             get {
-                return this.tablecategorias;
+                return this.tableCATEGORIAS;
             }
         }
         
@@ -136,9 +136,9 @@ namespace QrAguas {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         [global::System.ComponentModel.Browsable(false)]
         [global::System.ComponentModel.DesignerSerializationVisibility(global::System.ComponentModel.DesignerSerializationVisibility.Content)]
-        public fornecedoresDataTable fornecedores {
+        public FORNECEDORESDataTable FORNECEDORES {
             get {
-                return this.tablefornecedores;
+                return this.tableFORNECEDORES;
             }
         }
         
@@ -146,9 +146,9 @@ namespace QrAguas {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         [global::System.ComponentModel.Browsable(false)]
         [global::System.ComponentModel.DesignerSerializationVisibility(global::System.ComponentModel.DesignerSerializationVisibility.Content)]
-        public produtosDataTable produtos {
+        public PRODUTOSDataTable PRODUTOS {
             get {
-                return this.tableprodutos;
+                return this.tablePRODUTOS;
             }
         }
         
@@ -156,9 +156,9 @@ namespace QrAguas {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         [global::System.ComponentModel.Browsable(false)]
         [global::System.ComponentModel.DesignerSerializationVisibility(global::System.ComponentModel.DesignerSerializationVisibility.Content)]
-        public tipo_usuarioDataTable tipo_usuario {
+        public TIPO_USUARIODataTable TIPO_USUARIO {
             get {
-                return this.tabletipo_usuario;
+                return this.tableTIPO_USUARIO;
             }
         }
         
@@ -166,9 +166,9 @@ namespace QrAguas {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         [global::System.ComponentModel.Browsable(false)]
         [global::System.ComponentModel.DesignerSerializationVisibility(global::System.ComponentModel.DesignerSerializationVisibility.Content)]
-        public usuariosDataTable usuarios {
+        public USUARIOSDataTable USUARIOS {
             get {
-                return this.tableusuarios;
+                return this.tableUSUARIOS;
             }
         }
         
@@ -176,9 +176,9 @@ namespace QrAguas {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         [global::System.ComponentModel.Browsable(false)]
         [global::System.ComponentModel.DesignerSerializationVisibility(global::System.ComponentModel.DesignerSerializationVisibility.Content)]
-        public Relatorio_ProdutosDataTable Relatorio_Produtos {
+        public SearchUserDGVUsuariosDataTable SearchUserDGVUsuarios {
             get {
-                return this.tableRelatorio_Produtos;
+                return this.tableSearchUserDGVUsuarios;
             }
         }
         
@@ -186,9 +186,9 @@ namespace QrAguas {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         [global::System.ComponentModel.Browsable(false)]
         [global::System.ComponentModel.DesignerSerializationVisibility(global::System.ComponentModel.DesignerSerializationVisibility.Content)]
-        public Relatorio_FornecedoresDataTable Relatorio_Fornecedores {
+        public ReportProviderDataTable ReportProvider {
             get {
-                return this.tableRelatorio_Fornecedores;
+                return this.tableReportProvider;
             }
         }
         
@@ -196,9 +196,9 @@ namespace QrAguas {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         [global::System.ComponentModel.Browsable(false)]
         [global::System.ComponentModel.DesignerSerializationVisibility(global::System.ComponentModel.DesignerSerializationVisibility.Content)]
-        public DataGridViewUsuariosDataTable DataGridViewUsuarios {
+        public ReportProductDataTable ReportProduct {
             get {
-                return this.tableDataGridViewUsuarios;
+                return this.tableReportProduct;
             }
         }
         
@@ -244,7 +244,7 @@ namespace QrAguas {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         public override global::System.Data.DataSet Clone() {
-            qraguasDataSet cln = ((qraguasDataSet)(base.Clone()));
+            QrAguasRemoteDBDataSet cln = ((QrAguasRemoteDBDataSet)(base.Clone()));
             cln.InitVars();
             cln.SchemaSerializationMode = this.SchemaSerializationMode;
             return cln;
@@ -269,29 +269,29 @@ namespace QrAguas {
                 this.Reset();
                 global::System.Data.DataSet ds = new global::System.Data.DataSet();
                 ds.ReadXml(reader);
-                if ((ds.Tables["categorias"] != null)) {
-                    base.Tables.Add(new categoriasDataTable(ds.Tables["categorias"]));
+                if ((ds.Tables["CATEGORIAS"] != null)) {
+                    base.Tables.Add(new CATEGORIASDataTable(ds.Tables["CATEGORIAS"]));
                 }
-                if ((ds.Tables["fornecedores"] != null)) {
-                    base.Tables.Add(new fornecedoresDataTable(ds.Tables["fornecedores"]));
+                if ((ds.Tables["FORNECEDORES"] != null)) {
+                    base.Tables.Add(new FORNECEDORESDataTable(ds.Tables["FORNECEDORES"]));
                 }
-                if ((ds.Tables["produtos"] != null)) {
-                    base.Tables.Add(new produtosDataTable(ds.Tables["produtos"]));
+                if ((ds.Tables["PRODUTOS"] != null)) {
+                    base.Tables.Add(new PRODUTOSDataTable(ds.Tables["PRODUTOS"]));
                 }
-                if ((ds.Tables["tipo_usuario"] != null)) {
-                    base.Tables.Add(new tipo_usuarioDataTable(ds.Tables["tipo_usuario"]));
+                if ((ds.Tables["TIPO_USUARIO"] != null)) {
+                    base.Tables.Add(new TIPO_USUARIODataTable(ds.Tables["TIPO_USUARIO"]));
                 }
-                if ((ds.Tables["usuarios"] != null)) {
-                    base.Tables.Add(new usuariosDataTable(ds.Tables["usuarios"]));
+                if ((ds.Tables["USUARIOS"] != null)) {
+                    base.Tables.Add(new USUARIOSDataTable(ds.Tables["USUARIOS"]));
                 }
-                if ((ds.Tables["Relatorio_Produtos"] != null)) {
-                    base.Tables.Add(new Relatorio_ProdutosDataTable(ds.Tables["Relatorio_Produtos"]));
+                if ((ds.Tables["SearchUserDGVUsuarios"] != null)) {
+                    base.Tables.Add(new SearchUserDGVUsuariosDataTable(ds.Tables["SearchUserDGVUsuarios"]));
                 }
-                if ((ds.Tables["Relatorio_Fornecedores"] != null)) {
-                    base.Tables.Add(new Relatorio_FornecedoresDataTable(ds.Tables["Relatorio_Fornecedores"]));
+                if ((ds.Tables["ReportProvider"] != null)) {
+                    base.Tables.Add(new ReportProviderDataTable(ds.Tables["ReportProvider"]));
                 }
-                if ((ds.Tables["DataGridViewUsuarios"] != null)) {
-                    base.Tables.Add(new DataGridViewUsuariosDataTable(ds.Tables["DataGridViewUsuarios"]));
+                if ((ds.Tables["ReportProduct"] != null)) {
+                    base.Tables.Add(new ReportProductDataTable(ds.Tables["ReportProduct"]));
                 }
                 this.DataSetName = ds.DataSetName;
                 this.Prefix = ds.Prefix;
@@ -326,157 +326,157 @@ namespace QrAguas {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         internal void InitVars(bool initTable) {
-            this.tablecategorias = ((categoriasDataTable)(base.Tables["categorias"]));
+            this.tableCATEGORIAS = ((CATEGORIASDataTable)(base.Tables["CATEGORIAS"]));
             if ((initTable == true)) {
-                if ((this.tablecategorias != null)) {
-                    this.tablecategorias.InitVars();
+                if ((this.tableCATEGORIAS != null)) {
+                    this.tableCATEGORIAS.InitVars();
                 }
             }
-            this.tablefornecedores = ((fornecedoresDataTable)(base.Tables["fornecedores"]));
+            this.tableFORNECEDORES = ((FORNECEDORESDataTable)(base.Tables["FORNECEDORES"]));
             if ((initTable == true)) {
-                if ((this.tablefornecedores != null)) {
-                    this.tablefornecedores.InitVars();
+                if ((this.tableFORNECEDORES != null)) {
+                    this.tableFORNECEDORES.InitVars();
                 }
             }
-            this.tableprodutos = ((produtosDataTable)(base.Tables["produtos"]));
+            this.tablePRODUTOS = ((PRODUTOSDataTable)(base.Tables["PRODUTOS"]));
             if ((initTable == true)) {
-                if ((this.tableprodutos != null)) {
-                    this.tableprodutos.InitVars();
+                if ((this.tablePRODUTOS != null)) {
+                    this.tablePRODUTOS.InitVars();
                 }
             }
-            this.tabletipo_usuario = ((tipo_usuarioDataTable)(base.Tables["tipo_usuario"]));
+            this.tableTIPO_USUARIO = ((TIPO_USUARIODataTable)(base.Tables["TIPO_USUARIO"]));
             if ((initTable == true)) {
-                if ((this.tabletipo_usuario != null)) {
-                    this.tabletipo_usuario.InitVars();
+                if ((this.tableTIPO_USUARIO != null)) {
+                    this.tableTIPO_USUARIO.InitVars();
                 }
             }
-            this.tableusuarios = ((usuariosDataTable)(base.Tables["usuarios"]));
+            this.tableUSUARIOS = ((USUARIOSDataTable)(base.Tables["USUARIOS"]));
             if ((initTable == true)) {
-                if ((this.tableusuarios != null)) {
-                    this.tableusuarios.InitVars();
+                if ((this.tableUSUARIOS != null)) {
+                    this.tableUSUARIOS.InitVars();
                 }
             }
-            this.tableRelatorio_Produtos = ((Relatorio_ProdutosDataTable)(base.Tables["Relatorio_Produtos"]));
+            this.tableSearchUserDGVUsuarios = ((SearchUserDGVUsuariosDataTable)(base.Tables["SearchUserDGVUsuarios"]));
             if ((initTable == true)) {
-                if ((this.tableRelatorio_Produtos != null)) {
-                    this.tableRelatorio_Produtos.InitVars();
+                if ((this.tableSearchUserDGVUsuarios != null)) {
+                    this.tableSearchUserDGVUsuarios.InitVars();
                 }
             }
-            this.tableRelatorio_Fornecedores = ((Relatorio_FornecedoresDataTable)(base.Tables["Relatorio_Fornecedores"]));
+            this.tableReportProvider = ((ReportProviderDataTable)(base.Tables["ReportProvider"]));
             if ((initTable == true)) {
-                if ((this.tableRelatorio_Fornecedores != null)) {
-                    this.tableRelatorio_Fornecedores.InitVars();
+                if ((this.tableReportProvider != null)) {
+                    this.tableReportProvider.InitVars();
                 }
             }
-            this.tableDataGridViewUsuarios = ((DataGridViewUsuariosDataTable)(base.Tables["DataGridViewUsuarios"]));
+            this.tableReportProduct = ((ReportProductDataTable)(base.Tables["ReportProduct"]));
             if ((initTable == true)) {
-                if ((this.tableDataGridViewUsuarios != null)) {
-                    this.tableDataGridViewUsuarios.InitVars();
+                if ((this.tableReportProduct != null)) {
+                    this.tableReportProduct.InitVars();
                 }
             }
-            this.relationcategorias_ibfk_1 = this.Relations["categorias_ibfk_1"];
-            this.relationfornecedores_ibfk_1 = this.Relations["fornecedores_ibfk_1"];
-            this.relationprodutos_ibfk_1 = this.Relations["produtos_ibfk_1"];
-            this.relationprodutos_ibfk_2 = this.Relations["produtos_ibfk_2"];
-            this.relationprodutos_ibfk_3 = this.Relations["produtos_ibfk_3"];
-            this.relationusuarios_ibfk_1 = this.Relations["usuarios_ibfk_1"];
+            this.relationCATEGORIAS_ibfk_1 = this.Relations["CATEGORIAS_ibfk_1"];
+            this.relationFORNECEDORES_ibfk_1 = this.Relations["FORNECEDORES_ibfk_1"];
+            this.relationPRODUTOS_ibfk_1 = this.Relations["PRODUTOS_ibfk_1"];
+            this.relationPRODUTOS_ibfk_2 = this.Relations["PRODUTOS_ibfk_2"];
+            this.relationPRODUTOS_ibfk_3 = this.Relations["PRODUTOS_ibfk_3"];
+            this.relationUSUARIOS_ibfk_1 = this.Relations["USUARIOS_ibfk_1"];
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         private void InitClass() {
-            this.DataSetName = "qraguasDataSet";
+            this.DataSetName = "QrAguasRemoteDBDataSet";
             this.Prefix = "";
-            this.Namespace = "http://tempuri.org/qraguasDataSet.xsd";
+            this.Namespace = "http://tempuri.org/QrAguasRemoteDBDataSet.xsd";
             this.EnforceConstraints = true;
             this.SchemaSerializationMode = global::System.Data.SchemaSerializationMode.IncludeSchema;
-            this.tablecategorias = new categoriasDataTable();
-            base.Tables.Add(this.tablecategorias);
-            this.tablefornecedores = new fornecedoresDataTable();
-            base.Tables.Add(this.tablefornecedores);
-            this.tableprodutos = new produtosDataTable();
-            base.Tables.Add(this.tableprodutos);
-            this.tabletipo_usuario = new tipo_usuarioDataTable();
-            base.Tables.Add(this.tabletipo_usuario);
-            this.tableusuarios = new usuariosDataTable();
-            base.Tables.Add(this.tableusuarios);
-            this.tableRelatorio_Produtos = new Relatorio_ProdutosDataTable();
-            base.Tables.Add(this.tableRelatorio_Produtos);
-            this.tableRelatorio_Fornecedores = new Relatorio_FornecedoresDataTable();
-            base.Tables.Add(this.tableRelatorio_Fornecedores);
-            this.tableDataGridViewUsuarios = new DataGridViewUsuariosDataTable();
-            base.Tables.Add(this.tableDataGridViewUsuarios);
-            this.relationcategorias_ibfk_1 = new global::System.Data.DataRelation("categorias_ibfk_1", new global::System.Data.DataColumn[] {
-                        this.tableusuarios.ID_USUARIOSColumn}, new global::System.Data.DataColumn[] {
-                        this.tablecategorias.ID_USUARIOSColumn}, false);
-            this.Relations.Add(this.relationcategorias_ibfk_1);
-            this.relationfornecedores_ibfk_1 = new global::System.Data.DataRelation("fornecedores_ibfk_1", new global::System.Data.DataColumn[] {
-                        this.tableusuarios.ID_USUARIOSColumn}, new global::System.Data.DataColumn[] {
-                        this.tablefornecedores.ID_USUARIOSColumn}, false);
-            this.Relations.Add(this.relationfornecedores_ibfk_1);
-            this.relationprodutos_ibfk_1 = new global::System.Data.DataRelation("produtos_ibfk_1", new global::System.Data.DataColumn[] {
-                        this.tablefornecedores.ID_FORNECEDORESColumn}, new global::System.Data.DataColumn[] {
-                        this.tableprodutos.ID_FORNECEDORESColumn}, false);
-            this.Relations.Add(this.relationprodutos_ibfk_1);
-            this.relationprodutos_ibfk_2 = new global::System.Data.DataRelation("produtos_ibfk_2", new global::System.Data.DataColumn[] {
-                        this.tableusuarios.ID_USUARIOSColumn}, new global::System.Data.DataColumn[] {
-                        this.tableprodutos.ID_USUARIOSColumn}, false);
-            this.Relations.Add(this.relationprodutos_ibfk_2);
-            this.relationprodutos_ibfk_3 = new global::System.Data.DataRelation("produtos_ibfk_3", new global::System.Data.DataColumn[] {
-                        this.tablecategorias.ID_CATEGORIASColumn}, new global::System.Data.DataColumn[] {
-                        this.tableprodutos.ID_CATEGORIASColumn}, false);
-            this.Relations.Add(this.relationprodutos_ibfk_3);
-            this.relationusuarios_ibfk_1 = new global::System.Data.DataRelation("usuarios_ibfk_1", new global::System.Data.DataColumn[] {
-                        this.tabletipo_usuario.ID_TIPO_USUARIOColumn}, new global::System.Data.DataColumn[] {
-                        this.tableusuarios.ID_TIPO_USUARIOColumn}, false);
-            this.Relations.Add(this.relationusuarios_ibfk_1);
+            this.tableCATEGORIAS = new CATEGORIASDataTable();
+            base.Tables.Add(this.tableCATEGORIAS);
+            this.tableFORNECEDORES = new FORNECEDORESDataTable();
+            base.Tables.Add(this.tableFORNECEDORES);
+            this.tablePRODUTOS = new PRODUTOSDataTable();
+            base.Tables.Add(this.tablePRODUTOS);
+            this.tableTIPO_USUARIO = new TIPO_USUARIODataTable();
+            base.Tables.Add(this.tableTIPO_USUARIO);
+            this.tableUSUARIOS = new USUARIOSDataTable();
+            base.Tables.Add(this.tableUSUARIOS);
+            this.tableSearchUserDGVUsuarios = new SearchUserDGVUsuariosDataTable();
+            base.Tables.Add(this.tableSearchUserDGVUsuarios);
+            this.tableReportProvider = new ReportProviderDataTable();
+            base.Tables.Add(this.tableReportProvider);
+            this.tableReportProduct = new ReportProductDataTable();
+            base.Tables.Add(this.tableReportProduct);
+            this.relationCATEGORIAS_ibfk_1 = new global::System.Data.DataRelation("CATEGORIAS_ibfk_1", new global::System.Data.DataColumn[] {
+                        this.tableUSUARIOS.ID_USUARIOSColumn}, new global::System.Data.DataColumn[] {
+                        this.tableCATEGORIAS.ID_USUARIOSColumn}, false);
+            this.Relations.Add(this.relationCATEGORIAS_ibfk_1);
+            this.relationFORNECEDORES_ibfk_1 = new global::System.Data.DataRelation("FORNECEDORES_ibfk_1", new global::System.Data.DataColumn[] {
+                        this.tableUSUARIOS.ID_USUARIOSColumn}, new global::System.Data.DataColumn[] {
+                        this.tableFORNECEDORES.ID_USUARIOSColumn}, false);
+            this.Relations.Add(this.relationFORNECEDORES_ibfk_1);
+            this.relationPRODUTOS_ibfk_1 = new global::System.Data.DataRelation("PRODUTOS_ibfk_1", new global::System.Data.DataColumn[] {
+                        this.tableFORNECEDORES.ID_FORNECEDORESColumn}, new global::System.Data.DataColumn[] {
+                        this.tablePRODUTOS.ID_FORNECEDORESColumn}, false);
+            this.Relations.Add(this.relationPRODUTOS_ibfk_1);
+            this.relationPRODUTOS_ibfk_2 = new global::System.Data.DataRelation("PRODUTOS_ibfk_2", new global::System.Data.DataColumn[] {
+                        this.tableUSUARIOS.ID_USUARIOSColumn}, new global::System.Data.DataColumn[] {
+                        this.tablePRODUTOS.ID_USUARIOSColumn}, false);
+            this.Relations.Add(this.relationPRODUTOS_ibfk_2);
+            this.relationPRODUTOS_ibfk_3 = new global::System.Data.DataRelation("PRODUTOS_ibfk_3", new global::System.Data.DataColumn[] {
+                        this.tableCATEGORIAS.ID_CATEGORIASColumn}, new global::System.Data.DataColumn[] {
+                        this.tablePRODUTOS.ID_CATEGORIASColumn}, false);
+            this.Relations.Add(this.relationPRODUTOS_ibfk_3);
+            this.relationUSUARIOS_ibfk_1 = new global::System.Data.DataRelation("USUARIOS_ibfk_1", new global::System.Data.DataColumn[] {
+                        this.tableTIPO_USUARIO.ID_TIPO_USUARIOColumn}, new global::System.Data.DataColumn[] {
+                        this.tableUSUARIOS.ID_TIPO_USUARIOColumn}, false);
+            this.Relations.Add(this.relationUSUARIOS_ibfk_1);
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-        private bool ShouldSerializecategorias() {
+        private bool ShouldSerializeCATEGORIAS() {
             return false;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-        private bool ShouldSerializefornecedores() {
+        private bool ShouldSerializeFORNECEDORES() {
             return false;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-        private bool ShouldSerializeprodutos() {
+        private bool ShouldSerializePRODUTOS() {
             return false;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-        private bool ShouldSerializetipo_usuario() {
+        private bool ShouldSerializeTIPO_USUARIO() {
             return false;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-        private bool ShouldSerializeusuarios() {
+        private bool ShouldSerializeUSUARIOS() {
             return false;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-        private bool ShouldSerializeRelatorio_Produtos() {
+        private bool ShouldSerializeSearchUserDGVUsuarios() {
             return false;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-        private bool ShouldSerializeRelatorio_Fornecedores() {
+        private bool ShouldSerializeReportProvider() {
             return false;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-        private bool ShouldSerializeDataGridViewUsuarios() {
+        private bool ShouldSerializeReportProduct() {
             return false;
         }
         
@@ -491,7 +491,7 @@ namespace QrAguas {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedDataSetSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
-            qraguasDataSet ds = new qraguasDataSet();
+            QrAguasRemoteDBDataSet ds = new QrAguasRemoteDBDataSet();
             global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
             global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
             global::System.Xml.Schema.XmlSchemaAny any = new global::System.Xml.Schema.XmlSchemaAny();
@@ -536,39 +536,41 @@ namespace QrAguas {
         }
         
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-        public delegate void categoriasRowChangeEventHandler(object sender, categoriasRowChangeEvent e);
+        public delegate void CATEGORIASRowChangeEventHandler(object sender, CATEGORIASRowChangeEvent e);
         
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-        public delegate void fornecedoresRowChangeEventHandler(object sender, fornecedoresRowChangeEvent e);
+        public delegate void FORNECEDORESRowChangeEventHandler(object sender, FORNECEDORESRowChangeEvent e);
         
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-        public delegate void produtosRowChangeEventHandler(object sender, produtosRowChangeEvent e);
+        public delegate void PRODUTOSRowChangeEventHandler(object sender, PRODUTOSRowChangeEvent e);
         
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-        public delegate void tipo_usuarioRowChangeEventHandler(object sender, tipo_usuarioRowChangeEvent e);
+        public delegate void TIPO_USUARIORowChangeEventHandler(object sender, TIPO_USUARIORowChangeEvent e);
         
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-        public delegate void usuariosRowChangeEventHandler(object sender, usuariosRowChangeEvent e);
+        public delegate void USUARIOSRowChangeEventHandler(object sender, USUARIOSRowChangeEvent e);
         
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-        public delegate void Relatorio_ProdutosRowChangeEventHandler(object sender, Relatorio_ProdutosRowChangeEvent e);
+        public delegate void SearchUserDGVUsuariosRowChangeEventHandler(object sender, SearchUserDGVUsuariosRowChangeEvent e);
         
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-        public delegate void Relatorio_FornecedoresRowChangeEventHandler(object sender, Relatorio_FornecedoresRowChangeEvent e);
+        public delegate void ReportProviderRowChangeEventHandler(object sender, ReportProviderRowChangeEvent e);
         
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-        public delegate void DataGridViewUsuariosRowChangeEventHandler(object sender, DataGridViewUsuariosRowChangeEvent e);
+        public delegate void ReportProductRowChangeEventHandler(object sender, ReportProductRowChangeEvent e);
         
         /// <summary>
         ///Represents the strongly named DataTable class.
         ///</summary>
         [global::System.Serializable()]
         [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedTableSchema")]
-        public partial class categoriasDataTable : global::System.Data.TypedTableBase<categoriasRow> {
+        public partial class CATEGORIASDataTable : global::System.Data.TypedTableBase<CATEGORIASRow> {
             
             private global::System.Data.DataColumn columnID_CATEGORIAS;
             
             private global::System.Data.DataColumn columnNOME_CATEGORIA;
+            
+            private global::System.Data.DataColumn columnATIVO;
             
             private global::System.Data.DataColumn columnID_USUARIOS;
             
@@ -578,12 +580,10 @@ namespace QrAguas {
             
             private global::System.Data.DataColumn columnDATA_CADASTRO;
             
-            private global::System.Data.DataColumn columnATIVO;
-            
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public categoriasDataTable() {
-                this.TableName = "categorias";
+            public CATEGORIASDataTable() {
+                this.TableName = "CATEGORIAS";
                 this.BeginInit();
                 this.InitClass();
                 this.EndInit();
@@ -591,7 +591,7 @@ namespace QrAguas {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            internal categoriasDataTable(global::System.Data.DataTable table) {
+            internal CATEGORIASDataTable(global::System.Data.DataTable table) {
                 this.TableName = table.TableName;
                 if ((table.CaseSensitive != table.DataSet.CaseSensitive)) {
                     this.CaseSensitive = table.CaseSensitive;
@@ -608,7 +608,7 @@ namespace QrAguas {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            protected categoriasDataTable(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
+            protected CATEGORIASDataTable(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
                     base(info, context) {
                 this.InitVars();
             }
@@ -626,6 +626,14 @@ namespace QrAguas {
             public global::System.Data.DataColumn NOME_CATEGORIAColumn {
                 get {
                     return this.columnNOME_CATEGORIA;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public global::System.Data.DataColumn ATIVOColumn {
+                get {
+                    return this.columnATIVO;
                 }
             }
             
@@ -663,14 +671,6 @@ namespace QrAguas {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public global::System.Data.DataColumn ATIVOColumn {
-                get {
-                    return this.columnATIVO;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             [global::System.ComponentModel.Browsable(false)]
             public int Count {
                 get {
@@ -680,61 +680,61 @@ namespace QrAguas {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public categoriasRow this[int index] {
+            public CATEGORIASRow this[int index] {
                 get {
-                    return ((categoriasRow)(this.Rows[index]));
+                    return ((CATEGORIASRow)(this.Rows[index]));
                 }
             }
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public event categoriasRowChangeEventHandler categoriasRowChanging;
+            public event CATEGORIASRowChangeEventHandler CATEGORIASRowChanging;
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public event categoriasRowChangeEventHandler categoriasRowChanged;
+            public event CATEGORIASRowChangeEventHandler CATEGORIASRowChanged;
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public event categoriasRowChangeEventHandler categoriasRowDeleting;
+            public event CATEGORIASRowChangeEventHandler CATEGORIASRowDeleting;
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public event categoriasRowChangeEventHandler categoriasRowDeleted;
+            public event CATEGORIASRowChangeEventHandler CATEGORIASRowDeleted;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public void AddcategoriasRow(categoriasRow row) {
+            public void AddCATEGORIASRow(CATEGORIASRow row) {
                 this.Rows.Add(row);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public categoriasRow AddcategoriasRow(string NOME_CATEGORIA, usuariosRow parentusuariosRowBycategorias_ibfk_1, int ATUALIZADO_POR, System.DateTime DATA_ATUALIZACAO, System.DateTime DATA_CADASTRO, bool ATIVO) {
-                categoriasRow rowcategoriasRow = ((categoriasRow)(this.NewRow()));
+            public CATEGORIASRow AddCATEGORIASRow(string NOME_CATEGORIA, bool ATIVO, USUARIOSRow parentUSUARIOSRowByCATEGORIAS_ibfk_1, int ATUALIZADO_POR, System.DateTime DATA_ATUALIZACAO, System.DateTime DATA_CADASTRO) {
+                CATEGORIASRow rowCATEGORIASRow = ((CATEGORIASRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         null,
                         NOME_CATEGORIA,
+                        ATIVO,
                         null,
                         ATUALIZADO_POR,
                         DATA_ATUALIZACAO,
-                        DATA_CADASTRO,
-                        ATIVO};
-                if ((parentusuariosRowBycategorias_ibfk_1 != null)) {
-                    columnValuesArray[2] = parentusuariosRowBycategorias_ibfk_1[0];
+                        DATA_CADASTRO};
+                if ((parentUSUARIOSRowByCATEGORIAS_ibfk_1 != null)) {
+                    columnValuesArray[3] = parentUSUARIOSRowByCATEGORIAS_ibfk_1[0];
                 }
-                rowcategoriasRow.ItemArray = columnValuesArray;
-                this.Rows.Add(rowcategoriasRow);
-                return rowcategoriasRow;
+                rowCATEGORIASRow.ItemArray = columnValuesArray;
+                this.Rows.Add(rowCATEGORIASRow);
+                return rowCATEGORIASRow;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public categoriasRow FindByID_CATEGORIAS(int ID_CATEGORIAS) {
-                return ((categoriasRow)(this.Rows.Find(new object[] {
+            public CATEGORIASRow FindByID_CATEGORIAS(int ID_CATEGORIAS) {
+                return ((CATEGORIASRow)(this.Rows.Find(new object[] {
                             ID_CATEGORIAS})));
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public override global::System.Data.DataTable Clone() {
-                categoriasDataTable cln = ((categoriasDataTable)(base.Clone()));
+                CATEGORIASDataTable cln = ((CATEGORIASDataTable)(base.Clone()));
                 cln.InitVars();
                 return cln;
             }
@@ -742,7 +742,7 @@ namespace QrAguas {
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             protected override global::System.Data.DataTable CreateInstance() {
-                return new categoriasDataTable();
+                return new CATEGORIASDataTable();
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -750,11 +750,11 @@ namespace QrAguas {
             internal void InitVars() {
                 this.columnID_CATEGORIAS = base.Columns["ID_CATEGORIAS"];
                 this.columnNOME_CATEGORIA = base.Columns["NOME_CATEGORIA"];
+                this.columnATIVO = base.Columns["ATIVO"];
                 this.columnID_USUARIOS = base.Columns["ID_USUARIOS"];
                 this.columnATUALIZADO_POR = base.Columns["ATUALIZADO_POR"];
                 this.columnDATA_ATUALIZACAO = base.Columns["DATA_ATUALIZACAO"];
                 this.columnDATA_CADASTRO = base.Columns["DATA_CADASTRO"];
-                this.columnATIVO = base.Columns["ATIVO"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -764,6 +764,8 @@ namespace QrAguas {
                 base.Columns.Add(this.columnID_CATEGORIAS);
                 this.columnNOME_CATEGORIA = new global::System.Data.DataColumn("NOME_CATEGORIA", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnNOME_CATEGORIA);
+                this.columnATIVO = new global::System.Data.DataColumn("ATIVO", typeof(bool), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnATIVO);
                 this.columnID_USUARIOS = new global::System.Data.DataColumn("ID_USUARIOS", typeof(int), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnID_USUARIOS);
                 this.columnATUALIZADO_POR = new global::System.Data.DataColumn("ATUALIZADO_POR", typeof(int), null, global::System.Data.MappingType.Element);
@@ -772,8 +774,6 @@ namespace QrAguas {
                 base.Columns.Add(this.columnDATA_ATUALIZACAO);
                 this.columnDATA_CADASTRO = new global::System.Data.DataColumn("DATA_CADASTRO", typeof(global::System.DateTime), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnDATA_CADASTRO);
-                this.columnATIVO = new global::System.Data.DataColumn("ATIVO", typeof(bool), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnATIVO);
                 this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
                                 this.columnID_CATEGORIAS}, true));
                 this.columnID_CATEGORIAS.AutoIncrement = true;
@@ -783,35 +783,35 @@ namespace QrAguas {
                 this.columnID_CATEGORIAS.Unique = true;
                 this.columnNOME_CATEGORIA.AllowDBNull = false;
                 this.columnNOME_CATEGORIA.MaxLength = 25;
+                this.columnATIVO.AllowDBNull = false;
                 this.columnID_USUARIOS.AllowDBNull = false;
                 this.columnDATA_CADASTRO.AllowDBNull = false;
-                this.columnATIVO.AllowDBNull = false;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public categoriasRow NewcategoriasRow() {
-                return ((categoriasRow)(this.NewRow()));
+            public CATEGORIASRow NewCATEGORIASRow() {
+                return ((CATEGORIASRow)(this.NewRow()));
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             protected override global::System.Data.DataRow NewRowFromBuilder(global::System.Data.DataRowBuilder builder) {
-                return new categoriasRow(builder);
+                return new CATEGORIASRow(builder);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             protected override global::System.Type GetRowType() {
-                return typeof(categoriasRow);
+                return typeof(CATEGORIASRow);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             protected override void OnRowChanged(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowChanged(e);
-                if ((this.categoriasRowChanged != null)) {
-                    this.categoriasRowChanged(this, new categoriasRowChangeEvent(((categoriasRow)(e.Row)), e.Action));
+                if ((this.CATEGORIASRowChanged != null)) {
+                    this.CATEGORIASRowChanged(this, new CATEGORIASRowChangeEvent(((CATEGORIASRow)(e.Row)), e.Action));
                 }
             }
             
@@ -819,8 +819,8 @@ namespace QrAguas {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             protected override void OnRowChanging(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowChanging(e);
-                if ((this.categoriasRowChanging != null)) {
-                    this.categoriasRowChanging(this, new categoriasRowChangeEvent(((categoriasRow)(e.Row)), e.Action));
+                if ((this.CATEGORIASRowChanging != null)) {
+                    this.CATEGORIASRowChanging(this, new CATEGORIASRowChangeEvent(((CATEGORIASRow)(e.Row)), e.Action));
                 }
             }
             
@@ -828,8 +828,8 @@ namespace QrAguas {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             protected override void OnRowDeleted(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowDeleted(e);
-                if ((this.categoriasRowDeleted != null)) {
-                    this.categoriasRowDeleted(this, new categoriasRowChangeEvent(((categoriasRow)(e.Row)), e.Action));
+                if ((this.CATEGORIASRowDeleted != null)) {
+                    this.CATEGORIASRowDeleted(this, new CATEGORIASRowChangeEvent(((CATEGORIASRow)(e.Row)), e.Action));
                 }
             }
             
@@ -837,14 +837,14 @@ namespace QrAguas {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             protected override void OnRowDeleting(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowDeleting(e);
-                if ((this.categoriasRowDeleting != null)) {
-                    this.categoriasRowDeleting(this, new categoriasRowChangeEvent(((categoriasRow)(e.Row)), e.Action));
+                if ((this.CATEGORIASRowDeleting != null)) {
+                    this.CATEGORIASRowDeleting(this, new CATEGORIASRowChangeEvent(((CATEGORIASRow)(e.Row)), e.Action));
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public void RemovecategoriasRow(categoriasRow row) {
+            public void RemoveCATEGORIASRow(CATEGORIASRow row) {
                 this.Rows.Remove(row);
             }
             
@@ -853,7 +853,7 @@ namespace QrAguas {
             public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedTableSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
                 global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
                 global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
-                qraguasDataSet ds = new qraguasDataSet();
+                QrAguasRemoteDBDataSet ds = new QrAguasRemoteDBDataSet();
                 global::System.Xml.Schema.XmlSchemaAny any1 = new global::System.Xml.Schema.XmlSchemaAny();
                 any1.Namespace = "http://www.w3.org/2001/XMLSchema";
                 any1.MinOccurs = new decimal(0);
@@ -871,7 +871,7 @@ namespace QrAguas {
                 type.Attributes.Add(attribute1);
                 global::System.Xml.Schema.XmlSchemaAttribute attribute2 = new global::System.Xml.Schema.XmlSchemaAttribute();
                 attribute2.Name = "tableTypeName";
-                attribute2.FixedValue = "categoriasDataTable";
+                attribute2.FixedValue = "CATEGORIASDataTable";
                 type.Attributes.Add(attribute2);
                 type.Particle = sequence;
                 global::System.Xml.Schema.XmlSchema dsSchema = ds.GetSchemaSerializable();
@@ -917,7 +917,7 @@ namespace QrAguas {
         ///</summary>
         [global::System.Serializable()]
         [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedTableSchema")]
-        public partial class fornecedoresDataTable : global::System.Data.TypedTableBase<fornecedoresRow> {
+        public partial class FORNECEDORESDataTable : global::System.Data.TypedTableBase<FORNECEDORESRow> {
             
             private global::System.Data.DataColumn columnID_FORNECEDORES;
             
@@ -951,8 +951,8 @@ namespace QrAguas {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public fornecedoresDataTable() {
-                this.TableName = "fornecedores";
+            public FORNECEDORESDataTable() {
+                this.TableName = "FORNECEDORES";
                 this.BeginInit();
                 this.InitClass();
                 this.EndInit();
@@ -960,7 +960,7 @@ namespace QrAguas {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            internal fornecedoresDataTable(global::System.Data.DataTable table) {
+            internal FORNECEDORESDataTable(global::System.Data.DataTable table) {
                 this.TableName = table.TableName;
                 if ((table.CaseSensitive != table.DataSet.CaseSensitive)) {
                     this.CaseSensitive = table.CaseSensitive;
@@ -977,7 +977,7 @@ namespace QrAguas {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            protected fornecedoresDataTable(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
+            protected FORNECEDORESDataTable(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
                     base(info, context) {
                 this.InitVars();
             }
@@ -1113,34 +1113,34 @@ namespace QrAguas {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public fornecedoresRow this[int index] {
+            public FORNECEDORESRow this[int index] {
                 get {
-                    return ((fornecedoresRow)(this.Rows[index]));
+                    return ((FORNECEDORESRow)(this.Rows[index]));
                 }
             }
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public event fornecedoresRowChangeEventHandler fornecedoresRowChanging;
+            public event FORNECEDORESRowChangeEventHandler FORNECEDORESRowChanging;
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public event fornecedoresRowChangeEventHandler fornecedoresRowChanged;
+            public event FORNECEDORESRowChangeEventHandler FORNECEDORESRowChanged;
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public event fornecedoresRowChangeEventHandler fornecedoresRowDeleting;
+            public event FORNECEDORESRowChangeEventHandler FORNECEDORESRowDeleting;
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public event fornecedoresRowChangeEventHandler fornecedoresRowDeleted;
+            public event FORNECEDORESRowChangeEventHandler FORNECEDORESRowDeleted;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public void AddfornecedoresRow(fornecedoresRow row) {
+            public void AddFORNECEDORESRow(FORNECEDORESRow row) {
                 this.Rows.Add(row);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public fornecedoresRow AddfornecedoresRow(string RAZAO_SOCIAL, string CNPJ, string ENDERECO, int NUMERO, string BAIRRO, string CIDADE, string COMPLEMENTO, string UF, string TELEFONE, string CELULAR, string CEP, string EMAIL, usuariosRow parentusuariosRowByfornecedores_ibfk_1, System.DateTime DATA_CADASTRO) {
-                fornecedoresRow rowfornecedoresRow = ((fornecedoresRow)(this.NewRow()));
+            public FORNECEDORESRow AddFORNECEDORESRow(string RAZAO_SOCIAL, string CNPJ, string ENDERECO, int NUMERO, string BAIRRO, string CIDADE, string COMPLEMENTO, string UF, string TELEFONE, string CELULAR, string CEP, string EMAIL, USUARIOSRow parentUSUARIOSRowByFORNECEDORES_ibfk_1, System.DateTime DATA_CADASTRO) {
+                FORNECEDORESRow rowFORNECEDORESRow = ((FORNECEDORESRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         null,
                         RAZAO_SOCIAL,
@@ -1157,25 +1157,25 @@ namespace QrAguas {
                         EMAIL,
                         null,
                         DATA_CADASTRO};
-                if ((parentusuariosRowByfornecedores_ibfk_1 != null)) {
-                    columnValuesArray[13] = parentusuariosRowByfornecedores_ibfk_1[0];
+                if ((parentUSUARIOSRowByFORNECEDORES_ibfk_1 != null)) {
+                    columnValuesArray[13] = parentUSUARIOSRowByFORNECEDORES_ibfk_1[0];
                 }
-                rowfornecedoresRow.ItemArray = columnValuesArray;
-                this.Rows.Add(rowfornecedoresRow);
-                return rowfornecedoresRow;
+                rowFORNECEDORESRow.ItemArray = columnValuesArray;
+                this.Rows.Add(rowFORNECEDORESRow);
+                return rowFORNECEDORESRow;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public fornecedoresRow FindByID_FORNECEDORES(int ID_FORNECEDORES) {
-                return ((fornecedoresRow)(this.Rows.Find(new object[] {
+            public FORNECEDORESRow FindByID_FORNECEDORES(int ID_FORNECEDORES) {
+                return ((FORNECEDORESRow)(this.Rows.Find(new object[] {
                             ID_FORNECEDORES})));
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public override global::System.Data.DataTable Clone() {
-                fornecedoresDataTable cln = ((fornecedoresDataTable)(base.Clone()));
+                FORNECEDORESDataTable cln = ((FORNECEDORESDataTable)(base.Clone()));
                 cln.InitVars();
                 return cln;
             }
@@ -1183,7 +1183,7 @@ namespace QrAguas {
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             protected override global::System.Data.DataTable CreateInstance() {
-                return new fornecedoresDataTable();
+                return new FORNECEDORESDataTable();
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -1272,28 +1272,28 @@ namespace QrAguas {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public fornecedoresRow NewfornecedoresRow() {
-                return ((fornecedoresRow)(this.NewRow()));
+            public FORNECEDORESRow NewFORNECEDORESRow() {
+                return ((FORNECEDORESRow)(this.NewRow()));
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             protected override global::System.Data.DataRow NewRowFromBuilder(global::System.Data.DataRowBuilder builder) {
-                return new fornecedoresRow(builder);
+                return new FORNECEDORESRow(builder);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             protected override global::System.Type GetRowType() {
-                return typeof(fornecedoresRow);
+                return typeof(FORNECEDORESRow);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             protected override void OnRowChanged(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowChanged(e);
-                if ((this.fornecedoresRowChanged != null)) {
-                    this.fornecedoresRowChanged(this, new fornecedoresRowChangeEvent(((fornecedoresRow)(e.Row)), e.Action));
+                if ((this.FORNECEDORESRowChanged != null)) {
+                    this.FORNECEDORESRowChanged(this, new FORNECEDORESRowChangeEvent(((FORNECEDORESRow)(e.Row)), e.Action));
                 }
             }
             
@@ -1301,8 +1301,8 @@ namespace QrAguas {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             protected override void OnRowChanging(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowChanging(e);
-                if ((this.fornecedoresRowChanging != null)) {
-                    this.fornecedoresRowChanging(this, new fornecedoresRowChangeEvent(((fornecedoresRow)(e.Row)), e.Action));
+                if ((this.FORNECEDORESRowChanging != null)) {
+                    this.FORNECEDORESRowChanging(this, new FORNECEDORESRowChangeEvent(((FORNECEDORESRow)(e.Row)), e.Action));
                 }
             }
             
@@ -1310,8 +1310,8 @@ namespace QrAguas {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             protected override void OnRowDeleted(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowDeleted(e);
-                if ((this.fornecedoresRowDeleted != null)) {
-                    this.fornecedoresRowDeleted(this, new fornecedoresRowChangeEvent(((fornecedoresRow)(e.Row)), e.Action));
+                if ((this.FORNECEDORESRowDeleted != null)) {
+                    this.FORNECEDORESRowDeleted(this, new FORNECEDORESRowChangeEvent(((FORNECEDORESRow)(e.Row)), e.Action));
                 }
             }
             
@@ -1319,14 +1319,14 @@ namespace QrAguas {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             protected override void OnRowDeleting(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowDeleting(e);
-                if ((this.fornecedoresRowDeleting != null)) {
-                    this.fornecedoresRowDeleting(this, new fornecedoresRowChangeEvent(((fornecedoresRow)(e.Row)), e.Action));
+                if ((this.FORNECEDORESRowDeleting != null)) {
+                    this.FORNECEDORESRowDeleting(this, new FORNECEDORESRowChangeEvent(((FORNECEDORESRow)(e.Row)), e.Action));
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public void RemovefornecedoresRow(fornecedoresRow row) {
+            public void RemoveFORNECEDORESRow(FORNECEDORESRow row) {
                 this.Rows.Remove(row);
             }
             
@@ -1335,7 +1335,7 @@ namespace QrAguas {
             public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedTableSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
                 global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
                 global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
-                qraguasDataSet ds = new qraguasDataSet();
+                QrAguasRemoteDBDataSet ds = new QrAguasRemoteDBDataSet();
                 global::System.Xml.Schema.XmlSchemaAny any1 = new global::System.Xml.Schema.XmlSchemaAny();
                 any1.Namespace = "http://www.w3.org/2001/XMLSchema";
                 any1.MinOccurs = new decimal(0);
@@ -1353,7 +1353,7 @@ namespace QrAguas {
                 type.Attributes.Add(attribute1);
                 global::System.Xml.Schema.XmlSchemaAttribute attribute2 = new global::System.Xml.Schema.XmlSchemaAttribute();
                 attribute2.Name = "tableTypeName";
-                attribute2.FixedValue = "fornecedoresDataTable";
+                attribute2.FixedValue = "FORNECEDORESDataTable";
                 type.Attributes.Add(attribute2);
                 type.Particle = sequence;
                 global::System.Xml.Schema.XmlSchema dsSchema = ds.GetSchemaSerializable();
@@ -1399,7 +1399,7 @@ namespace QrAguas {
         ///</summary>
         [global::System.Serializable()]
         [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedTableSchema")]
-        public partial class produtosDataTable : global::System.Data.TypedTableBase<produtosRow> {
+        public partial class PRODUTOSDataTable : global::System.Data.TypedTableBase<PRODUTOSRow> {
             
             private global::System.Data.DataColumn columnID_PRODUTOS;
             
@@ -1427,8 +1427,8 @@ namespace QrAguas {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public produtosDataTable() {
-                this.TableName = "produtos";
+            public PRODUTOSDataTable() {
+                this.TableName = "PRODUTOS";
                 this.BeginInit();
                 this.InitClass();
                 this.EndInit();
@@ -1436,7 +1436,7 @@ namespace QrAguas {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            internal produtosDataTable(global::System.Data.DataTable table) {
+            internal PRODUTOSDataTable(global::System.Data.DataTable table) {
                 this.TableName = table.TableName;
                 if ((table.CaseSensitive != table.DataSet.CaseSensitive)) {
                     this.CaseSensitive = table.CaseSensitive;
@@ -1453,7 +1453,7 @@ namespace QrAguas {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            protected produtosDataTable(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
+            protected PRODUTOSDataTable(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
                     base(info, context) {
                 this.InitVars();
             }
@@ -1565,34 +1565,34 @@ namespace QrAguas {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public produtosRow this[int index] {
+            public PRODUTOSRow this[int index] {
                 get {
-                    return ((produtosRow)(this.Rows[index]));
+                    return ((PRODUTOSRow)(this.Rows[index]));
                 }
             }
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public event produtosRowChangeEventHandler produtosRowChanging;
+            public event PRODUTOSRowChangeEventHandler PRODUTOSRowChanging;
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public event produtosRowChangeEventHandler produtosRowChanged;
+            public event PRODUTOSRowChangeEventHandler PRODUTOSRowChanged;
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public event produtosRowChangeEventHandler produtosRowDeleting;
+            public event PRODUTOSRowChangeEventHandler PRODUTOSRowDeleting;
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public event produtosRowChangeEventHandler produtosRowDeleted;
+            public event PRODUTOSRowChangeEventHandler PRODUTOSRowDeleted;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public void AddprodutosRow(produtosRow row) {
+            public void AddPRODUTOSRow(PRODUTOSRow row) {
                 this.Rows.Add(row);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public produtosRow AddprodutosRow(string COD_PRODUTO, string NOME_PRODUTO, string DESCRICAO, decimal PRECO_COMPRA, decimal PRECO_VENDA, fornecedoresRow parentfornecedoresRowByprodutos_ibfk_1, usuariosRow parentusuariosRowByprodutos_ibfk_2, categoriasRow parentcategoriasRowByprodutos_ibfk_3, System.DateTime DATA_FABRICACAO, System.DateTime DATA_VALIDADE, System.DateTime DATA_CADASTRO) {
-                produtosRow rowprodutosRow = ((produtosRow)(this.NewRow()));
+            public PRODUTOSRow AddPRODUTOSRow(string COD_PRODUTO, string NOME_PRODUTO, string DESCRICAO, decimal PRECO_COMPRA, decimal PRECO_VENDA, FORNECEDORESRow parentFORNECEDORESRowByPRODUTOS_ibfk_1, USUARIOSRow parentUSUARIOSRowByPRODUTOS_ibfk_2, CATEGORIASRow parentCATEGORIASRowByPRODUTOS_ibfk_3, System.DateTime DATA_FABRICACAO, System.DateTime DATA_VALIDADE, System.DateTime DATA_CADASTRO) {
+                PRODUTOSRow rowPRODUTOSRow = ((PRODUTOSRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         null,
                         COD_PRODUTO,
@@ -1606,31 +1606,31 @@ namespace QrAguas {
                         DATA_FABRICACAO,
                         DATA_VALIDADE,
                         DATA_CADASTRO};
-                if ((parentfornecedoresRowByprodutos_ibfk_1 != null)) {
-                    columnValuesArray[6] = parentfornecedoresRowByprodutos_ibfk_1[0];
+                if ((parentFORNECEDORESRowByPRODUTOS_ibfk_1 != null)) {
+                    columnValuesArray[6] = parentFORNECEDORESRowByPRODUTOS_ibfk_1[0];
                 }
-                if ((parentusuariosRowByprodutos_ibfk_2 != null)) {
-                    columnValuesArray[7] = parentusuariosRowByprodutos_ibfk_2[0];
+                if ((parentUSUARIOSRowByPRODUTOS_ibfk_2 != null)) {
+                    columnValuesArray[7] = parentUSUARIOSRowByPRODUTOS_ibfk_2[0];
                 }
-                if ((parentcategoriasRowByprodutos_ibfk_3 != null)) {
-                    columnValuesArray[8] = parentcategoriasRowByprodutos_ibfk_3[0];
+                if ((parentCATEGORIASRowByPRODUTOS_ibfk_3 != null)) {
+                    columnValuesArray[8] = parentCATEGORIASRowByPRODUTOS_ibfk_3[0];
                 }
-                rowprodutosRow.ItemArray = columnValuesArray;
-                this.Rows.Add(rowprodutosRow);
-                return rowprodutosRow;
+                rowPRODUTOSRow.ItemArray = columnValuesArray;
+                this.Rows.Add(rowPRODUTOSRow);
+                return rowPRODUTOSRow;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public produtosRow FindByID_PRODUTOS(int ID_PRODUTOS) {
-                return ((produtosRow)(this.Rows.Find(new object[] {
+            public PRODUTOSRow FindByID_PRODUTOS(int ID_PRODUTOS) {
+                return ((PRODUTOSRow)(this.Rows.Find(new object[] {
                             ID_PRODUTOS})));
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public override global::System.Data.DataTable Clone() {
-                produtosDataTable cln = ((produtosDataTable)(base.Clone()));
+                PRODUTOSDataTable cln = ((PRODUTOSDataTable)(base.Clone()));
                 cln.InitVars();
                 return cln;
             }
@@ -1638,7 +1638,7 @@ namespace QrAguas {
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             protected override global::System.Data.DataTable CreateInstance() {
-                return new produtosDataTable();
+                return new PRODUTOSDataTable();
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -1710,28 +1710,28 @@ namespace QrAguas {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public produtosRow NewprodutosRow() {
-                return ((produtosRow)(this.NewRow()));
+            public PRODUTOSRow NewPRODUTOSRow() {
+                return ((PRODUTOSRow)(this.NewRow()));
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             protected override global::System.Data.DataRow NewRowFromBuilder(global::System.Data.DataRowBuilder builder) {
-                return new produtosRow(builder);
+                return new PRODUTOSRow(builder);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             protected override global::System.Type GetRowType() {
-                return typeof(produtosRow);
+                return typeof(PRODUTOSRow);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             protected override void OnRowChanged(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowChanged(e);
-                if ((this.produtosRowChanged != null)) {
-                    this.produtosRowChanged(this, new produtosRowChangeEvent(((produtosRow)(e.Row)), e.Action));
+                if ((this.PRODUTOSRowChanged != null)) {
+                    this.PRODUTOSRowChanged(this, new PRODUTOSRowChangeEvent(((PRODUTOSRow)(e.Row)), e.Action));
                 }
             }
             
@@ -1739,8 +1739,8 @@ namespace QrAguas {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             protected override void OnRowChanging(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowChanging(e);
-                if ((this.produtosRowChanging != null)) {
-                    this.produtosRowChanging(this, new produtosRowChangeEvent(((produtosRow)(e.Row)), e.Action));
+                if ((this.PRODUTOSRowChanging != null)) {
+                    this.PRODUTOSRowChanging(this, new PRODUTOSRowChangeEvent(((PRODUTOSRow)(e.Row)), e.Action));
                 }
             }
             
@@ -1748,8 +1748,8 @@ namespace QrAguas {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             protected override void OnRowDeleted(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowDeleted(e);
-                if ((this.produtosRowDeleted != null)) {
-                    this.produtosRowDeleted(this, new produtosRowChangeEvent(((produtosRow)(e.Row)), e.Action));
+                if ((this.PRODUTOSRowDeleted != null)) {
+                    this.PRODUTOSRowDeleted(this, new PRODUTOSRowChangeEvent(((PRODUTOSRow)(e.Row)), e.Action));
                 }
             }
             
@@ -1757,14 +1757,14 @@ namespace QrAguas {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             protected override void OnRowDeleting(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowDeleting(e);
-                if ((this.produtosRowDeleting != null)) {
-                    this.produtosRowDeleting(this, new produtosRowChangeEvent(((produtosRow)(e.Row)), e.Action));
+                if ((this.PRODUTOSRowDeleting != null)) {
+                    this.PRODUTOSRowDeleting(this, new PRODUTOSRowChangeEvent(((PRODUTOSRow)(e.Row)), e.Action));
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public void RemoveprodutosRow(produtosRow row) {
+            public void RemovePRODUTOSRow(PRODUTOSRow row) {
                 this.Rows.Remove(row);
             }
             
@@ -1773,7 +1773,7 @@ namespace QrAguas {
             public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedTableSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
                 global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
                 global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
-                qraguasDataSet ds = new qraguasDataSet();
+                QrAguasRemoteDBDataSet ds = new QrAguasRemoteDBDataSet();
                 global::System.Xml.Schema.XmlSchemaAny any1 = new global::System.Xml.Schema.XmlSchemaAny();
                 any1.Namespace = "http://www.w3.org/2001/XMLSchema";
                 any1.MinOccurs = new decimal(0);
@@ -1791,7 +1791,7 @@ namespace QrAguas {
                 type.Attributes.Add(attribute1);
                 global::System.Xml.Schema.XmlSchemaAttribute attribute2 = new global::System.Xml.Schema.XmlSchemaAttribute();
                 attribute2.Name = "tableTypeName";
-                attribute2.FixedValue = "produtosDataTable";
+                attribute2.FixedValue = "PRODUTOSDataTable";
                 type.Attributes.Add(attribute2);
                 type.Particle = sequence;
                 global::System.Xml.Schema.XmlSchema dsSchema = ds.GetSchemaSerializable();
@@ -1837,7 +1837,7 @@ namespace QrAguas {
         ///</summary>
         [global::System.Serializable()]
         [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedTableSchema")]
-        public partial class tipo_usuarioDataTable : global::System.Data.TypedTableBase<tipo_usuarioRow> {
+        public partial class TIPO_USUARIODataTable : global::System.Data.TypedTableBase<TIPO_USUARIORow> {
             
             private global::System.Data.DataColumn columnID_TIPO_USUARIO;
             
@@ -1847,8 +1847,8 @@ namespace QrAguas {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public tipo_usuarioDataTable() {
-                this.TableName = "tipo_usuario";
+            public TIPO_USUARIODataTable() {
+                this.TableName = "TIPO_USUARIO";
                 this.BeginInit();
                 this.InitClass();
                 this.EndInit();
@@ -1856,7 +1856,7 @@ namespace QrAguas {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            internal tipo_usuarioDataTable(global::System.Data.DataTable table) {
+            internal TIPO_USUARIODataTable(global::System.Data.DataTable table) {
                 this.TableName = table.TableName;
                 if ((table.CaseSensitive != table.DataSet.CaseSensitive)) {
                     this.CaseSensitive = table.CaseSensitive;
@@ -1873,7 +1873,7 @@ namespace QrAguas {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            protected tipo_usuarioDataTable(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
+            protected TIPO_USUARIODataTable(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
                     base(info, context) {
                 this.InitVars();
             }
@@ -1913,54 +1913,54 @@ namespace QrAguas {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public tipo_usuarioRow this[int index] {
+            public TIPO_USUARIORow this[int index] {
                 get {
-                    return ((tipo_usuarioRow)(this.Rows[index]));
+                    return ((TIPO_USUARIORow)(this.Rows[index]));
                 }
             }
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public event tipo_usuarioRowChangeEventHandler tipo_usuarioRowChanging;
+            public event TIPO_USUARIORowChangeEventHandler TIPO_USUARIORowChanging;
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public event tipo_usuarioRowChangeEventHandler tipo_usuarioRowChanged;
+            public event TIPO_USUARIORowChangeEventHandler TIPO_USUARIORowChanged;
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public event tipo_usuarioRowChangeEventHandler tipo_usuarioRowDeleting;
+            public event TIPO_USUARIORowChangeEventHandler TIPO_USUARIORowDeleting;
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public event tipo_usuarioRowChangeEventHandler tipo_usuarioRowDeleted;
+            public event TIPO_USUARIORowChangeEventHandler TIPO_USUARIORowDeleted;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public void Addtipo_usuarioRow(tipo_usuarioRow row) {
+            public void AddTIPO_USUARIORow(TIPO_USUARIORow row) {
                 this.Rows.Add(row);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public tipo_usuarioRow Addtipo_usuarioRow(string NOME_TIPO, string DESCRICAO) {
-                tipo_usuarioRow rowtipo_usuarioRow = ((tipo_usuarioRow)(this.NewRow()));
+            public TIPO_USUARIORow AddTIPO_USUARIORow(string NOME_TIPO, string DESCRICAO) {
+                TIPO_USUARIORow rowTIPO_USUARIORow = ((TIPO_USUARIORow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         null,
                         NOME_TIPO,
                         DESCRICAO};
-                rowtipo_usuarioRow.ItemArray = columnValuesArray;
-                this.Rows.Add(rowtipo_usuarioRow);
-                return rowtipo_usuarioRow;
+                rowTIPO_USUARIORow.ItemArray = columnValuesArray;
+                this.Rows.Add(rowTIPO_USUARIORow);
+                return rowTIPO_USUARIORow;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public tipo_usuarioRow FindByID_TIPO_USUARIO(int ID_TIPO_USUARIO) {
-                return ((tipo_usuarioRow)(this.Rows.Find(new object[] {
+            public TIPO_USUARIORow FindByID_TIPO_USUARIO(int ID_TIPO_USUARIO) {
+                return ((TIPO_USUARIORow)(this.Rows.Find(new object[] {
                             ID_TIPO_USUARIO})));
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public override global::System.Data.DataTable Clone() {
-                tipo_usuarioDataTable cln = ((tipo_usuarioDataTable)(base.Clone()));
+                TIPO_USUARIODataTable cln = ((TIPO_USUARIODataTable)(base.Clone()));
                 cln.InitVars();
                 return cln;
             }
@@ -1968,7 +1968,7 @@ namespace QrAguas {
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             protected override global::System.Data.DataTable CreateInstance() {
-                return new tipo_usuarioDataTable();
+                return new TIPO_USUARIODataTable();
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -1996,34 +1996,35 @@ namespace QrAguas {
                 this.columnID_TIPO_USUARIO.AllowDBNull = false;
                 this.columnID_TIPO_USUARIO.Unique = true;
                 this.columnNOME_TIPO.AllowDBNull = false;
-                this.columnNOME_TIPO.MaxLength = 10;
+                this.columnNOME_TIPO.MaxLength = 15;
+                this.columnDESCRICAO.AllowDBNull = false;
                 this.columnDESCRICAO.MaxLength = 15;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public tipo_usuarioRow Newtipo_usuarioRow() {
-                return ((tipo_usuarioRow)(this.NewRow()));
+            public TIPO_USUARIORow NewTIPO_USUARIORow() {
+                return ((TIPO_USUARIORow)(this.NewRow()));
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             protected override global::System.Data.DataRow NewRowFromBuilder(global::System.Data.DataRowBuilder builder) {
-                return new tipo_usuarioRow(builder);
+                return new TIPO_USUARIORow(builder);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             protected override global::System.Type GetRowType() {
-                return typeof(tipo_usuarioRow);
+                return typeof(TIPO_USUARIORow);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             protected override void OnRowChanged(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowChanged(e);
-                if ((this.tipo_usuarioRowChanged != null)) {
-                    this.tipo_usuarioRowChanged(this, new tipo_usuarioRowChangeEvent(((tipo_usuarioRow)(e.Row)), e.Action));
+                if ((this.TIPO_USUARIORowChanged != null)) {
+                    this.TIPO_USUARIORowChanged(this, new TIPO_USUARIORowChangeEvent(((TIPO_USUARIORow)(e.Row)), e.Action));
                 }
             }
             
@@ -2031,8 +2032,8 @@ namespace QrAguas {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             protected override void OnRowChanging(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowChanging(e);
-                if ((this.tipo_usuarioRowChanging != null)) {
-                    this.tipo_usuarioRowChanging(this, new tipo_usuarioRowChangeEvent(((tipo_usuarioRow)(e.Row)), e.Action));
+                if ((this.TIPO_USUARIORowChanging != null)) {
+                    this.TIPO_USUARIORowChanging(this, new TIPO_USUARIORowChangeEvent(((TIPO_USUARIORow)(e.Row)), e.Action));
                 }
             }
             
@@ -2040,8 +2041,8 @@ namespace QrAguas {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             protected override void OnRowDeleted(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowDeleted(e);
-                if ((this.tipo_usuarioRowDeleted != null)) {
-                    this.tipo_usuarioRowDeleted(this, new tipo_usuarioRowChangeEvent(((tipo_usuarioRow)(e.Row)), e.Action));
+                if ((this.TIPO_USUARIORowDeleted != null)) {
+                    this.TIPO_USUARIORowDeleted(this, new TIPO_USUARIORowChangeEvent(((TIPO_USUARIORow)(e.Row)), e.Action));
                 }
             }
             
@@ -2049,14 +2050,14 @@ namespace QrAguas {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             protected override void OnRowDeleting(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowDeleting(e);
-                if ((this.tipo_usuarioRowDeleting != null)) {
-                    this.tipo_usuarioRowDeleting(this, new tipo_usuarioRowChangeEvent(((tipo_usuarioRow)(e.Row)), e.Action));
+                if ((this.TIPO_USUARIORowDeleting != null)) {
+                    this.TIPO_USUARIORowDeleting(this, new TIPO_USUARIORowChangeEvent(((TIPO_USUARIORow)(e.Row)), e.Action));
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public void Removetipo_usuarioRow(tipo_usuarioRow row) {
+            public void RemoveTIPO_USUARIORow(TIPO_USUARIORow row) {
                 this.Rows.Remove(row);
             }
             
@@ -2065,7 +2066,7 @@ namespace QrAguas {
             public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedTableSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
                 global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
                 global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
-                qraguasDataSet ds = new qraguasDataSet();
+                QrAguasRemoteDBDataSet ds = new QrAguasRemoteDBDataSet();
                 global::System.Xml.Schema.XmlSchemaAny any1 = new global::System.Xml.Schema.XmlSchemaAny();
                 any1.Namespace = "http://www.w3.org/2001/XMLSchema";
                 any1.MinOccurs = new decimal(0);
@@ -2083,7 +2084,7 @@ namespace QrAguas {
                 type.Attributes.Add(attribute1);
                 global::System.Xml.Schema.XmlSchemaAttribute attribute2 = new global::System.Xml.Schema.XmlSchemaAttribute();
                 attribute2.Name = "tableTypeName";
-                attribute2.FixedValue = "tipo_usuarioDataTable";
+                attribute2.FixedValue = "TIPO_USUARIODataTable";
                 type.Attributes.Add(attribute2);
                 type.Particle = sequence;
                 global::System.Xml.Schema.XmlSchema dsSchema = ds.GetSchemaSerializable();
@@ -2129,7 +2130,7 @@ namespace QrAguas {
         ///</summary>
         [global::System.Serializable()]
         [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedTableSchema")]
-        public partial class usuariosDataTable : global::System.Data.TypedTableBase<usuariosRow> {
+        public partial class USUARIOSDataTable : global::System.Data.TypedTableBase<USUARIOSRow> {
             
             private global::System.Data.DataColumn columnID_USUARIOS;
             
@@ -2143,16 +2144,16 @@ namespace QrAguas {
             
             private global::System.Data.DataColumn columnID_UNICO;
             
+            private global::System.Data.DataColumn columnATIVO;
+            
             private global::System.Data.DataColumn columnDATA_SENHA_ALTERADA;
             
             private global::System.Data.DataColumn columnDATA_CADASTRO;
             
-            private global::System.Data.DataColumn columnATIVO;
-            
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public usuariosDataTable() {
-                this.TableName = "usuarios";
+            public USUARIOSDataTable() {
+                this.TableName = "USUARIOS";
                 this.BeginInit();
                 this.InitClass();
                 this.EndInit();
@@ -2160,7 +2161,7 @@ namespace QrAguas {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            internal usuariosDataTable(global::System.Data.DataTable table) {
+            internal USUARIOSDataTable(global::System.Data.DataTable table) {
                 this.TableName = table.TableName;
                 if ((table.CaseSensitive != table.DataSet.CaseSensitive)) {
                     this.CaseSensitive = table.CaseSensitive;
@@ -2177,7 +2178,7 @@ namespace QrAguas {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            protected usuariosDataTable(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
+            protected USUARIOSDataTable(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
                     base(info, context) {
                 this.InitVars();
             }
@@ -2232,9 +2233,366 @@ namespace QrAguas {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public global::System.Data.DataColumn ATIVOColumn {
+                get {
+                    return this.columnATIVO;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public global::System.Data.DataColumn DATA_SENHA_ALTERADAColumn {
                 get {
                     return this.columnDATA_SENHA_ALTERADA;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public global::System.Data.DataColumn DATA_CADASTROColumn {
+                get {
+                    return this.columnDATA_CADASTRO;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            [global::System.ComponentModel.Browsable(false)]
+            public int Count {
+                get {
+                    return this.Rows.Count;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public USUARIOSRow this[int index] {
+                get {
+                    return ((USUARIOSRow)(this.Rows[index]));
+                }
+            }
+            
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public event USUARIOSRowChangeEventHandler USUARIOSRowChanging;
+            
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public event USUARIOSRowChangeEventHandler USUARIOSRowChanged;
+            
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public event USUARIOSRowChangeEventHandler USUARIOSRowDeleting;
+            
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public event USUARIOSRowChangeEventHandler USUARIOSRowDeleted;
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public void AddUSUARIOSRow(USUARIOSRow row) {
+                this.Rows.Add(row);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public USUARIOSRow AddUSUARIOSRow(string NOME_USUARIO, string SENHA, TIPO_USUARIORow parentTIPO_USUARIORowByUSUARIOS_ibfk_1, string CADASTRADO_POR, string ID_UNICO, bool ATIVO, System.DateTime DATA_SENHA_ALTERADA, System.DateTime DATA_CADASTRO) {
+                USUARIOSRow rowUSUARIOSRow = ((USUARIOSRow)(this.NewRow()));
+                object[] columnValuesArray = new object[] {
+                        null,
+                        NOME_USUARIO,
+                        SENHA,
+                        null,
+                        CADASTRADO_POR,
+                        ID_UNICO,
+                        ATIVO,
+                        DATA_SENHA_ALTERADA,
+                        DATA_CADASTRO};
+                if ((parentTIPO_USUARIORowByUSUARIOS_ibfk_1 != null)) {
+                    columnValuesArray[3] = parentTIPO_USUARIORowByUSUARIOS_ibfk_1[0];
+                }
+                rowUSUARIOSRow.ItemArray = columnValuesArray;
+                this.Rows.Add(rowUSUARIOSRow);
+                return rowUSUARIOSRow;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public USUARIOSRow FindByID_USUARIOS(int ID_USUARIOS) {
+                return ((USUARIOSRow)(this.Rows.Find(new object[] {
+                            ID_USUARIOS})));
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public override global::System.Data.DataTable Clone() {
+                USUARIOSDataTable cln = ((USUARIOSDataTable)(base.Clone()));
+                cln.InitVars();
+                return cln;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            protected override global::System.Data.DataTable CreateInstance() {
+                return new USUARIOSDataTable();
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            internal void InitVars() {
+                this.columnID_USUARIOS = base.Columns["ID_USUARIOS"];
+                this.columnNOME_USUARIO = base.Columns["NOME_USUARIO"];
+                this.columnSENHA = base.Columns["SENHA"];
+                this.columnID_TIPO_USUARIO = base.Columns["ID_TIPO_USUARIO"];
+                this.columnCADASTRADO_POR = base.Columns["CADASTRADO_POR"];
+                this.columnID_UNICO = base.Columns["ID_UNICO"];
+                this.columnATIVO = base.Columns["ATIVO"];
+                this.columnDATA_SENHA_ALTERADA = base.Columns["DATA_SENHA_ALTERADA"];
+                this.columnDATA_CADASTRO = base.Columns["DATA_CADASTRO"];
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            private void InitClass() {
+                this.columnID_USUARIOS = new global::System.Data.DataColumn("ID_USUARIOS", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnID_USUARIOS);
+                this.columnNOME_USUARIO = new global::System.Data.DataColumn("NOME_USUARIO", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnNOME_USUARIO);
+                this.columnSENHA = new global::System.Data.DataColumn("SENHA", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnSENHA);
+                this.columnID_TIPO_USUARIO = new global::System.Data.DataColumn("ID_TIPO_USUARIO", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnID_TIPO_USUARIO);
+                this.columnCADASTRADO_POR = new global::System.Data.DataColumn("CADASTRADO_POR", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnCADASTRADO_POR);
+                this.columnID_UNICO = new global::System.Data.DataColumn("ID_UNICO", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnID_UNICO);
+                this.columnATIVO = new global::System.Data.DataColumn("ATIVO", typeof(bool), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnATIVO);
+                this.columnDATA_SENHA_ALTERADA = new global::System.Data.DataColumn("DATA_SENHA_ALTERADA", typeof(global::System.DateTime), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnDATA_SENHA_ALTERADA);
+                this.columnDATA_CADASTRO = new global::System.Data.DataColumn("DATA_CADASTRO", typeof(global::System.DateTime), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnDATA_CADASTRO);
+                this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
+                                this.columnID_USUARIOS}, true));
+                this.columnID_USUARIOS.AutoIncrement = true;
+                this.columnID_USUARIOS.AutoIncrementSeed = -1;
+                this.columnID_USUARIOS.AutoIncrementStep = -1;
+                this.columnID_USUARIOS.AllowDBNull = false;
+                this.columnID_USUARIOS.Unique = true;
+                this.columnNOME_USUARIO.AllowDBNull = false;
+                this.columnNOME_USUARIO.MaxLength = 15;
+                this.columnSENHA.AllowDBNull = false;
+                this.columnSENHA.MaxLength = 400;
+                this.columnID_TIPO_USUARIO.AllowDBNull = false;
+                this.columnCADASTRADO_POR.AllowDBNull = false;
+                this.columnCADASTRADO_POR.MaxLength = 15;
+                this.columnID_UNICO.AllowDBNull = false;
+                this.columnID_UNICO.MaxLength = 36;
+                this.columnATIVO.AllowDBNull = false;
+                this.columnDATA_CADASTRO.AllowDBNull = false;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public USUARIOSRow NewUSUARIOSRow() {
+                return ((USUARIOSRow)(this.NewRow()));
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            protected override global::System.Data.DataRow NewRowFromBuilder(global::System.Data.DataRowBuilder builder) {
+                return new USUARIOSRow(builder);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            protected override global::System.Type GetRowType() {
+                return typeof(USUARIOSRow);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            protected override void OnRowChanged(global::System.Data.DataRowChangeEventArgs e) {
+                base.OnRowChanged(e);
+                if ((this.USUARIOSRowChanged != null)) {
+                    this.USUARIOSRowChanged(this, new USUARIOSRowChangeEvent(((USUARIOSRow)(e.Row)), e.Action));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            protected override void OnRowChanging(global::System.Data.DataRowChangeEventArgs e) {
+                base.OnRowChanging(e);
+                if ((this.USUARIOSRowChanging != null)) {
+                    this.USUARIOSRowChanging(this, new USUARIOSRowChangeEvent(((USUARIOSRow)(e.Row)), e.Action));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            protected override void OnRowDeleted(global::System.Data.DataRowChangeEventArgs e) {
+                base.OnRowDeleted(e);
+                if ((this.USUARIOSRowDeleted != null)) {
+                    this.USUARIOSRowDeleted(this, new USUARIOSRowChangeEvent(((USUARIOSRow)(e.Row)), e.Action));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            protected override void OnRowDeleting(global::System.Data.DataRowChangeEventArgs e) {
+                base.OnRowDeleting(e);
+                if ((this.USUARIOSRowDeleting != null)) {
+                    this.USUARIOSRowDeleting(this, new USUARIOSRowChangeEvent(((USUARIOSRow)(e.Row)), e.Action));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public void RemoveUSUARIOSRow(USUARIOSRow row) {
+                this.Rows.Remove(row);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedTableSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
+                global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
+                global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
+                QrAguasRemoteDBDataSet ds = new QrAguasRemoteDBDataSet();
+                global::System.Xml.Schema.XmlSchemaAny any1 = new global::System.Xml.Schema.XmlSchemaAny();
+                any1.Namespace = "http://www.w3.org/2001/XMLSchema";
+                any1.MinOccurs = new decimal(0);
+                any1.MaxOccurs = decimal.MaxValue;
+                any1.ProcessContents = global::System.Xml.Schema.XmlSchemaContentProcessing.Lax;
+                sequence.Items.Add(any1);
+                global::System.Xml.Schema.XmlSchemaAny any2 = new global::System.Xml.Schema.XmlSchemaAny();
+                any2.Namespace = "urn:schemas-microsoft-com:xml-diffgram-v1";
+                any2.MinOccurs = new decimal(1);
+                any2.ProcessContents = global::System.Xml.Schema.XmlSchemaContentProcessing.Lax;
+                sequence.Items.Add(any2);
+                global::System.Xml.Schema.XmlSchemaAttribute attribute1 = new global::System.Xml.Schema.XmlSchemaAttribute();
+                attribute1.Name = "namespace";
+                attribute1.FixedValue = ds.Namespace;
+                type.Attributes.Add(attribute1);
+                global::System.Xml.Schema.XmlSchemaAttribute attribute2 = new global::System.Xml.Schema.XmlSchemaAttribute();
+                attribute2.Name = "tableTypeName";
+                attribute2.FixedValue = "USUARIOSDataTable";
+                type.Attributes.Add(attribute2);
+                type.Particle = sequence;
+                global::System.Xml.Schema.XmlSchema dsSchema = ds.GetSchemaSerializable();
+                if (xs.Contains(dsSchema.TargetNamespace)) {
+                    global::System.IO.MemoryStream s1 = new global::System.IO.MemoryStream();
+                    global::System.IO.MemoryStream s2 = new global::System.IO.MemoryStream();
+                    try {
+                        global::System.Xml.Schema.XmlSchema schema = null;
+                        dsSchema.Write(s1);
+                        for (global::System.Collections.IEnumerator schemas = xs.Schemas(dsSchema.TargetNamespace).GetEnumerator(); schemas.MoveNext(); ) {
+                            schema = ((global::System.Xml.Schema.XmlSchema)(schemas.Current));
+                            s2.SetLength(0);
+                            schema.Write(s2);
+                            if ((s1.Length == s2.Length)) {
+                                s1.Position = 0;
+                                s2.Position = 0;
+                                for (; ((s1.Position != s1.Length) 
+                                            && (s1.ReadByte() == s2.ReadByte())); ) {
+                                    ;
+                                }
+                                if ((s1.Position == s1.Length)) {
+                                    return type;
+                                }
+                            }
+                        }
+                    }
+                    finally {
+                        if ((s1 != null)) {
+                            s1.Close();
+                        }
+                        if ((s2 != null)) {
+                            s2.Close();
+                        }
+                    }
+                }
+                xs.Add(dsSchema);
+                return type;
+            }
+        }
+        
+        /// <summary>
+        ///Represents the strongly named DataTable class.
+        ///</summary>
+        [global::System.Serializable()]
+        [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedTableSchema")]
+        public partial class SearchUserDGVUsuariosDataTable : global::System.Data.TypedTableBase<SearchUserDGVUsuariosRow> {
+            
+            private global::System.Data.DataColumn columnID_USUARIOS;
+            
+            private global::System.Data.DataColumn columnNOME_USUARIO;
+            
+            private global::System.Data.DataColumn columnDESCRICAO;
+            
+            private global::System.Data.DataColumn columnCADASTRADO_POR;
+            
+            private global::System.Data.DataColumn columnDATA_CADASTRO;
+            
+            private global::System.Data.DataColumn columnATIVO;
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public SearchUserDGVUsuariosDataTable() {
+                this.TableName = "SearchUserDGVUsuarios";
+                this.BeginInit();
+                this.InitClass();
+                this.EndInit();
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            internal SearchUserDGVUsuariosDataTable(global::System.Data.DataTable table) {
+                this.TableName = table.TableName;
+                if ((table.CaseSensitive != table.DataSet.CaseSensitive)) {
+                    this.CaseSensitive = table.CaseSensitive;
+                }
+                if ((table.Locale.ToString() != table.DataSet.Locale.ToString())) {
+                    this.Locale = table.Locale;
+                }
+                if ((table.Namespace != table.DataSet.Namespace)) {
+                    this.Namespace = table.Namespace;
+                }
+                this.Prefix = table.Prefix;
+                this.MinimumCapacity = table.MinimumCapacity;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            protected SearchUserDGVUsuariosDataTable(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
+                    base(info, context) {
+                this.InitVars();
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public global::System.Data.DataColumn ID_USUARIOSColumn {
+                get {
+                    return this.columnID_USUARIOS;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public global::System.Data.DataColumn NOME_USUARIOColumn {
+                get {
+                    return this.columnNOME_USUARIO;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public global::System.Data.DataColumn DESCRICAOColumn {
+                get {
+                    return this.columnDESCRICAO;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public global::System.Data.DataColumn CADASTRADO_PORColumn {
+                get {
+                    return this.columnCADASTRADO_POR;
                 }
             }
             
@@ -2265,63 +2623,57 @@ namespace QrAguas {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public usuariosRow this[int index] {
+            public SearchUserDGVUsuariosRow this[int index] {
                 get {
-                    return ((usuariosRow)(this.Rows[index]));
+                    return ((SearchUserDGVUsuariosRow)(this.Rows[index]));
                 }
             }
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public event usuariosRowChangeEventHandler usuariosRowChanging;
+            public event SearchUserDGVUsuariosRowChangeEventHandler SearchUserDGVUsuariosRowChanging;
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public event usuariosRowChangeEventHandler usuariosRowChanged;
+            public event SearchUserDGVUsuariosRowChangeEventHandler SearchUserDGVUsuariosRowChanged;
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public event usuariosRowChangeEventHandler usuariosRowDeleting;
+            public event SearchUserDGVUsuariosRowChangeEventHandler SearchUserDGVUsuariosRowDeleting;
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public event usuariosRowChangeEventHandler usuariosRowDeleted;
+            public event SearchUserDGVUsuariosRowChangeEventHandler SearchUserDGVUsuariosRowDeleted;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public void AddusuariosRow(usuariosRow row) {
+            public void AddSearchUserDGVUsuariosRow(SearchUserDGVUsuariosRow row) {
                 this.Rows.Add(row);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public usuariosRow AddusuariosRow(string NOME_USUARIO, string SENHA, tipo_usuarioRow parenttipo_usuarioRowByusuarios_ibfk_1, string CADASTRADO_POR, string ID_UNICO, System.DateTime DATA_SENHA_ALTERADA, System.DateTime DATA_CADASTRO, bool ATIVO) {
-                usuariosRow rowusuariosRow = ((usuariosRow)(this.NewRow()));
+            public SearchUserDGVUsuariosRow AddSearchUserDGVUsuariosRow(string NOME_USUARIO, string DESCRICAO, string CADASTRADO_POR, System.DateTime DATA_CADASTRO, bool ATIVO) {
+                SearchUserDGVUsuariosRow rowSearchUserDGVUsuariosRow = ((SearchUserDGVUsuariosRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         null,
                         NOME_USUARIO,
-                        SENHA,
-                        null,
+                        DESCRICAO,
                         CADASTRADO_POR,
-                        ID_UNICO,
-                        DATA_SENHA_ALTERADA,
                         DATA_CADASTRO,
                         ATIVO};
-                if ((parenttipo_usuarioRowByusuarios_ibfk_1 != null)) {
-                    columnValuesArray[3] = parenttipo_usuarioRowByusuarios_ibfk_1[0];
-                }
-                rowusuariosRow.ItemArray = columnValuesArray;
-                this.Rows.Add(rowusuariosRow);
-                return rowusuariosRow;
+                rowSearchUserDGVUsuariosRow.ItemArray = columnValuesArray;
+                this.Rows.Add(rowSearchUserDGVUsuariosRow);
+                return rowSearchUserDGVUsuariosRow;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public usuariosRow FindByID_USUARIOS(int ID_USUARIOS) {
-                return ((usuariosRow)(this.Rows.Find(new object[] {
+            public SearchUserDGVUsuariosRow FindByID_USUARIOS(int ID_USUARIOS) {
+                return ((SearchUserDGVUsuariosRow)(this.Rows.Find(new object[] {
                             ID_USUARIOS})));
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public override global::System.Data.DataTable Clone() {
-                usuariosDataTable cln = ((usuariosDataTable)(base.Clone()));
+                SearchUserDGVUsuariosDataTable cln = ((SearchUserDGVUsuariosDataTable)(base.Clone()));
                 cln.InitVars();
                 return cln;
             }
@@ -2329,7 +2681,7 @@ namespace QrAguas {
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             protected override global::System.Data.DataTable CreateInstance() {
-                return new usuariosDataTable();
+                return new SearchUserDGVUsuariosDataTable();
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -2337,11 +2689,8 @@ namespace QrAguas {
             internal void InitVars() {
                 this.columnID_USUARIOS = base.Columns["ID_USUARIOS"];
                 this.columnNOME_USUARIO = base.Columns["NOME_USUARIO"];
-                this.columnSENHA = base.Columns["SENHA"];
-                this.columnID_TIPO_USUARIO = base.Columns["ID_TIPO_USUARIO"];
+                this.columnDESCRICAO = base.Columns["DESCRICAO"];
                 this.columnCADASTRADO_POR = base.Columns["CADASTRADO_POR"];
-                this.columnID_UNICO = base.Columns["ID_UNICO"];
-                this.columnDATA_SENHA_ALTERADA = base.Columns["DATA_SENHA_ALTERADA"];
                 this.columnDATA_CADASTRO = base.Columns["DATA_CADASTRO"];
                 this.columnATIVO = base.Columns["ATIVO"];
             }
@@ -2353,16 +2702,10 @@ namespace QrAguas {
                 base.Columns.Add(this.columnID_USUARIOS);
                 this.columnNOME_USUARIO = new global::System.Data.DataColumn("NOME_USUARIO", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnNOME_USUARIO);
-                this.columnSENHA = new global::System.Data.DataColumn("SENHA", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnSENHA);
-                this.columnID_TIPO_USUARIO = new global::System.Data.DataColumn("ID_TIPO_USUARIO", typeof(int), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnID_TIPO_USUARIO);
+                this.columnDESCRICAO = new global::System.Data.DataColumn("DESCRICAO", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnDESCRICAO);
                 this.columnCADASTRADO_POR = new global::System.Data.DataColumn("CADASTRADO_POR", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnCADASTRADO_POR);
-                this.columnID_UNICO = new global::System.Data.DataColumn("ID_UNICO", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnID_UNICO);
-                this.columnDATA_SENHA_ALTERADA = new global::System.Data.DataColumn("DATA_SENHA_ALTERADA", typeof(global::System.DateTime), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnDATA_SENHA_ALTERADA);
                 this.columnDATA_CADASTRO = new global::System.Data.DataColumn("DATA_CADASTRO", typeof(global::System.DateTime), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnDATA_CADASTRO);
                 this.columnATIVO = new global::System.Data.DataColumn("ATIVO", typeof(bool), null, global::System.Data.MappingType.Element);
@@ -2376,41 +2719,38 @@ namespace QrAguas {
                 this.columnID_USUARIOS.Unique = true;
                 this.columnNOME_USUARIO.AllowDBNull = false;
                 this.columnNOME_USUARIO.MaxLength = 15;
-                this.columnSENHA.AllowDBNull = false;
-                this.columnSENHA.MaxLength = 400;
-                this.columnID_TIPO_USUARIO.AllowDBNull = false;
+                this.columnDESCRICAO.AllowDBNull = false;
+                this.columnDESCRICAO.MaxLength = 15;
                 this.columnCADASTRADO_POR.AllowDBNull = false;
                 this.columnCADASTRADO_POR.MaxLength = 15;
-                this.columnID_UNICO.AllowDBNull = false;
-                this.columnID_UNICO.MaxLength = 36;
                 this.columnDATA_CADASTRO.AllowDBNull = false;
                 this.columnATIVO.AllowDBNull = false;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public usuariosRow NewusuariosRow() {
-                return ((usuariosRow)(this.NewRow()));
+            public SearchUserDGVUsuariosRow NewSearchUserDGVUsuariosRow() {
+                return ((SearchUserDGVUsuariosRow)(this.NewRow()));
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             protected override global::System.Data.DataRow NewRowFromBuilder(global::System.Data.DataRowBuilder builder) {
-                return new usuariosRow(builder);
+                return new SearchUserDGVUsuariosRow(builder);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             protected override global::System.Type GetRowType() {
-                return typeof(usuariosRow);
+                return typeof(SearchUserDGVUsuariosRow);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             protected override void OnRowChanged(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowChanged(e);
-                if ((this.usuariosRowChanged != null)) {
-                    this.usuariosRowChanged(this, new usuariosRowChangeEvent(((usuariosRow)(e.Row)), e.Action));
+                if ((this.SearchUserDGVUsuariosRowChanged != null)) {
+                    this.SearchUserDGVUsuariosRowChanged(this, new SearchUserDGVUsuariosRowChangeEvent(((SearchUserDGVUsuariosRow)(e.Row)), e.Action));
                 }
             }
             
@@ -2418,8 +2758,8 @@ namespace QrAguas {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             protected override void OnRowChanging(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowChanging(e);
-                if ((this.usuariosRowChanging != null)) {
-                    this.usuariosRowChanging(this, new usuariosRowChangeEvent(((usuariosRow)(e.Row)), e.Action));
+                if ((this.SearchUserDGVUsuariosRowChanging != null)) {
+                    this.SearchUserDGVUsuariosRowChanging(this, new SearchUserDGVUsuariosRowChangeEvent(((SearchUserDGVUsuariosRow)(e.Row)), e.Action));
                 }
             }
             
@@ -2427,8 +2767,8 @@ namespace QrAguas {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             protected override void OnRowDeleted(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowDeleted(e);
-                if ((this.usuariosRowDeleted != null)) {
-                    this.usuariosRowDeleted(this, new usuariosRowChangeEvent(((usuariosRow)(e.Row)), e.Action));
+                if ((this.SearchUserDGVUsuariosRowDeleted != null)) {
+                    this.SearchUserDGVUsuariosRowDeleted(this, new SearchUserDGVUsuariosRowChangeEvent(((SearchUserDGVUsuariosRow)(e.Row)), e.Action));
                 }
             }
             
@@ -2436,14 +2776,14 @@ namespace QrAguas {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             protected override void OnRowDeleting(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowDeleting(e);
-                if ((this.usuariosRowDeleting != null)) {
-                    this.usuariosRowDeleting(this, new usuariosRowChangeEvent(((usuariosRow)(e.Row)), e.Action));
+                if ((this.SearchUserDGVUsuariosRowDeleting != null)) {
+                    this.SearchUserDGVUsuariosRowDeleting(this, new SearchUserDGVUsuariosRowChangeEvent(((SearchUserDGVUsuariosRow)(e.Row)), e.Action));
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public void RemoveusuariosRow(usuariosRow row) {
+            public void RemoveSearchUserDGVUsuariosRow(SearchUserDGVUsuariosRow row) {
                 this.Rows.Remove(row);
             }
             
@@ -2452,7 +2792,7 @@ namespace QrAguas {
             public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedTableSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
                 global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
                 global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
-                qraguasDataSet ds = new qraguasDataSet();
+                QrAguasRemoteDBDataSet ds = new QrAguasRemoteDBDataSet();
                 global::System.Xml.Schema.XmlSchemaAny any1 = new global::System.Xml.Schema.XmlSchemaAny();
                 any1.Namespace = "http://www.w3.org/2001/XMLSchema";
                 any1.MinOccurs = new decimal(0);
@@ -2470,7 +2810,7 @@ namespace QrAguas {
                 type.Attributes.Add(attribute1);
                 global::System.Xml.Schema.XmlSchemaAttribute attribute2 = new global::System.Xml.Schema.XmlSchemaAttribute();
                 attribute2.Name = "tableTypeName";
-                attribute2.FixedValue = "usuariosDataTable";
+                attribute2.FixedValue = "SearchUserDGVUsuariosDataTable";
                 type.Attributes.Add(attribute2);
                 type.Particle = sequence;
                 global::System.Xml.Schema.XmlSchema dsSchema = ds.GetSchemaSerializable();
@@ -2516,411 +2856,7 @@ namespace QrAguas {
         ///</summary>
         [global::System.Serializable()]
         [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedTableSchema")]
-        public partial class Relatorio_ProdutosDataTable : global::System.Data.TypedTableBase<Relatorio_ProdutosRow> {
-            
-            private global::System.Data.DataColumn columnCOD_PRODUTO;
-            
-            private global::System.Data.DataColumn columnNOME_PRODUTO;
-            
-            private global::System.Data.DataColumn columnDESCRICAO;
-            
-            private global::System.Data.DataColumn columnNOME_CATEGORIA;
-            
-            private global::System.Data.DataColumn columnRAZAO_SOCIAL;
-            
-            private global::System.Data.DataColumn columnPRECO_COMPRA;
-            
-            private global::System.Data.DataColumn columnPRECO_VENDA;
-            
-            private global::System.Data.DataColumn columnDATA_FABRICACAO;
-            
-            private global::System.Data.DataColumn columnDATA_VALIDADE;
-            
-            private global::System.Data.DataColumn columnDATA_CADASTRO;
-            
-            private global::System.Data.DataColumn columnNOME_USUARIO;
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public Relatorio_ProdutosDataTable() {
-                this.TableName = "Relatorio_Produtos";
-                this.BeginInit();
-                this.InitClass();
-                this.EndInit();
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            internal Relatorio_ProdutosDataTable(global::System.Data.DataTable table) {
-                this.TableName = table.TableName;
-                if ((table.CaseSensitive != table.DataSet.CaseSensitive)) {
-                    this.CaseSensitive = table.CaseSensitive;
-                }
-                if ((table.Locale.ToString() != table.DataSet.Locale.ToString())) {
-                    this.Locale = table.Locale;
-                }
-                if ((table.Namespace != table.DataSet.Namespace)) {
-                    this.Namespace = table.Namespace;
-                }
-                this.Prefix = table.Prefix;
-                this.MinimumCapacity = table.MinimumCapacity;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            protected Relatorio_ProdutosDataTable(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
-                    base(info, context) {
-                this.InitVars();
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public global::System.Data.DataColumn COD_PRODUTOColumn {
-                get {
-                    return this.columnCOD_PRODUTO;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public global::System.Data.DataColumn NOME_PRODUTOColumn {
-                get {
-                    return this.columnNOME_PRODUTO;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public global::System.Data.DataColumn DESCRICAOColumn {
-                get {
-                    return this.columnDESCRICAO;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public global::System.Data.DataColumn NOME_CATEGORIAColumn {
-                get {
-                    return this.columnNOME_CATEGORIA;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public global::System.Data.DataColumn RAZAO_SOCIALColumn {
-                get {
-                    return this.columnRAZAO_SOCIAL;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public global::System.Data.DataColumn PRECO_COMPRAColumn {
-                get {
-                    return this.columnPRECO_COMPRA;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public global::System.Data.DataColumn PRECO_VENDAColumn {
-                get {
-                    return this.columnPRECO_VENDA;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public global::System.Data.DataColumn DATA_FABRICACAOColumn {
-                get {
-                    return this.columnDATA_FABRICACAO;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public global::System.Data.DataColumn DATA_VALIDADEColumn {
-                get {
-                    return this.columnDATA_VALIDADE;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public global::System.Data.DataColumn DATA_CADASTROColumn {
-                get {
-                    return this.columnDATA_CADASTRO;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public global::System.Data.DataColumn NOME_USUARIOColumn {
-                get {
-                    return this.columnNOME_USUARIO;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            [global::System.ComponentModel.Browsable(false)]
-            public int Count {
-                get {
-                    return this.Rows.Count;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public Relatorio_ProdutosRow this[int index] {
-                get {
-                    return ((Relatorio_ProdutosRow)(this.Rows[index]));
-                }
-            }
-            
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public event Relatorio_ProdutosRowChangeEventHandler Relatorio_ProdutosRowChanging;
-            
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public event Relatorio_ProdutosRowChangeEventHandler Relatorio_ProdutosRowChanged;
-            
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public event Relatorio_ProdutosRowChangeEventHandler Relatorio_ProdutosRowDeleting;
-            
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public event Relatorio_ProdutosRowChangeEventHandler Relatorio_ProdutosRowDeleted;
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public void AddRelatorio_ProdutosRow(Relatorio_ProdutosRow row) {
-                this.Rows.Add(row);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public Relatorio_ProdutosRow AddRelatorio_ProdutosRow(string COD_PRODUTO, string NOME_PRODUTO, string DESCRICAO, string NOME_CATEGORIA, string RAZAO_SOCIAL, decimal PRECO_COMPRA, decimal PRECO_VENDA, System.DateTime DATA_FABRICACAO, System.DateTime DATA_VALIDADE, System.DateTime DATA_CADASTRO, string NOME_USUARIO) {
-                Relatorio_ProdutosRow rowRelatorio_ProdutosRow = ((Relatorio_ProdutosRow)(this.NewRow()));
-                object[] columnValuesArray = new object[] {
-                        COD_PRODUTO,
-                        NOME_PRODUTO,
-                        DESCRICAO,
-                        NOME_CATEGORIA,
-                        RAZAO_SOCIAL,
-                        PRECO_COMPRA,
-                        PRECO_VENDA,
-                        DATA_FABRICACAO,
-                        DATA_VALIDADE,
-                        DATA_CADASTRO,
-                        NOME_USUARIO};
-                rowRelatorio_ProdutosRow.ItemArray = columnValuesArray;
-                this.Rows.Add(rowRelatorio_ProdutosRow);
-                return rowRelatorio_ProdutosRow;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public override global::System.Data.DataTable Clone() {
-                Relatorio_ProdutosDataTable cln = ((Relatorio_ProdutosDataTable)(base.Clone()));
-                cln.InitVars();
-                return cln;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            protected override global::System.Data.DataTable CreateInstance() {
-                return new Relatorio_ProdutosDataTable();
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            internal void InitVars() {
-                this.columnCOD_PRODUTO = base.Columns["COD_PRODUTO"];
-                this.columnNOME_PRODUTO = base.Columns["NOME_PRODUTO"];
-                this.columnDESCRICAO = base.Columns["DESCRICAO"];
-                this.columnNOME_CATEGORIA = base.Columns["NOME_CATEGORIA"];
-                this.columnRAZAO_SOCIAL = base.Columns["RAZAO_SOCIAL"];
-                this.columnPRECO_COMPRA = base.Columns["PRECO_COMPRA"];
-                this.columnPRECO_VENDA = base.Columns["PRECO_VENDA"];
-                this.columnDATA_FABRICACAO = base.Columns["DATA_FABRICACAO"];
-                this.columnDATA_VALIDADE = base.Columns["DATA_VALIDADE"];
-                this.columnDATA_CADASTRO = base.Columns["DATA_CADASTRO"];
-                this.columnNOME_USUARIO = base.Columns["NOME_USUARIO"];
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            private void InitClass() {
-                this.columnCOD_PRODUTO = new global::System.Data.DataColumn("COD_PRODUTO", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnCOD_PRODUTO);
-                this.columnNOME_PRODUTO = new global::System.Data.DataColumn("NOME_PRODUTO", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnNOME_PRODUTO);
-                this.columnDESCRICAO = new global::System.Data.DataColumn("DESCRICAO", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnDESCRICAO);
-                this.columnNOME_CATEGORIA = new global::System.Data.DataColumn("NOME_CATEGORIA", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnNOME_CATEGORIA);
-                this.columnRAZAO_SOCIAL = new global::System.Data.DataColumn("RAZAO_SOCIAL", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnRAZAO_SOCIAL);
-                this.columnPRECO_COMPRA = new global::System.Data.DataColumn("PRECO_COMPRA", typeof(decimal), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnPRECO_COMPRA);
-                this.columnPRECO_VENDA = new global::System.Data.DataColumn("PRECO_VENDA", typeof(decimal), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnPRECO_VENDA);
-                this.columnDATA_FABRICACAO = new global::System.Data.DataColumn("DATA_FABRICACAO", typeof(global::System.DateTime), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnDATA_FABRICACAO);
-                this.columnDATA_VALIDADE = new global::System.Data.DataColumn("DATA_VALIDADE", typeof(global::System.DateTime), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnDATA_VALIDADE);
-                this.columnDATA_CADASTRO = new global::System.Data.DataColumn("DATA_CADASTRO", typeof(global::System.DateTime), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnDATA_CADASTRO);
-                this.columnNOME_USUARIO = new global::System.Data.DataColumn("NOME_USUARIO", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnNOME_USUARIO);
-                this.columnCOD_PRODUTO.AllowDBNull = false;
-                this.columnCOD_PRODUTO.MaxLength = 15;
-                this.columnNOME_PRODUTO.AllowDBNull = false;
-                this.columnNOME_PRODUTO.MaxLength = 30;
-                this.columnDESCRICAO.AllowDBNull = false;
-                this.columnDESCRICAO.MaxLength = 50;
-                this.columnNOME_CATEGORIA.AllowDBNull = false;
-                this.columnNOME_CATEGORIA.MaxLength = 25;
-                this.columnRAZAO_SOCIAL.AllowDBNull = false;
-                this.columnRAZAO_SOCIAL.MaxLength = 30;
-                this.columnPRECO_COMPRA.AllowDBNull = false;
-                this.columnPRECO_VENDA.AllowDBNull = false;
-                this.columnDATA_FABRICACAO.AllowDBNull = false;
-                this.columnDATA_VALIDADE.AllowDBNull = false;
-                this.columnDATA_CADASTRO.AllowDBNull = false;
-                this.columnNOME_USUARIO.AllowDBNull = false;
-                this.columnNOME_USUARIO.MaxLength = 15;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public Relatorio_ProdutosRow NewRelatorio_ProdutosRow() {
-                return ((Relatorio_ProdutosRow)(this.NewRow()));
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            protected override global::System.Data.DataRow NewRowFromBuilder(global::System.Data.DataRowBuilder builder) {
-                return new Relatorio_ProdutosRow(builder);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            protected override global::System.Type GetRowType() {
-                return typeof(Relatorio_ProdutosRow);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            protected override void OnRowChanged(global::System.Data.DataRowChangeEventArgs e) {
-                base.OnRowChanged(e);
-                if ((this.Relatorio_ProdutosRowChanged != null)) {
-                    this.Relatorio_ProdutosRowChanged(this, new Relatorio_ProdutosRowChangeEvent(((Relatorio_ProdutosRow)(e.Row)), e.Action));
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            protected override void OnRowChanging(global::System.Data.DataRowChangeEventArgs e) {
-                base.OnRowChanging(e);
-                if ((this.Relatorio_ProdutosRowChanging != null)) {
-                    this.Relatorio_ProdutosRowChanging(this, new Relatorio_ProdutosRowChangeEvent(((Relatorio_ProdutosRow)(e.Row)), e.Action));
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            protected override void OnRowDeleted(global::System.Data.DataRowChangeEventArgs e) {
-                base.OnRowDeleted(e);
-                if ((this.Relatorio_ProdutosRowDeleted != null)) {
-                    this.Relatorio_ProdutosRowDeleted(this, new Relatorio_ProdutosRowChangeEvent(((Relatorio_ProdutosRow)(e.Row)), e.Action));
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            protected override void OnRowDeleting(global::System.Data.DataRowChangeEventArgs e) {
-                base.OnRowDeleting(e);
-                if ((this.Relatorio_ProdutosRowDeleting != null)) {
-                    this.Relatorio_ProdutosRowDeleting(this, new Relatorio_ProdutosRowChangeEvent(((Relatorio_ProdutosRow)(e.Row)), e.Action));
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public void RemoveRelatorio_ProdutosRow(Relatorio_ProdutosRow row) {
-                this.Rows.Remove(row);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedTableSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
-                global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
-                global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
-                qraguasDataSet ds = new qraguasDataSet();
-                global::System.Xml.Schema.XmlSchemaAny any1 = new global::System.Xml.Schema.XmlSchemaAny();
-                any1.Namespace = "http://www.w3.org/2001/XMLSchema";
-                any1.MinOccurs = new decimal(0);
-                any1.MaxOccurs = decimal.MaxValue;
-                any1.ProcessContents = global::System.Xml.Schema.XmlSchemaContentProcessing.Lax;
-                sequence.Items.Add(any1);
-                global::System.Xml.Schema.XmlSchemaAny any2 = new global::System.Xml.Schema.XmlSchemaAny();
-                any2.Namespace = "urn:schemas-microsoft-com:xml-diffgram-v1";
-                any2.MinOccurs = new decimal(1);
-                any2.ProcessContents = global::System.Xml.Schema.XmlSchemaContentProcessing.Lax;
-                sequence.Items.Add(any2);
-                global::System.Xml.Schema.XmlSchemaAttribute attribute1 = new global::System.Xml.Schema.XmlSchemaAttribute();
-                attribute1.Name = "namespace";
-                attribute1.FixedValue = ds.Namespace;
-                type.Attributes.Add(attribute1);
-                global::System.Xml.Schema.XmlSchemaAttribute attribute2 = new global::System.Xml.Schema.XmlSchemaAttribute();
-                attribute2.Name = "tableTypeName";
-                attribute2.FixedValue = "Relatorio_ProdutosDataTable";
-                type.Attributes.Add(attribute2);
-                type.Particle = sequence;
-                global::System.Xml.Schema.XmlSchema dsSchema = ds.GetSchemaSerializable();
-                if (xs.Contains(dsSchema.TargetNamespace)) {
-                    global::System.IO.MemoryStream s1 = new global::System.IO.MemoryStream();
-                    global::System.IO.MemoryStream s2 = new global::System.IO.MemoryStream();
-                    try {
-                        global::System.Xml.Schema.XmlSchema schema = null;
-                        dsSchema.Write(s1);
-                        for (global::System.Collections.IEnumerator schemas = xs.Schemas(dsSchema.TargetNamespace).GetEnumerator(); schemas.MoveNext(); ) {
-                            schema = ((global::System.Xml.Schema.XmlSchema)(schemas.Current));
-                            s2.SetLength(0);
-                            schema.Write(s2);
-                            if ((s1.Length == s2.Length)) {
-                                s1.Position = 0;
-                                s2.Position = 0;
-                                for (; ((s1.Position != s1.Length) 
-                                            && (s1.ReadByte() == s2.ReadByte())); ) {
-                                    ;
-                                }
-                                if ((s1.Position == s1.Length)) {
-                                    return type;
-                                }
-                            }
-                        }
-                    }
-                    finally {
-                        if ((s1 != null)) {
-                            s1.Close();
-                        }
-                        if ((s2 != null)) {
-                            s2.Close();
-                        }
-                    }
-                }
-                xs.Add(dsSchema);
-                return type;
-            }
-        }
-        
-        /// <summary>
-        ///Represents the strongly named DataTable class.
-        ///</summary>
-        [global::System.Serializable()]
-        [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedTableSchema")]
-        public partial class Relatorio_FornecedoresDataTable : global::System.Data.TypedTableBase<Relatorio_FornecedoresRow> {
+        public partial class ReportProviderDataTable : global::System.Data.TypedTableBase<ReportProviderRow> {
             
             private global::System.Data.DataColumn columnRAZAO_SOCIAL;
             
@@ -2952,8 +2888,8 @@ namespace QrAguas {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public Relatorio_FornecedoresDataTable() {
-                this.TableName = "Relatorio_Fornecedores";
+            public ReportProviderDataTable() {
+                this.TableName = "ReportProvider";
                 this.BeginInit();
                 this.InitClass();
                 this.EndInit();
@@ -2961,7 +2897,7 @@ namespace QrAguas {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            internal Relatorio_FornecedoresDataTable(global::System.Data.DataTable table) {
+            internal ReportProviderDataTable(global::System.Data.DataTable table) {
                 this.TableName = table.TableName;
                 if ((table.CaseSensitive != table.DataSet.CaseSensitive)) {
                     this.CaseSensitive = table.CaseSensitive;
@@ -2978,7 +2914,7 @@ namespace QrAguas {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            protected Relatorio_FornecedoresDataTable(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
+            protected ReportProviderDataTable(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
                     base(info, context) {
                 this.InitVars();
             }
@@ -3106,34 +3042,34 @@ namespace QrAguas {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public Relatorio_FornecedoresRow this[int index] {
+            public ReportProviderRow this[int index] {
                 get {
-                    return ((Relatorio_FornecedoresRow)(this.Rows[index]));
+                    return ((ReportProviderRow)(this.Rows[index]));
                 }
             }
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public event Relatorio_FornecedoresRowChangeEventHandler Relatorio_FornecedoresRowChanging;
+            public event ReportProviderRowChangeEventHandler ReportProviderRowChanging;
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public event Relatorio_FornecedoresRowChangeEventHandler Relatorio_FornecedoresRowChanged;
+            public event ReportProviderRowChangeEventHandler ReportProviderRowChanged;
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public event Relatorio_FornecedoresRowChangeEventHandler Relatorio_FornecedoresRowDeleting;
+            public event ReportProviderRowChangeEventHandler ReportProviderRowDeleting;
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public event Relatorio_FornecedoresRowChangeEventHandler Relatorio_FornecedoresRowDeleted;
+            public event ReportProviderRowChangeEventHandler ReportProviderRowDeleted;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public void AddRelatorio_FornecedoresRow(Relatorio_FornecedoresRow row) {
+            public void AddReportProviderRow(ReportProviderRow row) {
                 this.Rows.Add(row);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public Relatorio_FornecedoresRow AddRelatorio_FornecedoresRow(string RAZAO_SOCIAL, string CNPJ, string ENDERECO, int NUMERO, string BAIRRO, string CIDADE, string CEP, string COMPLEMENTO, string UF, string TELEFONE, string CELULAR, string EMAIL, System.DateTime DATA_CADASTRO, string NOME_USUARIO) {
-                Relatorio_FornecedoresRow rowRelatorio_FornecedoresRow = ((Relatorio_FornecedoresRow)(this.NewRow()));
+            public ReportProviderRow AddReportProviderRow(string RAZAO_SOCIAL, string CNPJ, string ENDERECO, int NUMERO, string BAIRRO, string CIDADE, string CEP, string COMPLEMENTO, string UF, string TELEFONE, string CELULAR, string EMAIL, System.DateTime DATA_CADASTRO, string NOME_USUARIO) {
+                ReportProviderRow rowReportProviderRow = ((ReportProviderRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         RAZAO_SOCIAL,
                         CNPJ,
@@ -3149,15 +3085,15 @@ namespace QrAguas {
                         EMAIL,
                         DATA_CADASTRO,
                         NOME_USUARIO};
-                rowRelatorio_FornecedoresRow.ItemArray = columnValuesArray;
-                this.Rows.Add(rowRelatorio_FornecedoresRow);
-                return rowRelatorio_FornecedoresRow;
+                rowReportProviderRow.ItemArray = columnValuesArray;
+                this.Rows.Add(rowReportProviderRow);
+                return rowReportProviderRow;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public override global::System.Data.DataTable Clone() {
-                Relatorio_FornecedoresDataTable cln = ((Relatorio_FornecedoresDataTable)(base.Clone()));
+                ReportProviderDataTable cln = ((ReportProviderDataTable)(base.Clone()));
                 cln.InitVars();
                 return cln;
             }
@@ -3165,7 +3101,7 @@ namespace QrAguas {
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             protected override global::System.Data.DataTable CreateInstance() {
-                return new Relatorio_FornecedoresDataTable();
+                return new ReportProviderDataTable();
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -3245,28 +3181,28 @@ namespace QrAguas {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public Relatorio_FornecedoresRow NewRelatorio_FornecedoresRow() {
-                return ((Relatorio_FornecedoresRow)(this.NewRow()));
+            public ReportProviderRow NewReportProviderRow() {
+                return ((ReportProviderRow)(this.NewRow()));
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             protected override global::System.Data.DataRow NewRowFromBuilder(global::System.Data.DataRowBuilder builder) {
-                return new Relatorio_FornecedoresRow(builder);
+                return new ReportProviderRow(builder);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             protected override global::System.Type GetRowType() {
-                return typeof(Relatorio_FornecedoresRow);
+                return typeof(ReportProviderRow);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             protected override void OnRowChanged(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowChanged(e);
-                if ((this.Relatorio_FornecedoresRowChanged != null)) {
-                    this.Relatorio_FornecedoresRowChanged(this, new Relatorio_FornecedoresRowChangeEvent(((Relatorio_FornecedoresRow)(e.Row)), e.Action));
+                if ((this.ReportProviderRowChanged != null)) {
+                    this.ReportProviderRowChanged(this, new ReportProviderRowChangeEvent(((ReportProviderRow)(e.Row)), e.Action));
                 }
             }
             
@@ -3274,8 +3210,8 @@ namespace QrAguas {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             protected override void OnRowChanging(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowChanging(e);
-                if ((this.Relatorio_FornecedoresRowChanging != null)) {
-                    this.Relatorio_FornecedoresRowChanging(this, new Relatorio_FornecedoresRowChangeEvent(((Relatorio_FornecedoresRow)(e.Row)), e.Action));
+                if ((this.ReportProviderRowChanging != null)) {
+                    this.ReportProviderRowChanging(this, new ReportProviderRowChangeEvent(((ReportProviderRow)(e.Row)), e.Action));
                 }
             }
             
@@ -3283,8 +3219,8 @@ namespace QrAguas {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             protected override void OnRowDeleted(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowDeleted(e);
-                if ((this.Relatorio_FornecedoresRowDeleted != null)) {
-                    this.Relatorio_FornecedoresRowDeleted(this, new Relatorio_FornecedoresRowChangeEvent(((Relatorio_FornecedoresRow)(e.Row)), e.Action));
+                if ((this.ReportProviderRowDeleted != null)) {
+                    this.ReportProviderRowDeleted(this, new ReportProviderRowChangeEvent(((ReportProviderRow)(e.Row)), e.Action));
                 }
             }
             
@@ -3292,14 +3228,14 @@ namespace QrAguas {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             protected override void OnRowDeleting(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowDeleting(e);
-                if ((this.Relatorio_FornecedoresRowDeleting != null)) {
-                    this.Relatorio_FornecedoresRowDeleting(this, new Relatorio_FornecedoresRowChangeEvent(((Relatorio_FornecedoresRow)(e.Row)), e.Action));
+                if ((this.ReportProviderRowDeleting != null)) {
+                    this.ReportProviderRowDeleting(this, new ReportProviderRowChangeEvent(((ReportProviderRow)(e.Row)), e.Action));
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public void RemoveRelatorio_FornecedoresRow(Relatorio_FornecedoresRow row) {
+            public void RemoveReportProviderRow(ReportProviderRow row) {
                 this.Rows.Remove(row);
             }
             
@@ -3308,7 +3244,7 @@ namespace QrAguas {
             public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedTableSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
                 global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
                 global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
-                qraguasDataSet ds = new qraguasDataSet();
+                QrAguasRemoteDBDataSet ds = new QrAguasRemoteDBDataSet();
                 global::System.Xml.Schema.XmlSchemaAny any1 = new global::System.Xml.Schema.XmlSchemaAny();
                 any1.Namespace = "http://www.w3.org/2001/XMLSchema";
                 any1.MinOccurs = new decimal(0);
@@ -3326,7 +3262,7 @@ namespace QrAguas {
                 type.Attributes.Add(attribute1);
                 global::System.Xml.Schema.XmlSchemaAttribute attribute2 = new global::System.Xml.Schema.XmlSchemaAttribute();
                 attribute2.Name = "tableTypeName";
-                attribute2.FixedValue = "Relatorio_FornecedoresDataTable";
+                attribute2.FixedValue = "ReportProviderDataTable";
                 type.Attributes.Add(attribute2);
                 type.Particle = sequence;
                 global::System.Xml.Schema.XmlSchema dsSchema = ds.GetSchemaSerializable();
@@ -3372,24 +3308,34 @@ namespace QrAguas {
         ///</summary>
         [global::System.Serializable()]
         [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedTableSchema")]
-        public partial class DataGridViewUsuariosDataTable : global::System.Data.TypedTableBase<DataGridViewUsuariosRow> {
+        public partial class ReportProductDataTable : global::System.Data.TypedTableBase<ReportProductRow> {
             
-            private global::System.Data.DataColumn columnID_USUARIOS;
+            private global::System.Data.DataColumn columnCOD_PRODUTO;
             
-            private global::System.Data.DataColumn columnNOME_USUARIO;
+            private global::System.Data.DataColumn columnNOME_PRODUTO;
             
             private global::System.Data.DataColumn columnDESCRICAO;
             
-            private global::System.Data.DataColumn columnCADASTRADO_POR;
+            private global::System.Data.DataColumn columnNOME_CATEGORIA;
+            
+            private global::System.Data.DataColumn columnRAZAO_SOCIAL;
+            
+            private global::System.Data.DataColumn columnPRECO_COMPRA;
+            
+            private global::System.Data.DataColumn columnPRECO_VENDA;
+            
+            private global::System.Data.DataColumn columnDATA_FABRICACAO;
+            
+            private global::System.Data.DataColumn columnDATA_VALIDADE;
             
             private global::System.Data.DataColumn columnDATA_CADASTRO;
             
-            private global::System.Data.DataColumn columnATIVO;
+            private global::System.Data.DataColumn columnNOME_USUARIO;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public DataGridViewUsuariosDataTable() {
-                this.TableName = "DataGridViewUsuarios";
+            public ReportProductDataTable() {
+                this.TableName = "ReportProduct";
                 this.BeginInit();
                 this.InitClass();
                 this.EndInit();
@@ -3397,7 +3343,7 @@ namespace QrAguas {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            internal DataGridViewUsuariosDataTable(global::System.Data.DataTable table) {
+            internal ReportProductDataTable(global::System.Data.DataTable table) {
                 this.TableName = table.TableName;
                 if ((table.CaseSensitive != table.DataSet.CaseSensitive)) {
                     this.CaseSensitive = table.CaseSensitive;
@@ -3414,24 +3360,24 @@ namespace QrAguas {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            protected DataGridViewUsuariosDataTable(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
+            protected ReportProductDataTable(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
                     base(info, context) {
                 this.InitVars();
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public global::System.Data.DataColumn ID_USUARIOSColumn {
+            public global::System.Data.DataColumn COD_PRODUTOColumn {
                 get {
-                    return this.columnID_USUARIOS;
+                    return this.columnCOD_PRODUTO;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public global::System.Data.DataColumn NOME_USUARIOColumn {
+            public global::System.Data.DataColumn NOME_PRODUTOColumn {
                 get {
-                    return this.columnNOME_USUARIO;
+                    return this.columnNOME_PRODUTO;
                 }
             }
             
@@ -3445,9 +3391,49 @@ namespace QrAguas {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public global::System.Data.DataColumn CADASTRADO_PORColumn {
+            public global::System.Data.DataColumn NOME_CATEGORIAColumn {
                 get {
-                    return this.columnCADASTRADO_POR;
+                    return this.columnNOME_CATEGORIA;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public global::System.Data.DataColumn RAZAO_SOCIALColumn {
+                get {
+                    return this.columnRAZAO_SOCIAL;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public global::System.Data.DataColumn PRECO_COMPRAColumn {
+                get {
+                    return this.columnPRECO_COMPRA;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public global::System.Data.DataColumn PRECO_VENDAColumn {
+                get {
+                    return this.columnPRECO_VENDA;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public global::System.Data.DataColumn DATA_FABRICACAOColumn {
+                get {
+                    return this.columnDATA_FABRICACAO;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public global::System.Data.DataColumn DATA_VALIDADEColumn {
+                get {
+                    return this.columnDATA_VALIDADE;
                 }
             }
             
@@ -3461,9 +3447,9 @@ namespace QrAguas {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public global::System.Data.DataColumn ATIVOColumn {
+            public global::System.Data.DataColumn NOME_USUARIOColumn {
                 get {
-                    return this.columnATIVO;
+                    return this.columnNOME_USUARIO;
                 }
             }
             
@@ -3478,57 +3464,55 @@ namespace QrAguas {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public DataGridViewUsuariosRow this[int index] {
+            public ReportProductRow this[int index] {
                 get {
-                    return ((DataGridViewUsuariosRow)(this.Rows[index]));
+                    return ((ReportProductRow)(this.Rows[index]));
                 }
             }
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public event DataGridViewUsuariosRowChangeEventHandler DataGridViewUsuariosRowChanging;
+            public event ReportProductRowChangeEventHandler ReportProductRowChanging;
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public event DataGridViewUsuariosRowChangeEventHandler DataGridViewUsuariosRowChanged;
+            public event ReportProductRowChangeEventHandler ReportProductRowChanged;
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public event DataGridViewUsuariosRowChangeEventHandler DataGridViewUsuariosRowDeleting;
+            public event ReportProductRowChangeEventHandler ReportProductRowDeleting;
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public event DataGridViewUsuariosRowChangeEventHandler DataGridViewUsuariosRowDeleted;
+            public event ReportProductRowChangeEventHandler ReportProductRowDeleted;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public void AddDataGridViewUsuariosRow(DataGridViewUsuariosRow row) {
+            public void AddReportProductRow(ReportProductRow row) {
                 this.Rows.Add(row);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public DataGridViewUsuariosRow AddDataGridViewUsuariosRow(string NOME_USUARIO, string DESCRICAO, string CADASTRADO_POR, System.DateTime DATA_CADASTRO, bool ATIVO) {
-                DataGridViewUsuariosRow rowDataGridViewUsuariosRow = ((DataGridViewUsuariosRow)(this.NewRow()));
+            public ReportProductRow AddReportProductRow(string COD_PRODUTO, string NOME_PRODUTO, string DESCRICAO, string NOME_CATEGORIA, string RAZAO_SOCIAL, decimal PRECO_COMPRA, decimal PRECO_VENDA, System.DateTime DATA_FABRICACAO, System.DateTime DATA_VALIDADE, System.DateTime DATA_CADASTRO, string NOME_USUARIO) {
+                ReportProductRow rowReportProductRow = ((ReportProductRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
-                        null,
-                        NOME_USUARIO,
+                        COD_PRODUTO,
+                        NOME_PRODUTO,
                         DESCRICAO,
-                        CADASTRADO_POR,
+                        NOME_CATEGORIA,
+                        RAZAO_SOCIAL,
+                        PRECO_COMPRA,
+                        PRECO_VENDA,
+                        DATA_FABRICACAO,
+                        DATA_VALIDADE,
                         DATA_CADASTRO,
-                        ATIVO};
-                rowDataGridViewUsuariosRow.ItemArray = columnValuesArray;
-                this.Rows.Add(rowDataGridViewUsuariosRow);
-                return rowDataGridViewUsuariosRow;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public DataGridViewUsuariosRow FindByID_USUARIOS(int ID_USUARIOS) {
-                return ((DataGridViewUsuariosRow)(this.Rows.Find(new object[] {
-                            ID_USUARIOS})));
+                        NOME_USUARIO};
+                rowReportProductRow.ItemArray = columnValuesArray;
+                this.Rows.Add(rowReportProductRow);
+                return rowReportProductRow;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public override global::System.Data.DataTable Clone() {
-                DataGridViewUsuariosDataTable cln = ((DataGridViewUsuariosDataTable)(base.Clone()));
+                ReportProductDataTable cln = ((ReportProductDataTable)(base.Clone()));
                 cln.InitVars();
                 return cln;
             }
@@ -3536,75 +3520,93 @@ namespace QrAguas {
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             protected override global::System.Data.DataTable CreateInstance() {
-                return new DataGridViewUsuariosDataTable();
+                return new ReportProductDataTable();
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             internal void InitVars() {
-                this.columnID_USUARIOS = base.Columns["ID_USUARIOS"];
-                this.columnNOME_USUARIO = base.Columns["NOME_USUARIO"];
+                this.columnCOD_PRODUTO = base.Columns["COD_PRODUTO"];
+                this.columnNOME_PRODUTO = base.Columns["NOME_PRODUTO"];
                 this.columnDESCRICAO = base.Columns["DESCRICAO"];
-                this.columnCADASTRADO_POR = base.Columns["CADASTRADO_POR"];
+                this.columnNOME_CATEGORIA = base.Columns["NOME_CATEGORIA"];
+                this.columnRAZAO_SOCIAL = base.Columns["RAZAO_SOCIAL"];
+                this.columnPRECO_COMPRA = base.Columns["PRECO_COMPRA"];
+                this.columnPRECO_VENDA = base.Columns["PRECO_VENDA"];
+                this.columnDATA_FABRICACAO = base.Columns["DATA_FABRICACAO"];
+                this.columnDATA_VALIDADE = base.Columns["DATA_VALIDADE"];
                 this.columnDATA_CADASTRO = base.Columns["DATA_CADASTRO"];
-                this.columnATIVO = base.Columns["ATIVO"];
+                this.columnNOME_USUARIO = base.Columns["NOME_USUARIO"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             private void InitClass() {
-                this.columnID_USUARIOS = new global::System.Data.DataColumn("ID_USUARIOS", typeof(int), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnID_USUARIOS);
-                this.columnNOME_USUARIO = new global::System.Data.DataColumn("NOME_USUARIO", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnNOME_USUARIO);
+                this.columnCOD_PRODUTO = new global::System.Data.DataColumn("COD_PRODUTO", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnCOD_PRODUTO);
+                this.columnNOME_PRODUTO = new global::System.Data.DataColumn("NOME_PRODUTO", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnNOME_PRODUTO);
                 this.columnDESCRICAO = new global::System.Data.DataColumn("DESCRICAO", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnDESCRICAO);
-                this.columnCADASTRADO_POR = new global::System.Data.DataColumn("CADASTRADO_POR", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnCADASTRADO_POR);
+                this.columnNOME_CATEGORIA = new global::System.Data.DataColumn("NOME_CATEGORIA", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnNOME_CATEGORIA);
+                this.columnRAZAO_SOCIAL = new global::System.Data.DataColumn("RAZAO_SOCIAL", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnRAZAO_SOCIAL);
+                this.columnPRECO_COMPRA = new global::System.Data.DataColumn("PRECO_COMPRA", typeof(decimal), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnPRECO_COMPRA);
+                this.columnPRECO_VENDA = new global::System.Data.DataColumn("PRECO_VENDA", typeof(decimal), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnPRECO_VENDA);
+                this.columnDATA_FABRICACAO = new global::System.Data.DataColumn("DATA_FABRICACAO", typeof(global::System.DateTime), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnDATA_FABRICACAO);
+                this.columnDATA_VALIDADE = new global::System.Data.DataColumn("DATA_VALIDADE", typeof(global::System.DateTime), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnDATA_VALIDADE);
                 this.columnDATA_CADASTRO = new global::System.Data.DataColumn("DATA_CADASTRO", typeof(global::System.DateTime), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnDATA_CADASTRO);
-                this.columnATIVO = new global::System.Data.DataColumn("ATIVO", typeof(bool), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnATIVO);
-                this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
-                                this.columnID_USUARIOS}, true));
-                this.columnID_USUARIOS.AutoIncrement = true;
-                this.columnID_USUARIOS.AutoIncrementSeed = -1;
-                this.columnID_USUARIOS.AutoIncrementStep = -1;
-                this.columnID_USUARIOS.AllowDBNull = false;
-                this.columnID_USUARIOS.Unique = true;
+                this.columnNOME_USUARIO = new global::System.Data.DataColumn("NOME_USUARIO", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnNOME_USUARIO);
+                this.columnCOD_PRODUTO.AllowDBNull = false;
+                this.columnCOD_PRODUTO.MaxLength = 15;
+                this.columnNOME_PRODUTO.AllowDBNull = false;
+                this.columnNOME_PRODUTO.MaxLength = 30;
+                this.columnDESCRICAO.AllowDBNull = false;
+                this.columnDESCRICAO.MaxLength = 50;
+                this.columnNOME_CATEGORIA.AllowDBNull = false;
+                this.columnNOME_CATEGORIA.MaxLength = 25;
+                this.columnRAZAO_SOCIAL.AllowDBNull = false;
+                this.columnRAZAO_SOCIAL.MaxLength = 30;
+                this.columnPRECO_COMPRA.AllowDBNull = false;
+                this.columnPRECO_VENDA.AllowDBNull = false;
+                this.columnDATA_FABRICACAO.AllowDBNull = false;
+                this.columnDATA_VALIDADE.AllowDBNull = false;
+                this.columnDATA_CADASTRO.AllowDBNull = false;
                 this.columnNOME_USUARIO.AllowDBNull = false;
                 this.columnNOME_USUARIO.MaxLength = 15;
-                this.columnDESCRICAO.MaxLength = 15;
-                this.columnCADASTRADO_POR.AllowDBNull = false;
-                this.columnCADASTRADO_POR.MaxLength = 15;
-                this.columnDATA_CADASTRO.AllowDBNull = false;
-                this.columnATIVO.AllowDBNull = false;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public DataGridViewUsuariosRow NewDataGridViewUsuariosRow() {
-                return ((DataGridViewUsuariosRow)(this.NewRow()));
+            public ReportProductRow NewReportProductRow() {
+                return ((ReportProductRow)(this.NewRow()));
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             protected override global::System.Data.DataRow NewRowFromBuilder(global::System.Data.DataRowBuilder builder) {
-                return new DataGridViewUsuariosRow(builder);
+                return new ReportProductRow(builder);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             protected override global::System.Type GetRowType() {
-                return typeof(DataGridViewUsuariosRow);
+                return typeof(ReportProductRow);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             protected override void OnRowChanged(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowChanged(e);
-                if ((this.DataGridViewUsuariosRowChanged != null)) {
-                    this.DataGridViewUsuariosRowChanged(this, new DataGridViewUsuariosRowChangeEvent(((DataGridViewUsuariosRow)(e.Row)), e.Action));
+                if ((this.ReportProductRowChanged != null)) {
+                    this.ReportProductRowChanged(this, new ReportProductRowChangeEvent(((ReportProductRow)(e.Row)), e.Action));
                 }
             }
             
@@ -3612,8 +3614,8 @@ namespace QrAguas {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             protected override void OnRowChanging(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowChanging(e);
-                if ((this.DataGridViewUsuariosRowChanging != null)) {
-                    this.DataGridViewUsuariosRowChanging(this, new DataGridViewUsuariosRowChangeEvent(((DataGridViewUsuariosRow)(e.Row)), e.Action));
+                if ((this.ReportProductRowChanging != null)) {
+                    this.ReportProductRowChanging(this, new ReportProductRowChangeEvent(((ReportProductRow)(e.Row)), e.Action));
                 }
             }
             
@@ -3621,8 +3623,8 @@ namespace QrAguas {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             protected override void OnRowDeleted(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowDeleted(e);
-                if ((this.DataGridViewUsuariosRowDeleted != null)) {
-                    this.DataGridViewUsuariosRowDeleted(this, new DataGridViewUsuariosRowChangeEvent(((DataGridViewUsuariosRow)(e.Row)), e.Action));
+                if ((this.ReportProductRowDeleted != null)) {
+                    this.ReportProductRowDeleted(this, new ReportProductRowChangeEvent(((ReportProductRow)(e.Row)), e.Action));
                 }
             }
             
@@ -3630,14 +3632,14 @@ namespace QrAguas {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             protected override void OnRowDeleting(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowDeleting(e);
-                if ((this.DataGridViewUsuariosRowDeleting != null)) {
-                    this.DataGridViewUsuariosRowDeleting(this, new DataGridViewUsuariosRowChangeEvent(((DataGridViewUsuariosRow)(e.Row)), e.Action));
+                if ((this.ReportProductRowDeleting != null)) {
+                    this.ReportProductRowDeleting(this, new ReportProductRowChangeEvent(((ReportProductRow)(e.Row)), e.Action));
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public void RemoveDataGridViewUsuariosRow(DataGridViewUsuariosRow row) {
+            public void RemoveReportProductRow(ReportProductRow row) {
                 this.Rows.Remove(row);
             }
             
@@ -3646,7 +3648,7 @@ namespace QrAguas {
             public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedTableSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
                 global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
                 global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
-                qraguasDataSet ds = new qraguasDataSet();
+                QrAguasRemoteDBDataSet ds = new QrAguasRemoteDBDataSet();
                 global::System.Xml.Schema.XmlSchemaAny any1 = new global::System.Xml.Schema.XmlSchemaAny();
                 any1.Namespace = "http://www.w3.org/2001/XMLSchema";
                 any1.MinOccurs = new decimal(0);
@@ -3664,7 +3666,7 @@ namespace QrAguas {
                 type.Attributes.Add(attribute1);
                 global::System.Xml.Schema.XmlSchemaAttribute attribute2 = new global::System.Xml.Schema.XmlSchemaAttribute();
                 attribute2.Name = "tableTypeName";
-                attribute2.FixedValue = "DataGridViewUsuariosDataTable";
+                attribute2.FixedValue = "ReportProductDataTable";
                 type.Attributes.Add(attribute2);
                 type.Particle = sequence;
                 global::System.Xml.Schema.XmlSchema dsSchema = ds.GetSchemaSerializable();
@@ -3708,25 +3710,25 @@ namespace QrAguas {
         /// <summary>
         ///Represents strongly named DataRow class.
         ///</summary>
-        public partial class categoriasRow : global::System.Data.DataRow {
+        public partial class CATEGORIASRow : global::System.Data.DataRow {
             
-            private categoriasDataTable tablecategorias;
+            private CATEGORIASDataTable tableCATEGORIAS;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            internal categoriasRow(global::System.Data.DataRowBuilder rb) : 
+            internal CATEGORIASRow(global::System.Data.DataRowBuilder rb) : 
                     base(rb) {
-                this.tablecategorias = ((categoriasDataTable)(this.Table));
+                this.tableCATEGORIAS = ((CATEGORIASDataTable)(this.Table));
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public int ID_CATEGORIAS {
                 get {
-                    return ((int)(this[this.tablecategorias.ID_CATEGORIASColumn]));
+                    return ((int)(this[this.tableCATEGORIAS.ID_CATEGORIASColumn]));
                 }
                 set {
-                    this[this.tablecategorias.ID_CATEGORIASColumn] = value;
+                    this[this.tableCATEGORIAS.ID_CATEGORIASColumn] = value;
                 }
             }
             
@@ -3734,10 +3736,21 @@ namespace QrAguas {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public string NOME_CATEGORIA {
                 get {
-                    return ((string)(this[this.tablecategorias.NOME_CATEGORIAColumn]));
+                    return ((string)(this[this.tableCATEGORIAS.NOME_CATEGORIAColumn]));
                 }
                 set {
-                    this[this.tablecategorias.NOME_CATEGORIAColumn] = value;
+                    this[this.tableCATEGORIAS.NOME_CATEGORIAColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public bool ATIVO {
+                get {
+                    return ((bool)(this[this.tableCATEGORIAS.ATIVOColumn]));
+                }
+                set {
+                    this[this.tableCATEGORIAS.ATIVOColumn] = value;
                 }
             }
             
@@ -3745,10 +3758,10 @@ namespace QrAguas {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public int ID_USUARIOS {
                 get {
-                    return ((int)(this[this.tablecategorias.ID_USUARIOSColumn]));
+                    return ((int)(this[this.tableCATEGORIAS.ID_USUARIOSColumn]));
                 }
                 set {
-                    this[this.tablecategorias.ID_USUARIOSColumn] = value;
+                    this[this.tableCATEGORIAS.ID_USUARIOSColumn] = value;
                 }
             }
             
@@ -3757,14 +3770,14 @@ namespace QrAguas {
             public int ATUALIZADO_POR {
                 get {
                     try {
-                        return ((int)(this[this.tablecategorias.ATUALIZADO_PORColumn]));
+                        return ((int)(this[this.tableCATEGORIAS.ATUALIZADO_PORColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'ATUALIZADO_POR\' in table \'categorias\' is DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("The value for column \'ATUALIZADO_POR\' in table \'CATEGORIAS\' is DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tablecategorias.ATUALIZADO_PORColumn] = value;
+                    this[this.tableCATEGORIAS.ATUALIZADO_PORColumn] = value;
                 }
             }
             
@@ -3773,14 +3786,14 @@ namespace QrAguas {
             public System.DateTime DATA_ATUALIZACAO {
                 get {
                     try {
-                        return ((global::System.DateTime)(this[this.tablecategorias.DATA_ATUALIZACAOColumn]));
+                        return ((global::System.DateTime)(this[this.tableCATEGORIAS.DATA_ATUALIZACAOColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'DATA_ATUALIZACAO\' in table \'categorias\' is DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("The value for column \'DATA_ATUALIZACAO\' in table \'CATEGORIAS\' is DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tablecategorias.DATA_ATUALIZACAOColumn] = value;
+                    this[this.tableCATEGORIAS.DATA_ATUALIZACAOColumn] = value;
                 }
             }
             
@@ -3788,67 +3801,56 @@ namespace QrAguas {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public System.DateTime DATA_CADASTRO {
                 get {
-                    return ((global::System.DateTime)(this[this.tablecategorias.DATA_CADASTROColumn]));
+                    return ((global::System.DateTime)(this[this.tableCATEGORIAS.DATA_CADASTROColumn]));
                 }
                 set {
-                    this[this.tablecategorias.DATA_CADASTROColumn] = value;
+                    this[this.tableCATEGORIAS.DATA_CADASTROColumn] = value;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public bool ATIVO {
+            public USUARIOSRow USUARIOSRow {
                 get {
-                    return ((bool)(this[this.tablecategorias.ATIVOColumn]));
+                    return ((USUARIOSRow)(this.GetParentRow(this.Table.ParentRelations["CATEGORIAS_ibfk_1"])));
                 }
                 set {
-                    this[this.tablecategorias.ATIVOColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public usuariosRow usuariosRow {
-                get {
-                    return ((usuariosRow)(this.GetParentRow(this.Table.ParentRelations["categorias_ibfk_1"])));
-                }
-                set {
-                    this.SetParentRow(value, this.Table.ParentRelations["categorias_ibfk_1"]);
+                    this.SetParentRow(value, this.Table.ParentRelations["CATEGORIAS_ibfk_1"]);
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public bool IsATUALIZADO_PORNull() {
-                return this.IsNull(this.tablecategorias.ATUALIZADO_PORColumn);
+                return this.IsNull(this.tableCATEGORIAS.ATUALIZADO_PORColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public void SetATUALIZADO_PORNull() {
-                this[this.tablecategorias.ATUALIZADO_PORColumn] = global::System.Convert.DBNull;
+                this[this.tableCATEGORIAS.ATUALIZADO_PORColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public bool IsDATA_ATUALIZACAONull() {
-                return this.IsNull(this.tablecategorias.DATA_ATUALIZACAOColumn);
+                return this.IsNull(this.tableCATEGORIAS.DATA_ATUALIZACAOColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public void SetDATA_ATUALIZACAONull() {
-                this[this.tablecategorias.DATA_ATUALIZACAOColumn] = global::System.Convert.DBNull;
+                this[this.tableCATEGORIAS.DATA_ATUALIZACAOColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public produtosRow[] GetprodutosRows() {
-                if ((this.Table.ChildRelations["produtos_ibfk_3"] == null)) {
-                    return new produtosRow[0];
+            public PRODUTOSRow[] GetPRODUTOSRows() {
+                if ((this.Table.ChildRelations["PRODUTOS_ibfk_3"] == null)) {
+                    return new PRODUTOSRow[0];
                 }
                 else {
-                    return ((produtosRow[])(base.GetChildRows(this.Table.ChildRelations["produtos_ibfk_3"])));
+                    return ((PRODUTOSRow[])(base.GetChildRows(this.Table.ChildRelations["PRODUTOS_ibfk_3"])));
                 }
             }
         }
@@ -3856,25 +3858,25 @@ namespace QrAguas {
         /// <summary>
         ///Represents strongly named DataRow class.
         ///</summary>
-        public partial class fornecedoresRow : global::System.Data.DataRow {
+        public partial class FORNECEDORESRow : global::System.Data.DataRow {
             
-            private fornecedoresDataTable tablefornecedores;
+            private FORNECEDORESDataTable tableFORNECEDORES;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            internal fornecedoresRow(global::System.Data.DataRowBuilder rb) : 
+            internal FORNECEDORESRow(global::System.Data.DataRowBuilder rb) : 
                     base(rb) {
-                this.tablefornecedores = ((fornecedoresDataTable)(this.Table));
+                this.tableFORNECEDORES = ((FORNECEDORESDataTable)(this.Table));
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public int ID_FORNECEDORES {
                 get {
-                    return ((int)(this[this.tablefornecedores.ID_FORNECEDORESColumn]));
+                    return ((int)(this[this.tableFORNECEDORES.ID_FORNECEDORESColumn]));
                 }
                 set {
-                    this[this.tablefornecedores.ID_FORNECEDORESColumn] = value;
+                    this[this.tableFORNECEDORES.ID_FORNECEDORESColumn] = value;
                 }
             }
             
@@ -3882,10 +3884,10 @@ namespace QrAguas {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public string RAZAO_SOCIAL {
                 get {
-                    return ((string)(this[this.tablefornecedores.RAZAO_SOCIALColumn]));
+                    return ((string)(this[this.tableFORNECEDORES.RAZAO_SOCIALColumn]));
                 }
                 set {
-                    this[this.tablefornecedores.RAZAO_SOCIALColumn] = value;
+                    this[this.tableFORNECEDORES.RAZAO_SOCIALColumn] = value;
                 }
             }
             
@@ -3893,10 +3895,10 @@ namespace QrAguas {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public string CNPJ {
                 get {
-                    return ((string)(this[this.tablefornecedores.CNPJColumn]));
+                    return ((string)(this[this.tableFORNECEDORES.CNPJColumn]));
                 }
                 set {
-                    this[this.tablefornecedores.CNPJColumn] = value;
+                    this[this.tableFORNECEDORES.CNPJColumn] = value;
                 }
             }
             
@@ -3904,10 +3906,10 @@ namespace QrAguas {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public string ENDERECO {
                 get {
-                    return ((string)(this[this.tablefornecedores.ENDERECOColumn]));
+                    return ((string)(this[this.tableFORNECEDORES.ENDERECOColumn]));
                 }
                 set {
-                    this[this.tablefornecedores.ENDERECOColumn] = value;
+                    this[this.tableFORNECEDORES.ENDERECOColumn] = value;
                 }
             }
             
@@ -3915,10 +3917,10 @@ namespace QrAguas {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public int NUMERO {
                 get {
-                    return ((int)(this[this.tablefornecedores.NUMEROColumn]));
+                    return ((int)(this[this.tableFORNECEDORES.NUMEROColumn]));
                 }
                 set {
-                    this[this.tablefornecedores.NUMEROColumn] = value;
+                    this[this.tableFORNECEDORES.NUMEROColumn] = value;
                 }
             }
             
@@ -3926,10 +3928,10 @@ namespace QrAguas {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public string BAIRRO {
                 get {
-                    return ((string)(this[this.tablefornecedores.BAIRROColumn]));
+                    return ((string)(this[this.tableFORNECEDORES.BAIRROColumn]));
                 }
                 set {
-                    this[this.tablefornecedores.BAIRROColumn] = value;
+                    this[this.tableFORNECEDORES.BAIRROColumn] = value;
                 }
             }
             
@@ -3937,10 +3939,10 @@ namespace QrAguas {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public string CIDADE {
                 get {
-                    return ((string)(this[this.tablefornecedores.CIDADEColumn]));
+                    return ((string)(this[this.tableFORNECEDORES.CIDADEColumn]));
                 }
                 set {
-                    this[this.tablefornecedores.CIDADEColumn] = value;
+                    this[this.tableFORNECEDORES.CIDADEColumn] = value;
                 }
             }
             
@@ -3949,14 +3951,14 @@ namespace QrAguas {
             public string COMPLEMENTO {
                 get {
                     try {
-                        return ((string)(this[this.tablefornecedores.COMPLEMENTOColumn]));
+                        return ((string)(this[this.tableFORNECEDORES.COMPLEMENTOColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'COMPLEMENTO\' in table \'fornecedores\' is DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("The value for column \'COMPLEMENTO\' in table \'FORNECEDORES\' is DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tablefornecedores.COMPLEMENTOColumn] = value;
+                    this[this.tableFORNECEDORES.COMPLEMENTOColumn] = value;
                 }
             }
             
@@ -3964,10 +3966,10 @@ namespace QrAguas {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public string UF {
                 get {
-                    return ((string)(this[this.tablefornecedores.UFColumn]));
+                    return ((string)(this[this.tableFORNECEDORES.UFColumn]));
                 }
                 set {
-                    this[this.tablefornecedores.UFColumn] = value;
+                    this[this.tableFORNECEDORES.UFColumn] = value;
                 }
             }
             
@@ -3975,10 +3977,10 @@ namespace QrAguas {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public string TELEFONE {
                 get {
-                    return ((string)(this[this.tablefornecedores.TELEFONEColumn]));
+                    return ((string)(this[this.tableFORNECEDORES.TELEFONEColumn]));
                 }
                 set {
-                    this[this.tablefornecedores.TELEFONEColumn] = value;
+                    this[this.tableFORNECEDORES.TELEFONEColumn] = value;
                 }
             }
             
@@ -3987,14 +3989,14 @@ namespace QrAguas {
             public string CELULAR {
                 get {
                     try {
-                        return ((string)(this[this.tablefornecedores.CELULARColumn]));
+                        return ((string)(this[this.tableFORNECEDORES.CELULARColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'CELULAR\' in table \'fornecedores\' is DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("The value for column \'CELULAR\' in table \'FORNECEDORES\' is DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tablefornecedores.CELULARColumn] = value;
+                    this[this.tableFORNECEDORES.CELULARColumn] = value;
                 }
             }
             
@@ -4002,10 +4004,10 @@ namespace QrAguas {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public string CEP {
                 get {
-                    return ((string)(this[this.tablefornecedores.CEPColumn]));
+                    return ((string)(this[this.tableFORNECEDORES.CEPColumn]));
                 }
                 set {
-                    this[this.tablefornecedores.CEPColumn] = value;
+                    this[this.tableFORNECEDORES.CEPColumn] = value;
                 }
             }
             
@@ -4014,14 +4016,14 @@ namespace QrAguas {
             public string EMAIL {
                 get {
                     try {
-                        return ((string)(this[this.tablefornecedores.EMAILColumn]));
+                        return ((string)(this[this.tableFORNECEDORES.EMAILColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'EMAIL\' in table \'fornecedores\' is DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("The value for column \'EMAIL\' in table \'FORNECEDORES\' is DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tablefornecedores.EMAILColumn] = value;
+                    this[this.tableFORNECEDORES.EMAILColumn] = value;
                 }
             }
             
@@ -4029,10 +4031,10 @@ namespace QrAguas {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public int ID_USUARIOS {
                 get {
-                    return ((int)(this[this.tablefornecedores.ID_USUARIOSColumn]));
+                    return ((int)(this[this.tableFORNECEDORES.ID_USUARIOSColumn]));
                 }
                 set {
-                    this[this.tablefornecedores.ID_USUARIOSColumn] = value;
+                    this[this.tableFORNECEDORES.ID_USUARIOSColumn] = value;
                 }
             }
             
@@ -4040,68 +4042,68 @@ namespace QrAguas {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public System.DateTime DATA_CADASTRO {
                 get {
-                    return ((global::System.DateTime)(this[this.tablefornecedores.DATA_CADASTROColumn]));
+                    return ((global::System.DateTime)(this[this.tableFORNECEDORES.DATA_CADASTROColumn]));
                 }
                 set {
-                    this[this.tablefornecedores.DATA_CADASTROColumn] = value;
+                    this[this.tableFORNECEDORES.DATA_CADASTROColumn] = value;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public usuariosRow usuariosRow {
+            public USUARIOSRow USUARIOSRow {
                 get {
-                    return ((usuariosRow)(this.GetParentRow(this.Table.ParentRelations["fornecedores_ibfk_1"])));
+                    return ((USUARIOSRow)(this.GetParentRow(this.Table.ParentRelations["FORNECEDORES_ibfk_1"])));
                 }
                 set {
-                    this.SetParentRow(value, this.Table.ParentRelations["fornecedores_ibfk_1"]);
+                    this.SetParentRow(value, this.Table.ParentRelations["FORNECEDORES_ibfk_1"]);
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public bool IsCOMPLEMENTONull() {
-                return this.IsNull(this.tablefornecedores.COMPLEMENTOColumn);
+                return this.IsNull(this.tableFORNECEDORES.COMPLEMENTOColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public void SetCOMPLEMENTONull() {
-                this[this.tablefornecedores.COMPLEMENTOColumn] = global::System.Convert.DBNull;
+                this[this.tableFORNECEDORES.COMPLEMENTOColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public bool IsCELULARNull() {
-                return this.IsNull(this.tablefornecedores.CELULARColumn);
+                return this.IsNull(this.tableFORNECEDORES.CELULARColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public void SetCELULARNull() {
-                this[this.tablefornecedores.CELULARColumn] = global::System.Convert.DBNull;
+                this[this.tableFORNECEDORES.CELULARColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public bool IsEMAILNull() {
-                return this.IsNull(this.tablefornecedores.EMAILColumn);
+                return this.IsNull(this.tableFORNECEDORES.EMAILColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public void SetEMAILNull() {
-                this[this.tablefornecedores.EMAILColumn] = global::System.Convert.DBNull;
+                this[this.tableFORNECEDORES.EMAILColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public produtosRow[] GetprodutosRows() {
-                if ((this.Table.ChildRelations["produtos_ibfk_1"] == null)) {
-                    return new produtosRow[0];
+            public PRODUTOSRow[] GetPRODUTOSRows() {
+                if ((this.Table.ChildRelations["PRODUTOS_ibfk_1"] == null)) {
+                    return new PRODUTOSRow[0];
                 }
                 else {
-                    return ((produtosRow[])(base.GetChildRows(this.Table.ChildRelations["produtos_ibfk_1"])));
+                    return ((PRODUTOSRow[])(base.GetChildRows(this.Table.ChildRelations["PRODUTOS_ibfk_1"])));
                 }
             }
         }
@@ -4109,25 +4111,25 @@ namespace QrAguas {
         /// <summary>
         ///Represents strongly named DataRow class.
         ///</summary>
-        public partial class produtosRow : global::System.Data.DataRow {
+        public partial class PRODUTOSRow : global::System.Data.DataRow {
             
-            private produtosDataTable tableprodutos;
+            private PRODUTOSDataTable tablePRODUTOS;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            internal produtosRow(global::System.Data.DataRowBuilder rb) : 
+            internal PRODUTOSRow(global::System.Data.DataRowBuilder rb) : 
                     base(rb) {
-                this.tableprodutos = ((produtosDataTable)(this.Table));
+                this.tablePRODUTOS = ((PRODUTOSDataTable)(this.Table));
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public int ID_PRODUTOS {
                 get {
-                    return ((int)(this[this.tableprodutos.ID_PRODUTOSColumn]));
+                    return ((int)(this[this.tablePRODUTOS.ID_PRODUTOSColumn]));
                 }
                 set {
-                    this[this.tableprodutos.ID_PRODUTOSColumn] = value;
+                    this[this.tablePRODUTOS.ID_PRODUTOSColumn] = value;
                 }
             }
             
@@ -4135,10 +4137,10 @@ namespace QrAguas {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public string COD_PRODUTO {
                 get {
-                    return ((string)(this[this.tableprodutos.COD_PRODUTOColumn]));
+                    return ((string)(this[this.tablePRODUTOS.COD_PRODUTOColumn]));
                 }
                 set {
-                    this[this.tableprodutos.COD_PRODUTOColumn] = value;
+                    this[this.tablePRODUTOS.COD_PRODUTOColumn] = value;
                 }
             }
             
@@ -4146,10 +4148,10 @@ namespace QrAguas {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public string NOME_PRODUTO {
                 get {
-                    return ((string)(this[this.tableprodutos.NOME_PRODUTOColumn]));
+                    return ((string)(this[this.tablePRODUTOS.NOME_PRODUTOColumn]));
                 }
                 set {
-                    this[this.tableprodutos.NOME_PRODUTOColumn] = value;
+                    this[this.tablePRODUTOS.NOME_PRODUTOColumn] = value;
                 }
             }
             
@@ -4157,10 +4159,10 @@ namespace QrAguas {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public string DESCRICAO {
                 get {
-                    return ((string)(this[this.tableprodutos.DESCRICAOColumn]));
+                    return ((string)(this[this.tablePRODUTOS.DESCRICAOColumn]));
                 }
                 set {
-                    this[this.tableprodutos.DESCRICAOColumn] = value;
+                    this[this.tablePRODUTOS.DESCRICAOColumn] = value;
                 }
             }
             
@@ -4168,10 +4170,10 @@ namespace QrAguas {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public decimal PRECO_COMPRA {
                 get {
-                    return ((decimal)(this[this.tableprodutos.PRECO_COMPRAColumn]));
+                    return ((decimal)(this[this.tablePRODUTOS.PRECO_COMPRAColumn]));
                 }
                 set {
-                    this[this.tableprodutos.PRECO_COMPRAColumn] = value;
+                    this[this.tablePRODUTOS.PRECO_COMPRAColumn] = value;
                 }
             }
             
@@ -4179,10 +4181,10 @@ namespace QrAguas {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public decimal PRECO_VENDA {
                 get {
-                    return ((decimal)(this[this.tableprodutos.PRECO_VENDAColumn]));
+                    return ((decimal)(this[this.tablePRODUTOS.PRECO_VENDAColumn]));
                 }
                 set {
-                    this[this.tableprodutos.PRECO_VENDAColumn] = value;
+                    this[this.tablePRODUTOS.PRECO_VENDAColumn] = value;
                 }
             }
             
@@ -4190,10 +4192,10 @@ namespace QrAguas {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public int ID_FORNECEDORES {
                 get {
-                    return ((int)(this[this.tableprodutos.ID_FORNECEDORESColumn]));
+                    return ((int)(this[this.tablePRODUTOS.ID_FORNECEDORESColumn]));
                 }
                 set {
-                    this[this.tableprodutos.ID_FORNECEDORESColumn] = value;
+                    this[this.tablePRODUTOS.ID_FORNECEDORESColumn] = value;
                 }
             }
             
@@ -4201,10 +4203,10 @@ namespace QrAguas {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public int ID_USUARIOS {
                 get {
-                    return ((int)(this[this.tableprodutos.ID_USUARIOSColumn]));
+                    return ((int)(this[this.tablePRODUTOS.ID_USUARIOSColumn]));
                 }
                 set {
-                    this[this.tableprodutos.ID_USUARIOSColumn] = value;
+                    this[this.tablePRODUTOS.ID_USUARIOSColumn] = value;
                 }
             }
             
@@ -4212,10 +4214,10 @@ namespace QrAguas {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public int ID_CATEGORIAS {
                 get {
-                    return ((int)(this[this.tableprodutos.ID_CATEGORIASColumn]));
+                    return ((int)(this[this.tablePRODUTOS.ID_CATEGORIASColumn]));
                 }
                 set {
-                    this[this.tableprodutos.ID_CATEGORIASColumn] = value;
+                    this[this.tablePRODUTOS.ID_CATEGORIASColumn] = value;
                 }
             }
             
@@ -4223,10 +4225,10 @@ namespace QrAguas {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public System.DateTime DATA_FABRICACAO {
                 get {
-                    return ((global::System.DateTime)(this[this.tableprodutos.DATA_FABRICACAOColumn]));
+                    return ((global::System.DateTime)(this[this.tablePRODUTOS.DATA_FABRICACAOColumn]));
                 }
                 set {
-                    this[this.tableprodutos.DATA_FABRICACAOColumn] = value;
+                    this[this.tablePRODUTOS.DATA_FABRICACAOColumn] = value;
                 }
             }
             
@@ -4234,10 +4236,10 @@ namespace QrAguas {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public System.DateTime DATA_VALIDADE {
                 get {
-                    return ((global::System.DateTime)(this[this.tableprodutos.DATA_VALIDADEColumn]));
+                    return ((global::System.DateTime)(this[this.tablePRODUTOS.DATA_VALIDADEColumn]));
                 }
                 set {
-                    this[this.tableprodutos.DATA_VALIDADEColumn] = value;
+                    this[this.tablePRODUTOS.DATA_VALIDADEColumn] = value;
                 }
             }
             
@@ -4245,43 +4247,43 @@ namespace QrAguas {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public System.DateTime DATA_CADASTRO {
                 get {
-                    return ((global::System.DateTime)(this[this.tableprodutos.DATA_CADASTROColumn]));
+                    return ((global::System.DateTime)(this[this.tablePRODUTOS.DATA_CADASTROColumn]));
                 }
                 set {
-                    this[this.tableprodutos.DATA_CADASTROColumn] = value;
+                    this[this.tablePRODUTOS.DATA_CADASTROColumn] = value;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public fornecedoresRow fornecedoresRow {
+            public FORNECEDORESRow FORNECEDORESRow {
                 get {
-                    return ((fornecedoresRow)(this.GetParentRow(this.Table.ParentRelations["produtos_ibfk_1"])));
+                    return ((FORNECEDORESRow)(this.GetParentRow(this.Table.ParentRelations["PRODUTOS_ibfk_1"])));
                 }
                 set {
-                    this.SetParentRow(value, this.Table.ParentRelations["produtos_ibfk_1"]);
+                    this.SetParentRow(value, this.Table.ParentRelations["PRODUTOS_ibfk_1"]);
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public usuariosRow usuariosRow {
+            public USUARIOSRow USUARIOSRow {
                 get {
-                    return ((usuariosRow)(this.GetParentRow(this.Table.ParentRelations["produtos_ibfk_2"])));
+                    return ((USUARIOSRow)(this.GetParentRow(this.Table.ParentRelations["PRODUTOS_ibfk_2"])));
                 }
                 set {
-                    this.SetParentRow(value, this.Table.ParentRelations["produtos_ibfk_2"]);
+                    this.SetParentRow(value, this.Table.ParentRelations["PRODUTOS_ibfk_2"]);
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public categoriasRow categoriasRow {
+            public CATEGORIASRow CATEGORIASRow {
                 get {
-                    return ((categoriasRow)(this.GetParentRow(this.Table.ParentRelations["produtos_ibfk_3"])));
+                    return ((CATEGORIASRow)(this.GetParentRow(this.Table.ParentRelations["PRODUTOS_ibfk_3"])));
                 }
                 set {
-                    this.SetParentRow(value, this.Table.ParentRelations["produtos_ibfk_3"]);
+                    this.SetParentRow(value, this.Table.ParentRelations["PRODUTOS_ibfk_3"]);
                 }
             }
         }
@@ -4289,25 +4291,25 @@ namespace QrAguas {
         /// <summary>
         ///Represents strongly named DataRow class.
         ///</summary>
-        public partial class tipo_usuarioRow : global::System.Data.DataRow {
+        public partial class TIPO_USUARIORow : global::System.Data.DataRow {
             
-            private tipo_usuarioDataTable tabletipo_usuario;
+            private TIPO_USUARIODataTable tableTIPO_USUARIO;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            internal tipo_usuarioRow(global::System.Data.DataRowBuilder rb) : 
+            internal TIPO_USUARIORow(global::System.Data.DataRowBuilder rb) : 
                     base(rb) {
-                this.tabletipo_usuario = ((tipo_usuarioDataTable)(this.Table));
+                this.tableTIPO_USUARIO = ((TIPO_USUARIODataTable)(this.Table));
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public int ID_TIPO_USUARIO {
                 get {
-                    return ((int)(this[this.tabletipo_usuario.ID_TIPO_USUARIOColumn]));
+                    return ((int)(this[this.tableTIPO_USUARIO.ID_TIPO_USUARIOColumn]));
                 }
                 set {
-                    this[this.tabletipo_usuario.ID_TIPO_USUARIOColumn] = value;
+                    this[this.tableTIPO_USUARIO.ID_TIPO_USUARIOColumn] = value;
                 }
             }
             
@@ -4315,10 +4317,10 @@ namespace QrAguas {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public string NOME_TIPO {
                 get {
-                    return ((string)(this[this.tabletipo_usuario.NOME_TIPOColumn]));
+                    return ((string)(this[this.tableTIPO_USUARIO.NOME_TIPOColumn]));
                 }
                 set {
-                    this[this.tabletipo_usuario.NOME_TIPOColumn] = value;
+                    this[this.tableTIPO_USUARIO.NOME_TIPOColumn] = value;
                 }
             }
             
@@ -4326,38 +4328,21 @@ namespace QrAguas {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public string DESCRICAO {
                 get {
-                    try {
-                        return ((string)(this[this.tabletipo_usuario.DESCRICAOColumn]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'DESCRICAO\' in table \'tipo_usuario\' is DBNull.", e);
-                    }
+                    return ((string)(this[this.tableTIPO_USUARIO.DESCRICAOColumn]));
                 }
                 set {
-                    this[this.tabletipo_usuario.DESCRICAOColumn] = value;
+                    this[this.tableTIPO_USUARIO.DESCRICAOColumn] = value;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public bool IsDESCRICAONull() {
-                return this.IsNull(this.tabletipo_usuario.DESCRICAOColumn);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public void SetDESCRICAONull() {
-                this[this.tabletipo_usuario.DESCRICAOColumn] = global::System.Convert.DBNull;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public usuariosRow[] GetusuariosRows() {
-                if ((this.Table.ChildRelations["usuarios_ibfk_1"] == null)) {
-                    return new usuariosRow[0];
+            public USUARIOSRow[] GetUSUARIOSRows() {
+                if ((this.Table.ChildRelations["USUARIOS_ibfk_1"] == null)) {
+                    return new USUARIOSRow[0];
                 }
                 else {
-                    return ((usuariosRow[])(base.GetChildRows(this.Table.ChildRelations["usuarios_ibfk_1"])));
+                    return ((USUARIOSRow[])(base.GetChildRows(this.Table.ChildRelations["USUARIOS_ibfk_1"])));
                 }
             }
         }
@@ -4365,25 +4350,25 @@ namespace QrAguas {
         /// <summary>
         ///Represents strongly named DataRow class.
         ///</summary>
-        public partial class usuariosRow : global::System.Data.DataRow {
+        public partial class USUARIOSRow : global::System.Data.DataRow {
             
-            private usuariosDataTable tableusuarios;
+            private USUARIOSDataTable tableUSUARIOS;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            internal usuariosRow(global::System.Data.DataRowBuilder rb) : 
+            internal USUARIOSRow(global::System.Data.DataRowBuilder rb) : 
                     base(rb) {
-                this.tableusuarios = ((usuariosDataTable)(this.Table));
+                this.tableUSUARIOS = ((USUARIOSDataTable)(this.Table));
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public int ID_USUARIOS {
                 get {
-                    return ((int)(this[this.tableusuarios.ID_USUARIOSColumn]));
+                    return ((int)(this[this.tableUSUARIOS.ID_USUARIOSColumn]));
                 }
                 set {
-                    this[this.tableusuarios.ID_USUARIOSColumn] = value;
+                    this[this.tableUSUARIOS.ID_USUARIOSColumn] = value;
                 }
             }
             
@@ -4391,10 +4376,10 @@ namespace QrAguas {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public string NOME_USUARIO {
                 get {
-                    return ((string)(this[this.tableusuarios.NOME_USUARIOColumn]));
+                    return ((string)(this[this.tableUSUARIOS.NOME_USUARIOColumn]));
                 }
                 set {
-                    this[this.tableusuarios.NOME_USUARIOColumn] = value;
+                    this[this.tableUSUARIOS.NOME_USUARIOColumn] = value;
                 }
             }
             
@@ -4402,10 +4387,10 @@ namespace QrAguas {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public string SENHA {
                 get {
-                    return ((string)(this[this.tableusuarios.SENHAColumn]));
+                    return ((string)(this[this.tableUSUARIOS.SENHAColumn]));
                 }
                 set {
-                    this[this.tableusuarios.SENHAColumn] = value;
+                    this[this.tableUSUARIOS.SENHAColumn] = value;
                 }
             }
             
@@ -4413,10 +4398,10 @@ namespace QrAguas {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public int ID_TIPO_USUARIO {
                 get {
-                    return ((int)(this[this.tableusuarios.ID_TIPO_USUARIOColumn]));
+                    return ((int)(this[this.tableUSUARIOS.ID_TIPO_USUARIOColumn]));
                 }
                 set {
-                    this[this.tableusuarios.ID_TIPO_USUARIOColumn] = value;
+                    this[this.tableUSUARIOS.ID_TIPO_USUARIOColumn] = value;
                 }
             }
             
@@ -4424,10 +4409,10 @@ namespace QrAguas {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public string CADASTRADO_POR {
                 get {
-                    return ((string)(this[this.tableusuarios.CADASTRADO_PORColumn]));
+                    return ((string)(this[this.tableUSUARIOS.CADASTRADO_PORColumn]));
                 }
                 set {
-                    this[this.tableusuarios.CADASTRADO_PORColumn] = value;
+                    this[this.tableUSUARIOS.CADASTRADO_PORColumn] = value;
                 }
             }
             
@@ -4435,10 +4420,21 @@ namespace QrAguas {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public string ID_UNICO {
                 get {
-                    return ((string)(this[this.tableusuarios.ID_UNICOColumn]));
+                    return ((string)(this[this.tableUSUARIOS.ID_UNICOColumn]));
                 }
                 set {
-                    this[this.tableusuarios.ID_UNICOColumn] = value;
+                    this[this.tableUSUARIOS.ID_UNICOColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public bool ATIVO {
+                get {
+                    return ((bool)(this[this.tableUSUARIOS.ATIVOColumn]));
+                }
+                set {
+                    this[this.tableUSUARIOS.ATIVOColumn] = value;
                 }
             }
             
@@ -4447,14 +4443,14 @@ namespace QrAguas {
             public System.DateTime DATA_SENHA_ALTERADA {
                 get {
                     try {
-                        return ((global::System.DateTime)(this[this.tableusuarios.DATA_SENHA_ALTERADAColumn]));
+                        return ((global::System.DateTime)(this[this.tableUSUARIOS.DATA_SENHA_ALTERADAColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'DATA_SENHA_ALTERADA\' in table \'usuarios\' is DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("The value for column \'DATA_SENHA_ALTERADA\' in table \'USUARIOS\' is DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tableusuarios.DATA_SENHA_ALTERADAColumn] = value;
+                    this[this.tableUSUARIOS.DATA_SENHA_ALTERADAColumn] = value;
                 }
             }
             
@@ -4462,77 +4458,66 @@ namespace QrAguas {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public System.DateTime DATA_CADASTRO {
                 get {
-                    return ((global::System.DateTime)(this[this.tableusuarios.DATA_CADASTROColumn]));
+                    return ((global::System.DateTime)(this[this.tableUSUARIOS.DATA_CADASTROColumn]));
                 }
                 set {
-                    this[this.tableusuarios.DATA_CADASTROColumn] = value;
+                    this[this.tableUSUARIOS.DATA_CADASTROColumn] = value;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public bool ATIVO {
+            public TIPO_USUARIORow TIPO_USUARIORow {
                 get {
-                    return ((bool)(this[this.tableusuarios.ATIVOColumn]));
+                    return ((TIPO_USUARIORow)(this.GetParentRow(this.Table.ParentRelations["USUARIOS_ibfk_1"])));
                 }
                 set {
-                    this[this.tableusuarios.ATIVOColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public tipo_usuarioRow tipo_usuarioRow {
-                get {
-                    return ((tipo_usuarioRow)(this.GetParentRow(this.Table.ParentRelations["usuarios_ibfk_1"])));
-                }
-                set {
-                    this.SetParentRow(value, this.Table.ParentRelations["usuarios_ibfk_1"]);
+                    this.SetParentRow(value, this.Table.ParentRelations["USUARIOS_ibfk_1"]);
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public bool IsDATA_SENHA_ALTERADANull() {
-                return this.IsNull(this.tableusuarios.DATA_SENHA_ALTERADAColumn);
+                return this.IsNull(this.tableUSUARIOS.DATA_SENHA_ALTERADAColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public void SetDATA_SENHA_ALTERADANull() {
-                this[this.tableusuarios.DATA_SENHA_ALTERADAColumn] = global::System.Convert.DBNull;
+                this[this.tableUSUARIOS.DATA_SENHA_ALTERADAColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public categoriasRow[] GetcategoriasRows() {
-                if ((this.Table.ChildRelations["categorias_ibfk_1"] == null)) {
-                    return new categoriasRow[0];
+            public CATEGORIASRow[] GetCATEGORIASRows() {
+                if ((this.Table.ChildRelations["CATEGORIAS_ibfk_1"] == null)) {
+                    return new CATEGORIASRow[0];
                 }
                 else {
-                    return ((categoriasRow[])(base.GetChildRows(this.Table.ChildRelations["categorias_ibfk_1"])));
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public fornecedoresRow[] GetfornecedoresRows() {
-                if ((this.Table.ChildRelations["fornecedores_ibfk_1"] == null)) {
-                    return new fornecedoresRow[0];
-                }
-                else {
-                    return ((fornecedoresRow[])(base.GetChildRows(this.Table.ChildRelations["fornecedores_ibfk_1"])));
+                    return ((CATEGORIASRow[])(base.GetChildRows(this.Table.ChildRelations["CATEGORIAS_ibfk_1"])));
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public produtosRow[] GetprodutosRows() {
-                if ((this.Table.ChildRelations["produtos_ibfk_2"] == null)) {
-                    return new produtosRow[0];
+            public FORNECEDORESRow[] GetFORNECEDORESRows() {
+                if ((this.Table.ChildRelations["FORNECEDORES_ibfk_1"] == null)) {
+                    return new FORNECEDORESRow[0];
                 }
                 else {
-                    return ((produtosRow[])(base.GetChildRows(this.Table.ChildRelations["produtos_ibfk_2"])));
+                    return ((FORNECEDORESRow[])(base.GetChildRows(this.Table.ChildRelations["FORNECEDORES_ibfk_1"])));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public PRODUTOSRow[] GetPRODUTOSRows() {
+                if ((this.Table.ChildRelations["PRODUTOS_ibfk_2"] == null)) {
+                    return new PRODUTOSRow[0];
+                }
+                else {
+                    return ((PRODUTOSRow[])(base.GetChildRows(this.Table.ChildRelations["PRODUTOS_ibfk_2"])));
                 }
             }
         }
@@ -4540,124 +4525,25 @@ namespace QrAguas {
         /// <summary>
         ///Represents strongly named DataRow class.
         ///</summary>
-        public partial class Relatorio_ProdutosRow : global::System.Data.DataRow {
+        public partial class SearchUserDGVUsuariosRow : global::System.Data.DataRow {
             
-            private Relatorio_ProdutosDataTable tableRelatorio_Produtos;
+            private SearchUserDGVUsuariosDataTable tableSearchUserDGVUsuarios;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            internal Relatorio_ProdutosRow(global::System.Data.DataRowBuilder rb) : 
+            internal SearchUserDGVUsuariosRow(global::System.Data.DataRowBuilder rb) : 
                     base(rb) {
-                this.tableRelatorio_Produtos = ((Relatorio_ProdutosDataTable)(this.Table));
+                this.tableSearchUserDGVUsuarios = ((SearchUserDGVUsuariosDataTable)(this.Table));
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public string COD_PRODUTO {
+            public int ID_USUARIOS {
                 get {
-                    return ((string)(this[this.tableRelatorio_Produtos.COD_PRODUTOColumn]));
+                    return ((int)(this[this.tableSearchUserDGVUsuarios.ID_USUARIOSColumn]));
                 }
                 set {
-                    this[this.tableRelatorio_Produtos.COD_PRODUTOColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public string NOME_PRODUTO {
-                get {
-                    return ((string)(this[this.tableRelatorio_Produtos.NOME_PRODUTOColumn]));
-                }
-                set {
-                    this[this.tableRelatorio_Produtos.NOME_PRODUTOColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public string DESCRICAO {
-                get {
-                    return ((string)(this[this.tableRelatorio_Produtos.DESCRICAOColumn]));
-                }
-                set {
-                    this[this.tableRelatorio_Produtos.DESCRICAOColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public string NOME_CATEGORIA {
-                get {
-                    return ((string)(this[this.tableRelatorio_Produtos.NOME_CATEGORIAColumn]));
-                }
-                set {
-                    this[this.tableRelatorio_Produtos.NOME_CATEGORIAColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public string RAZAO_SOCIAL {
-                get {
-                    return ((string)(this[this.tableRelatorio_Produtos.RAZAO_SOCIALColumn]));
-                }
-                set {
-                    this[this.tableRelatorio_Produtos.RAZAO_SOCIALColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public decimal PRECO_COMPRA {
-                get {
-                    return ((decimal)(this[this.tableRelatorio_Produtos.PRECO_COMPRAColumn]));
-                }
-                set {
-                    this[this.tableRelatorio_Produtos.PRECO_COMPRAColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public decimal PRECO_VENDA {
-                get {
-                    return ((decimal)(this[this.tableRelatorio_Produtos.PRECO_VENDAColumn]));
-                }
-                set {
-                    this[this.tableRelatorio_Produtos.PRECO_VENDAColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public System.DateTime DATA_FABRICACAO {
-                get {
-                    return ((global::System.DateTime)(this[this.tableRelatorio_Produtos.DATA_FABRICACAOColumn]));
-                }
-                set {
-                    this[this.tableRelatorio_Produtos.DATA_FABRICACAOColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public System.DateTime DATA_VALIDADE {
-                get {
-                    return ((global::System.DateTime)(this[this.tableRelatorio_Produtos.DATA_VALIDADEColumn]));
-                }
-                set {
-                    this[this.tableRelatorio_Produtos.DATA_VALIDADEColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public System.DateTime DATA_CADASTRO {
-                get {
-                    return ((global::System.DateTime)(this[this.tableRelatorio_Produtos.DATA_CADASTROColumn]));
-                }
-                set {
-                    this[this.tableRelatorio_Produtos.DATA_CADASTROColumn] = value;
+                    this[this.tableSearchUserDGVUsuarios.ID_USUARIOSColumn] = value;
                 }
             }
             
@@ -4665,10 +4551,54 @@ namespace QrAguas {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public string NOME_USUARIO {
                 get {
-                    return ((string)(this[this.tableRelatorio_Produtos.NOME_USUARIOColumn]));
+                    return ((string)(this[this.tableSearchUserDGVUsuarios.NOME_USUARIOColumn]));
                 }
                 set {
-                    this[this.tableRelatorio_Produtos.NOME_USUARIOColumn] = value;
+                    this[this.tableSearchUserDGVUsuarios.NOME_USUARIOColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public string DESCRICAO {
+                get {
+                    return ((string)(this[this.tableSearchUserDGVUsuarios.DESCRICAOColumn]));
+                }
+                set {
+                    this[this.tableSearchUserDGVUsuarios.DESCRICAOColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public string CADASTRADO_POR {
+                get {
+                    return ((string)(this[this.tableSearchUserDGVUsuarios.CADASTRADO_PORColumn]));
+                }
+                set {
+                    this[this.tableSearchUserDGVUsuarios.CADASTRADO_PORColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public System.DateTime DATA_CADASTRO {
+                get {
+                    return ((global::System.DateTime)(this[this.tableSearchUserDGVUsuarios.DATA_CADASTROColumn]));
+                }
+                set {
+                    this[this.tableSearchUserDGVUsuarios.DATA_CADASTROColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public bool ATIVO {
+                get {
+                    return ((bool)(this[this.tableSearchUserDGVUsuarios.ATIVOColumn]));
+                }
+                set {
+                    this[this.tableSearchUserDGVUsuarios.ATIVOColumn] = value;
                 }
             }
         }
@@ -4676,25 +4606,25 @@ namespace QrAguas {
         /// <summary>
         ///Represents strongly named DataRow class.
         ///</summary>
-        public partial class Relatorio_FornecedoresRow : global::System.Data.DataRow {
+        public partial class ReportProviderRow : global::System.Data.DataRow {
             
-            private Relatorio_FornecedoresDataTable tableRelatorio_Fornecedores;
+            private ReportProviderDataTable tableReportProvider;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            internal Relatorio_FornecedoresRow(global::System.Data.DataRowBuilder rb) : 
+            internal ReportProviderRow(global::System.Data.DataRowBuilder rb) : 
                     base(rb) {
-                this.tableRelatorio_Fornecedores = ((Relatorio_FornecedoresDataTable)(this.Table));
+                this.tableReportProvider = ((ReportProviderDataTable)(this.Table));
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public string RAZAO_SOCIAL {
                 get {
-                    return ((string)(this[this.tableRelatorio_Fornecedores.RAZAO_SOCIALColumn]));
+                    return ((string)(this[this.tableReportProvider.RAZAO_SOCIALColumn]));
                 }
                 set {
-                    this[this.tableRelatorio_Fornecedores.RAZAO_SOCIALColumn] = value;
+                    this[this.tableReportProvider.RAZAO_SOCIALColumn] = value;
                 }
             }
             
@@ -4702,10 +4632,10 @@ namespace QrAguas {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public string CNPJ {
                 get {
-                    return ((string)(this[this.tableRelatorio_Fornecedores.CNPJColumn]));
+                    return ((string)(this[this.tableReportProvider.CNPJColumn]));
                 }
                 set {
-                    this[this.tableRelatorio_Fornecedores.CNPJColumn] = value;
+                    this[this.tableReportProvider.CNPJColumn] = value;
                 }
             }
             
@@ -4713,10 +4643,10 @@ namespace QrAguas {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public string ENDERECO {
                 get {
-                    return ((string)(this[this.tableRelatorio_Fornecedores.ENDERECOColumn]));
+                    return ((string)(this[this.tableReportProvider.ENDERECOColumn]));
                 }
                 set {
-                    this[this.tableRelatorio_Fornecedores.ENDERECOColumn] = value;
+                    this[this.tableReportProvider.ENDERECOColumn] = value;
                 }
             }
             
@@ -4724,10 +4654,10 @@ namespace QrAguas {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public int NUMERO {
                 get {
-                    return ((int)(this[this.tableRelatorio_Fornecedores.NUMEROColumn]));
+                    return ((int)(this[this.tableReportProvider.NUMEROColumn]));
                 }
                 set {
-                    this[this.tableRelatorio_Fornecedores.NUMEROColumn] = value;
+                    this[this.tableReportProvider.NUMEROColumn] = value;
                 }
             }
             
@@ -4735,10 +4665,10 @@ namespace QrAguas {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public string BAIRRO {
                 get {
-                    return ((string)(this[this.tableRelatorio_Fornecedores.BAIRROColumn]));
+                    return ((string)(this[this.tableReportProvider.BAIRROColumn]));
                 }
                 set {
-                    this[this.tableRelatorio_Fornecedores.BAIRROColumn] = value;
+                    this[this.tableReportProvider.BAIRROColumn] = value;
                 }
             }
             
@@ -4746,10 +4676,10 @@ namespace QrAguas {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public string CIDADE {
                 get {
-                    return ((string)(this[this.tableRelatorio_Fornecedores.CIDADEColumn]));
+                    return ((string)(this[this.tableReportProvider.CIDADEColumn]));
                 }
                 set {
-                    this[this.tableRelatorio_Fornecedores.CIDADEColumn] = value;
+                    this[this.tableReportProvider.CIDADEColumn] = value;
                 }
             }
             
@@ -4757,10 +4687,10 @@ namespace QrAguas {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public string CEP {
                 get {
-                    return ((string)(this[this.tableRelatorio_Fornecedores.CEPColumn]));
+                    return ((string)(this[this.tableReportProvider.CEPColumn]));
                 }
                 set {
-                    this[this.tableRelatorio_Fornecedores.CEPColumn] = value;
+                    this[this.tableReportProvider.CEPColumn] = value;
                 }
             }
             
@@ -4769,14 +4699,14 @@ namespace QrAguas {
             public string COMPLEMENTO {
                 get {
                     try {
-                        return ((string)(this[this.tableRelatorio_Fornecedores.COMPLEMENTOColumn]));
+                        return ((string)(this[this.tableReportProvider.COMPLEMENTOColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'COMPLEMENTO\' in table \'Relatorio_Fornecedores\' is DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("The value for column \'COMPLEMENTO\' in table \'ReportProvider\' is DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tableRelatorio_Fornecedores.COMPLEMENTOColumn] = value;
+                    this[this.tableReportProvider.COMPLEMENTOColumn] = value;
                 }
             }
             
@@ -4784,10 +4714,10 @@ namespace QrAguas {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public string UF {
                 get {
-                    return ((string)(this[this.tableRelatorio_Fornecedores.UFColumn]));
+                    return ((string)(this[this.tableReportProvider.UFColumn]));
                 }
                 set {
-                    this[this.tableRelatorio_Fornecedores.UFColumn] = value;
+                    this[this.tableReportProvider.UFColumn] = value;
                 }
             }
             
@@ -4795,10 +4725,10 @@ namespace QrAguas {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public string TELEFONE {
                 get {
-                    return ((string)(this[this.tableRelatorio_Fornecedores.TELEFONEColumn]));
+                    return ((string)(this[this.tableReportProvider.TELEFONEColumn]));
                 }
                 set {
-                    this[this.tableRelatorio_Fornecedores.TELEFONEColumn] = value;
+                    this[this.tableReportProvider.TELEFONEColumn] = value;
                 }
             }
             
@@ -4807,14 +4737,14 @@ namespace QrAguas {
             public string CELULAR {
                 get {
                     try {
-                        return ((string)(this[this.tableRelatorio_Fornecedores.CELULARColumn]));
+                        return ((string)(this[this.tableReportProvider.CELULARColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'CELULAR\' in table \'Relatorio_Fornecedores\' is DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("The value for column \'CELULAR\' in table \'ReportProvider\' is DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tableRelatorio_Fornecedores.CELULARColumn] = value;
+                    this[this.tableReportProvider.CELULARColumn] = value;
                 }
             }
             
@@ -4823,14 +4753,14 @@ namespace QrAguas {
             public string EMAIL {
                 get {
                     try {
-                        return ((string)(this[this.tableRelatorio_Fornecedores.EMAILColumn]));
+                        return ((string)(this[this.tableReportProvider.EMAILColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'EMAIL\' in table \'Relatorio_Fornecedores\' is DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("The value for column \'EMAIL\' in table \'ReportProvider\' is DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tableRelatorio_Fornecedores.EMAILColumn] = value;
+                    this[this.tableReportProvider.EMAILColumn] = value;
                 }
             }
             
@@ -4838,10 +4768,10 @@ namespace QrAguas {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public System.DateTime DATA_CADASTRO {
                 get {
-                    return ((global::System.DateTime)(this[this.tableRelatorio_Fornecedores.DATA_CADASTROColumn]));
+                    return ((global::System.DateTime)(this[this.tableReportProvider.DATA_CADASTROColumn]));
                 }
                 set {
-                    this[this.tableRelatorio_Fornecedores.DATA_CADASTROColumn] = value;
+                    this[this.tableReportProvider.DATA_CADASTROColumn] = value;
                 }
             }
             
@@ -4849,83 +4779,83 @@ namespace QrAguas {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public string NOME_USUARIO {
                 get {
-                    return ((string)(this[this.tableRelatorio_Fornecedores.NOME_USUARIOColumn]));
+                    return ((string)(this[this.tableReportProvider.NOME_USUARIOColumn]));
                 }
                 set {
-                    this[this.tableRelatorio_Fornecedores.NOME_USUARIOColumn] = value;
+                    this[this.tableReportProvider.NOME_USUARIOColumn] = value;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public bool IsCOMPLEMENTONull() {
-                return this.IsNull(this.tableRelatorio_Fornecedores.COMPLEMENTOColumn);
+                return this.IsNull(this.tableReportProvider.COMPLEMENTOColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public void SetCOMPLEMENTONull() {
-                this[this.tableRelatorio_Fornecedores.COMPLEMENTOColumn] = global::System.Convert.DBNull;
+                this[this.tableReportProvider.COMPLEMENTOColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public bool IsCELULARNull() {
-                return this.IsNull(this.tableRelatorio_Fornecedores.CELULARColumn);
+                return this.IsNull(this.tableReportProvider.CELULARColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public void SetCELULARNull() {
-                this[this.tableRelatorio_Fornecedores.CELULARColumn] = global::System.Convert.DBNull;
+                this[this.tableReportProvider.CELULARColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public bool IsEMAILNull() {
-                return this.IsNull(this.tableRelatorio_Fornecedores.EMAILColumn);
+                return this.IsNull(this.tableReportProvider.EMAILColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public void SetEMAILNull() {
-                this[this.tableRelatorio_Fornecedores.EMAILColumn] = global::System.Convert.DBNull;
+                this[this.tableReportProvider.EMAILColumn] = global::System.Convert.DBNull;
             }
         }
         
         /// <summary>
         ///Represents strongly named DataRow class.
         ///</summary>
-        public partial class DataGridViewUsuariosRow : global::System.Data.DataRow {
+        public partial class ReportProductRow : global::System.Data.DataRow {
             
-            private DataGridViewUsuariosDataTable tableDataGridViewUsuarios;
+            private ReportProductDataTable tableReportProduct;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            internal DataGridViewUsuariosRow(global::System.Data.DataRowBuilder rb) : 
+            internal ReportProductRow(global::System.Data.DataRowBuilder rb) : 
                     base(rb) {
-                this.tableDataGridViewUsuarios = ((DataGridViewUsuariosDataTable)(this.Table));
+                this.tableReportProduct = ((ReportProductDataTable)(this.Table));
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public int ID_USUARIOS {
+            public string COD_PRODUTO {
                 get {
-                    return ((int)(this[this.tableDataGridViewUsuarios.ID_USUARIOSColumn]));
+                    return ((string)(this[this.tableReportProduct.COD_PRODUTOColumn]));
                 }
                 set {
-                    this[this.tableDataGridViewUsuarios.ID_USUARIOSColumn] = value;
+                    this[this.tableReportProduct.COD_PRODUTOColumn] = value;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public string NOME_USUARIO {
+            public string NOME_PRODUTO {
                 get {
-                    return ((string)(this[this.tableDataGridViewUsuarios.NOME_USUARIOColumn]));
+                    return ((string)(this[this.tableReportProduct.NOME_PRODUTOColumn]));
                 }
                 set {
-                    this[this.tableDataGridViewUsuarios.NOME_USUARIOColumn] = value;
+                    this[this.tableReportProduct.NOME_PRODUTOColumn] = value;
                 }
             }
             
@@ -4933,26 +4863,76 @@ namespace QrAguas {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public string DESCRICAO {
                 get {
-                    try {
-                        return ((string)(this[this.tableDataGridViewUsuarios.DESCRICAOColumn]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("The value for column \'DESCRICAO\' in table \'DataGridViewUsuarios\' is DBNull.", e);
-                    }
+                    return ((string)(this[this.tableReportProduct.DESCRICAOColumn]));
                 }
                 set {
-                    this[this.tableDataGridViewUsuarios.DESCRICAOColumn] = value;
+                    this[this.tableReportProduct.DESCRICAOColumn] = value;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public string CADASTRADO_POR {
+            public string NOME_CATEGORIA {
                 get {
-                    return ((string)(this[this.tableDataGridViewUsuarios.CADASTRADO_PORColumn]));
+                    return ((string)(this[this.tableReportProduct.NOME_CATEGORIAColumn]));
                 }
                 set {
-                    this[this.tableDataGridViewUsuarios.CADASTRADO_PORColumn] = value;
+                    this[this.tableReportProduct.NOME_CATEGORIAColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public string RAZAO_SOCIAL {
+                get {
+                    return ((string)(this[this.tableReportProduct.RAZAO_SOCIALColumn]));
+                }
+                set {
+                    this[this.tableReportProduct.RAZAO_SOCIALColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public decimal PRECO_COMPRA {
+                get {
+                    return ((decimal)(this[this.tableReportProduct.PRECO_COMPRAColumn]));
+                }
+                set {
+                    this[this.tableReportProduct.PRECO_COMPRAColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public decimal PRECO_VENDA {
+                get {
+                    return ((decimal)(this[this.tableReportProduct.PRECO_VENDAColumn]));
+                }
+                set {
+                    this[this.tableReportProduct.PRECO_VENDAColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public System.DateTime DATA_FABRICACAO {
+                get {
+                    return ((global::System.DateTime)(this[this.tableReportProduct.DATA_FABRICACAOColumn]));
+                }
+                set {
+                    this[this.tableReportProduct.DATA_FABRICACAOColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+            public System.DateTime DATA_VALIDADE {
+                get {
+                    return ((global::System.DateTime)(this[this.tableReportProduct.DATA_VALIDADEColumn]));
+                }
+                set {
+                    this[this.tableReportProduct.DATA_VALIDADEColumn] = value;
                 }
             }
             
@@ -4960,34 +4940,22 @@ namespace QrAguas {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
             public System.DateTime DATA_CADASTRO {
                 get {
-                    return ((global::System.DateTime)(this[this.tableDataGridViewUsuarios.DATA_CADASTROColumn]));
+                    return ((global::System.DateTime)(this[this.tableReportProduct.DATA_CADASTROColumn]));
                 }
                 set {
-                    this[this.tableDataGridViewUsuarios.DATA_CADASTROColumn] = value;
+                    this[this.tableReportProduct.DATA_CADASTROColumn] = value;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public bool ATIVO {
+            public string NOME_USUARIO {
                 get {
-                    return ((bool)(this[this.tableDataGridViewUsuarios.ATIVOColumn]));
+                    return ((string)(this[this.tableReportProduct.NOME_USUARIOColumn]));
                 }
                 set {
-                    this[this.tableDataGridViewUsuarios.ATIVOColumn] = value;
+                    this[this.tableReportProduct.NOME_USUARIOColumn] = value;
                 }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public bool IsDESCRICAONull() {
-                return this.IsNull(this.tableDataGridViewUsuarios.DESCRICAOColumn);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public void SetDESCRICAONull() {
-                this[this.tableDataGridViewUsuarios.DESCRICAOColumn] = global::System.Convert.DBNull;
             }
         }
         
@@ -4995,22 +4963,22 @@ namespace QrAguas {
         ///Row event argument class
         ///</summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-        public class categoriasRowChangeEvent : global::System.EventArgs {
+        public class CATEGORIASRowChangeEvent : global::System.EventArgs {
             
-            private categoriasRow eventRow;
+            private CATEGORIASRow eventRow;
             
             private global::System.Data.DataRowAction eventAction;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public categoriasRowChangeEvent(categoriasRow row, global::System.Data.DataRowAction action) {
+            public CATEGORIASRowChangeEvent(CATEGORIASRow row, global::System.Data.DataRowAction action) {
                 this.eventRow = row;
                 this.eventAction = action;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public categoriasRow Row {
+            public CATEGORIASRow Row {
                 get {
                     return this.eventRow;
                 }
@@ -5029,22 +4997,22 @@ namespace QrAguas {
         ///Row event argument class
         ///</summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-        public class fornecedoresRowChangeEvent : global::System.EventArgs {
+        public class FORNECEDORESRowChangeEvent : global::System.EventArgs {
             
-            private fornecedoresRow eventRow;
+            private FORNECEDORESRow eventRow;
             
             private global::System.Data.DataRowAction eventAction;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public fornecedoresRowChangeEvent(fornecedoresRow row, global::System.Data.DataRowAction action) {
+            public FORNECEDORESRowChangeEvent(FORNECEDORESRow row, global::System.Data.DataRowAction action) {
                 this.eventRow = row;
                 this.eventAction = action;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public fornecedoresRow Row {
+            public FORNECEDORESRow Row {
                 get {
                     return this.eventRow;
                 }
@@ -5063,22 +5031,22 @@ namespace QrAguas {
         ///Row event argument class
         ///</summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-        public class produtosRowChangeEvent : global::System.EventArgs {
+        public class PRODUTOSRowChangeEvent : global::System.EventArgs {
             
-            private produtosRow eventRow;
+            private PRODUTOSRow eventRow;
             
             private global::System.Data.DataRowAction eventAction;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public produtosRowChangeEvent(produtosRow row, global::System.Data.DataRowAction action) {
+            public PRODUTOSRowChangeEvent(PRODUTOSRow row, global::System.Data.DataRowAction action) {
                 this.eventRow = row;
                 this.eventAction = action;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public produtosRow Row {
+            public PRODUTOSRow Row {
                 get {
                     return this.eventRow;
                 }
@@ -5097,22 +5065,22 @@ namespace QrAguas {
         ///Row event argument class
         ///</summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-        public class tipo_usuarioRowChangeEvent : global::System.EventArgs {
+        public class TIPO_USUARIORowChangeEvent : global::System.EventArgs {
             
-            private tipo_usuarioRow eventRow;
+            private TIPO_USUARIORow eventRow;
             
             private global::System.Data.DataRowAction eventAction;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public tipo_usuarioRowChangeEvent(tipo_usuarioRow row, global::System.Data.DataRowAction action) {
+            public TIPO_USUARIORowChangeEvent(TIPO_USUARIORow row, global::System.Data.DataRowAction action) {
                 this.eventRow = row;
                 this.eventAction = action;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public tipo_usuarioRow Row {
+            public TIPO_USUARIORow Row {
                 get {
                     return this.eventRow;
                 }
@@ -5131,22 +5099,22 @@ namespace QrAguas {
         ///Row event argument class
         ///</summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-        public class usuariosRowChangeEvent : global::System.EventArgs {
+        public class USUARIOSRowChangeEvent : global::System.EventArgs {
             
-            private usuariosRow eventRow;
+            private USUARIOSRow eventRow;
             
             private global::System.Data.DataRowAction eventAction;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public usuariosRowChangeEvent(usuariosRow row, global::System.Data.DataRowAction action) {
+            public USUARIOSRowChangeEvent(USUARIOSRow row, global::System.Data.DataRowAction action) {
                 this.eventRow = row;
                 this.eventAction = action;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public usuariosRow Row {
+            public USUARIOSRow Row {
                 get {
                     return this.eventRow;
                 }
@@ -5165,22 +5133,22 @@ namespace QrAguas {
         ///Row event argument class
         ///</summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-        public class Relatorio_ProdutosRowChangeEvent : global::System.EventArgs {
+        public class SearchUserDGVUsuariosRowChangeEvent : global::System.EventArgs {
             
-            private Relatorio_ProdutosRow eventRow;
+            private SearchUserDGVUsuariosRow eventRow;
             
             private global::System.Data.DataRowAction eventAction;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public Relatorio_ProdutosRowChangeEvent(Relatorio_ProdutosRow row, global::System.Data.DataRowAction action) {
+            public SearchUserDGVUsuariosRowChangeEvent(SearchUserDGVUsuariosRow row, global::System.Data.DataRowAction action) {
                 this.eventRow = row;
                 this.eventAction = action;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public Relatorio_ProdutosRow Row {
+            public SearchUserDGVUsuariosRow Row {
                 get {
                     return this.eventRow;
                 }
@@ -5199,22 +5167,22 @@ namespace QrAguas {
         ///Row event argument class
         ///</summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-        public class Relatorio_FornecedoresRowChangeEvent : global::System.EventArgs {
+        public class ReportProviderRowChangeEvent : global::System.EventArgs {
             
-            private Relatorio_FornecedoresRow eventRow;
+            private ReportProviderRow eventRow;
             
             private global::System.Data.DataRowAction eventAction;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public Relatorio_FornecedoresRowChangeEvent(Relatorio_FornecedoresRow row, global::System.Data.DataRowAction action) {
+            public ReportProviderRowChangeEvent(ReportProviderRow row, global::System.Data.DataRowAction action) {
                 this.eventRow = row;
                 this.eventAction = action;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public Relatorio_FornecedoresRow Row {
+            public ReportProviderRow Row {
                 get {
                     return this.eventRow;
                 }
@@ -5233,22 +5201,22 @@ namespace QrAguas {
         ///Row event argument class
         ///</summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-        public class DataGridViewUsuariosRowChangeEvent : global::System.EventArgs {
+        public class ReportProductRowChangeEvent : global::System.EventArgs {
             
-            private DataGridViewUsuariosRow eventRow;
+            private ReportProductRow eventRow;
             
             private global::System.Data.DataRowAction eventAction;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public DataGridViewUsuariosRowChangeEvent(DataGridViewUsuariosRow row, global::System.Data.DataRowAction action) {
+            public ReportProductRowChangeEvent(ReportProductRow row, global::System.Data.DataRowAction action) {
                 this.eventRow = row;
                 this.eventAction = action;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-            public DataGridViewUsuariosRow Row {
+            public ReportProductRow Row {
                 get {
                     return this.eventRow;
                 }
@@ -5264,7 +5232,7 @@ namespace QrAguas {
         }
     }
 }
-namespace QrAguas.qraguasDataSetTableAdapters {
+namespace QrAguas.QrAguasRemoteDBDataSetTableAdapters {
     
     
     /// <summary>
@@ -5276,7 +5244,7 @@ namespace QrAguas.qraguasDataSetTableAdapters {
     [global::System.ComponentModel.DesignerAttribute("Microsoft.VSDesigner.DataSource.Design.TableAdapterDesigner, Microsoft.VSDesigner" +
         ", Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a")]
     [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-    public partial class categoriasTableAdapter : global::System.ComponentModel.Component {
+    public partial class CATEGORIASTableAdapter : global::System.ComponentModel.Component {
         
         private global::MySql.Data.MySqlClient.MySqlDataAdapter _adapter;
         
@@ -5290,7 +5258,7 @@ namespace QrAguas.qraguasDataSetTableAdapters {
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-        public categoriasTableAdapter() {
+        public CATEGORIASTableAdapter() {
             this.ClearBeforeFill = true;
         }
         
@@ -5387,18 +5355,18 @@ namespace QrAguas.qraguasDataSetTableAdapters {
             this._adapter = new global::MySql.Data.MySqlClient.MySqlDataAdapter();
             global::System.Data.Common.DataTableMapping tableMapping = new global::System.Data.Common.DataTableMapping();
             tableMapping.SourceTable = "Table";
-            tableMapping.DataSetTable = "categorias";
+            tableMapping.DataSetTable = "CATEGORIAS";
             tableMapping.ColumnMappings.Add("ID_CATEGORIAS", "ID_CATEGORIAS");
             tableMapping.ColumnMappings.Add("NOME_CATEGORIA", "NOME_CATEGORIA");
+            tableMapping.ColumnMappings.Add("ATIVO", "ATIVO");
             tableMapping.ColumnMappings.Add("ID_USUARIOS", "ID_USUARIOS");
             tableMapping.ColumnMappings.Add("ATUALIZADO_POR", "ATUALIZADO_POR");
             tableMapping.ColumnMappings.Add("DATA_ATUALIZACAO", "DATA_ATUALIZACAO");
             tableMapping.ColumnMappings.Add("DATA_CADASTRO", "DATA_CADASTRO");
-            tableMapping.ColumnMappings.Add("ATIVO", "ATIVO");
             this._adapter.TableMappings.Add(tableMapping);
             this._adapter.DeleteCommand = new global::MySql.Data.MySqlClient.MySqlCommand();
             this._adapter.DeleteCommand.Connection = this.Connection;
-            this._adapter.DeleteCommand.CommandText = @"DELETE FROM `categorias` WHERE ((`ID_CATEGORIAS` = @p1) AND (`NOME_CATEGORIA` = @p2) AND (`ATIVO` = @p3) AND (`ID_USUARIOS` = @p4) AND ((@p5 = 1 AND `ATUALIZADO_POR` IS NULL) OR (`ATUALIZADO_POR` = @p6)) AND ((@p7 = 1 AND `DATA_ATUALIZACAO` IS NULL) OR (`DATA_ATUALIZACAO` = @p8)) AND (`DATA_CADASTRO` = @p9))";
+            this._adapter.DeleteCommand.CommandText = @"DELETE FROM `CATEGORIAS` WHERE ((`ID_CATEGORIAS` = @p1) AND (`NOME_CATEGORIA` = @p2) AND (`ATIVO` = @p3) AND (`ID_USUARIOS` = @p4) AND ((@p5 = 1 AND `ATUALIZADO_POR` IS NULL) OR (`ATUALIZADO_POR` = @p6)) AND ((@p7 = 1 AND `DATA_ATUALIZACAO` IS NULL) OR (`DATA_ATUALIZACAO` = @p8)) AND (`DATA_CADASTRO` = @p9))";
             this._adapter.DeleteCommand.CommandType = global::System.Data.CommandType.Text;
             global::MySql.Data.MySqlClient.MySqlParameter param = new global::MySql.Data.MySqlClient.MySqlParameter();
             param.ParameterName = "@p1";
@@ -5476,7 +5444,7 @@ namespace QrAguas.qraguasDataSetTableAdapters {
             this._adapter.DeleteCommand.Parameters.Add(param);
             this._adapter.InsertCommand = new global::MySql.Data.MySqlClient.MySqlCommand();
             this._adapter.InsertCommand.Connection = this.Connection;
-            this._adapter.InsertCommand.CommandText = "INSERT INTO `categorias` (`NOME_CATEGORIA`, `ATIVO`, `ID_USUARIOS`, `ATUALIZADO_P" +
+            this._adapter.InsertCommand.CommandText = "INSERT INTO `CATEGORIAS` (`NOME_CATEGORIA`, `ATIVO`, `ID_USUARIOS`, `ATUALIZADO_P" +
                 "OR`, `DATA_ATUALIZACAO`, `DATA_CADASTRO`) VALUES (@p1, @p2, @p3, @p4, @p5, @p6)";
             this._adapter.InsertCommand.CommandType = global::System.Data.CommandType.Text;
             param = new global::MySql.Data.MySqlClient.MySqlParameter();
@@ -5529,7 +5497,7 @@ namespace QrAguas.qraguasDataSetTableAdapters {
             this._adapter.InsertCommand.Parameters.Add(param);
             this._adapter.UpdateCommand = new global::MySql.Data.MySqlClient.MySqlCommand();
             this._adapter.UpdateCommand.Connection = this.Connection;
-            this._adapter.UpdateCommand.CommandText = @"UPDATE `categorias` SET `NOME_CATEGORIA` = @p1, `ATIVO` = @p2, `ID_USUARIOS` = @p3, `ATUALIZADO_POR` = @p4, `DATA_ATUALIZACAO` = @p5, `DATA_CADASTRO` = @p6 WHERE ((`ID_CATEGORIAS` = @p7) AND (`NOME_CATEGORIA` = @p8) AND (`ATIVO` = @p9) AND (`ID_USUARIOS` = @p10) AND ((@p11 = 1 AND `ATUALIZADO_POR` IS NULL) OR (`ATUALIZADO_POR` = @p12)) AND ((@p13 = 1 AND `DATA_ATUALIZACAO` IS NULL) OR (`DATA_ATUALIZACAO` = @p14)) AND (`DATA_CADASTRO` = @p15))";
+            this._adapter.UpdateCommand.CommandText = @"UPDATE `CATEGORIAS` SET `NOME_CATEGORIA` = @p1, `ATIVO` = @p2, `ID_USUARIOS` = @p3, `ATUALIZADO_POR` = @p4, `DATA_ATUALIZACAO` = @p5, `DATA_CADASTRO` = @p6 WHERE ((`ID_CATEGORIAS` = @p7) AND (`NOME_CATEGORIA` = @p8) AND (`ATIVO` = @p9) AND (`ID_USUARIOS` = @p10) AND ((@p11 = 1 AND `ATUALIZADO_POR` IS NULL) OR (`ATUALIZADO_POR` = @p12)) AND ((@p13 = 1 AND `DATA_ATUALIZACAO` IS NULL) OR (`DATA_ATUALIZACAO` = @p14)) AND (`DATA_CADASTRO` = @p15))";
             this._adapter.UpdateCommand.CommandType = global::System.Data.CommandType.Text;
             param = new global::MySql.Data.MySqlClient.MySqlParameter();
             param.ParameterName = "@p1";
@@ -5659,7 +5627,7 @@ namespace QrAguas.qraguasDataSetTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         private void InitConnection() {
             this._connection = new global::MySql.Data.MySqlClient.MySqlConnection();
-            this._connection.ConnectionString = global::QrAguas.Properties.Settings.Default.QrAguasCnn;
+            this._connection.ConnectionString = global::QrAguas.Properties.Settings.Default.qraguasremotedbConnectionString;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -5669,13 +5637,13 @@ namespace QrAguas.qraguasDataSetTableAdapters {
             this._commandCollection[0] = new global::MySql.Data.MySqlClient.MySqlCommand();
             this._commandCollection[0].Connection = this.Connection;
             this._commandCollection[0].CommandText = "SELECT        ID_CATEGORIAS, NOME_CATEGORIA, ATIVO, ID_USUARIOS, ATUALIZADO_POR, " +
-                "DATA_ATUALIZACAO, DATA_CADASTRO\r\nFROM            categorias\r\nORDER BY NOME_CATEG" +
+                "DATA_ATUALIZACAO, DATA_CADASTRO\r\nFROM            CATEGORIAS\r\nORDER BY NOME_CATEG" +
                 "ORIA";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
             this._commandCollection[1] = new global::MySql.Data.MySqlClient.MySqlCommand();
             this._commandCollection[1].Connection = this.Connection;
             this._commandCollection[1].CommandText = "SELECT ATIVO, ATUALIZADO_POR, DATA_ATUALIZACAO, DATA_CADASTRO, ID_CATEGORIAS, ID_" +
-                "USUARIOS, NOME_CATEGORIA FROM categorias WHERE (ATIVO = TRUE) ORDER BY NOME_CATE" +
+                "USUARIOS, NOME_CATEGORIA FROM CATEGORIAS WHERE (ATIVO = TRUE) ORDER BY NOME_CATE" +
                 "GORIA";
             this._commandCollection[1].CommandType = global::System.Data.CommandType.Text;
         }
@@ -5684,7 +5652,7 @@ namespace QrAguas.qraguasDataSetTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, true)]
-        public virtual int Fill(qraguasDataSet.categoriasDataTable dataTable) {
+        public virtual int Fill(QrAguasRemoteDBDataSet.CATEGORIASDataTable dataTable) {
             this.Adapter.SelectCommand = this.CommandCollection[0];
             if ((this.ClearBeforeFill == true)) {
                 dataTable.Clear();
@@ -5697,9 +5665,9 @@ namespace QrAguas.qraguasDataSetTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
-        public virtual qraguasDataSet.categoriasDataTable GetData() {
+        public virtual QrAguasRemoteDBDataSet.CATEGORIASDataTable GetData() {
             this.Adapter.SelectCommand = this.CommandCollection[0];
-            qraguasDataSet.categoriasDataTable dataTable = new qraguasDataSet.categoriasDataTable();
+            QrAguasRemoteDBDataSet.CATEGORIASDataTable dataTable = new QrAguasRemoteDBDataSet.CATEGORIASDataTable();
             this.Adapter.Fill(dataTable);
             return dataTable;
         }
@@ -5708,7 +5676,7 @@ namespace QrAguas.qraguasDataSetTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, false)]
-        public virtual int FillByAtivoTrue(qraguasDataSet.categoriasDataTable dataTable) {
+        public virtual int FillByAtivoTrue(QrAguasRemoteDBDataSet.CATEGORIASDataTable dataTable) {
             this.Adapter.SelectCommand = this.CommandCollection[1];
             if ((this.ClearBeforeFill == true)) {
                 dataTable.Clear();
@@ -5721,9 +5689,9 @@ namespace QrAguas.qraguasDataSetTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, false)]
-        public virtual qraguasDataSet.categoriasDataTable GetDataByAtivoTrue() {
+        public virtual QrAguasRemoteDBDataSet.CATEGORIASDataTable GetDataByAtivoTrue() {
             this.Adapter.SelectCommand = this.CommandCollection[1];
-            qraguasDataSet.categoriasDataTable dataTable = new qraguasDataSet.categoriasDataTable();
+            QrAguasRemoteDBDataSet.CATEGORIASDataTable dataTable = new QrAguasRemoteDBDataSet.CATEGORIASDataTable();
             this.Adapter.Fill(dataTable);
             return dataTable;
         }
@@ -5731,15 +5699,15 @@ namespace QrAguas.qraguasDataSetTableAdapters {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(qraguasDataSet.categoriasDataTable dataTable) {
+        public virtual int Update(QrAguasRemoteDBDataSet.CATEGORIASDataTable dataTable) {
             return this.Adapter.Update(dataTable);
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(qraguasDataSet dataSet) {
-            return this.Adapter.Update(dataSet, "categorias");
+        public virtual int Update(QrAguasRemoteDBDataSet dataSet) {
+            return this.Adapter.Update(dataSet, "CATEGORIAS");
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -5924,7 +5892,7 @@ namespace QrAguas.qraguasDataSetTableAdapters {
     [global::System.ComponentModel.DesignerAttribute("Microsoft.VSDesigner.DataSource.Design.TableAdapterDesigner, Microsoft.VSDesigner" +
         ", Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a")]
     [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-    public partial class fornecedoresTableAdapter : global::System.ComponentModel.Component {
+    public partial class FORNECEDORESTableAdapter : global::System.ComponentModel.Component {
         
         private global::MySql.Data.MySqlClient.MySqlDataAdapter _adapter;
         
@@ -5938,7 +5906,7 @@ namespace QrAguas.qraguasDataSetTableAdapters {
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-        public fornecedoresTableAdapter() {
+        public FORNECEDORESTableAdapter() {
             this.ClearBeforeFill = true;
         }
         
@@ -6035,7 +6003,7 @@ namespace QrAguas.qraguasDataSetTableAdapters {
             this._adapter = new global::MySql.Data.MySqlClient.MySqlDataAdapter();
             global::System.Data.Common.DataTableMapping tableMapping = new global::System.Data.Common.DataTableMapping();
             tableMapping.SourceTable = "Table";
-            tableMapping.DataSetTable = "fornecedores";
+            tableMapping.DataSetTable = "FORNECEDORES";
             tableMapping.ColumnMappings.Add("ID_FORNECEDORES", "ID_FORNECEDORES");
             tableMapping.ColumnMappings.Add("RAZAO_SOCIAL", "RAZAO_SOCIAL");
             tableMapping.ColumnMappings.Add("CNPJ", "CNPJ");
@@ -6054,7 +6022,7 @@ namespace QrAguas.qraguasDataSetTableAdapters {
             this._adapter.TableMappings.Add(tableMapping);
             this._adapter.DeleteCommand = new global::MySql.Data.MySqlClient.MySqlCommand();
             this._adapter.DeleteCommand.Connection = this.Connection;
-            this._adapter.DeleteCommand.CommandText = @"DELETE FROM `fornecedores` WHERE ((`ID_FORNECEDORES` = @p1) AND (`RAZAO_SOCIAL` = @p2) AND (`CNPJ` = @p3) AND (`ENDERECO` = @p4) AND (`NUMERO` = @p5) AND (`BAIRRO` = @p6) AND (`CIDADE` = @p7) AND ((@p8 = 1 AND `COMPLEMENTO` IS NULL) OR (`COMPLEMENTO` = @p9)) AND (`UF` = @p10) AND (`TELEFONE` = @p11) AND ((@p12 = 1 AND `CELULAR` IS NULL) OR (`CELULAR` = @p13)) AND (`CEP` = @p14) AND ((@p15 = 1 AND `EMAIL` IS NULL) OR (`EMAIL` = @p16)) AND (`ID_USUARIOS` = @p17) AND (`DATA_CADASTRO` = @p18))";
+            this._adapter.DeleteCommand.CommandText = @"DELETE FROM `FORNECEDORES` WHERE ((`ID_FORNECEDORES` = @p1) AND (`RAZAO_SOCIAL` = @p2) AND (`CNPJ` = @p3) AND (`ENDERECO` = @p4) AND (`NUMERO` = @p5) AND (`BAIRRO` = @p6) AND (`CIDADE` = @p7) AND ((@p8 = 1 AND `COMPLEMENTO` IS NULL) OR (`COMPLEMENTO` = @p9)) AND (`UF` = @p10) AND (`TELEFONE` = @p11) AND ((@p12 = 1 AND `CELULAR` IS NULL) OR (`CELULAR` = @p13)) AND (`CEP` = @p14) AND ((@p15 = 1 AND `EMAIL` IS NULL) OR (`EMAIL` = @p16)) AND (`ID_USUARIOS` = @p17) AND (`DATA_CADASTRO` = @p18))";
             this._adapter.DeleteCommand.CommandType = global::System.Data.CommandType.Text;
             global::MySql.Data.MySqlClient.MySqlParameter param = new global::MySql.Data.MySqlClient.MySqlParameter();
             param.ParameterName = "@p1";
@@ -6205,7 +6173,7 @@ namespace QrAguas.qraguasDataSetTableAdapters {
             this._adapter.DeleteCommand.Parameters.Add(param);
             this._adapter.InsertCommand = new global::MySql.Data.MySqlClient.MySqlCommand();
             this._adapter.InsertCommand.Connection = this.Connection;
-            this._adapter.InsertCommand.CommandText = @"INSERT INTO `fornecedores` (`RAZAO_SOCIAL`, `CNPJ`, `ENDERECO`, `NUMERO`, `BAIRRO`, `CIDADE`, `COMPLEMENTO`, `UF`, `TELEFONE`, `CELULAR`, `CEP`, `EMAIL`, `ID_USUARIOS`, `DATA_CADASTRO`) VALUES (@p1, @p2, @p3, @p4, @p5, @p6, @p7, @p8, @p9, @p10, @p11, @p12, @p13, @p14)";
+            this._adapter.InsertCommand.CommandText = @"INSERT INTO `FORNECEDORES` (`RAZAO_SOCIAL`, `CNPJ`, `ENDERECO`, `NUMERO`, `BAIRRO`, `CIDADE`, `COMPLEMENTO`, `UF`, `TELEFONE`, `CELULAR`, `CEP`, `EMAIL`, `ID_USUARIOS`, `DATA_CADASTRO`) VALUES (@p1, @p2, @p3, @p4, @p5, @p6, @p7, @p8, @p9, @p10, @p11, @p12, @p13, @p14)";
             this._adapter.InsertCommand.CommandType = global::System.Data.CommandType.Text;
             param = new global::MySql.Data.MySqlClient.MySqlParameter();
             param.ParameterName = "@p1";
@@ -6321,7 +6289,7 @@ namespace QrAguas.qraguasDataSetTableAdapters {
             this._adapter.InsertCommand.Parameters.Add(param);
             this._adapter.UpdateCommand = new global::MySql.Data.MySqlClient.MySqlCommand();
             this._adapter.UpdateCommand.Connection = this.Connection;
-            this._adapter.UpdateCommand.CommandText = @"UPDATE `fornecedores` SET `RAZAO_SOCIAL` = @p1, `CNPJ` = @p2, `ENDERECO` = @p3, `NUMERO` = @p4, `BAIRRO` = @p5, `CIDADE` = @p6, `COMPLEMENTO` = @p7, `UF` = @p8, `TELEFONE` = @p9, `CELULAR` = @p10, `CEP` = @p11, `EMAIL` = @p12, `ID_USUARIOS` = @p13, `DATA_CADASTRO` = @p14 WHERE ((`ID_FORNECEDORES` = @p15) AND (`RAZAO_SOCIAL` = @p16) AND (`CNPJ` = @p17) AND (`ENDERECO` = @p18) AND (`NUMERO` = @p19) AND (`BAIRRO` = @p20) AND (`CIDADE` = @p21) AND ((@p22 = 1 AND `COMPLEMENTO` IS NULL) OR (`COMPLEMENTO` = @p23)) AND (`UF` = @p24) AND (`TELEFONE` = @p25) AND ((@p26 = 1 AND `CELULAR` IS NULL) OR (`CELULAR` = @p27)) AND (`CEP` = @p28) AND ((@p29 = 1 AND `EMAIL` IS NULL) OR (`EMAIL` = @p30)) AND (`ID_USUARIOS` = @p31) AND (`DATA_CADASTRO` = @p32))";
+            this._adapter.UpdateCommand.CommandText = @"UPDATE `FORNECEDORES` SET `RAZAO_SOCIAL` = @p1, `CNPJ` = @p2, `ENDERECO` = @p3, `NUMERO` = @p4, `BAIRRO` = @p5, `CIDADE` = @p6, `COMPLEMENTO` = @p7, `UF` = @p8, `TELEFONE` = @p9, `CELULAR` = @p10, `CEP` = @p11, `EMAIL` = @p12, `ID_USUARIOS` = @p13, `DATA_CADASTRO` = @p14 WHERE ((`ID_FORNECEDORES` = @p15) AND (`RAZAO_SOCIAL` = @p16) AND (`CNPJ` = @p17) AND (`ENDERECO` = @p18) AND (`NUMERO` = @p19) AND (`BAIRRO` = @p20) AND (`CIDADE` = @p21) AND ((@p22 = 1 AND `COMPLEMENTO` IS NULL) OR (`COMPLEMENTO` = @p23)) AND (`UF` = @p24) AND (`TELEFONE` = @p25) AND ((@p26 = 1 AND `CELULAR` IS NULL) OR (`CELULAR` = @p27)) AND (`CEP` = @p28) AND ((@p29 = 1 AND `EMAIL` IS NULL) OR (`EMAIL` = @p30)) AND (`ID_USUARIOS` = @p31) AND (`DATA_CADASTRO` = @p32))";
             this._adapter.UpdateCommand.CommandType = global::System.Data.CommandType.Text;
             param = new global::MySql.Data.MySqlClient.MySqlParameter();
             param.ParameterName = "@p1";
@@ -6588,7 +6556,7 @@ namespace QrAguas.qraguasDataSetTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         private void InitConnection() {
             this._connection = new global::MySql.Data.MySqlClient.MySqlConnection();
-            this._connection.ConnectionString = global::QrAguas.Properties.Settings.Default.QrAguasCnn;
+            this._connection.ConnectionString = global::QrAguas.Properties.Settings.Default.qraguasremotedbConnectionString;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -6597,9 +6565,9 @@ namespace QrAguas.qraguasDataSetTableAdapters {
             this._commandCollection = new global::MySql.Data.MySqlClient.MySqlCommand[1];
             this._commandCollection[0] = new global::MySql.Data.MySqlClient.MySqlCommand();
             this._commandCollection[0].Connection = this.Connection;
-            this._commandCollection[0].CommandText = "SELECT `ID_FORNECEDORES`, `RAZAO_SOCIAL`, `CNPJ`, `ENDERECO`, `NUMERO`, `BAIRRO`," +
-                " `CIDADE`, `COMPLEMENTO`, `UF`, `TELEFONE`, `CELULAR`, `CEP`, `EMAIL`, `ID_USUAR" +
-                "IOS`, `DATA_CADASTRO` FROM `fornecedores`";
+            this._commandCollection[0].CommandText = "SELECT        ID_FORNECEDORES, RAZAO_SOCIAL, CNPJ, ENDERECO, NUMERO, BAIRRO, CIDA" +
+                "DE, COMPLEMENTO, UF, TELEFONE, CELULAR, CEP, EMAIL, ID_USUARIOS, DATA_CADASTRO\r\n" +
+                "FROM            FORNECEDORES\r\nORDER BY RAZAO_SOCIAL";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
         }
         
@@ -6607,7 +6575,7 @@ namespace QrAguas.qraguasDataSetTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, true)]
-        public virtual int Fill(qraguasDataSet.fornecedoresDataTable dataTable) {
+        public virtual int Fill(QrAguasRemoteDBDataSet.FORNECEDORESDataTable dataTable) {
             this.Adapter.SelectCommand = this.CommandCollection[0];
             if ((this.ClearBeforeFill == true)) {
                 dataTable.Clear();
@@ -6620,9 +6588,9 @@ namespace QrAguas.qraguasDataSetTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
-        public virtual qraguasDataSet.fornecedoresDataTable GetData() {
+        public virtual QrAguasRemoteDBDataSet.FORNECEDORESDataTable GetData() {
             this.Adapter.SelectCommand = this.CommandCollection[0];
-            qraguasDataSet.fornecedoresDataTable dataTable = new qraguasDataSet.fornecedoresDataTable();
+            QrAguasRemoteDBDataSet.FORNECEDORESDataTable dataTable = new QrAguasRemoteDBDataSet.FORNECEDORESDataTable();
             this.Adapter.Fill(dataTable);
             return dataTable;
         }
@@ -6630,15 +6598,15 @@ namespace QrAguas.qraguasDataSetTableAdapters {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(qraguasDataSet.fornecedoresDataTable dataTable) {
+        public virtual int Update(QrAguasRemoteDBDataSet.FORNECEDORESDataTable dataTable) {
             return this.Adapter.Update(dataTable);
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(qraguasDataSet dataSet) {
-            return this.Adapter.Update(dataSet, "fornecedores");
+        public virtual int Update(QrAguasRemoteDBDataSet dataSet) {
+            return this.Adapter.Update(dataSet, "FORNECEDORES");
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -7048,7 +7016,7 @@ namespace QrAguas.qraguasDataSetTableAdapters {
     [global::System.ComponentModel.DesignerAttribute("Microsoft.VSDesigner.DataSource.Design.TableAdapterDesigner, Microsoft.VSDesigner" +
         ", Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a")]
     [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-    public partial class produtosTableAdapter : global::System.ComponentModel.Component {
+    public partial class PRODUTOSTableAdapter : global::System.ComponentModel.Component {
         
         private global::MySql.Data.MySqlClient.MySqlDataAdapter _adapter;
         
@@ -7062,7 +7030,7 @@ namespace QrAguas.qraguasDataSetTableAdapters {
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-        public produtosTableAdapter() {
+        public PRODUTOSTableAdapter() {
             this.ClearBeforeFill = true;
         }
         
@@ -7159,7 +7127,7 @@ namespace QrAguas.qraguasDataSetTableAdapters {
             this._adapter = new global::MySql.Data.MySqlClient.MySqlDataAdapter();
             global::System.Data.Common.DataTableMapping tableMapping = new global::System.Data.Common.DataTableMapping();
             tableMapping.SourceTable = "Table";
-            tableMapping.DataSetTable = "produtos";
+            tableMapping.DataSetTable = "PRODUTOS";
             tableMapping.ColumnMappings.Add("ID_PRODUTOS", "ID_PRODUTOS");
             tableMapping.ColumnMappings.Add("COD_PRODUTO", "COD_PRODUTO");
             tableMapping.ColumnMappings.Add("NOME_PRODUTO", "NOME_PRODUTO");
@@ -7175,7 +7143,7 @@ namespace QrAguas.qraguasDataSetTableAdapters {
             this._adapter.TableMappings.Add(tableMapping);
             this._adapter.DeleteCommand = new global::MySql.Data.MySqlClient.MySqlCommand();
             this._adapter.DeleteCommand.Connection = this.Connection;
-            this._adapter.DeleteCommand.CommandText = @"DELETE FROM `produtos` WHERE ((`ID_PRODUTOS` = @p1) AND (`COD_PRODUTO` = @p2) AND (`NOME_PRODUTO` = @p3) AND (`DESCRICAO` = @p4) AND (`PRECO_COMPRA` = @p5) AND (`PRECO_VENDA` = @p6) AND (`ID_FORNECEDORES` = @p7) AND (`ID_USUARIOS` = @p8) AND (`ID_CATEGORIAS` = @p9) AND (`DATA_FABRICACAO` = @p10) AND (`DATA_VALIDADE` = @p11) AND (`DATA_CADASTRO` = @p12))";
+            this._adapter.DeleteCommand.CommandText = @"DELETE FROM `PRODUTOS` WHERE ((`ID_PRODUTOS` = @p1) AND (`COD_PRODUTO` = @p2) AND (`NOME_PRODUTO` = @p3) AND (`DESCRICAO` = @p4) AND (`PRECO_COMPRA` = @p5) AND (`PRECO_VENDA` = @p6) AND (`ID_FORNECEDORES` = @p7) AND (`ID_USUARIOS` = @p8) AND (`ID_CATEGORIAS` = @p9) AND (`DATA_FABRICACAO` = @p10) AND (`DATA_VALIDADE` = @p11) AND (`DATA_CADASTRO` = @p12))";
             this._adapter.DeleteCommand.CommandType = global::System.Data.CommandType.Text;
             global::MySql.Data.MySqlClient.MySqlParameter param = new global::MySql.Data.MySqlClient.MySqlParameter();
             param.ParameterName = "@p1";
@@ -7275,7 +7243,7 @@ namespace QrAguas.qraguasDataSetTableAdapters {
             this._adapter.DeleteCommand.Parameters.Add(param);
             this._adapter.InsertCommand = new global::MySql.Data.MySqlClient.MySqlCommand();
             this._adapter.InsertCommand.Connection = this.Connection;
-            this._adapter.InsertCommand.CommandText = @"INSERT INTO `produtos` (`COD_PRODUTO`, `NOME_PRODUTO`, `DESCRICAO`, `PRECO_COMPRA`, `PRECO_VENDA`, `ID_FORNECEDORES`, `ID_USUARIOS`, `ID_CATEGORIAS`, `DATA_FABRICACAO`, `DATA_VALIDADE`, `DATA_CADASTRO`) VALUES (@p1, @p2, @p3, @p4, @p5, @p6, @p7, @p8, @p9, @p10, @p11)";
+            this._adapter.InsertCommand.CommandText = @"INSERT INTO `PRODUTOS` (`COD_PRODUTO`, `NOME_PRODUTO`, `DESCRICAO`, `PRECO_COMPRA`, `PRECO_VENDA`, `ID_FORNECEDORES`, `ID_USUARIOS`, `ID_CATEGORIAS`, `DATA_FABRICACAO`, `DATA_VALIDADE`, `DATA_CADASTRO`) VALUES (@p1, @p2, @p3, @p4, @p5, @p6, @p7, @p8, @p9, @p10, @p11)";
             this._adapter.InsertCommand.CommandType = global::System.Data.CommandType.Text;
             param = new global::MySql.Data.MySqlClient.MySqlParameter();
             param.ParameterName = "@p1";
@@ -7367,7 +7335,7 @@ namespace QrAguas.qraguasDataSetTableAdapters {
             this._adapter.InsertCommand.Parameters.Add(param);
             this._adapter.UpdateCommand = new global::MySql.Data.MySqlClient.MySqlCommand();
             this._adapter.UpdateCommand.Connection = this.Connection;
-            this._adapter.UpdateCommand.CommandText = @"UPDATE `produtos` SET `COD_PRODUTO` = @p1, `NOME_PRODUTO` = @p2, `DESCRICAO` = @p3, `PRECO_COMPRA` = @p4, `PRECO_VENDA` = @p5, `ID_FORNECEDORES` = @p6, `ID_USUARIOS` = @p7, `ID_CATEGORIAS` = @p8, `DATA_FABRICACAO` = @p9, `DATA_VALIDADE` = @p10, `DATA_CADASTRO` = @p11 WHERE ((`ID_PRODUTOS` = @p12) AND (`COD_PRODUTO` = @p13) AND (`NOME_PRODUTO` = @p14) AND (`DESCRICAO` = @p15) AND (`PRECO_COMPRA` = @p16) AND (`PRECO_VENDA` = @p17) AND (`ID_FORNECEDORES` = @p18) AND (`ID_USUARIOS` = @p19) AND (`ID_CATEGORIAS` = @p20) AND (`DATA_FABRICACAO` = @p21) AND (`DATA_VALIDADE` = @p22) AND (`DATA_CADASTRO` = @p23))";
+            this._adapter.UpdateCommand.CommandText = @"UPDATE `PRODUTOS` SET `COD_PRODUTO` = @p1, `NOME_PRODUTO` = @p2, `DESCRICAO` = @p3, `PRECO_COMPRA` = @p4, `PRECO_VENDA` = @p5, `ID_FORNECEDORES` = @p6, `ID_USUARIOS` = @p7, `ID_CATEGORIAS` = @p8, `DATA_FABRICACAO` = @p9, `DATA_VALIDADE` = @p10, `DATA_CADASTRO` = @p11 WHERE ((`ID_PRODUTOS` = @p12) AND (`COD_PRODUTO` = @p13) AND (`NOME_PRODUTO` = @p14) AND (`DESCRICAO` = @p15) AND (`PRECO_COMPRA` = @p16) AND (`PRECO_VENDA` = @p17) AND (`ID_FORNECEDORES` = @p18) AND (`ID_USUARIOS` = @p19) AND (`ID_CATEGORIAS` = @p20) AND (`DATA_FABRICACAO` = @p21) AND (`DATA_VALIDADE` = @p22) AND (`DATA_CADASTRO` = @p23))";
             this._adapter.UpdateCommand.CommandType = global::System.Data.CommandType.Text;
             param = new global::MySql.Data.MySqlClient.MySqlParameter();
             param.ParameterName = "@p1";
@@ -7559,7 +7527,7 @@ namespace QrAguas.qraguasDataSetTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         private void InitConnection() {
             this._connection = new global::MySql.Data.MySqlClient.MySqlConnection();
-            this._connection.ConnectionString = global::QrAguas.Properties.Settings.Default.QrAguasCnn;
+            this._connection.ConnectionString = global::QrAguas.Properties.Settings.Default.qraguasremotedbConnectionString;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -7570,7 +7538,7 @@ namespace QrAguas.qraguasDataSetTableAdapters {
             this._commandCollection[0].Connection = this.Connection;
             this._commandCollection[0].CommandText = "SELECT `ID_PRODUTOS`, `COD_PRODUTO`, `NOME_PRODUTO`, `DESCRICAO`, `PRECO_COMPRA`," +
                 " `PRECO_VENDA`, `ID_FORNECEDORES`, `ID_USUARIOS`, `ID_CATEGORIAS`, `DATA_FABRICA" +
-                "CAO`, `DATA_VALIDADE`, `DATA_CADASTRO` FROM `produtos`";
+                "CAO`, `DATA_VALIDADE`, `DATA_CADASTRO` FROM `PRODUTOS`";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
         }
         
@@ -7578,7 +7546,7 @@ namespace QrAguas.qraguasDataSetTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, true)]
-        public virtual int Fill(qraguasDataSet.produtosDataTable dataTable) {
+        public virtual int Fill(QrAguasRemoteDBDataSet.PRODUTOSDataTable dataTable) {
             this.Adapter.SelectCommand = this.CommandCollection[0];
             if ((this.ClearBeforeFill == true)) {
                 dataTable.Clear();
@@ -7591,9 +7559,9 @@ namespace QrAguas.qraguasDataSetTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
-        public virtual qraguasDataSet.produtosDataTable GetData() {
+        public virtual QrAguasRemoteDBDataSet.PRODUTOSDataTable GetData() {
             this.Adapter.SelectCommand = this.CommandCollection[0];
-            qraguasDataSet.produtosDataTable dataTable = new qraguasDataSet.produtosDataTable();
+            QrAguasRemoteDBDataSet.PRODUTOSDataTable dataTable = new QrAguasRemoteDBDataSet.PRODUTOSDataTable();
             this.Adapter.Fill(dataTable);
             return dataTable;
         }
@@ -7601,15 +7569,15 @@ namespace QrAguas.qraguasDataSetTableAdapters {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(qraguasDataSet.produtosDataTable dataTable) {
+        public virtual int Update(QrAguasRemoteDBDataSet.PRODUTOSDataTable dataTable) {
             return this.Adapter.Update(dataTable);
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(qraguasDataSet dataSet) {
-            return this.Adapter.Update(dataSet, "produtos");
+        public virtual int Update(QrAguasRemoteDBDataSet dataSet) {
+            return this.Adapter.Update(dataSet, "PRODUTOS");
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -7829,7 +7797,7 @@ namespace QrAguas.qraguasDataSetTableAdapters {
     [global::System.ComponentModel.DesignerAttribute("Microsoft.VSDesigner.DataSource.Design.TableAdapterDesigner, Microsoft.VSDesigner" +
         ", Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a")]
     [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-    public partial class tipo_usuarioTableAdapter : global::System.ComponentModel.Component {
+    public partial class TIPO_USUARIOTableAdapter : global::System.ComponentModel.Component {
         
         private global::MySql.Data.MySqlClient.MySqlDataAdapter _adapter;
         
@@ -7843,7 +7811,7 @@ namespace QrAguas.qraguasDataSetTableAdapters {
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-        public tipo_usuarioTableAdapter() {
+        public TIPO_USUARIOTableAdapter() {
             this.ClearBeforeFill = true;
         }
         
@@ -7940,15 +7908,15 @@ namespace QrAguas.qraguasDataSetTableAdapters {
             this._adapter = new global::MySql.Data.MySqlClient.MySqlDataAdapter();
             global::System.Data.Common.DataTableMapping tableMapping = new global::System.Data.Common.DataTableMapping();
             tableMapping.SourceTable = "Table";
-            tableMapping.DataSetTable = "tipo_usuario";
+            tableMapping.DataSetTable = "TIPO_USUARIO";
             tableMapping.ColumnMappings.Add("ID_TIPO_USUARIO", "ID_TIPO_USUARIO");
             tableMapping.ColumnMappings.Add("NOME_TIPO", "NOME_TIPO");
             tableMapping.ColumnMappings.Add("DESCRICAO", "DESCRICAO");
             this._adapter.TableMappings.Add(tableMapping);
             this._adapter.DeleteCommand = new global::MySql.Data.MySqlClient.MySqlCommand();
             this._adapter.DeleteCommand.Connection = this.Connection;
-            this._adapter.DeleteCommand.CommandText = "DELETE FROM `tipo_usuario` WHERE ((`ID_TIPO_USUARIO` = @p1) AND (`NOME_TIPO` = @p" +
-                "2) AND ((@p3 = 1 AND `DESCRICAO` IS NULL) OR (`DESCRICAO` = @p4)))";
+            this._adapter.DeleteCommand.CommandText = "DELETE FROM `TIPO_USUARIO` WHERE ((`ID_TIPO_USUARIO` = @p1) AND (`NOME_TIPO` = @p" +
+                "2) AND (`DESCRICAO` = @p3))";
             this._adapter.DeleteCommand.CommandType = global::System.Data.CommandType.Text;
             global::MySql.Data.MySqlClient.MySqlParameter param = new global::MySql.Data.MySqlClient.MySqlParameter();
             param.ParameterName = "@p1";
@@ -7968,15 +7936,6 @@ namespace QrAguas.qraguasDataSetTableAdapters {
             this._adapter.DeleteCommand.Parameters.Add(param);
             param = new global::MySql.Data.MySqlClient.MySqlParameter();
             param.ParameterName = "@p3";
-            param.DbType = global::System.Data.DbType.Int32;
-            param.MySqlDbType = global::MySql.Data.MySqlClient.MySqlDbType.Int32;
-            param.IsNullable = true;
-            param.SourceColumn = "DESCRICAO";
-            param.SourceVersion = global::System.Data.DataRowVersion.Original;
-            param.SourceColumnNullMapping = true;
-            this._adapter.DeleteCommand.Parameters.Add(param);
-            param = new global::MySql.Data.MySqlClient.MySqlParameter();
-            param.ParameterName = "@p4";
             param.DbType = global::System.Data.DbType.String;
             param.MySqlDbType = global::MySql.Data.MySqlClient.MySqlDbType.VarChar;
             param.IsNullable = true;
@@ -7985,7 +7944,7 @@ namespace QrAguas.qraguasDataSetTableAdapters {
             this._adapter.DeleteCommand.Parameters.Add(param);
             this._adapter.InsertCommand = new global::MySql.Data.MySqlClient.MySqlCommand();
             this._adapter.InsertCommand.Connection = this.Connection;
-            this._adapter.InsertCommand.CommandText = "INSERT INTO `tipo_usuario` (`NOME_TIPO`, `DESCRICAO`) VALUES (@p1, @p2)";
+            this._adapter.InsertCommand.CommandText = "INSERT INTO `TIPO_USUARIO` (`NOME_TIPO`, `DESCRICAO`) VALUES (@p1, @p2)";
             this._adapter.InsertCommand.CommandType = global::System.Data.CommandType.Text;
             param = new global::MySql.Data.MySqlClient.MySqlParameter();
             param.ParameterName = "@p1";
@@ -8005,9 +7964,8 @@ namespace QrAguas.qraguasDataSetTableAdapters {
             this._adapter.InsertCommand.Parameters.Add(param);
             this._adapter.UpdateCommand = new global::MySql.Data.MySqlClient.MySqlCommand();
             this._adapter.UpdateCommand.Connection = this.Connection;
-            this._adapter.UpdateCommand.CommandText = "UPDATE `tipo_usuario` SET `NOME_TIPO` = @p1, `DESCRICAO` = @p2 WHERE ((`ID_TIPO_U" +
-                "SUARIO` = @p3) AND (`NOME_TIPO` = @p4) AND ((@p5 = 1 AND `DESCRICAO` IS NULL) OR" +
-                " (`DESCRICAO` = @p6)))";
+            this._adapter.UpdateCommand.CommandText = "UPDATE `TIPO_USUARIO` SET `NOME_TIPO` = @p1, `DESCRICAO` = @p2 WHERE ((`ID_TIPO_U" +
+                "SUARIO` = @p3) AND (`NOME_TIPO` = @p4) AND (`DESCRICAO` = @p5))";
             this._adapter.UpdateCommand.CommandType = global::System.Data.CommandType.Text;
             param = new global::MySql.Data.MySqlClient.MySqlParameter();
             param.ParameterName = "@p1";
@@ -8043,15 +8001,6 @@ namespace QrAguas.qraguasDataSetTableAdapters {
             this._adapter.UpdateCommand.Parameters.Add(param);
             param = new global::MySql.Data.MySqlClient.MySqlParameter();
             param.ParameterName = "@p5";
-            param.DbType = global::System.Data.DbType.Int32;
-            param.MySqlDbType = global::MySql.Data.MySqlClient.MySqlDbType.Int32;
-            param.IsNullable = true;
-            param.SourceColumn = "DESCRICAO";
-            param.SourceVersion = global::System.Data.DataRowVersion.Original;
-            param.SourceColumnNullMapping = true;
-            this._adapter.UpdateCommand.Parameters.Add(param);
-            param = new global::MySql.Data.MySqlClient.MySqlParameter();
-            param.ParameterName = "@p6";
             param.DbType = global::System.Data.DbType.String;
             param.MySqlDbType = global::MySql.Data.MySqlClient.MySqlDbType.VarChar;
             param.IsNullable = true;
@@ -8064,7 +8013,7 @@ namespace QrAguas.qraguasDataSetTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         private void InitConnection() {
             this._connection = new global::MySql.Data.MySqlClient.MySqlConnection();
-            this._connection.ConnectionString = global::QrAguas.Properties.Settings.Default.QrAguasCnn;
+            this._connection.ConnectionString = global::QrAguas.Properties.Settings.Default.qraguasremotedbConnectionString;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -8073,7 +8022,7 @@ namespace QrAguas.qraguasDataSetTableAdapters {
             this._commandCollection = new global::MySql.Data.MySqlClient.MySqlCommand[1];
             this._commandCollection[0] = new global::MySql.Data.MySqlClient.MySqlCommand();
             this._commandCollection[0].Connection = this.Connection;
-            this._commandCollection[0].CommandText = "SELECT `ID_TIPO_USUARIO`, `NOME_TIPO`, `DESCRICAO` FROM `tipo_usuario`";
+            this._commandCollection[0].CommandText = "SELECT `ID_TIPO_USUARIO`, `NOME_TIPO`, `DESCRICAO` FROM `TIPO_USUARIO`";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
         }
         
@@ -8081,7 +8030,7 @@ namespace QrAguas.qraguasDataSetTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, true)]
-        public virtual int Fill(qraguasDataSet.tipo_usuarioDataTable dataTable) {
+        public virtual int Fill(QrAguasRemoteDBDataSet.TIPO_USUARIODataTable dataTable) {
             this.Adapter.SelectCommand = this.CommandCollection[0];
             if ((this.ClearBeforeFill == true)) {
                 dataTable.Clear();
@@ -8094,9 +8043,9 @@ namespace QrAguas.qraguasDataSetTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
-        public virtual qraguasDataSet.tipo_usuarioDataTable GetData() {
+        public virtual QrAguasRemoteDBDataSet.TIPO_USUARIODataTable GetData() {
             this.Adapter.SelectCommand = this.CommandCollection[0];
-            qraguasDataSet.tipo_usuarioDataTable dataTable = new qraguasDataSet.tipo_usuarioDataTable();
+            QrAguasRemoteDBDataSet.TIPO_USUARIODataTable dataTable = new QrAguasRemoteDBDataSet.TIPO_USUARIODataTable();
             this.Adapter.Fill(dataTable);
             return dataTable;
         }
@@ -8104,15 +8053,15 @@ namespace QrAguas.qraguasDataSetTableAdapters {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(qraguasDataSet.tipo_usuarioDataTable dataTable) {
+        public virtual int Update(QrAguasRemoteDBDataSet.TIPO_USUARIODataTable dataTable) {
             return this.Adapter.Update(dataTable);
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(qraguasDataSet dataSet) {
-            return this.Adapter.Update(dataSet, "tipo_usuario");
+        public virtual int Update(QrAguasRemoteDBDataSet dataSet) {
+            return this.Adapter.Update(dataSet, "TIPO_USUARIO");
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -8134,7 +8083,7 @@ namespace QrAguas.qraguasDataSetTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Delete, true)]
-        public virtual int Delete(int p1, string p2, string p4) {
+        public virtual int Delete(int p1, string p2, string p3) {
             this.Adapter.DeleteCommand.Parameters[0].Value = ((int)(p1));
             if ((p2 == null)) {
                 throw new global::System.ArgumentNullException("p2");
@@ -8142,13 +8091,11 @@ namespace QrAguas.qraguasDataSetTableAdapters {
             else {
                 this.Adapter.DeleteCommand.Parameters[1].Value = ((string)(p2));
             }
-            if ((p4 == null)) {
-                this.Adapter.DeleteCommand.Parameters[2].Value = ((object)(1));
-                this.Adapter.DeleteCommand.Parameters[3].Value = global::System.DBNull.Value;
+            if ((p3 == null)) {
+                throw new global::System.ArgumentNullException("p3");
             }
             else {
-                this.Adapter.DeleteCommand.Parameters[2].Value = ((object)(0));
-                this.Adapter.DeleteCommand.Parameters[3].Value = ((string)(p4));
+                this.Adapter.DeleteCommand.Parameters[2].Value = ((string)(p3));
             }
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.DeleteCommand.Connection.State;
             if (((this.Adapter.DeleteCommand.Connection.State & global::System.Data.ConnectionState.Open) 
@@ -8178,7 +8125,7 @@ namespace QrAguas.qraguasDataSetTableAdapters {
                 this.Adapter.InsertCommand.Parameters[0].Value = ((string)(p1));
             }
             if ((p2 == null)) {
-                this.Adapter.InsertCommand.Parameters[1].Value = global::System.DBNull.Value;
+                throw new global::System.ArgumentNullException("p2");
             }
             else {
                 this.Adapter.InsertCommand.Parameters[1].Value = ((string)(p2));
@@ -8203,7 +8150,7 @@ namespace QrAguas.qraguasDataSetTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, true)]
-        public virtual int Update(string p1, string p2, int p3, string p4, string p6) {
+        public virtual int Update(string p1, string p2, int p3, string p4, string p5) {
             if ((p1 == null)) {
                 throw new global::System.ArgumentNullException("p1");
             }
@@ -8211,7 +8158,7 @@ namespace QrAguas.qraguasDataSetTableAdapters {
                 this.Adapter.UpdateCommand.Parameters[0].Value = ((string)(p1));
             }
             if ((p2 == null)) {
-                this.Adapter.UpdateCommand.Parameters[1].Value = global::System.DBNull.Value;
+                throw new global::System.ArgumentNullException("p2");
             }
             else {
                 this.Adapter.UpdateCommand.Parameters[1].Value = ((string)(p2));
@@ -8223,13 +8170,11 @@ namespace QrAguas.qraguasDataSetTableAdapters {
             else {
                 this.Adapter.UpdateCommand.Parameters[3].Value = ((string)(p4));
             }
-            if ((p6 == null)) {
-                this.Adapter.UpdateCommand.Parameters[4].Value = ((object)(1));
-                this.Adapter.UpdateCommand.Parameters[5].Value = global::System.DBNull.Value;
+            if ((p5 == null)) {
+                throw new global::System.ArgumentNullException("p5");
             }
             else {
-                this.Adapter.UpdateCommand.Parameters[4].Value = ((object)(0));
-                this.Adapter.UpdateCommand.Parameters[5].Value = ((string)(p6));
+                this.Adapter.UpdateCommand.Parameters[4].Value = ((string)(p5));
             }
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.UpdateCommand.Connection.State;
             if (((this.Adapter.UpdateCommand.Connection.State & global::System.Data.ConnectionState.Open) 
@@ -8257,7 +8202,7 @@ namespace QrAguas.qraguasDataSetTableAdapters {
     [global::System.ComponentModel.DesignerAttribute("Microsoft.VSDesigner.DataSource.Design.TableAdapterDesigner, Microsoft.VSDesigner" +
         ", Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a")]
     [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-    public partial class usuariosTableAdapter : global::System.ComponentModel.Component {
+    public partial class USUARIOSTableAdapter : global::System.ComponentModel.Component {
         
         private global::MySql.Data.MySqlClient.MySqlDataAdapter _adapter;
         
@@ -8271,7 +8216,7 @@ namespace QrAguas.qraguasDataSetTableAdapters {
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-        public usuariosTableAdapter() {
+        public USUARIOSTableAdapter() {
             this.ClearBeforeFill = true;
         }
         
@@ -8368,20 +8313,20 @@ namespace QrAguas.qraguasDataSetTableAdapters {
             this._adapter = new global::MySql.Data.MySqlClient.MySqlDataAdapter();
             global::System.Data.Common.DataTableMapping tableMapping = new global::System.Data.Common.DataTableMapping();
             tableMapping.SourceTable = "Table";
-            tableMapping.DataSetTable = "usuarios";
+            tableMapping.DataSetTable = "USUARIOS";
             tableMapping.ColumnMappings.Add("ID_USUARIOS", "ID_USUARIOS");
             tableMapping.ColumnMappings.Add("NOME_USUARIO", "NOME_USUARIO");
             tableMapping.ColumnMappings.Add("SENHA", "SENHA");
             tableMapping.ColumnMappings.Add("ID_TIPO_USUARIO", "ID_TIPO_USUARIO");
             tableMapping.ColumnMappings.Add("CADASTRADO_POR", "CADASTRADO_POR");
             tableMapping.ColumnMappings.Add("ID_UNICO", "ID_UNICO");
+            tableMapping.ColumnMappings.Add("ATIVO", "ATIVO");
             tableMapping.ColumnMappings.Add("DATA_SENHA_ALTERADA", "DATA_SENHA_ALTERADA");
             tableMapping.ColumnMappings.Add("DATA_CADASTRO", "DATA_CADASTRO");
-            tableMapping.ColumnMappings.Add("ATIVO", "ATIVO");
             this._adapter.TableMappings.Add(tableMapping);
             this._adapter.DeleteCommand = new global::MySql.Data.MySqlClient.MySqlCommand();
             this._adapter.DeleteCommand.Connection = this.Connection;
-            this._adapter.DeleteCommand.CommandText = @"DELETE FROM `usuarios` WHERE ((`ID_USUARIOS` = @p1) AND (`NOME_USUARIO` = @p2) AND (`SENHA` = @p3) AND (`ID_TIPO_USUARIO` = @p4) AND (`CADASTRADO_POR` = @p5) AND (`ID_UNICO` = @p6) AND (`ATIVO` = @p7) AND ((@p8 = 1 AND `DATA_SENHA_ALTERADA` IS NULL) OR (`DATA_SENHA_ALTERADA` = @p9)) AND (`DATA_CADASTRO` = @p10))";
+            this._adapter.DeleteCommand.CommandText = @"DELETE FROM `USUARIOS` WHERE ((`ID_USUARIOS` = @p1) AND (`NOME_USUARIO` = @p2) AND (`SENHA` = @p3) AND (`ID_TIPO_USUARIO` = @p4) AND (`CADASTRADO_POR` = @p5) AND (`ID_UNICO` = @p6) AND (`ATIVO` = @p7) AND ((@p8 = 1 AND `DATA_SENHA_ALTERADA` IS NULL) OR (`DATA_SENHA_ALTERADA` = @p9)) AND (`DATA_CADASTRO` = @p10))";
             this._adapter.DeleteCommand.CommandType = global::System.Data.CommandType.Text;
             global::MySql.Data.MySqlClient.MySqlParameter param = new global::MySql.Data.MySqlClient.MySqlParameter();
             param.ParameterName = "@p1";
@@ -8466,7 +8411,7 @@ namespace QrAguas.qraguasDataSetTableAdapters {
             this._adapter.DeleteCommand.Parameters.Add(param);
             this._adapter.InsertCommand = new global::MySql.Data.MySqlClient.MySqlCommand();
             this._adapter.InsertCommand.Connection = this.Connection;
-            this._adapter.InsertCommand.CommandText = "INSERT INTO `usuarios` (`NOME_USUARIO`, `SENHA`, `ID_TIPO_USUARIO`, `CADASTRADO_P" +
+            this._adapter.InsertCommand.CommandText = "INSERT INTO `USUARIOS` (`NOME_USUARIO`, `SENHA`, `ID_TIPO_USUARIO`, `CADASTRADO_P" +
                 "OR`, `ID_UNICO`, `ATIVO`, `DATA_SENHA_ALTERADA`, `DATA_CADASTRO`) VALUES (@p1, @" +
                 "p2, @p3, @p4, @p5, @p6, @p7, @p8)";
             this._adapter.InsertCommand.CommandType = global::System.Data.CommandType.Text;
@@ -8536,7 +8481,7 @@ namespace QrAguas.qraguasDataSetTableAdapters {
             this._adapter.InsertCommand.Parameters.Add(param);
             this._adapter.UpdateCommand = new global::MySql.Data.MySqlClient.MySqlCommand();
             this._adapter.UpdateCommand.Connection = this.Connection;
-            this._adapter.UpdateCommand.CommandText = @"UPDATE `usuarios` SET `NOME_USUARIO` = @p1, `SENHA` = @p2, `ID_TIPO_USUARIO` = @p3, `CADASTRADO_POR` = @p4, `ID_UNICO` = @p5, `ATIVO` = @p6, `DATA_SENHA_ALTERADA` = @p7, `DATA_CADASTRO` = @p8 WHERE ((`ID_USUARIOS` = @p9) AND (`NOME_USUARIO` = @p10) AND (`SENHA` = @p11) AND (`ID_TIPO_USUARIO` = @p12) AND (`CADASTRADO_POR` = @p13) AND (`ID_UNICO` = @p14) AND (`ATIVO` = @p15) AND ((@p16 = 1 AND `DATA_SENHA_ALTERADA` IS NULL) OR (`DATA_SENHA_ALTERADA` = @p17)) AND (`DATA_CADASTRO` = @p18))";
+            this._adapter.UpdateCommand.CommandText = @"UPDATE `USUARIOS` SET `NOME_USUARIO` = @p1, `SENHA` = @p2, `ID_TIPO_USUARIO` = @p3, `CADASTRADO_POR` = @p4, `ID_UNICO` = @p5, `ATIVO` = @p6, `DATA_SENHA_ALTERADA` = @p7, `DATA_CADASTRO` = @p8 WHERE ((`ID_USUARIOS` = @p9) AND (`NOME_USUARIO` = @p10) AND (`SENHA` = @p11) AND (`ID_TIPO_USUARIO` = @p12) AND (`CADASTRADO_POR` = @p13) AND (`ID_UNICO` = @p14) AND (`ATIVO` = @p15) AND ((@p16 = 1 AND `DATA_SENHA_ALTERADA` IS NULL) OR (`DATA_SENHA_ALTERADA` = @p17)) AND (`DATA_CADASTRO` = @p18))";
             this._adapter.UpdateCommand.CommandType = global::System.Data.CommandType.Text;
             param = new global::MySql.Data.MySqlClient.MySqlParameter();
             param.ParameterName = "@p1";
@@ -8689,7 +8634,7 @@ namespace QrAguas.qraguasDataSetTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         private void InitConnection() {
             this._connection = new global::MySql.Data.MySqlClient.MySqlConnection();
-            this._connection.ConnectionString = global::QrAguas.Properties.Settings.Default.QrAguasCnn;
+            this._connection.ConnectionString = global::QrAguas.Properties.Settings.Default.qraguasremotedbConnectionString;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -8699,7 +8644,8 @@ namespace QrAguas.qraguasDataSetTableAdapters {
             this._commandCollection[0] = new global::MySql.Data.MySqlClient.MySqlCommand();
             this._commandCollection[0].Connection = this.Connection;
             this._commandCollection[0].CommandText = "SELECT        ID_USUARIOS, NOME_USUARIO, SENHA, ID_TIPO_USUARIO, CADASTRADO_POR, " +
-                "ID_UNICO, ATIVO, DATA_SENHA_ALTERADA, DATA_CADASTRO\r\nFROM            usuarios";
+                "ID_UNICO, ATIVO, DATA_SENHA_ALTERADA, DATA_CADASTRO\r\nFROM            USUARIOS\r\nO" +
+                "RDER BY NOME_USUARIO";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
         }
         
@@ -8707,7 +8653,7 @@ namespace QrAguas.qraguasDataSetTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, true)]
-        public virtual int Fill(qraguasDataSet.usuariosDataTable dataTable) {
+        public virtual int Fill(QrAguasRemoteDBDataSet.USUARIOSDataTable dataTable) {
             this.Adapter.SelectCommand = this.CommandCollection[0];
             if ((this.ClearBeforeFill == true)) {
                 dataTable.Clear();
@@ -8720,9 +8666,9 @@ namespace QrAguas.qraguasDataSetTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
-        public virtual qraguasDataSet.usuariosDataTable GetData() {
+        public virtual QrAguasRemoteDBDataSet.USUARIOSDataTable GetData() {
             this.Adapter.SelectCommand = this.CommandCollection[0];
-            qraguasDataSet.usuariosDataTable dataTable = new qraguasDataSet.usuariosDataTable();
+            QrAguasRemoteDBDataSet.USUARIOSDataTable dataTable = new QrAguasRemoteDBDataSet.USUARIOSDataTable();
             this.Adapter.Fill(dataTable);
             return dataTable;
         }
@@ -8730,15 +8676,15 @@ namespace QrAguas.qraguasDataSetTableAdapters {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(qraguasDataSet.usuariosDataTable dataTable) {
+        public virtual int Update(QrAguasRemoteDBDataSet.USUARIOSDataTable dataTable) {
             return this.Adapter.Update(dataTable);
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(qraguasDataSet dataSet) {
-            return this.Adapter.Update(dataSet, "usuarios");
+        public virtual int Update(QrAguasRemoteDBDataSet dataSet) {
+            return this.Adapter.Update(dataSet, "USUARIOS");
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -8984,7 +8930,7 @@ namespace QrAguas.qraguasDataSetTableAdapters {
     [global::System.ComponentModel.DesignerAttribute("Microsoft.VSDesigner.DataSource.Design.TableAdapterDesigner, Microsoft.VSDesigner" +
         ", Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a")]
     [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-    public partial class Relatorio_ProdutosTableAdapter : global::System.ComponentModel.Component {
+    public partial class SearchUserDGVUsuariosTableAdapter : global::System.ComponentModel.Component {
         
         private global::MySql.Data.MySqlClient.MySqlDataAdapter _adapter;
         
@@ -8998,7 +8944,7 @@ namespace QrAguas.qraguasDataSetTableAdapters {
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-        public Relatorio_ProdutosTableAdapter() {
+        public SearchUserDGVUsuariosTableAdapter() {
             this.ClearBeforeFill = true;
         }
         
@@ -9095,18 +9041,13 @@ namespace QrAguas.qraguasDataSetTableAdapters {
             this._adapter = new global::MySql.Data.MySqlClient.MySqlDataAdapter();
             global::System.Data.Common.DataTableMapping tableMapping = new global::System.Data.Common.DataTableMapping();
             tableMapping.SourceTable = "Table";
-            tableMapping.DataSetTable = "Relatorio_Produtos";
-            tableMapping.ColumnMappings.Add("COD_PRODUTO", "COD_PRODUTO");
-            tableMapping.ColumnMappings.Add("NOME_PRODUTO", "NOME_PRODUTO");
-            tableMapping.ColumnMappings.Add("DESCRICAO", "DESCRICAO");
-            tableMapping.ColumnMappings.Add("NOME_CATEGORIA", "NOME_CATEGORIA");
-            tableMapping.ColumnMappings.Add("RAZAO_SOCIAL", "RAZAO_SOCIAL");
-            tableMapping.ColumnMappings.Add("PRECO_COMPRA", "PRECO_COMPRA");
-            tableMapping.ColumnMappings.Add("PRECO_VENDA", "PRECO_VENDA");
-            tableMapping.ColumnMappings.Add("DATA_FABRICACAO", "DATA_FABRICACAO");
-            tableMapping.ColumnMappings.Add("DATA_VALIDADE", "DATA_VALIDADE");
-            tableMapping.ColumnMappings.Add("DATA_CADASTRO", "DATA_CADASTRO");
+            tableMapping.DataSetTable = "SearchUserDGVUsuarios";
+            tableMapping.ColumnMappings.Add("ID_USUARIOS", "ID_USUARIOS");
             tableMapping.ColumnMappings.Add("NOME_USUARIO", "NOME_USUARIO");
+            tableMapping.ColumnMappings.Add("DESCRICAO", "DESCRICAO");
+            tableMapping.ColumnMappings.Add("CADASTRADO_POR", "CADASTRADO_POR");
+            tableMapping.ColumnMappings.Add("DATA_CADASTRO", "DATA_CADASTRO");
+            tableMapping.ColumnMappings.Add("ATIVO", "ATIVO");
             this._adapter.TableMappings.Add(tableMapping);
         }
         
@@ -9114,7 +9055,7 @@ namespace QrAguas.qraguasDataSetTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         private void InitConnection() {
             this._connection = new global::MySql.Data.MySqlClient.MySqlConnection();
-            this._connection.ConnectionString = global::QrAguas.Properties.Settings.Default.QrAguasCnn;
+            this._connection.ConnectionString = global::QrAguas.Properties.Settings.Default.qraguasremotedbConnectionString;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -9123,22 +9064,27 @@ namespace QrAguas.qraguasDataSetTableAdapters {
             this._commandCollection = new global::MySql.Data.MySqlClient.MySqlCommand[1];
             this._commandCollection[0] = new global::MySql.Data.MySqlClient.MySqlCommand();
             this._commandCollection[0].Connection = this.Connection;
-            this._commandCollection[0].CommandText = @"SELECT        P.COD_PRODUTO, P.NOME_PRODUTO, P.DESCRICAO, C.NOME_CATEGORIA, F.RAZAO_SOCIAL, P.PRECO_COMPRA, P.PRECO_VENDA, P.DATA_FABRICACAO, 
-                         P.DATA_VALIDADE, P.DATA_CADASTRO, U.NOME_USUARIO
-FROM            produtos P INNER JOIN
-                         usuarios U ON P.ID_USUARIOS = U.ID_USUARIOS INNER JOIN
-                         fornecedores F ON P.ID_FORNECEDORES = F.ID_FORNECEDORES INNER JOIN
-                         categorias C ON P.ID_CATEGORIAS = C.ID_CATEGORIAS
-ORDER BY P.NOME_PRODUTO";
+            this._commandCollection[0].CommandText = @"SELECT        U.ID_USUARIOS, U.NOME_USUARIO, T.DESCRICAO, U.CADASTRADO_POR, U.DATA_CADASTRO, U.ATIVO
+FROM            USUARIOS U INNER JOIN
+                         TIPO_USUARIO T ON U.ID_TIPO_USUARIO = T.ID_TIPO_USUARIO AND T.ID_TIPO_USUARIO > @ID_TIPO_USUARIO";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
+            global::MySql.Data.MySqlClient.MySqlParameter param = new global::MySql.Data.MySqlClient.MySqlParameter();
+            param.ParameterName = "@ID_TIPO_USUARIO";
+            param.DbType = global::System.Data.DbType.Int32;
+            param.MySqlDbType = global::MySql.Data.MySqlClient.MySqlDbType.Int32;
+            param.IsNullable = true;
+            param.SourceColumn = "ID_TIPO_USUARIO";
+            param.SourceVersion = global::System.Data.DataRowVersion.Current;
+            this._commandCollection[0].Parameters.Add(param);
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, true)]
-        public virtual int FillRepProduct(qraguasDataSet.Relatorio_ProdutosDataTable dataTable) {
+        public virtual int FillDGVUsuarios(QrAguasRemoteDBDataSet.SearchUserDGVUsuariosDataTable dataTable, int ID_TIPO_USUARIO) {
             this.Adapter.SelectCommand = this.CommandCollection[0];
+            this.Adapter.SelectCommand.Parameters[0].Value = ((int)(ID_TIPO_USUARIO));
             if ((this.ClearBeforeFill == true)) {
                 dataTable.Clear();
             }
@@ -9150,9 +9096,10 @@ ORDER BY P.NOME_PRODUTO";
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
-        public virtual qraguasDataSet.Relatorio_ProdutosDataTable GetDataRepProduct() {
+        public virtual QrAguasRemoteDBDataSet.SearchUserDGVUsuariosDataTable GetDataDGVUsuarios(int ID_TIPO_USUARIO) {
             this.Adapter.SelectCommand = this.CommandCollection[0];
-            qraguasDataSet.Relatorio_ProdutosDataTable dataTable = new qraguasDataSet.Relatorio_ProdutosDataTable();
+            this.Adapter.SelectCommand.Parameters[0].Value = ((int)(ID_TIPO_USUARIO));
+            QrAguasRemoteDBDataSet.SearchUserDGVUsuariosDataTable dataTable = new QrAguasRemoteDBDataSet.SearchUserDGVUsuariosDataTable();
             this.Adapter.Fill(dataTable);
             return dataTable;
         }
@@ -9167,7 +9114,7 @@ ORDER BY P.NOME_PRODUTO";
     [global::System.ComponentModel.DesignerAttribute("Microsoft.VSDesigner.DataSource.Design.TableAdapterDesigner, Microsoft.VSDesigner" +
         ", Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a")]
     [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-    public partial class Relatorio_FornecedoresTableAdapter : global::System.ComponentModel.Component {
+    public partial class ReportProviderTableAdapter : global::System.ComponentModel.Component {
         
         private global::MySql.Data.MySqlClient.MySqlDataAdapter _adapter;
         
@@ -9181,7 +9128,7 @@ ORDER BY P.NOME_PRODUTO";
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-        public Relatorio_FornecedoresTableAdapter() {
+        public ReportProviderTableAdapter() {
             this.ClearBeforeFill = true;
         }
         
@@ -9278,7 +9225,7 @@ ORDER BY P.NOME_PRODUTO";
             this._adapter = new global::MySql.Data.MySqlClient.MySqlDataAdapter();
             global::System.Data.Common.DataTableMapping tableMapping = new global::System.Data.Common.DataTableMapping();
             tableMapping.SourceTable = "Table";
-            tableMapping.DataSetTable = "Relatorio_Fornecedores";
+            tableMapping.DataSetTable = "ReportProvider";
             tableMapping.ColumnMappings.Add("RAZAO_SOCIAL", "RAZAO_SOCIAL");
             tableMapping.ColumnMappings.Add("CNPJ", "CNPJ");
             tableMapping.ColumnMappings.Add("ENDERECO", "ENDERECO");
@@ -9300,7 +9247,7 @@ ORDER BY P.NOME_PRODUTO";
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         private void InitConnection() {
             this._connection = new global::MySql.Data.MySqlClient.MySqlConnection();
-            this._connection.ConnectionString = global::QrAguas.Properties.Settings.Default.QrAguasCnn;
+            this._connection.ConnectionString = global::QrAguas.Properties.Settings.Default.qraguasremotedbConnectionString;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -9309,10 +9256,9 @@ ORDER BY P.NOME_PRODUTO";
             this._commandCollection = new global::MySql.Data.MySqlClient.MySqlCommand[1];
             this._commandCollection[0] = new global::MySql.Data.MySqlClient.MySqlCommand();
             this._commandCollection[0].Connection = this.Connection;
-            this._commandCollection[0].CommandText = @"SELECT        F.RAZAO_SOCIAL, F.CNPJ, F.ENDERECO, F.NUMERO, F.BAIRRO, F.CIDADE, F.CEP, F.COMPLEMENTO, F.UF, F.TELEFONE, F.CELULAR, F.EMAIL, F.DATA_CADASTRO, 
-                         U.NOME_USUARIO
-FROM            fornecedores F INNER JOIN
-                         usuarios U ON F.ID_USUARIOS = U.ID_USUARIOS";
+            this._commandCollection[0].CommandText = @"SELECT        F.RAZAO_SOCIAL, F.CNPJ, F.ENDERECO, F.NUMERO, F.BAIRRO, F.CIDADE, F.CEP, F.COMPLEMENTO, F.UF, F.TELEFONE, F.CELULAR, F.EMAIL, F.DATA_CADASTRO, U.NOME_USUARIO
+FROM            FORNECEDORES F INNER JOIN
+                         USUARIOS U ON F.ID_USUARIOS = U.ID_USUARIOS";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
         }
         
@@ -9320,7 +9266,7 @@ FROM            fornecedores F INNER JOIN
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, true)]
-        public virtual int FillRepProvider(qraguasDataSet.Relatorio_FornecedoresDataTable dataTable) {
+        public virtual int FillReportProvider(QrAguasRemoteDBDataSet.ReportProviderDataTable dataTable) {
             this.Adapter.SelectCommand = this.CommandCollection[0];
             if ((this.ClearBeforeFill == true)) {
                 dataTable.Clear();
@@ -9333,9 +9279,9 @@ FROM            fornecedores F INNER JOIN
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
-        public virtual qraguasDataSet.Relatorio_FornecedoresDataTable GetDataRepProvider() {
+        public virtual QrAguasRemoteDBDataSet.ReportProviderDataTable GetDataReportProvider() {
             this.Adapter.SelectCommand = this.CommandCollection[0];
-            qraguasDataSet.Relatorio_FornecedoresDataTable dataTable = new qraguasDataSet.Relatorio_FornecedoresDataTable();
+            QrAguasRemoteDBDataSet.ReportProviderDataTable dataTable = new QrAguasRemoteDBDataSet.ReportProviderDataTable();
             this.Adapter.Fill(dataTable);
             return dataTable;
         }
@@ -9350,7 +9296,7 @@ FROM            fornecedores F INNER JOIN
     [global::System.ComponentModel.DesignerAttribute("Microsoft.VSDesigner.DataSource.Design.TableAdapterDesigner, Microsoft.VSDesigner" +
         ", Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a")]
     [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-    public partial class DataGridViewUsuariosTableAdapter : global::System.ComponentModel.Component {
+    public partial class ReportProductTableAdapter : global::System.ComponentModel.Component {
         
         private global::MySql.Data.MySqlClient.MySqlDataAdapter _adapter;
         
@@ -9364,7 +9310,7 @@ FROM            fornecedores F INNER JOIN
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-        public DataGridViewUsuariosTableAdapter() {
+        public ReportProductTableAdapter() {
             this.ClearBeforeFill = true;
         }
         
@@ -9461,13 +9407,18 @@ FROM            fornecedores F INNER JOIN
             this._adapter = new global::MySql.Data.MySqlClient.MySqlDataAdapter();
             global::System.Data.Common.DataTableMapping tableMapping = new global::System.Data.Common.DataTableMapping();
             tableMapping.SourceTable = "Table";
-            tableMapping.DataSetTable = "DataGridViewUsuarios";
-            tableMapping.ColumnMappings.Add("ID_USUARIOS", "ID_USUARIOS");
-            tableMapping.ColumnMappings.Add("NOME_USUARIO", "NOME_USUARIO");
+            tableMapping.DataSetTable = "ReportProduct";
+            tableMapping.ColumnMappings.Add("COD_PRODUTO", "COD_PRODUTO");
+            tableMapping.ColumnMappings.Add("NOME_PRODUTO", "NOME_PRODUTO");
             tableMapping.ColumnMappings.Add("DESCRICAO", "DESCRICAO");
-            tableMapping.ColumnMappings.Add("CADASTRADO_POR", "CADASTRADO_POR");
+            tableMapping.ColumnMappings.Add("NOME_CATEGORIA", "NOME_CATEGORIA");
+            tableMapping.ColumnMappings.Add("RAZAO_SOCIAL", "RAZAO_SOCIAL");
+            tableMapping.ColumnMappings.Add("PRECO_COMPRA", "PRECO_COMPRA");
+            tableMapping.ColumnMappings.Add("PRECO_VENDA", "PRECO_VENDA");
+            tableMapping.ColumnMappings.Add("DATA_FABRICACAO", "DATA_FABRICACAO");
+            tableMapping.ColumnMappings.Add("DATA_VALIDADE", "DATA_VALIDADE");
             tableMapping.ColumnMappings.Add("DATA_CADASTRO", "DATA_CADASTRO");
-            tableMapping.ColumnMappings.Add("ATIVO", "ATIVO");
+            tableMapping.ColumnMappings.Add("NOME_USUARIO", "NOME_USUARIO");
             this._adapter.TableMappings.Add(tableMapping);
         }
         
@@ -9475,7 +9426,7 @@ FROM            fornecedores F INNER JOIN
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         private void InitConnection() {
             this._connection = new global::MySql.Data.MySqlClient.MySqlConnection();
-            this._connection.ConnectionString = global::QrAguas.Properties.Settings.Default.QrAguasCnn;
+            this._connection.ConnectionString = global::QrAguas.Properties.Settings.Default.qraguasremotedbConnectionString;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -9484,27 +9435,21 @@ FROM            fornecedores F INNER JOIN
             this._commandCollection = new global::MySql.Data.MySqlClient.MySqlCommand[1];
             this._commandCollection[0] = new global::MySql.Data.MySqlClient.MySqlCommand();
             this._commandCollection[0].Connection = this.Connection;
-            this._commandCollection[0].CommandText = @"SELECT        U.ID_USUARIOS, U.NOME_USUARIO, T.DESCRICAO, U.CADASTRADO_POR, U.DATA_CADASTRO, U.ATIVO
-FROM            usuarios U INNER JOIN
-                         tipo_usuario T ON U.ID_TIPO_USUARIO = T.ID_TIPO_USUARIO AND T.ID_TIPO_USUARIO > @ID_TIPO_USUARIO";
+            this._commandCollection[0].CommandText = @"SELECT        P.COD_PRODUTO, P.NOME_PRODUTO, P.DESCRICAO, C.NOME_CATEGORIA, F.RAZAO_SOCIAL, P.PRECO_COMPRA, P.PRECO_VENDA, P.DATA_FABRICACAO, P.DATA_VALIDADE, P.DATA_CADASTRO, U.NOME_USUARIO
+FROM            PRODUTOS P INNER JOIN
+                         USUARIOS U ON P.ID_USUARIOS = U.ID_USUARIOS INNER JOIN
+                         FORNECEDORES F ON P.ID_FORNECEDORES = F.ID_FORNECEDORES INNER JOIN
+                         CATEGORIAS C ON P.ID_CATEGORIAS = C.ID_CATEGORIAS
+ORDER BY P.NOME_PRODUTO";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
-            global::MySql.Data.MySqlClient.MySqlParameter param = new global::MySql.Data.MySqlClient.MySqlParameter();
-            param.ParameterName = "@ID_TIPO_USUARIO";
-            param.DbType = global::System.Data.DbType.Int32;
-            param.MySqlDbType = global::MySql.Data.MySqlClient.MySqlDbType.Int32;
-            param.IsNullable = true;
-            param.SourceColumn = "ID_TIPO_USUARIO";
-            param.SourceVersion = global::System.Data.DataRowVersion.Current;
-            this._commandCollection[0].Parameters.Add(param);
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, true)]
-        public virtual int FillDGVUsuarios(qraguasDataSet.DataGridViewUsuariosDataTable dataTable, int ID_TIPO_USUARIO) {
+        public virtual int FillReportProduct(QrAguasRemoteDBDataSet.ReportProductDataTable dataTable) {
             this.Adapter.SelectCommand = this.CommandCollection[0];
-            this.Adapter.SelectCommand.Parameters[0].Value = ((int)(ID_TIPO_USUARIO));
             if ((this.ClearBeforeFill == true)) {
                 dataTable.Clear();
             }
@@ -9516,10 +9461,9 @@ FROM            usuarios U INNER JOIN
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
-        public virtual qraguasDataSet.DataGridViewUsuariosDataTable GetDataDGVUsuarios(int ID_TIPO_USUARIO) {
+        public virtual QrAguasRemoteDBDataSet.ReportProductDataTable GetDataReportProduct() {
             this.Adapter.SelectCommand = this.CommandCollection[0];
-            this.Adapter.SelectCommand.Parameters[0].Value = ((int)(ID_TIPO_USUARIO));
-            qraguasDataSet.DataGridViewUsuariosDataTable dataTable = new qraguasDataSet.DataGridViewUsuariosDataTable();
+            QrAguasRemoteDBDataSet.ReportProductDataTable dataTable = new QrAguasRemoteDBDataSet.ReportProductDataTable();
             this.Adapter.Fill(dataTable);
             return dataTable;
         }
@@ -9537,15 +9481,15 @@ FROM            usuarios U INNER JOIN
         
         private UpdateOrderOption _updateOrder;
         
-        private categoriasTableAdapter _categoriasTableAdapter;
+        private CATEGORIASTableAdapter _cATEGORIASTableAdapter;
         
-        private fornecedoresTableAdapter _fornecedoresTableAdapter;
+        private FORNECEDORESTableAdapter _fORNECEDORESTableAdapter;
         
-        private produtosTableAdapter _produtosTableAdapter;
+        private PRODUTOSTableAdapter _pRODUTOSTableAdapter;
         
-        private tipo_usuarioTableAdapter _tipo_usuarioTableAdapter;
+        private TIPO_USUARIOTableAdapter _tIPO_USUARIOTableAdapter;
         
-        private usuariosTableAdapter _usuariosTableAdapter;
+        private USUARIOSTableAdapter _uSUARIOSTableAdapter;
         
         private bool _backupDataSetBeforeUpdate;
         
@@ -9567,12 +9511,12 @@ FROM            usuarios U INNER JOIN
         [global::System.ComponentModel.EditorAttribute("Microsoft.VSDesigner.DataSource.Design.TableAdapterManagerPropertyEditor, Microso" +
             "ft.VSDesigner, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3" +
             "a", "System.Drawing.Design.UITypeEditor")]
-        public categoriasTableAdapter categoriasTableAdapter {
+        public CATEGORIASTableAdapter CATEGORIASTableAdapter {
             get {
-                return this._categoriasTableAdapter;
+                return this._cATEGORIASTableAdapter;
             }
             set {
-                this._categoriasTableAdapter = value;
+                this._cATEGORIASTableAdapter = value;
             }
         }
         
@@ -9581,12 +9525,12 @@ FROM            usuarios U INNER JOIN
         [global::System.ComponentModel.EditorAttribute("Microsoft.VSDesigner.DataSource.Design.TableAdapterManagerPropertyEditor, Microso" +
             "ft.VSDesigner, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3" +
             "a", "System.Drawing.Design.UITypeEditor")]
-        public fornecedoresTableAdapter fornecedoresTableAdapter {
+        public FORNECEDORESTableAdapter FORNECEDORESTableAdapter {
             get {
-                return this._fornecedoresTableAdapter;
+                return this._fORNECEDORESTableAdapter;
             }
             set {
-                this._fornecedoresTableAdapter = value;
+                this._fORNECEDORESTableAdapter = value;
             }
         }
         
@@ -9595,12 +9539,12 @@ FROM            usuarios U INNER JOIN
         [global::System.ComponentModel.EditorAttribute("Microsoft.VSDesigner.DataSource.Design.TableAdapterManagerPropertyEditor, Microso" +
             "ft.VSDesigner, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3" +
             "a", "System.Drawing.Design.UITypeEditor")]
-        public produtosTableAdapter produtosTableAdapter {
+        public PRODUTOSTableAdapter PRODUTOSTableAdapter {
             get {
-                return this._produtosTableAdapter;
+                return this._pRODUTOSTableAdapter;
             }
             set {
-                this._produtosTableAdapter = value;
+                this._pRODUTOSTableAdapter = value;
             }
         }
         
@@ -9609,12 +9553,12 @@ FROM            usuarios U INNER JOIN
         [global::System.ComponentModel.EditorAttribute("Microsoft.VSDesigner.DataSource.Design.TableAdapterManagerPropertyEditor, Microso" +
             "ft.VSDesigner, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3" +
             "a", "System.Drawing.Design.UITypeEditor")]
-        public tipo_usuarioTableAdapter tipo_usuarioTableAdapter {
+        public TIPO_USUARIOTableAdapter TIPO_USUARIOTableAdapter {
             get {
-                return this._tipo_usuarioTableAdapter;
+                return this._tIPO_USUARIOTableAdapter;
             }
             set {
-                this._tipo_usuarioTableAdapter = value;
+                this._tIPO_USUARIOTableAdapter = value;
             }
         }
         
@@ -9623,12 +9567,12 @@ FROM            usuarios U INNER JOIN
         [global::System.ComponentModel.EditorAttribute("Microsoft.VSDesigner.DataSource.Design.TableAdapterManagerPropertyEditor, Microso" +
             "ft.VSDesigner, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3" +
             "a", "System.Drawing.Design.UITypeEditor")]
-        public usuariosTableAdapter usuariosTableAdapter {
+        public USUARIOSTableAdapter USUARIOSTableAdapter {
             get {
-                return this._usuariosTableAdapter;
+                return this._uSUARIOSTableAdapter;
             }
             set {
-                this._usuariosTableAdapter = value;
+                this._uSUARIOSTableAdapter = value;
             }
         }
         
@@ -9651,25 +9595,25 @@ FROM            usuarios U INNER JOIN
                 if ((this._connection != null)) {
                     return this._connection;
                 }
-                if (((this._categoriasTableAdapter != null) 
-                            && (this._categoriasTableAdapter.Connection != null))) {
-                    return this._categoriasTableAdapter.Connection;
+                if (((this._cATEGORIASTableAdapter != null) 
+                            && (this._cATEGORIASTableAdapter.Connection != null))) {
+                    return this._cATEGORIASTableAdapter.Connection;
                 }
-                if (((this._fornecedoresTableAdapter != null) 
-                            && (this._fornecedoresTableAdapter.Connection != null))) {
-                    return this._fornecedoresTableAdapter.Connection;
+                if (((this._fORNECEDORESTableAdapter != null) 
+                            && (this._fORNECEDORESTableAdapter.Connection != null))) {
+                    return this._fORNECEDORESTableAdapter.Connection;
                 }
-                if (((this._produtosTableAdapter != null) 
-                            && (this._produtosTableAdapter.Connection != null))) {
-                    return this._produtosTableAdapter.Connection;
+                if (((this._pRODUTOSTableAdapter != null) 
+                            && (this._pRODUTOSTableAdapter.Connection != null))) {
+                    return this._pRODUTOSTableAdapter.Connection;
                 }
-                if (((this._tipo_usuarioTableAdapter != null) 
-                            && (this._tipo_usuarioTableAdapter.Connection != null))) {
-                    return this._tipo_usuarioTableAdapter.Connection;
+                if (((this._tIPO_USUARIOTableAdapter != null) 
+                            && (this._tIPO_USUARIOTableAdapter.Connection != null))) {
+                    return this._tIPO_USUARIOTableAdapter.Connection;
                 }
-                if (((this._usuariosTableAdapter != null) 
-                            && (this._usuariosTableAdapter.Connection != null))) {
-                    return this._usuariosTableAdapter.Connection;
+                if (((this._uSUARIOSTableAdapter != null) 
+                            && (this._uSUARIOSTableAdapter.Connection != null))) {
+                    return this._uSUARIOSTableAdapter.Connection;
                 }
                 return null;
             }
@@ -9684,19 +9628,19 @@ FROM            usuarios U INNER JOIN
         public int TableAdapterInstanceCount {
             get {
                 int count = 0;
-                if ((this._categoriasTableAdapter != null)) {
+                if ((this._cATEGORIASTableAdapter != null)) {
                     count = (count + 1);
                 }
-                if ((this._fornecedoresTableAdapter != null)) {
+                if ((this._fORNECEDORESTableAdapter != null)) {
                     count = (count + 1);
                 }
-                if ((this._produtosTableAdapter != null)) {
+                if ((this._pRODUTOSTableAdapter != null)) {
                     count = (count + 1);
                 }
-                if ((this._tipo_usuarioTableAdapter != null)) {
+                if ((this._tIPO_USUARIOTableAdapter != null)) {
                     count = (count + 1);
                 }
-                if ((this._usuariosTableAdapter != null)) {
+                if ((this._uSUARIOSTableAdapter != null)) {
                     count = (count + 1);
                 }
                 return count;
@@ -9708,50 +9652,50 @@ FROM            usuarios U INNER JOIN
         ///</summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-        private int UpdateUpdatedRows(qraguasDataSet dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows, global::System.Collections.Generic.List<global::System.Data.DataRow> allAddedRows) {
+        private int UpdateUpdatedRows(QrAguasRemoteDBDataSet dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows, global::System.Collections.Generic.List<global::System.Data.DataRow> allAddedRows) {
             int result = 0;
-            if ((this._tipo_usuarioTableAdapter != null)) {
-                global::System.Data.DataRow[] updatedRows = dataSet.tipo_usuario.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
+            if ((this._tIPO_USUARIOTableAdapter != null)) {
+                global::System.Data.DataRow[] updatedRows = dataSet.TIPO_USUARIO.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
                 updatedRows = this.GetRealUpdatedRows(updatedRows, allAddedRows);
                 if (((updatedRows != null) 
                             && (0 < updatedRows.Length))) {
-                    result = (result + this._tipo_usuarioTableAdapter.Update(updatedRows));
+                    result = (result + this._tIPO_USUARIOTableAdapter.Update(updatedRows));
                     allChangedRows.AddRange(updatedRows);
                 }
             }
-            if ((this._usuariosTableAdapter != null)) {
-                global::System.Data.DataRow[] updatedRows = dataSet.usuarios.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
+            if ((this._uSUARIOSTableAdapter != null)) {
+                global::System.Data.DataRow[] updatedRows = dataSet.USUARIOS.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
                 updatedRows = this.GetRealUpdatedRows(updatedRows, allAddedRows);
                 if (((updatedRows != null) 
                             && (0 < updatedRows.Length))) {
-                    result = (result + this._usuariosTableAdapter.Update(updatedRows));
+                    result = (result + this._uSUARIOSTableAdapter.Update(updatedRows));
                     allChangedRows.AddRange(updatedRows);
                 }
             }
-            if ((this._categoriasTableAdapter != null)) {
-                global::System.Data.DataRow[] updatedRows = dataSet.categorias.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
+            if ((this._cATEGORIASTableAdapter != null)) {
+                global::System.Data.DataRow[] updatedRows = dataSet.CATEGORIAS.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
                 updatedRows = this.GetRealUpdatedRows(updatedRows, allAddedRows);
                 if (((updatedRows != null) 
                             && (0 < updatedRows.Length))) {
-                    result = (result + this._categoriasTableAdapter.Update(updatedRows));
+                    result = (result + this._cATEGORIASTableAdapter.Update(updatedRows));
                     allChangedRows.AddRange(updatedRows);
                 }
             }
-            if ((this._fornecedoresTableAdapter != null)) {
-                global::System.Data.DataRow[] updatedRows = dataSet.fornecedores.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
+            if ((this._fORNECEDORESTableAdapter != null)) {
+                global::System.Data.DataRow[] updatedRows = dataSet.FORNECEDORES.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
                 updatedRows = this.GetRealUpdatedRows(updatedRows, allAddedRows);
                 if (((updatedRows != null) 
                             && (0 < updatedRows.Length))) {
-                    result = (result + this._fornecedoresTableAdapter.Update(updatedRows));
+                    result = (result + this._fORNECEDORESTableAdapter.Update(updatedRows));
                     allChangedRows.AddRange(updatedRows);
                 }
             }
-            if ((this._produtosTableAdapter != null)) {
-                global::System.Data.DataRow[] updatedRows = dataSet.produtos.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
+            if ((this._pRODUTOSTableAdapter != null)) {
+                global::System.Data.DataRow[] updatedRows = dataSet.PRODUTOS.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
                 updatedRows = this.GetRealUpdatedRows(updatedRows, allAddedRows);
                 if (((updatedRows != null) 
                             && (0 < updatedRows.Length))) {
-                    result = (result + this._produtosTableAdapter.Update(updatedRows));
+                    result = (result + this._pRODUTOSTableAdapter.Update(updatedRows));
                     allChangedRows.AddRange(updatedRows);
                 }
             }
@@ -9763,45 +9707,45 @@ FROM            usuarios U INNER JOIN
         ///</summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-        private int UpdateInsertedRows(qraguasDataSet dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allAddedRows) {
+        private int UpdateInsertedRows(QrAguasRemoteDBDataSet dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allAddedRows) {
             int result = 0;
-            if ((this._tipo_usuarioTableAdapter != null)) {
-                global::System.Data.DataRow[] addedRows = dataSet.tipo_usuario.Select(null, null, global::System.Data.DataViewRowState.Added);
+            if ((this._tIPO_USUARIOTableAdapter != null)) {
+                global::System.Data.DataRow[] addedRows = dataSet.TIPO_USUARIO.Select(null, null, global::System.Data.DataViewRowState.Added);
                 if (((addedRows != null) 
                             && (0 < addedRows.Length))) {
-                    result = (result + this._tipo_usuarioTableAdapter.Update(addedRows));
+                    result = (result + this._tIPO_USUARIOTableAdapter.Update(addedRows));
                     allAddedRows.AddRange(addedRows);
                 }
             }
-            if ((this._usuariosTableAdapter != null)) {
-                global::System.Data.DataRow[] addedRows = dataSet.usuarios.Select(null, null, global::System.Data.DataViewRowState.Added);
+            if ((this._uSUARIOSTableAdapter != null)) {
+                global::System.Data.DataRow[] addedRows = dataSet.USUARIOS.Select(null, null, global::System.Data.DataViewRowState.Added);
                 if (((addedRows != null) 
                             && (0 < addedRows.Length))) {
-                    result = (result + this._usuariosTableAdapter.Update(addedRows));
+                    result = (result + this._uSUARIOSTableAdapter.Update(addedRows));
                     allAddedRows.AddRange(addedRows);
                 }
             }
-            if ((this._categoriasTableAdapter != null)) {
-                global::System.Data.DataRow[] addedRows = dataSet.categorias.Select(null, null, global::System.Data.DataViewRowState.Added);
+            if ((this._cATEGORIASTableAdapter != null)) {
+                global::System.Data.DataRow[] addedRows = dataSet.CATEGORIAS.Select(null, null, global::System.Data.DataViewRowState.Added);
                 if (((addedRows != null) 
                             && (0 < addedRows.Length))) {
-                    result = (result + this._categoriasTableAdapter.Update(addedRows));
+                    result = (result + this._cATEGORIASTableAdapter.Update(addedRows));
                     allAddedRows.AddRange(addedRows);
                 }
             }
-            if ((this._fornecedoresTableAdapter != null)) {
-                global::System.Data.DataRow[] addedRows = dataSet.fornecedores.Select(null, null, global::System.Data.DataViewRowState.Added);
+            if ((this._fORNECEDORESTableAdapter != null)) {
+                global::System.Data.DataRow[] addedRows = dataSet.FORNECEDORES.Select(null, null, global::System.Data.DataViewRowState.Added);
                 if (((addedRows != null) 
                             && (0 < addedRows.Length))) {
-                    result = (result + this._fornecedoresTableAdapter.Update(addedRows));
+                    result = (result + this._fORNECEDORESTableAdapter.Update(addedRows));
                     allAddedRows.AddRange(addedRows);
                 }
             }
-            if ((this._produtosTableAdapter != null)) {
-                global::System.Data.DataRow[] addedRows = dataSet.produtos.Select(null, null, global::System.Data.DataViewRowState.Added);
+            if ((this._pRODUTOSTableAdapter != null)) {
+                global::System.Data.DataRow[] addedRows = dataSet.PRODUTOS.Select(null, null, global::System.Data.DataViewRowState.Added);
                 if (((addedRows != null) 
                             && (0 < addedRows.Length))) {
-                    result = (result + this._produtosTableAdapter.Update(addedRows));
+                    result = (result + this._pRODUTOSTableAdapter.Update(addedRows));
                     allAddedRows.AddRange(addedRows);
                 }
             }
@@ -9813,45 +9757,45 @@ FROM            usuarios U INNER JOIN
         ///</summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-        private int UpdateDeletedRows(qraguasDataSet dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows) {
+        private int UpdateDeletedRows(QrAguasRemoteDBDataSet dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows) {
             int result = 0;
-            if ((this._produtosTableAdapter != null)) {
-                global::System.Data.DataRow[] deletedRows = dataSet.produtos.Select(null, null, global::System.Data.DataViewRowState.Deleted);
+            if ((this._pRODUTOSTableAdapter != null)) {
+                global::System.Data.DataRow[] deletedRows = dataSet.PRODUTOS.Select(null, null, global::System.Data.DataViewRowState.Deleted);
                 if (((deletedRows != null) 
                             && (0 < deletedRows.Length))) {
-                    result = (result + this._produtosTableAdapter.Update(deletedRows));
+                    result = (result + this._pRODUTOSTableAdapter.Update(deletedRows));
                     allChangedRows.AddRange(deletedRows);
                 }
             }
-            if ((this._fornecedoresTableAdapter != null)) {
-                global::System.Data.DataRow[] deletedRows = dataSet.fornecedores.Select(null, null, global::System.Data.DataViewRowState.Deleted);
+            if ((this._fORNECEDORESTableAdapter != null)) {
+                global::System.Data.DataRow[] deletedRows = dataSet.FORNECEDORES.Select(null, null, global::System.Data.DataViewRowState.Deleted);
                 if (((deletedRows != null) 
                             && (0 < deletedRows.Length))) {
-                    result = (result + this._fornecedoresTableAdapter.Update(deletedRows));
+                    result = (result + this._fORNECEDORESTableAdapter.Update(deletedRows));
                     allChangedRows.AddRange(deletedRows);
                 }
             }
-            if ((this._categoriasTableAdapter != null)) {
-                global::System.Data.DataRow[] deletedRows = dataSet.categorias.Select(null, null, global::System.Data.DataViewRowState.Deleted);
+            if ((this._cATEGORIASTableAdapter != null)) {
+                global::System.Data.DataRow[] deletedRows = dataSet.CATEGORIAS.Select(null, null, global::System.Data.DataViewRowState.Deleted);
                 if (((deletedRows != null) 
                             && (0 < deletedRows.Length))) {
-                    result = (result + this._categoriasTableAdapter.Update(deletedRows));
+                    result = (result + this._cATEGORIASTableAdapter.Update(deletedRows));
                     allChangedRows.AddRange(deletedRows);
                 }
             }
-            if ((this._usuariosTableAdapter != null)) {
-                global::System.Data.DataRow[] deletedRows = dataSet.usuarios.Select(null, null, global::System.Data.DataViewRowState.Deleted);
+            if ((this._uSUARIOSTableAdapter != null)) {
+                global::System.Data.DataRow[] deletedRows = dataSet.USUARIOS.Select(null, null, global::System.Data.DataViewRowState.Deleted);
                 if (((deletedRows != null) 
                             && (0 < deletedRows.Length))) {
-                    result = (result + this._usuariosTableAdapter.Update(deletedRows));
+                    result = (result + this._uSUARIOSTableAdapter.Update(deletedRows));
                     allChangedRows.AddRange(deletedRows);
                 }
             }
-            if ((this._tipo_usuarioTableAdapter != null)) {
-                global::System.Data.DataRow[] deletedRows = dataSet.tipo_usuario.Select(null, null, global::System.Data.DataViewRowState.Deleted);
+            if ((this._tIPO_USUARIOTableAdapter != null)) {
+                global::System.Data.DataRow[] deletedRows = dataSet.TIPO_USUARIO.Select(null, null, global::System.Data.DataViewRowState.Deleted);
                 if (((deletedRows != null) 
                             && (0 < deletedRows.Length))) {
-                    result = (result + this._tipo_usuarioTableAdapter.Update(deletedRows));
+                    result = (result + this._tIPO_USUARIOTableAdapter.Update(deletedRows));
                     allChangedRows.AddRange(deletedRows);
                 }
             }
@@ -9887,35 +9831,35 @@ FROM            usuarios U INNER JOIN
         ///</summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-        public virtual int UpdateAll(qraguasDataSet dataSet) {
+        public virtual int UpdateAll(QrAguasRemoteDBDataSet dataSet) {
             if ((dataSet == null)) {
                 throw new global::System.ArgumentNullException("dataSet");
             }
             if ((dataSet.HasChanges() == false)) {
                 return 0;
             }
-            if (((this._categoriasTableAdapter != null) 
-                        && (this.MatchTableAdapterConnection(this._categoriasTableAdapter.Connection) == false))) {
+            if (((this._cATEGORIASTableAdapter != null) 
+                        && (this.MatchTableAdapterConnection(this._cATEGORIASTableAdapter.Connection) == false))) {
                 throw new global::System.ArgumentException("All TableAdapters managed by a TableAdapterManager must use the same connection s" +
                         "tring.");
             }
-            if (((this._fornecedoresTableAdapter != null) 
-                        && (this.MatchTableAdapterConnection(this._fornecedoresTableAdapter.Connection) == false))) {
+            if (((this._fORNECEDORESTableAdapter != null) 
+                        && (this.MatchTableAdapterConnection(this._fORNECEDORESTableAdapter.Connection) == false))) {
                 throw new global::System.ArgumentException("All TableAdapters managed by a TableAdapterManager must use the same connection s" +
                         "tring.");
             }
-            if (((this._produtosTableAdapter != null) 
-                        && (this.MatchTableAdapterConnection(this._produtosTableAdapter.Connection) == false))) {
+            if (((this._pRODUTOSTableAdapter != null) 
+                        && (this.MatchTableAdapterConnection(this._pRODUTOSTableAdapter.Connection) == false))) {
                 throw new global::System.ArgumentException("All TableAdapters managed by a TableAdapterManager must use the same connection s" +
                         "tring.");
             }
-            if (((this._tipo_usuarioTableAdapter != null) 
-                        && (this.MatchTableAdapterConnection(this._tipo_usuarioTableAdapter.Connection) == false))) {
+            if (((this._tIPO_USUARIOTableAdapter != null) 
+                        && (this.MatchTableAdapterConnection(this._tIPO_USUARIOTableAdapter.Connection) == false))) {
                 throw new global::System.ArgumentException("All TableAdapters managed by a TableAdapterManager must use the same connection s" +
                         "tring.");
             }
-            if (((this._usuariosTableAdapter != null) 
-                        && (this.MatchTableAdapterConnection(this._usuariosTableAdapter.Connection) == false))) {
+            if (((this._uSUARIOSTableAdapter != null) 
+                        && (this.MatchTableAdapterConnection(this._uSUARIOSTableAdapter.Connection) == false))) {
                 throw new global::System.ArgumentException("All TableAdapters managed by a TableAdapterManager must use the same connection s" +
                         "tring.");
             }
@@ -9951,49 +9895,49 @@ FROM            usuarios U INNER JOIN
             try {
                 // ---- Prepare for update -----------
                 //
-                if ((this._categoriasTableAdapter != null)) {
-                    revertConnections.Add(this._categoriasTableAdapter, this._categoriasTableAdapter.Connection);
-                    this._categoriasTableAdapter.Connection = ((global::MySql.Data.MySqlClient.MySqlConnection)(workConnection));
-                    this._categoriasTableAdapter.Transaction = ((global::MySql.Data.MySqlClient.MySqlTransaction)(workTransaction));
-                    if (this._categoriasTableAdapter.Adapter.AcceptChangesDuringUpdate) {
-                        this._categoriasTableAdapter.Adapter.AcceptChangesDuringUpdate = false;
-                        adaptersWithAcceptChangesDuringUpdate.Add(this._categoriasTableAdapter.Adapter);
+                if ((this._cATEGORIASTableAdapter != null)) {
+                    revertConnections.Add(this._cATEGORIASTableAdapter, this._cATEGORIASTableAdapter.Connection);
+                    this._cATEGORIASTableAdapter.Connection = ((global::MySql.Data.MySqlClient.MySqlConnection)(workConnection));
+                    this._cATEGORIASTableAdapter.Transaction = ((global::MySql.Data.MySqlClient.MySqlTransaction)(workTransaction));
+                    if (this._cATEGORIASTableAdapter.Adapter.AcceptChangesDuringUpdate) {
+                        this._cATEGORIASTableAdapter.Adapter.AcceptChangesDuringUpdate = false;
+                        adaptersWithAcceptChangesDuringUpdate.Add(this._cATEGORIASTableAdapter.Adapter);
                     }
                 }
-                if ((this._fornecedoresTableAdapter != null)) {
-                    revertConnections.Add(this._fornecedoresTableAdapter, this._fornecedoresTableAdapter.Connection);
-                    this._fornecedoresTableAdapter.Connection = ((global::MySql.Data.MySqlClient.MySqlConnection)(workConnection));
-                    this._fornecedoresTableAdapter.Transaction = ((global::MySql.Data.MySqlClient.MySqlTransaction)(workTransaction));
-                    if (this._fornecedoresTableAdapter.Adapter.AcceptChangesDuringUpdate) {
-                        this._fornecedoresTableAdapter.Adapter.AcceptChangesDuringUpdate = false;
-                        adaptersWithAcceptChangesDuringUpdate.Add(this._fornecedoresTableAdapter.Adapter);
+                if ((this._fORNECEDORESTableAdapter != null)) {
+                    revertConnections.Add(this._fORNECEDORESTableAdapter, this._fORNECEDORESTableAdapter.Connection);
+                    this._fORNECEDORESTableAdapter.Connection = ((global::MySql.Data.MySqlClient.MySqlConnection)(workConnection));
+                    this._fORNECEDORESTableAdapter.Transaction = ((global::MySql.Data.MySqlClient.MySqlTransaction)(workTransaction));
+                    if (this._fORNECEDORESTableAdapter.Adapter.AcceptChangesDuringUpdate) {
+                        this._fORNECEDORESTableAdapter.Adapter.AcceptChangesDuringUpdate = false;
+                        adaptersWithAcceptChangesDuringUpdate.Add(this._fORNECEDORESTableAdapter.Adapter);
                     }
                 }
-                if ((this._produtosTableAdapter != null)) {
-                    revertConnections.Add(this._produtosTableAdapter, this._produtosTableAdapter.Connection);
-                    this._produtosTableAdapter.Connection = ((global::MySql.Data.MySqlClient.MySqlConnection)(workConnection));
-                    this._produtosTableAdapter.Transaction = ((global::MySql.Data.MySqlClient.MySqlTransaction)(workTransaction));
-                    if (this._produtosTableAdapter.Adapter.AcceptChangesDuringUpdate) {
-                        this._produtosTableAdapter.Adapter.AcceptChangesDuringUpdate = false;
-                        adaptersWithAcceptChangesDuringUpdate.Add(this._produtosTableAdapter.Adapter);
+                if ((this._pRODUTOSTableAdapter != null)) {
+                    revertConnections.Add(this._pRODUTOSTableAdapter, this._pRODUTOSTableAdapter.Connection);
+                    this._pRODUTOSTableAdapter.Connection = ((global::MySql.Data.MySqlClient.MySqlConnection)(workConnection));
+                    this._pRODUTOSTableAdapter.Transaction = ((global::MySql.Data.MySqlClient.MySqlTransaction)(workTransaction));
+                    if (this._pRODUTOSTableAdapter.Adapter.AcceptChangesDuringUpdate) {
+                        this._pRODUTOSTableAdapter.Adapter.AcceptChangesDuringUpdate = false;
+                        adaptersWithAcceptChangesDuringUpdate.Add(this._pRODUTOSTableAdapter.Adapter);
                     }
                 }
-                if ((this._tipo_usuarioTableAdapter != null)) {
-                    revertConnections.Add(this._tipo_usuarioTableAdapter, this._tipo_usuarioTableAdapter.Connection);
-                    this._tipo_usuarioTableAdapter.Connection = ((global::MySql.Data.MySqlClient.MySqlConnection)(workConnection));
-                    this._tipo_usuarioTableAdapter.Transaction = ((global::MySql.Data.MySqlClient.MySqlTransaction)(workTransaction));
-                    if (this._tipo_usuarioTableAdapter.Adapter.AcceptChangesDuringUpdate) {
-                        this._tipo_usuarioTableAdapter.Adapter.AcceptChangesDuringUpdate = false;
-                        adaptersWithAcceptChangesDuringUpdate.Add(this._tipo_usuarioTableAdapter.Adapter);
+                if ((this._tIPO_USUARIOTableAdapter != null)) {
+                    revertConnections.Add(this._tIPO_USUARIOTableAdapter, this._tIPO_USUARIOTableAdapter.Connection);
+                    this._tIPO_USUARIOTableAdapter.Connection = ((global::MySql.Data.MySqlClient.MySqlConnection)(workConnection));
+                    this._tIPO_USUARIOTableAdapter.Transaction = ((global::MySql.Data.MySqlClient.MySqlTransaction)(workTransaction));
+                    if (this._tIPO_USUARIOTableAdapter.Adapter.AcceptChangesDuringUpdate) {
+                        this._tIPO_USUARIOTableAdapter.Adapter.AcceptChangesDuringUpdate = false;
+                        adaptersWithAcceptChangesDuringUpdate.Add(this._tIPO_USUARIOTableAdapter.Adapter);
                     }
                 }
-                if ((this._usuariosTableAdapter != null)) {
-                    revertConnections.Add(this._usuariosTableAdapter, this._usuariosTableAdapter.Connection);
-                    this._usuariosTableAdapter.Connection = ((global::MySql.Data.MySqlClient.MySqlConnection)(workConnection));
-                    this._usuariosTableAdapter.Transaction = ((global::MySql.Data.MySqlClient.MySqlTransaction)(workTransaction));
-                    if (this._usuariosTableAdapter.Adapter.AcceptChangesDuringUpdate) {
-                        this._usuariosTableAdapter.Adapter.AcceptChangesDuringUpdate = false;
-                        adaptersWithAcceptChangesDuringUpdate.Add(this._usuariosTableAdapter.Adapter);
+                if ((this._uSUARIOSTableAdapter != null)) {
+                    revertConnections.Add(this._uSUARIOSTableAdapter, this._uSUARIOSTableAdapter.Connection);
+                    this._uSUARIOSTableAdapter.Connection = ((global::MySql.Data.MySqlClient.MySqlConnection)(workConnection));
+                    this._uSUARIOSTableAdapter.Transaction = ((global::MySql.Data.MySqlClient.MySqlTransaction)(workTransaction));
+                    if (this._uSUARIOSTableAdapter.Adapter.AcceptChangesDuringUpdate) {
+                        this._uSUARIOSTableAdapter.Adapter.AcceptChangesDuringUpdate = false;
+                        adaptersWithAcceptChangesDuringUpdate.Add(this._uSUARIOSTableAdapter.Adapter);
                     }
                 }
                 // 
@@ -10054,25 +9998,25 @@ FROM            usuarios U INNER JOIN
                 if (workConnOpened) {
                     workConnection.Close();
                 }
-                if ((this._categoriasTableAdapter != null)) {
-                    this._categoriasTableAdapter.Connection = ((global::MySql.Data.MySqlClient.MySqlConnection)(revertConnections[this._categoriasTableAdapter]));
-                    this._categoriasTableAdapter.Transaction = null;
+                if ((this._cATEGORIASTableAdapter != null)) {
+                    this._cATEGORIASTableAdapter.Connection = ((global::MySql.Data.MySqlClient.MySqlConnection)(revertConnections[this._cATEGORIASTableAdapter]));
+                    this._cATEGORIASTableAdapter.Transaction = null;
                 }
-                if ((this._fornecedoresTableAdapter != null)) {
-                    this._fornecedoresTableAdapter.Connection = ((global::MySql.Data.MySqlClient.MySqlConnection)(revertConnections[this._fornecedoresTableAdapter]));
-                    this._fornecedoresTableAdapter.Transaction = null;
+                if ((this._fORNECEDORESTableAdapter != null)) {
+                    this._fORNECEDORESTableAdapter.Connection = ((global::MySql.Data.MySqlClient.MySqlConnection)(revertConnections[this._fORNECEDORESTableAdapter]));
+                    this._fORNECEDORESTableAdapter.Transaction = null;
                 }
-                if ((this._produtosTableAdapter != null)) {
-                    this._produtosTableAdapter.Connection = ((global::MySql.Data.MySqlClient.MySqlConnection)(revertConnections[this._produtosTableAdapter]));
-                    this._produtosTableAdapter.Transaction = null;
+                if ((this._pRODUTOSTableAdapter != null)) {
+                    this._pRODUTOSTableAdapter.Connection = ((global::MySql.Data.MySqlClient.MySqlConnection)(revertConnections[this._pRODUTOSTableAdapter]));
+                    this._pRODUTOSTableAdapter.Transaction = null;
                 }
-                if ((this._tipo_usuarioTableAdapter != null)) {
-                    this._tipo_usuarioTableAdapter.Connection = ((global::MySql.Data.MySqlClient.MySqlConnection)(revertConnections[this._tipo_usuarioTableAdapter]));
-                    this._tipo_usuarioTableAdapter.Transaction = null;
+                if ((this._tIPO_USUARIOTableAdapter != null)) {
+                    this._tIPO_USUARIOTableAdapter.Connection = ((global::MySql.Data.MySqlClient.MySqlConnection)(revertConnections[this._tIPO_USUARIOTableAdapter]));
+                    this._tIPO_USUARIOTableAdapter.Transaction = null;
                 }
-                if ((this._usuariosTableAdapter != null)) {
-                    this._usuariosTableAdapter.Connection = ((global::MySql.Data.MySqlClient.MySqlConnection)(revertConnections[this._usuariosTableAdapter]));
-                    this._usuariosTableAdapter.Transaction = null;
+                if ((this._uSUARIOSTableAdapter != null)) {
+                    this._uSUARIOSTableAdapter.Connection = ((global::MySql.Data.MySqlClient.MySqlConnection)(revertConnections[this._uSUARIOSTableAdapter]));
+                    this._uSUARIOSTableAdapter.Transaction = null;
                 }
                 if ((0 < adaptersWithAcceptChangesDuringUpdate.Count)) {
                     global::System.Data.Common.DataAdapter[] adapters = new System.Data.Common.DataAdapter[adaptersWithAcceptChangesDuringUpdate.Count];
