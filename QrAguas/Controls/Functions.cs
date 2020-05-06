@@ -462,5 +462,39 @@ namespace QrAguas.Controls
 
         #endregion
 
+
+        #region Form SellProduct
+
+        public Product ProcurarProduto(int codigoProduto)
+        {
+            DataTable dadosProduto = new DataTable();
+
+            string queryProcurarProduto = "SELECT NOME_PRODUTO, PRECO_VENDA FROM PRODUTOS WHERE COD_PRODUTO = @CodigoProduto";
+
+            MySqlCommand command = new MySqlCommand(queryProcurarProduto, AbrirBanco());
+            command.Parameters.AddWithValue("@CodigoProduto", codigoProduto);
+
+            MySqlDataReader reader = command.ExecuteReader();
+
+            dadosProduto.Load(reader);
+
+            Product product = new Product
+            {
+                CodigoProduto = codigoProduto
+            };
+
+            foreach (DataRow row in dadosProduto.Rows)
+            {
+                product.NomeProduto = row["NOME_PRODUTO"].ToString();
+                product.Preco = double.Parse(row["PRECO_VENDA"].ToString());
+            }
+
+            FecharBanco(AbrirBanco());
+
+            return product;
+        }
+
+
+        #endregion
     }
 }

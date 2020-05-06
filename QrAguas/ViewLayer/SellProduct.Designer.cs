@@ -41,10 +41,10 @@
             this.panel3 = new System.Windows.Forms.Panel();
             this.btnAdicionar = new System.Windows.Forms.Button();
             this.panel4 = new System.Windows.Forms.Panel();
-            this.txtCodProduto = new System.Windows.Forms.TextBox();
-            this.lblCodProduto = new System.Windows.Forms.Label();
-            this.lblQuantidade = new System.Windows.Forms.Label();
             this.txtQuantidade = new System.Windows.Forms.NumericUpDown();
+            this.lblQuantidade = new System.Windows.Forms.Label();
+            this.lblCodProduto = new System.Windows.Forms.Label();
+            this.txtCodProduto = new System.Windows.Forms.TextBox();
             this.tableLayoutPanel1.SuspendLayout();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.DGVCarrinho)).BeginInit();
@@ -193,6 +193,7 @@
             this.btnAdicionar.TabIndex = 1;
             this.btnAdicionar.Text = "Adicionar";
             this.btnAdicionar.UseVisualStyleBackColor = false;
+            this.btnAdicionar.Click += new System.EventHandler(this.BtnAdicionar_Click);
             // 
             // panel4
             // 
@@ -205,33 +206,6 @@
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(340, 165);
             this.panel4.TabIndex = 8;
-            // 
-            // txtCodProduto
-            // 
-            this.txtCodProduto.Location = new System.Drawing.Point(82, 32);
-            this.txtCodProduto.Name = "txtCodProduto";
-            this.txtCodProduto.Size = new System.Drawing.Size(177, 23);
-            this.txtCodProduto.TabIndex = 0;
-            // 
-            // lblCodProduto
-            // 
-            this.lblCodProduto.AutoSize = true;
-            this.lblCodProduto.ForeColor = System.Drawing.Color.White;
-            this.lblCodProduto.Location = new System.Drawing.Point(79, 12);
-            this.lblCodProduto.Name = "lblCodProduto";
-            this.lblCodProduto.Size = new System.Drawing.Size(129, 17);
-            this.lblCodProduto.TabIndex = 1;
-            this.lblCodProduto.Text = "Código do produto:";
-            // 
-            // lblQuantidade
-            // 
-            this.lblQuantidade.AutoSize = true;
-            this.lblQuantidade.ForeColor = System.Drawing.Color.White;
-            this.lblQuantidade.Location = new System.Drawing.Point(79, 99);
-            this.lblQuantidade.Name = "lblQuantidade";
-            this.lblQuantidade.Size = new System.Drawing.Size(86, 17);
-            this.lblQuantidade.TabIndex = 3;
-            this.lblQuantidade.Text = "Quantidade:";
             // 
             // txtQuantidade
             // 
@@ -249,6 +223,33 @@
             0,
             0,
             0});
+            // 
+            // lblQuantidade
+            // 
+            this.lblQuantidade.AutoSize = true;
+            this.lblQuantidade.ForeColor = System.Drawing.Color.White;
+            this.lblQuantidade.Location = new System.Drawing.Point(79, 99);
+            this.lblQuantidade.Name = "lblQuantidade";
+            this.lblQuantidade.Size = new System.Drawing.Size(86, 17);
+            this.lblQuantidade.TabIndex = 3;
+            this.lblQuantidade.Text = "Quantidade:";
+            // 
+            // lblCodProduto
+            // 
+            this.lblCodProduto.AutoSize = true;
+            this.lblCodProduto.ForeColor = System.Drawing.Color.White;
+            this.lblCodProduto.Location = new System.Drawing.Point(79, 12);
+            this.lblCodProduto.Name = "lblCodProduto";
+            this.lblCodProduto.Size = new System.Drawing.Size(129, 17);
+            this.lblCodProduto.TabIndex = 1;
+            this.lblCodProduto.Text = "Código do produto:";
+            // 
+            // txtCodProduto
+            // 
+            this.txtCodProduto.Location = new System.Drawing.Point(82, 32);
+            this.txtCodProduto.Name = "txtCodProduto";
+            this.txtCodProduto.Size = new System.Drawing.Size(177, 23);
+            this.txtCodProduto.TabIndex = 0;
             // 
             // SellProduct
             // 

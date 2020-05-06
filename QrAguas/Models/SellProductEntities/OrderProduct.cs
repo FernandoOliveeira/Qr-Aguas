@@ -3,8 +3,8 @@
     class OrderProduct
     {
         // Composição da classe Product
+        public int CodigoProduto { get; set; }
         public Product Produto { get; set; }
-
         public int Quantidade { get; set; }
         public double Preco { get; set; }
 
@@ -16,12 +16,15 @@
         {
         }
 
-        public OrderProduct(int quantidade, double preco, Product product)
+        public OrderProduct(int codigoProduto, Product produto, int quantidade, double preco)
         {
+            CodigoProduto = codigoProduto;
+            Produto = produto;
             Quantidade = quantidade;
             Preco = preco;
-            Produto = product;
         }
+
+
 
 
         // Métodos

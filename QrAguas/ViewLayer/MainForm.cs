@@ -160,6 +160,30 @@ namespace QrAguas.View_Layer
 
                 #endregion
 
+                #region Vendas
+                case "Venda de Produtos":
+
+                    bool sellProductOpen = false;
+
+                    // Início: Este bloco de código impede que sejam abertos múltiplos forms iguais
+                    foreach (Form form in Application.OpenForms)
+                    {
+                        if (form.Text.Equals("Qr Águas - Venda de Produtos"))
+                        {
+                            sellProductOpen = true;
+                            form.BringToFront();
+                            break;
+                        }
+                    }
+                    if (sellProductOpen == false)
+                    {
+                        SellProduct sellProduct = new SellProduct();
+                        sellProduct.Show();
+                    }
+                    // Fim
+                    break;
+                #endregion
+
 
                 #region Relatórios
 

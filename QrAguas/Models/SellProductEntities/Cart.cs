@@ -1,6 +1,7 @@
 ﻿using QrAguas.Models.SellProductEntities;
 using System;
 using System.Collections.Generic;
+using System.ComponentModel;
 
 namespace QrAguas.Models
 {
@@ -9,7 +10,7 @@ namespace QrAguas.Models
         public DateTime HoraVenda { get; set; }
 
         // Composição da classe OrderProduct
-        public List<OrderProduct> Produtos { get; set; } = new List<OrderProduct>();
+        public BindingList<OrderProduct> Produtos { get; set; } = new BindingList<OrderProduct>();
 
 
         // Construtores
