@@ -1,6 +1,7 @@
 ﻿using MySql.Data.MySqlClient;
 using QrAguas.BusinessLayer;
 using QrAguas.Models;
+using QrAguas.Models.SellProductEntities;
 using QrAguas.View_Layer;
 using System;
 using System.Collections.Generic;
@@ -494,6 +495,35 @@ namespace QrAguas.Controls
             return product;
         }
 
+        public bool VenderProduto(Cart cart, OrderProduct order)
+        {
+            // Primeiro: Inserir a venda na tabela VENDAS
+            string queryInserirVenda = "INSERT INTO VENDAS VALUES (NULL, @ID_USUARIOS, @DATA_VENDA)";
+
+            MySqlCommand command = new MySqlCommand(queryInserirVenda, AbrirBanco());
+            command.Parameters.AddWithValue("@ID_USUARIOS", Login.IdUsuario);
+            command.Parameters.AddWithValue("@DATA_VENDA", cart.HoraVenda);
+
+            if (command.ExecuteNonQuery() == 1)
+            {
+                // Segundo: Para cada item na lista de produtos, será inserido um registro na tabela Vendas_Produtos
+                foreach (OrderProduct produto in cart.Produtos)
+                {
+                    string queryRegistrarProdVendidos = "INSERT INTO VENDAS_PRODUTOS (ID_VENDAS, ID_PRODUTOS, QUANTIDADE_PRODUTOS, PRECO_PRODUTO) SELECT MAX(V.ID_VENDAS), P.ID_PRODUTOS, @QUANTIDADE, P.PRECO_VENDA FROM VENDAS V, PRODUTOS P WHERE P.COD_PRODUTO = @COD_PRODUTO";
+
+                    MySqlCommand commandVenda = new MySqlCommand(queryRegistrarProdVendidos, AbrirBanco());
+                    commandVenda.Parameters.AddWithValue("@QUANTIDADE", produto.Quantidade);
+                    commandVenda.Parameters.AddWithValue("@COD_PRODUTO", produto.CodigoProduto);
+
+                    commandVenda.ExecuteNonQuery();
+                }
+
+                return true;
+
+            }
+
+            return false;
+        }
 
         #endregion
     }
