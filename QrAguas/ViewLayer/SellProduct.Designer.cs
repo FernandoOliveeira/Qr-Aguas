@@ -45,6 +45,8 @@
             this.lblQuantidade = new System.Windows.Forms.Label();
             this.lblCodProduto = new System.Windows.Forms.Label();
             this.txtCodProduto = new System.Windows.Forms.TextBox();
+            this.panel5 = new System.Windows.Forms.Panel();
+            this.btnVender = new System.Windows.Forms.Button();
             this.tableLayoutPanel1.SuspendLayout();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.DGVCarrinho)).BeginInit();
@@ -52,6 +54,7 @@
             this.panel3.SuspendLayout();
             this.panel4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.txtQuantidade)).BeginInit();
+            this.panel5.SuspendLayout();
             this.SuspendLayout();
             // 
             // tableLayoutPanel1
@@ -68,6 +71,7 @@
             this.tableLayoutPanel1.Controls.Add(this.panel2, 3, 5);
             this.tableLayoutPanel1.Controls.Add(this.panel3, 4, 4);
             this.tableLayoutPanel1.Controls.Add(this.panel4, 4, 3);
+            this.tableLayoutPanel1.Controls.Add(this.panel5, 4, 5);
             this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 0);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
@@ -251,6 +255,32 @@
             this.txtCodProduto.Size = new System.Drawing.Size(177, 23);
             this.txtCodProduto.TabIndex = 0;
             // 
+            // panel5
+            // 
+            this.panel5.Controls.Add(this.btnVender);
+            this.panel5.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel5.Location = new System.Drawing.Point(691, 422);
+            this.panel5.Name = "panel5";
+            this.panel5.Size = new System.Drawing.Size(340, 137);
+            this.panel5.TabIndex = 9;
+            // 
+            // btnVender
+            // 
+            this.btnVender.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnVender.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
+            this.btnVender.FlatAppearance.BorderSize = 0;
+            this.btnVender.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnVender.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnVender.ForeColor = System.Drawing.Color.White;
+            this.btnVender.Location = new System.Drawing.Point(54, 50);
+            this.btnVender.Name = "btnVender";
+            this.btnVender.Size = new System.Drawing.Size(233, 37);
+            this.btnVender.TabIndex = 2;
+            this.btnVender.Text = "Vender";
+            this.btnVender.UseVisualStyleBackColor = false;
+            this.btnVender.Click += new System.EventHandler(this.BtnVender_Click);
+            // 
             // SellProduct
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 17F);
@@ -273,6 +303,7 @@
             this.panel4.ResumeLayout(false);
             this.panel4.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.txtQuantidade)).EndInit();
+            this.panel5.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -293,5 +324,7 @@
         private System.Windows.Forms.Label lblQuantidade;
         private System.Windows.Forms.Label lblCodProduto;
         private System.Windows.Forms.TextBox txtCodProduto;
+        private System.Windows.Forms.Panel panel5;
+        private System.Windows.Forms.Button btnVender;
     }
 }

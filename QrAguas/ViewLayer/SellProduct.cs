@@ -23,6 +23,8 @@ namespace QrAguas.ViewLayer
         Functions functions = new Functions();
 
         Cart cart = new Cart();
+        Product produto;
+        OrderProduct order;
 
         private void SellProduct_Load(object sender, EventArgs e)
         {
@@ -41,9 +43,9 @@ namespace QrAguas.ViewLayer
         private void BtnAdicionar_Click(object sender, EventArgs e)
         {
             
-            Product produto = functions.ProcurarProduto(int.Parse(txtCodProduto.Text.Trim()));
+            produto = functions.ProcurarProduto(int.Parse(txtCodProduto.Text.Trim()));
 
-            OrderProduct order = new OrderProduct(
+            order = new OrderProduct(
                 produto.CodigoProduto,
                 produto,
                 (int)txtQuantidade.Value,
@@ -55,6 +57,16 @@ namespace QrAguas.ViewLayer
             cart.AddProduto(order);
 
             lblTotal.Text = "Total: " + cart.Total().ToString("F2") + "R$";
+        }
+
+        private void BtnVender_Click(object sender, EventArgs e)
+        {
+            cart.HoraVenda = DateTime.Now;
+
+            if (functions.VenderProduto(cart, order))
+            {
+                MessageBox.Show("Venda realizada com sucesso !", "Venda realizada com sucesso", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
         }
     }
 }
