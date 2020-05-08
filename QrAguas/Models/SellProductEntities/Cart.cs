@@ -30,9 +30,9 @@ namespace QrAguas.Models
             Produtos.Add(produto);
         }
 
-        public void RemoverProduto(OrderProduct produto)
+        public void RemoverProduto(int produto)
         {
-            Produtos.Remove(produto);
+            Produtos.RemoveAt(produto);
         }
 
 
