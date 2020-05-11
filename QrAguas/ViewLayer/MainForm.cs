@@ -73,7 +73,7 @@ namespace QrAguas.View_Layer
                     // Início: Este bloco de código impede que sejam abertos múltiplos forms iguais
                     foreach (Form form in Application.OpenForms)
                     {
-                        if (form.Text.Equals("Qr Águas - Cadastro de Fornecedores"))
+                        if (form.Name == "RegisterProvider")
                         {
                             registerProviderOpen = true;
                             form.BringToFront();
@@ -97,7 +97,7 @@ namespace QrAguas.View_Layer
                     // Início: Este bloco de código impede que sejam abertos múltiplos forms iguais
                     foreach (Form form in Application.OpenForms)
                     {
-                        if (form.Text.Equals("Qr Águas - Cadastro de Produtos"))
+                        if (form.Name == "RegisterProduct")
                         {
                             registerProductOpen = true;
                             form.BringToFront();
@@ -121,7 +121,7 @@ namespace QrAguas.View_Layer
                     // Início: Este bloco de código impede que sejam abertos múltiplos forms iguais
                     foreach (Form form in Application.OpenForms)
                     {
-                        if (form.Text.Equals("Qr Águas - Cadastro de Usuários"))
+                        if (form.Name == "RegisterUser")
                         {
                             registerUserOpen = true;
                             form.BringToFront();
@@ -143,7 +143,7 @@ namespace QrAguas.View_Layer
                     // Início: Este bloco de código impede que sejam abertos múltiplos forms iguais
                     foreach (Form form in Application.OpenForms)
                     {
-                        if (form.Text.Equals("Qr Águas - Cadastro de Categorias"))
+                        if (form.Name == "RegisterCategory")
                         {
                             registerCategoryOpen = true;
                             form.BringToFront();
@@ -168,7 +168,7 @@ namespace QrAguas.View_Layer
                     // Início: Este bloco de código impede que sejam abertos múltiplos forms iguais
                     foreach (Form form in Application.OpenForms)
                     {
-                        if (form.Text.Equals("Qr Águas - Venda de Produtos"))
+                        if (form.Name == "SellProduct")
                         {
                             sellProductOpen = true;
                             form.BringToFront();
@@ -184,6 +184,29 @@ namespace QrAguas.View_Layer
                     break;
                 #endregion
 
+                #region Qr Code
+                case "Gerar Novo Qr Code":
+
+                    bool generateQrCodeOpen = false;
+
+                    // Início: Este bloco de código impede que sejam abertos múltiplos forms iguais
+                    foreach (Form form in Application.OpenForms)
+                    {
+                        if (form.Name == "GenerateQrCode")
+                        {
+                            generateQrCodeOpen = true;
+                            form.BringToFront();
+                            break;
+                        }
+                    }
+                    if (generateQrCodeOpen == false)
+                    {
+                        GenerateQrCode generateQrCode = new GenerateQrCode();
+                        generateQrCode.Show();
+                    }
+                    // Fim
+                    break;
+                #endregion
 
                 #region Relatórios
 
