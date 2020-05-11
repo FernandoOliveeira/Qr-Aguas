@@ -114,6 +114,7 @@
             this.txtNomeEmpresa.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.txtNomeEmpresa.Location = new System.Drawing.Point(7, 30);
+            this.txtNomeEmpresa.MaxLength = 35;
             this.txtNomeEmpresa.Name = "txtNomeEmpresa";
             this.txtNomeEmpresa.Size = new System.Drawing.Size(159, 23);
             this.txtNomeEmpresa.TabIndex = 0;
@@ -224,6 +225,7 @@
             this.txtNomeProduto.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.txtNomeProduto.Location = new System.Drawing.Point(7, 30);
+            this.txtNomeProduto.MaxLength = 35;
             this.txtNomeProduto.Name = "txtNomeProduto";
             this.txtNomeProduto.Size = new System.Drawing.Size(159, 23);
             this.txtNomeProduto.TabIndex = 0;

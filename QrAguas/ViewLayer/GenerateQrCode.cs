@@ -37,15 +37,23 @@ namespace QrAguas.ViewLayer
             }
             else
             {
-                string qrCodeText = txtNomeProduto.Text.Trim() + "\n"
-                                + DTPValidade.Text + "\n"
-                                + txtNomeEmpresa.Text.Trim() + "\n"
-                                + txtTelefone.Text.Trim();
+                // Gera o caminho da imagem a ser inserida no centro do Qr Code
+                string path = Directory.GetCurrentDirectory();
+                string newPath = Path.GetFullPath(Path.Combine(path, "..", "..", @".\Resources\qrAguasIconeGota.png"));
 
+                // texto que será transformado em Qr Code
+                string qrCodeText = "Produto: " + txtNomeProduto.Text.Trim() + "\n"
+                                + "Data de Validade: " + DTPValidade.Text + "\n"
+                                + "Nome do Distribuidor: " + txtNomeEmpresa.Text.Trim() + "\n"
+                                + "Telefone: " + txtTelefone.Text.Trim();
+
+                // Instanciação do gerador de Qr Code
                 QRCodeGenerator qrCode = new QRCodeGenerator();
-                QRCodeData dados = qrCode.CreateQrCode(qrCodeText, QRCodeGenerator.ECCLevel.H);
+                QRCodeData dados = qrCode.CreateQrCode(qrCodeText, QRCodeGenerator.ECCLevel.M);
                 QRCode code = new QRCode(dados);
-                PBQrCode.Image = code.GetGraphic(50, Color.Black, Color.White, (Bitmap)Bitmap.FromFile());
+                
+                // Insere uma imagem no centro do Qr Code 
+                PBQrCode.Image = code.GetGraphic(50, Color.Black, Color.White, (Bitmap)Image.FromFile(newPath));
             }
 
             
