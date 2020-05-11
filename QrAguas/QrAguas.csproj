@@ -114,6 +114,12 @@
     <Compile Include="ViewLayer\ChangePassword.Designer.cs">
       <DependentUpon>ChangePassword.cs</DependentUpon>
     </Compile>
+    <Compile Include="ViewLayer\GenerateQrCode.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ViewLayer\GenerateQrCode.Designer.cs">
+      <DependentUpon>GenerateQrCode.cs</DependentUpon>
+    </Compile>
     <Compile Include="ViewLayer\Logout.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -200,6 +206,9 @@
     <EmbeddedResource Include="Reports\RepProvider.rdlc" />
     <EmbeddedResource Include="ViewLayer\ChangePassword.resx">
       <DependentUpon>ChangePassword.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewLayer\GenerateQrCode.resx">
+      <DependentUpon>GenerateQrCode.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ViewLayer\Logout.resx">
       <DependentUpon>Logout.cs</DependentUpon>
