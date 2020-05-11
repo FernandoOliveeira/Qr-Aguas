@@ -53,6 +53,11 @@ namespace QrAguas.ViewLayer
                 {
                     MessageBox.Show("Produto não encontrado. \nVerifique se o código esta correto.", "Produto não encotrado", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 }
+
+                if (txtQuantidade.Value > produto.QuantidadeBanco)
+                {
+                    MessageBox.Show("Quantidade digita inválida \nQuantidade em estoque: " + produto.QuantidadeBanco, "Quantidade inválida", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                }
                 else
                 {
                     order = new OrderProduct(
@@ -85,7 +90,7 @@ namespace QrAguas.ViewLayer
         {
             if (cart.Produtos.Any())
             {
-                cart.HoraVenda = DateTime.Now;|
+                cart.HoraVenda = DateTime.Now;
 
                 if (functions.VenderProduto(cart, order))
                 {

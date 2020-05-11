@@ -66,6 +66,9 @@
             this.lblTitulo = new System.Windows.Forms.Label();
             this.fORNECEDORESTableAdapter = new QrAguas.QrAguasRemoteDBDataSetTableAdapters.FORNECEDORESTableAdapter();
             this.cATEGORIASTableAdapter = new QrAguas.QrAguasRemoteDBDataSetTableAdapters.CATEGORIASTableAdapter();
+            this.panel6 = new System.Windows.Forms.Panel();
+            this.lblQuantidade = new System.Windows.Forms.Label();
+            this.txtQuantidade = new System.Windows.Forms.NumericUpDown();
             this.tableLayoutPanel1.SuspendLayout();
             this.panel5.SuspendLayout();
             this.panel4.SuspendLayout();
@@ -80,6 +83,8 @@
             this.panelDescricao.SuspendLayout();
             this.panelBtnCadastrar.SuspendLayout();
             this.panel3.SuspendLayout();
+            this.panel6.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.txtQuantidade)).BeginInit();
             this.SuspendLayout();
             // 
             // lblFornecedor
@@ -100,27 +105,31 @@
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
-            this.tableLayoutPanel1.Controls.Add(this.panel5, 2, 2);
-            this.tableLayoutPanel1.Controls.Add(this.panel4, 0, 2);
-            this.tableLayoutPanel1.Controls.Add(this.panelPrecoCompra, 2, 0);
-            this.tableLayoutPanel1.Controls.Add(this.panel2, 1, 0);
-            this.tableLayoutPanel1.Controls.Add(this.panel1, 0, 0);
-            this.tableLayoutPanel1.Controls.Add(this.panelFornecedor, 0, 1);
-            this.tableLayoutPanel1.Controls.Add(this.panelPrecoEntrega, 2, 1);
-            this.tableLayoutPanel1.Controls.Add(this.panelDescricao, 1, 1);
-            this.tableLayoutPanel1.Controls.Add(this.panelBtnCadastrar, 0, 3);
-            this.tableLayoutPanel1.Controls.Add(this.panel3, 1, 2);
-            this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 111);
+            this.tableLayoutPanel1.Controls.Add(this.lblTitulo, 0, 0);
+            this.tableLayoutPanel1.Controls.Add(this.panelBtnCadastrar, 0, 5);
+            this.tableLayoutPanel1.Controls.Add(this.panel1, 0, 1);
+            this.tableLayoutPanel1.Controls.Add(this.panel2, 1, 1);
+            this.tableLayoutPanel1.Controls.Add(this.panelPrecoCompra, 2, 1);
+            this.tableLayoutPanel1.Controls.Add(this.panelFornecedor, 0, 2);
+            this.tableLayoutPanel1.Controls.Add(this.panel4, 0, 3);
+            this.tableLayoutPanel1.Controls.Add(this.panelPrecoEntrega, 2, 2);
+            this.tableLayoutPanel1.Controls.Add(this.panelDescricao, 1, 2);
+            this.tableLayoutPanel1.Controls.Add(this.panel6, 1, 3);
+            this.tableLayoutPanel1.Controls.Add(this.panel3, 2, 3);
+            this.tableLayoutPanel1.Controls.Add(this.panel5, 2, 4);
+            this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 0);
             this.tableLayoutPanel1.Margin = new System.Windows.Forms.Padding(4);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
-            this.tableLayoutPanel1.RowCount = 4;
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 29.21348F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 32.07547F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 38.86792F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 64F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 26F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(634, 350);
+            this.tableLayoutPanel1.RowCount = 6;
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 15.4013F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 15.83514F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 14.3167F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 14.53362F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 17.13666F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 22.12581F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(634, 461);
             this.tableLayoutPanel1.TabIndex = 2;
             // 
             // panel5
@@ -128,10 +137,10 @@
             this.panel5.Controls.Add(this.DTPValidade);
             this.panel5.Controls.Add(this.lblDataValidade);
             this.panel5.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel5.Location = new System.Drawing.Point(426, 178);
+            this.panel5.Location = new System.Drawing.Point(426, 281);
             this.panel5.Margin = new System.Windows.Forms.Padding(4);
             this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(204, 102);
+            this.panel5.Size = new System.Drawing.Size(204, 71);
             this.panel5.TabIndex = 8;
             // 
             // DTPValidade
@@ -161,10 +170,10 @@
             this.panel4.Controls.Add(this.CBCategoria);
             this.panel4.Controls.Add(this.lblCategoria);
             this.panel4.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel4.Location = new System.Drawing.Point(4, 178);
+            this.panel4.Location = new System.Drawing.Point(4, 214);
             this.panel4.Margin = new System.Windows.Forms.Padding(4);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(203, 102);
+            this.panel4.Size = new System.Drawing.Size(203, 59);
             this.panel4.TabIndex = 6;
             // 
             // CBCategoria
@@ -212,10 +221,10 @@
             this.panelPrecoCompra.Controls.Add(this.txtPrecoCompra);
             this.panelPrecoCompra.Controls.Add(this.lblPrecoCompra);
             this.panelPrecoCompra.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panelPrecoCompra.Location = new System.Drawing.Point(426, 4);
+            this.panelPrecoCompra.Location = new System.Drawing.Point(426, 75);
             this.panelPrecoCompra.Margin = new System.Windows.Forms.Padding(4);
             this.panelPrecoCompra.Name = "panelPrecoCompra";
-            this.panelPrecoCompra.Size = new System.Drawing.Size(204, 75);
+            this.panelPrecoCompra.Size = new System.Drawing.Size(204, 65);
             this.panelPrecoCompra.TabIndex = 2;
             // 
             // txtPrecoCompra
@@ -246,10 +255,10 @@
             this.panel2.Controls.Add(this.txtNome);
             this.panel2.Controls.Add(this.lblNome);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel2.Location = new System.Drawing.Point(215, 4);
+            this.panel2.Location = new System.Drawing.Point(215, 75);
             this.panel2.Margin = new System.Windows.Forms.Padding(4);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(203, 75);
+            this.panel2.Size = new System.Drawing.Size(203, 65);
             this.panel2.TabIndex = 1;
             // 
             // txtNome
@@ -267,7 +276,7 @@
             this.lblNome.AutoSize = true;
             this.lblNome.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblNome.ForeColor = System.Drawing.Color.White;
-            this.lblNome.Location = new System.Drawing.Point(8, 8);
+            this.lblNome.Location = new System.Drawing.Point(12, 8);
             this.lblNome.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblNome.Name = "lblNome";
             this.lblNome.Size = new System.Drawing.Size(128, 17);
@@ -279,10 +288,10 @@
             this.panel1.Controls.Add(this.txtCodProduto);
             this.panel1.Controls.Add(this.lblCodProduto);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel1.Location = new System.Drawing.Point(4, 4);
+            this.panel1.Location = new System.Drawing.Point(4, 75);
             this.panel1.Margin = new System.Windows.Forms.Padding(4);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(203, 75);
+            this.panel1.Size = new System.Drawing.Size(203, 65);
             this.panel1.TabIndex = 0;
             // 
             // txtCodProduto
@@ -312,10 +321,10 @@
             this.panelFornecedor.Controls.Add(this.CBFornecedor);
             this.panelFornecedor.Controls.Add(this.lblFornecedor);
             this.panelFornecedor.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panelFornecedor.Location = new System.Drawing.Point(4, 87);
+            this.panelFornecedor.Location = new System.Drawing.Point(4, 148);
             this.panelFornecedor.Margin = new System.Windows.Forms.Padding(4);
             this.panelFornecedor.Name = "panelFornecedor";
-            this.panelFornecedor.Size = new System.Drawing.Size(203, 83);
+            this.panelFornecedor.Size = new System.Drawing.Size(203, 58);
             this.panelFornecedor.TabIndex = 3;
             // 
             // CBFornecedor
@@ -344,10 +353,10 @@
             this.panelPrecoEntrega.Controls.Add(this.txtPrecoVenda);
             this.panelPrecoEntrega.Controls.Add(this.lblPrecoVenda);
             this.panelPrecoEntrega.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panelPrecoEntrega.Location = new System.Drawing.Point(426, 87);
+            this.panelPrecoEntrega.Location = new System.Drawing.Point(426, 148);
             this.panelPrecoEntrega.Margin = new System.Windows.Forms.Padding(4);
             this.panelPrecoEntrega.Name = "panelPrecoEntrega";
-            this.panelPrecoEntrega.Size = new System.Drawing.Size(204, 83);
+            this.panelPrecoEntrega.Size = new System.Drawing.Size(204, 58);
             this.panelPrecoEntrega.TabIndex = 5;
             // 
             // txtPrecoVenda
@@ -378,10 +387,10 @@
             this.panelDescricao.Controls.Add(this.txtDescricao);
             this.panelDescricao.Controls.Add(this.lblDescricao);
             this.panelDescricao.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panelDescricao.Location = new System.Drawing.Point(215, 87);
+            this.panelDescricao.Location = new System.Drawing.Point(215, 148);
             this.panelDescricao.Margin = new System.Windows.Forms.Padding(4);
             this.panelDescricao.Name = "panelDescricao";
-            this.panelDescricao.Size = new System.Drawing.Size(203, 83);
+            this.panelDescricao.Size = new System.Drawing.Size(203, 58);
             this.panelDescricao.TabIndex = 4;
             // 
             // txtDescricao
@@ -411,10 +420,10 @@
             this.tableLayoutPanel1.SetColumnSpan(this.panelBtnCadastrar, 3);
             this.panelBtnCadastrar.Controls.Add(this.btnCadastrar);
             this.panelBtnCadastrar.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panelBtnCadastrar.Location = new System.Drawing.Point(4, 288);
+            this.panelBtnCadastrar.Location = new System.Drawing.Point(4, 360);
             this.panelBtnCadastrar.Margin = new System.Windows.Forms.Padding(4);
             this.panelBtnCadastrar.Name = "panelBtnCadastrar";
-            this.panelBtnCadastrar.Size = new System.Drawing.Size(626, 58);
+            this.panelBtnCadastrar.Size = new System.Drawing.Size(626, 97);
             this.panelBtnCadastrar.TabIndex = 9;
             // 
             // btnCadastrar
@@ -440,10 +449,10 @@
             this.panel3.Controls.Add(this.DTPFabricacao);
             this.panel3.Controls.Add(this.lblDataFabricacao);
             this.panel3.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel3.Location = new System.Drawing.Point(215, 178);
+            this.panel3.Location = new System.Drawing.Point(426, 214);
             this.panel3.Margin = new System.Windows.Forms.Padding(4);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(203, 102);
+            this.panel3.Size = new System.Drawing.Size(204, 59);
             this.panel3.TabIndex = 7;
             // 
             // DTPFabricacao
@@ -453,7 +462,7 @@
             this.DTPFabricacao.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.DTPFabricacao.Location = new System.Drawing.Point(12, 32);
             this.DTPFabricacao.Name = "DTPFabricacao";
-            this.DTPFabricacao.Size = new System.Drawing.Size(186, 23);
+            this.DTPFabricacao.Size = new System.Drawing.Size(187, 23);
             this.DTPFabricacao.TabIndex = 5;
             // 
             // lblDataFabricacao
@@ -470,13 +479,14 @@
             // 
             // lblTitulo
             // 
-            this.lblTitulo.Dock = System.Windows.Forms.DockStyle.Top;
+            this.tableLayoutPanel1.SetColumnSpan(this.lblTitulo, 3);
+            this.lblTitulo.Dock = System.Windows.Forms.DockStyle.Fill;
             this.lblTitulo.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblTitulo.ForeColor = System.Drawing.Color.White;
-            this.lblTitulo.Location = new System.Drawing.Point(0, 0);
+            this.lblTitulo.Location = new System.Drawing.Point(4, 0);
             this.lblTitulo.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblTitulo.Name = "lblTitulo";
-            this.lblTitulo.Size = new System.Drawing.Size(634, 107);
+            this.lblTitulo.Size = new System.Drawing.Size(626, 71);
             this.lblTitulo.TabIndex = 3;
             this.lblTitulo.Text = "Cadastro de Produtos";
             this.lblTitulo.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -489,13 +499,56 @@
             // 
             this.cATEGORIASTableAdapter.ClearBeforeFill = true;
             // 
+            // panel6
+            // 
+            this.panel6.Controls.Add(this.txtQuantidade);
+            this.panel6.Controls.Add(this.lblQuantidade);
+            this.panel6.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel6.Location = new System.Drawing.Point(214, 213);
+            this.panel6.Name = "panel6";
+            this.panel6.Size = new System.Drawing.Size(205, 61);
+            this.panel6.TabIndex = 10;
+            // 
+            // lblQuantidade
+            // 
+            this.lblQuantidade.AutoSize = true;
+            this.lblQuantidade.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblQuantidade.ForeColor = System.Drawing.Color.White;
+            this.lblQuantidade.Location = new System.Drawing.Point(5, 6);
+            this.lblQuantidade.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblQuantidade.Name = "lblQuantidade";
+            this.lblQuantidade.Size = new System.Drawing.Size(91, 17);
+            this.lblQuantidade.TabIndex = 3;
+            this.lblQuantidade.Text = "Quantidade:*";
+            // 
+            // txtQuantidade
+            // 
+            this.txtQuantidade.Location = new System.Drawing.Point(13, 31);
+            this.txtQuantidade.Maximum = new decimal(new int[] {
+            2147483647,
+            0,
+            0,
+            0});
+            this.txtQuantidade.Minimum = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            this.txtQuantidade.Name = "txtQuantidade";
+            this.txtQuantidade.Size = new System.Drawing.Size(186, 23);
+            this.txtQuantidade.TabIndex = 4;
+            this.txtQuantidade.Value = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            // 
             // RegisterProduct
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 17F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(130)))), ((int)(((byte)(156)))), ((int)(((byte)(188)))));
             this.ClientSize = new System.Drawing.Size(634, 461);
-            this.Controls.Add(this.lblTitulo);
             this.Controls.Add(this.tableLayoutPanel1);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.25F);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
@@ -529,6 +582,9 @@
             this.panelBtnCadastrar.ResumeLayout(false);
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
+            this.panel6.ResumeLayout(false);
+            this.panel6.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.txtQuantidade)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -570,5 +626,8 @@
         private QrAguasRemoteDBDataSetTableAdapters.FORNECEDORESTableAdapter fORNECEDORESTableAdapter;
         private System.Windows.Forms.BindingSource cATEGORIASBindingSource;
         private QrAguasRemoteDBDataSetTableAdapters.CATEGORIASTableAdapter cATEGORIASTableAdapter;
+        private System.Windows.Forms.Panel panel6;
+        private System.Windows.Forms.NumericUpDown txtQuantidade;
+        private System.Windows.Forms.Label lblQuantidade;
     }
 }

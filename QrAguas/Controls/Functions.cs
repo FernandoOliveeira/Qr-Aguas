@@ -398,13 +398,14 @@ namespace QrAguas.Controls
 
         public bool CadastrarNovoProduto(NewProduct objProduto)
         {
-            string queryCadastrarProduto = "INSERT INTO PRODUTOS VALUES(NULL, @COD_PRODUTO, @NOME_PRODUTO, @DESCRICAO, @PRECO_COMPRA, @PRECO_VENDA, @ID_FORNECEDORES, @ID_USUARIOS, @ID_CATEGORIAS, @DATA_FABRICACAO, @DATA_VALIDADE, @DATA_CADASTRO) ";
+            string queryCadastrarProduto = "INSERT INTO PRODUTOS VALUES(NULL, @COD_PRODUTO, @NOME_PRODUTO, @DESCRICAO, @QUANTIDADE, @PRECO_COMPRA, @PRECO_VENDA, @ID_FORNECEDORES, @ID_USUARIOS, @ID_CATEGORIAS, @DATA_FABRICACAO, @DATA_VALIDADE, @DATA_CADASTRO) ";
 
             MySqlCommand command = new MySqlCommand(queryCadastrarProduto, AbrirBanco());
 
             command.Parameters.AddWithValue("@COD_PRODUTO", objProduto.CodigoProduto);
             command.Parameters.AddWithValue("@NOME_PRODUTO", objProduto.NomeProduto);
             command.Parameters.AddWithValue("@DESCRICAO", objProduto.Descricao);
+            command.Parameters.AddWithValue("@QUANTIDADE", objProduto.Quantidade);
             command.Parameters.AddWithValue("@PRECO_COMPRA", objProduto.PrecoCompra);
             command.Parameters.AddWithValue("@PRECO_VENDA", objProduto.PrecoVenda);
             command.Parameters.AddWithValue("@ID_FORNECEDORES", objProduto.Fornecedor);
@@ -470,7 +471,7 @@ namespace QrAguas.Controls
         {
             DataTable dadosProduto = new DataTable();
 
-            string queryProcurarProduto = "SELECT NOME_PRODUTO, PRECO_VENDA FROM PRODUTOS WHERE COD_PRODUTO = @CodigoProduto";
+            string queryProcurarProduto = "SELECT NOME_PRODUTO, PRECO_VENDA, QUANTIDADE FROM PRODUTOS WHERE COD_PRODUTO = @CodigoProduto";
 
             MySqlCommand command = new MySqlCommand(queryProcurarProduto, AbrirBanco());
             command.Parameters.AddWithValue("@CodigoProduto", codigoProduto);
@@ -488,6 +489,7 @@ namespace QrAguas.Controls
             {
                 product.NomeProduto = row["NOME_PRODUTO"].ToString();
                 product.Preco = double.Parse(row["PRECO_VENDA"].ToString());
+                product.QuantidadeBanco = int.Parse(row["QUANTIDADE"].ToString());
             }
 
             FecharBanco(AbrirBanco());
@@ -500,15 +502,16 @@ namespace QrAguas.Controls
             // Primeiro: Inserir a venda na tabela VENDAS
             string queryInserirVenda = "INSERT INTO VENDAS VALUES (NULL, @ID_USUARIOS, @DATA_VENDA)";
 
-            MySqlCommand command = new MySqlCommand(queryInserirVenda, AbrirBanco());
-            command.Parameters.AddWithValue("@ID_USUARIOS", Login.IdUsuario);
-            command.Parameters.AddWithValue("@DATA_VENDA", cart.HoraVenda);
+            MySqlCommand commandInserirVenda = new MySqlCommand(queryInserirVenda, AbrirBanco());
+            commandInserirVenda.Parameters.AddWithValue("@ID_USUARIOS", Login.IdUsuario);
+            commandInserirVenda.Parameters.AddWithValue("@DATA_VENDA", cart.HoraVenda);
 
-            if (command.ExecuteNonQuery() == 1)
+            if (commandInserirVenda.ExecuteNonQuery() == 1)
             {
                 // Segundo: Para cada item na lista de produtos, será inserido um registro na tabela Vendas_Produtos
                 foreach (OrderProduct produto in cart.Produtos)
                 {
+                    // Registra as vendas na tabela VENDAS_PRODUTOS
                     string queryRegistrarProdVendidos = "INSERT INTO VENDAS_PRODUTOS (ID_VENDAS, ID_PRODUTOS, QUANTIDADE_PRODUTOS, PRECO_PRODUTO) SELECT MAX(V.ID_VENDAS), P.ID_PRODUTOS, @QUANTIDADE, P.PRECO_VENDA FROM VENDAS V, PRODUTOS P WHERE P.COD_PRODUTO = @COD_PRODUTO";
 
                     MySqlCommand commandVenda = new MySqlCommand(queryRegistrarProdVendidos, AbrirBanco());
@@ -516,12 +519,46 @@ namespace QrAguas.Controls
                     commandVenda.Parameters.AddWithValue("@COD_PRODUTO", produto.CodigoProduto);
 
                     commandVenda.ExecuteNonQuery();
+
+                    // Faz a busca da quantidade de cada item, no banco
+                    DataTable dadosProduto = new DataTable();
+
+                    string queryProcuraQtd = "SELECT QUANTIDADE FROM PRODUTOS WHERE COD_PRODUTO = @CodigoProduto";
+
+                    MySqlCommand commandProcuraQtd = new MySqlCommand(queryProcuraQtd, AbrirBanco());
+                    commandProcuraQtd.Parameters.AddWithValue("@CodigoProduto", produto.CodigoProduto);
+
+                    MySqlDataReader reader = commandProcuraQtd.ExecuteReader();
+
+                    dadosProduto.Load(reader);
+
+                    int quantidadeBanco = 0;
+
+                    foreach (DataRow row in dadosProduto.Rows)
+                    {
+                        quantidadeBanco = int.Parse(row["QUANTIDADE"].ToString());
+                    }
+
+
+                    int quantidadeAtual = quantidadeBanco - produto.Quantidade;
+
+
+                    // Atualiza os produtos com as quantidade atuais
+                    string queryAtualizaQtd = "UPDATE PRODUTOS SET QUANTIDADE = @QUANTIDADE WHERE COD_PRODUTO = @COD_PRODUTO";
+
+                    MySqlCommand commandAtualizaQtd = new MySqlCommand(queryAtualizaQtd, AbrirBanco());
+                    commandAtualizaQtd.Parameters.AddWithValue("@QUANTIDADE", quantidadeAtual);
+                    commandAtualizaQtd.Parameters.AddWithValue("@COD_PRODUTO", produto.CodigoProduto);
+
+                    commandAtualizaQtd.ExecuteNonQuery();
                 }
 
+                FecharBanco(AbrirBanco());
                 return true;
 
             }
 
+            FecharBanco(AbrirBanco());
             return false;
         }
 

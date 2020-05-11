@@ -53,6 +53,7 @@ namespace QrAguas.BusinessLayer
                 !String.IsNullOrEmpty(produto.CodigoProduto) &&
                 !String.IsNullOrEmpty(produto.DataFabricao.ToString()) &&
                 !String.IsNullOrEmpty(produto.DataValidade.ToString()) &&
+                !String.IsNullOrEmpty(produto.Quantidade.ToString()) &&
                 !String.IsNullOrEmpty(produto.Descricao) &&
                 !String.IsNullOrEmpty(produto.Fornecedor.ToString()) &&
                 !String.IsNullOrEmpty(produto.NomeProduto) &&

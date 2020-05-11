@@ -89,6 +89,7 @@ namespace QrAguas.View_Layer
                 NomeProduto = txtNome.Text.Trim(),
                 PrecoCompra = double.Parse(txtPrecoCompra.Text.Trim()),
                 Fornecedor = (int) CBFornecedor.SelectedValue,
+                Quantidade = (int) txtQuantidade.Value,
                 Descricao = txtDescricao.Text.Trim(),
                 PrecoVenda = double.Parse(txtPrecoVenda.Text.Trim()),
                 Categoria = (int) CBCategoria.SelectedValue,
