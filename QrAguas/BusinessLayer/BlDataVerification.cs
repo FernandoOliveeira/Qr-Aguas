@@ -36,7 +36,7 @@ namespace QrAguas.BusinessLayer
                 !String.IsNullOrEmpty(fornecedor.Telefone) &&
                 !String.IsNullOrEmpty(fornecedor.Cep))
             {
-                if (fornecedor.Cnpj.Length.Equals(18) && fornecedor.Telefone.Length.Equals(14) && fornecedor.Cep.Length.Equals(9) && fornecedor.Numero > 0)
+                if (fornecedor.Cnpj.Length == 18 && fornecedor.Telefone.Length == 14 && fornecedor.Cep.Length == 9 && fornecedor.Numero > 0) 
                 {
                     return true;
 
@@ -53,6 +53,7 @@ namespace QrAguas.BusinessLayer
                 !String.IsNullOrEmpty(produto.CodigoProduto) &&
                 !String.IsNullOrEmpty(produto.DataFabricao.ToString()) &&
                 !String.IsNullOrEmpty(produto.DataValidade.ToString()) &&
+                !String.IsNullOrEmpty(produto.Quantidade.ToString()) &&
                 !String.IsNullOrEmpty(produto.Descricao) &&
                 !String.IsNullOrEmpty(produto.Fornecedor.ToString()) &&
                 !String.IsNullOrEmpty(produto.NomeProduto) &&
