@@ -19,6 +19,7 @@ namespace QrAguas.View_Layer
         }
 
         Functions functions = new Functions();
+        ChangePasswordMethods ChangePasswordMethods = new ChangePasswordMethods();
 
         private void LimparCampos()
         {
@@ -94,7 +95,7 @@ namespace QrAguas.View_Layer
                     {
                         string novaSenhaMd5 = functions.GerarMd5(txtConfirmarSenha.Text.Trim());
 
-                        if (functions.AlterarSenha(novaSenhaMd5, Login.NomeUsuario))
+                        if (ChangePasswordMethods.AlterarSenha(novaSenhaMd5, Login.NomeUsuario))
                         {
                             MessageBox.Show("Senha alterada com sucesso !", "Senha alterada", MessageBoxButtons.OK, MessageBoxIcon.Information);
 

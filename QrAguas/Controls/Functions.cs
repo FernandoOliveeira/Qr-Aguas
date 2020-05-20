@@ -16,8 +16,7 @@ namespace QrAguas.Controls
 {
     class Functions : BlDataVerification
     {
-        #region Gerar Hash MD5
-
+        #region Funções Genéricas
 
         public string GerarMd5(string senha)
         {
@@ -36,60 +35,6 @@ namespace QrAguas.Controls
 
             // Retorna o valor criptografado como string
             return stringBuilder.ToString();
-        }
-
-        #endregion
-
-
-        #region Form Login
-
-        public int VerificarIdUsuario(string usuario)
-        {
-            DataTable consultarIdUsuario = new DataTable();
-
-            string queryVerificarIdUsuario = "SELECT ID_USUARIOS FROM USUARIOS WHERE NOME_USUARIO = @NOME_USUARIO";
-
-            MySqlCommand command = new MySqlCommand(queryVerificarIdUsuario, AbrirBanco());
-            command.Parameters.AddWithValue("@NOME_USUARIO", usuario);
-            MySqlDataReader reader = command.ExecuteReader();
-
-            consultarIdUsuario.Load(reader);
-
-            int idUsuario = 0;
-
-            foreach (DataRow row in consultarIdUsuario.Rows)
-            {
-                idUsuario = int.Parse(row["ID_USUARIOS"].ToString());
-            }
-
-            FecharBanco(AbrirBanco());
-
-            return idUsuario;
-        }
-
-        public int VerificarTipoUsuario(string usuario)
-        {
-            DataTable consultarTipoUsuario = new DataTable();
-
-            string queryTipoUsuario = "SELECT ID_TIPO_USUARIO FROM USUARIOS WHERE NOME_USUARIO = @USUARIO";
-
-            MySqlCommand command = new MySqlCommand(queryTipoUsuario, AbrirBanco());
-            command.Parameters.AddWithValue("@USUARIO", usuario);
-            MySqlDataReader reader = command.ExecuteReader();
-
-            consultarTipoUsuario.Load(reader);
-
-            int tipoUsuario = 0;
-
-            foreach(DataRow row in consultarTipoUsuario.Rows)
-            {
-                tipoUsuario = int.Parse(row["ID_TIPO_USUARIO"].ToString());
-
-            }
-
-            FecharBanco(AbrirBanco());
-
-            return tipoUsuario;
         }
 
         public bool VerificarLogin(string usuario, string senha)
@@ -125,7 +70,6 @@ namespace QrAguas.Controls
         }
 
         #endregion
-
 
         #region Form RegisterUser
 
@@ -179,44 +123,6 @@ namespace QrAguas.Controls
         }
 
         #endregion
-
-
-        #region Form ChangePassword
-
-
-        public bool AlterarSenha(string senha, string nomeUsuario)
-        {
-            string queryAlterarSenha = "UPDATE USUARIOS SET SENHA = @Senha WHERE NOME_USUARIO = @NomeUsuario";
-
-            MySqlCommand command = new MySqlCommand(queryAlterarSenha, AbrirBanco());
-
-            command.Parameters.AddWithValue("@Senha", senha);
-            command.Parameters.AddWithValue("@NomeUsuario", nomeUsuario);
-
-            int rowCount = command.ExecuteNonQuery();
-
-            if (rowCount != 0)
-            {
-                string querySenhaAlterada = "UPDATE USUARIOS SET DATA_SENHA_ALTERADA  = @DataAtual WHERE NOME_USUARIO = @NomeUsuario";
-
-                MySqlCommand commandSenhaAlterada = new MySqlCommand(querySenhaAlterada, AbrirBanco());
-
-                commandSenhaAlterada.Parameters.AddWithValue("@DataAtual", DateTime.Now);
-                commandSenhaAlterada.Parameters.AddWithValue("@NomeUsuario", nomeUsuario);
-                commandSenhaAlterada.ExecuteNonQuery();
-
-                FecharBanco(AbrirBanco());
-
-                return true;
-            }
-
-            FecharBanco(AbrirBanco());
-
-            return false;
-        }
-
-        #endregion
-
 
         #region Form RegisterProviders
 

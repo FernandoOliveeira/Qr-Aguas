@@ -36,7 +36,7 @@ namespace QrAguas.View_Layer
         public static extern bool ReleaseCapture();
         #endregion
 
-        Functions functions = new Functions();
+        LoginMethods LoginMethods = new LoginMethods();
 
 
         public void ArrastarTela_MouseDown(object sender, MouseEventArgs e)
@@ -53,14 +53,14 @@ namespace QrAguas.View_Layer
         private void BtnEntrar_Click(object sender, EventArgs e)
         {
             // Gera um HashMd5 e armazena na variavel senha
-            string senha = functions.GerarMd5(txtSenha.Text.Trim());
+            string senha = LoginMethods.GerarMd5(txtSenha.Text.Trim());
 
-            if (functions.VerificarLogin(txtUsuario.Text.Trim(), senha))
+            if (LoginMethods.VerificarLogin(txtUsuario.Text.Trim(), senha))
             {
                 
                 NomeUsuario = txtUsuario.Text.Trim();
-                TipoUsuario = functions.VerificarTipoUsuario(NomeUsuario);
-                IdUsuario = functions.VerificarIdUsuario(NomeUsuario);
+                TipoUsuario = LoginMethods.VerificarTipoUsuario(NomeUsuario);
+                IdUsuario = LoginMethods.VerificarIdUsuario(NomeUsuario);
 
                 // Abrir o form MainForm e fechar o atual
                 this.Close();
