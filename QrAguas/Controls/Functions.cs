@@ -16,6 +16,7 @@ namespace QrAguas.Controls
 {
     class Functions : BlDataVerification
     {
+        // Funções Genéricas são métodos utilizados por mais de um form
         #region Funções Genéricas
 
         public string GerarMd5(string senha)
