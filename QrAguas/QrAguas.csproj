@@ -98,6 +98,7 @@
     <Compile Include="Controls\LoginMethods.cs" />
     <Compile Include="Controls\Functions.cs" />
     <Compile Include="Controls\RegisterCategoryMethods.cs" />
+    <Compile Include="Controls\RegisterProvidersMethods.cs" />
     <Compile Include="Controls\RegisterUserMethods.cs" />
     <Compile Include="Controls\UpdateCategoryMethods.cs" />
     <Compile Include="Models\CepResponse.cs" />
