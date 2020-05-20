@@ -19,7 +19,7 @@ namespace QrAguas.View_Layer
             InitializeComponent();
         }
 
-        Functions functions = new Functions();
+        RegisterProductMethods ProductMethods = new RegisterProductMethods();
 
         private void RegisterProduct_Load(object sender, EventArgs e)
         {
@@ -98,11 +98,11 @@ namespace QrAguas.View_Layer
 
             };
 
-            if (functions.VerificarDadosProdutos(objProduto))
+            if (ProductMethods.VerificarDadosProdutos(objProduto))
             {
                 try
                 {
-                    if (functions.CadastrarNovoProduto(objProduto))
+                    if (ProductMethods.CadastrarNovoProduto(objProduto))
                     {
                         MessageBox.Show("Produto Cadastrado com sucesso !", "Cadastrado com sucesso", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
