@@ -21,7 +21,7 @@ namespace QrAguas.View_Layer
             InitializeComponent();
         }
 
-        Functions function = new Functions();
+        RegisterProvidersMethods ProvidersMethods = new RegisterProvidersMethods();
 
         private void RegisterProvider_Load(object sender, EventArgs e)
         {
@@ -129,19 +129,19 @@ namespace QrAguas.View_Layer
                 };
 
                 // Verifica se os campos obrigatórios foram preenchidos corretamente
-                if (function.VerificarDadosFornecedores(objNewProvider))
+                if (ProvidersMethods.VerificarDadosFornecedores(objNewProvider))
                 {
                     // Validação de CNPJ
-                    if (function.ValidarCnpj(txtCnpj.Text))
+                    if (ProvidersMethods.ValidarCnpj(txtCnpj.Text))
                     {
                         // Caso o campo email não esteja vazio
                         if (txtEmail.Text.Trim().Length != 0)
                         {
                             // Validação do E-mail
-                            if (function.ValidarEmail(txtEmail.Text.Trim()))
+                            if (ProvidersMethods.ValidarEmail(txtEmail.Text.Trim()))
                             {
                                 // Cadastrar fornecedor
-                                if (function.CadastrarNovoFornecedor(objNewProvider))
+                                if (ProvidersMethods.CadastrarNovoFornecedor(objNewProvider))
                                 {
                                     MessageBox.Show("Fornecedor cadastrado com sucesso !", "Cadastro Realizado", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
@@ -156,7 +156,7 @@ namespace QrAguas.View_Layer
                         else
                         {
                             // Cadastrar fornecedor
-                            if (function.CadastrarNovoFornecedor(objNewProvider))
+                            if (ProvidersMethods.CadastrarNovoFornecedor(objNewProvider))
                             {
                                 MessageBox.Show("Fornecedor cadastrado com sucesso !", "Cadastro Realizado", MessageBoxButtons.OK, MessageBoxIcon.Information);
 

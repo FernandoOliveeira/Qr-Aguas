@@ -21,7 +21,7 @@ namespace QrAguas.View_Layer
         public int IdCategoria { private get; set; }
         public string Categoria { private get; set; }
 
-        Functions functions = new Functions();
+        UpdateCategoryMethods updateCategoryMethods = new UpdateCategoryMethods();
 
         private void UpdateCategory_Load(object sender, EventArgs e)
         {
@@ -39,7 +39,7 @@ namespace QrAguas.View_Layer
                 try
                 {
                     // Realiza a atualização da categoria
-                    if (functions.AtualizarCategoria(IdCategoria, txtAtualizarCategoria.Text.Trim()))
+                    if (updateCategoryMethods.AtualizarCategoria(IdCategoria, txtAtualizarCategoria.Text.Trim()))
                     {
                         MessageBox.Show("Atualizado com sucesso !", "Atualizado", MessageBoxButtons.OK, MessageBoxIcon.Information);
                         RegisterCategory.UpdateCategoryResultado = true;

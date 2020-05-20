@@ -20,7 +20,7 @@ namespace QrAguas.ViewLayer
             InitializeComponent();
         }
 
-        Functions functions = new Functions();
+        SellProductMethods ProductMethods = new SellProductMethods();
 
         Cart cart = new Cart();
         Product produto;
@@ -47,7 +47,7 @@ namespace QrAguas.ViewLayer
 
             try
             {
-                produto = functions.ProcurarProduto(int.Parse(txtCodProduto.Text.Trim()));
+                produto = ProductMethods.ProcurarProduto(int.Parse(txtCodProduto.Text.Trim()));
 
                 if (String.IsNullOrEmpty(produto.NomeProduto))
                 {
@@ -92,7 +92,7 @@ namespace QrAguas.ViewLayer
             {
                 cart.HoraVenda = DateTime.Now;
 
-                if (functions.VenderProduto(cart, order))
+                if (ProductMethods.VenderProduto(cart, order))
                 {
                     MessageBox.Show("Venda realizada com sucesso !", "Venda realizada com sucesso", MessageBoxButtons.OK, MessageBoxIcon.Information);
 

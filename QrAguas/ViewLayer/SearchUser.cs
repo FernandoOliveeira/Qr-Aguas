@@ -19,7 +19,7 @@ namespace QrAguas.ViewLayer
             InitializeComponent();
         }
 
-        Functions functions = new Functions();
+        SearchUserMethods UserMethods = new SearchUserMethods();
 
         private void SearchUser_Load(object sender, EventArgs e)
         {
@@ -31,7 +31,7 @@ namespace QrAguas.ViewLayer
         private void BtnProcurar_Click(object sender, EventArgs e)
         {
             // Realiza a busca de usuário 
-            DGVUsuarios.DataSource = functions.ProcurarUsuario(txtUsuario.Text.Trim());
+            DGVUsuarios.DataSource = UserMethods.ProcurarUsuario(txtUsuario.Text.Trim());
         }
 
         private void TxtUsuario_KeyDown(object sender, KeyEventArgs e)
@@ -64,7 +64,7 @@ namespace QrAguas.ViewLayer
 
                         try
                         {
-                            if (functions.AtivarDesativarUsuario(idUsuarioAtivo, ativo))
+                            if (UserMethods.AtivarDesativarUsuario(idUsuarioAtivo, ativo))
                             {
                                 MessageBox.Show("Usuário " + ativarDesativarResposta + " com sucesso.", ativarDesativarResposta + " com sucesso", MessageBoxButtons.OK, MessageBoxIcon.Information);
 

@@ -94,7 +94,16 @@
   <ItemGroup>
     <Compile Include="BusinessLayer\BlDataVerification.cs" />
     <Compile Include="Controls\Connection.cs" />
+    <Compile Include="Controls\ChangePasswordMethods.cs" />
+    <Compile Include="Controls\LoginMethods.cs" />
     <Compile Include="Controls\Functions.cs" />
+    <Compile Include="Controls\RegisterCategoryMethods.cs" />
+    <Compile Include="Controls\RegisterProductMethods.cs" />
+    <Compile Include="Controls\RegisterProvidersMethods.cs" />
+    <Compile Include="Controls\RegisterUserMethods.cs" />
+    <Compile Include="Controls\SearchUserMethods.cs" />
+    <Compile Include="Controls\SellProductMethods.cs" />
+    <Compile Include="Controls\UpdateCategoryMethods.cs" />
     <Compile Include="Models\CepResponse.cs" />
     <Compile Include="Models\ICepApiService.cs" />
     <Compile Include="Models\NewProduct.cs" />

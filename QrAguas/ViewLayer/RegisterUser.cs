@@ -20,6 +20,7 @@ namespace QrAguas.View_Layer
         }
 
         Functions functions = new Functions();
+        RegisterUserMethods UserMethods = new RegisterUserMethods();
         
 
         private void LimparCampos()
@@ -124,7 +125,7 @@ namespace QrAguas.View_Layer
             else
             {
 
-                if (functions.VerificarNomeUsuario(txtUsuario.Text.Trim())) // Verifica se o nome de usuario já existe
+                if (UserMethods.VerificarNomeUsuario(txtUsuario.Text.Trim())) // Verifica se o nome de usuario já existe
                 {
                     MessageBox.Show("Nome de usuário já cadastrado", "Nome de usuário existente", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 }
@@ -140,11 +141,11 @@ namespace QrAguas.View_Layer
                             CadastradoPor = Login.NomeUsuario
                         };
 
-                        if (functions.VerificarDadosUsuario(objNovoUsuario))
+                        if (UserMethods.VerificarDadosUsuario(objNovoUsuario))
                         {
-                            functions.AbrirBanco();
-                            functions.CadastrarNovoUsuario(objNovoUsuario);
-                            functions.FecharBanco(functions.AbrirBanco());
+                            UserMethods.AbrirBanco();
+                            UserMethods.CadastrarNovoUsuario(objNovoUsuario);
+                            UserMethods.FecharBanco(UserMethods.AbrirBanco());
 
                             MessageBox.Show("Usuário cadastrado com sucesso !", "Usuário Cadastrado", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
