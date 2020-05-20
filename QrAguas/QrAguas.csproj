@@ -102,6 +102,7 @@
     <Compile Include="Controls\RegisterProvidersMethods.cs" />
     <Compile Include="Controls\RegisterUserMethods.cs" />
     <Compile Include="Controls\SearchUserMethods.cs" />
+    <Compile Include="Controls\SellProductMethods.cs" />
     <Compile Include="Controls\UpdateCategoryMethods.cs" />
     <Compile Include="Models\CepResponse.cs" />
     <Compile Include="Models\ICepApiService.cs" />
