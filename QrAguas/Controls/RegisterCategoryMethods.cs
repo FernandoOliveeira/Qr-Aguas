@@ -42,24 +42,6 @@ namespace QrAguas.Controls
             return rowCount != 0 ? true : false;
         }
 
-        public bool AtualizarCategoria(int idCategoria, string nomeCategoria)
-        {
-            string queryEditarCategoria = "UPDATE CATEGORIAS SET NOME_CATEGORIA = @NOME_CATEGORIA, ATUALIZADO_POR = @ATUALIZADO_POR, DATA_ATUALIZACAO = @DATA_ATUALIZACAO WHERE ID_CATEGORIAS = @ID_CATEGORIAS";
-
-            MySqlCommand command = new MySqlCommand(queryEditarCategoria, AbrirBanco());
-
-            command.Parameters.AddWithValue("@NOME_CATEGORIA", nomeCategoria);
-            command.Parameters.AddWithValue("@ATUALIZADO_POR", Login.IdUsuario);
-            command.Parameters.AddWithValue("@DATA_ATUALIZACAO", DateTime.Now);
-            command.Parameters.AddWithValue("@ID_CATEGORIAS", idCategoria);
-
-            int rowCount = command.ExecuteNonQuery();
-
-            FecharBanco(AbrirBanco());
-
-            return rowCount != 0 ? true : false;
-        }
-
         public bool AtivarDesativarCategoria(int idCategoria, bool ativo)
         {
             // Caso o a categoria já esteja ativa, então será desativada e vice e versa.
