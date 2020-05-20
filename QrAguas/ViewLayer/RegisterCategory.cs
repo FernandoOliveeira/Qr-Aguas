@@ -22,7 +22,7 @@ namespace QrAguas.View_Layer
         // Caso o form UpdateCategory realize a atualização de alguma categoria, esta propriedade recebe o valor de true
         public static bool UpdateCategoryResultado { private get; set; }
 
-        Functions functions = new Functions();
+        RegisterCategoryMethods RegisterCategoryMethods = new RegisterCategoryMethods();
 
         private void RegisterCategory_Load(object sender, EventArgs e)
         {
@@ -92,7 +92,7 @@ namespace QrAguas.View_Layer
 
                     try
                     {
-                        if (functions.AtivarDesativarCategoria(idCategoria, ativo))
+                        if (RegisterCategoryMethods.AtivarDesativarCategoria(idCategoria, ativo))
                         {
 
                             MessageBox.Show("Categoria " + ativarDesativarResposta + " com sucesso.", ativarDesativarResposta + " com sucesso", MessageBoxButtons.OK, MessageBoxIcon.Information);
@@ -129,7 +129,7 @@ namespace QrAguas.View_Layer
             {
                 try
                 {
-                    if (functions.CadastrarNovaCategoria(txtNovaCategoria.Text.Trim()))
+                    if (RegisterCategoryMethods.CadastrarNovaCategoria(txtNovaCategoria.Text.Trim()))
                     {
                         MessageBox.Show("Nova Categoria cadastrada com sucesso", "Cadastrado com sucesso", MessageBoxButtons.OK, MessageBoxIcon.Information);
 

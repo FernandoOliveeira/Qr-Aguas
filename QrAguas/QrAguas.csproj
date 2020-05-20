@@ -97,6 +97,7 @@
     <Compile Include="Controls\ChangePasswordMethods.cs" />
     <Compile Include="Controls\LoginMethods.cs" />
     <Compile Include="Controls\Functions.cs" />
+    <Compile Include="Controls\RegisterCategoryMethods.cs" />
     <Compile Include="Models\CepResponse.cs" />
     <Compile Include="Models\ICepApiService.cs" />
     <Compile Include="Models\NewProduct.cs" />
