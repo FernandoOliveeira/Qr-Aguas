@@ -17,17 +17,18 @@ namespace QrAguas.Controls
         {
             DataTable dataTable = new DataTable();
 
-            string queryProcurarUsuario = "SELECT U.ID_USUARIOS, U.NOME_USUARIO, T.DESCRICAO, U.DATA_CADASTRO, U.CADASTRADO_POR, U.ATIVO FROM USUARIOS U, TIPO_USUARIO T WHERE U.ID_TIPO_USUARIO = T.ID_TIPO_USUARIO AND U.NOME_USUARIO = @NOME_USUARIO AND U.ID_TIPO_USUARIO > @ID_TIPO_USUARIO";
+            string queryProcurarUsuario = "SELECT U.ID_USUARIOS, U.NOME_USUARIO, T.DESCRICAO, U.DATA_CADASTRO, U.CADASTRADO_POR, U.ATIVO FROM USUARIOS U, TIPO_USUARIO T WHERE U.ID_TIPO_USUARIO = T.ID_TIPO_USUARIO AND U.NOME_USUARIO LIKE '%" + nomeUsuario +"%' AND U.ID_TIPO_USUARIO > @ID_TIPO_USUARIO ORDER BY U.NOME_USUARIO";
 
 
             MySqlCommand command = new MySqlCommand(queryProcurarUsuario, AbrirBanco());
 
-            command.Parameters.AddWithValue("@NOME_USUARIO", nomeUsuario);
             command.Parameters.AddWithValue("@ID_TIPO_USUARIO", Login.TipoUsuario);
 
             MySqlDataReader reader = command.ExecuteReader();
 
             dataTable.Load(reader);
+
+            FecharBanco(AbrirBanco());
 
             return dataTable;
 
@@ -43,6 +44,8 @@ namespace QrAguas.Controls
             command.Parameters.AddWithValue("@ID_USUARIOS", idUsuario);
 
             int rowCount = command.ExecuteNonQuery();
+
+            FecharBanco(AbrirBanco());
 
             return rowCount != 0 ? true : false;
         }
