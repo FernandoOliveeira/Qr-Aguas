@@ -11,8 +11,6 @@ namespace QrAguas.Controls
 {
     class SearchUserMethods : Connection
     {
-        #region Form SearchUser
-
         public DataTable ProcurarUsuario(string nomeUsuario)
         {
             DataTable dataTable = new DataTable();
@@ -49,8 +47,6 @@ namespace QrAguas.Controls
 
             return rowCount != 0 ? true : false;
         }
-
-        #endregion
 
     }
 }
