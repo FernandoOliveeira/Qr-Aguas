@@ -241,7 +241,6 @@
             // rAZAOSOCIALDataGridViewTextBoxColumn
             // 
             this.rAZAOSOCIALDataGridViewTextBoxColumn.DataPropertyName = "RAZAO_SOCIAL";
-            this.rAZAOSOCIALDataGridViewTextBoxColumn.FillWeight = 73.17446F;
             this.rAZAOSOCIALDataGridViewTextBoxColumn.HeaderText = "Razão Social";
             this.rAZAOSOCIALDataGridViewTextBoxColumn.Name = "rAZAOSOCIALDataGridViewTextBoxColumn";
             this.rAZAOSOCIALDataGridViewTextBoxColumn.ReadOnly = true;
@@ -249,7 +248,6 @@
             // cNPJDataGridViewTextBoxColumn
             // 
             this.cNPJDataGridViewTextBoxColumn.DataPropertyName = "CNPJ";
-            this.cNPJDataGridViewTextBoxColumn.FillWeight = 73.17446F;
             this.cNPJDataGridViewTextBoxColumn.HeaderText = "CNPJ";
             this.cNPJDataGridViewTextBoxColumn.Name = "cNPJDataGridViewTextBoxColumn";
             this.cNPJDataGridViewTextBoxColumn.ReadOnly = true;
@@ -257,7 +255,6 @@
             // eNDERECODataGridViewTextBoxColumn
             // 
             this.eNDERECODataGridViewTextBoxColumn.DataPropertyName = "ENDERECO";
-            this.eNDERECODataGridViewTextBoxColumn.FillWeight = 73.17446F;
             this.eNDERECODataGridViewTextBoxColumn.HeaderText = "Endereço";
             this.eNDERECODataGridViewTextBoxColumn.Name = "eNDERECODataGridViewTextBoxColumn";
             this.eNDERECODataGridViewTextBoxColumn.ReadOnly = true;
@@ -265,7 +262,6 @@
             // nUMERODataGridViewTextBoxColumn
             // 
             this.nUMERODataGridViewTextBoxColumn.DataPropertyName = "NUMERO";
-            this.nUMERODataGridViewTextBoxColumn.FillWeight = 73.17446F;
             this.nUMERODataGridViewTextBoxColumn.HeaderText = "Número";
             this.nUMERODataGridViewTextBoxColumn.Name = "nUMERODataGridViewTextBoxColumn";
             this.nUMERODataGridViewTextBoxColumn.ReadOnly = true;
@@ -273,7 +269,6 @@
             // bAIRRODataGridViewTextBoxColumn
             // 
             this.bAIRRODataGridViewTextBoxColumn.DataPropertyName = "BAIRRO";
-            this.bAIRRODataGridViewTextBoxColumn.FillWeight = 73.17446F;
             this.bAIRRODataGridViewTextBoxColumn.HeaderText = "Bairro";
             this.bAIRRODataGridViewTextBoxColumn.Name = "bAIRRODataGridViewTextBoxColumn";
             this.bAIRRODataGridViewTextBoxColumn.ReadOnly = true;
@@ -281,7 +276,6 @@
             // cIDADEDataGridViewTextBoxColumn
             // 
             this.cIDADEDataGridViewTextBoxColumn.DataPropertyName = "CIDADE";
-            this.cIDADEDataGridViewTextBoxColumn.FillWeight = 73.17446F;
             this.cIDADEDataGridViewTextBoxColumn.HeaderText = "Cidade";
             this.cIDADEDataGridViewTextBoxColumn.Name = "cIDADEDataGridViewTextBoxColumn";
             this.cIDADEDataGridViewTextBoxColumn.ReadOnly = true;
@@ -289,7 +283,6 @@
             // cOMPLEMENTODataGridViewTextBoxColumn
             // 
             this.cOMPLEMENTODataGridViewTextBoxColumn.DataPropertyName = "COMPLEMENTO";
-            this.cOMPLEMENTODataGridViewTextBoxColumn.FillWeight = 115.736F;
             this.cOMPLEMENTODataGridViewTextBoxColumn.HeaderText = "Complemento";
             this.cOMPLEMENTODataGridViewTextBoxColumn.Name = "cOMPLEMENTODataGridViewTextBoxColumn";
             this.cOMPLEMENTODataGridViewTextBoxColumn.ReadOnly = true;
@@ -297,7 +290,6 @@
             // uFDataGridViewTextBoxColumn
             // 
             this.uFDataGridViewTextBoxColumn.DataPropertyName = "UF";
-            this.uFDataGridViewTextBoxColumn.FillWeight = 30F;
             this.uFDataGridViewTextBoxColumn.HeaderText = "UF";
             this.uFDataGridViewTextBoxColumn.Name = "uFDataGridViewTextBoxColumn";
             this.uFDataGridViewTextBoxColumn.ReadOnly = true;
@@ -305,7 +297,6 @@
             // tELEFONEDataGridViewTextBoxColumn
             // 
             this.tELEFONEDataGridViewTextBoxColumn.DataPropertyName = "TELEFONE";
-            this.tELEFONEDataGridViewTextBoxColumn.FillWeight = 73.17446F;
             this.tELEFONEDataGridViewTextBoxColumn.HeaderText = "Telefone";
             this.tELEFONEDataGridViewTextBoxColumn.Name = "tELEFONEDataGridViewTextBoxColumn";
             this.tELEFONEDataGridViewTextBoxColumn.ReadOnly = true;
@@ -313,7 +304,6 @@
             // cELULARDataGridViewTextBoxColumn
             // 
             this.cELULARDataGridViewTextBoxColumn.DataPropertyName = "CELULAR";
-            this.cELULARDataGridViewTextBoxColumn.FillWeight = 73.17446F;
             this.cELULARDataGridViewTextBoxColumn.HeaderText = "Celular";
             this.cELULARDataGridViewTextBoxColumn.Name = "cELULARDataGridViewTextBoxColumn";
             this.cELULARDataGridViewTextBoxColumn.ReadOnly = true;
@@ -321,7 +311,6 @@
             // cEPDataGridViewTextBoxColumn
             // 
             this.cEPDataGridViewTextBoxColumn.DataPropertyName = "CEP";
-            this.cEPDataGridViewTextBoxColumn.FillWeight = 73.17446F;
             this.cEPDataGridViewTextBoxColumn.HeaderText = "CEP";
             this.cEPDataGridViewTextBoxColumn.Name = "cEPDataGridViewTextBoxColumn";
             this.cEPDataGridViewTextBoxColumn.ReadOnly = true;
@@ -329,7 +318,6 @@
             // eMAILDataGridViewTextBoxColumn
             // 
             this.eMAILDataGridViewTextBoxColumn.DataPropertyName = "EMAIL";
-            this.eMAILDataGridViewTextBoxColumn.FillWeight = 73.17446F;
             this.eMAILDataGridViewTextBoxColumn.HeaderText = "Email";
             this.eMAILDataGridViewTextBoxColumn.Name = "eMAILDataGridViewTextBoxColumn";
             this.eMAILDataGridViewTextBoxColumn.ReadOnly = true;
@@ -372,9 +360,9 @@
             this.ClientSize = new System.Drawing.Size(1034, 461);
             this.Controls.Add(this.tableLayoutPanel1);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ForeColor = System.Drawing.Color.White;
+            this.ForeColor = System.Drawing.Color.Black;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "SearchProvider";
             this.Text = "Qr Águas - Procurar Fornecedor";
             this.Load += new System.EventHandler(this.SearchProvider_Load);

@@ -19,11 +19,11 @@ namespace QrAguas.ViewLayer
 
         private void SearchProvider_Load(object sender, EventArgs e)
         {
+            // Define o tamanho minimo do form
+            this.MinimumSize = new Size(1050, 500);
+
             // Atualiza os dados no DGVFornecedores
-            this.fORNECEDORESTableAdapter.Fill(this.qrAguasRemoteDBDataSet.FORNECEDORES);
-
-            
-
+            this.fORNECEDORESTableAdapter.FillByDeletadoFalse(this.qrAguasRemoteDBDataSet.FORNECEDORES);
         }
     }
 }
