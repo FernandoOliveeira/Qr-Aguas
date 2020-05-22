@@ -16,5 +16,14 @@ namespace QrAguas.ViewLayer
         {
             InitializeComponent();
         }
+
+        private void SearchProvider_Load(object sender, EventArgs e)
+        {
+            // Atualiza os dados no DGVFornecedores
+            this.fORNECEDORESTableAdapter.Fill(this.qrAguasRemoteDBDataSet.FORNECEDORES);
+
+            
+
+        }
     }
 }
