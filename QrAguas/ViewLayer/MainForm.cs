@@ -36,8 +36,7 @@ namespace QrAguas.View_Layer
 
         private void MainForm_FormClosing(object sender, FormClosingEventArgs e)
         {
-            // Ao fechar o menu principal é exibido um diálogo, perguntando se o usuário
-            // deseja sair ou encerrar a sessão para entrar com outro login e senha
+            // Ao fechar o menu principal é exibido um diálogo, perguntando se o usuário deseja sair ou encerrar a sessão para entrar com outro login e senha
 
             Logout logout = new Logout();
 

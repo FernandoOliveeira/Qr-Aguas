@@ -35,28 +35,28 @@
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.lblTitulo = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.lblNovaCategoria = new System.Windows.Forms.Label();
+            this.lblUsuario = new System.Windows.Forms.Label();
             this.txtUsuario = new System.Windows.Forms.TextBox();
-            this.panelBtnCadastrar = new System.Windows.Forms.Panel();
+            this.panelBtnProcurar = new System.Windows.Forms.Panel();
             this.btnProcurar = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
             this.DGVUsuarios = new System.Windows.Forms.DataGridView();
-            this.qrAguasRemoteDBDataSet = new QrAguas.QrAguasRemoteDBDataSet();
-            this.searchUserDGVUsuariosBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.searchUserDGVUsuariosTableAdapter = new QrAguas.QrAguasRemoteDBDataSetTableAdapters.SearchUserDGVUsuariosTableAdapter();
             this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.aTIVODataGridViewCheckBoxColumn = new System.Windows.Forms.DataGridViewCheckBoxColumn();
+            this.searchUserDGVUsuariosBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.qrAguasRemoteDBDataSet = new QrAguas.QrAguasRemoteDBDataSet();
+            this.searchUserDGVUsuariosTableAdapter = new QrAguas.QrAguasRemoteDBDataSetTableAdapters.SearchUserDGVUsuariosTableAdapter();
             this.tableLayoutPanel1.SuspendLayout();
             this.panel1.SuspendLayout();
-            this.panelBtnCadastrar.SuspendLayout();
+            this.panelBtnProcurar.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.DGVUsuarios)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.qrAguasRemoteDBDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.searchUserDGVUsuariosBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.qrAguasRemoteDBDataSet)).BeginInit();
             this.SuspendLayout();
             // 
             // tableLayoutPanel1
@@ -68,7 +68,7 @@
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 15.32284F));
             this.tableLayoutPanel1.Controls.Add(this.lblTitulo, 0, 0);
             this.tableLayoutPanel1.Controls.Add(this.panel1, 1, 1);
-            this.tableLayoutPanel1.Controls.Add(this.panelBtnCadastrar, 2, 1);
+            this.tableLayoutPanel1.Controls.Add(this.panelBtnProcurar, 2, 1);
             this.tableLayoutPanel1.Controls.Add(this.panel2, 0, 2);
             this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 0);
@@ -95,24 +95,24 @@
             // 
             // panel1
             // 
-            this.panel1.Controls.Add(this.lblNovaCategoria);
+            this.panel1.Controls.Add(this.lblUsuario);
             this.panel1.Controls.Add(this.txtUsuario);
             this.panel1.Location = new System.Drawing.Point(131, 74);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(286, 72);
             this.panel1.TabIndex = 14;
             // 
-            // lblNovaCategoria
+            // lblUsuario
             // 
-            this.lblNovaCategoria.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.lblUsuario.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.lblNovaCategoria.AutoSize = true;
-            this.lblNovaCategoria.ForeColor = System.Drawing.Color.White;
-            this.lblNovaCategoria.Location = new System.Drawing.Point(4, 10);
-            this.lblNovaCategoria.Name = "lblNovaCategoria";
-            this.lblNovaCategoria.Size = new System.Drawing.Size(170, 17);
-            this.lblNovaCategoria.TabIndex = 1;
-            this.lblNovaCategoria.Text = "Digite o nome do usuário:";
+            this.lblUsuario.AutoSize = true;
+            this.lblUsuario.ForeColor = System.Drawing.Color.White;
+            this.lblUsuario.Location = new System.Drawing.Point(4, 10);
+            this.lblUsuario.Name = "lblUsuario";
+            this.lblUsuario.Size = new System.Drawing.Size(170, 17);
+            this.lblUsuario.TabIndex = 1;
+            this.lblUsuario.Text = "Digite o nome do usuário:";
             // 
             // txtUsuario
             // 
@@ -124,13 +124,13 @@
             this.txtUsuario.TabIndex = 0;
             this.txtUsuario.KeyDown += new System.Windows.Forms.KeyEventHandler(this.TxtUsuario_KeyDown);
             // 
-            // panelBtnCadastrar
+            // panelBtnProcurar
             // 
-            this.panelBtnCadastrar.Controls.Add(this.btnProcurar);
-            this.panelBtnCadastrar.Location = new System.Drawing.Point(423, 74);
-            this.panelBtnCadastrar.Name = "panelBtnCadastrar";
-            this.panelBtnCadastrar.Size = new System.Drawing.Size(279, 72);
-            this.panelBtnCadastrar.TabIndex = 15;
+            this.panelBtnProcurar.Controls.Add(this.btnProcurar);
+            this.panelBtnProcurar.Location = new System.Drawing.Point(423, 74);
+            this.panelBtnProcurar.Name = "panelBtnProcurar";
+            this.panelBtnProcurar.Size = new System.Drawing.Size(279, 72);
+            this.panelBtnProcurar.TabIndex = 15;
             // 
             // btnProcurar
             // 
@@ -199,20 +199,6 @@
             this.DGVUsuarios.TabIndex = 1;
             this.DGVUsuarios.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DGVUsuarios_CellContentClick);
             // 
-            // qrAguasRemoteDBDataSet
-            // 
-            this.qrAguasRemoteDBDataSet.DataSetName = "QrAguasRemoteDBDataSet";
-            this.qrAguasRemoteDBDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // searchUserDGVUsuariosBindingSource
-            // 
-            this.searchUserDGVUsuariosBindingSource.DataMember = "SearchUserDGVUsuarios";
-            this.searchUserDGVUsuariosBindingSource.DataSource = this.qrAguasRemoteDBDataSet;
-            // 
-            // searchUserDGVUsuariosTableAdapter
-            // 
-            this.searchUserDGVUsuariosTableAdapter.ClearBeforeFill = true;
-            // 
             // dataGridViewTextBoxColumn1
             // 
             this.dataGridViewTextBoxColumn1.DataPropertyName = "ID_USUARIOS";
@@ -256,6 +242,20 @@
             this.aTIVODataGridViewCheckBoxColumn.Name = "aTIVODataGridViewCheckBoxColumn";
             this.aTIVODataGridViewCheckBoxColumn.ReadOnly = true;
             // 
+            // searchUserDGVUsuariosBindingSource
+            // 
+            this.searchUserDGVUsuariosBindingSource.DataMember = "SearchUserDGVUsuarios";
+            this.searchUserDGVUsuariosBindingSource.DataSource = this.qrAguasRemoteDBDataSet;
+            // 
+            // qrAguasRemoteDBDataSet
+            // 
+            this.qrAguasRemoteDBDataSet.DataSetName = "QrAguasRemoteDBDataSet";
+            this.qrAguasRemoteDBDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // searchUserDGVUsuariosTableAdapter
+            // 
+            this.searchUserDGVUsuariosTableAdapter.ClearBeforeFill = true;
+            // 
             // SearchUser
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 17F);
@@ -273,11 +273,11 @@
             this.tableLayoutPanel1.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            this.panelBtnCadastrar.ResumeLayout(false);
+            this.panelBtnProcurar.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.DGVUsuarios)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.qrAguasRemoteDBDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.searchUserDGVUsuariosBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.qrAguasRemoteDBDataSet)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -287,9 +287,9 @@
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
         private System.Windows.Forms.Label lblTitulo;
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Label lblNovaCategoria;
+        private System.Windows.Forms.Label lblUsuario;
         private System.Windows.Forms.TextBox txtUsuario;
-        private System.Windows.Forms.Panel panelBtnCadastrar;
+        private System.Windows.Forms.Panel panelBtnProcurar;
         private System.Windows.Forms.Button btnProcurar;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.DataGridView DGVUsuarios;
