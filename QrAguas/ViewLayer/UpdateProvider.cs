@@ -20,9 +20,38 @@ namespace QrAguas.ViewLayer
             InitializeComponent();
         }
 
+        public int IdFornecedor { private get; set; }
+        public string RazaoSocial { get; internal set; }
+        public string Cnpj { get; internal set; }
+        public string Endereco { get; internal set; }
+        public int Numero { get; internal set; }
+        public string Bairro { get; internal set; }
+        public string Cidade { get; internal set; }
+        public string Complemento { get; internal set; }
+        public string Uf { get; internal set; }
+        public string Telefone { get; internal set; }
+        public string Celular { get; internal set; }
+        public string Cep { get; internal set; }
+        public string Email { get; internal set; }
+
+
+        NewProvider AtualizarFornecedor = new NewProvider();
+
+
         private void UpdateProvider_Load(object sender, EventArgs e)
         {
-
+            txtBairro.Text = Bairro;
+            txtCelular.Text = Celular;
+            txtCep.Text = Cep;
+            txtCidade.Text = Cidade;
+            txtCnpj.Text = Cnpj;
+            txtComplemento.Text = Complemento;
+            txtEmail.Text = Email;
+            txtEndereco.Text = Endereco;
+            txtNumero.Text = Numero.ToString();
+            txtRazaoSocial.Text = RazaoSocial;
+            txtTelefone.Text = Telefone;
+            txtUf.Text = Uf;
         }
 
         private async void BtnConsultar_Click(object sender, EventArgs e)

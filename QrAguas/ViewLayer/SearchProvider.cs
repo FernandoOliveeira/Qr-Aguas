@@ -19,6 +19,8 @@ namespace QrAguas.ViewLayer
             InitializeComponent();
         }
 
+        public bool FornecedorAtualizado { private get; set; }
+
         SearchProviderMethods ProviderMethods = new SearchProviderMethods();
 
         private void SearchProvider_Load(object sender, EventArgs e)
@@ -85,9 +87,10 @@ namespace QrAguas.ViewLayer
 
                     if (respostaEditar == DialogResult.Yes)
                     {
-                        NewProvider newProvider = new NewProvider
+                        UpdateProvider updateProvider = new UpdateProvider
                         {
-                            RazaoSocial = DGVFornecedores.SelectedRows[0].Cells[1].Value.ToString(),
+                            IdFornecedor = idFornecedor,
+                            RazaoSocial = nomeFornecedor,
                             Cnpj = DGVFornecedores.SelectedRows[0].Cells[2].Value.ToString(),
                             Endereco = DGVFornecedores.SelectedRows[0].Cells[3].Value.ToString(),
                             Numero = (int)DGVFornecedores.SelectedRows[0].Cells[4].Value,
@@ -99,9 +102,9 @@ namespace QrAguas.ViewLayer
                             Celular = DGVFornecedores.SelectedRows[0].Cells[10].Value.ToString(),
                             Cep = DGVFornecedores.SelectedRows[0].Cells[11].Value.ToString(),
                             Email = DGVFornecedores.SelectedRows[0].Cells[12].Value.ToString(),
-
-
                         };
+                        updateProvider.ShowDialog();
+
                     }
 
                     break;
