@@ -1,4 +1,5 @@
 ﻿using QrAguas.Controls;
+using QrAguas.Models;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -42,10 +43,8 @@ namespace QrAguas.ViewLayer
 
         private void DGVFornecedores_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-
             int idFornecedor = (int)DGVFornecedores.SelectedRows[0].Cells[0].Value;
             string nomeFornecedor = DGVFornecedores.SelectedRows[0].Cells[1].Value.ToString();
-
 
             switch (DGVFornecedores.Columns[e.ColumnIndex].HeaderText)
             {
@@ -79,12 +78,34 @@ namespace QrAguas.ViewLayer
                     break;
                 #endregion
 
+                #region Botão Editar
                 case "Editar":
 
                     DialogResult respostaEditar = MessageBox.Show("Deseja editar as informações do fornecedor " + nomeFornecedor.ToUpper() + " ?", "Editar", MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button2);
 
-                    break;
+                    if (respostaEditar == DialogResult.Yes)
+                    {
+                        NewProvider newProvider = new NewProvider
+                        {
+                            RazaoSocial = DGVFornecedores.SelectedRows[0].Cells[1].Value.ToString(),
+                            Cnpj = DGVFornecedores.SelectedRows[0].Cells[2].Value.ToString(),
+                            Endereco = DGVFornecedores.SelectedRows[0].Cells[3].Value.ToString(),
+                            Numero = (int)DGVFornecedores.SelectedRows[0].Cells[4].Value,
+                            Bairro = DGVFornecedores.SelectedRows[0].Cells[5].Value.ToString(),
+                            Cidade = DGVFornecedores.SelectedRows[0].Cells[6].Value.ToString(),
+                            Complemento = DGVFornecedores.SelectedRows[0].Cells[7].Value.ToString(),
+                            Uf = DGVFornecedores.SelectedRows[0].Cells[8].Value.ToString(),
+                            Telefone = DGVFornecedores.SelectedRows[0].Cells[9].Value.ToString(),
+                            Celular = DGVFornecedores.SelectedRows[0].Cells[10].Value.ToString(),
+                            Cep = DGVFornecedores.SelectedRows[0].Cells[11].Value.ToString(),
+                            Email = DGVFornecedores.SelectedRows[0].Cells[12].Value.ToString(),
 
+
+                        };
+                    }
+
+                    break;
+                    #endregion
             }
 
         }
