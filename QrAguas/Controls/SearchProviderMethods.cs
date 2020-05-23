@@ -20,7 +20,7 @@ namespace QrAguas.Controls
             MySqlCommand command = new MySqlCommand(queryProcurarFornecedor, AbrirBanco());
 
             MySqlDataReader reader = command.ExecuteReader();
-            s
+            
             dataTable.Load(reader);
 
             FecharBanco(AbrirBanco());

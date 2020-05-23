@@ -43,9 +43,6 @@
             this.btnProcurar = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
             this.DGVFornecedores = new System.Windows.Forms.DataGridView();
-            this.qrAguasRemoteDBDataSet = new QrAguas.QrAguasRemoteDBDataSet();
-            this.fORNECEDORESBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.fORNECEDORESTableAdapter = new QrAguas.QrAguasRemoteDBDataSetTableAdapters.FORNECEDORESTableAdapter();
             this.iDFORNECEDORESDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.rAZAOSOCIALDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.cNPJDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -61,13 +58,16 @@
             this.eMAILDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Editar = new System.Windows.Forms.DataGridViewButtonColumn();
             this.Excluir = new System.Windows.Forms.DataGridViewButtonColumn();
+            this.fORNECEDORESBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.qrAguasRemoteDBDataSet = new QrAguas.QrAguasRemoteDBDataSet();
+            this.fORNECEDORESTableAdapter = new QrAguas.QrAguasRemoteDBDataSetTableAdapters.FORNECEDORESTableAdapter();
             this.tableLayoutPanel1.SuspendLayout();
             this.panelFornecedor.SuspendLayout();
             this.panelBtnProcurar.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.DGVFornecedores)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.qrAguasRemoteDBDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.fORNECEDORESBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.qrAguasRemoteDBDataSet)).BeginInit();
             this.SuspendLayout();
             // 
             // tableLayoutPanel1
@@ -133,6 +133,7 @@
             this.txtFornecedor.Name = "txtFornecedor";
             this.txtFornecedor.Size = new System.Drawing.Size(249, 23);
             this.txtFornecedor.TabIndex = 0;
+            this.txtFornecedor.KeyDown += new System.Windows.Forms.KeyEventHandler(this.TxtFornecedor_KeyDown);
             // 
             // panelBtnProcurar
             // 
@@ -157,6 +158,7 @@
             this.btnProcurar.TabIndex = 0;
             this.btnProcurar.Text = "Procurar";
             this.btnProcurar.UseVisualStyleBackColor = false;
+            this.btnProcurar.Click += new System.EventHandler(this.BtnProcurar_Click);
             // 
             // panel2
             // 
@@ -215,20 +217,7 @@
             this.DGVFornecedores.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.DGVFornecedores.Size = new System.Drawing.Size(1028, 289);
             this.DGVFornecedores.TabIndex = 1;
-            // 
-            // qrAguasRemoteDBDataSet
-            // 
-            this.qrAguasRemoteDBDataSet.DataSetName = "QrAguasRemoteDBDataSet";
-            this.qrAguasRemoteDBDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // fORNECEDORESBindingSource
-            // 
-            this.fORNECEDORESBindingSource.DataMember = "FORNECEDORES";
-            this.fORNECEDORESBindingSource.DataSource = this.qrAguasRemoteDBDataSet;
-            // 
-            // fORNECEDORESTableAdapter
-            // 
-            this.fORNECEDORESTableAdapter.ClearBeforeFill = true;
+            this.DGVFornecedores.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DGVFornecedores_CellContentClick);
             // 
             // iDFORNECEDORESDataGridViewTextBoxColumn
             // 
@@ -352,6 +341,20 @@
             this.Excluir.Text = "Excluir";
             this.Excluir.UseColumnTextForButtonValue = true;
             // 
+            // fORNECEDORESBindingSource
+            // 
+            this.fORNECEDORESBindingSource.DataMember = "FORNECEDORES";
+            this.fORNECEDORESBindingSource.DataSource = this.qrAguasRemoteDBDataSet;
+            // 
+            // qrAguasRemoteDBDataSet
+            // 
+            this.qrAguasRemoteDBDataSet.DataSetName = "QrAguasRemoteDBDataSet";
+            this.qrAguasRemoteDBDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // fORNECEDORESTableAdapter
+            // 
+            this.fORNECEDORESTableAdapter.ClearBeforeFill = true;
+            // 
             // SearchProvider
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 17F);
@@ -364,6 +367,7 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "SearchProvider";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Qr Águas - Procurar Fornecedor";
             this.Load += new System.EventHandler(this.SearchProvider_Load);
             this.tableLayoutPanel1.ResumeLayout(false);
@@ -372,8 +376,8 @@
             this.panelBtnProcurar.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.DGVFornecedores)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.qrAguasRemoteDBDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.fORNECEDORESBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.qrAguasRemoteDBDataSet)).EndInit();
             this.ResumeLayout(false);
 
         }
