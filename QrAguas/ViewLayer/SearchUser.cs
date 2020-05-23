@@ -87,16 +87,6 @@ namespace QrAguas.ViewLayer
 
                 #endregion
 
-                // Botão Atualizar do DataGridView
-                #region Atualizar
-                case "Atualizar":
-
-                    int idUsuarioAtualizar = (int)DGVUsuarios.SelectedRows[0].Cells[0].Value;
-                    string nomeUsuarioAtualizar = DGVUsuarios.SelectedRows[0].Cells[1].Value.ToString();
-
-                    DialogResult respostaAtualizar = MessageBox.Show("Deseja atualizar o nome de usuário de " + nomeUsuarioAtualizar + " ? ", "Atualizar Usuário", MessageBoxButtons.YesNo, MessageBoxIcon.Information, MessageBoxDefaultButton.Button2);
-                    break;
-                #endregion
             }
         }
     }

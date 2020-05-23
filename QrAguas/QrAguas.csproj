@@ -101,6 +101,7 @@
     <Compile Include="Controls\RegisterProductMethods.cs" />
     <Compile Include="Controls\RegisterProvidersMethods.cs" />
     <Compile Include="Controls\RegisterUserMethods.cs" />
+    <Compile Include="Controls\SearchProviderMethods.cs" />
     <Compile Include="Controls\SearchUserMethods.cs" />
     <Compile Include="Controls\SellProductMethods.cs" />
     <Compile Include="Controls\UpdateCategoryMethods.cs" />

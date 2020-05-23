@@ -42,7 +42,7 @@ namespace QrAguas.View_Layer
             // "Evento de click" no botão Atualizar no DataGridView
             if (DGVCategorias.Columns[e.ColumnIndex].Name.Equals("Atualizar"))
             {
-                // Quando clicado no botão Ativar do DataGridView os dados de toda a linha são atribuídos em variáveis
+                // Quando clicado no botão Atualizar do DataGridView os dados de toda a linha são atribuídos em variáveis
                 int idCategoria = (int)DGVCategorias.SelectedRows[0].Cells[0].Value;
                 string nomeCategoria = DGVCategorias.SelectedRows[0].Cells[1].Value.ToString();
 
@@ -58,7 +58,7 @@ namespace QrAguas.View_Layer
 
                     updateCategory.ShowDialog();
 
-                    if (UpdateCategoryResultado.Equals(true))
+                    if (UpdateCategoryResultado == true)
                     {
                         UpdateCategoryResultado = false;
 
@@ -88,7 +88,7 @@ namespace QrAguas.View_Layer
 
                 if (resposta == DialogResult.Yes)
                 {
-                    string ativarDesativarResposta = ativarDesativar.Equals("DESATIVAR") ? "Desativada" : "Ativada";
+                    string ativarDesativarResposta = ativarDesativar == "DESATIVAR" ? "Desativada" : "Ativada";
 
                     try
                     {
