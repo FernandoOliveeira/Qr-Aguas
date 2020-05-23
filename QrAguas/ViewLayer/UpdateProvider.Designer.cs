@@ -209,6 +209,7 @@
             this.btnAtualizar.TabIndex = 1;
             this.btnAtualizar.Text = "Atualizar";
             this.btnAtualizar.UseVisualStyleBackColor = false;
+            this.btnAtualizar.Click += new System.EventHandler(this.BtnAtualizar_Click);
             // 
             // panel3
             // 

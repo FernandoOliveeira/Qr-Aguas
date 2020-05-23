@@ -43,6 +43,9 @@
             this.btnProcurar = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
             this.DGVFornecedores = new System.Windows.Forms.DataGridView();
+            this.fORNECEDORESBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.qrAguasRemoteDBDataSet = new QrAguas.QrAguasRemoteDBDataSet();
+            this.fORNECEDORESTableAdapter = new QrAguas.QrAguasRemoteDBDataSetTableAdapters.FORNECEDORESTableAdapter();
             this.iDFORNECEDORESDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.rAZAOSOCIALDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.cNPJDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -56,11 +59,8 @@
             this.cELULARDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.cEPDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.eMAILDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Editar = new System.Windows.Forms.DataGridViewButtonColumn();
+            this.Atualizar = new System.Windows.Forms.DataGridViewButtonColumn();
             this.Excluir = new System.Windows.Forms.DataGridViewButtonColumn();
-            this.fORNECEDORESBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.qrAguasRemoteDBDataSet = new QrAguas.QrAguasRemoteDBDataSet();
-            this.fORNECEDORESTableAdapter = new QrAguas.QrAguasRemoteDBDataSetTableAdapters.FORNECEDORESTableAdapter();
             this.tableLayoutPanel1.SuspendLayout();
             this.panelFornecedor.SuspendLayout();
             this.panelBtnProcurar.SuspendLayout();
@@ -203,7 +203,7 @@
             this.cELULARDataGridViewTextBoxColumn,
             this.cEPDataGridViewTextBoxColumn,
             this.eMAILDataGridViewTextBoxColumn,
-            this.Editar,
+            this.Atualizar,
             this.Excluir});
             this.DGVFornecedores.DataSource = this.fORNECEDORESBindingSource;
             this.DGVFornecedores.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -218,6 +218,20 @@
             this.DGVFornecedores.Size = new System.Drawing.Size(1028, 289);
             this.DGVFornecedores.TabIndex = 1;
             this.DGVFornecedores.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DGVFornecedores_CellContentClick);
+            // 
+            // fORNECEDORESBindingSource
+            // 
+            this.fORNECEDORESBindingSource.DataMember = "FORNECEDORES";
+            this.fORNECEDORESBindingSource.DataSource = this.qrAguasRemoteDBDataSet;
+            // 
+            // qrAguasRemoteDBDataSet
+            // 
+            this.qrAguasRemoteDBDataSet.DataSetName = "QrAguasRemoteDBDataSet";
+            this.qrAguasRemoteDBDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // fORNECEDORESTableAdapter
+            // 
+            this.fORNECEDORESTableAdapter.ClearBeforeFill = true;
             // 
             // iDFORNECEDORESDataGridViewTextBoxColumn
             // 
@@ -311,20 +325,20 @@
             this.eMAILDataGridViewTextBoxColumn.Name = "eMAILDataGridViewTextBoxColumn";
             this.eMAILDataGridViewTextBoxColumn.ReadOnly = true;
             // 
-            // Editar
+            // Atualizar
             // 
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
             dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
             dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
             dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
             dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.White;
-            this.Editar.DefaultCellStyle = dataGridViewCellStyle2;
-            this.Editar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Editar.HeaderText = "Editar";
-            this.Editar.Name = "Editar";
-            this.Editar.ReadOnly = true;
-            this.Editar.Text = "Editar";
-            this.Editar.UseColumnTextForButtonValue = true;
+            this.Atualizar.DefaultCellStyle = dataGridViewCellStyle2;
+            this.Atualizar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Atualizar.HeaderText = "Atualizar";
+            this.Atualizar.Name = "Atualizar";
+            this.Atualizar.ReadOnly = true;
+            this.Atualizar.Text = "Atualizar";
+            this.Atualizar.UseColumnTextForButtonValue = true;
             // 
             // Excluir
             // 
@@ -340,20 +354,6 @@
             this.Excluir.ReadOnly = true;
             this.Excluir.Text = "Excluir";
             this.Excluir.UseColumnTextForButtonValue = true;
-            // 
-            // fORNECEDORESBindingSource
-            // 
-            this.fORNECEDORESBindingSource.DataMember = "FORNECEDORES";
-            this.fORNECEDORESBindingSource.DataSource = this.qrAguasRemoteDBDataSet;
-            // 
-            // qrAguasRemoteDBDataSet
-            // 
-            this.qrAguasRemoteDBDataSet.DataSetName = "QrAguasRemoteDBDataSet";
-            this.qrAguasRemoteDBDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // fORNECEDORESTableAdapter
-            // 
-            this.fORNECEDORESTableAdapter.ClearBeforeFill = true;
             // 
             // SearchProvider
             // 
@@ -409,7 +409,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn cELULARDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn cEPDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn eMAILDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewButtonColumn Editar;
+        private System.Windows.Forms.DataGridViewButtonColumn Atualizar;
         private System.Windows.Forms.DataGridViewButtonColumn Excluir;
     }
 }

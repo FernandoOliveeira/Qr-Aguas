@@ -2,12 +2,6 @@
 using QrAguas.Models;
 using Refit;
 using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
 using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -104,7 +98,7 @@ namespace QrAguas.View_Layer
         private void BtnCadastrar_Click(object sender, EventArgs e)
         {
 
-            if (txtNumero.Text.Trim().Equals(""))
+            if (txtNumero.Text.Trim() == "")
             {
                 txtNumero.Text = "0";
             }
@@ -180,7 +174,7 @@ namespace QrAguas.View_Layer
             catch (Exception error)
             {
 
-                MessageBox.Show("Um ou mais campos obrigatórios* estão vazios ou incompletos \n erro: " + error, "Campos vazios", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show("Erro ao cadastrar \nErro: " + error, "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             
         }

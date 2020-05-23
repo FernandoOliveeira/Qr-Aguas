@@ -1,4 +1,5 @@
-﻿using QrAguas.Models;
+﻿using QrAguas.Controls;
+using QrAguas.Models;
 using Refit;
 using System;
 using System.Collections.Generic;
@@ -35,8 +36,9 @@ namespace QrAguas.ViewLayer
         public string Email { get; internal set; }
 
 
-        NewProvider AtualizarFornecedor = new NewProvider();
+        NewProvider AtualizarFornecedor;
 
+        UpdateProviderMethods updateProviderMethods = new UpdateProviderMethods();
 
         private void UpdateProvider_Load(object sender, EventArgs e)
         {
@@ -131,5 +133,89 @@ namespace QrAguas.ViewLayer
         {
             ActiveForm.AcceptButton = btnConsultar;
         }
+
+        private void BtnAtualizar_Click(object sender, EventArgs e)
+        {
+            if (txtNumero.Text == "")
+            {
+                txtNumero.Text = "0";
+            }
+
+            try
+            {
+                AtualizarFornecedor = new NewProvider
+                {
+                    Bairro = txtBairro.Text.Trim(),
+                    Celular = txtCelular.Text.Trim(),
+                    Cep = txtCep.Text.Trim(),
+                    Cidade = txtCidade.Text.Trim(),
+                    Cnpj = txtCnpj.Text.Trim(),
+                    Complemento = txtComplemento.Text.Trim(),
+                    Email = txtEmail.Text.Trim(),
+                    Endereco = txtEndereco.Text.Trim(),
+                    Numero = int.Parse(txtNumero.Text.Trim()),
+                    RazaoSocial = txtRazaoSocial.Text.Trim(),
+                    Telefone = txtTelefone.Text.Trim(),
+                    Uf = txtUf.Text.Trim()
+                };
+
+                // Verifica se os campos obrigatórios foram preenchidos corretamente
+                if (updateProviderMethods.VerificarDadosFornecedores(AtualizarFornecedor))
+                {
+                    // Validação de CNPJ
+                    if (updateProviderMethods.ValidarCnpj(txtCnpj.Text))
+                    {
+                        // Caso o campo email não esteja vazio
+                        if (txtEmail.Text.Trim().Length != 0)
+                        {
+                            // Validação do E-mail
+                            if (updateProviderMethods.ValidarEmail(txtEmail.Text.Trim()))
+                            {
+                                // Cadastrar fornecedor
+                                if (updateProviderMethods.AtualizarFornecedor(AtualizarFornecedor, IdFornecedor))
+                                {
+                                    MessageBox.Show("Fornecedor atualizado com sucesso !", "Atualizado", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                                    SearchProvider.FornecedorAtualizado = true;
+                                    Close();
+                                }
+                            }
+                            else
+                            {
+                                MessageBox.Show("E-mail inválido.", "E-mail inválido", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                            }
+                        }
+                        else
+                        {
+                            // Cadastrar fornecedor
+                            if (updateProviderMethods.AtualizarFornecedor(AtualizarFornecedor, IdFornecedor))
+                            {
+                                MessageBox.Show("Fornecedor atualizado com sucesso !", "Atualizado", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                                SearchProvider.FornecedorAtualizado = true;
+                                Close();
+                            }
+                        }
+
+                    }
+                    else
+                    {
+                        MessageBox.Show("CNPJ inválido.", "CNPJ inválido", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    }
+                }
+                else
+                {
+                    MessageBox.Show("Um ou mais campos obrigatórios* estão vazios ou incompletos.", "Campos vazios", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                }
+            }
+            catch (Exception error)
+            {
+                MessageBox.Show("Erro ao atualizar \nErro: " + error, "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            
+
+            
+        }
+
     }
 }

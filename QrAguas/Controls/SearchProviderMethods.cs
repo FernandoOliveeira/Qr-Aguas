@@ -15,7 +15,7 @@ namespace QrAguas.Controls
         {
             DataTable dataTable = new DataTable();
 
-            string queryProcurarFornecedor = "SELECT RAZAO_SOCIAL, CNPJ, ENDERECO, NUMERO, BAIRRO, CIDADE, COMPLEMENTO, UF, TELEFONE, CELULAR, CEP, EMAIL FROM FORNECEDORES WHERE RAZAO_SOCIAL LIKE '%" + nomeFornecedor + "%'";
+            string queryProcurarFornecedor = "SELECT RAZAO_SOCIAL, CNPJ, ENDERECO, NUMERO, BAIRRO, CIDADE, COMPLEMENTO, UF, TELEFONE, CELULAR, CEP, EMAIL FROM FORNECEDORES WHERE RAZAO_SOCIAL LIKE '%" + nomeFornecedor + "%' AND DELETADO = FALSE";
 
             MySqlCommand command = new MySqlCommand(queryProcurarFornecedor, AbrirBanco());
 

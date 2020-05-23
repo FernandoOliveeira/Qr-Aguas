@@ -19,7 +19,9 @@ namespace QrAguas.ViewLayer
             InitializeComponent();
         }
 
-        public bool FornecedorAtualizado { private get; set; }
+        // Propriedade utilizada como flag
+        // Caso o form UpdateProvider realize a atualização de algum fornecedor, esta propriedade recebe o valor de true
+        public static bool FornecedorAtualizado { private get; set; }
 
         SearchProviderMethods ProviderMethods = new SearchProviderMethods();
 
@@ -81,9 +83,9 @@ namespace QrAguas.ViewLayer
                 #endregion
 
                 #region Botão Editar
-                case "Editar":
+                case "Atualizar":
 
-                    DialogResult respostaEditar = MessageBox.Show("Deseja editar as informações do fornecedor " + nomeFornecedor.ToUpper() + " ?", "Editar", MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button2);
+                    DialogResult respostaEditar = MessageBox.Show("Deseja atualizar as informações do fornecedor " + nomeFornecedor.ToUpper() + " ?", "Atualizar", MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button2);
 
                     if (respostaEditar == DialogResult.Yes)
                     {
@@ -104,6 +106,15 @@ namespace QrAguas.ViewLayer
                             Email = DGVFornecedores.SelectedRows[0].Cells[12].Value.ToString(),
                         };
                         updateProvider.ShowDialog();
+
+                        if (FornecedorAtualizado == true)
+                        {
+                            FornecedorAtualizado = false;
+
+                            // Atualiza os dados no DGVFornecedores
+                            this.fORNECEDORESTableAdapter.FillByDeletadoFalse(this.qrAguasRemoteDBDataSet.FORNECEDORES);
+
+                        }
 
                     }
 
