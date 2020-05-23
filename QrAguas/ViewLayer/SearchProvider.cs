@@ -49,12 +49,35 @@ namespace QrAguas.ViewLayer
 
             switch (DGVFornecedores.Columns[e.ColumnIndex].HeaderText)
             {
+                #region Botão Excluir 
                 case "Excluir":
 
                     DialogResult respostaExcluir = MessageBox.Show("Deseja excluir o fornecedor " + nomeFornecedor.ToUpper() + " ?", "Excluir", MessageBoxButtons.YesNo, MessageBoxIcon.Warning, MessageBoxDefaultButton.Button2);
 
-                    break;
+                    if (respostaExcluir == DialogResult.Yes)
+                    {
+                        try
+                        {
+                            if (ProviderMethods.ExcluirFornecedor(idFornecedor))
+                            {
+                                // Atualiza os dados no DGVFornecedores
+                                this.fORNECEDORESTableAdapter.FillByDeletadoFalse(this.qrAguasRemoteDBDataSet.FORNECEDORES);
 
+                                MessageBox.Show("Fornecedor excluído com sucesso !", "Excluído com sucesso", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                                
+                            }
+                        }
+                        catch (Exception error)
+                        {
+
+                            MessageBox.Show("Erro ao tentar excluir. \nErro: " + error, "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+
+                        }
+                    }
+
+                    break;
+                #endregion
 
                 case "Editar":
 

@@ -28,5 +28,19 @@ namespace QrAguas.Controls
             return dataTable;
         }
 
+        public bool ExcluirFornecedor(int idFornecedor)
+        {
+            string queryExcluirFornecedor = "UPDATE FORNECEDORES SET DELETADO = TRUE WHERE ID_FORNECEDORES = @ID_FORNECEDORES";
+
+            MySqlCommand command = new MySqlCommand(queryExcluirFornecedor, AbrirBanco());
+            command.Parameters.AddWithValue("@ID_FORNECEDORES", idFornecedor);
+
+            int rowCount = command.ExecuteNonQuery();
+
+            FecharBanco(AbrirBanco());
+
+            return rowCount != 0 ? true : false;
+        }
+
     }
 }
