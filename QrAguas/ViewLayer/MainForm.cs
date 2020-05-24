@@ -1,14 +1,6 @@
-﻿using QrAguas.Models;
-using QrAguas.ViewLayer;
+﻿using QrAguas.ViewLayer;
 using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
 using System.Threading;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace QrAguas.View_Layer
@@ -27,9 +19,14 @@ namespace QrAguas.View_Layer
             TSLUsuario.Text = "Usuário: " + Login.NomeUsuario;
 
 
-            if (Login.TipoUsuario.Equals(2)) // Caso o usuário seja do tipo 2 (Auxiliar), algumas telas são restritas para acesso
+            if (Login.TipoUsuario != 1)  // Caso o usuário não seja do tipo 1 (ADM), algumas telas são restritas 
             {
-                treeView.Nodes.Remove(treeView.Nodes[0].Nodes[0].Nodes[2]); // Cadastrar Novo Usuário
+                // Cadastrar Novo Usuário
+                treeView.Nodes.Remove(treeView.Nodes[0].Nodes[0].Nodes[2]);
+                // Sessão de Consultas
+                treeView.Nodes.Remove(treeView.Nodes[0].Nodes[3]); 
+                // Procurar Usuário
+                procurarUsuarioToolStripMenuItem.Visible = false;
             }
 
         }
@@ -61,7 +58,7 @@ namespace QrAguas.View_Layer
 
         private void TreeView_NodeMouseDoubleClick(object sender, TreeNodeMouseClickEventArgs e)
         {
-            // Abre o form desejado com base em qual nó foi clicado no treeView
+            // Abre o form com base em qual nó foi clicado no treeView
             switch (e.Node.Text)
             {
                 #region Cadastros
@@ -207,6 +204,32 @@ namespace QrAguas.View_Layer
                     break;
                 #endregion
 
+                #region Consultas
+
+                case "Consultar Fornecedores":
+
+                    bool SearchProviderOpen = false;
+
+                    // Início: Este bloco de código impede que sejam abertos múltiplos forms iguais
+                    foreach (Form form in Application.OpenForms)
+                    {
+                        if (form.Name == "SearchProvider")
+                        {
+                            SearchProviderOpen = true;
+                            form.BringToFront();
+                            break;
+                        }
+                    }
+                    if (SearchProviderOpen == false)
+                    {
+                        SearchProvider searchProvider = new SearchProvider();
+                        searchProvider.Show();
+                    }
+                    // Fim
+                    break;
+
+                #endregion
+
                 #region Relatórios
 
                 case "Relatório de Produtos":
@@ -221,7 +244,6 @@ namespace QrAguas.View_Layer
 
                 #endregion
             }
-
 
         }
 
@@ -242,6 +264,5 @@ namespace QrAguas.View_Layer
             Application.Run(new Login());
         }
 
-        
     }
 }
