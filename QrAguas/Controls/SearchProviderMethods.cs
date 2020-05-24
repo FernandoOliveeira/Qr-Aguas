@@ -15,7 +15,7 @@ namespace QrAguas.Controls
         {
             DataTable dataTable = new DataTable();
 
-            string queryProcurarFornecedor = "SELECT RAZAO_SOCIAL, CNPJ, ENDERECO, NUMERO, BAIRRO, CIDADE, COMPLEMENTO, UF, TELEFONE, CELULAR, CEP, EMAIL FROM FORNECEDORES WHERE RAZAO_SOCIAL LIKE '%" + nomeFornecedor + "%'";
+            string queryProcurarFornecedor = "SELECT RAZAO_SOCIAL, CNPJ, ENDERECO, NUMERO, BAIRRO, CIDADE, COMPLEMENTO, UF, TELEFONE, CELULAR, CEP, EMAIL FROM FORNECEDORES WHERE RAZAO_SOCIAL LIKE '%" + nomeFornecedor + "%' AND DELETADO = FALSE";
 
             MySqlCommand command = new MySqlCommand(queryProcurarFornecedor, AbrirBanco());
 
@@ -26,6 +26,20 @@ namespace QrAguas.Controls
             FecharBanco(AbrirBanco());
 
             return dataTable;
+        }
+
+        public bool ExcluirFornecedor(int idFornecedor)
+        {
+            string queryExcluirFornecedor = "UPDATE FORNECEDORES SET DELETADO = TRUE WHERE ID_FORNECEDORES = @ID_FORNECEDORES";
+
+            MySqlCommand command = new MySqlCommand(queryExcluirFornecedor, AbrirBanco());
+            command.Parameters.AddWithValue("@ID_FORNECEDORES", idFornecedor);
+
+            int rowCount = command.ExecuteNonQuery();
+
+            FecharBanco(AbrirBanco());
+
+            return rowCount != 0 ? true : false;
         }
 
     }

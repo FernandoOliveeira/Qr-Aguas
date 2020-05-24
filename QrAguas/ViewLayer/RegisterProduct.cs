@@ -65,7 +65,7 @@ namespace QrAguas.View_Layer
         private void CBFornecedor_Click(object sender, EventArgs e)
         {
             // Atualiza o ComboBoxFornecedor
-            this.fORNECEDORESTableAdapter.Fill(this.qrAguasRemoteDBDataSet.FORNECEDORES);
+            this.fORNECEDORESTableAdapter.FillByDeletadoFalse(this.qrAguasRemoteDBDataSet.FORNECEDORES);
 
         }
 

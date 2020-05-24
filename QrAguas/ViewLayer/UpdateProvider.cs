@@ -2,24 +2,58 @@
 using QrAguas.Models;
 using Refit;
 using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
+using System.Drawing;
+using System.Linq;
+using System.Text;
 using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace QrAguas.View_Layer
+namespace QrAguas.ViewLayer
 {
-    public partial class RegisterProvider : Form
+    public partial class UpdateProvider : Form
     {
-        public RegisterProvider()
+        public UpdateProvider()
         {
             InitializeComponent();
         }
 
-        RegisterProvidersMethods ProvidersMethods = new RegisterProvidersMethods();
+        public int IdFornecedor { private get; set; }
+        public string RazaoSocial { get; internal set; }
+        public string Cnpj { get; internal set; }
+        public string Endereco { get; internal set; }
+        public int Numero { get; internal set; }
+        public string Bairro { get; internal set; }
+        public string Cidade { get; internal set; }
+        public string Complemento { get; internal set; }
+        public string Uf { get; internal set; }
+        public string Telefone { get; internal set; }
+        public string Celular { get; internal set; }
+        public string Cep { get; internal set; }
+        public string Email { get; internal set; }
 
-        private void RegisterProvider_Load(object sender, EventArgs e)
+
+        NewProvider AtualizarFornecedor;
+
+        UpdateProviderMethods updateProviderMethods = new UpdateProviderMethods();
+
+        private void UpdateProvider_Load(object sender, EventArgs e)
         {
-            txtNumero.Text = "0";
+            txtBairro.Text = Bairro;
+            txtCelular.Text = Celular;
+            txtCep.Text = Cep;
+            txtCidade.Text = Cidade;
+            txtCnpj.Text = Cnpj;
+            txtComplemento.Text = Complemento;
+            txtEmail.Text = Email;
+            txtEndereco.Text = Endereco;
+            txtNumero.Text = Numero.ToString();
+            txtRazaoSocial.Text = RazaoSocial;
+            txtTelefone.Text = Telefone;
+            txtUf.Text = Uf;
         }
 
         private async void BtnConsultar_Click(object sender, EventArgs e)
@@ -33,8 +67,8 @@ namespace QrAguas.View_Layer
 
                 MessageBox.Show("Erro ao realizar a consulta. \nVerifique se o CEP foi digitado corretamente.", "Erro na consulta", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
-             
-            
+
+
         }
 
         public async Task ConsultarCep(string cep)
@@ -56,8 +90,8 @@ namespace QrAguas.View_Layer
 
                 MessageBox.Show("Erro ao realizar a consulta. \nVerifique a sua conexão com a internet.", "Erro na consulta", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
-            
-            
+
+
         }
 
         private void TxtNumero_KeyPress(object sender, KeyPressEventArgs e)
@@ -95,51 +129,55 @@ namespace QrAguas.View_Layer
             }
         }
 
-        private void BtnCadastrar_Click(object sender, EventArgs e)
+        private void ConsultarCep_KeyDown(object sender, KeyEventArgs e)
         {
+            ActiveForm.AcceptButton = btnConsultar;
+        }
 
-            if (txtNumero.Text.Trim() == "")
+        private void BtnAtualizar_Click(object sender, EventArgs e)
+        {
+            if (txtNumero.Text == "")
             {
                 txtNumero.Text = "0";
             }
 
             try
             {
-                NewProvider objNewProvider = new NewProvider
+                AtualizarFornecedor = new NewProvider
                 {
-                    RazaoSocial = txtRazaoSocial.Text.Trim(),
-                    Cnpj = txtCnpj.Text,
-                    Endereco = txtEndereco.Text.Trim(),
-                    Numero = int.Parse(txtNumero.Text),
                     Bairro = txtBairro.Text.Trim(),
+                    Celular = txtCelular.Text.Trim(),
+                    Cep = txtCep.Text.Trim(),
                     Cidade = txtCidade.Text.Trim(),
+                    Cnpj = txtCnpj.Text.Trim(),
                     Complemento = txtComplemento.Text.Trim(),
-                    Uf = txtUf.Text.ToUpper().Trim(),
-                    Telefone = txtTelefone.Text,
-                    Celular = txtCelular.Text,
-                    Cep = txtCep.Text,
-                    Email = txtEmail.Text.Trim()
-
+                    Email = txtEmail.Text.Trim(),
+                    Endereco = txtEndereco.Text.Trim(),
+                    Numero = int.Parse(txtNumero.Text.Trim()),
+                    RazaoSocial = txtRazaoSocial.Text.Trim(),
+                    Telefone = txtTelefone.Text.Trim(),
+                    Uf = txtUf.Text.Trim()
                 };
 
                 // Verifica se os campos obrigatórios foram preenchidos corretamente
-                if (ProvidersMethods.VerificarDadosFornecedores(objNewProvider))
+                if (updateProviderMethods.VerificarDadosFornecedores(AtualizarFornecedor))
                 {
                     // Validação de CNPJ
-                    if (ProvidersMethods.ValidarCnpj(txtCnpj.Text))
+                    if (updateProviderMethods.ValidarCnpj(txtCnpj.Text))
                     {
                         // Caso o campo email não esteja vazio
                         if (txtEmail.Text.Trim().Length != 0)
                         {
                             // Validação do E-mail
-                            if (ProvidersMethods.ValidarEmail(txtEmail.Text.Trim()))
+                            if (updateProviderMethods.ValidarEmail(txtEmail.Text.Trim()))
                             {
                                 // Cadastrar fornecedor
-                                if (ProvidersMethods.CadastrarNovoFornecedor(objNewProvider))
+                                if (updateProviderMethods.AtualizarFornecedor(AtualizarFornecedor, IdFornecedor))
                                 {
-                                    MessageBox.Show("Fornecedor cadastrado com sucesso !", "Cadastro Realizado", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                                    MessageBox.Show("Fornecedor atualizado com sucesso !", "Atualizado", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
-                                    LimparCampos();
+                                    SearchProvider.FornecedorAtualizado = true;
+                                    Close();
                                 }
                             }
                             else
@@ -150,50 +188,34 @@ namespace QrAguas.View_Layer
                         else
                         {
                             // Cadastrar fornecedor
-                            if (ProvidersMethods.CadastrarNovoFornecedor(objNewProvider))
+                            if (updateProviderMethods.AtualizarFornecedor(AtualizarFornecedor, IdFornecedor))
                             {
-                                MessageBox.Show("Fornecedor cadastrado com sucesso !", "Cadastro Realizado", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                                MessageBox.Show("Fornecedor atualizado com sucesso !", "Atualizado", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
-                                LimparCampos();
+                                SearchProvider.FornecedorAtualizado = true;
+                                Close();
                             }
                         }
-                        
+
                     }
                     else
                     {
                         MessageBox.Show("CNPJ inválido.", "CNPJ inválido", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                     }
-
                 }
                 else
                 {
                     MessageBox.Show("Um ou mais campos obrigatórios* estão vazios ou incompletos.", "Campos vazios", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 }
-
             }
             catch (Exception error)
             {
-
-                MessageBox.Show("Erro ao cadastrar \nErro: " + error, "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Erro ao atualizar \nErro: " + error, "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             
-        }
-       
-        private void LimparCampos()
-        {
-            txtRazaoSocial.Text = "";
-            txtCnpj.Text = "";
-            txtEndereco.Text = "";
-            txtNumero.Text = null;
-            txtBairro.Text = "";
-            txtCidade.Text = "";
-            txtComplemento.Text = "";
-            txtUf.Text = "";
-            txtTelefone.Text = "";
-            txtCelular.Text = "";
-            txtCep.Text = "";
-            txtEmail.Text = "";
 
+            
         }
+
     }
 }
