@@ -188,6 +188,12 @@
     <Compile Include="ViewLayer\ReportProvider.Designer.cs">
       <DependentUpon>ReportProvider.cs</DependentUpon>
     </Compile>
+    <Compile Include="ViewLayer\SearchProduct.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ViewLayer\SearchProduct.Designer.cs">
+      <DependentUpon>SearchProduct.cs</DependentUpon>
+    </Compile>
     <Compile Include="ViewLayer\SearchProvider.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -262,6 +268,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="ViewLayer\ReportProvider.resx">
       <DependentUpon>ReportProvider.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewLayer\SearchProduct.resx">
+      <DependentUpon>SearchProduct.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ViewLayer\SearchProvider.resx">
       <DependentUpon>SearchProvider.cs</DependentUpon>
