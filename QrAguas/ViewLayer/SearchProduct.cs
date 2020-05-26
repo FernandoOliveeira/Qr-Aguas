@@ -16,5 +16,11 @@ namespace QrAguas.ViewLayer
         {
             InitializeComponent();
         }
+
+        private void SearchProduct_Load(object sender, EventArgs e)
+        {
+            // TODO: This line of code loads data into the 'qrAguasRemoteDBDataSet.SearchProductDGVProdutos' table. You can move, or remove it, as needed.
+            this.searchProductDGVProdutosTableAdapter.Fill(this.qrAguasRemoteDBDataSet.SearchProductDGVProdutos);
+        }
     }
 }
