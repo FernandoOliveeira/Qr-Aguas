@@ -240,7 +240,7 @@
             // cODPRODUTODataGridViewTextBoxColumn
             // 
             this.cODPRODUTODataGridViewTextBoxColumn.DataPropertyName = "COD_PRODUTO";
-            this.cODPRODUTODataGridViewTextBoxColumn.HeaderText = "Cód. Produto";
+            this.cODPRODUTODataGridViewTextBoxColumn.HeaderText = "Código";
             this.cODPRODUTODataGridViewTextBoxColumn.Name = "cODPRODUTODataGridViewTextBoxColumn";
             this.cODPRODUTODataGridViewTextBoxColumn.ReadOnly = true;
             // 
@@ -261,7 +261,7 @@
             // dESCRICAODataGridViewTextBoxColumn
             // 
             this.dESCRICAODataGridViewTextBoxColumn.DataPropertyName = "DESCRICAO";
-            this.dESCRICAODataGridViewTextBoxColumn.HeaderText = "Descricao";
+            this.dESCRICAODataGridViewTextBoxColumn.HeaderText = "Descrição";
             this.dESCRICAODataGridViewTextBoxColumn.Name = "dESCRICAODataGridViewTextBoxColumn";
             this.dESCRICAODataGridViewTextBoxColumn.ReadOnly = true;
             // 
