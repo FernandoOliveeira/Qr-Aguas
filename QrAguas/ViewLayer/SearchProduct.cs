@@ -1,4 +1,5 @@
-﻿using System;
+﻿using QrAguas.Controls;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -17,6 +18,9 @@ namespace QrAguas.ViewLayer
             InitializeComponent();
         }
 
+        SearchProductMethods searchProductMethods = new SearchProductMethods();
+
+
         private void SearchProduct_Load(object sender, EventArgs e)
         {
             // Tamanho minimo do form
@@ -34,20 +38,45 @@ namespace QrAguas.ViewLayer
 
         private void DGVFornecedores_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
+            int idProduto = int.Parse(DGVFornecedores.SelectedRows[0].Cells[0].Value.ToString());
+
             string nomeProduto = DGVFornecedores.SelectedRows[0].Cells[2].Value.ToString();
 
             switch (DGVFornecedores.Columns[e.ColumnIndex].HeaderText)
             {
-
+                #region Excluir
                 case "Excluir":
 
                     DialogResult respostaExcluir = MessageBox.Show("Deseja mesmo excluir o produto " + nomeProduto.ToUpper() + " ?", "Excluir Produto", MessageBoxButtons.YesNo, MessageBoxIcon.Warning, MessageBoxDefaultButton.Button2);
 
+                    if (respostaExcluir == DialogResult.Yes)
+                    {
+                        try
+                        {
+                            if (searchProductMethods.ExcluirProduto(idProduto))
+                            {
+                                // Atualiza os dados no DGVProdutos
+                                this.searchProductDGVProdutosTableAdapter.Fill(this.qrAguasRemoteDBDataSet.SearchProductDGVProdutos);
+
+                                MessageBox.Show("Produto excluído com sucesso !", "Produto Excluído", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                            }
+                        }
+                        catch (Exception error)
+                        {
+
+                            MessageBox.Show("Erro ao excluir. \nErro: " + error, "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        }
+                    }
+
                     break;
+                #endregion
 
                 case "Atualizar":
 
                     DialogResult respostaAtualizar = MessageBox.Show("Deseja mesmo atualizar o produto " + nomeProduto.ToUpper() + " ?", "Atualizar Produto", MessageBoxButtons.YesNo, MessageBoxIcon.Information, MessageBoxDefaultButton.Button2);
+
+
+
 
                     break;
             }
