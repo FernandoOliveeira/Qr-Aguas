@@ -228,6 +228,28 @@ namespace QrAguas.View_Layer
                     // Fim
                     break;
 
+                case "Consultar Produtos":
+
+                    bool SearchProductOpen = false;
+
+                    // Início: Este bloco de código impede que sejam abertos múltiplos forms iguais
+                    foreach (Form form in Application.OpenForms)
+                    {
+                        if (form.Name == "SearchProduct")
+                        {
+                            SearchProductOpen = true;
+                            form.BringToFront();
+                            break;
+                        }
+                    }
+                    if (SearchProductOpen == false)
+                    {
+                        SearchProduct searchProduct = new SearchProduct();
+                        searchProduct.Show();
+                    }
+                    // Fim
+                    break;
+
                 #endregion
 
                 #region Relatórios

@@ -101,6 +101,7 @@
     <Compile Include="Controls\RegisterProductMethods.cs" />
     <Compile Include="Controls\RegisterProvidersMethods.cs" />
     <Compile Include="Controls\RegisterUserMethods.cs" />
+    <Compile Include="Controls\SearchProductMethods.cs" />
     <Compile Include="Controls\SearchProviderMethods.cs" />
     <Compile Include="Controls\SearchUserMethods.cs" />
     <Compile Include="Controls\SellProductMethods.cs" />
@@ -188,6 +189,12 @@
     <Compile Include="ViewLayer\ReportProvider.Designer.cs">
       <DependentUpon>ReportProvider.cs</DependentUpon>
     </Compile>
+    <Compile Include="ViewLayer\SearchProduct.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ViewLayer\SearchProduct.Designer.cs">
+      <DependentUpon>SearchProduct.cs</DependentUpon>
+    </Compile>
     <Compile Include="ViewLayer\SearchProvider.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -262,6 +269,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="ViewLayer\ReportProvider.resx">
       <DependentUpon>ReportProvider.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewLayer\SearchProduct.resx">
+      <DependentUpon>SearchProduct.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ViewLayer\SearchProvider.resx">
       <DependentUpon>SearchProvider.cs</DependentUpon>

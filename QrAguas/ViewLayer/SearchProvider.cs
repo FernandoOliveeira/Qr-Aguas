@@ -47,7 +47,7 @@ namespace QrAguas.ViewLayer
 
         private void DGVFornecedores_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-            int idFornecedor = (int)DGVFornecedores.SelectedRows[0].Cells[0].Value;
+            int idFornecedor = int.Parse(DGVFornecedores.SelectedRows[0].Cells[0].Value.ToString());
             string nomeFornecedor = DGVFornecedores.SelectedRows[0].Cells[1].Value.ToString();
 
             switch (DGVFornecedores.Columns[e.ColumnIndex].HeaderText)

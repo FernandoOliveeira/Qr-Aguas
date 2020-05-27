@@ -46,21 +46,23 @@
             System.Windows.Forms.TreeNode treeNode9 = new System.Windows.Forms.TreeNode("Gerador de Qr Code", new System.Windows.Forms.TreeNode[] {
             treeNode8});
             System.Windows.Forms.TreeNode treeNode10 = new System.Windows.Forms.TreeNode("Consultar Fornecedores", 1, 1);
-            System.Windows.Forms.TreeNode treeNode11 = new System.Windows.Forms.TreeNode("Consultas", new System.Windows.Forms.TreeNode[] {
-            treeNode10});
-            System.Windows.Forms.TreeNode treeNode12 = new System.Windows.Forms.TreeNode("Relatório de Vendas", 1, 1);
-            System.Windows.Forms.TreeNode treeNode13 = new System.Windows.Forms.TreeNode("Relatório de Fornecedores", 1, 1);
-            System.Windows.Forms.TreeNode treeNode14 = new System.Windows.Forms.TreeNode("Relatório de Produtos", 1, 1);
-            System.Windows.Forms.TreeNode treeNode15 = new System.Windows.Forms.TreeNode("Relatórios", new System.Windows.Forms.TreeNode[] {
-            treeNode12,
+            System.Windows.Forms.TreeNode treeNode11 = new System.Windows.Forms.TreeNode("Consultar Produtos", 1, 1);
+            System.Windows.Forms.TreeNode treeNode12 = new System.Windows.Forms.TreeNode("Consultas", new System.Windows.Forms.TreeNode[] {
+            treeNode10,
+            treeNode11});
+            System.Windows.Forms.TreeNode treeNode13 = new System.Windows.Forms.TreeNode("Relatório de Vendas", 1, 1);
+            System.Windows.Forms.TreeNode treeNode14 = new System.Windows.Forms.TreeNode("Relatório de Fornecedores", 1, 1);
+            System.Windows.Forms.TreeNode treeNode15 = new System.Windows.Forms.TreeNode("Relatório de Produtos", 1, 1);
+            System.Windows.Forms.TreeNode treeNode16 = new System.Windows.Forms.TreeNode("Relatórios", new System.Windows.Forms.TreeNode[] {
             treeNode13,
-            treeNode14});
-            System.Windows.Forms.TreeNode treeNode16 = new System.Windows.Forms.TreeNode("Qr Águas - Menu Geral", 0, 0, new System.Windows.Forms.TreeNode[] {
+            treeNode14,
+            treeNode15});
+            System.Windows.Forms.TreeNode treeNode17 = new System.Windows.Forms.TreeNode("Qr Águas - Menu Geral", 0, 0, new System.Windows.Forms.TreeNode[] {
             treeNode5,
             treeNode7,
             treeNode9,
-            treeNode11,
-            treeNode15});
+            treeNode12,
+            treeNode16});
             this.TreeViewImageList = new System.Windows.Forms.ImageList(this.components);
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.segundoItemToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -106,14 +108,14 @@
             // procurarUsuarioToolStripMenuItem
             // 
             this.procurarUsuarioToolStripMenuItem.Name = "procurarUsuarioToolStripMenuItem";
-            this.procurarUsuarioToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.procurarUsuarioToolStripMenuItem.Size = new System.Drawing.Size(160, 22);
             this.procurarUsuarioToolStripMenuItem.Text = "Procurar Usuário";
             this.procurarUsuarioToolStripMenuItem.Click += new System.EventHandler(this.ProcurarUsuarioToolStripMenuItem_Click);
             // 
             // alterarSenhaToolStripMenuItem
             // 
             this.alterarSenhaToolStripMenuItem.Name = "alterarSenhaToolStripMenuItem";
-            this.alterarSenhaToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.alterarSenhaToolStripMenuItem.Size = new System.Drawing.Size(160, 22);
             this.alterarSenhaToolStripMenuItem.Text = "Alterar Senha";
             this.alterarSenhaToolStripMenuItem.Click += new System.EventHandler(this.AlterarSenhaToolStripMenuItem_Click);
             // 
@@ -193,28 +195,32 @@
             treeNode10.Name = "Node0";
             treeNode10.SelectedImageIndex = 1;
             treeNode10.Text = "Consultar Fornecedores";
-            treeNode11.Name = "Node3";
-            treeNode11.Text = "Consultas";
-            treeNode12.ImageIndex = 1;
-            treeNode12.Name = "Node0";
-            treeNode12.SelectedImageIndex = 1;
-            treeNode12.Text = "Relatório de Vendas";
+            treeNode11.ImageIndex = 1;
+            treeNode11.Name = "Node1";
+            treeNode11.SelectedImageIndex = 1;
+            treeNode11.Text = "Consultar Produtos";
+            treeNode12.Name = "Node3";
+            treeNode12.Text = "Consultas";
             treeNode13.ImageIndex = 1;
-            treeNode13.Name = "Node1";
+            treeNode13.Name = "Node0";
             treeNode13.SelectedImageIndex = 1;
-            treeNode13.Text = "Relatório de Fornecedores";
+            treeNode13.Text = "Relatório de Vendas";
             treeNode14.ImageIndex = 1;
-            treeNode14.Name = "Node2";
+            treeNode14.Name = "Node1";
             treeNode14.SelectedImageIndex = 1;
-            treeNode14.Text = "Relatório de Produtos";
-            treeNode15.Name = "Node4";
-            treeNode15.Text = "Relatórios";
-            treeNode16.ImageIndex = 0;
-            treeNode16.Name = "Node0";
-            treeNode16.SelectedImageIndex = 0;
-            treeNode16.Text = "Qr Águas - Menu Geral";
+            treeNode14.Text = "Relatório de Fornecedores";
+            treeNode15.ImageIndex = 1;
+            treeNode15.Name = "Node2";
+            treeNode15.SelectedImageIndex = 1;
+            treeNode15.Text = "Relatório de Produtos";
+            treeNode16.Name = "Node4";
+            treeNode16.Text = "Relatórios";
+            treeNode17.ImageIndex = 0;
+            treeNode17.Name = "Node0";
+            treeNode17.SelectedImageIndex = 0;
+            treeNode17.Text = "Qr Águas - Menu Geral";
             this.treeView.Nodes.AddRange(new System.Windows.Forms.TreeNode[] {
-            treeNode16});
+            treeNode17});
             this.treeView.SelectedImageIndex = 0;
             this.treeView.Size = new System.Drawing.Size(270, 538);
             this.treeView.TabIndex = 0;
