@@ -33,6 +33,8 @@ namespace QrAguas.View_Layer
             // Flag recebe valor false na inicialização do form
             UpdateCategoryResultado = false;
 
+            // Define o tamanho minimo do form
+            this.MinimumSize = new Size(600, 401);
             
 
         }
