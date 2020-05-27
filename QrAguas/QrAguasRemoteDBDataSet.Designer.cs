@@ -10215,15 +10215,34 @@ ORDER BY P.NOME_PRODUTO";
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         private void InitCommandCollection() {
-            this._commandCollection = new global::MySql.Data.MySqlClient.MySqlCommand[1];
+            this._commandCollection = new global::MySql.Data.MySqlClient.MySqlCommand[2];
             this._commandCollection[0] = new global::MySql.Data.MySqlClient.MySqlCommand();
             this._commandCollection[0].Connection = this.Connection;
             this._commandCollection[0].CommandText = @"SELECT        P.ID_PRODUTOS, P.COD_PRODUTO, P.NOME_PRODUTO, C.NOME_CATEGORIA, P.DESCRICAO, P.QUANTIDADE, P.PRECO_COMPRA, P.PRECO_VENDA, F.RAZAO_SOCIAL, P.DATA_VALIDADE, P.DATA_CADASTRO
 FROM            PRODUTOS P INNER JOIN
                          CATEGORIAS C ON P.ID_CATEGORIAS = C.ID_CATEGORIAS INNER JOIN
                          FORNECEDORES F ON P.ID_FORNECEDORES = F.ID_FORNECEDORES
+WHERE        (P.DELETADO <> TRUE)
 ORDER BY P.COD_PRODUTO";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
+            this._commandCollection[1] = new global::MySql.Data.MySqlClient.MySqlCommand();
+            this._commandCollection[1].Connection = this.Connection;
+            this._commandCollection[1].CommandText = @"SELECT        P.ID_PRODUTOS, P.COD_PRODUTO, P.NOME_PRODUTO, C.NOME_CATEGORIA, P.DESCRICAO, P.QUANTIDADE, P.PRECO_COMPRA, P.PRECO_VENDA, F.RAZAO_SOCIAL, P.DATA_VALIDADE, P.DATA_CADASTRO
+FROM            PRODUTOS P INNER JOIN
+                         CATEGORIAS C ON P.ID_CATEGORIAS = C.ID_CATEGORIAS INNER JOIN
+                         FORNECEDORES F ON P.ID_FORNECEDORES = F.ID_FORNECEDORES
+WHERE        (P.NOME_PRODUTO LIKE @Param1)
+ORDER BY P.COD_PRODUTO";
+            this._commandCollection[1].CommandType = global::System.Data.CommandType.Text;
+            global::MySql.Data.MySqlClient.MySqlParameter param = new global::MySql.Data.MySqlClient.MySqlParameter();
+            param.ParameterName = "@Param1";
+            param.DbType = global::System.Data.DbType.String;
+            param.MySqlDbType = global::MySql.Data.MySqlClient.MySqlDbType.VarChar;
+            param.Size = 30;
+            param.IsNullable = true;
+            param.SourceColumn = "NOME_PRODUTO";
+            param.SourceVersion = global::System.Data.DataRowVersion.Current;
+            this._commandCollection[1].Parameters.Add(param);
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -10245,6 +10264,42 @@ ORDER BY P.COD_PRODUTO";
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
         public virtual QrAguasRemoteDBDataSet.SearchProductDGVProdutosDataTable GetData() {
             this.Adapter.SelectCommand = this.CommandCollection[0];
+            QrAguasRemoteDBDataSet.SearchProductDGVProdutosDataTable dataTable = new QrAguasRemoteDBDataSet.SearchProductDGVProdutosDataTable();
+            this.Adapter.Fill(dataTable);
+            return dataTable;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, false)]
+        public virtual int FillByNomeProduto(QrAguasRemoteDBDataSet.SearchProductDGVProdutosDataTable dataTable, string Param1) {
+            this.Adapter.SelectCommand = this.CommandCollection[1];
+            if ((Param1 == null)) {
+                throw new global::System.ArgumentNullException("Param1");
+            }
+            else {
+                this.Adapter.SelectCommand.Parameters[0].Value = ((string)(Param1));
+            }
+            if ((this.ClearBeforeFill == true)) {
+                dataTable.Clear();
+            }
+            int returnValue = this.Adapter.Fill(dataTable);
+            return returnValue;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, false)]
+        public virtual QrAguasRemoteDBDataSet.SearchProductDGVProdutosDataTable GetDataByNomeProduto(string Param1) {
+            this.Adapter.SelectCommand = this.CommandCollection[1];
+            if ((Param1 == null)) {
+                throw new global::System.ArgumentNullException("Param1");
+            }
+            else {
+                this.Adapter.SelectCommand.Parameters[0].Value = ((string)(Param1));
+            }
             QrAguasRemoteDBDataSet.SearchProductDGVProdutosDataTable dataTable = new QrAguasRemoteDBDataSet.SearchProductDGVProdutosDataTable();
             this.Adapter.Fill(dataTable);
             return dataTable;

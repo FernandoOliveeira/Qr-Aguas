@@ -158,6 +158,7 @@
             this.btnProcurar.TabIndex = 0;
             this.btnProcurar.Text = "Procurar";
             this.btnProcurar.UseVisualStyleBackColor = false;
+            this.btnProcurar.Click += new System.EventHandler(this.BtnProcurar_Click);
             // 
             // panel2
             // 

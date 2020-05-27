@@ -19,8 +19,17 @@ namespace QrAguas.ViewLayer
 
         private void SearchProduct_Load(object sender, EventArgs e)
         {
-            // TODO: This line of code loads data into the 'qrAguasRemoteDBDataSet.SearchProductDGVProdutos' table. You can move, or remove it, as needed.
+            // Tamanho minimo do form
+            this.MinimumSize = new Size(1050, 500);
+
+            // Insere os dados no DGVProdutos
             this.searchProductDGVProdutosTableAdapter.Fill(this.qrAguasRemoteDBDataSet.SearchProductDGVProdutos);
+        }
+
+        private void BtnProcurar_Click(object sender, EventArgs e)
+        {
+            // Realiza a busca e exibe os produtos no DataGrigView com base no que foi digitado pelo usuário
+            this.searchProductDGVProdutosTableAdapter.FillByNomeProduto(this.qrAguasRemoteDBDataSet.SearchProductDGVProdutos, "%" + txtFornecedor.Text.Trim() + "%");
         }
     }
 }
