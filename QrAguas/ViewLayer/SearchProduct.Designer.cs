@@ -43,9 +43,6 @@
             this.btnProcurar = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
             this.DGVFornecedores = new System.Windows.Forms.DataGridView();
-            this.qrAguasRemoteDBDataSet = new QrAguas.QrAguasRemoteDBDataSet();
-            this.searchProductDGVProdutosBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.searchProductDGVProdutosTableAdapter = new QrAguas.QrAguasRemoteDBDataSetTableAdapters.SearchProductDGVProdutosTableAdapter();
             this.iDPRODUTOSDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.cODPRODUTODataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.nOMEPRODUTODataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -59,13 +56,16 @@
             this.dATACADASTRODataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Atualizar = new System.Windows.Forms.DataGridViewButtonColumn();
             this.Excluir = new System.Windows.Forms.DataGridViewButtonColumn();
+            this.searchProductDGVProdutosBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.qrAguasRemoteDBDataSet = new QrAguas.QrAguasRemoteDBDataSet();
+            this.searchProductDGVProdutosTableAdapter = new QrAguas.QrAguasRemoteDBDataSetTableAdapters.SearchProductDGVProdutosTableAdapter();
             this.tableLayoutPanel1.SuspendLayout();
             this.panelFornecedor.SuspendLayout();
             this.panelBtnProcurar.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.DGVFornecedores)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.qrAguasRemoteDBDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.searchProductDGVProdutosBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.qrAguasRemoteDBDataSet)).BeginInit();
             this.SuspendLayout();
             // 
             // tableLayoutPanel1
@@ -110,7 +110,7 @@
             this.panelFornecedor.Location = new System.Drawing.Point(161, 82);
             this.panelFornecedor.Name = "panelFornecedor";
             this.panelFornecedor.Size = new System.Drawing.Size(356, 81);
-            this.panelFornecedor.TabIndex = 14;
+            this.panelFornecedor.TabIndex = 0;
             // 
             // lblFornecedor
             // 
@@ -133,6 +133,7 @@
             this.txtFornecedor.Name = "txtFornecedor";
             this.txtFornecedor.Size = new System.Drawing.Size(319, 20);
             this.txtFornecedor.TabIndex = 0;
+            this.txtFornecedor.KeyDown += new System.Windows.Forms.KeyEventHandler(this.TxtFornecedor_KeyDown);
             // 
             // panelBtnProcurar
             // 
@@ -141,7 +142,7 @@
             this.panelBtnProcurar.Location = new System.Drawing.Point(523, 82);
             this.panelBtnProcurar.Name = "panelBtnProcurar";
             this.panelBtnProcurar.Size = new System.Drawing.Size(347, 81);
-            this.panelBtnProcurar.TabIndex = 15;
+            this.panelBtnProcurar.TabIndex = 1;
             // 
             // btnProcurar
             // 
@@ -215,20 +216,7 @@
             this.DGVFornecedores.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.DGVFornecedores.Size = new System.Drawing.Size(1028, 289);
             this.DGVFornecedores.TabIndex = 1;
-            // 
-            // qrAguasRemoteDBDataSet
-            // 
-            this.qrAguasRemoteDBDataSet.DataSetName = "QrAguasRemoteDBDataSet";
-            this.qrAguasRemoteDBDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // searchProductDGVProdutosBindingSource
-            // 
-            this.searchProductDGVProdutosBindingSource.DataMember = "SearchProductDGVProdutos";
-            this.searchProductDGVProdutosBindingSource.DataSource = this.qrAguasRemoteDBDataSet;
-            // 
-            // searchProductDGVProdutosTableAdapter
-            // 
-            this.searchProductDGVProdutosTableAdapter.ClearBeforeFill = true;
+            this.DGVFornecedores.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DGVFornecedores_CellContentClick);
             // 
             // iDPRODUTOSDataGridViewTextBoxColumn
             // 
@@ -338,6 +326,20 @@
             this.Excluir.Text = "Excluir";
             this.Excluir.UseColumnTextForButtonValue = true;
             // 
+            // searchProductDGVProdutosBindingSource
+            // 
+            this.searchProductDGVProdutosBindingSource.DataMember = "SearchProductDGVProdutos";
+            this.searchProductDGVProdutosBindingSource.DataSource = this.qrAguasRemoteDBDataSet;
+            // 
+            // qrAguasRemoteDBDataSet
+            // 
+            this.qrAguasRemoteDBDataSet.DataSetName = "QrAguasRemoteDBDataSet";
+            this.qrAguasRemoteDBDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // searchProductDGVProdutosTableAdapter
+            // 
+            this.searchProductDGVProdutosTableAdapter.ClearBeforeFill = true;
+            // 
             // SearchProduct
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -356,8 +358,8 @@
             this.panelBtnProcurar.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.DGVFornecedores)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.qrAguasRemoteDBDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.searchProductDGVProdutosBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.qrAguasRemoteDBDataSet)).EndInit();
             this.ResumeLayout(false);
 
         }
