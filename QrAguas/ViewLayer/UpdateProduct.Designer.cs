@@ -1,0 +1,627 @@
+﻿namespace QrAguas.ViewLayer
+{
+    partial class UpdateProduct
+    {
+        /// <summary>
+        /// Required designer variable.
+        /// </summary>
+        private System.ComponentModel.IContainer components = null;
+
+        /// <summary>
+        /// Clean up any resources being used.
+        /// </summary>
+        /// <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        protected override void Dispose(bool disposing)
+        {
+            if (disposing && (components != null))
+            {
+                components.Dispose();
+            }
+            base.Dispose(disposing);
+        }
+
+        #region Windows Form Designer generated code
+
+        /// <summary>
+        /// Required method for Designer support - do not modify
+        /// the contents of this method with the code editor.
+        /// </summary>
+        private void InitializeComponent()
+        {
+            this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(UpdateProduct));
+            this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
+            this.lblTitulo = new System.Windows.Forms.Label();
+            this.panelBtnCadastrar = new System.Windows.Forms.Panel();
+            this.btnAtualizar = new System.Windows.Forms.Button();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.txtCodProduto = new System.Windows.Forms.TextBox();
+            this.lblCodProduto = new System.Windows.Forms.Label();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.txtNome = new System.Windows.Forms.TextBox();
+            this.lblNome = new System.Windows.Forms.Label();
+            this.panelPrecoCompra = new System.Windows.Forms.Panel();
+            this.txtPrecoCompra = new System.Windows.Forms.TextBox();
+            this.lblPrecoCompra = new System.Windows.Forms.Label();
+            this.panelFornecedor = new System.Windows.Forms.Panel();
+            this.CBFornecedor = new System.Windows.Forms.ComboBox();
+            this.lblFornecedor = new System.Windows.Forms.Label();
+            this.panel4 = new System.Windows.Forms.Panel();
+            this.CBCategoria = new System.Windows.Forms.ComboBox();
+            this.lblCategoria = new System.Windows.Forms.Label();
+            this.panelPrecoEntrega = new System.Windows.Forms.Panel();
+            this.txtPrecoVenda = new System.Windows.Forms.TextBox();
+            this.lblPrecoVenda = new System.Windows.Forms.Label();
+            this.panelDescricao = new System.Windows.Forms.Panel();
+            this.txtDescricao = new System.Windows.Forms.TextBox();
+            this.lblDescricao = new System.Windows.Forms.Label();
+            this.panel6 = new System.Windows.Forms.Panel();
+            this.txtQuantidade = new System.Windows.Forms.NumericUpDown();
+            this.lblQuantidade = new System.Windows.Forms.Label();
+            this.panel3 = new System.Windows.Forms.Panel();
+            this.DTPFabricacao = new System.Windows.Forms.DateTimePicker();
+            this.lblDataFabricacao = new System.Windows.Forms.Label();
+            this.panel5 = new System.Windows.Forms.Panel();
+            this.DTPValidade = new System.Windows.Forms.DateTimePicker();
+            this.lblDataValidade = new System.Windows.Forms.Label();
+            this.qrAguasRemoteDBDataSet = new QrAguas.QrAguasRemoteDBDataSet();
+            this.cATEGORIASBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.cATEGORIASTableAdapter = new QrAguas.QrAguasRemoteDBDataSetTableAdapters.CATEGORIASTableAdapter();
+            this.fORNECEDORESBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.fORNECEDORESTableAdapter = new QrAguas.QrAguasRemoteDBDataSetTableAdapters.FORNECEDORESTableAdapter();
+            this.tableLayoutPanel1.SuspendLayout();
+            this.panelBtnCadastrar.SuspendLayout();
+            this.panel1.SuspendLayout();
+            this.panel2.SuspendLayout();
+            this.panelPrecoCompra.SuspendLayout();
+            this.panelFornecedor.SuspendLayout();
+            this.panel4.SuspendLayout();
+            this.panelPrecoEntrega.SuspendLayout();
+            this.panelDescricao.SuspendLayout();
+            this.panel6.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.txtQuantidade)).BeginInit();
+            this.panel3.SuspendLayout();
+            this.panel5.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.qrAguasRemoteDBDataSet)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cATEGORIASBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.fORNECEDORESBindingSource)).BeginInit();
+            this.SuspendLayout();
+            // 
+            // tableLayoutPanel1
+            // 
+            this.tableLayoutPanel1.ColumnCount = 3;
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
+            this.tableLayoutPanel1.Controls.Add(this.lblTitulo, 0, 0);
+            this.tableLayoutPanel1.Controls.Add(this.panelBtnCadastrar, 0, 5);
+            this.tableLayoutPanel1.Controls.Add(this.panel1, 0, 1);
+            this.tableLayoutPanel1.Controls.Add(this.panel2, 1, 1);
+            this.tableLayoutPanel1.Controls.Add(this.panelPrecoCompra, 2, 1);
+            this.tableLayoutPanel1.Controls.Add(this.panelFornecedor, 0, 2);
+            this.tableLayoutPanel1.Controls.Add(this.panel4, 0, 3);
+            this.tableLayoutPanel1.Controls.Add(this.panelPrecoEntrega, 2, 2);
+            this.tableLayoutPanel1.Controls.Add(this.panelDescricao, 1, 2);
+            this.tableLayoutPanel1.Controls.Add(this.panel6, 1, 3);
+            this.tableLayoutPanel1.Controls.Add(this.panel3, 2, 3);
+            this.tableLayoutPanel1.Controls.Add(this.panel5, 2, 4);
+            this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 0);
+            this.tableLayoutPanel1.Margin = new System.Windows.Forms.Padding(4);
+            this.tableLayoutPanel1.Name = "tableLayoutPanel1";
+            this.tableLayoutPanel1.RowCount = 6;
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 15.4013F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 15.83514F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 14.3167F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 14.53362F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 17.13666F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 22.12581F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(634, 461);
+            this.tableLayoutPanel1.TabIndex = 3;
+            // 
+            // lblTitulo
+            // 
+            this.tableLayoutPanel1.SetColumnSpan(this.lblTitulo, 3);
+            this.lblTitulo.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.lblTitulo.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTitulo.ForeColor = System.Drawing.Color.White;
+            this.lblTitulo.Location = new System.Drawing.Point(4, 0);
+            this.lblTitulo.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblTitulo.Name = "lblTitulo";
+            this.lblTitulo.Size = new System.Drawing.Size(626, 71);
+            this.lblTitulo.TabIndex = 3;
+            this.lblTitulo.Text = "Atualizar de Produtos";
+            this.lblTitulo.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // panelBtnCadastrar
+            // 
+            this.tableLayoutPanel1.SetColumnSpan(this.panelBtnCadastrar, 3);
+            this.panelBtnCadastrar.Controls.Add(this.btnAtualizar);
+            this.panelBtnCadastrar.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panelBtnCadastrar.Location = new System.Drawing.Point(4, 360);
+            this.panelBtnCadastrar.Margin = new System.Windows.Forms.Padding(4);
+            this.panelBtnCadastrar.Name = "panelBtnCadastrar";
+            this.panelBtnCadastrar.Size = new System.Drawing.Size(626, 97);
+            this.panelBtnCadastrar.TabIndex = 9;
+            // 
+            // btnAtualizar
+            // 
+            this.btnAtualizar.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnAtualizar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(175)))), ((int)(((byte)(239)))));
+            this.btnAtualizar.FlatAppearance.BorderSize = 0;
+            this.btnAtualizar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAtualizar.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAtualizar.ForeColor = System.Drawing.Color.White;
+            this.btnAtualizar.Location = new System.Drawing.Point(241, 4);
+            this.btnAtualizar.Margin = new System.Windows.Forms.Padding(4);
+            this.btnAtualizar.Name = "btnAtualizar";
+            this.btnAtualizar.Size = new System.Drawing.Size(152, 48);
+            this.btnAtualizar.TabIndex = 0;
+            this.btnAtualizar.Text = "Atualizar";
+            this.btnAtualizar.UseVisualStyleBackColor = false;
+            // 
+            // panel1
+            // 
+            this.panel1.Controls.Add(this.txtCodProduto);
+            this.panel1.Controls.Add(this.lblCodProduto);
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel1.Location = new System.Drawing.Point(4, 75);
+            this.panel1.Margin = new System.Windows.Forms.Padding(4);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(203, 65);
+            this.panel1.TabIndex = 0;
+            // 
+            // txtCodProduto
+            // 
+            this.txtCodProduto.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtCodProduto.Location = new System.Drawing.Point(12, 34);
+            this.txtCodProduto.Margin = new System.Windows.Forms.Padding(4);
+            this.txtCodProduto.Name = "txtCodProduto";
+            this.txtCodProduto.Size = new System.Drawing.Size(186, 20);
+            this.txtCodProduto.TabIndex = 0;
+            // 
+            // lblCodProduto
+            // 
+            this.lblCodProduto.AutoSize = true;
+            this.lblCodProduto.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCodProduto.ForeColor = System.Drawing.Color.White;
+            this.lblCodProduto.Location = new System.Drawing.Point(8, 8);
+            this.lblCodProduto.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblCodProduto.Name = "lblCodProduto";
+            this.lblCodProduto.Size = new System.Drawing.Size(135, 17);
+            this.lblCodProduto.TabIndex = 1;
+            this.lblCodProduto.Text = "Código do Produto:*";
+            // 
+            // panel2
+            // 
+            this.panel2.Controls.Add(this.txtNome);
+            this.panel2.Controls.Add(this.lblNome);
+            this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel2.Location = new System.Drawing.Point(215, 75);
+            this.panel2.Margin = new System.Windows.Forms.Padding(4);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(203, 65);
+            this.panel2.TabIndex = 1;
+            // 
+            // txtNome
+            // 
+            this.txtNome.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtNome.Location = new System.Drawing.Point(12, 34);
+            this.txtNome.Margin = new System.Windows.Forms.Padding(4);
+            this.txtNome.Name = "txtNome";
+            this.txtNome.Size = new System.Drawing.Size(186, 20);
+            this.txtNome.TabIndex = 0;
+            // 
+            // lblNome
+            // 
+            this.lblNome.AutoSize = true;
+            this.lblNome.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblNome.ForeColor = System.Drawing.Color.White;
+            this.lblNome.Location = new System.Drawing.Point(12, 8);
+            this.lblNome.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblNome.Name = "lblNome";
+            this.lblNome.Size = new System.Drawing.Size(128, 17);
+            this.lblNome.TabIndex = 1;
+            this.lblNome.Text = "Nome do Produto:*";
+            // 
+            // panelPrecoCompra
+            // 
+            this.panelPrecoCompra.Controls.Add(this.txtPrecoCompra);
+            this.panelPrecoCompra.Controls.Add(this.lblPrecoCompra);
+            this.panelPrecoCompra.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panelPrecoCompra.Location = new System.Drawing.Point(426, 75);
+            this.panelPrecoCompra.Margin = new System.Windows.Forms.Padding(4);
+            this.panelPrecoCompra.Name = "panelPrecoCompra";
+            this.panelPrecoCompra.Size = new System.Drawing.Size(204, 65);
+            this.panelPrecoCompra.TabIndex = 2;
+            // 
+            // txtPrecoCompra
+            // 
+            this.txtPrecoCompra.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtPrecoCompra.Location = new System.Drawing.Point(12, 34);
+            this.txtPrecoCompra.Margin = new System.Windows.Forms.Padding(4);
+            this.txtPrecoCompra.Name = "txtPrecoCompra";
+            this.txtPrecoCompra.Size = new System.Drawing.Size(186, 20);
+            this.txtPrecoCompra.TabIndex = 0;
+            // 
+            // lblPrecoCompra
+            // 
+            this.lblPrecoCompra.AutoSize = true;
+            this.lblPrecoCompra.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblPrecoCompra.ForeColor = System.Drawing.Color.White;
+            this.lblPrecoCompra.Location = new System.Drawing.Point(8, 8);
+            this.lblPrecoCompra.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblPrecoCompra.Name = "lblPrecoCompra";
+            this.lblPrecoCompra.Size = new System.Drawing.Size(127, 17);
+            this.lblPrecoCompra.TabIndex = 1;
+            this.lblPrecoCompra.Text = "Preço de Compra:*";
+            // 
+            // panelFornecedor
+            // 
+            this.panelFornecedor.Controls.Add(this.CBFornecedor);
+            this.panelFornecedor.Controls.Add(this.lblFornecedor);
+            this.panelFornecedor.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panelFornecedor.Location = new System.Drawing.Point(4, 148);
+            this.panelFornecedor.Margin = new System.Windows.Forms.Padding(4);
+            this.panelFornecedor.Name = "panelFornecedor";
+            this.panelFornecedor.Size = new System.Drawing.Size(203, 58);
+            this.panelFornecedor.TabIndex = 3;
+            // 
+            // CBFornecedor
+            // 
+            this.CBFornecedor.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.CBFornecedor.DataSource = this.fORNECEDORESBindingSource;
+            this.CBFornecedor.DisplayMember = "RAZAO_SOCIAL";
+            this.CBFornecedor.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.CBFornecedor.FormattingEnabled = true;
+            this.CBFornecedor.IntegralHeight = false;
+            this.CBFornecedor.Location = new System.Drawing.Point(12, 28);
+            this.CBFornecedor.Name = "CBFornecedor";
+            this.CBFornecedor.Size = new System.Drawing.Size(186, 21);
+            this.CBFornecedor.TabIndex = 2;
+            this.CBFornecedor.ValueMember = "ID_FORNECEDORES";
+            // 
+            // lblFornecedor
+            // 
+            this.lblFornecedor.AutoSize = true;
+            this.lblFornecedor.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblFornecedor.ForeColor = System.Drawing.Color.White;
+            this.lblFornecedor.Location = new System.Drawing.Point(8, 8);
+            this.lblFornecedor.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblFornecedor.Name = "lblFornecedor";
+            this.lblFornecedor.Size = new System.Drawing.Size(90, 17);
+            this.lblFornecedor.TabIndex = 1;
+            this.lblFornecedor.Text = "Fornecedor:*";
+            // 
+            // panel4
+            // 
+            this.panel4.Controls.Add(this.CBCategoria);
+            this.panel4.Controls.Add(this.lblCategoria);
+            this.panel4.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel4.Location = new System.Drawing.Point(4, 214);
+            this.panel4.Margin = new System.Windows.Forms.Padding(4);
+            this.panel4.Name = "panel4";
+            this.panel4.Size = new System.Drawing.Size(203, 59);
+            this.panel4.TabIndex = 6;
+            // 
+            // CBCategoria
+            // 
+            this.CBCategoria.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.CBCategoria.DataSource = this.cATEGORIASBindingSource;
+            this.CBCategoria.DisplayMember = "NOME_CATEGORIA";
+            this.CBCategoria.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.CBCategoria.FormattingEnabled = true;
+            this.CBCategoria.IntegralHeight = false;
+            this.CBCategoria.ItemHeight = 13;
+            this.CBCategoria.Location = new System.Drawing.Point(12, 30);
+            this.CBCategoria.Margin = new System.Windows.Forms.Padding(4);
+            this.CBCategoria.Name = "CBCategoria";
+            this.CBCategoria.Size = new System.Drawing.Size(186, 21);
+            this.CBCategoria.TabIndex = 4;
+            this.CBCategoria.ValueMember = "ID_CATEGORIAS";
+            // 
+            // lblCategoria
+            // 
+            this.lblCategoria.AutoSize = true;
+            this.lblCategoria.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCategoria.ForeColor = System.Drawing.Color.White;
+            this.lblCategoria.Location = new System.Drawing.Point(12, 5);
+            this.lblCategoria.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblCategoria.Name = "lblCategoria";
+            this.lblCategoria.Size = new System.Drawing.Size(78, 17);
+            this.lblCategoria.TabIndex = 3;
+            this.lblCategoria.Text = "Categoria:*";
+            // 
+            // panelPrecoEntrega
+            // 
+            this.panelPrecoEntrega.Controls.Add(this.txtPrecoVenda);
+            this.panelPrecoEntrega.Controls.Add(this.lblPrecoVenda);
+            this.panelPrecoEntrega.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panelPrecoEntrega.Location = new System.Drawing.Point(426, 148);
+            this.panelPrecoEntrega.Margin = new System.Windows.Forms.Padding(4);
+            this.panelPrecoEntrega.Name = "panelPrecoEntrega";
+            this.panelPrecoEntrega.Size = new System.Drawing.Size(204, 58);
+            this.panelPrecoEntrega.TabIndex = 5;
+            // 
+            // txtPrecoVenda
+            // 
+            this.txtPrecoVenda.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtPrecoVenda.Location = new System.Drawing.Point(12, 34);
+            this.txtPrecoVenda.Margin = new System.Windows.Forms.Padding(4);
+            this.txtPrecoVenda.Name = "txtPrecoVenda";
+            this.txtPrecoVenda.Size = new System.Drawing.Size(186, 20);
+            this.txtPrecoVenda.TabIndex = 0;
+            // 
+            // lblPrecoVenda
+            // 
+            this.lblPrecoVenda.AutoSize = true;
+            this.lblPrecoVenda.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblPrecoVenda.ForeColor = System.Drawing.Color.White;
+            this.lblPrecoVenda.Location = new System.Drawing.Point(8, 8);
+            this.lblPrecoVenda.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblPrecoVenda.Name = "lblPrecoVenda";
+            this.lblPrecoVenda.Size = new System.Drawing.Size(119, 17);
+            this.lblPrecoVenda.TabIndex = 1;
+            this.lblPrecoVenda.Text = "Preço de Venda:*";
+            // 
+            // panelDescricao
+            // 
+            this.panelDescricao.Controls.Add(this.txtDescricao);
+            this.panelDescricao.Controls.Add(this.lblDescricao);
+            this.panelDescricao.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panelDescricao.Location = new System.Drawing.Point(215, 148);
+            this.panelDescricao.Margin = new System.Windows.Forms.Padding(4);
+            this.panelDescricao.Name = "panelDescricao";
+            this.panelDescricao.Size = new System.Drawing.Size(203, 58);
+            this.panelDescricao.TabIndex = 4;
+            // 
+            // txtDescricao
+            // 
+            this.txtDescricao.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtDescricao.Location = new System.Drawing.Point(12, 34);
+            this.txtDescricao.Margin = new System.Windows.Forms.Padding(4);
+            this.txtDescricao.Name = "txtDescricao";
+            this.txtDescricao.Size = new System.Drawing.Size(186, 20);
+            this.txtDescricao.TabIndex = 2;
+            // 
+            // lblDescricao
+            // 
+            this.lblDescricao.AutoSize = true;
+            this.lblDescricao.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblDescricao.ForeColor = System.Drawing.Color.White;
+            this.lblDescricao.Location = new System.Drawing.Point(8, 8);
+            this.lblDescricao.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblDescricao.Name = "lblDescricao";
+            this.lblDescricao.Size = new System.Drawing.Size(80, 17);
+            this.lblDescricao.TabIndex = 1;
+            this.lblDescricao.Text = "Descrição:*";
+            // 
+            // panel6
+            // 
+            this.panel6.Controls.Add(this.txtQuantidade);
+            this.panel6.Controls.Add(this.lblQuantidade);
+            this.panel6.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel6.Location = new System.Drawing.Point(214, 213);
+            this.panel6.Name = "panel6";
+            this.panel6.Size = new System.Drawing.Size(205, 61);
+            this.panel6.TabIndex = 10;
+            // 
+            // txtQuantidade
+            // 
+            this.txtQuantidade.Enabled = false;
+            this.txtQuantidade.Location = new System.Drawing.Point(13, 31);
+            this.txtQuantidade.Maximum = new decimal(new int[] {
+            2147483647,
+            0,
+            0,
+            0});
+            this.txtQuantidade.Minimum = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            this.txtQuantidade.Name = "txtQuantidade";
+            this.txtQuantidade.Size = new System.Drawing.Size(186, 20);
+            this.txtQuantidade.TabIndex = 4;
+            this.txtQuantidade.Value = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            // 
+            // lblQuantidade
+            // 
+            this.lblQuantidade.AutoSize = true;
+            this.lblQuantidade.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblQuantidade.ForeColor = System.Drawing.Color.White;
+            this.lblQuantidade.Location = new System.Drawing.Point(5, 6);
+            this.lblQuantidade.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblQuantidade.Name = "lblQuantidade";
+            this.lblQuantidade.Size = new System.Drawing.Size(91, 17);
+            this.lblQuantidade.TabIndex = 3;
+            this.lblQuantidade.Text = "Quantidade:*";
+            // 
+            // panel3
+            // 
+            this.panel3.Controls.Add(this.DTPFabricacao);
+            this.panel3.Controls.Add(this.lblDataFabricacao);
+            this.panel3.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel3.Location = new System.Drawing.Point(426, 214);
+            this.panel3.Margin = new System.Windows.Forms.Padding(4);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(204, 59);
+            this.panel3.TabIndex = 7;
+            // 
+            // DTPFabricacao
+            // 
+            this.DTPFabricacao.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.DTPFabricacao.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.DTPFabricacao.Location = new System.Drawing.Point(12, 32);
+            this.DTPFabricacao.Name = "DTPFabricacao";
+            this.DTPFabricacao.Size = new System.Drawing.Size(187, 20);
+            this.DTPFabricacao.TabIndex = 5;
+            // 
+            // lblDataFabricacao
+            // 
+            this.lblDataFabricacao.AutoSize = true;
+            this.lblDataFabricacao.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblDataFabricacao.ForeColor = System.Drawing.Color.White;
+            this.lblDataFabricacao.Location = new System.Drawing.Point(12, 5);
+            this.lblDataFabricacao.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblDataFabricacao.Name = "lblDataFabricacao";
+            this.lblDataFabricacao.Size = new System.Drawing.Size(141, 17);
+            this.lblDataFabricacao.TabIndex = 3;
+            this.lblDataFabricacao.Text = "Data de Fabricação:*";
+            // 
+            // panel5
+            // 
+            this.panel5.Controls.Add(this.DTPValidade);
+            this.panel5.Controls.Add(this.lblDataValidade);
+            this.panel5.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel5.Location = new System.Drawing.Point(426, 281);
+            this.panel5.Margin = new System.Windows.Forms.Padding(4);
+            this.panel5.Name = "panel5";
+            this.panel5.Size = new System.Drawing.Size(204, 71);
+            this.panel5.TabIndex = 8;
+            // 
+            // DTPValidade
+            // 
+            this.DTPValidade.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.DTPValidade.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.DTPValidade.Location = new System.Drawing.Point(12, 30);
+            this.DTPValidade.Name = "DTPValidade";
+            this.DTPValidade.Size = new System.Drawing.Size(186, 20);
+            this.DTPValidade.TabIndex = 6;
+            // 
+            // lblDataValidade
+            // 
+            this.lblDataValidade.AutoSize = true;
+            this.lblDataValidade.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblDataValidade.ForeColor = System.Drawing.Color.White;
+            this.lblDataValidade.Location = new System.Drawing.Point(12, 5);
+            this.lblDataValidade.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblDataValidade.Name = "lblDataValidade";
+            this.lblDataValidade.Size = new System.Drawing.Size(126, 17);
+            this.lblDataValidade.TabIndex = 3;
+            this.lblDataValidade.Text = "Data de Validade:*";
+            // 
+            // qrAguasRemoteDBDataSet
+            // 
+            this.qrAguasRemoteDBDataSet.DataSetName = "QrAguasRemoteDBDataSet";
+            this.qrAguasRemoteDBDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // cATEGORIASBindingSource
+            // 
+            this.cATEGORIASBindingSource.DataMember = "CATEGORIAS";
+            this.cATEGORIASBindingSource.DataSource = this.qrAguasRemoteDBDataSet;
+            // 
+            // cATEGORIASTableAdapter
+            // 
+            this.cATEGORIASTableAdapter.ClearBeforeFill = true;
+            // 
+            // fORNECEDORESBindingSource
+            // 
+            this.fORNECEDORESBindingSource.DataMember = "FORNECEDORES";
+            this.fORNECEDORESBindingSource.DataSource = this.qrAguasRemoteDBDataSet;
+            // 
+            // fORNECEDORESTableAdapter
+            // 
+            this.fORNECEDORESTableAdapter.ClearBeforeFill = true;
+            // 
+            // UpdateProduct
+            // 
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(130)))), ((int)(((byte)(156)))), ((int)(((byte)(188)))));
+            this.ClientSize = new System.Drawing.Size(634, 461);
+            this.Controls.Add(this.tableLayoutPanel1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.MaximizeBox = false;
+            this.Name = "UpdateProduct";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = "Qr Águas - Atualizar Produto";
+            this.Load += new System.EventHandler(this.UpdateProduct_Load);
+            this.tableLayoutPanel1.ResumeLayout(false);
+            this.panelBtnCadastrar.ResumeLayout(false);
+            this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
+            this.panel2.ResumeLayout(false);
+            this.panel2.PerformLayout();
+            this.panelPrecoCompra.ResumeLayout(false);
+            this.panelPrecoCompra.PerformLayout();
+            this.panelFornecedor.ResumeLayout(false);
+            this.panelFornecedor.PerformLayout();
+            this.panel4.ResumeLayout(false);
+            this.panel4.PerformLayout();
+            this.panelPrecoEntrega.ResumeLayout(false);
+            this.panelPrecoEntrega.PerformLayout();
+            this.panelDescricao.ResumeLayout(false);
+            this.panelDescricao.PerformLayout();
+            this.panel6.ResumeLayout(false);
+            this.panel6.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.txtQuantidade)).EndInit();
+            this.panel3.ResumeLayout(false);
+            this.panel3.PerformLayout();
+            this.panel5.ResumeLayout(false);
+            this.panel5.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.qrAguasRemoteDBDataSet)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cATEGORIASBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.fORNECEDORESBindingSource)).EndInit();
+            this.ResumeLayout(false);
+
+        }
+
+        #endregion
+
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
+        private System.Windows.Forms.Label lblTitulo;
+        private System.Windows.Forms.Panel panelBtnCadastrar;
+        private System.Windows.Forms.Button btnAtualizar;
+        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.TextBox txtCodProduto;
+        private System.Windows.Forms.Label lblCodProduto;
+        private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.TextBox txtNome;
+        private System.Windows.Forms.Label lblNome;
+        private System.Windows.Forms.Panel panelPrecoCompra;
+        private System.Windows.Forms.TextBox txtPrecoCompra;
+        private System.Windows.Forms.Label lblPrecoCompra;
+        private System.Windows.Forms.Panel panelFornecedor;
+        private System.Windows.Forms.ComboBox CBFornecedor;
+        private System.Windows.Forms.Label lblFornecedor;
+        private System.Windows.Forms.Panel panel4;
+        private System.Windows.Forms.ComboBox CBCategoria;
+        private System.Windows.Forms.Label lblCategoria;
+        private System.Windows.Forms.Panel panelPrecoEntrega;
+        private System.Windows.Forms.TextBox txtPrecoVenda;
+        private System.Windows.Forms.Label lblPrecoVenda;
+        private System.Windows.Forms.Panel panelDescricao;
+        private System.Windows.Forms.TextBox txtDescricao;
+        private System.Windows.Forms.Label lblDescricao;
+        private System.Windows.Forms.Panel panel6;
+        private System.Windows.Forms.NumericUpDown txtQuantidade;
+        private System.Windows.Forms.Label lblQuantidade;
+        private System.Windows.Forms.Panel panel3;
+        private System.Windows.Forms.DateTimePicker DTPFabricacao;
+        private System.Windows.Forms.Label lblDataFabricacao;
+        private System.Windows.Forms.Panel panel5;
+        private System.Windows.Forms.DateTimePicker DTPValidade;
+        private System.Windows.Forms.Label lblDataValidade;
+        private QrAguasRemoteDBDataSet qrAguasRemoteDBDataSet;
+        private System.Windows.Forms.BindingSource cATEGORIASBindingSource;
+        private QrAguasRemoteDBDataSetTableAdapters.CATEGORIASTableAdapter cATEGORIASTableAdapter;
+        private System.Windows.Forms.BindingSource fORNECEDORESBindingSource;
+        private QrAguasRemoteDBDataSetTableAdapters.FORNECEDORESTableAdapter fORNECEDORESTableAdapter;
+    }
+}

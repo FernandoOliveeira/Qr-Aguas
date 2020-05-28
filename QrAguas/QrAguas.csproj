@@ -219,6 +219,12 @@
     <Compile Include="ViewLayer\UpdateCategory.Designer.cs">
       <DependentUpon>UpdateCategory.cs</DependentUpon>
     </Compile>
+    <Compile Include="ViewLayer\UpdateProduct.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ViewLayer\UpdateProduct.Designer.cs">
+      <DependentUpon>UpdateProduct.cs</DependentUpon>
+    </Compile>
     <Compile Include="ViewLayer\UpdateProvider.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -284,6 +290,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="ViewLayer\UpdateCategory.resx">
       <DependentUpon>UpdateCategory.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewLayer\UpdateProduct.resx">
+      <DependentUpon>UpdateProduct.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ViewLayer\UpdateProvider.resx">
       <DependentUpon>UpdateProvider.cs</DependentUpon>

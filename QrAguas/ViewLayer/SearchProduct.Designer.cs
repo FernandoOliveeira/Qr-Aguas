@@ -43,6 +43,9 @@
             this.btnProcurar = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
             this.DGVFornecedores = new System.Windows.Forms.DataGridView();
+            this.searchProductDGVProdutosBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.qrAguasRemoteDBDataSet = new QrAguas.QrAguasRemoteDBDataSet();
+            this.searchProductDGVProdutosTableAdapter = new QrAguas.QrAguasRemoteDBDataSetTableAdapters.SearchProductDGVProdutosTableAdapter();
             this.iDPRODUTOSDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.cODPRODUTODataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.nOMEPRODUTODataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -52,13 +55,10 @@
             this.pRECOCOMPRADataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.pRECOVENDADataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.rAZAOSOCIALDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.DATA_FABRICACAO = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dATAVALIDADEDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dATACADASTRODataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Atualizar = new System.Windows.Forms.DataGridViewButtonColumn();
             this.Excluir = new System.Windows.Forms.DataGridViewButtonColumn();
-            this.searchProductDGVProdutosBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.qrAguasRemoteDBDataSet = new QrAguas.QrAguasRemoteDBDataSet();
-            this.searchProductDGVProdutosTableAdapter = new QrAguas.QrAguasRemoteDBDataSetTableAdapters.SearchProductDGVProdutosTableAdapter();
             this.tableLayoutPanel1.SuspendLayout();
             this.panelFornecedor.SuspendLayout();
             this.panelBtnProcurar.SuspendLayout();
@@ -200,8 +200,8 @@
             this.pRECOCOMPRADataGridViewTextBoxColumn,
             this.pRECOVENDADataGridViewTextBoxColumn,
             this.rAZAOSOCIALDataGridViewTextBoxColumn,
+            this.DATA_FABRICACAO,
             this.dATAVALIDADEDataGridViewTextBoxColumn,
-            this.dATACADASTRODataGridViewTextBoxColumn,
             this.Atualizar,
             this.Excluir});
             this.DGVFornecedores.DataSource = this.searchProductDGVProdutosBindingSource;
@@ -217,6 +217,20 @@
             this.DGVFornecedores.Size = new System.Drawing.Size(1028, 289);
             this.DGVFornecedores.TabIndex = 1;
             this.DGVFornecedores.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DGVFornecedores_CellContentClick);
+            // 
+            // searchProductDGVProdutosBindingSource
+            // 
+            this.searchProductDGVProdutosBindingSource.DataMember = "SearchProductDGVProdutos";
+            this.searchProductDGVProdutosBindingSource.DataSource = this.qrAguasRemoteDBDataSet;
+            // 
+            // qrAguasRemoteDBDataSet
+            // 
+            this.qrAguasRemoteDBDataSet.DataSetName = "QrAguasRemoteDBDataSet";
+            this.qrAguasRemoteDBDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // searchProductDGVProdutosTableAdapter
+            // 
+            this.searchProductDGVProdutosTableAdapter.ClearBeforeFill = true;
             // 
             // iDPRODUTOSDataGridViewTextBoxColumn
             // 
@@ -282,19 +296,19 @@
             this.rAZAOSOCIALDataGridViewTextBoxColumn.Name = "rAZAOSOCIALDataGridViewTextBoxColumn";
             this.rAZAOSOCIALDataGridViewTextBoxColumn.ReadOnly = true;
             // 
+            // DATA_FABRICACAO
+            // 
+            this.DATA_FABRICACAO.DataPropertyName = "DATA_FABRICACAO";
+            this.DATA_FABRICACAO.HeaderText = "Data de Fabricação";
+            this.DATA_FABRICACAO.Name = "DATA_FABRICACAO";
+            this.DATA_FABRICACAO.ReadOnly = true;
+            // 
             // dATAVALIDADEDataGridViewTextBoxColumn
             // 
             this.dATAVALIDADEDataGridViewTextBoxColumn.DataPropertyName = "DATA_VALIDADE";
             this.dATAVALIDADEDataGridViewTextBoxColumn.HeaderText = "Data de Validade";
             this.dATAVALIDADEDataGridViewTextBoxColumn.Name = "dATAVALIDADEDataGridViewTextBoxColumn";
             this.dATAVALIDADEDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // dATACADASTRODataGridViewTextBoxColumn
-            // 
-            this.dATACADASTRODataGridViewTextBoxColumn.DataPropertyName = "DATA_CADASTRO";
-            this.dATACADASTRODataGridViewTextBoxColumn.HeaderText = "Data de Cadastro";
-            this.dATACADASTRODataGridViewTextBoxColumn.Name = "dATACADASTRODataGridViewTextBoxColumn";
-            this.dATACADASTRODataGridViewTextBoxColumn.ReadOnly = true;
             // 
             // Atualizar
             // 
@@ -325,20 +339,6 @@
             this.Excluir.ReadOnly = true;
             this.Excluir.Text = "Excluir";
             this.Excluir.UseColumnTextForButtonValue = true;
-            // 
-            // searchProductDGVProdutosBindingSource
-            // 
-            this.searchProductDGVProdutosBindingSource.DataMember = "SearchProductDGVProdutos";
-            this.searchProductDGVProdutosBindingSource.DataSource = this.qrAguasRemoteDBDataSet;
-            // 
-            // qrAguasRemoteDBDataSet
-            // 
-            this.qrAguasRemoteDBDataSet.DataSetName = "QrAguasRemoteDBDataSet";
-            this.qrAguasRemoteDBDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // searchProductDGVProdutosTableAdapter
-            // 
-            this.searchProductDGVProdutosTableAdapter.ClearBeforeFill = true;
             // 
             // SearchProduct
             // 
@@ -378,6 +378,9 @@
         private QrAguasRemoteDBDataSet qrAguasRemoteDBDataSet;
         private System.Windows.Forms.BindingSource searchProductDGVProdutosBindingSource;
         private QrAguasRemoteDBDataSetTableAdapters.SearchProductDGVProdutosTableAdapter searchProductDGVProdutosTableAdapter;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dATACADASTRODataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn iDCATEGORIASDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn iDFORNECEDORESDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn iDPRODUTOSDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn cODPRODUTODataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn nOMEPRODUTODataGridViewTextBoxColumn;
@@ -387,8 +390,8 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn pRECOCOMPRADataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn pRECOVENDADataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn rAZAOSOCIALDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn DATA_FABRICACAO;
         private System.Windows.Forms.DataGridViewTextBoxColumn dATAVALIDADEDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dATACADASTRODataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewButtonColumn Atualizar;
         private System.Windows.Forms.DataGridViewButtonColumn Excluir;
     }

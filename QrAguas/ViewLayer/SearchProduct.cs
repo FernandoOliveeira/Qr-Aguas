@@ -23,11 +23,13 @@ namespace QrAguas.ViewLayer
 
         private void SearchProduct_Load(object sender, EventArgs e)
         {
+            // TODO: This line of code loads data into the 'qrAguasRemoteDBDataSet.SearchProductDGVProdutos' table. You can move, or remove it, as needed.
+            this.searchProductDGVProdutosTableAdapter.Fill(this.qrAguasRemoteDBDataSet.SearchProductDGVProdutos);
             // Tamanho minimo do form
             this.MinimumSize = new Size(1050, 500);
-
             // Insere os dados no DGVProdutos
             this.searchProductDGVProdutosTableAdapter.Fill(this.qrAguasRemoteDBDataSet.SearchProductDGVProdutos);
+
         }
 
         private void BtnProcurar_Click(object sender, EventArgs e)
@@ -71,14 +73,34 @@ namespace QrAguas.ViewLayer
                     break;
                 #endregion
 
+                #region Atualizar
                 case "Atualizar":
 
                     DialogResult respostaAtualizar = MessageBox.Show("Deseja mesmo atualizar o produto " + nomeProduto.ToUpper() + " ?", "Atualizar Produto", MessageBoxButtons.YesNo, MessageBoxIcon.Information, MessageBoxDefaultButton.Button2);
 
+                    if (respostaAtualizar == DialogResult.Yes)
+                    {
+                        UpdateProduct updateProduct = new UpdateProduct
+                        {
+                            IdProduto = int.Parse(DGVFornecedores.SelectedRows[0].Cells[0].Value.ToString()),
+                            Codigo = DGVFornecedores.SelectedRows[0].Cells[1].Value.ToString(),
+                            NomeProduto = DGVFornecedores.SelectedRows[0].Cells[2].Value.ToString(),
+                            Categoria = DGVFornecedores.SelectedRows[0].Cells[3].Value.ToString(),
+                            Descricao = DGVFornecedores.SelectedRows[0].Cells[4].Value.ToString(),
+                            Quantidade = int.Parse(DGVFornecedores.SelectedRows[0].Cells[5].Value.ToString()),
+                            Preco_Compra = double.Parse(DGVFornecedores.SelectedRows[0].Cells[6].Value.ToString()),
+                            Preco_Venda = double.Parse(DGVFornecedores.SelectedRows[0].Cells[7].Value.ToString()),
+                            Fornecedor = DGVFornecedores.SelectedRows[0].Cells[8].Value.ToString(),
+                            DataFabricacao = DateTime.Parse(DGVFornecedores.SelectedRows[0].Cells[9].Value.ToString()),
+                            DataValidade = DateTime.Parse(DGVFornecedores.SelectedRows[0].Cells[10].Value.ToString()),
 
+                        };
 
+                        updateProduct.ShowDialog();
+                    }
 
                     break;
+                    #endregion
             }
         }
 
