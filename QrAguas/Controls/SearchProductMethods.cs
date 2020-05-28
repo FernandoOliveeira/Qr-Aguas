@@ -12,12 +12,14 @@ namespace QrAguas.Controls
     {
         public bool ExcluirProduto(int idProduto)
         {
-            string queryExcluirProduto = "UPTADE PRODUTOS SET DELETADO = TRUE WHERE ID_PRODUTO = @ID_PRODUTO";
+            string queryExcluirProduto = "UPDATE PRODUTOS SET DELETADO = TRUE WHERE ID_PRODUTOS = @ID_PRODUTOS";
 
             MySqlCommand command = new MySqlCommand(queryExcluirProduto, AbrirBanco());
-            command.Parameters.AddWithValue("@ID_PRODUTO", idProduto);
+            command.Parameters.AddWithValue("@ID_PRODUTOS", idProduto);
 
             int rowCount = command.ExecuteNonQuery();
+
+            FecharBanco(AbrirBanco());
 
             return rowCount != 0 ? true : false;
         }
