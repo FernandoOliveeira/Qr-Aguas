@@ -131,7 +131,7 @@
             this.lblTitulo.Name = "lblTitulo";
             this.lblTitulo.Size = new System.Drawing.Size(626, 71);
             this.lblTitulo.TabIndex = 3;
-            this.lblTitulo.Text = "Atualizar de Produtos";
+            this.lblTitulo.Text = "Atualizar Produtos";
             this.lblTitulo.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // panelBtnCadastrar
@@ -249,6 +249,7 @@
             this.txtPrecoCompra.Name = "txtPrecoCompra";
             this.txtPrecoCompra.Size = new System.Drawing.Size(186, 20);
             this.txtPrecoCompra.TabIndex = 0;
+            this.txtPrecoCompra.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.SomenteNumeros_KeyPress);
             // 
             // lblPrecoCompra
             // 
@@ -287,6 +288,7 @@
             this.CBFornecedor.Size = new System.Drawing.Size(186, 21);
             this.CBFornecedor.TabIndex = 2;
             this.CBFornecedor.ValueMember = "ID_FORNECEDORES";
+            this.CBFornecedor.Click += new System.EventHandler(this.CBFornecedor_Click);
             // 
             // fORNECEDORESBindingSource
             // 
@@ -337,6 +339,7 @@
             this.CBCategoria.Size = new System.Drawing.Size(186, 21);
             this.CBCategoria.TabIndex = 4;
             this.CBCategoria.ValueMember = "ID_CATEGORIAS";
+            this.CBCategoria.Click += new System.EventHandler(this.CBCategoria_Click);
             // 
             // cATEGORIASBindingSource
             // 
@@ -375,6 +378,7 @@
             this.txtPrecoVenda.Name = "txtPrecoVenda";
             this.txtPrecoVenda.Size = new System.Drawing.Size(186, 20);
             this.txtPrecoVenda.TabIndex = 0;
+            this.txtPrecoVenda.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.SomenteNumeros_KeyPress);
             // 
             // lblPrecoVenda
             // 

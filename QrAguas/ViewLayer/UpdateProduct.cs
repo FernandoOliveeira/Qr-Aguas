@@ -51,6 +51,35 @@ namespace QrAguas.ViewLayer
 
         }
 
+        private void SomenteNumeros_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            // Permite somente números no textBox
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar) && (e.KeyChar != ','))
+            {
+                e.Handled = true;
+            }
+
+            // Permite somente um ponto 
+            if ((e.KeyChar == ',') && ((sender as TextBox).Text.IndexOf(',') > -1))
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void CBCategoria_Click(object sender, EventArgs e)
+        {
+            // Atualiza o ComboBoxCategoria
+            this.cATEGORIASTableAdapter.FillByComboBoxCategoriaUpdateProduct(this.qrAguasRemoteDBDataSet.CATEGORIAS, Categoria);
+
+        }
+
+        private void CBFornecedor_Click(object sender, EventArgs e)
+        {
+            // Atualiza o ComboBoxFornecedor
+            this.fORNECEDORESTableAdapter.FillByComboBoxFornecedoresUpdateProduct(this.qrAguasRemoteDBDataSet.FORNECEDORES, Fornecedor);
+
+        }
+
         private void BtnAtualizar_Click(object sender, EventArgs e)
         {
             // Verificação para que não seja inserido valor null no objProduto.PrecoCompra
