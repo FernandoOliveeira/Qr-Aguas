@@ -22,11 +22,14 @@ namespace QrAguas.Controls
             command.Parameters.AddWithValue("@PRECO_COMPRA", product.PrecoCompra);
             command.Parameters.AddWithValue("@PRECO_VENDA", product.PrecoVenda);
             command.Parameters.AddWithValue("@ID_FORNECEDORES", product.Fornecedor);
+            command.Parameters.AddWithValue("@ID_CATEGORIAS", product.Categoria);
             command.Parameters.AddWithValue("@DATA_FABRICACAO", product.DataFabricao);
             command.Parameters.AddWithValue("@DATA_VALIDADE", product.DataValidade);
             command.Parameters.AddWithValue("@ID_PRODUTOS", idProduto);
 
             int rowCount = command.ExecuteNonQuery();
+
+            FecharBanco(AbrirBanco());
 
             return rowCount != 0 ? true : false;
         }

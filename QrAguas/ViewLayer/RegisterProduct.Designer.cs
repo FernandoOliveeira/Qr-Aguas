@@ -32,59 +32,59 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(RegisterProduct));
             this.lblFornecedor = new System.Windows.Forms.Label();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
-            this.panel5 = new System.Windows.Forms.Panel();
-            this.DTPValidade = new System.Windows.Forms.DateTimePicker();
-            this.lblDataValidade = new System.Windows.Forms.Label();
-            this.panel4 = new System.Windows.Forms.Panel();
-            this.CBCategoria = new System.Windows.Forms.ComboBox();
-            this.cATEGORIASBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.qrAguasRemoteDBDataSet = new QrAguas.QrAguasRemoteDBDataSet();
-            this.lblCategoria = new System.Windows.Forms.Label();
-            this.panelPrecoCompra = new System.Windows.Forms.Panel();
-            this.txtPrecoCompra = new System.Windows.Forms.TextBox();
-            this.lblPrecoCompra = new System.Windows.Forms.Label();
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.txtNome = new System.Windows.Forms.TextBox();
-            this.lblNome = new System.Windows.Forms.Label();
+            this.lblTitulo = new System.Windows.Forms.Label();
+            this.panelBtnCadastrar = new System.Windows.Forms.Panel();
+            this.btnCadastrar = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
             this.txtCodProduto = new System.Windows.Forms.TextBox();
             this.lblCodProduto = new System.Windows.Forms.Label();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.txtNome = new System.Windows.Forms.TextBox();
+            this.lblNome = new System.Windows.Forms.Label();
+            this.panelPrecoCompra = new System.Windows.Forms.Panel();
+            this.txtPrecoCompra = new System.Windows.Forms.TextBox();
+            this.lblPrecoCompra = new System.Windows.Forms.Label();
             this.panelFornecedor = new System.Windows.Forms.Panel();
             this.CBFornecedor = new System.Windows.Forms.ComboBox();
             this.fORNECEDORESBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.qrAguasRemoteDBDataSet = new QrAguas.QrAguasRemoteDBDataSet();
+            this.panel4 = new System.Windows.Forms.Panel();
+            this.CBCategoria = new System.Windows.Forms.ComboBox();
+            this.cATEGORIASBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.lblCategoria = new System.Windows.Forms.Label();
             this.panelPrecoEntrega = new System.Windows.Forms.Panel();
             this.txtPrecoVenda = new System.Windows.Forms.TextBox();
             this.lblPrecoVenda = new System.Windows.Forms.Label();
             this.panelDescricao = new System.Windows.Forms.Panel();
             this.txtDescricao = new System.Windows.Forms.TextBox();
             this.lblDescricao = new System.Windows.Forms.Label();
-            this.panelBtnCadastrar = new System.Windows.Forms.Panel();
-            this.btnCadastrar = new System.Windows.Forms.Button();
+            this.panel6 = new System.Windows.Forms.Panel();
+            this.txtQuantidade = new System.Windows.Forms.NumericUpDown();
+            this.lblQuantidade = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
             this.DTPFabricacao = new System.Windows.Forms.DateTimePicker();
             this.lblDataFabricacao = new System.Windows.Forms.Label();
-            this.lblTitulo = new System.Windows.Forms.Label();
+            this.panel5 = new System.Windows.Forms.Panel();
+            this.DTPValidade = new System.Windows.Forms.DateTimePicker();
+            this.lblDataValidade = new System.Windows.Forms.Label();
             this.fORNECEDORESTableAdapter = new QrAguas.QrAguasRemoteDBDataSetTableAdapters.FORNECEDORESTableAdapter();
             this.cATEGORIASTableAdapter = new QrAguas.QrAguasRemoteDBDataSetTableAdapters.CATEGORIASTableAdapter();
-            this.panel6 = new System.Windows.Forms.Panel();
-            this.lblQuantidade = new System.Windows.Forms.Label();
-            this.txtQuantidade = new System.Windows.Forms.NumericUpDown();
             this.tableLayoutPanel1.SuspendLayout();
-            this.panel5.SuspendLayout();
-            this.panel4.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.cATEGORIASBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.qrAguasRemoteDBDataSet)).BeginInit();
-            this.panelPrecoCompra.SuspendLayout();
-            this.panel2.SuspendLayout();
+            this.panelBtnCadastrar.SuspendLayout();
             this.panel1.SuspendLayout();
+            this.panel2.SuspendLayout();
+            this.panelPrecoCompra.SuspendLayout();
             this.panelFornecedor.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.fORNECEDORESBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.qrAguasRemoteDBDataSet)).BeginInit();
+            this.panel4.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.cATEGORIASBindingSource)).BeginInit();
             this.panelPrecoEntrega.SuspendLayout();
             this.panelDescricao.SuspendLayout();
-            this.panelBtnCadastrar.SuspendLayout();
-            this.panel3.SuspendLayout();
             this.panel6.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.txtQuantidade)).BeginInit();
+            this.panel3.SuspendLayout();
+            this.panel5.SuspendLayout();
             this.SuspendLayout();
             // 
             // lblFornecedor
@@ -92,7 +92,7 @@
             this.lblFornecedor.AutoSize = true;
             this.lblFornecedor.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblFornecedor.ForeColor = System.Drawing.Color.White;
-            this.lblFornecedor.Location = new System.Drawing.Point(8, 8);
+            this.lblFornecedor.Location = new System.Drawing.Point(7, 12);
             this.lblFornecedor.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblFornecedor.Name = "lblFornecedor";
             this.lblFornecedor.Size = new System.Drawing.Size(90, 17);
@@ -132,89 +132,114 @@
             this.tableLayoutPanel1.Size = new System.Drawing.Size(634, 461);
             this.tableLayoutPanel1.TabIndex = 2;
             // 
-            // panel5
+            // lblTitulo
             // 
-            this.panel5.Controls.Add(this.DTPValidade);
-            this.panel5.Controls.Add(this.lblDataValidade);
-            this.panel5.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel5.Location = new System.Drawing.Point(426, 281);
-            this.panel5.Margin = new System.Windows.Forms.Padding(4);
-            this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(204, 71);
-            this.panel5.TabIndex = 8;
+            this.tableLayoutPanel1.SetColumnSpan(this.lblTitulo, 3);
+            this.lblTitulo.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.lblTitulo.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTitulo.ForeColor = System.Drawing.Color.White;
+            this.lblTitulo.Location = new System.Drawing.Point(4, 0);
+            this.lblTitulo.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblTitulo.Name = "lblTitulo";
+            this.lblTitulo.Size = new System.Drawing.Size(626, 71);
+            this.lblTitulo.TabIndex = 3;
+            this.lblTitulo.Text = "Cadastro de Produtos";
+            this.lblTitulo.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // DTPValidade
+            // panelBtnCadastrar
             // 
-            this.DTPValidade.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.tableLayoutPanel1.SetColumnSpan(this.panelBtnCadastrar, 3);
+            this.panelBtnCadastrar.Controls.Add(this.btnCadastrar);
+            this.panelBtnCadastrar.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panelBtnCadastrar.Location = new System.Drawing.Point(4, 360);
+            this.panelBtnCadastrar.Margin = new System.Windows.Forms.Padding(4);
+            this.panelBtnCadastrar.Name = "panelBtnCadastrar";
+            this.panelBtnCadastrar.Size = new System.Drawing.Size(626, 97);
+            this.panelBtnCadastrar.TabIndex = 9;
+            // 
+            // btnCadastrar
+            // 
+            this.btnCadastrar.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.DTPValidade.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.DTPValidade.Location = new System.Drawing.Point(12, 30);
-            this.DTPValidade.Name = "DTPValidade";
-            this.DTPValidade.Size = new System.Drawing.Size(186, 23);
-            this.DTPValidade.TabIndex = 6;
+            this.btnCadastrar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(175)))), ((int)(((byte)(239)))));
+            this.btnCadastrar.FlatAppearance.BorderSize = 0;
+            this.btnCadastrar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCadastrar.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCadastrar.ForeColor = System.Drawing.Color.White;
+            this.btnCadastrar.Location = new System.Drawing.Point(241, 4);
+            this.btnCadastrar.Margin = new System.Windows.Forms.Padding(4);
+            this.btnCadastrar.Name = "btnCadastrar";
+            this.btnCadastrar.Size = new System.Drawing.Size(152, 48);
+            this.btnCadastrar.TabIndex = 0;
+            this.btnCadastrar.Text = "Cadastrar";
+            this.btnCadastrar.UseVisualStyleBackColor = false;
+            this.btnCadastrar.Click += new System.EventHandler(this.BtnCadastrar_Click);
             // 
-            // lblDataValidade
+            // panel1
             // 
-            this.lblDataValidade.AutoSize = true;
-            this.lblDataValidade.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblDataValidade.ForeColor = System.Drawing.Color.White;
-            this.lblDataValidade.Location = new System.Drawing.Point(12, 5);
-            this.lblDataValidade.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.lblDataValidade.Name = "lblDataValidade";
-            this.lblDataValidade.Size = new System.Drawing.Size(126, 17);
-            this.lblDataValidade.TabIndex = 3;
-            this.lblDataValidade.Text = "Data de Validade:*";
+            this.panel1.Controls.Add(this.txtCodProduto);
+            this.panel1.Controls.Add(this.lblCodProduto);
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel1.Location = new System.Drawing.Point(4, 75);
+            this.panel1.Margin = new System.Windows.Forms.Padding(4);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(203, 65);
+            this.panel1.TabIndex = 0;
             // 
-            // panel4
+            // txtCodProduto
             // 
-            this.panel4.Controls.Add(this.CBCategoria);
-            this.panel4.Controls.Add(this.lblCategoria);
-            this.panel4.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel4.Location = new System.Drawing.Point(4, 214);
-            this.panel4.Margin = new System.Windows.Forms.Padding(4);
-            this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(203, 59);
-            this.panel4.TabIndex = 6;
-            // 
-            // CBCategoria
-            // 
-            this.CBCategoria.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.txtCodProduto.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.CBCategoria.DataSource = this.cATEGORIASBindingSource;
-            this.CBCategoria.DisplayMember = "NOME_CATEGORIA";
-            this.CBCategoria.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.CBCategoria.FormattingEnabled = true;
-            this.CBCategoria.IntegralHeight = false;
-            this.CBCategoria.ItemHeight = 17;
-            this.CBCategoria.Location = new System.Drawing.Point(12, 30);
-            this.CBCategoria.Margin = new System.Windows.Forms.Padding(4);
-            this.CBCategoria.Name = "CBCategoria";
-            this.CBCategoria.Size = new System.Drawing.Size(186, 25);
-            this.CBCategoria.TabIndex = 4;
-            this.CBCategoria.ValueMember = "ID_CATEGORIAS";
-            this.CBCategoria.Click += new System.EventHandler(this.CBCategoria_Click);
+            this.txtCodProduto.Location = new System.Drawing.Point(12, 34);
+            this.txtCodProduto.Margin = new System.Windows.Forms.Padding(4);
+            this.txtCodProduto.Name = "txtCodProduto";
+            this.txtCodProduto.Size = new System.Drawing.Size(185, 23);
+            this.txtCodProduto.TabIndex = 0;
             // 
-            // cATEGORIASBindingSource
+            // lblCodProduto
             // 
-            this.cATEGORIASBindingSource.DataMember = "CATEGORIAS";
-            this.cATEGORIASBindingSource.DataSource = this.qrAguasRemoteDBDataSet;
+            this.lblCodProduto.AutoSize = true;
+            this.lblCodProduto.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCodProduto.ForeColor = System.Drawing.Color.White;
+            this.lblCodProduto.Location = new System.Drawing.Point(8, 8);
+            this.lblCodProduto.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblCodProduto.Name = "lblCodProduto";
+            this.lblCodProduto.Size = new System.Drawing.Size(135, 17);
+            this.lblCodProduto.TabIndex = 1;
+            this.lblCodProduto.Text = "Código do Produto:*";
             // 
-            // qrAguasRemoteDBDataSet
+            // panel2
             // 
-            this.qrAguasRemoteDBDataSet.DataSetName = "QrAguasRemoteDBDataSet";
-            this.qrAguasRemoteDBDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            this.panel2.Controls.Add(this.txtNome);
+            this.panel2.Controls.Add(this.lblNome);
+            this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel2.Location = new System.Drawing.Point(215, 75);
+            this.panel2.Margin = new System.Windows.Forms.Padding(4);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(203, 65);
+            this.panel2.TabIndex = 1;
             // 
-            // lblCategoria
+            // txtNome
             // 
-            this.lblCategoria.AutoSize = true;
-            this.lblCategoria.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblCategoria.ForeColor = System.Drawing.Color.White;
-            this.lblCategoria.Location = new System.Drawing.Point(12, 5);
-            this.lblCategoria.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.lblCategoria.Name = "lblCategoria";
-            this.lblCategoria.Size = new System.Drawing.Size(78, 17);
-            this.lblCategoria.TabIndex = 3;
-            this.lblCategoria.Text = "Categoria:*";
+            this.txtNome.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtNome.Location = new System.Drawing.Point(12, 34);
+            this.txtNome.Margin = new System.Windows.Forms.Padding(4);
+            this.txtNome.Name = "txtNome";
+            this.txtNome.Size = new System.Drawing.Size(186, 23);
+            this.txtNome.TabIndex = 0;
+            // 
+            // lblNome
+            // 
+            this.lblNome.AutoSize = true;
+            this.lblNome.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblNome.ForeColor = System.Drawing.Color.White;
+            this.lblNome.Location = new System.Drawing.Point(12, 8);
+            this.lblNome.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblNome.Name = "lblNome";
+            this.lblNome.Size = new System.Drawing.Size(128, 17);
+            this.lblNome.TabIndex = 1;
+            this.lblNome.Text = "Nome do Produto:*";
             // 
             // panelPrecoCompra
             // 
@@ -250,72 +275,6 @@
             this.lblPrecoCompra.TabIndex = 1;
             this.lblPrecoCompra.Text = "Preço de Compra:*";
             // 
-            // panel2
-            // 
-            this.panel2.Controls.Add(this.txtNome);
-            this.panel2.Controls.Add(this.lblNome);
-            this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel2.Location = new System.Drawing.Point(215, 75);
-            this.panel2.Margin = new System.Windows.Forms.Padding(4);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(203, 65);
-            this.panel2.TabIndex = 1;
-            // 
-            // txtNome
-            // 
-            this.txtNome.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtNome.Location = new System.Drawing.Point(12, 34);
-            this.txtNome.Margin = new System.Windows.Forms.Padding(4);
-            this.txtNome.Name = "txtNome";
-            this.txtNome.Size = new System.Drawing.Size(186, 23);
-            this.txtNome.TabIndex = 0;
-            // 
-            // lblNome
-            // 
-            this.lblNome.AutoSize = true;
-            this.lblNome.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblNome.ForeColor = System.Drawing.Color.White;
-            this.lblNome.Location = new System.Drawing.Point(12, 8);
-            this.lblNome.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.lblNome.Name = "lblNome";
-            this.lblNome.Size = new System.Drawing.Size(128, 17);
-            this.lblNome.TabIndex = 1;
-            this.lblNome.Text = "Nome do Produto:*";
-            // 
-            // panel1
-            // 
-            this.panel1.Controls.Add(this.txtCodProduto);
-            this.panel1.Controls.Add(this.lblCodProduto);
-            this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel1.Location = new System.Drawing.Point(4, 75);
-            this.panel1.Margin = new System.Windows.Forms.Padding(4);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(203, 65);
-            this.panel1.TabIndex = 0;
-            // 
-            // txtCodProduto
-            // 
-            this.txtCodProduto.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtCodProduto.Location = new System.Drawing.Point(12, 34);
-            this.txtCodProduto.Margin = new System.Windows.Forms.Padding(4);
-            this.txtCodProduto.Name = "txtCodProduto";
-            this.txtCodProduto.Size = new System.Drawing.Size(186, 23);
-            this.txtCodProduto.TabIndex = 0;
-            // 
-            // lblCodProduto
-            // 
-            this.lblCodProduto.AutoSize = true;
-            this.lblCodProduto.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblCodProduto.ForeColor = System.Drawing.Color.White;
-            this.lblCodProduto.Location = new System.Drawing.Point(8, 8);
-            this.lblCodProduto.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.lblCodProduto.Name = "lblCodProduto";
-            this.lblCodProduto.Size = new System.Drawing.Size(135, 17);
-            this.lblCodProduto.TabIndex = 1;
-            this.lblCodProduto.Text = "Código do Produto:*";
-            // 
             // panelFornecedor
             // 
             this.panelFornecedor.Controls.Add(this.CBFornecedor);
@@ -336,7 +295,7 @@
             this.CBFornecedor.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.CBFornecedor.FormattingEnabled = true;
             this.CBFornecedor.IntegralHeight = false;
-            this.CBFornecedor.Location = new System.Drawing.Point(12, 28);
+            this.CBFornecedor.Location = new System.Drawing.Point(11, 32);
             this.CBFornecedor.Name = "CBFornecedor";
             this.CBFornecedor.Size = new System.Drawing.Size(186, 25);
             this.CBFornecedor.TabIndex = 2;
@@ -347,6 +306,57 @@
             // 
             this.fORNECEDORESBindingSource.DataMember = "FORNECEDORES";
             this.fORNECEDORESBindingSource.DataSource = this.qrAguasRemoteDBDataSet;
+            // 
+            // qrAguasRemoteDBDataSet
+            // 
+            this.qrAguasRemoteDBDataSet.DataSetName = "QrAguasRemoteDBDataSet";
+            this.qrAguasRemoteDBDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // panel4
+            // 
+            this.panel4.Controls.Add(this.CBCategoria);
+            this.panel4.Controls.Add(this.lblCategoria);
+            this.panel4.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel4.Location = new System.Drawing.Point(4, 214);
+            this.panel4.Margin = new System.Windows.Forms.Padding(4);
+            this.panel4.Name = "panel4";
+            this.panel4.Size = new System.Drawing.Size(203, 59);
+            this.panel4.TabIndex = 6;
+            // 
+            // CBCategoria
+            // 
+            this.CBCategoria.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.CBCategoria.DataSource = this.cATEGORIASBindingSource;
+            this.CBCategoria.DisplayMember = "NOME_CATEGORIA";
+            this.CBCategoria.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.CBCategoria.FormattingEnabled = true;
+            this.CBCategoria.IntegralHeight = false;
+            this.CBCategoria.ItemHeight = 17;
+            this.CBCategoria.Location = new System.Drawing.Point(11, 30);
+            this.CBCategoria.Margin = new System.Windows.Forms.Padding(4);
+            this.CBCategoria.Name = "CBCategoria";
+            this.CBCategoria.Size = new System.Drawing.Size(186, 25);
+            this.CBCategoria.TabIndex = 4;
+            this.CBCategoria.ValueMember = "ID_CATEGORIAS";
+            this.CBCategoria.Click += new System.EventHandler(this.CBCategoria_Click);
+            // 
+            // cATEGORIASBindingSource
+            // 
+            this.cATEGORIASBindingSource.DataMember = "CATEGORIAS";
+            this.cATEGORIASBindingSource.DataSource = this.qrAguasRemoteDBDataSet;
+            // 
+            // lblCategoria
+            // 
+            this.lblCategoria.AutoSize = true;
+            this.lblCategoria.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCategoria.ForeColor = System.Drawing.Color.White;
+            this.lblCategoria.Location = new System.Drawing.Point(11, 5);
+            this.lblCategoria.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblCategoria.Name = "lblCategoria";
+            this.lblCategoria.Size = new System.Drawing.Size(78, 17);
+            this.lblCategoria.TabIndex = 3;
+            this.lblCategoria.Text = "Categoria:*";
             // 
             // panelPrecoEntrega
             // 
@@ -415,34 +425,49 @@
             this.lblDescricao.TabIndex = 1;
             this.lblDescricao.Text = "Descrição:*";
             // 
-            // panelBtnCadastrar
+            // panel6
             // 
-            this.tableLayoutPanel1.SetColumnSpan(this.panelBtnCadastrar, 3);
-            this.panelBtnCadastrar.Controls.Add(this.btnCadastrar);
-            this.panelBtnCadastrar.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panelBtnCadastrar.Location = new System.Drawing.Point(4, 360);
-            this.panelBtnCadastrar.Margin = new System.Windows.Forms.Padding(4);
-            this.panelBtnCadastrar.Name = "panelBtnCadastrar";
-            this.panelBtnCadastrar.Size = new System.Drawing.Size(626, 97);
-            this.panelBtnCadastrar.TabIndex = 9;
+            this.panel6.Controls.Add(this.txtQuantidade);
+            this.panel6.Controls.Add(this.lblQuantidade);
+            this.panel6.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel6.Location = new System.Drawing.Point(214, 213);
+            this.panel6.Name = "panel6";
+            this.panel6.Size = new System.Drawing.Size(205, 61);
+            this.panel6.TabIndex = 10;
             // 
-            // btnCadastrar
+            // txtQuantidade
             // 
-            this.btnCadastrar.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnCadastrar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(175)))), ((int)(((byte)(239)))));
-            this.btnCadastrar.FlatAppearance.BorderSize = 0;
-            this.btnCadastrar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnCadastrar.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCadastrar.ForeColor = System.Drawing.Color.White;
-            this.btnCadastrar.Location = new System.Drawing.Point(241, 4);
-            this.btnCadastrar.Margin = new System.Windows.Forms.Padding(4);
-            this.btnCadastrar.Name = "btnCadastrar";
-            this.btnCadastrar.Size = new System.Drawing.Size(152, 48);
-            this.btnCadastrar.TabIndex = 0;
-            this.btnCadastrar.Text = "Cadastrar";
-            this.btnCadastrar.UseVisualStyleBackColor = false;
-            this.btnCadastrar.Click += new System.EventHandler(this.BtnCadastrar_Click);
+            this.txtQuantidade.Location = new System.Drawing.Point(13, 31);
+            this.txtQuantidade.Maximum = new decimal(new int[] {
+            2147483647,
+            0,
+            0,
+            0});
+            this.txtQuantidade.Minimum = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            this.txtQuantidade.Name = "txtQuantidade";
+            this.txtQuantidade.Size = new System.Drawing.Size(186, 23);
+            this.txtQuantidade.TabIndex = 4;
+            this.txtQuantidade.Value = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            // 
+            // lblQuantidade
+            // 
+            this.lblQuantidade.AutoSize = true;
+            this.lblQuantidade.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblQuantidade.ForeColor = System.Drawing.Color.White;
+            this.lblQuantidade.Location = new System.Drawing.Point(5, 6);
+            this.lblQuantidade.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblQuantidade.Name = "lblQuantidade";
+            this.lblQuantidade.Size = new System.Drawing.Size(91, 17);
+            this.lblQuantidade.TabIndex = 3;
+            this.lblQuantidade.Text = "Quantidade:*";
             // 
             // panel3
             // 
@@ -477,19 +502,38 @@
             this.lblDataFabricacao.TabIndex = 3;
             this.lblDataFabricacao.Text = "Data de Fabricação:*";
             // 
-            // lblTitulo
+            // panel5
             // 
-            this.tableLayoutPanel1.SetColumnSpan(this.lblTitulo, 3);
-            this.lblTitulo.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.lblTitulo.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTitulo.ForeColor = System.Drawing.Color.White;
-            this.lblTitulo.Location = new System.Drawing.Point(4, 0);
-            this.lblTitulo.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.lblTitulo.Name = "lblTitulo";
-            this.lblTitulo.Size = new System.Drawing.Size(626, 71);
-            this.lblTitulo.TabIndex = 3;
-            this.lblTitulo.Text = "Cadastro de Produtos";
-            this.lblTitulo.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.panel5.Controls.Add(this.DTPValidade);
+            this.panel5.Controls.Add(this.lblDataValidade);
+            this.panel5.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel5.Location = new System.Drawing.Point(426, 281);
+            this.panel5.Margin = new System.Windows.Forms.Padding(4);
+            this.panel5.Name = "panel5";
+            this.panel5.Size = new System.Drawing.Size(204, 71);
+            this.panel5.TabIndex = 8;
+            // 
+            // DTPValidade
+            // 
+            this.DTPValidade.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.DTPValidade.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.DTPValidade.Location = new System.Drawing.Point(12, 30);
+            this.DTPValidade.Name = "DTPValidade";
+            this.DTPValidade.Size = new System.Drawing.Size(186, 23);
+            this.DTPValidade.TabIndex = 6;
+            // 
+            // lblDataValidade
+            // 
+            this.lblDataValidade.AutoSize = true;
+            this.lblDataValidade.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblDataValidade.ForeColor = System.Drawing.Color.White;
+            this.lblDataValidade.Location = new System.Drawing.Point(12, 5);
+            this.lblDataValidade.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblDataValidade.Name = "lblDataValidade";
+            this.lblDataValidade.Size = new System.Drawing.Size(126, 17);
+            this.lblDataValidade.TabIndex = 3;
+            this.lblDataValidade.Text = "Data de Validade:*";
             // 
             // fORNECEDORESTableAdapter
             // 
@@ -498,50 +542,6 @@
             // cATEGORIASTableAdapter
             // 
             this.cATEGORIASTableAdapter.ClearBeforeFill = true;
-            // 
-            // panel6
-            // 
-            this.panel6.Controls.Add(this.txtQuantidade);
-            this.panel6.Controls.Add(this.lblQuantidade);
-            this.panel6.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel6.Location = new System.Drawing.Point(214, 213);
-            this.panel6.Name = "panel6";
-            this.panel6.Size = new System.Drawing.Size(205, 61);
-            this.panel6.TabIndex = 10;
-            // 
-            // lblQuantidade
-            // 
-            this.lblQuantidade.AutoSize = true;
-            this.lblQuantidade.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblQuantidade.ForeColor = System.Drawing.Color.White;
-            this.lblQuantidade.Location = new System.Drawing.Point(5, 6);
-            this.lblQuantidade.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.lblQuantidade.Name = "lblQuantidade";
-            this.lblQuantidade.Size = new System.Drawing.Size(91, 17);
-            this.lblQuantidade.TabIndex = 3;
-            this.lblQuantidade.Text = "Quantidade:*";
-            // 
-            // txtQuantidade
-            // 
-            this.txtQuantidade.Location = new System.Drawing.Point(13, 31);
-            this.txtQuantidade.Maximum = new decimal(new int[] {
-            2147483647,
-            0,
-            0,
-            0});
-            this.txtQuantidade.Minimum = new decimal(new int[] {
-            1,
-            0,
-            0,
-            0});
-            this.txtQuantidade.Name = "txtQuantidade";
-            this.txtQuantidade.Size = new System.Drawing.Size(186, 23);
-            this.txtQuantidade.TabIndex = 4;
-            this.txtQuantidade.Value = new decimal(new int[] {
-            1,
-            0,
-            0,
-            0});
             // 
             // RegisterProduct
             // 
@@ -560,31 +560,31 @@
             this.Text = "Qr Águas - Cadastro de Produtos";
             this.Load += new System.EventHandler(this.RegisterProduct_Load);
             this.tableLayoutPanel1.ResumeLayout(false);
-            this.panel5.ResumeLayout(false);
-            this.panel5.PerformLayout();
-            this.panel4.ResumeLayout(false);
-            this.panel4.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.cATEGORIASBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.qrAguasRemoteDBDataSet)).EndInit();
-            this.panelPrecoCompra.ResumeLayout(false);
-            this.panelPrecoCompra.PerformLayout();
-            this.panel2.ResumeLayout(false);
-            this.panel2.PerformLayout();
+            this.panelBtnCadastrar.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            this.panel2.ResumeLayout(false);
+            this.panel2.PerformLayout();
+            this.panelPrecoCompra.ResumeLayout(false);
+            this.panelPrecoCompra.PerformLayout();
             this.panelFornecedor.ResumeLayout(false);
             this.panelFornecedor.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.fORNECEDORESBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.qrAguasRemoteDBDataSet)).EndInit();
+            this.panel4.ResumeLayout(false);
+            this.panel4.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.cATEGORIASBindingSource)).EndInit();
             this.panelPrecoEntrega.ResumeLayout(false);
             this.panelPrecoEntrega.PerformLayout();
             this.panelDescricao.ResumeLayout(false);
             this.panelDescricao.PerformLayout();
-            this.panelBtnCadastrar.ResumeLayout(false);
-            this.panel3.ResumeLayout(false);
-            this.panel3.PerformLayout();
             this.panel6.ResumeLayout(false);
             this.panel6.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.txtQuantidade)).EndInit();
+            this.panel3.ResumeLayout(false);
+            this.panel3.PerformLayout();
+            this.panel5.ResumeLayout(false);
+            this.panel5.PerformLayout();
             this.ResumeLayout(false);
 
         }

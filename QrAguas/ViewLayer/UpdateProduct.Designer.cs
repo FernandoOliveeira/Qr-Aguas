@@ -45,9 +45,12 @@
             this.lblPrecoCompra = new System.Windows.Forms.Label();
             this.panelFornecedor = new System.Windows.Forms.Panel();
             this.CBFornecedor = new System.Windows.Forms.ComboBox();
+            this.fORNECEDORESBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.qrAguasRemoteDBDataSet = new QrAguas.QrAguasRemoteDBDataSet();
             this.lblFornecedor = new System.Windows.Forms.Label();
             this.panel4 = new System.Windows.Forms.Panel();
             this.CBCategoria = new System.Windows.Forms.ComboBox();
+            this.cATEGORIASBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.lblCategoria = new System.Windows.Forms.Label();
             this.panelPrecoEntrega = new System.Windows.Forms.Panel();
             this.txtPrecoVenda = new System.Windows.Forms.TextBox();
@@ -64,10 +67,7 @@
             this.panel5 = new System.Windows.Forms.Panel();
             this.DTPValidade = new System.Windows.Forms.DateTimePicker();
             this.lblDataValidade = new System.Windows.Forms.Label();
-            this.qrAguasRemoteDBDataSet = new QrAguas.QrAguasRemoteDBDataSet();
-            this.cATEGORIASBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.cATEGORIASTableAdapter = new QrAguas.QrAguasRemoteDBDataSetTableAdapters.CATEGORIASTableAdapter();
-            this.fORNECEDORESBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.fORNECEDORESTableAdapter = new QrAguas.QrAguasRemoteDBDataSetTableAdapters.FORNECEDORESTableAdapter();
             this.tableLayoutPanel1.SuspendLayout();
             this.panelBtnCadastrar.SuspendLayout();
@@ -75,16 +75,16 @@
             this.panel2.SuspendLayout();
             this.panelPrecoCompra.SuspendLayout();
             this.panelFornecedor.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.fORNECEDORESBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.qrAguasRemoteDBDataSet)).BeginInit();
             this.panel4.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.cATEGORIASBindingSource)).BeginInit();
             this.panelPrecoEntrega.SuspendLayout();
             this.panelDescricao.SuspendLayout();
             this.panel6.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.txtQuantidade)).BeginInit();
             this.panel3.SuspendLayout();
             this.panel5.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.qrAguasRemoteDBDataSet)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.cATEGORIASBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.fORNECEDORESBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // tableLayoutPanel1
@@ -161,6 +161,7 @@
             this.btnAtualizar.TabIndex = 0;
             this.btnAtualizar.Text = "Atualizar";
             this.btnAtualizar.UseVisualStyleBackColor = false;
+            this.btnAtualizar.Click += new System.EventHandler(this.BtnAtualizar_Click);
             // 
             // panel1
             // 
@@ -180,7 +181,7 @@
             this.txtCodProduto.Location = new System.Drawing.Point(12, 34);
             this.txtCodProduto.Margin = new System.Windows.Forms.Padding(4);
             this.txtCodProduto.Name = "txtCodProduto";
-            this.txtCodProduto.Size = new System.Drawing.Size(186, 20);
+            this.txtCodProduto.Size = new System.Drawing.Size(185, 20);
             this.txtCodProduto.TabIndex = 0;
             // 
             // lblCodProduto
@@ -281,18 +282,28 @@
             this.CBFornecedor.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.CBFornecedor.FormattingEnabled = true;
             this.CBFornecedor.IntegralHeight = false;
-            this.CBFornecedor.Location = new System.Drawing.Point(12, 28);
+            this.CBFornecedor.Location = new System.Drawing.Point(11, 34);
             this.CBFornecedor.Name = "CBFornecedor";
             this.CBFornecedor.Size = new System.Drawing.Size(186, 21);
             this.CBFornecedor.TabIndex = 2;
             this.CBFornecedor.ValueMember = "ID_FORNECEDORES";
+            // 
+            // fORNECEDORESBindingSource
+            // 
+            this.fORNECEDORESBindingSource.DataMember = "FORNECEDORES";
+            this.fORNECEDORESBindingSource.DataSource = this.qrAguasRemoteDBDataSet;
+            // 
+            // qrAguasRemoteDBDataSet
+            // 
+            this.qrAguasRemoteDBDataSet.DataSetName = "QrAguasRemoteDBDataSet";
+            this.qrAguasRemoteDBDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // lblFornecedor
             // 
             this.lblFornecedor.AutoSize = true;
             this.lblFornecedor.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblFornecedor.ForeColor = System.Drawing.Color.White;
-            this.lblFornecedor.Location = new System.Drawing.Point(8, 8);
+            this.lblFornecedor.Location = new System.Drawing.Point(7, 14);
             this.lblFornecedor.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblFornecedor.Name = "lblFornecedor";
             this.lblFornecedor.Size = new System.Drawing.Size(90, 17);
@@ -320,19 +331,24 @@
             this.CBCategoria.FormattingEnabled = true;
             this.CBCategoria.IntegralHeight = false;
             this.CBCategoria.ItemHeight = 13;
-            this.CBCategoria.Location = new System.Drawing.Point(12, 30);
+            this.CBCategoria.Location = new System.Drawing.Point(11, 29);
             this.CBCategoria.Margin = new System.Windows.Forms.Padding(4);
             this.CBCategoria.Name = "CBCategoria";
             this.CBCategoria.Size = new System.Drawing.Size(186, 21);
             this.CBCategoria.TabIndex = 4;
             this.CBCategoria.ValueMember = "ID_CATEGORIAS";
             // 
+            // cATEGORIASBindingSource
+            // 
+            this.cATEGORIASBindingSource.DataMember = "CATEGORIAS";
+            this.cATEGORIASBindingSource.DataSource = this.qrAguasRemoteDBDataSet;
+            // 
             // lblCategoria
             // 
             this.lblCategoria.AutoSize = true;
             this.lblCategoria.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblCategoria.ForeColor = System.Drawing.Color.White;
-            this.lblCategoria.Location = new System.Drawing.Point(12, 5);
+            this.lblCategoria.Location = new System.Drawing.Point(11, 4);
             this.lblCategoria.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblCategoria.Name = "lblCategoria";
             this.lblCategoria.Size = new System.Drawing.Size(78, 17);
@@ -516,24 +532,9 @@
             this.lblDataValidade.TabIndex = 3;
             this.lblDataValidade.Text = "Data de Validade:*";
             // 
-            // qrAguasRemoteDBDataSet
-            // 
-            this.qrAguasRemoteDBDataSet.DataSetName = "QrAguasRemoteDBDataSet";
-            this.qrAguasRemoteDBDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // cATEGORIASBindingSource
-            // 
-            this.cATEGORIASBindingSource.DataMember = "CATEGORIAS";
-            this.cATEGORIASBindingSource.DataSource = this.qrAguasRemoteDBDataSet;
-            // 
             // cATEGORIASTableAdapter
             // 
             this.cATEGORIASTableAdapter.ClearBeforeFill = true;
-            // 
-            // fORNECEDORESBindingSource
-            // 
-            this.fORNECEDORESBindingSource.DataMember = "FORNECEDORES";
-            this.fORNECEDORESBindingSource.DataSource = this.qrAguasRemoteDBDataSet;
             // 
             // fORNECEDORESTableAdapter
             // 
@@ -562,8 +563,11 @@
             this.panelPrecoCompra.PerformLayout();
             this.panelFornecedor.ResumeLayout(false);
             this.panelFornecedor.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.fORNECEDORESBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.qrAguasRemoteDBDataSet)).EndInit();
             this.panel4.ResumeLayout(false);
             this.panel4.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.cATEGORIASBindingSource)).EndInit();
             this.panelPrecoEntrega.ResumeLayout(false);
             this.panelPrecoEntrega.PerformLayout();
             this.panelDescricao.ResumeLayout(false);
@@ -575,9 +579,6 @@
             this.panel3.PerformLayout();
             this.panel5.ResumeLayout(false);
             this.panel5.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.qrAguasRemoteDBDataSet)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.cATEGORIASBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.fORNECEDORESBindingSource)).EndInit();
             this.ResumeLayout(false);
 
         }

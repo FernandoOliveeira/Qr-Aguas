@@ -104,7 +104,7 @@ namespace QrAguas.View_Layer
                 {
                     if (ProductMethods.CadastrarNovoProduto(objProduto))
                     {
-                        MessageBox.Show("Produto Cadastrado com sucesso !", "Cadastrado com sucesso", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        MessageBox.Show("Produto cadastrado com sucesso !", "Cadastrado com sucesso", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
                         LimparCampos();
                     }

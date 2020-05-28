@@ -18,17 +18,19 @@ namespace QrAguas.ViewLayer
             InitializeComponent();
         }
 
+        // Propriedade utilizada como Flag, para que, quando um produto for atualizado a mesma recebe true e atualiza o DataGridView
+        public static bool ProdutoAtualizado { private get; set; }
+
         SearchProductMethods searchProductMethods = new SearchProductMethods();
 
 
         private void SearchProduct_Load(object sender, EventArgs e)
         {
-            // TODO: This line of code loads data into the 'qrAguasRemoteDBDataSet.SearchProductDGVProdutos' table. You can move, or remove it, as needed.
-            this.searchProductDGVProdutosTableAdapter.Fill(this.qrAguasRemoteDBDataSet.SearchProductDGVProdutos);
-            // Tamanho minimo do form
-            this.MinimumSize = new Size(1050, 500);
             // Insere os dados no DGVProdutos
             this.searchProductDGVProdutosTableAdapter.Fill(this.qrAguasRemoteDBDataSet.SearchProductDGVProdutos);
+
+            // Tamanho minimo do form
+            this.MinimumSize = new Size(1050, 500);
 
         }
 
@@ -97,6 +99,15 @@ namespace QrAguas.ViewLayer
                         };
 
                         updateProduct.ShowDialog();
+
+                        if (ProdutoAtualizado == true)
+                        {
+
+                            ProdutoAtualizado = false; 
+
+                            // Atualiza os dados no DGVProdutos
+                            this.searchProductDGVProdutosTableAdapter.Fill(this.qrAguasRemoteDBDataSet.SearchProductDGVProdutos);
+                        }
                     }
 
                     break;

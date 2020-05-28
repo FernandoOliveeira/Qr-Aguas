@@ -1,4 +1,6 @@
-﻿using System;
+﻿using QrAguas.Controls;
+using QrAguas.Models;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -16,6 +18,8 @@ namespace QrAguas.ViewLayer
         {
             InitializeComponent();
         }
+
+        UpdateProductMethods updateProductMethods = new UpdateProductMethods();
 
         public int IdProduto { get; internal set; }
         public string NomeProduto { get; internal set; }
@@ -45,6 +49,59 @@ namespace QrAguas.ViewLayer
             DTPValidade.Value = DataValidade;
             DTPFabricacao.Value = DataFabricacao;
 
+        }
+
+        private void BtnAtualizar_Click(object sender, EventArgs e)
+        {
+            // Verificação para que não seja inserido valor null no objProduto.PrecoCompra
+            if (txtPrecoCompra.Text.Equals(""))
+            {
+                txtPrecoCompra.Text = "0";
+            }
+
+            // Verificação para que não seja inserido valor null no objProduto.PrecoVenda
+            if (txtPrecoVenda.Text.Equals(""))
+            {
+                txtPrecoVenda.Text = "0";
+            }
+
+            NewProduct product = new NewProduct
+            {
+                Categoria = (int)CBCategoria.SelectedValue,
+                CodigoProduto = txtCodProduto.Text.Trim(),
+                DataFabricao = DTPFabricacao.Value,
+                DataValidade = DTPValidade.Value,
+                Descricao = txtDescricao.Text.Trim(),
+                Fornecedor = (int)CBFornecedor.SelectedValue,
+                NomeProduto = txtNome.Text.Trim(),
+                PrecoCompra = double.Parse(txtPrecoCompra.Text.Trim()),
+                PrecoVenda = double.Parse(txtPrecoVenda.Text.Trim()),
+                Quantidade = (int)txtQuantidade.Value
+            };
+
+            if (updateProductMethods.VerificarDadosProdutos(product))
+            {
+                try
+                {
+                    if (updateProductMethods.AtualizarProduto(IdProduto, product))
+                    {
+                        MessageBox.Show("Produto atualizado com sucesso !", "Atualizado com sucesso", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                        SearchProduct.ProdutoAtualizado = true;
+
+                        Close();
+
+                    }
+                }
+                catch (Exception erro)
+                {
+                    MessageBox.Show("Erro ao atualizar o produto. \nErro: " + erro, "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error); 
+                }
+            }
+            else
+            {
+                MessageBox.Show("Um ou mais campos obrigatórios* estão vazios", "Campos Vazios", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
         }
     }
 }
