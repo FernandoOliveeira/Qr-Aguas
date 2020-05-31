@@ -23,8 +23,13 @@ namespace QrAguas.View_Layer
             {
                 // Cadastrar Novo Usuário
                 treeView.Nodes.Remove(treeView.Nodes[0].Nodes[0].Nodes[2]);
+
                 // Sessão de Consultas
-                treeView.Nodes.Remove(treeView.Nodes[0].Nodes[3]); 
+                treeView.Nodes.Remove(treeView.Nodes[0].Nodes[3]);
+
+                // Relatório de Vendas
+                treeView.Nodes.Remove(treeView.Nodes[0].Nodes[3].Nodes[0]);
+
                 // Procurar Usuário
                 procurarUsuarioToolStripMenuItem.Visible = false;
             }
@@ -254,6 +259,11 @@ namespace QrAguas.View_Layer
 
                 #region Relatórios
 
+                case "Relatório de Vendas":
+                    ReportSells reportSells = new ReportSells();
+                    reportSells.Show();
+                    break;
+
                 case "Relatório de Produtos":
                     ReportProduct productReport = new ReportProduct();
                     productReport.Show();
@@ -265,6 +275,7 @@ namespace QrAguas.View_Layer
                     break;
 
                 #endregion
+
             }
 
         }
