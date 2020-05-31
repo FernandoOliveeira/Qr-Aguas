@@ -21,7 +21,7 @@ namespace QrAguas.ViewLayer
 
         private void ReportProvider_Load(object sender, EventArgs e)
         {
-            // Insere dentro do ReportViewer
+            // Insere dados dentro do ReportViewer
             this.reportProviderTableAdapter.FillReportProvider(this.qrAguasRemoteDBDataSet.ReportProvider);
             
             // Faz com que o ReportViewer encontre o relatório

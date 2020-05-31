@@ -190,6 +190,12 @@
     <Compile Include="ViewLayer\ReportProvider.Designer.cs">
       <DependentUpon>ReportProvider.cs</DependentUpon>
     </Compile>
+    <Compile Include="ViewLayer\ReportSells.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ViewLayer\ReportSells.Designer.cs">
+      <DependentUpon>ReportSells.cs</DependentUpon>
+    </Compile>
     <Compile Include="ViewLayer\SearchProduct.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -244,6 +250,7 @@
     </Compile>
     <EmbeddedResource Include="Reports\RepProduct.rdlc" />
     <EmbeddedResource Include="Reports\RepProvider.rdlc" />
+    <EmbeddedResource Include="Reports\RepSells.rdlc" />
     <EmbeddedResource Include="ViewLayer\ChangePassword.resx">
       <DependentUpon>ChangePassword.cs</DependentUpon>
     </EmbeddedResource>
@@ -276,6 +283,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="ViewLayer\ReportProvider.resx">
       <DependentUpon>ReportProvider.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewLayer\ReportSells.resx">
+      <DependentUpon>ReportSells.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ViewLayer\SearchProduct.resx">
       <DependentUpon>SearchProduct.cs</DependentUpon>
