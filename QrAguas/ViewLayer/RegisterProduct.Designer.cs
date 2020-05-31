@@ -155,7 +155,7 @@
             this.panelBtnCadastrar.Margin = new System.Windows.Forms.Padding(4);
             this.panelBtnCadastrar.Name = "panelBtnCadastrar";
             this.panelBtnCadastrar.Size = new System.Drawing.Size(626, 97);
-            this.panelBtnCadastrar.TabIndex = 9;
+            this.panelBtnCadastrar.TabIndex = 10;
             // 
             // btnCadastrar
             // 
@@ -433,7 +433,7 @@
             this.panel6.Location = new System.Drawing.Point(214, 213);
             this.panel6.Name = "panel6";
             this.panel6.Size = new System.Drawing.Size(205, 61);
-            this.panel6.TabIndex = 10;
+            this.panel6.TabIndex = 7;
             // 
             // txtQuantidade
             // 
@@ -478,7 +478,7 @@
             this.panel3.Margin = new System.Windows.Forms.Padding(4);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(204, 59);
-            this.panel3.TabIndex = 7;
+            this.panel3.TabIndex = 8;
             // 
             // DTPFabricacao
             // 
@@ -511,7 +511,7 @@
             this.panel5.Margin = new System.Windows.Forms.Padding(4);
             this.panel5.Name = "panel5";
             this.panel5.Size = new System.Drawing.Size(204, 71);
-            this.panel5.TabIndex = 8;
+            this.panel5.TabIndex = 9;
             // 
             // DTPValidade
             // 

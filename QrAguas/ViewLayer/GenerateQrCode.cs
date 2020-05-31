@@ -15,6 +15,9 @@ namespace QrAguas.ViewLayer
 {
     public partial class GenerateQrCode : Form
     {
+        public string NomeProduto { get; internal set; }
+        public DateTime DataValidade { get; internal set; }
+
         public GenerateQrCode()
         {
             InitializeComponent();
@@ -22,10 +25,17 @@ namespace QrAguas.ViewLayer
 
         private void GenerateQrCode_Load(object sender, EventArgs e)
         {
-            DTPValidade.MinDate = DateTime.Now;
+            // Tamanho mínimo do form
+            this.MaximumSize = new Size(940, 470);
+            // Valor mínimo do DateTimePicker
+            DTPValidade.MinDate = DataValidade;
 
-            this.MinimumSize = new Size(939,470);
-            this.MaximumSize = new Size(939, 470);
+            // Nome do produto
+            txtNomeProduto.Text = NomeProduto;
+            // Data de Validade
+            DTPValidade.Value = DataValidade;
+
+            
         }
 
         private void BtnGerar_Click(object sender, EventArgs e)

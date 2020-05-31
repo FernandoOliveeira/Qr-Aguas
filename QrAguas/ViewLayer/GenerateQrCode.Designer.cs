@@ -92,10 +92,11 @@
             this.tableLayoutPanel1.SetColumnSpan(this.panel3, 2);
             this.panel3.Controls.Add(this.lblNomeEmpresa);
             this.panel3.Controls.Add(this.txtNomeEmpresa);
+            this.panel3.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel3.Location = new System.Drawing.Point(3, 175);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(196, 78);
-            this.panel3.TabIndex = 17;
+            this.panel3.Size = new System.Drawing.Size(196, 80);
+            this.panel3.TabIndex = 2;
             // 
             // lblNomeEmpresa
             // 
@@ -137,10 +138,11 @@
             this.tableLayoutPanel1.SetColumnSpan(this.panel2, 2);
             this.panel2.Controls.Add(this.txtTelefone);
             this.panel2.Controls.Add(this.lblTelefone);
+            this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel2.Location = new System.Drawing.Point(306, 175);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(196, 80);
-            this.panel2.TabIndex = 15;
+            this.panel2.Size = new System.Drawing.Size(198, 80);
+            this.panel2.TabIndex = 3;
             // 
             // txtTelefone
             // 
@@ -150,7 +152,7 @@
             this.txtTelefone.Location = new System.Drawing.Point(7, 30);
             this.txtTelefone.Mask = "(00) 0000-0000";
             this.txtTelefone.Name = "txtTelefone";
-            this.txtTelefone.Size = new System.Drawing.Size(184, 23);
+            this.txtTelefone.Size = new System.Drawing.Size(186, 23);
             this.txtTelefone.TabIndex = 2;
             // 
             // lblTelefone
@@ -170,11 +172,12 @@
             this.tableLayoutPanel1.SetColumnSpan(this.panel5, 2);
             this.panel5.Controls.Add(this.DTPValidade);
             this.panel5.Controls.Add(this.lblDataValidade);
+            this.panel5.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel5.Location = new System.Drawing.Point(307, 90);
             this.panel5.Margin = new System.Windows.Forms.Padding(4);
             this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(196, 71);
-            this.panel5.TabIndex = 16;
+            this.panel5.Size = new System.Drawing.Size(196, 78);
+            this.panel5.TabIndex = 1;
             // 
             // DTPValidade
             // 
@@ -203,10 +206,11 @@
             this.tableLayoutPanel1.SetColumnSpan(this.panel1, 2);
             this.panel1.Controls.Add(this.lblNomeProduto);
             this.panel1.Controls.Add(this.txtNomeProduto);
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel1.Location = new System.Drawing.Point(3, 89);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(196, 78);
-            this.panel1.TabIndex = 14;
+            this.panel1.Size = new System.Drawing.Size(196, 80);
+            this.panel1.TabIndex = 0;
             // 
             // lblNomeProduto
             // 
@@ -234,10 +238,11 @@
             // 
             this.tableLayoutPanel1.SetColumnSpan(this.panelBtnCadastrar, 3);
             this.panelBtnCadastrar.Controls.Add(this.btnImprimir);
+            this.panelBtnCadastrar.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelBtnCadastrar.Location = new System.Drawing.Point(104, 347);
             this.panelBtnCadastrar.Name = "panelBtnCadastrar";
             this.panelBtnCadastrar.Size = new System.Drawing.Size(297, 81);
-            this.panelBtnCadastrar.TabIndex = 18;
+            this.panelBtnCadastrar.TabIndex = 5;
             // 
             // btnImprimir
             // 
@@ -260,10 +265,11 @@
             // 
             this.tableLayoutPanel1.SetColumnSpan(this.panel4, 2);
             this.panel4.Controls.Add(this.btnGerar);
+            this.panel4.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel4.Location = new System.Drawing.Point(306, 261);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(195, 80);
-            this.panel4.TabIndex = 19;
+            this.panel4.Size = new System.Drawing.Size(198, 80);
+            this.panel4.TabIndex = 4;
             // 
             // btnGerar
             // 
@@ -276,7 +282,7 @@
             this.btnGerar.ForeColor = System.Drawing.Color.White;
             this.btnGerar.Location = new System.Drawing.Point(30, 20);
             this.btnGerar.Name = "btnGerar";
-            this.btnGerar.Size = new System.Drawing.Size(135, 37);
+            this.btnGerar.Size = new System.Drawing.Size(138, 37);
             this.btnGerar.TabIndex = 1;
             this.btnGerar.Text = "Gerar Qr Code";
             this.btnGerar.UseVisualStyleBackColor = false;
@@ -289,7 +295,7 @@
             this.GBVerQrCode.ForeColor = System.Drawing.Color.White;
             this.GBVerQrCode.Location = new System.Drawing.Point(507, 0);
             this.GBVerQrCode.Name = "GBVerQrCode";
-            this.GBVerQrCode.Size = new System.Drawing.Size(416, 431);
+            this.GBVerQrCode.Size = new System.Drawing.Size(417, 431);
             this.GBVerQrCode.TabIndex = 1;
             this.GBVerQrCode.TabStop = false;
             this.GBVerQrCode.Text = "Visualizar Qr Code";
@@ -300,7 +306,7 @@
             this.PBQrCode.InitialImage = null;
             this.PBQrCode.Location = new System.Drawing.Point(3, 19);
             this.PBQrCode.Name = "PBQrCode";
-            this.PBQrCode.Size = new System.Drawing.Size(410, 409);
+            this.PBQrCode.Size = new System.Drawing.Size(411, 409);
             this.PBQrCode.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.PBQrCode.TabIndex = 0;
             this.PBQrCode.TabStop = false;
@@ -310,7 +316,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 17F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(130)))), ((int)(((byte)(156)))), ((int)(((byte)(188)))));
-            this.ClientSize = new System.Drawing.Size(923, 431);
+            this.ClientSize = new System.Drawing.Size(924, 431);
             this.Controls.Add(this.GBVerQrCode);
             this.Controls.Add(this.tableLayoutPanel1);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.25F);

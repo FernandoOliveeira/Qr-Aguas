@@ -1,5 +1,6 @@
 ﻿using QrAguas.Controls;
 using QrAguas.Models;
+using QrAguas.ViewLayer;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -105,6 +106,20 @@ namespace QrAguas.View_Layer
                     if (ProductMethods.CadastrarNovoProduto(objProduto))
                     {
                         MessageBox.Show("Produto cadastrado com sucesso !", "Cadastrado com sucesso", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                        // Pergunta se o usuário deseja gerar o Qr Code deste produto
+                        DialogResult respostaQrCode = MessageBox.Show("Deseja gerar o Qr Code deste Produto ?", "Gerar Qr Code", MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button2);
+
+                        if (respostaQrCode == DialogResult.Yes)
+                        {
+                            GenerateQrCode qrCode = new GenerateQrCode
+                            {
+                                NomeProduto = txtNome.Text.Trim(),
+                                DataValidade = DTPValidade.Value
+
+                            };
+                            qrCode.ShowDialog();
+                        }
 
                         LimparCampos();
                     }
