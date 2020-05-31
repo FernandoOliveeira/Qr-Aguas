@@ -17,7 +17,7 @@ namespace QrAguas.Controls
         {
             DataTable dadosProduto = new DataTable();
 
-            string queryProcurarProduto = "SELECT NOME_PRODUTO, PRECO_VENDA, QUANTIDADE FROM PRODUTOS WHERE COD_PRODUTO = @CodigoProduto";
+            string queryProcurarProduto = "SELECT NOME_PRODUTO, PRECO_VENDA, QUANTIDADE FROM PRODUTOS WHERE COD_PRODUTO = @CodigoProduto AND DELETADO = FALSE";
 
             MySqlCommand command = new MySqlCommand(queryProcurarProduto, AbrirBanco());
             command.Parameters.AddWithValue("@CodigoProduto", codigoProduto);
