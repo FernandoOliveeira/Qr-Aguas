@@ -1,9 +1,11 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 14
-VisualStudioVersion = 14.0.25420.1
+# Visual Studio 15
+VisualStudioVersion = 15.0.28307.421
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "QrAguas", "QrAguas\QrAguas.csproj", "{A91C00B4-0ED4-44BF-9ED2-185D12E8E565}"
+EndProject
+Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "Setup", "Setup\Setup.vdproj", "{6C2EE875-685D-44FF-8B9B-3E080783478F}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,8 +17,13 @@ Global
 		{A91C00B4-0ED4-44BF-9ED2-185D12E8E565}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A91C00B4-0ED4-44BF-9ED2-185D12E8E565}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A91C00B4-0ED4-44BF-9ED2-185D12E8E565}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6C2EE875-685D-44FF-8B9B-3E080783478F}.Debug|Any CPU.ActiveCfg = Debug
+		{6C2EE875-685D-44FF-8B9B-3E080783478F}.Release|Any CPU.ActiveCfg = Release
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {0A5083F1-1382-4EF8-9051-A7D44CAB57DF}
 	EndGlobalSection
 EndGlobal
