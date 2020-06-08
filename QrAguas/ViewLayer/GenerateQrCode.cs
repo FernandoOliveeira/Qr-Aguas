@@ -27,14 +27,24 @@ namespace QrAguas.ViewLayer
         {
             // Tamanho mínimo do form
             this.MaximumSize = new Size(940, 470);
-            // Valor mínimo do DateTimePicker
-            DTPValidade.MinDate = DataValidade;
+            
 
             // Nome do produto
             txtNomeProduto.Text = NomeProduto;
-            // Data de Validade
-            DTPValidade.Value = DataValidade;
 
+            if (String.IsNullOrEmpty(DataValidade.ToString()))
+            {
+                // Valor mínimo do DateTimePicker
+                DTPValidade.MinDate = DataValidade;
+
+                // Recebe o valor da proriedade
+                DTPValidade.Value = DataValidade;
+                
+            }
+            else
+            {
+                DataValidade = DateTime.Now;
+            }
             
         }
 
@@ -47,9 +57,6 @@ namespace QrAguas.ViewLayer
             }
             else
             {
-                // Gera o caminho da imagem a ser inserida no centro do Qr Code
-                string path = Directory.GetCurrentDirectory();
-                string newPath = Path.GetFullPath(Path.Combine(path, "..", "..", @".\Resources\qrAguasIconeGota.png"));
 
                 // texto que será transformado em Qr Code
                 string qrCodeText = "Produto: " + txtNomeProduto.Text.Trim() + "\n"
@@ -61,9 +68,9 @@ namespace QrAguas.ViewLayer
                 QRCodeGenerator qrCode = new QRCodeGenerator();
                 QRCodeData dados = qrCode.CreateQrCode(qrCodeText, QRCodeGenerator.ECCLevel.M);
                 QRCode code = new QRCode(dados);
-                
-                // Insere uma imagem no centro do Qr Code 
-                PBQrCode.Image = code.GetGraphic(50, Color.Black, Color.White, (Bitmap)Image.FromFile(newPath));
+
+                // Insere o QrCode no PictureBox
+                PBQrCode.Image = code.GetGraphic(50);
             }
 
             

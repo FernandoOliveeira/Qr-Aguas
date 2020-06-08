@@ -48,6 +48,7 @@ namespace QrAguas.View_Layer
             // Preenche o ComboBox CBFuncao 
             this.tIPO_USUARIOTableAdapter.Fill(this.qrAguasRemoteDBDataSet.TIPO_USUARIO);
 
+            lblConfirmarSenhaAviso.Text = "As senhas devem ser idênticas";
 
             // btnCadastrar só é habilitado caso o campo txtUsuario seja preenchido
             btnCadastrar.Enabled = false;
@@ -102,17 +103,17 @@ namespace QrAguas.View_Layer
 
         private void TxtConfirmarSenha_TextChanged(object sender, EventArgs e)
         {
-            if (txtConfirmarSenha.Text.Trim().Equals(txtSenha.Text))
+            if (txtConfirmarSenha.Text.Trim() == txtSenha.Text.Trim())
             {
                 lblConfirmarSenhaAviso.Text = "As senhas devem ser idênticas";
                 lblConfirmarSenhaAviso.ForeColor = Color.White;
-
+                btnCadastrar.Enabled = true;
             }
             else
             {
                 lblConfirmarSenhaAviso.Text = "As senhas devem ser idênticas";
                 lblConfirmarSenhaAviso.ForeColor = Color.Red;
-
+                btnCadastrar.Enabled = false;
             }
         }
 
@@ -141,11 +142,9 @@ namespace QrAguas.View_Layer
                             CadastradoPor = Login.NomeUsuario
                         };
 
-                        if (UserMethods.VerificarDadosUsuario(objNovoUsuario))
+                        if (UserMethods.VerificarDadosUsuario(objNovoUsuario) && txtConfirmarSenha.Text.Trim() == txtSenha.Text.Trim())
                         {
-                            UserMethods.AbrirBanco();
                             UserMethods.CadastrarNovoUsuario(objNovoUsuario);
-                            UserMethods.FecharBanco(UserMethods.AbrirBanco());
 
                             MessageBox.Show("Usuário cadastrado com sucesso !", "Usuário Cadastrado", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
