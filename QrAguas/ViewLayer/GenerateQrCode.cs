@@ -27,14 +27,24 @@ namespace QrAguas.ViewLayer
         {
             // Tamanho mínimo do form
             this.MaximumSize = new Size(940, 470);
-            // Valor mínimo do DateTimePicker
-            DTPValidade.MinDate = DataValidade;
+            
 
             // Nome do produto
             txtNomeProduto.Text = NomeProduto;
-            // Data de Validade
-            DTPValidade.Value = DataValidade;
 
+            if (String.IsNullOrEmpty(DataValidade.ToString()))
+            {
+                // Valor mínimo do DateTimePicker
+                DTPValidade.MinDate = DataValidade;
+
+                // Recebe o valor da proriedade
+                DTPValidade.Value = DataValidade;
+                
+            }
+            else
+            {
+                DataValidade = DateTime.Now;
+            }
             
         }
 
@@ -58,8 +68,9 @@ namespace QrAguas.ViewLayer
                 QRCodeGenerator qrCode = new QRCodeGenerator();
                 QRCodeData dados = qrCode.CreateQrCode(qrCodeText, QRCodeGenerator.ECCLevel.M);
                 QRCode code = new QRCode(dados);
-                
 
+                // Insere o QrCode no PictureBox
+                PBQrCode.Image = code.GetGraphic(50);
             }
 
             
