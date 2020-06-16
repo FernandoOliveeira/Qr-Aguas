@@ -10,6 +10,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Threading;
 using System.Security.Cryptography;
+using QrAguas.ViewLayer;
 
 namespace QrAguas.View_Layer
 {
@@ -104,8 +105,13 @@ namespace QrAguas.View_Layer
             btnFechar.BackColor = Color.FromArgb(29, 52, 97);
         }
 
+
         #endregion
 
-        
+        private void BtnInfo_Click(object sender, EventArgs e)
+        {
+            About about = new About();
+            about.ShowDialog();
+        }
     }
 }

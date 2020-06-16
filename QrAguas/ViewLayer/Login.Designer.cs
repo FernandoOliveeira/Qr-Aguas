@@ -36,12 +36,12 @@
             this.lblSenha = new System.Windows.Forms.Label();
             this.txtSenha = new System.Windows.Forms.TextBox();
             this.topPanel = new System.Windows.Forms.Panel();
-            this.imagemIcone = new System.Windows.Forms.PictureBox();
             this.lblTituloPanel = new System.Windows.Forms.Label();
             this.btnInfo = new System.Windows.Forms.Button();
             this.btnFechar = new System.Windows.Forms.Button();
             this.btnEntrar = new System.Windows.Forms.Button();
             this.lblTituloLogo = new System.Windows.Forms.Label();
+            this.imagemIcone = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.imagemUsuario = new System.Windows.Forms.PictureBox();
             this.imagemLogo = new System.Windows.Forms.PictureBox();
@@ -136,18 +136,6 @@
             this.topPanel.TabIndex = 9;
             this.topPanel.MouseDown += new System.Windows.Forms.MouseEventHandler(this.ArrastarTela_MouseDown);
             // 
-            // imagemIcone
-            // 
-            this.imagemIcone.Image = global::QrAguas.Properties.Resources.qrAguasIconeGota;
-            this.imagemIcone.Location = new System.Drawing.Point(0, 6);
-            this.imagemIcone.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
-            this.imagemIcone.Name = "imagemIcone";
-            this.imagemIcone.Size = new System.Drawing.Size(48, 19);
-            this.imagemIcone.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.imagemIcone.TabIndex = 13;
-            this.imagemIcone.TabStop = false;
-            this.imagemIcone.MouseDown += new System.Windows.Forms.MouseEventHandler(this.ArrastarTela_MouseDown);
-            // 
             // lblTituloPanel
             // 
             this.lblTituloPanel.AutoSize = true;
@@ -176,6 +164,7 @@
             this.btnInfo.TabIndex = 33;
             this.btnInfo.Text = "?";
             this.btnInfo.UseVisualStyleBackColor = false;
+            this.btnInfo.Click += new System.EventHandler(this.BtnInfo_Click);
             // 
             // btnFechar
             // 
@@ -223,6 +212,18 @@
             this.lblTituloLogo.Size = new System.Drawing.Size(90, 24);
             this.lblTituloLogo.TabIndex = 11;
             this.lblTituloLogo.Text = "Qr Águas";
+            // 
+            // imagemIcone
+            // 
+            this.imagemIcone.Image = global::QrAguas.Properties.Resources.qrAguasIconeGota;
+            this.imagemIcone.Location = new System.Drawing.Point(0, 6);
+            this.imagemIcone.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.imagemIcone.Name = "imagemIcone";
+            this.imagemIcone.Size = new System.Drawing.Size(48, 19);
+            this.imagemIcone.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.imagemIcone.TabIndex = 13;
+            this.imagemIcone.TabStop = false;
+            this.imagemIcone.MouseDown += new System.Windows.Forms.MouseEventHandler(this.ArrastarTela_MouseDown);
             // 
             // pictureBox1
             // 

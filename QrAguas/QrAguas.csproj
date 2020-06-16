@@ -35,6 +35,12 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject>QrAguas.Program</StartupObject>
+  </PropertyGroup>
+  <PropertyGroup>
+    <NoWin32Manifest>true</NoWin32Manifest>
+  </PropertyGroup>
   <ItemGroup>
     <Reference Include="Microsoft.ReportViewer.Common, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
       <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1404.0\lib\net40\Microsoft.ReportViewer.Common.dll</HintPath>
@@ -124,6 +130,12 @@
       <DependentUpon>QrAguasRemoteDBDataSet.xsd</DependentUpon>
     </Compile>
     <Compile Include="SqlServerTypes\Loader.cs" />
+    <Compile Include="ViewLayer\About.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ViewLayer\About.Designer.cs">
+      <DependentUpon>About.cs</DependentUpon>
+    </Compile>
     <Compile Include="ViewLayer\ChangePassword.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -251,6 +263,9 @@
     <EmbeddedResource Include="Reports\RepProduct.rdlc" />
     <EmbeddedResource Include="Reports\RepProvider.rdlc" />
     <EmbeddedResource Include="Reports\RepSells.rdlc" />
+    <EmbeddedResource Include="ViewLayer\About.resx">
+      <DependentUpon>About.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="ViewLayer\ChangePassword.resx">
       <DependentUpon>ChangePassword.cs</DependentUpon>
     </EmbeddedResource>
@@ -353,6 +368,7 @@
     <None Include="Resources\Novo usuario1.png" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Resources\SmartPRO %28Logo%29.jpg" />
     <Content Include="SqlServerTypes\readme.htm" />
     <Content Include="SqlServerTypes\x64\msvcr120.dll">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
