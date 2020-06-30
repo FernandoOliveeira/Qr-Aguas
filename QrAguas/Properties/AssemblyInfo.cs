@@ -7,11 +7,11 @@ using System.Runtime.InteropServices;
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
 [assembly: AssemblyTitle("Qr Águas")]
-[assembly: AssemblyDescription("Sistema criado para auxiliar donos de empresas vendedoras e distribuidoras que tem o foco em galões de água para auxiliar nos processos de estocagem, venda e etiquetagem dos garrafões.")]
+[assembly: AssemblyDescription("Sistema criado para auxiliar donos de empresas vendedoras e distribuidoras de galões de água, com o intuíto de auxiliar nos processos de estocagem, venda e etiquetagem dos garrafões.")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("SmartPRO")]
 [assembly: AssemblyProduct("Qr Águas")]
-[assembly: AssemblyCopyright("Copyright © Grupo SmartPRO2019")]
+[assembly: AssemblyCopyright("Copyright © Grupo SmartPRO 2020")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
 
