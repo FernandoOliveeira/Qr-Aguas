@@ -187,26 +187,10 @@ namespace QrAguas.View_Layer
 
                 #region Qr Code
                 case "Gerar Novo Qr Code":
-
-                    bool generateQrCodeOpen = false;
-
-                    // Início: Este bloco de código impede que sejam abertos múltiplos forms iguais
-                    foreach (Form form in Application.OpenForms)
-                    {
-                        if (form.Name == "GenerateQrCode")
-                        {
-                            generateQrCodeOpen = true;
-                            form.BringToFront();
-                            break;
-                        }
-                    }
-                    if (generateQrCodeOpen == false)
-                    {
-                        GenerateQrCode generateQrCode = new GenerateQrCode();
-                        generateQrCode.Show();
-                    }
-                    // Fim
+                    GenerateQrCode generateQrCode = new GenerateQrCode();
+                    generateQrCode.Show();
                     break;
+
                 #endregion
 
                 #region Consultas
