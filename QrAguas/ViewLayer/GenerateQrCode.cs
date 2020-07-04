@@ -1,14 +1,7 @@
 ﻿using QRCoder;
 using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
 using System.Drawing;
 using System.Drawing.Printing;
-using System.IO;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace QrAguas.ViewLayer
@@ -32,7 +25,7 @@ namespace QrAguas.ViewLayer
             // Nome do produto
             txtNomeProduto.Text = NomeProduto;
 
-            if (String.IsNullOrEmpty(DataValidade.ToString()))
+            if (DataValidade.ToString() != "01/01/0001 00:00:00")
             {
                 // Valor mínimo do DateTimePicker
                 DTPValidade.MinDate = DataValidade;
