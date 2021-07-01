@@ -1,5 +1,5 @@
 # Qr-Aguas
->Trabalho de conclusão de curso em andamento do curso Técnico em Desenvolvimento de Sistemas
+>Trabalho de conclusão de curso Técnico em Desenvolvimento de Sistemas
 
 # Nosso Projeto
 É um sistema de estoque para gerenciamento de galões de água.<br/>
